@@ -83,7 +83,7 @@
     </section>
 
     <!-- Economics -->
-    <section class="relative overflow-hidden bg-white py-12 sm:py-12 lg:py-16">
+    <section class="relative  w overflow-hidden bg-white py-12 sm:py-12 lg:py-16">
         <div class="absolute inset-0 pointer-events-none">
             <div class="absolute left-0 top-0 h-40 w-40 rounded-full bg-slate-100/80 blur-3xl"></div>
             <div class="absolute right-0 bottom-0 h-52 w-52 rounded-full bg-slate-100/70 blur-3xl"></div>
