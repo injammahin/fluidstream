@@ -1,32 +1,33 @@
 @extends('layouts.app')
 
 @section('content')
-    <section class="relative min-h-screen overflow-hidden">
-        <!-- Background Video -->
+<section class="relative min-h-screen overflow-hidden">
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline class="absolute inset-0 h-full w-full object-cover">
+        <source src="{{ asset('/video/video1.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 
-        <video autoplay muted loop playsinline class="absolute inset-0 h-full w-full object-cover">
-            <source src="{{ asset('/video/video1.mp4') }}" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-slate-950/35"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-slate-950/70 via-slate-950/35 to-slate-950/20"></div>
 
-        <!-- Overlay -->
-        <div class="absolute inset-0 bg-black/15"></div>
-        <div class="absolute inset-0 bg-gradient-to-r from-black/15 via-black/25 to-black/0"></div>
-        <!-- Hero Content -->
-        <div class="relative z-10 flex min-h-screen items-center">
-            <div class="mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8">
-                <div class="max-w-3xl pt-20 sm:pt-24 lg:pt-16">
+    <!-- Hero Content -->
+    <div class="relative z-10 flex min-h-screen items-center">
+        <div class="mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8">
+            <div class="grid min-h-screen items-center gap-10 py-28 lg:grid-cols-[minmax(0,1.2fr)_minmax(340px,0.8fr)] lg:gap-14">
 
-                    <h1
-                        class="max-w-3xl text-3xl font-extrabold leading-[1.08] tracking-[-0.03em] text-slate-200  sm:text-5xl md:text-6xl lg:text-[50px]">
-                        Increase Oil Production and Reduce Methane Emissions
+                <!-- Left Content -->
+                <div class="max-w-3xl">
+                    <h1 class="max-w-3xl text-3xl font-extrabold leading-[1.08] tracking-[-0.03em] text-white sm:text-5xl md:text-6xl lg:text-[54px]">
+                        Reduce Methane Emissions and Increase Oil Production
                     </h1>
 
                     <div class="mt-5 h-1 w-20 rounded-full bg-sky-400"></div>
 
                     <p class="mt-7 max-w-2xl text-base font-medium leading-7 text-slate-200 sm:text-lg sm:leading-8">
-                        Fluidstream provides patented, cost-effective, low-maintenance, fully autonomous multiphase
-                        compression technology designed to improve production efficiency while lowering emissions.
+                        Fluidstream provides reliable, low-maintenance, fully autonomous multiphase compression
+                        technology to lower methane emissions and improve production efficiency.
                     </p>
 
                     <div class="mt-9 flex flex-col gap-3 sm:flex-row">
@@ -36,95 +37,318 @@
                         </a>
 
                         <a href="{{ url('/contact') }}"
-                            class="inline-flex items-center justify-center rounded-xl border border-white/20 bg-transparent px-6 py-3.5 text-sm font-semibold text-white transition duration-300 hover:bg-white/10">
+                            class="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white transition duration-300 hover:bg-white/10">
                             Contact Us
                         </a>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <!-- Bottom Fade -->
-    </section>
-    <!-- Intro Section -->
-    <section class="bg-white py-12 sm:py-12">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
-                <div class="space-y-6">
-                    <span
-                        class="inline-flex items-center rounded-full border border-sky-200 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-sky-700 shadow-sm">
-                        Compression Technology
-                    </span>
+                <!-- Right Quote Card -->
+                <div class="lg:justify-self-end">
+                    <div class="max-w-md rounded-[28px] border border-white/15 bg-white/10 p-6 shadow-[0_20px_60px_rgba(15,23,42,0.25)] backdrop-blur-xl sm:p-8">
+                        <span class="inline-flex items-center rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-sky-200">
+                            Customer Quote
+                        </span>
 
-                    <div class="space-y-5">
-                        <h2
-                            class="max-w-xl text-3xl font-semibold leading-tight tracking-[-0.03em] text-slate-800 sm:text-4xl lg:text-5xl">
-                            Multiphase Compression
-                            <span class="block text-sky-700">Solutions</span>
-                        </h2>
+                        <blockquote class="mt-5 text-lg font-semibold leading-8 text-white sm:text-[1.35rem] sm:leading-9">
+                            “Fluidstream’s unit has operated consistently and eliminated gas venting. Since installation
+                            15 months ago, the unit has provided 100% uptime and has not required any maintenance.”
+                        </blockquote>
 
-                        <div class="h-1.5 w-20 rounded-full bg-gradient-to-r from-sky-500 via-blue-600 to-cyan-400"></div>
+                        <div class="mt-6">
+                            <p class="text-sm font-semibold text-white">
+                                VP Production, Allied Energy II Corp.
+                            </p>
+                        </div>
+
+                        <div class="mt-7">
+                            <a href="{{ url('/case-study') }}"
+                                class="inline-flex items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition duration-300 hover:bg-slate-100">
+                                Learn More
+                            </a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="grid gap-5 sm:grid-cols-2">
-                    <div
-                        class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
-                        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-sky-100 text-sky-700">
-                            <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 12h18M12 3v18" />
-                            </svg>
-                        </div>
-                        <h3 class="mt-5 text-xl font-semibold text-slate-900">Efficient Recovery</h3>
-                        <p class="mt-3 text-sm leading-7 text-slate-600">
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Intro Section -->
+<!-- Intro + Cards Section -->
+<section class="bg-[#efefed] py-16 sm:py-20 lg:py-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+        <!-- Heading Area -->
+        <div class="max-w-3xl">
+            <span
+                class="inline-flex items-center rounded-full border border-sky-200 bg-white px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-sky-700 shadow-sm">
+                Compression Technology
+            </span>
+
+            <h2
+                class="mt-6 text-4xl font-semibold leading-[1.02] tracking-[-0.045em] text-slate-900 sm:text-5xl lg:text-[58px]">
+                Multiphase Compression
+            </h2>
+
+            <p class="mt-8 max-w-2xl text-lg leading-8 text-slate-700 sm:text-[22px] sm:leading-9">
+                Fluidstream multiphase compression technology is proven to add immense value in oilfield
+                compression applications.
+            </p>
+        </div>
+
+        <!-- Cards Row -->
+        <div class="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+
+            <!-- Card 1 -->
+            <a href="{{ url('/multiphase-compression') }}" class="row-hover-card group">
+                <div class="row-hover-card__base">
+                    <h3 class="row-hover-card__title">
+                        Efficient Recovery
+                    </h3>
+
+                    <div class="row-hover-card__explore">
+                        <span>Explore</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.9">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 5l7 7-7 7" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="row-hover-card__panel">
+                    <div>
+                        <h3 class="row-hover-card__panel-title">
+                            Efficient Recovery
+                        </h3>
+
+                        <p class="row-hover-card__panel-text">
                             Capture more value from existing operations with efficient recovery-focused systems.
                         </p>
                     </div>
 
-                    <div
-                        class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
-                        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-sky-100 text-sky-700">
-                            <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0Z" />
-                            </svg>
-                        </div>
-                        <h3 class="mt-5 text-xl font-semibold text-slate-900">Field Proven</h3>
-                        <p class="mt-3 text-sm leading-7 text-slate-600">
+                    <div class="row-hover-card__panel-explore">
+                        <span>Explore</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.9">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 5l7 7-7 7" />
+                        </svg>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Card 2 -->
+            <a href="{{ url('/vapor-recovery') }}" class="row-hover-card group">
+                <div class="row-hover-card__base">
+                    <h3 class="row-hover-card__title">
+                        Field Proven
+                    </h3>
+
+                    <div class="row-hover-card__explore">
+                        <span>Explore</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.9">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 5l7 7-7 7" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="row-hover-card__panel">
+                    <div>
+                        <h3 class="row-hover-card__panel-title">
+                            Field Proven
+                        </h3>
+
+                        <p class="row-hover-card__panel-text">
                             Designed for dependable performance in challenging and remote operating environments.
                         </p>
                     </div>
 
-                    <div
-                        class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
-                        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-sky-100 text-sky-700">
-                            <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M16.5 6.75v10.5m-9-10.5v10.5M4.5 12h15" />
-                            </svg>
-                        </div>
-                        <h3 class="mt-5 text-xl font-semibold text-slate-900">Autonomous Operation</h3>
-                        <p class="mt-3 text-sm leading-7 text-slate-600">
+                    <div class="row-hover-card__panel-explore">
+                        <span>Explore</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.9">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 5l7 7-7 7" />
+                        </svg>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Card 3 -->
+            <a href="{{ url('/casing-gas-compression') }}" class="row-hover-card group md:col-span-2 xl:col-span-1">
+                <div class="row-hover-card__base">
+                    <h3 class="row-hover-card__title">
+                        Autonomous Operation
+                    </h3>
+
+                    <div class="row-hover-card__explore">
+                        <span>Explore</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.9">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 5l7 7-7 7" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="row-hover-card__panel">
+                    <div>
+                        <h3 class="row-hover-card__panel-title">
+                            Autonomous Operation
+                        </h3>
+
+                        <p class="row-hover-card__panel-text">
                             Reduce maintenance demand with systems engineered for autonomous continuous operation.
                         </p>
                     </div>
 
-                    <div
-                        class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
-                        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-sky-100 text-sky-700">
-                            <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2" />
-                            </svg>
-                        </div>
-                        <h3 class="mt-5 text-xl font-semibold text-slate-900">Low Maintenance</h3>
-                        <p class="mt-3 text-sm leading-7 text-slate-600">
-                            Save time and cost through practical, durable, and operator-friendly designs.
-                        </p>
+                    <div class="row-hover-card__panel-explore">
+                        <span>Explore</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.9">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 5l7 7-7 7" />
+                        </svg>
                     </div>
                 </div>
-            </div>
+            </a>
+
         </div>
-    </section>
+    </div>
+</section>
+
+<style>
+    .row-hover-card {
+        position: relative;
+        display: block;
+        min-height: 300px;
+        overflow: hidden;
+        border: 1px solid #ddddda;
+        background: #f7f7f5;
+        box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05);
+        transition: transform 0.45s ease, box-shadow 0.45s ease;
+    }
+
+    .row-hover-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 18px 36px rgba(15, 23, 42, 0.10);
+    }
+
+    .row-hover-card__base {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 2rem 1.8rem 1.6rem;
+    }
+
+    .row-hover-card__title {
+        max-width: 220px;
+        font-size: 2rem;
+        line-height: 1.08;
+        letter-spacing: -0.045em;
+        font-weight: 400;
+        color: #050816;
+    }
+
+    .row-hover-card__explore {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.7rem;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #1238ff;
+    }
+
+    .row-hover-card__panel {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 2rem 1.8rem 1.6rem;
+        background: #1238ff;
+        color: #ffffff;
+        transform: translateY(100%);
+        transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+        will-change: transform;
+    }
+
+    .row-hover-card:hover .row-hover-card__panel {
+        transform: translateY(0);
+    }
+
+    .row-hover-card__panel-title {
+        max-width: 220px;
+        font-size: 1.9rem;
+        line-height: 1.08;
+        letter-spacing: -0.045em;
+        font-weight: 400;
+        color: #ffffff;
+    }
+
+    .row-hover-card__panel-text {
+        margin-top: 1.4rem;
+        max-width: 240px;
+        font-size: 1rem;
+        line-height: 1.75;
+        color: rgba(255, 255, 255, 0.92);
+    }
+
+    .row-hover-card__panel-explore {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.7rem;
+        font-size: 1rem;
+        font-weight: 500;
+        color: #ffffff;
+    }
+
+    @media (max-width: 1279px) {
+        .row-hover-card {
+            min-height: 280px;
+        }
+
+        .row-hover-card__title,
+        .row-hover-card__panel-title {
+            font-size: 1.75rem;
+            max-width: 200px;
+        }
+
+        .row-hover-card__panel-text {
+            max-width: 220px;
+            font-size: 0.95rem;
+            line-height: 1.65;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .row-hover-card {
+            min-height: 240px;
+        }
+
+        .row-hover-card__base,
+        .row-hover-card__panel {
+            padding: 1.5rem 1.3rem 1.25rem;
+        }
+
+        .row-hover-card__title,
+        .row-hover-card__panel-title {
+            font-size: 1.5rem;
+            max-width: 180px;
+        }
+
+        .row-hover-card__explore,
+        .row-hover-card__panel-explore {
+            font-size: 0.95rem;
+        }
+
+        .row-hover-card__panel-text {
+            margin-top: 1rem;
+            max-width: 190px;
+            font-size: 0.9rem;
+            line-height: 1.55;
+        }
+    }
+</style>
     <section class="relative bg-white py-12 sm:py-12 lg:py-16">
         <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
             <div class="tech-clean-reveal">
