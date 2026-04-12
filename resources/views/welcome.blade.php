@@ -86,7 +86,7 @@
             <!-- Heading Area -->
             <div class="max-w-3xl">
                 <span
-                    class="inline-flex items-center rounded-full border border-sky-200 bg-white px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-sky-700 shadow-sm">
+                    class="section-label">
                     Compression Technology
                 </span>
 
@@ -363,9 +363,8 @@
                 <!-- Left Content -->
                 <div class="relative max-w-xl">
                     <div class="mb-8 inline-flex items-center gap-3">
-                        <span class="h-px w-10 bg-slate-300"></span>
                         <span
-                            class="rounded-full border border-slate-200 bg-white/80 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-slate-500 shadow-sm backdrop-blur">
+                            class="section-label">
                             Technology Leadership
                         </span>
                     </div>
@@ -388,74 +387,72 @@
                     <div class="grid grid-cols-1 gap-5 sm:grid-cols-2">
                         <!-- Card 1 -->
                         <div
-                            class="group relative min-h-[250px] border border-[#e4e4e1] bg-white p-6 shadow-[0_20px_50px_rgba(15,23,42,0.06)] transition duration-500 hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(15,23,42,0.10)]">
+                            class="group relative min-h-[250px] min-w-[250px] border border-[#e4e4e1] bg-white p-6 shadow-[0_20px_50px_rgba(15,23,42,0.06)] transition duration-500 hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(15,23,42,0.10)]">
                             <div class="absolute -left-3 top-5 h-px w-8 bg-slate-200"></div>
 
-                            <h3 class="text-[11px] font-semibold uppercase tracking-[0.20em] text-[#202020]">
-                                Unmatched Value &amp;<br>Return on Investment
+                            <h3 class="text-[14px] font-semibold text-center uppercase tracking-[0.20em] text-[#202020]">
+                                Unmatched Value <br>&amp; Return on Investment
                             </h3>
 
                             <div class="mt-8 flex justify-center">
                                 <img src="{{ asset('/img/icon-01.png') }}" alt="Value icon"
-                                    class="h-16 w-16 object-contain opacity-90">
+                                    class="h-20 w-20 object-contain opacity-90">
                             </div>
 
-                            <p class="mt-8 text-[13px] leading-6 text-slate-600">
+                            <p class="mt-8 text-[16px] text-center leading-6 text-slate-600">
                                 Less cost and maintenance, and more features and benefits.
                             </p>
                         </div>
 
                         <!-- Card 2 -->
                         <div
-                            class="group relative min-h-[250px] border border-[#e4e4e1] bg-white p-6 shadow-[0_20px_50px_rgba(15,23,42,0.06)] transition duration-500 hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(15,23,42,0.10)] sm:translate-y-6">
-                            <h3 class="text-[11px] font-semibold uppercase tracking-[0.20em] text-[#202020]">
+                            class="group relative min-h-[250px] min-w-[250px] border border-[#e4e4e1] bg-white p-6 shadow-[0_20px_50px_rgba(15,23,42,0.06)] transition duration-500 hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(15,23,42,0.10)] sm:translate-y-6">
+                            <h3 class="text-[14px] text-center font-semibold uppercase tracking-[0.20em] text-[#202020]">
                                 Multiphase Compression
                             </h3>
 
                             <div class="mt-8 flex justify-center">
                                 <img src="{{ asset('/img/icon-02.png') }}" alt="Compression icon"
-                                    class="h-16 w-16 object-contain opacity-90">
+                                    class="h-20 w-20 object-contain opacity-90">
                             </div>
 
-                            <p class="mt-8 text-[13px] leading-6 text-slate-600">
+                            <p class="mt-8 text-[16px] text-center leading-6 text-slate-600">
                                 Easily handles full range (0 to 100%) gas volume fractions (GVF).
                             </p>
                         </div>
 
                         <!-- Card 3 -->
                         <div
-                            class="group relative min-h-[250px] border border-[#e4e4e1] bg-white p-6 shadow-[0_20px_50px_rgba(15,23,42,0.06)] transition duration-500 hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(15,23,42,0.10)]">
-                            <div
-                                class="absolute -left-4 bottom-3 h-10 w-10 border-l-[6px] border-b-[6px] border-slate-200/80">
-                            </div>
+                            class="group relative min-h-[250px] min-w-[250px] border border-[#e4e4e1] bg-white p-6 shadow-[0_20px_50px_rgba(15,23,42,0.06)] transition duration-500 hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(15,23,42,0.10)]">
 
-                            <h3 class="text-[11px] font-semibold uppercase tracking-[0.20em] text-[#202020]">
+
+                            <h3 class="text-[14px] text-center font-semibold uppercase tracking-[0.20em] text-[#202020]">
                                 Fully Autonomous
                             </h3>
 
                             <div class="mt-8 flex justify-center">
                                 <img src="{{ asset('/img/icon-03.png') }}" alt="Autonomous icon"
-                                    class="h-16 w-16 object-contain opacity-90">
+                                    class="h-20 w-20 object-contain opacity-90">
                             </div>
 
-                            <p class="mt-8 text-[13px] leading-6 text-slate-600">
+                            <p class="mt-8 text-[16px] text-center leading-6 text-slate-600">
                                 Works to meet multiple operator-defined targets.
                             </p>
                         </div>
 
                         <!-- Card 4 -->
                         <div
-                            class="group relative min-h-[250px]  justify-center border border-[#e4e4e1] bg-white p-6 shadow-[0_20px_50px_rgba(15,23,42,0.06)] transition duration-500 hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(15,23,42,0.10)] sm:translate-y-6">
-                            <h3 class="text-[11px] font-semibold uppercase tracking-[0.20em] text-[#202020]">
+                            class="group relative min-h-[250px] min-w-[250px]  justify-center border border-[#e4e4e1] bg-white p-6 shadow-[0_20px_50px_rgba(15,23,42,0.06)] transition duration-500 hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(15,23,42,0.10)] sm:translate-y-6">
+                            <h3 class="text-[14px] text-center font-semibold uppercase tracking-[0.20em] text-[#202020]">
                                 Broad Operating Range
                             </h3>
 
                             <div class="mt-8 flex justify-center">
                                 <img src="{{ asset('/img/icon-04.png') }}" alt="Range icon"
-                                    class="h-16 w-16 object-contain opacity-90">
+                                    class="h-20 w-20 object-contain opacity-90">
                             </div>
 
-                            <p class="mt-8 text-[13px] leading-6 text-slate-600">
+                            <p class="mt-8 text-[16px] text-center leading-6 text-slate-600">
                                 100% functional range for flow, inlet and discharge pressure, and motor load.
                             </p>
                         </div>
@@ -476,7 +473,7 @@
                 <!-- Left -->
                 <div class="lg:sticky lg:top-28">
                     <span
-                        class="inline-flex items-center rounded-full border border-slate-200 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500">
+                        class="section-label">
                         Innovation
                     </span>
 

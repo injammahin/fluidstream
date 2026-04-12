@@ -26,6 +26,7 @@
     </main>
 
     @include('partical.footer')
+    sty
 </body>
 
 </html>

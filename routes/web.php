@@ -19,5 +19,10 @@ Route::get('/', function () {
 Route::view('/multiphase-compression', 'multiphase-compression');
 Route::view('/vapor-recovery', 'vapor-recovery');
 Route::view('/casing-gas-compression', 'casing-gas-compression');
+Route::view('/case-studies', 'case-studies');
+Route::view('/technology', 'technology');
+Route::view('/insights', 'insights');
+Route::view('/perspectives', 'perspectives');
+Route::view('/multiphase-compression-technology', 'multiphase-compression-technology');
 Route::view('/contact', 'contact')->name('contact');
 Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');

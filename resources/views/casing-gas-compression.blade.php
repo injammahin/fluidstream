@@ -1,606 +1,554 @@
 @extends('layouts.app')
 
 @section('content')
-    <!-- Hero -->
-    <section class="relative h-screen overflow-hidden bg-slate-950">
-        <div class="absolute inset-0 h-screen">
-            <img src="/img/casing-gas-image-01.jpg" alt="page-2.jpg" class="h-full w-full object-cover object-center">
+<style>
+:root {
+  --navy:#031b8c;
+  --blue:#0018dc;
+  --cyan:#15d1ff;
+  --ink:#0d1730;
+  --muted:#5d6b8a;
+  --line:#dbe6ff;
+  --bg:#f6faff;
+  --white:#ffffff;
+  --shadow:0 30px 70px rgba(4,20,84,.14);
+  --radius:24px;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  color:var(--ink);
+  background:
+    radial-gradient(circle at top left, rgba(21,209,255,.14), transparent 28%),
+    linear-gradient(180deg, #f9fcff 0%, #ffffff 28%, #f8fbff 100%);
+}
+a { color:inherit; text-decoration:none; }
+img { max-width:100%; display:block; }
+
+.container { width:min(1240px, calc(100% - 48px)); margin:0 auto; }
+.section { padding:96px 0; }
+h1,h2,h3,p { margin:0; }
+h1 { font-size:clamp(44px, 7vw, 76px); line-height:.98; letter-spacing:-.045em; }
+h2 { font-size:clamp(32px, 4vw, 54px); line-height:1.02; letter-spacing:-.04em; }
+h3 { font-size:22px; line-height:1.1; letter-spacing:-.02em; }
+p { font-size:18px; line-height:1.72; color:var(--muted); }
+
+header {
+  position:sticky; top:0; z-index:40;
+  backdrop-filter: blur(18px);
+  background:rgba(255,255,255,.76);
+  border-bottom:1px solid rgba(3,27,140,.06);
+}
+.nav {
+  height:82px; display:flex; align-items:center; justify-content:space-between;
+}
+.brand {
+  display:flex; align-items:center; gap:14px; font-weight:900; font-size:21px; letter-spacing:-.03em;
+}
+.brand-mark {
+  width:42px; height:42px; border-radius:14px;
+  background:linear-gradient(145deg, var(--blue), var(--cyan));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.45), 0 18px 34px rgba(0,24,220,.24);
+}
+.nav-links {
+  display:flex; gap:28px; color:#30405f; font-weight:600; font-size:15px;
+}
+.nav-cta {
+  padding:14px 18px; border-radius:999px; font-weight:800; color:white;
+  background:linear-gradient(135deg, var(--blue), #0946ff);
+  box-shadow:0 18px 30px rgba(0,24,220,.22);
+}
+
+.hero { padding:58px 0 70px; overflow:hidden; }
+.hero-grid {
+  display:grid; grid-template-columns: 1.08fr .92fr; gap:44px; align-items:center;
+}
+.hero-copy p.lead {
+  margin-top:24px; max-width:760px; font-size:21px; color:#445271;
+}
+.hero-actions { display:flex; flex-wrap:wrap; gap:16px; margin-top:34px; }
+.btn {
+  display:inline-flex; align-items:center; justify-content:center; gap:10px;
+  padding:16px 24px; border-radius:999px; font-weight:800; font-size:15px;
+  transition:.25s ease;
+}
+.btn-primary {
+  color:white; background:linear-gradient(135deg, var(--blue), #0a47ff);
+  box-shadow:0 20px 35px rgba(0,24,220,.24);
+}
+.btn-secondary {
+  color:var(--ink); background:white; border:1px solid var(--line);
+}
+.btn:hover { transform:translateY(-2px); }
+.hero-points {
+  margin-top:28px; display:grid; gap:12px;
+}
+.hero-point {
+  display:flex; align-items:flex-start; gap:12px; font-size:15px; color:#3b4863; font-weight:650;
+}
+.hero-point i {
+  width:20px; height:20px; border-radius:50%; flex:0 0 20px;
+  background:linear-gradient(180deg, rgba(21,209,255,.22), rgba(0,24,220,.06));
+  border:1px solid rgba(0,24,220,.08); position:relative; margin-top:2px;
+}
+.hero-point i::after {
+  content:""; position:absolute; inset:5px; border-radius:50%; background:var(--blue);
+}
+
+.hero-visual {
+  position:relative; min-height:590px;
+}
+.glow {
+  position:absolute; inset:auto auto 6% -2%; width:74%; aspect-ratio:1/1; border-radius:50%;
+  background:radial-gradient(circle, rgba(21,209,255,.42) 0%, rgba(21,209,255,.18) 28%, rgba(21,209,255,0) 72%);
+  filter:blur(12px);
+}
+.visual-card {
+  position:absolute; inset:34px 0 0 8%;
+  background:linear-gradient(180deg, rgba(255,255,255,.95), rgba(244,249,255,.92));
+  border:1px solid rgba(3,27,140,.08);
+  border-radius:34px;
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+.visual-card::before {
+  content:""; position:absolute; inset:0; pointer-events:none;
+  background:linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,0) 36%);
+}
+.visual-img {
+  width:100%; height:100%; object-fit:cover; object-position:center center;
+}
+.stat-float {
+  position:absolute; left:-18px; bottom:24px; width:min(340px, 78%);
+  padding:22px 22px 20px; border-radius:24px;
+  background:rgba(255,255,255,.93); border:1px solid rgba(3,27,140,.08); box-shadow:var(--shadow);
+}
+.stat-float strong { display:block; font-size:26px; color:var(--blue); letter-spacing:-.05em; }
+.stat-float span { display:block; font-size:14px; color:#53637f; line-height:1.45; margin-top:8px; }
+.badge-float {
+  position:absolute; right:-12px; top:14px; padding:16px 18px; width:240px;
+  background:#0f26de;
+  color:white; border-radius:22px; box-shadow:0 20px 35px rgba(3,27,140,.35);
+}
+.badge-float b { display:block; font-size:13px; letter-spacing:.16em; opacity:.72; text-transform:uppercase; }
+.badge-float strong { display:block; margin-top:10px; font-size:22px; line-height:1.15; letter-spacing:-.03em; }
+
+.band {
+  margin-top:26px; display:grid; grid-template-columns:repeat(4, 1fr); gap:14px;
+}
+.band-card {
+  background:white; border:1px solid var(--line); border-radius:22px; padding:18px 20px;
+  box-shadow:0 12px 24px rgba(17,39,100,.06);
+}
+.band-card .k { font-size:13px; text-transform:uppercase; letter-spacing:.14em; color:#6f7f9a; font-weight:800; }
+.band-card .v { display:block; margin-top:8px; font-size:28px; color:var(--blue); font-weight:900; letter-spacing:-.04em; }
+.band-card .s { display:block; margin-top:6px; font-size:14px; color:#5d6b8a; }
+
+.panel {
+  background:white; border:1px solid rgba(3,27,140,.08);
+  border-radius:32px; box-shadow:var(--shadow);
+}
+.panel-pad { padding:38px; }
+
+.two-col { display:grid; grid-template-columns:1.02fr .98fr; gap:30px; align-items:stretch; }
+.stack { display:grid; gap:18px; }
+.tile {
+  background:linear-gradient(180deg, #ffffff, #f9fbff);
+  border:1px solid rgba(3,27,140,.08); border-radius:24px; padding:26px;
+  box-shadow:0 14px 28px rgba(17,39,100,.05);
+}
+.tile p { margin-top:10px; font-size:16px; }
+.checklist { display:grid; gap:14px; margin-top:22px; }
+.check {
+  display:grid; grid-template-columns:24px 1fr; gap:12px; align-items:start;
+  color:#374764; font-weight:650;
+}
+.check i {
+  width:24px; height:24px; border-radius:8px;
+  background:linear-gradient(180deg, rgba(21,209,255,.22), rgba(0,24,220,.06));
+  border:1px solid rgba(0,24,220,.08); position:relative; display:block;
+}
+.check i::after {
+  content:""; position:absolute; left:7px; top:4px; width:7px; height:11px;
+  border-right:2px solid var(--blue); border-bottom:2px solid var(--blue); transform:rotate(40deg);
+}
+
+.dark-block {
+  position:relative;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(21,209,255,.18), transparent 24%),
+    linear-gradient(135deg, #031053, #07196d 58%, #0c2bb4 100%);
+  color:white;
+  border-radius:36px; overflow:hidden;
+  box-shadow:0 34px 80px rgba(4,20,84,.25);
+}
+.dark-block .panel-pad { padding:46px; }
+.dark-block p { color:rgba(255,255,255,.78); }
+.dark-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:28px; }
+.dark-card {
+  padding:22px; border-radius:24px;
+  background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.14);
+}
+.dark-card h3 { font-size:20px; }
+.dark-card p { font-size:15px; margin-top:8px; }
+
+.compare {
+  display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:28px;
+}
+.compare-card {
+  border-radius:24px; padding:26px; min-height:100%;
+}
+.compare-card.left {
+  background:linear-gradient(180deg, #fff8f8, #ffffff);
+  border:1px solid #ffd9dc;
+}
+.compare-card.right {
+  background:linear-gradient(180deg, #f5fdff, #ffffff);
+  border:1px solid #cbecff;
+}
+.compare-card ul {
+  margin:18px 0 0; padding:0; list-style:none; display:grid; gap:12px;
+}
+.compare-card li {
+  position:relative; padding-left:28px; color:#465674; line-height:1.55; font-weight:600;
+}
+.compare-card li::before {
+  content:""; position:absolute; left:0; top:8px; width:14px; height:14px; border-radius:50%;
+}
+.compare-card.left li::before { background:#ff5c6c; box-shadow:0 0 0 5px rgba(255,92,108,.12); }
+.compare-card.right li::before { background:var(--cyan); box-shadow:0 0 0 5px rgba(21,209,255,.12); }
+
+.flow {
+  display:flex; flex-wrap:wrap; align-items:center; gap:14px; margin-top:28px;
+}
+.flow-step {
+  background:white; border:1px solid var(--line); border-radius:18px; padding:16px 18px;
+  font-weight:800; color:#29405b; box-shadow:0 12px 24px rgba(17,39,100,.05);
+}
+.flow-arrow {
+  font-size:24px; color:var(--blue); font-weight:900;
+}
+
+.spec-wrap {
+  margin-top:28px; overflow:auto; border:1px solid rgba(3,27,140,.08); border-radius:26px;
+  box-shadow:0 24px 50px rgba(17,39,100,.08); background:white;
+}
+table { width:100%; min-width:1150px; border-collapse:separate; border-spacing:0; }
+thead th {
+  position:sticky; top:0; z-index:2;
+  background:linear-gradient(180deg, #061870, #0a2ab1);
+  color:white; font-size:13px; text-transform:uppercase; letter-spacing:.12em;
+  padding:18px 14px; text-align:left;
+}
+tbody td {
+  border-top:1px solid #e6edff; padding:16px 14px; vertical-align:top;
+  font-size:15px; color:#30405f;
+}
+tbody tr:nth-child(even) td { background:#fbfdff; }
+tbody tr:hover td { background:#f4f9ff; }
+td strong { display:block; color:var(--ink); font-size:15px; }
+td .muted { display:block; color:#7988a4; font-size:12px; margin-top:4px; }
+.note {
+  margin-top:18px; font-size:14px; color:#60708f; line-height:1.7;
+}
+
+.quote {
+  padding:34px; border-radius:30px;
+  background:linear-gradient(180deg, #ffffff, #f8fbff);
+  border:1px solid rgba(3,27,140,.08); box-shadow:var(--shadow);
+}
+.quote-mark { font-size:64px; line-height:.65; color:rgba(0,24,220,.16); font-weight:900; }
+.quote p { margin-top:10px; color:#374764; font-size:20px; line-height:1.7; }
+.quote small { display:block; margin-top:18px; color:#6d7d98; font-weight:700; letter-spacing:.04em; text-transform:uppercase; }
+
+.footer {
+  padding:34px 0 90px;
+}
+.footer-box {
+  background:
+    radial-gradient(circle at 15% 10%, rgba(21,209,255,.18), transparent 30%),
+    linear-gradient(135deg, #05125c, #061970 54%, #0b2ab3 100%);
+  border-radius:36px; color:white; padding:50px; box-shadow:0 34px 80px rgba(4,20,84,.28);
+}
+.footer-box p { color:rgba(255,255,255,.78); max-width:760px; margin-top:14px; }
+.footer-actions { margin-top:26px; display:flex; flex-wrap:wrap; gap:16px; }
+.footer .btn-secondary { background:rgba(255,255,255,.12); color:white; border-color:rgba(255,255,255,.18); }
+
+.spacer-18 { height:18px; }
+.spacer-24 { height:24px; }
+.spacer-30 { height:30px; }
+
+@media (max-width: 1100px) {
+  .hero-grid, .two-col, .dark-grid, .compare { grid-template-columns:1fr; }
+  .hero-visual { min-height:480px; order:-1; }
+  .visual-card { inset:30px 0 0 0; }
+  .stat-float { left:18px; bottom:16px; }
+  .badge-float { right:18px; top:18px; }
+  .band { grid-template-columns:repeat(2, 1fr); }
+}
+@media (max-width: 720px) {
+  .container { width:min(100% - 24px, 1240px); }
+  .nav { height:72px; }
+  .nav-links { display:none; }
+  .hero { padding-top:26px; }
+  .section { padding:68px 0; }
+  .panel-pad, .dark-block .panel-pad, .footer-box { padding:26px; }
+  .band { grid-template-columns:1fr; }
+  .hero-actions, .footer-actions { flex-direction:column; align-items:stretch; }
+  .btn { width:100%; }
+  p, .hero-copy p.lead { font-size:17px; }
+}
+</style>
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <span class="section-label">Casing gas compression</span>
+        <div class="spacer-24"></div>
+           <h1 class="max-w-3xl text-3xl font-extrabold leading-[1.08] tracking-[-0.03em] text-dark sm:text-5xl md:text-6xl lg:text-[54px]">Casing gas isn’t clean gas.<br>Stop compressing it like it is.</h1>
+        <p class="lead">Fluidstream CompressionCommander systems are built for the real casing gas stream operators actually see in the field: variable gas quality, liquid carryover, slugs, H₂S exposure, and unstable operating conditions that conventional gas-only compressors were never designed to survive.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#cta">Request application review</a>
+          <a class="btn btn-secondary" href="#specs">View specifications</a>
         </div>
-        <div class="relative z-10 flex min-h-screen items-center">
-            <div class="mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8">
-                <div class="max-w-4xl pt-24 sm:pt-28 lg:pt-20">
-                    <span
-                        class="inline-flex items-center rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-sky-200 backdrop-blur-sm">
-                        Casing Gas Compression
-                    </span>
+        <div class="hero-points">
+          <div class="hero-point"><i></i><span>Designed to operate without upstream scrubbers being the only line of defense.</span></div>
+          <div class="hero-point"><i></i><span>Handles the upset conditions that cause trips, downtime, and compressor damage in conventional casing gas systems.</span></div>
+          <div class="hero-point"><i></i><span>Autonomous controls mitigate risk when liquid slugs or other harmful operating conditions appear.</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="glow"></div>
+        <div class="visual-card">
+          <img class="visual-img" src="/img/casing-gas-image-01.jpg" alt="Fluidstream CompressionCommander casing gas compressor unit">
+        </div>
+        <div class="badge-float">
+          <b>Core advantage</b>
+          <strong>Built for multiphase reality, not ideal gas assumptions.</strong>
+        </div>
+        <div class="stat-float">
+          <strong>Up to 1,197 MCFD</strong>
+          <span>From the uploaded CompressionCommander specification sheet, the product family spans 15 to 150 HP and reaches up to 275 psig pressure differential depending on configuration.</span>
+        </div>
+      </div>
+    </div>
 
-                    <h1
-                        class="mt-6 max-w-4xl text-3xl font-extrabold leading-[1.08] tracking-[-0.03em] text-white sm:text-5xl md:text-6xl lg:text-[50px]">
-                        CompressionCommander<span class="align-super text-lg sm:text-2xl">™</span>
-                    </h1>
+    <div class="container">
+      <div class="band">
+        <div class="band-card"><span class="k">Flow range</span><span class="v">35–1,197</span><span class="s">MCFD across the model family</span></div>
+        <div class="band-card"><span class="k">Pressure differential</span><span class="v">Up to 275</span><span class="s">psig depending on package</span></div>
+        <div class="band-card"><span class="k">Controls</span><span class="v">Autonomous</span><span class="s">Remote control + touchscreen standard</span></div>
+        <div class="band-card"><span class="k">Field readiness</span><span class="v">H₂S + cold weather</span><span class="s">Across the listed configurations</span></div>
+      </div>
+    </div>
+  </section>
 
-                    <p
-                        class="mt-7 max-w-3xl text-base font-medium leading-7 text-slate-200 sm:text-lg sm:leading-8 lg:text-[22px] lg:leading-9">
-                        Cost-Effective, low maintenance, multiphase vapor recovery technology
-                    </p>
-
-                    <div class="mt-9 flex flex-col gap-3 sm:flex-row">
-                        <a href="#overview"
-                            class="inline-flex items-center justify-center rounded-xl bg-sky-500 px-6 py-3.5 text-sm font-semibold text-white transition duration-300 hover:bg-sky-600">
-                            Explore Technology
-                        </a>
-
-                        <a href="{{ url('/contact') }}"
-                            class="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/10 px-6 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition duration-300 hover:bg-white/15">
-                            Contact Us
-                        </a>
-                    </div>
-                </div>
+  <section id="why" class="section">
+    <div class="container">
+      <span class="section-label">Why multiphase matters</span>
+      <div class="spacer-24"></div>
+      <div class="panel panel-pad">
+        <div class="two-col">
+          <div>
+            <h2>Casing gas is inherently multiphase.</h2>
+            <div class="spacer-24"></div>
+            <p>That is the core truth your webpage needs to teach. Casing gas is often sold and specified as though it were a dry gas service, but field conditions are rarely that clean. Condensate, produced water, intermittent slugs, contaminants, and changing operating conditions are exactly what make conventional casing gas compressors unreliable.</p>
+            <div class="checklist">
+              <div class="check"><i></i><span>Scrubbers and separators reduce liquid carryover, but they do not guarantee a perfectly dry gas stream in the real world.</span></div>
+              <div class="check"><i></i><span>Slug events and unstable operating conditions still reach the compressor and create the conditions that cause damage.</span></div>
+              <div class="check"><i></i><span>If the machine is only designed for gas-only assumptions, the operator ends up buying downtime, intervention, and maintenance risk.</span></div>
             </div>
-        </div>
-
-    </section>
-
-    <!-- Overview -->
-    <section id="overview" class="relative overflow-hidden bg-white py-16 sm:py-18 lg:py-20">
-        <div class="absolute inset-0 pointer-events-none">
-            <div class="absolute left-0 top-0 h-40 w-40 rounded-full bg-slate-100/80 blur-3xl"></div>
-            <div class="absolute right-0 bottom-0 h-52 w-52 rounded-full bg-slate-100/70 blur-3xl"></div>
-        </div>
-
-        <div class="relative mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-            <div class=" justify-center items-center overview-reveal grid gap-10 lg:grid-cols-[1.05fr_1fr] lg:gap-16">
-                <div>
-                    <span
-                        class="inline-flex items-center rounded-full border border-slate-200 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500">
-                        Casing Gas Technology
-                    </span>
-
-                    <h2
-                        class="mt-6 text-3xl font-semibold leading-tight tracking-[-0.04em] text-slate-900 sm:text-3xl lg:text-3xl">
-                        Low-Cost, Low-Maintenance, Multiphase Casing Gas Compressor Technology
-                    </h2>
-
-                    <div class="mt-6 h-px w-24 bg-slate-300"></div>
-                </div>
-
-                <div
-                    class="rounded-[30px] border border-slate-200 bg-slate-50/70 p-8 shadow-[0_20px_60px_rgba(15,23,42,0.04)] sm:p-10">
-                    <div class="space-y-6 text-lg leading-9 text-slate-600">
-                        <p>
-                            Fluidstream offers a low-cost and low-maintenance multiphase casing gas compressor technology.
-                        </p>
-
-                        <p>
-                            Never worry about liquids in your casing gas applications because our technology can handle from
-                            0% to 100% liquids in solution.
-                        </p>
-
-                        <p>
-                            Built with sturdy high-quality components and advance sealing systems, our multiphase casing gas
-                            technology has low maintenance and service cycles.
-                        </p>
-                    </div>
-                </div>
+          </div>
+          <div class="stack">
+            <div class="tile">
+              <h3>What most systems assume</h3>
+              <p>Clean gas. Stable flow. Perfect separation. No meaningful liquid carryover. Minimal upset conditions.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Benefits -->
-    <section class="relative overflow-hidden bg-slate-50 py-16 sm:py-18 lg:py-20">
-        <div class="absolute inset-0 pointer-events-none">
-            <div class="absolute left-0 bottom-0 h-48 w-48 rounded-full bg-white/70 blur-3xl"></div>
-            <div class="absolute right-0 top-0 h-52 w-52 rounded-full bg-white/60 blur-3xl"></div>
-        </div>
-
-        <div class="relative mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-            <div class="benefits-reveal">
-                <div class="mx-auto max-w-3xl text-center">
-                    <span
-                        class="inline-flex items-center rounded-full border border-slate-200 bg-white px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500">
-                        Key Advantages
-                    </span>
-
-                    <h2 class="mt-6 text-3xl font-semibold tracking-[-0.03em] text-slate-900 sm:text-4xl lg:text-5xl">
-                        Unmatched benefits and value
-                    </h2>
-
-                    <div class="mx-auto mt-5 h-px w-24 bg-slate-300"></div>
-                </div>
-
-                <div class="mt-12 grid gap-6 lg:grid-cols-2">
-                    <div class="space-y-6">
-                        <div
-                            class="rounded-[28px] border border-slate-200 bg-white p-7 transition duration-500 hover:shadow-[0_20px_50px_rgba(15,23,42,0.05)] sm:p-8">
-                            <h3 class="text-2xl font-semibold tracking-[-0.02em] text-slate-900">
-                                Low Cost and Quicker Payout
-                            </h3>
-                            <p class="mt-4 text-base leading-8 text-slate-600 sm:text-lg">
-                                CompressionCommander<span class="align-super text-xs">™</span> low cost provides a maximum
-                                rate of return and reduces the total ownership cost.
-                            </p>
-                        </div>
-
-                        <div
-                            class="rounded-[28px] border border-slate-200 bg-white p-7 transition duration-500 hover:shadow-[0_20px_50px_rgba(15,23,42,0.05)] sm:p-8">
-                            <h3 class="text-2xl font-semibold tracking-[-0.02em] text-slate-900">
-                                Low Maintenance
-                            </h3>
-                            <p class="mt-4 text-base leading-8 text-slate-600 sm:text-lg">
-                                The simple and robust design and comprehensive controls ensure significantly reduced
-                                maintenance cycles.
-                            </p>
-                        </div>
-
-                        <div
-                            class="rounded-[28px] border border-slate-200 bg-white p-7 transition duration-500 hover:shadow-[0_20px_50px_rgba(15,23,42,0.05)] sm:p-8">
-                            <h3 class="text-2xl font-semibold tracking-[-0.02em] text-slate-900">
-                                Multiphase Operation
-                            </h3>
-                            <p class="mt-4 text-base leading-8 text-slate-600 sm:text-lg">
-                                Patented multiphase operation can handle up to 100% liquids or any combination of liquids
-                                and gas without a scrubber. Gas volume fractions (GVF) between 0 and 100%.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="space-y-6">
-                        <div
-                            class="rounded-[28px] border border-slate-200 bg-white p-7 transition duration-500 hover:shadow-[0_20px_50px_rgba(15,23,42,0.05)] sm:p-8">
-                            <h3 class="text-2xl font-semibold tracking-[-0.02em] text-slate-900">
-                                Fully Autonomous with Comprehensive Controls
-                            </h3>
-                            <p class="mt-4 text-base leading-8 text-slate-600 sm:text-lg">
-                                Works autonomously to achieve operator-defined operational targets. Features comprehensive
-                                controls to configure for any complex or upset condition. Very well suited for wet casing
-                                gas applications, including applications with varying flow and line pressures.
-                            </p>
-                        </div>
-
-                        <div
-                            class="rounded-[28px] border border-slate-200 bg-white p-7 transition duration-500 hover:shadow-[0_20px_50px_rgba(15,23,42,0.05)] sm:p-8">
-                            <h3 class="text-2xl font-semibold tracking-[-0.02em] text-slate-900">
-                                Portability
-                            </h3>
-                            <p class="mt-4 text-base leading-8 text-slate-600 sm:text-lg">
-                                Does not require rigid support for operation. Trailer-mounted units are available.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+            <div class="tile">
+              <h3>What casing gas actually looks like</h3>
+              <p>Variable gas quality, intermittent liquids, pressure swings, slug events, corrosive service, remote operation, and the need for high uptime with low intervention.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Specifications Table -->
-    <section class="relative overflow-hidden bg-white py-14 sm:py-16 lg:py-18">
-        <div class="absolute inset-0 pointer-events-none">
-            <div class="absolute left-0 top-0 h-32 w-32 rounded-full bg-slate-100/80 blur-3xl"></div>
-            <div class="absolute right-0 bottom-0 h-44 w-44 rounded-full bg-slate-100/70 blur-3xl"></div>
-        </div>
-
-        <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="table-reveal">
-                <div class="mx-auto max-w-4xl text-center">
-                    <span
-                        class="inline-flex items-center rounded-full border border-slate-200 bg-white px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-slate-500">
-                        Operating Specifications
-                    </span>
-
-                    <h2 class="mt-5 text-2xl font-semibold tracking-[-0.03em] text-slate-900 sm:text-3xl lg:text-4xl">
-                        CompressionCommander<span class="align-super text-base">™</span> Operating Specifications
-                    </h2>
-
-                    <div class="mx-auto mt-4 h-px w-20 bg-slate-300"></div>
-                </div>
-
-                <div class="mt-10 rounded-[24px] border border-slate-200 bg-white shadow-[0_16px_40px_rgba(15,23,42,0.05)]">
-                    <div class="border-b border-slate-200 px-4 py-3 sm:px-5">
-                        <p class="text-xs font-medium text-slate-500">
-                            Scroll horizontally on smaller screens to view the full table.
-                        </p>
-                    </div>
-
-                    <div class="overflow-x-auto">
-                        <div class="min-w-[1250px] p-2.5 sm:p-3">
-                            <table class="w-full border-separate border-spacing-0 overflow-hidden rounded-xl">
-                                <thead>
-                                    <tr>
-                                        <th colspan="2" class="bg-white px-3 py-2"></th>
-                                        <th colspan="8"
-                                            class="rounded-tl-xl rounded-tr-xl bg-sky-500 px-3 py-3 text-center text-sm font-semibold text-white">
-                                            CompressionCommander<span class="align-super text-[9px]">™</span> Model
-                                        </th>
-                                    </tr>
-                                    <tr>
-                                        <th colspan="2" class="border-b border-slate-200 bg-white px-3 py-2"></th>
-                                        <th
-                                            class="border-l border-b border-slate-200 bg-sky-500 px-3 py-2.5 text-center text-sm font-semibold text-white">
-                                            CCx1020
-                                        </th>
-                                        <th
-                                            class="border-l border-b border-slate-200 bg-sky-500 px-3 py-2.5 text-center text-sm font-semibold text-white">
-                                            CCx1035<span class="align-super text-[9px]">3</span>
-                                        </th>
-                                        <th
-                                            class="border-l border-b border-slate-200 bg-sky-500 px-3 py-2.5 text-center text-sm font-semibold text-white">
-                                            CCx2535<span class="align-super text-[9px]">3</span>
-                                        </th>
-                                        <th
-                                            class="border-l border-b border-slate-200 bg-sky-500 px-3 py-2.5 text-center text-sm font-semibold text-white">
-                                            CCx5035<span class="align-super text-[9px]">3</span>
-                                        </th>
-                                        <th
-                                            class="border-l border-b border-slate-200 bg-sky-500 px-3 py-2.5 text-center text-sm font-semibold text-white">
-                                            CC1245
-                                        </th>
-                                        <th
-                                            class="border-l border-b border-slate-200 bg-sky-500 px-3 py-2.5 text-center text-sm font-semibold text-white">
-                                            CC1645
-                                        </th>
-                                        <th
-                                            class="border-l border-b border-slate-200 bg-sky-500 px-3 py-2.5 text-center text-sm font-semibold text-white">
-                                            CC2245
-                                        </th>
-                                        <th
-                                            class="border-l border-b border-slate-200 bg-sky-500 px-3 py-2.5 text-center text-sm font-semibold text-white">
-                                            CC2270
-                                        </th>
-                                    </tr>
-                                </thead>
-
-                                <tbody>
-                                    <tr>
-                                        <th rowspan="5"
-                                            class="w-[220px] border-r border-b border-slate-200 bg-sky-500 px-3 py-4 text-center align-middle text-[14px] font-semibold leading-6 text-white">
-                                            Max Gas Rate<span class="align-super text-[9px]">1,2</span><br>
-                                            @ Inlet Pressure<br>
-                                            (e3m3/day)<br>[mcf/day]
-                                        </th>
-                                        <th
-                                            class="w-[160px] border-r border-b border-slate-200 bg-sky-500 px-3 py-3 text-center text-[14px] font-semibold text-white">
-                                            5 psi [34 kPa]
-                                        </th>
-                                        <td class="table-data-sm">2.0 [71]</td>
-                                        <td class="table-data-sm">3.2 [113]</td>
-                                        <td class="table-data-sm">3.2 [113]</td>
-                                        <td class="table-data-sm">3.2 [113]</td>
-                                        <td class="table-data-sm">3.2 [113]</td>
-                                        <td class="table-data-sm">5.7 [201]</td>
-                                        <td class="table-data-sm">10.7 [378]</td>
-                                        <td class="table-data-sm last-col">10.3 [378]</td>
-                                    </tr>
-
-                                    <tr>
-                                        <th
-                                            class="border-r border-b border-slate-200 bg-sky-500 px-3 py-3 text-center text-[14px] font-semibold text-white">
-                                            10 psi [69 kPa]
-                                        </th>
-                                        <td class="table-data-sm">2.5 [88]</td>
-                                        <td class="table-data-sm">4.0 [141]</td>
-                                        <td class="table-data-sm">4.0 [141]</td>
-                                        <td class="table-data-sm">4.0 [141]</td>
-                                        <td class="table-data-sm">3.9 [138]</td>
-                                        <td class="table-data-sm">7.1 [251]</td>
-                                        <td class="table-data-sm">13.5 [477]</td>
-                                        <td class="table-data-sm last-col">13.0 [459]</td>
-                                    </tr>
-
-                                    <tr>
-                                        <th
-                                            class="border-r border-b border-slate-200 bg-sky-500 px-3 py-3 text-center text-[14px] font-semibold text-white">
-                                            20 psi [138 kPa]
-                                        </th>
-                                        <td class="table-data-sm">3.6 [127]</td>
-                                        <td class="table-data-sm">5.6 [198]</td>
-                                        <td class="table-data-sm">5.6 [198]</td>
-                                        <td class="table-data-sm">5.6 [198]</td>
-                                        <td class="table-data-sm">5.5 [194]</td>
-                                        <td class="table-data-sm">9.9 [350]</td>
-                                        <td class="table-data-sm">18.9 [667]</td>
-                                        <td class="table-data-sm last-col">18.2 [643]</td>
-                                    </tr>
-
-                                    <tr>
-                                        <th
-                                            class="border-r border-b border-slate-200 bg-sky-500 px-3 py-3 text-center text-[14px] font-semibold text-white">
-                                            30 psi [207 kPa]
-                                        </th>
-                                        <td class="table-data-sm">4.6 [162]</td>
-                                        <td class="table-data-sm">7.2 [254]</td>
-                                        <td class="table-data-sm">7.2 [254]</td>
-                                        <td class="table-data-sm">7.2 [254]</td>
-                                        <td class="table-data-sm">7.1 [251]</td>
-                                        <td class="table-data-sm">12.8 [452]</td>
-                                        <td class="table-data-sm">24.4 [862]</td>
-                                        <td class="table-data-sm last-col">23.4 [826]</td>
-                                    </tr>
-
-                                    <tr>
-                                        <th
-                                            class="border-r border-b border-slate-200 bg-sky-500 px-3 py-3 text-center text-[14px] font-semibold text-white">
-                                            50 psi [345kPa]
-                                        </th>
-                                        <td class="table-data-sm">6.6 [233]</td>
-                                        <td class="table-data-sm">10.4 [367]</td>
-                                        <td class="table-data-sm">10.4 [367]</td>
-                                        <td class="table-data-sm">10.4 [367]</td>
-                                        <td class="table-data-sm">10.3 [364]</td>
-                                        <td class="table-data-sm">18.5 [653]</td>
-                                        <td class="table-data-sm">35.3 [1,247]</td>
-                                        <td class="table-data-sm last-col">33.9 [1,197]</td>
-                                    </tr>
-
-                                    <tr>
-                                        <th colspan="2"
-                                            class="border-r border-b border-slate-200 bg-sky-500 px-3 py-3 text-left text-[14px] font-semibold text-white">
-                                            Max Pressure Differential<span class="align-super text-[9px]">2</span> (kPag)
-                                            [psig]
-                                        </th>
-                                        <td class="table-data-sm">1138 [165]</td>
-                                        <td class="table-data-sm">1138 [165]</td>
-                                        <td class="table-data-sm">1138 [165]</td>
-                                        <td class="table-data-sm">1138 [165]</td>
-                                        <td class="table-data-sm">2413 [350]</td>
-                                        <td class="table-data-sm">1379 [200]</td>
-                                        <td class="table-data-sm">689 [100]</td>
-                                        <td class="table-data-sm last-col">1896 [275]</td>
-                                    </tr>
-
-                                    <tr>
-                                        <th colspan="2"
-                                            class="border-r border-b border-slate-200 bg-sky-500 px-3 py-3 text-left text-[14px] font-semibold text-white">
-                                            Motor Size (HP)
-                                        </th>
-                                        <td class="table-data-sm">10</td>
-                                        <td class="table-data-sm">10</td>
-                                        <td class="table-data-sm">25</td>
-                                        <td class="table-data-sm">50</td>
-                                        <td class="table-data-sm">50</td>
-                                        <td class="table-data-sm">100</td>
-                                        <td class="table-data-sm">100</td>
-                                        <td class="table-data-sm last-col">150</td>
-                                    </tr>
-
-                                    <tr>
-                                        <th colspan="2"
-                                            class="border-r border-b border-slate-200 bg-sky-500 px-3 py-3 text-left text-[14px] font-semibold text-white">
-                                            H2S Handling
-                                        </th>
-                                        <td class="table-data-sm check">✓</td>
-                                        <td class="table-data-sm check">✓</td>
-                                        <td class="table-data-sm check">✓</td>
-                                        <td class="table-data-sm check">✓</td>
-                                        <td class="table-data-sm check">✓</td>
-                                        <td class="table-data-sm check">✓</td>
-                                        <td class="table-data-sm check">✓</td>
-                                        <td class="table-data-sm check last-col">✓</td>
-                                    </tr>
-
-                                    <tr>
-                                        <th colspan="2"
-                                            class="border-r border-b border-slate-200 bg-sky-500 px-3 py-3 text-left text-[14px] font-semibold text-white">
-                                            3-Stage Cold Weather Startup
-                                        </th>
-                                        <td class="table-data-sm check">✓</td>
-                                        <td class="table-data-sm check">✓</td>
-                                        <td class="table-data-sm check">✓</td>
-                                        <td class="table-data-sm check">✓</td>
-                                        <td class="table-data-sm check">✓</td>
-                                        <td class="table-data-sm check">✓</td>
-                                        <td class="table-data-sm check">✓</td>
-                                        <td class="table-data-sm check last-col">✓</td>
-                                    </tr>
-
-                                    <tr>
-                                        <th colspan="2"
-                                            class="border-r border-b border-slate-200 bg-sky-500 px-3 py-3 text-left text-[14px] font-semibold text-white">
-                                            Autonomous Controller
-                                        </th>
-                                        <td class="table-data-sm check">✓</td>
-                                        <td class="table-data-sm check">✓</td>
-                                        <td class="table-data-sm check">✓</td>
-                                        <td class="table-data-sm check">✓</td>
-                                        <td class="table-data-sm check">✓</td>
-                                        <td class="table-data-sm check">✓</td>
-                                        <td class="table-data-sm check">✓</td>
-                                        <td class="table-data-sm check last-col">✓</td>
-                                    </tr>
-
-                                    <tr>
-                                        <th colspan="2"
-                                            class="border-r border-slate-200 bg-sky-500 px-3 py-3 text-left text-[14px] font-semibold text-white rounded-bl-xl">
-                                            Color Touchscreen &amp; Remote Control
-                                        </th>
-                                        <td class="table-data-sm check no-bottom">✓</td>
-                                        <td class="table-data-sm check no-bottom">✓</td>
-                                        <td class="table-data-sm check no-bottom">✓</td>
-                                        <td class="table-data-sm check no-bottom">✓</td>
-                                        <td class="table-data-sm check no-bottom">✓</td>
-                                        <td class="table-data-sm check no-bottom">✓</td>
-                                        <td class="table-data-sm check no-bottom">✓</td>
-                                        <td class="table-data-sm check last-col no-bottom rounded-br-xl">✓</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <div class="border-t border-slate-200 bg-slate-50/70 px-4 py-5 sm:px-6 sm:py-6">
-                        <div class="space-y-3 text-xs leading-6 text-slate-600 sm:text-sm">
-                            <p>
-                                <span class="align-super text-[9px]">1</span>
-                                Flow conditions calculated at 15°C [59°F] inlet pressure and with various components
-                                operating at 100% efficiency.
-                                Flow rates may vary based on inlet pressures, gas content, and other factors. Max gas rates
-                                will be reduced by amount of liquids in total fluid.
-                                Ask Fluidstream for max gas flow rates based on specific liquid rates and other varying
-                                conditions.
-                            </p>
-
-                            <p>
-                                <span class="align-super text-[9px]">2</span>
-                                Max gas rates and max pressure differentials can be increased by configuring additional
-                                unit(s) in parallel or in series.
-                            </p>
-
-                            <p>
-                                <span class="align-super text-[9px]">3</span>
-                                Higher horsepower units will yield much higher fluid flow rates at various pressure
-                                differentials. Please request pump curves to see flow rates at various pressure
-                                differentials.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+            <div class="tile">
+              <h3>What that means commercially</h3>
+              <p>Multiphase capability is not a nice-to-have. It is the reason a casing gas recovery system will either keep running or become another maintenance burden.</p>
             </div>
+          </div>
         </div>
-    </section>
+        <div class="flow">
+          <div class="flow-step">Casing gas stream</div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step">Liquids + slugs + variability</div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step">Conventional failures</div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step">Fluidstream multiphase handling</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <style>
-        .table-data-sm {
-            border-right: 1px solid rgb(226 232 240);
-            border-bottom: 1px solid rgb(226 232 240);
-            padding: 10px 12px;
-            text-align: center;
-            font-size: 14px;
-            line-height: 1.45;
-            font-weight: 500;
-            color: rgb(30 41 59);
-            background: #ffffff;
-            white-space: nowrap;
-        }
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <span class="section-label">Conventional vs Fluidstream</span>
+      <div class="spacer-24"></div>
+      <div class="compare">
+        <div class="compare-card left">
+          <h3>Conventional casing gas approach</h3>
+          <ul>
+            <li>Relies on scrubbers and separation equipment to protect a gas-only compressor.</li>
+            <li>Still remains vulnerable when liquids break through or slug conditions develop.</li>
+            <li>Creates more equipment, more footprint, more operator attention, and more failure points.</li>
+            <li>Turns casing gas recovery into a constant reliability problem instead of a simple recovery solution.</li>
+          </ul>
+        </div>
+        <div class="compare-card right">
+          <h3>Fluidstream multiphase approach</h3>
+          <ul>
+            <li>Built around the idea that casing gas streams are imperfect and often multiphase.</li>
+            <li>Designed to keep operating through the upset conditions that shut down conventional systems.</li>
+            <li>Reduces dependence on separation hardware as the only protection strategy.</li>
+            <li>Gives operators a more robust, lower-intervention path to continuous recovery.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        .table-data-sm.last-col {
-            border-right: 0;
-        }
-
-        .table-data-sm.no-bottom {
-            border-bottom: 0;
-        }
-
-        .table-data-sm.check {
-            color: #22c55e;
-            font-size: 18px;
-            font-weight: 700;
-        }
-    </style>
-
-    <!-- CTA -->
-    <section class="bg-white py-16 sm:py-18">
-        <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-            <div class="rounded-[32px] border border-slate-200 bg-slate-50 px-8 py-12 sm:px-10 lg:px-14 lg:py-16">
-                <div class="grid gap-8 lg:grid-cols-[1.2fr_auto] lg:items-center">
-                    <div>
-                        <span
-                            class="inline-flex items-center rounded-full border border-slate-200 bg-white px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500">
-                            Get in Touch
-                        </span>
-
-                        <h2 class="mt-6 text-3xl font-semibold tracking-[-0.03em] text-slate-900 sm:text-4xl">
-                            Let’s discuss your casing gas compression requirements
-                        </h2>
-
-                        <p class="mt-5 max-w-2xl text-base leading-8 text-slate-600 sm:text-lg">
-                            Connect with us to explore how CompressionCommander<span class="align-super text-xs">™</span>
-                            can support low-cost operation, autonomous control, and better overall project economics.
-                        </p>
-                    </div>
-
-                    <div class="flex flex-col gap-4 sm:flex-row lg:flex-col">
-                        <a href="{{ url('/contact') }}"
-                            class="inline-flex items-center justify-center rounded-xl bg-slate-900 px-6 py-3.5 text-sm font-semibold text-white transition duration-300 hover:bg-slate-800">
-                            Contact Us
-                        </a>
-
-                        <a href="{{ url('/vapor-recovery') }}"
-                            class="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-6 py-3.5 text-sm font-semibold text-slate-800 transition duration-300 hover:bg-slate-100">
-                            View Other Solutions
-                        </a>
-                    </div>
-                </div>
+  <section id="difference" class="section">
+    <div class="container">
+      <span class="section-label">The Fluidstream difference</span>
+      <div class="spacer-24"></div>
+      <div class="panel panel-pad">
+        <div class="two-col">
+          <div>
+            <h2>Designed for the flow you actually have.</h2>
+            <div class="spacer-18"></div>
+            <p>Fluidstream should not be positioned as just another casing gas compressor. It should be positioned as a casing gas solution built around multiphase behavior. That distinction matters because it explains why the system can create value where conventional designs struggle.</p>
+            <div class="checklist">
+              <div class="check"><i></i><span>Handles gas service in applications where liquids, slugs, and unstable operating conditions are part of the real envelope.</span></div>
+              <div class="check"><i></i><span>Sealed architecture supports corrosive and H₂S service while minimizing exposure risk.</span></div>
+              <div class="check"><i></i><span>Sand-conscious sealing philosophy improves survivability in harsher field environments.</span></div>
+              <div class="check"><i></i><span>Autonomous controls support extended operation without constant operator intervention.</span></div>
             </div>
+          </div>
+          <div class="stack">
+            <div class="tile">
+              <h3>No piston tracking claim. Strong protection story.</h3>
+              <p>Fluidstream does <strong>not</strong> need to claim piston tracking. The stronger and more defensible message is that the system detects <em>harmful operating conditions</em> associated with liquids or slugs and automatically mitigates risk before those conditions turn into equipment damage.</p>
+            </div>
+            <div class="tile">
+              <h3>Control strategy operators will trust</h3>
+              <p>Rather than claiming perfect knowledge of liquid presence inside the compressor, Fluidstream monitors system behavior and responds to the conditions that indicate potential damage. That is credible, field-aligned, and commercially strong.</p>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <style>
-        .table-data {
-            border-right: 1px solid rgb(226 232 240);
-            border-bottom: 1px solid rgb(226 232 240);
-            padding: 14px 16px;
-            text-align: center;
-            font-size: 15px;
-            line-height: 1.5;
-            font-weight: 500;
-            color: rgb(30 41 59);
-            background: #ffffff;
-            white-space: nowrap;
-        }
+      <div class="spacer-30"></div>
 
-        .table-data.last-col {
-            border-right: 0;
-        }
+      <div class="dark-block">
+        <div class="panel-pad">
+          <span class="section-label" style="background:rgba(255,255,255,.10); color:white; border-color:rgba(255,255,255,.14)">Intelligent protection system</span>
+          <div class="spacer-24"></div>
+          <h2>Detects risk conditions. Responds automatically. Protects continuously.</h2>
+          <div class="spacer-18"></div>
+          <p>This is the right technical story for your casing gas page. Fluidstream systems do not need to promise direct liquid detection. Instead, they monitor operating behavior and identify the conditions that suggest liquids, slugs, or other upset events are creating damage risk. The controls then adjust operation to protect components and preserve stability.</p>
+          <div class="dark-grid">
+            <div class="dark-card">
+              <h3>What it detects</h3>
+              <p>Pressure behavior, dynamic system response, load changes, and other operating patterns that indicate potential damage conditions associated with liquid carryover or slug events.</p>
+            </div>
+            <div class="dark-card">
+              <h3>What it does</h3>
+              <p>Automatically modifies operation to mitigate risk, reduce mechanical stress, and keep the system in a safer operating window without relying on piston tracking.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        .table-data.no-bottom {
-            border-bottom: 0;
-        }
+  <section id="specs" class="section">
+    <div class="container">
+      <span class="section-label">Specifications</span>
+      <div class="spacer-24"></div>
+      <div class="panel panel-pad">
+        <div class="two-col">
+          <div>
+            <h2>CompressionCommander model range for casing gas applications.</h2>
+            <div class="spacer-18"></div>
+            <p>The uploaded specification sheet gives you a strong technical credibility section. Use it to show that Fluidstream is not a one-size-fits-all product, but a family of casing gas solutions that can be matched to different inlet pressures, gas rates, and field constraints.</p>
+          </div>
+          <div class="stack">
+            <div class="tile">
+              <h3>Quick highlights</h3>
+              <p>15 to 150 HP model range, up to 275 psig pressure differential, H₂S handling, 3-stage cold weather startup, autonomous controller, and color touchscreen with remote control across the listed configurations.</p>
+            </div>
+          </div>
+        </div>
 
-        .table-data.check {
-            color: #22c55e;
-            font-size: 20px;
-            font-weight: 700;
-        }
+        <div class="spec-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>Flow @ 5 psi</th>
+                <th>Flow @ 10 psi</th>
+                <th>Flow @ 20 psi</th>
+                <th>Flow @ 30 psi</th>
+                <th>Flow @ 50 psi</th>
+                <th>Max ΔP</th>
+                <th>Motor HP</th>
+                <th>H₂S</th>
+                <th>Cold weather</th>
+                <th>Autonomous</th>
+                <th>Remote / HMI</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>CC825</strong><span class='muted'>(015013)</span></td><td>35</td><td>46</td><td>64</td><td>81</td><td>120</td><td>175</td><td>15</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+              <tr><td><strong>CC1235</strong><span class='muted'>(050035)</span></td><td>106</td><td>134</td><td>187</td><td>240</td><td>350</td><td>150</td><td>50</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+              <tr><td><strong>CC1245</strong><span class='muted'>(050035)</span></td><td>64</td><td>78</td><td>109</td><td>141</td><td>208</td><td>275</td><td>50</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+              <tr><td><strong>CC1245</strong><span class='muted'>(100060)</span></td><td>109</td><td>138</td><td>194</td><td>251</td><td>364</td><td>275</td><td>100</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+              <tr><td><strong>CC1645</strong><span class='muted'>(100060)</span></td><td>201</td><td>251</td><td>350</td><td>452</td><td>653</td><td>150</td><td>100</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+              <tr><td><strong>CC2270</strong><span class='muted'>(100128)</span></td><td>201</td><td>251</td><td>350</td><td>452</td><td>653</td><td>200</td><td>100</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+              <tr><td><strong>CC2270</strong><span class='muted'>(150128)</span></td><td>357</td><td>449</td><td>629</td><td>809</td><td>1,169</td><td>275</td><td>150</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+              <tr><td><strong>CC2270</strong><span class='muted'>(150128)</span></td><td>364</td><td>459</td><td>643</td><td>826</td><td>1,197</td><td>275</td><td>150</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+            </tbody>
+          </table>
+        </div>
 
-        .overview-reveal,
-        .benefits-reveal,
-        .table-reveal {
-            opacity: 0;
-            transform: translateY(36px);
-            transition: opacity 0.85s ease, transform 0.85s ease;
-            will-change: opacity, transform;
-        }
+        <p class="note">Flow values shown above are MCFD from the uploaded CompressionCommander specification sheet. The sheet also notes that max gas rates vary with inlet pressure, gas content, and other factors, and that gas rates are reduced by the amount of liquids in the total fluid stream. Additional units in parallel or series can increase total gas rate or pressure differential. Package-specific sizing should be confirmed against actual field conditions.</p>
+      </div>
+    </div>
+  </section>
 
-        .overview-reveal.is-visible,
-        .benefits-reveal.is-visible,
-        .table-reveal.is-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        @media (max-width: 640px) {
-            .table-data {
-                padding: 12px 14px;
-                font-size: 15px;
-            }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-
-            .overview-reveal,
-            .benefits-reveal,
-            .table-reveal {
-                opacity: 1;
-                transform: none;
-                transition: none;
-            }
-        }
-    </style>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const blocks = document.querySelectorAll('.overview-reveal, .benefits-reveal, .table-reveal');
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                    }
-                });
-            }, {
-                threshold: 0.12
-            });
-
-            blocks.forEach((block) => observer.observe(block));
-        });
-    </script>
+  <section id="proof" class="section">
+    <div class="container">
+      <span class="section-label">Field proof</span>
+      <div class="spacer-24"></div>
+      <div class="panel panel-pad">
+        <div class="two-col">
+          <div>
+            <h2>Use your strongest multiphase case study as proof.</h2>
+            <div class="spacer-18"></div>
+            <p>Because you do not have a casing gas-specific case study, the best move is to use your most severe liquid-heavy multiphase example and position it correctly: proven performance in conditions that are harsher than typical casing gas service.</p>
+            <div class="checklist">
+              <div class="check"><i></i><span>Continuous liquid flow is harder than intermittent casing gas liquid carryover.</span></div>
+              <div class="check"><i></i><span>If the system performs in severe multiphase service, it supports a strong argument for casing gas reliability.</span></div>
+              <div class="check"><i></i><span>This gives your page real proof without pretending the case study is something it is not.</span></div>
+            </div>
+          </div>
+          <div class="quote">
+            <div class="quote-mark">“</div>
+            <p>Fluidstream’s multiphase compression didn’t just improve performance — it transformed non-producing wells into revenue-generating assets, delivering stable operation in severe multiphase conditions without adding separation equipment or infrastructure.</p>
+            <small>Use as “Proven in severe multiphase conditions” on the casing gas page</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 @endsection
