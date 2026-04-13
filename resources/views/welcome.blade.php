@@ -357,107 +357,100 @@
             }
         }
     </style>
-    <section class="relative overflow-hidden bg-[#ffffff] py-16 sm:py-20 lg:py-24">
+    <section class="relative overflow-hidden bg-white py-16 sm:py-20 lg:py-24">
         <div class="relative mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
             <div class="grid items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
+
                 <!-- Left Content -->
                 <div class="relative max-w-xl">
-                    <div class="mb-8 inline-flex items-center gap-3">
-                        <span
-                            class="section-label">
+                    <div class="mb-7 inline-flex items-center gap-3">
+                        <span class="section-label">
                             Technology Leadership
                         </span>
                     </div>
 
                     <div class="relative">
-                        <div
-                            class="absolute -left-5 top-2 hidden h-16 w-16 rounded-full border border-slate-200/70 lg:block">
-                        </div>
+                        <div class="absolute -left-5 top-2 hidden h-16 w-16 rounded-full border border-slate-200/70 lg:block"></div>
 
-                        <h2
-                            class="relative text-[26px] font-normal leading-[1.28] tracking-[-0.045em] text-slate-900 sm:text-[32px] lg:text-[44px]">
+                        <h2 class="relative text-[24px] font-normal leading-[1.22] tracking-[-0.04em] text-slate-900 sm:text-[30px] lg:text-[40px]">
                             Designed and built for reliability, cost efficiencies,
                             comprehensive and autonomous control, and broad applicability
                         </h2>
                     </div>
+
+                    <p class="mt-7 max-w-lg text-base leading-8 text-slate-600 sm:text-lg">
+                        Engineered for dependable field performance with lower maintenance,
+                        broader operating flexibility, and strong economic value.
+                    </p>
                 </div>
 
                 <!-- Right Cards -->
                 <div class="relative">
-                    <div class="grid grid-cols-1 gap-5 sm:grid-cols-2">
+                    <div class="grid auto-rows-fr grid-cols-1 gap-5 sm:grid-cols-2 lg:gap-6">
+
                         <!-- Card 1 -->
-                        <div
-                            class="group relative min-h-[250px] min-w-[250px] border border-[#e4e4e1] bg-white p-6 shadow-[0_20px_50px_rgba(15,23,42,0.06)] transition duration-500 hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(15,23,42,0.10)]">
-                            <div class="absolute -left-3 top-5 h-px w-8 bg-slate-200"></div>
+                        <div class="group h-full rounded-[5px] border border-[#e7e7e3] bg-white p-7 shadow-[0_12px_35px_rgba(15,23,42,0.05)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_22px_55px_rgba(15,23,42,0.09)]">
+                            <div class="flex h-full flex-col items-center text-center">
+                                <h3 class="text-[13px] font-semibold uppercase tracking-[0.28em] text-slate-900">
+                                    Unmatched Value <br>&amp; Return on Investment
+                                </h3>
 
-                            <h3 class="text-[14px] font-semibold text-center uppercase tracking-[0.20em] text-[#202020]">
-                                Unmatched Value <br>&amp; Return on Investment
-                            </h3>
+                                <div class="my-7 h-px w-14 bg-slate-200"></div>
 
-                            <div class="mt-8 flex justify-center">
-                                <img src="{{ asset('/img/icon-01.png') }}" alt="Value icon"
-                                    class="h-20 w-20 object-contain opacity-90">
+                                <p class="max-w-[250px] text-[17px] leading-8 text-slate-600">
+                                    Less cost and maintenance, and more features and benefits.
+                                </p>
                             </div>
-
-                            <p class="mt-8 text-[16px] text-center leading-6 text-slate-600">
-                                Less cost and maintenance, and more features and benefits.
-                            </p>
                         </div>
 
                         <!-- Card 2 -->
-                        <div
-                            class="group relative min-h-[250px] min-w-[250px] border border-[#e4e4e1] bg-white p-6 shadow-[0_20px_50px_rgba(15,23,42,0.06)] transition duration-500 hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(15,23,42,0.10)] sm:translate-y-6">
-                            <h3 class="text-[14px] text-center font-semibold uppercase tracking-[0.20em] text-[#202020]">
-                                Multiphase Compression
-                            </h3>
+                        <div class="group h-full rounded-[5px] border border-[#e7e7e3] bg-white p-7 shadow-[0_12px_35px_rgba(15,23,42,0.05)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_22px_55px_rgba(15,23,42,0.09)]">
+                            <div class="flex h-full flex-col items-center text-center">
+                                 <h3 class="text-[13px] font-semibold uppercase tracking-[0.28em] text-slate-900">
+                                    Multiphase <br>Compression
+                                </h3>
 
-                            <div class="mt-8 flex justify-center">
-                                <img src="{{ asset('/img/icon-02.png') }}" alt="Compression icon"
-                                    class="h-20 w-20 object-contain opacity-90">
+                                <div class="my-7 h-px w-14 bg-slate-200"></div>
+
+                                <p class="max-w-[250px] text-[17px] leading-8 text-slate-600">
+                                    Easily handles full range (0 to 100%) gas volume fractions (GVF).
+                                </p>
                             </div>
-
-                            <p class="mt-8 text-[16px] text-center leading-6 text-slate-600">
-                                Easily handles full range (0 to 100%) gas volume fractions (GVF).
-                            </p>
                         </div>
 
                         <!-- Card 3 -->
-                        <div
-                            class="group relative min-h-[250px] min-w-[250px] border border-[#e4e4e1] bg-white p-6 shadow-[0_20px_50px_rgba(15,23,42,0.06)] transition duration-500 hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(15,23,42,0.10)]">
+                        <div class="group h-full rounded-[5px] border border-[#e7e7e3] bg-white p-7 shadow-[0_12px_35px_rgba(15,23,42,0.05)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_22px_55px_rgba(15,23,42,0.09)]">
+                            <div class="flex h-full flex-col items-center text-center">
+                                <h3 class="text-[13px] font-semibold uppercase tracking-[0.28em] text-slate-900">
+                                    Fully Autonomous
+                                </h3>
 
+                                <div class="my-7 h-px w-14 bg-slate-200"></div>
 
-                            <h3 class="text-[14px] text-center font-semibold uppercase tracking-[0.20em] text-[#202020]">
-                                Fully Autonomous
-                            </h3>
-
-                            <div class="mt-8 flex justify-center">
-                                <img src="{{ asset('/img/icon-03.png') }}" alt="Autonomous icon"
-                                    class="h-20 w-20 object-contain opacity-90">
+                                <p class="max-w-[250px] text-[17px] leading-8 text-slate-600">
+                                    Works to meet multiple operator-defined targets.
+                                </p>
                             </div>
-
-                            <p class="mt-8 text-[16px] text-center leading-6 text-slate-600">
-                                Works to meet multiple operator-defined targets.
-                            </p>
                         </div>
 
                         <!-- Card 4 -->
-                        <div
-                            class="group relative min-h-[250px] min-w-[250px]  justify-center border border-[#e4e4e1] bg-white p-6 shadow-[0_20px_50px_rgba(15,23,42,0.06)] transition duration-500 hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(15,23,42,0.10)] sm:translate-y-6">
-                            <h3 class="text-[14px] text-center font-semibold uppercase tracking-[0.20em] text-[#202020]">
-                                Broad Operating Range
-                            </h3>
+                        <div class="group h-full rounded-[5px] border border-[#e7e7e3] bg-white p-7 shadow-[0_12px_35px_rgba(15,23,42,0.05)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_22px_55px_rgba(15,23,42,0.09)]">
+                            <div class="flex h-full flex-col items-center text-center">
+                                 <h3 class="text-[13px] font-semibold uppercase tracking-[0.28em] text-slate-900">
+                                    Broad Operating <br>Range
+                                </h3>
 
-                            <div class="mt-8 flex justify-center">
-                                <img src="{{ asset('/img/icon-04.png') }}" alt="Range icon"
-                                    class="h-20 w-20 object-contain opacity-90">
+                                <div class="my-7 h-px w-14 bg-slate-200"></div>
+
+                                <p class="max-w-[250px] text-[17px] leading-8 text-slate-600">
+                                    100% functional range for flow, inlet and discharge pressure, and motor load.
+                                </p>
                             </div>
-
-                            <p class="mt-8 text-[16px] text-center leading-6 text-slate-600">
-                                100% functional range for flow, inlet and discharge pressure, and motor load.
-                            </p>
                         </div>
+
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -495,14 +488,7 @@
                     <div
                         class="rounded-[30px] border border-slate-200 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,0.05)] transition duration-500 hover:-translate-y-1 hover:shadow-[0_24px_70px_rgba(15,23,42,0.08)] sm:p-10">
                         <div class="flex items-start gap-5">
-                            <div
-                                class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-slate-200 bg-slate-50 text-slate-700">
-                                <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.8"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M3.75 15A2.25 2.25 0 0 1 6 12.75h12A2.25 2.25 0 0 1 20.25 15v.75A2.25 2.25 0 0 1 18 18H6a2.25 2.25 0 0 1-2.25-2.25V15ZM7.5 12.75V9a4.5 4.5 0 1 1 9 0v3.75" />
-                                </svg>
-                            </div>
+                          
 
                             <div>
                                 <h3 class="text-2xl font-semibold tracking-[-0.02em] text-slate-900">
@@ -520,14 +506,7 @@
                     <div
                         class="rounded-[30px] border border-slate-200 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,0.05)] transition duration-500 hover:-translate-y-1 hover:shadow-[0_24px_70px_rgba(15,23,42,0.08)] sm:p-10">
                         <div class="flex items-start gap-5">
-                            <div
-                                class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-slate-200 bg-slate-50 text-slate-700">
-                                <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.8"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M12 3v8.25m0 0 3-3m-3 3-3-3M4.5 14.25h15M6.75 18h10.5" />
-                                </svg>
-                            </div>
+                           
 
                             <div>
                                 <h3 class="text-2xl font-semibold tracking-[-0.02em] text-slate-900">
@@ -544,14 +523,7 @@
                     <div
                         class="rounded-[30px] border border-slate-200 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,0.05)] transition duration-500 hover:-translate-y-1 hover:shadow-[0_24px_70px_rgba(15,23,42,0.08)] sm:p-10">
                         <div class="flex items-start gap-5">
-                            <div
-                                class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-slate-200 bg-slate-50 text-slate-700">
-                                <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.8"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M12 3v8.25m0 0 3-3m-3 3-3-3M4.5 14.25h15M6.75 18h10.5" />
-                                </svg>
-                            </div>
+                            
 
                             <div>
                                 <h3 class="text-2xl font-semibold tracking-[-0.02em] text-slate-900">

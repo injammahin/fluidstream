@@ -21,12 +21,15 @@
 <body class="bg-white text-slate-900 antialiased">
     @include('partical.header')
 
-    <main class="pt-24">
-        @yield('content')
-    </main>
+    <div class="pt-[96px]">
+        <x-breadcrumb />
+
+        <main>
+            @yield('content')
+        </main>
+    </div>
 
     @include('partical.footer')
-    sty
 </body>
 
 </html>

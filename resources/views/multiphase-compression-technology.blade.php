@@ -334,7 +334,7 @@
   .reveal-card {
     position: relative;
     overflow: hidden;
-    min-height: 290px;
+    min-height: 230px;
     border: 1px solid var(--line);
     border-radius: 5px;
     background: #fff;
@@ -352,17 +352,17 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 290px;
+    min-height: 230px;
     padding: 28px;
   }
 
   .reveal-card__title {
     margin: 0;
-    font-size: 22px;
+    font-size: 32px;
     line-height: 1.15;
     letter-spacing: -.02em;
-    font-weight: 500;
-    color: var(--fs-blue);
+    font-weight: 400;
+    color:#000000 ;
   }
 
   .reveal-card__text {

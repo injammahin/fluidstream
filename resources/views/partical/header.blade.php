@@ -2,21 +2,28 @@
     $solutionsActive = request()->is('multiphase-compression') ||
                        request()->is('vapor-recovery') ||
                        request()->is('casing-gas-compression');
-
-    $insightsActive = request()->is('case-studies') ||
-                      request()->is('perspectives');
 @endphp
 
 <header
     x-data="{
         mobileMenuOpen: false,
         solutionsOpen: false,
-        insightsOpen: false
+        closeTimer: null,
+        openSolutions() {
+            clearTimeout(this.closeTimer);
+            this.solutionsOpen = true;
+        },
+        closeSolutions() {
+            this.closeTimer = setTimeout(() => {
+                this.solutionsOpen = false;
+            }, 100);
+        }
     }"
-    class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200"
+    @keydown.escape.window="mobileMenuOpen = false; solutionsOpen = false"
+    class="fixed top-0 left-0 right-0 z-50 border-b border-[#e8edf3] bg-white"
 >
-    <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="relative flex h-[88px] items-center justify-between">
+    <div class="mx-auto max-w-[1680px] px-5 sm:px-6 lg:px-10">
+        <div class="grid h-[96px] grid-cols-[auto_1fr_auto] items-center gap-8">
 
             <!-- Logo -->
             <div class="shrink-0">
@@ -29,9 +36,9 @@
                 </a>
             </div>
 
-            <!-- Desktop Menu -->
-            <div class="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center">
-                <nav class="flex items-center gap-10 xl:gap-12">
+            <!-- Desktop Nav -->
+            <div class="hidden lg:flex items-center justify-center">
+                <nav class="flex items-center gap-12 xl:gap-16">
 
                     <a href="{{ url('/multiphase-compression-technology') }}"
                        class="nav-link {{ request()->is('multiphase-compression-technology') ? 'nav-link-active' : '' }}">
@@ -43,10 +50,9 @@
                         Technology
                     </a>
 
-                    <!-- Solutions -->
                     <div class="relative"
-                         @mouseenter="solutionsOpen = true"
-                         @mouseleave="solutionsOpen = false">
+                         @mouseenter="openSolutions()"
+                         @mouseleave="closeSolutions()">
                         <button
                             type="button"
                             class="nav-link inline-flex items-center gap-2 {{ $solutionsActive ? 'nav-link-active' : '' }}"
@@ -63,101 +69,12 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7" />
                             </svg>
                         </button>
-
-                        <div
-                            x-show="solutionsOpen"
-                            x-transition:enter="transition ease-out duration-150"
-                            x-transition:enter-start="opacity-0 translate-y-1"
-                            x-transition:enter-end="opacity-100 translate-y-0"
-                            x-transition:leave="transition ease-in duration-100"
-                            x-transition:leave-start="opacity-100 translate-y-0"
-                            x-transition:leave-end="opacity-0 translate-y-1"
-                            x-cloak
-                            class="absolute left-0 top-full mt-3 w-[320px] rounded-lg border border-gray-200 bg-white p-2"
-                        >
-                            <div class="flex flex-col gap-1">
-                                <a href="{{ url('/multiphase-compression') }}"
-                                   class="dropdown-link {{ request()->is('multiphase-compression') ? 'dropdown-link-active' : '' }}">
-                                    <span>Multiphase Pumping/Compression</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="m9 6 6 6-6 6" />
-                                    </svg>
-                                </a>
-
-                                <a href="{{ url('/vapor-recovery') }}"
-                                   class="dropdown-link {{ request()->is('vapor-recovery') ? 'dropdown-link-active' : '' }}">
-                                    <span>Vapor Recovery</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="m9 6 6 6-6 6" />
-                                    </svg>
-                                </a>
-
-                                <a href="{{ url('/casing-gas-compression') }}"
-                                   class="dropdown-link {{ request()->is('casing-gas-compression') ? 'dropdown-link-active' : '' }}">
-                                    <span>Casing Gas Compression</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="m9 6 6 6-6 6" />
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
                     </div>
-                     <a href="{{ url('/insights') }}"
+
+                    <a href="{{ url('/insights') }}"
                        class="nav-link {{ request()->is('insights') ? 'nav-link-active' : '' }}">
                         Insights
                     </a>
-
-                    <!-- Insights -->
-                    {{-- <div class="relative"
-                         @mouseenter="insightsOpen = true"
-                         @mouseleave="insightsOpen = false">
-                        <button
-                            type="button"
-                            class="nav-link inline-flex items-center gap-2 {{ $insightsActive ? 'nav-link-active' : '' }}"
-                            :class="insightsOpen ? 'nav-link-active' : ''"
-                        >
-                            <span>Insights</span>
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                 class="h-4 w-4 transition duration-200"
-                                 :class="insightsOpen ? 'rotate-180' : ''"
-                                 fill="none"
-                                 viewBox="0 0 24 24"
-                                 stroke="currentColor"
-                                 stroke-width="1.8">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7" />
-                            </svg>
-                        </button>
-
-                        <div
-                            x-show="insightsOpen"
-                            x-transition:enter="transition ease-out duration-150"
-                            x-transition:enter-start="opacity-0 translate-y-1"
-                            x-transition:enter-end="opacity-100 translate-y-0"
-                            x-transition:leave="transition ease-in duration-100"
-                            x-transition:leave-start="opacity-100 translate-y-0"
-                            x-transition:leave-end="opacity-0 translate-y-1"
-                            x-cloak
-                            class="absolute left-0 top-full mt-3 w-[260px] rounded-lg border border-gray-200 bg-white p-2"
-                        >
-                            <div class="flex flex-col gap-1">
-                                <a href="{{ url('/case-studies') }}"
-                                   class="dropdown-link {{ request()->is('case-studies') ? 'dropdown-link-active' : '' }}">
-                                    <span>Case Studies</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="m9 6 6 6-6 6" />
-                                    </svg>
-                                </a>
-
-                                <a href="{{ url('/perspectives') }}"
-                                   class="dropdown-link {{ request()->is('perspectives') ? 'dropdown-link-active' : '' }}">
-                                    <span>Perspectives</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="m9 6 6 6-6 6" />
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div> --}}
                 </nav>
             </div>
 
@@ -173,7 +90,7 @@
             <button
                 @click="mobileMenuOpen = !mobileMenuOpen"
                 type="button"
-                class="inline-flex lg:hidden items-center justify-center rounded-lg border border-gray-200 text-[#0018dc] h-11 w-11"
+                class="ml-auto inline-flex h-11 w-11 items-center justify-center rounded-lg border border-gray-200 text-[#0018dc] lg:hidden"
                 aria-label="Toggle menu"
             >
                 <svg x-show="!mobileMenuOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
@@ -187,129 +104,192 @@
                 </svg>
             </button>
         </div>
+    </div>
 
-        <!-- Mobile Menu -->
-        <div
-            x-show="mobileMenuOpen"
-            x-transition:enter="transition ease-out duration-200"
-            x-transition:enter-start="opacity-0 -translate-y-2"
-            x-transition:enter-end="opacity-100 translate-y-0"
-            x-transition:leave="transition ease-in duration-150"
-            x-transition:leave-start="opacity-100 translate-y-0"
-            x-transition:leave-end="opacity-0 -translate-y-2"
-            x-cloak
-            class="lg:hidden pb-4"
-        >
-            <div class="rounded-lg border border-gray-200 bg-white p-3">
-                <nav class="flex flex-col gap-2">
+    <!-- Desktop Mega Menu -->
+    <div
+        x-show="solutionsOpen"
+        x-transition:enter="transition ease-out duration-180"
+        x-transition:enter-start="opacity-0"
+        x-transition:enter-end="opacity-100"
+        x-transition:leave="transition ease-in duration-120"
+        x-transition:leave-start="opacity-100"
+        x-transition:leave-end="opacity-0"
+        x-cloak
+        class="absolute left-0 right-0 top-full hidden border-t border-[#eef2f6] border-b border-[#e8edf3] bg-white lg:block"
+        @mouseenter="openSolutions()"
+        @mouseleave="closeSolutions()"
+    >
+        <div class="mx-auto max-w-[1680px] px-5 sm:px-6 lg:px-10">
+            <div class="solutions-tray">
 
-                    <a href="{{ url('/multiphase-compression-technology') }}"
-                       class="mobile-link {{ request()->is('multiphase-compression-technology') ? 'mobile-link-active' : '' }}">
-                        Multiphase Compression
-                    </a>
+                <!-- Left Side -->
+                <div class="solutions-left">
+                    <span class="solutions-left-accent"></span>
+                    <h3 class="solutions-left-title">
+                        Emissions Reduction and Production Optimization Solutions Utilizing Multiphase Compression
+                    </h3>
+                </div>
 
-                    <a href="{{ url('/technology') }}"
-                       class="mobile-link {{ request()->is('technology') ? 'mobile-link-active' : '' }}">
-                        Technology
-                    </a>
+                <!-- Divider -->
+                <div class="solutions-divider"></div>
 
-                    <!-- Mobile Solutions -->
-                    <div x-data="{ mobileSolutionsOpen: {{ $solutionsActive ? 'true' : 'false' }} }" class="border border-gray-200 rounded-lg p-2">
-                        <button
-                            @click="mobileSolutionsOpen = !mobileSolutionsOpen"
-                            type="button"
-                            class="mobile-toggle {{ $solutionsActive ? 'mobile-toggle-active' : '' }}"
-                            :class="mobileSolutionsOpen ? 'mobile-toggle-active' : ''"
-                        >
-                            <span>Solutions</span>
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                 class="h-5 w-5 transition duration-200"
-                                 :class="mobileSolutionsOpen ? 'rotate-180' : ''"
-                                 fill="none"
-                                 viewBox="0 0 24 24"
-                                 stroke="currentColor"
-                                 stroke-width="1.8">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7" />
-                            </svg>
-                        </button>
+                <!-- Right Side -->
+                <div class="solutions-right">
 
-                        <div x-show="mobileSolutionsOpen" x-cloak class="mt-2 flex flex-col gap-1">
-                            <a href="{{ url('/multiphase-compression') }}"
-                               class="mobile-sub-link {{ request()->is('multiphase-compression') ? 'mobile-sub-link-active' : '' }}">
-                                <span>Multiphase Pumping/Compression</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="m9 6 6 6-6 6" />
-                                </svg>
-                            </a>
-
-                            <a href="{{ url('/vapor-recovery') }}"
-                               class="mobile-sub-link {{ request()->is('vapor-recovery') ? 'mobile-sub-link-active' : '' }}">
-                                <span>Vapor Recovery</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="m9 6 6 6-6 6" />
-                                </svg>
-                            </a>
-
-                            <a href="{{ url('/casing-gas-compression') }}"
-                               class="mobile-sub-link {{ request()->is('casing-gas-compression') ? 'mobile-sub-link-active' : '' }}">
-                                <span>Casing Gas Compression</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="m9 6 6 6-6 6" />
-                                </svg>
-                            </a>
+                    <!-- Item 1 -->
+                    <a href="{{ url('/multiphase-compression') }}"
+                       class="solutions-item {{ request()->is('multiphase-compression') ? 'solutions-item-active' : '' }}">
+                        <div class="solutions-head solutions-head-first">
+                            <p class="solutions-kicker">Featured Highlights</p>
+                            <h4 class="solutions-title">
+                                Multiphase Pump<br>
+                                Multiphase Compression
+                            </h4>
                         </div>
-                    </div>
-                     <a href="{{ url('/insights') }}"
-                       class="mobile-link {{ request()->is('insights') ? 'mobile-link-active' : '' }}">
-                        Insights
-                    </a>
 
+                        <p class="solutions-copy">
+                            Reliable autonomous multiphase compression technology for methane reduction, production improvement, and low-maintenance field performance.
+                        </p>
 
-                    <!-- Mobile Insights -->
-                    {{-- <div x-data="{ mobileInsightsOpen: {{ $insightsActive ? 'true' : 'false' }} }" class="border border-gray-200 rounded-lg p-2">
-                        <button
-                            @click="mobileInsightsOpen = !mobileInsightsOpen"
-                            type="button"
-                            class="mobile-toggle {{ $insightsActive ? 'mobile-toggle-active' : '' }}"
-                            :class="mobileInsightsOpen ? 'mobile-toggle-active' : ''"
-                        >
-                            <span>Insights</span>
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                 class="h-5 w-5 transition duration-200"
-                                 :class="mobileInsightsOpen ? 'rotate-180' : ''"
-                                 fill="none"
-                                 viewBox="0 0 24 24"
-                                 stroke="currentColor"
-                                 stroke-width="1.8">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7" />
+                        <span class="solutions-view">
+                            View
+                            <svg xmlns="http://www.w3.org/2000/svg" class="solutions-view-icon h-[18px] w-[18px]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m9 6 6 6-6 6" />
                             </svg>
-                        </button>
-
-                        <div x-show="mobileInsightsOpen" x-cloak class="mt-2 flex flex-col gap-1">
-                            <a href="{{ url('/case-studies') }}"
-                               class="mobile-sub-link {{ request()->is('case-studies') ? 'mobile-sub-link-active' : '' }}">
-                                <span>Case Studies</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="m9 6 6 6-6 6" />
-                                </svg>
-                            </a>
-
-                            <a href="{{ url('/perspectives') }}"
-                               class="mobile-sub-link {{ request()->is('perspectives') ? 'mobile-sub-link-active' : '' }}">
-                                <span>Perspectives</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="m9 6 6 6-6 6" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div> --}}
-
-                    <a href="{{ url('/contact') }}"
-                       class="mobile-link {{ request()->is('contact') ? 'mobile-link-active' : '' }}">
-                        Contact
+                        </span>
                     </a>
-                </nav>
+
+                    <!-- Item 2 -->
+                    <a href="{{ url('/vapor-recovery') }}"
+                       class="solutions-item {{ request()->is('vapor-recovery') ? 'solutions-item-active' : '' }}">
+                        <div class="solutions-head solutions-head-offset">
+                            <h4 class="solutions-title">
+                                Vapor Recovery
+                            </h4>
+                        </div>
+
+                        <p class="solutions-copy">
+                            Capture valuable gas, reduce venting and emissions, and improve operational efficiency with compact, field-ready recovery systems.
+                        </p>
+
+                        <span class="solutions-view">
+                            View
+                            <svg xmlns="http://www.w3.org/2000/svg" class="solutions-view-icon h-[18px] w-[18px]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m9 6 6 6-6 6" />
+                            </svg>
+                        </span>
+                    </a>
+
+                    <!-- Item 3 -->
+                    <a href="{{ url('/casing-gas-compression') }}"
+                       class="solutions-item {{ request()->is('casing-gas-compression') ? 'solutions-item-active' : '' }}">
+                        <div class="solutions-head solutions-head-offset">
+                            <h4 class="solutions-title">
+                                Casing Gas<br>
+                                Compression
+                            </h4>
+                        </div>
+
+                        <p class="solutions-copy">
+                            Compress low-pressure casing gas to support production optimization, reduce flaring, and unlock additional site value.
+                        </p>
+
+                        <span class="solutions-view">
+                            View
+                            <svg xmlns="http://www.w3.org/2000/svg" class="solutions-view-icon h-[18px] w-[18px]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m9 6 6 6-6 6" />
+                            </svg>
+                        </span>
+                    </a>
+
+                </div>
             </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div
+        x-show="mobileMenuOpen"
+        x-transition:enter="transition ease-out duration-200"
+        x-transition:enter-start="opacity-0 -translate-y-2"
+        x-transition:enter-end="opacity-100 translate-y-0"
+        x-transition:leave="transition ease-in duration-150"
+        x-transition:leave-start="opacity-100 translate-y-0"
+        x-transition:leave-end="opacity-0 -translate-y-2"
+        x-cloak
+        class="border-t border-[#eef2f6] px-4 pb-4 lg:hidden"
+    >
+        <div class="mt-4 rounded-xl border border-gray-200 bg-white p-3">
+            <nav class="flex flex-col gap-2">
+
+                <a href="{{ url('/multiphase-compression-technology') }}"
+                   class="mobile-link {{ request()->is('multiphase-compression-technology') ? 'mobile-link-active' : '' }}">
+                    Multiphase Compression
+                </a>
+
+                <a href="{{ url('/technology') }}"
+                   class="mobile-link {{ request()->is('technology') ? 'mobile-link-active' : '' }}">
+                    Technology
+                </a>
+
+                <div x-data="{ mobileSolutionsOpen: {{ $solutionsActive ? 'true' : 'false' }} }"
+                     class="rounded-xl border border-gray-200 p-2">
+                    <button
+                        @click="mobileSolutionsOpen = !mobileSolutionsOpen"
+                        type="button"
+                        class="mobile-toggle {{ $solutionsActive ? 'mobile-toggle-active' : '' }}"
+                        :class="mobileSolutionsOpen ? 'mobile-toggle-active' : ''"
+                    >
+                        <span>Solutions</span>
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             class="h-5 w-5 transition duration-200"
+                             :class="mobileSolutionsOpen ? 'rotate-180' : ''"
+                             fill="none"
+                             viewBox="0 0 24 24"
+                             stroke="currentColor"
+                             stroke-width="1.8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7" />
+                        </svg>
+                    </button>
+
+                    <div x-show="mobileSolutionsOpen" x-cloak class="mt-2 flex flex-col gap-1">
+                        <a href="{{ url('/multiphase-compression') }}"
+                           class="mobile-sub-link {{ request()->is('multiphase-compression') ? 'mobile-sub-link-active' : '' }}">
+                            <span>Multiphase Pumping/Compression</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m9 6 6 6-6 6" />
+                            </svg>
+                        </a>
+
+                        <a href="{{ url('/vapor-recovery') }}"
+                           class="mobile-sub-link {{ request()->is('vapor-recovery') ? 'mobile-sub-link-active' : '' }}">
+                            <span>Vapor Recovery</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m9 6 6 6-6 6" />
+                            </svg>
+                        </a>
+
+                        <a href="{{ url('/casing-gas-compression') }}"
+                           class="mobile-sub-link {{ request()->is('casing-gas-compression') ? 'mobile-sub-link-active' : '' }}">
+                            <span>Casing Gas Compression</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m9 6 6 6-6 6" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <a href="{{ url('/insights') }}"
+                   class="mobile-link {{ request()->is('insights') ? 'mobile-link-active' : '' }}">
+                    Insights
+                </a>
+
+                <a href="{{ url('/contact') }}"
+                   class="mobile-link {{ request()->is('contact') ? 'mobile-link-active' : '' }}">
+                    Contact
+                </a>
+            </nav>
         </div>
     </div>
 </header>
@@ -331,15 +311,11 @@
         padding: 4px 0;
     }
 
-    .nav-link:hover {
-        color: #0018dc;
-    }
-
     .nav-link::after {
         content: "";
         position: absolute;
         left: 0;
-        bottom: -8px;
+        bottom: -12px;
         width: 0;
         height: 2px;
         background: #0018dc;
@@ -351,73 +327,144 @@
         width: 100%;
     }
 
-    .nav-link-active {
-        color: #0018dc;
-    }
-
-    .dropdown-link {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 12px;
-        width: 100%;
-        padding: 12px 14px;
-        border-radius: 4px;
-        font-size: 15px;
-        font-weight: 500;
-        color: #0018dc;
-        transition: all 0.2s ease;
-        line-height: 1.4;
-    }
-
-    .dropdown-link:hover {
-        background: #0018dc;
-        color: #ffffff;
-    }
-
-    .dropdown-link-active {
-        background: #0018dc;
-        color: #ffffff;
-        font-weight: 600;
-    }
-
     .contact-btn {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        height: 48px;
-        padding: 0 24px;
+        min-width: 180px;
+        height: 64px;
+        padding: 0 32px;
         border-radius: 9999px;
-        background: #0018dc;
+        background: #1028ea;
         color: #ffffff;
-        font-size: 15px;
+        font-size: 16px;
         font-weight: 600;
         transition: all 0.2s ease;
     }
 
     .contact-btn:hover {
-        background: #0015c8;
+        background: #0018dc;
     }
 
-    .contact-btn-active {
-        background: #0018dc;
+    .solutions-tray {
+        display: grid;
+        grid-template-columns: 285px 1px minmax(0, 1fr);
+        min-height: 392px;
+    }
+
+    .solutions-left {
+        padding: 46px 36px 42px 0;
+    }
+
+    .solutions-left-accent {
+        display: inline-block;
+        width: 44px;
+        height: 3px;
+        border-radius: 9999px;
+        background: linear-gradient(90deg, #0018dc 0%, #4f7cff 100%);
+        margin-bottom: 18px;
+    }
+
+    .solutions-left-title {
+        max-width: 240px;
+        font-size: 26px;
+        line-height: 1.24;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        color: #0018dc;
+    }
+
+    .solutions-divider {
+        width: 1px;
+        background: #e7ebf2;
+        margin: 44px 0;
+    }
+
+    .solutions-right {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        column-gap: 64px;
+        padding: 0 8px 0 28px;
+    }
+
+    .solutions-item {
+        display: flex;
+        flex-direction: column;
+        min-height: 392px;
+        padding: 44px 0 38px;
+        text-decoration: none;
+    }
+
+    .solutions-head {
+        min-height: 148px;
+    }
+
+    .solutions-head-first {
+        padding-top: 0;
+    }
+
+    .solutions-head-offset {
+        padding-top: 36px;
+    }
+
+    .solutions-kicker {
+        font-size: 13px;
+        line-height: 1.2;
+        font-weight: 700;
+        color: #111827;
+        margin-bottom: 14px;
+    }
+
+    .solutions-title {
+        max-width: 280px;
+        font-size: 27px;
+        line-height: 1.18;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        color: #0018dc;
+    }
+
+    .solutions-copy {
+        max-width: 290px;
+        margin-top: 18px;
+        font-size: 15px;
+        line-height: 1.65;
+        font-weight: 400;
+        color: #6b7280;
+    }
+
+    .solutions-view {
+        display: inline-flex;
+        align-items: center;
+        gap: 16px;
+        margin-top: auto;
+        padding-top: 38px;
+        font-size: 16px;
+        line-height: 1.2;
+        font-weight: 600;
+        color: #0018dc;
+    }
+
+    .solutions-view-icon {
+        transition: transform 0.2s ease;
+    }
+
+    .solutions-item:hover .solutions-view-icon,
+    .solutions-item-active .solutions-view-icon {
+        transform: translateX(4px);
     }
 
     .mobile-link {
         display: block;
         padding: 12px 14px;
-        border-radius: 6px;
+        border-radius: 8px;
         color: #0018dc;
         font-size: 15px;
         font-weight: 600;
         transition: all 0.2s ease;
     }
 
-    .mobile-link:hover {
-        background: #0018dc;
-        color: #ffffff;
-    }
-
+    .mobile-link:hover,
     .mobile-link-active {
         background: #0018dc;
         color: #ffffff;
@@ -429,18 +476,14 @@
         align-items: center;
         justify-content: space-between;
         padding: 12px 14px;
-        border-radius: 6px;
+        border-radius: 8px;
         color: #0018dc;
         font-size: 15px;
         font-weight: 600;
         transition: all 0.2s ease;
     }
 
-    .mobile-toggle:hover {
-        background: #0018dc;
-        color: #ffffff;
-    }
-
+    .mobile-toggle:hover,
     .mobile-toggle-active {
         background: #0018dc;
         color: #ffffff;
@@ -453,7 +496,7 @@
         gap: 12px;
         width: 100%;
         padding: 12px 14px;
-        border-radius: 4px;
+        border-radius: 8px;
         color: #0018dc;
         font-size: 14px;
         font-weight: 500;
@@ -461,14 +504,60 @@
         line-height: 1.4;
     }
 
-    .mobile-sub-link:hover {
-        background: #0018dc;
-        color: #ffffff;
-    }
-
+    .mobile-sub-link:hover,
     .mobile-sub-link-active {
         background: #0018dc;
         color: #ffffff;
         font-weight: 600;
+    }
+
+    @media (max-width: 1440px) {
+        .solutions-right {
+            column-gap: 44px;
+        }
+
+        .solutions-title {
+            font-size: 24px;
+            max-width: 250px;
+        }
+
+        .solutions-copy {
+            max-width: 250px;
+        }
+
+        .solutions-left-title {
+            font-size: 24px;
+            max-width: 220px;
+        }
+    }
+
+    @media (max-width: 1279px) {
+        .solutions-tray {
+            grid-template-columns: 240px 1px minmax(0, 1fr);
+        }
+
+        .solutions-right {
+            column-gap: 34px;
+            padding-left: 22px;
+        }
+
+        .solutions-title {
+            font-size: 22px;
+            max-width: 220px;
+        }
+
+        .solutions-copy {
+            max-width: 220px;
+            font-size: 14px;
+        }
+
+        .solutions-left-title {
+            font-size: 22px;
+            max-width: 200px;
+        }
+
+        .solutions-head {
+            min-height: 134px;
+        }
     }
 </style>

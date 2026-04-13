@@ -26,3 +26,15 @@ Route::view('/perspectives', 'perspectives');
 Route::view('/multiphase-compression-technology', 'multiphase-compression-technology');
 Route::view('/contact', 'contact')->name('contact');
 Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
+
+Route::get('/insights/case-studies/allied-energy-ii-multiphase-vapor-recovery', function () {
+    return view('insights.case-studies.allied-energy-ii-multiphase-vapor-recovery');
+})->name('case-studies.allied-energy');
+
+Route::get('/insights/case-studies/4-5-years-of-reliable-vapor-recovery', function () {
+    return view('insights.case-studies.reliable-vapor-recovery');
+})->name('case-studies.reliable-vapor-recovery');
+
+Route::get('/insights/case-studies/incremental-revenue-case-study', function () {
+    return view('insights.case-studies.incremental-revenue-case-study');
+})->name('case-studies.incremental-revenue');
