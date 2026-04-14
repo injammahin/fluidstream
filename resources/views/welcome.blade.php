@@ -49,10 +49,10 @@
                     <div class="lg:justify-self-end">
                         <div
                             class="max-w-md rounded-[28px] border border-white/15 bg-white/10 p-6 shadow-[0_20px_60px_rgba(15,23,42,0.25)] backdrop-blur-xl sm:p-8">
-                            <span
+                            {{-- <span
                                 class="inline-flex items-center rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-sky-200">
                                 Customer Quote
-                            </span>
+                            </span> --}}
 
                             <blockquote
                                 class="mt-5 text-lg font-semibold leading-8 text-white sm:text-[1.35rem] sm:leading-9">
@@ -85,8 +85,7 @@
 
             <!-- Heading Area -->
             <div class="max-w-3xl">
-                <span
-                    class="section-label">
+                <span class="section-label">
                     Compression Technology
                 </span>
 
@@ -235,6 +234,13 @@
             transition: transform 0.45s ease, box-shadow 0.45s ease;
         }
 
+        .py-28 {
+            padding-top: 1rem;
+            padding-bottom: 7rem;
+        }
+
+
+
         .row-hover-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 18px 36px rgba(15, 23, 42, 0.10);
@@ -356,8 +362,12 @@
                 line-height: 1.55;
             }
         }
+
+        .bg_gray {
+            background: #f0f0f0 !important;
+        }
     </style>
-    <section class="relative overflow-hidden bg-white py-16 sm:py-20 lg:py-24">
+    <section class="relative overflow-hidden bg_gray py-16 sm:py-20 lg:py-24">
         <div class="relative mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
             <div class="grid items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
 
@@ -370,9 +380,12 @@
                     </div>
 
                     <div class="relative">
-                        <div class="absolute -left-5 top-2 hidden h-16 w-16 rounded-full border border-slate-200/70 lg:block"></div>
+                        <div
+                            class="absolute -left-5 top-2 hidden h-16 w-16 rounded-full border border-slate-200/70 lg:block">
+                        </div>
 
-                        <h2 class="relative text-[24px] font-normal leading-[1.22] tracking-[-0.04em] text-slate-900 sm:text-[30px] lg:text-[40px]">
+                        <h2
+                            class="relative text-[24px] font-normal leading-[1.22] tracking-[-0.04em] text-slate-900 sm:text-[30px] lg:text-[40px]">
                             Designed and built for reliability, cost efficiencies,
                             comprehensive and autonomous control, and broad applicability
                         </h2>
@@ -389,7 +402,8 @@
                     <div class="grid auto-rows-fr grid-cols-1 gap-5 sm:grid-cols-2 lg:gap-6">
 
                         <!-- Card 1 -->
-                        <div class="group h-full rounded-[5px] border border-[#e7e7e3] bg-white p-7 shadow-[0_12px_35px_rgba(15,23,42,0.05)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_22px_55px_rgba(15,23,42,0.09)]">
+                        <div
+                            class="group h-full rounded-[5px] border border-[#e7e7e3] bg-white p-7 shadow-[0_12px_35px_rgba(15,23,42,0.05)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_22px_55px_rgba(15,23,42,0.09)]">
                             <div class="flex h-full flex-col items-center text-center">
                                 <h3 class="text-[13px] font-semibold uppercase tracking-[0.28em] text-slate-900">
                                     Unmatched Value <br>&amp; Return on Investment
@@ -404,9 +418,10 @@
                         </div>
 
                         <!-- Card 2 -->
-                        <div class="group h-full rounded-[5px] border border-[#e7e7e3] bg-white p-7 shadow-[0_12px_35px_rgba(15,23,42,0.05)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_22px_55px_rgba(15,23,42,0.09)]">
+                        <div
+                            class="group h-full rounded-[5px] border border-[#e7e7e3] bg-white p-7 shadow-[0_12px_35px_rgba(15,23,42,0.05)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_22px_55px_rgba(15,23,42,0.09)]">
                             <div class="flex h-full flex-col items-center text-center">
-                                 <h3 class="text-[13px] font-semibold uppercase tracking-[0.28em] text-slate-900">
+                                <h3 class="text-[13px] font-semibold uppercase tracking-[0.28em] text-slate-900">
                                     Multiphase <br>Compression
                                 </h3>
 
@@ -419,7 +434,8 @@
                         </div>
 
                         <!-- Card 3 -->
-                        <div class="group h-full rounded-[5px] border border-[#e7e7e3] bg-white p-7 shadow-[0_12px_35px_rgba(15,23,42,0.05)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_22px_55px_rgba(15,23,42,0.09)]">
+                        <div
+                            class="group h-full rounded-[5px] border border-[#e7e7e3] bg-white p-7 shadow-[0_12px_35px_rgba(15,23,42,0.05)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_22px_55px_rgba(15,23,42,0.09)]">
                             <div class="flex h-full flex-col items-center text-center">
                                 <h3 class="text-[13px] font-semibold uppercase tracking-[0.28em] text-slate-900">
                                     Fully Autonomous
@@ -434,9 +450,10 @@
                         </div>
 
                         <!-- Card 4 -->
-                        <div class="group h-full rounded-[5px] border border-[#e7e7e3] bg-white p-7 shadow-[0_12px_35px_rgba(15,23,42,0.05)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_22px_55px_rgba(15,23,42,0.09)]">
+                        <div
+                            class="group h-full rounded-[5px] border border-[#e7e7e3] bg-white p-7 shadow-[0_12px_35px_rgba(15,23,42,0.05)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_22px_55px_rgba(15,23,42,0.09)]">
                             <div class="flex h-full flex-col items-center text-center">
-                                 <h3 class="text-[13px] font-semibold uppercase tracking-[0.28em] text-slate-900">
+                                <h3 class="text-[13px] font-semibold uppercase tracking-[0.28em] text-slate-900">
                                     Broad Operating <br>Range
                                 </h3>
 
@@ -465,8 +482,7 @@
             <div class="patent-reveal grid items-start gap-12 lg:grid-cols-[1.05fr_1fr] lg:gap-20">
                 <!-- Left -->
                 <div class="lg:sticky lg:top-28">
-                    <span
-                        class="section-label">
+                    <span class="section-label">
                         Innovation
                     </span>
 
@@ -488,7 +504,7 @@
                     <div
                         class="rounded-[30px] border border-slate-200 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,0.05)] transition duration-500 hover:-translate-y-1 hover:shadow-[0_24px_70px_rgba(15,23,42,0.08)] sm:p-10">
                         <div class="flex items-start gap-5">
-                          
+
 
                             <div>
                                 <h3 class="text-2xl font-semibold tracking-[-0.02em] text-slate-900">
@@ -506,7 +522,7 @@
                     <div
                         class="rounded-[30px] border border-slate-200 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,0.05)] transition duration-500 hover:-translate-y-1 hover:shadow-[0_24px_70px_rgba(15,23,42,0.08)] sm:p-10">
                         <div class="flex items-start gap-5">
-                           
+
 
                             <div>
                                 <h3 class="text-2xl font-semibold tracking-[-0.02em] text-slate-900">
@@ -523,7 +539,7 @@
                     <div
                         class="rounded-[30px] border border-slate-200 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,0.05)] transition duration-500 hover:-translate-y-1 hover:shadow-[0_24px_70px_rgba(15,23,42,0.08)] sm:p-10">
                         <div class="flex items-start gap-5">
-                            
+
 
                             <div>
                                 <h3 class="text-2xl font-semibold tracking-[-0.02em] text-slate-900">

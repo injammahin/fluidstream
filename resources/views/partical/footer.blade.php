@@ -1,108 +1,359 @@
-<footer class="bottom-0 left-0 right-0 z-40 border-t border-white/20 bg-[#0018dc] text-white">
-    <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-        <div class="grid gap-8 py-10 md:grid-cols-2 xl:grid-cols-3 xl:gap-12">
-            <!-- Column 1 -->
-            <div>
-                <h3 class="text-base font-semibold uppercase tracking-[0.14em] text-white">
-                    Multiphase Compression
-                </h3>
-
-                <p class="mt-4 max-w-md text-sm leading-7 text-white/80">
-                    Fluidstream’s patented multiphase pump is a robust, fully autonomous technology for multiphase
-                    pumping, vapor recovery, and casing gas compression applications.
-                </p>
-            </div>
-
-            <!-- Column 2 -->
-            <div>
-                <h3 class="text-base font-semibold uppercase tracking-[0.14em] text-white">
-                    Quick Links
-                </h3>
-
-                <nav class="mt-4 grid gap-3">
-                    <a href="{{ url('/multiphase-compression') }}" class="footer-link">
-                        Multiphase Compression
-                    </a>
-
-                    <a href="{{ url('/vapor-recovery') }}" class="footer-link">
-                        Vapor Recovery
-                    </a>
-
-                    <a href="{{ url('/casing-gas-compression') }}" class="footer-link">
-                        Casing Gas Compression
-                    </a>
-
-                    <a href="{{ url('/contact') }}" class="footer-link">
-                        Contact
-                    </a>
-                </nav>
-            </div>
-
-            <!-- Column 3 -->
-            <div>
-                <h3 class="text-base font-semibold uppercase tracking-[0.14em] text-white">
-                    Fluidstream Inc.
-                </h3>
-
-                <div class="mt-4 space-y-1 text-sm leading-7 text-white/80">
-                    <p>4416 5 St NE, Unit 1A</p>
-                    <p>Calgary, AB T2E 7C3, Canada</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="flex flex-col gap-3 border-t border-white/15 py-4 sm:flex-row sm:items-center sm:justify-between">
-            <p class="text-sm text-white/70">
-                Copyright © 2024 Fluidstream Inc.
-            </p>
-
-            <button
-                type="button"
-                onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
-                class="scroll-top-btn"
-                aria-label="Scroll to top"
-            >
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
-                </svg>
-            </button>
-        </div>
-    </div>
-</footer>
+{{-- resources/views/partials/footer.blade.php --}}
 
 <style>
-    .footer-link {
-        position: relative;
-        display: inline-flex;
-        width: fit-content;
-        font-size: 0.95rem;
-        font-weight: 500;
-        color: rgba(255, 255, 255, 0.82);
-        transition: all 0.25s ease;
+    .fsf-footer-wrap {
+        background: #1029ea;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        color: #dbe4ff;
+        width: 100%;
     }
 
-    .footer-link:hover {
+    .fsf-footer-wrap * {
+        box-sizing: border-box;
+    }
+
+    .fsf-footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 60px 40px 30px;
+    }
+
+    .fsf-footer-cta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 30px;
+        margin-bottom: 40px;
+    }
+
+    .fsf-footer-cta-content {
+        max-width: 780px;
+    }
+
+    .fsf-footer-cta-title {
+        font-size: 26px;
+        line-height: 1.3;
+        margin: 0;
         color: #ffffff;
-        transform: translateX(3px);
+        font-weight: 700;
     }
 
-    .scroll-top-btn {
+    .fsf-footer-cta-text {
+        margin: 8px 0 0;
+        color: #9fb0d8;
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .fsf-footer-cta-btn {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        height: 40px;
-        width: 40px;
-        border-radius: 10px;
-        border: 1px solid rgba(255, 255, 255, 0.18);
-        background: rgba(255, 255, 255, 0.08);
+        background: linear-gradient(135deg, #0018dc, #15d1ff);
         color: #ffffff;
-        transition: all 0.25s ease;
+        padding: 14px 22px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 700;
+        white-space: nowrap;
+        transition: 0.25s ease;
     }
 
-    .scroll-top-btn:hover {
-        transform: translateY(-2px);
-        background: rgba(255, 255, 255, 0.16);
+    .fsf-footer-cta-btn:hover {
+        opacity: 0.92;
+        transform: translateY(-1px);
+    }
+
+    .fsf-footer-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr 1.2fr;
+        gap: 30px;
+    }
+
+    .fsf-footer-brand-title,
+    .fsf-footer-col-title,
+    .fsf-footer-contact-title {
+        font-size: 13px;
+        line-height: 1.4;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #ffffff;
+        margin: 0 0 18px;
+        font-weight: 700;
+    }
+
+    .fsf-footer-brand-text {
+        margin: 0;
+        color: #c2c8d5;
+        line-height: 1.8;
+        font-size: 15px;
+    }
+
+    .fsf-footer-address {
+        margin-top: 20px;
+        font-size: 14px;
+        line-height: 1.8;
+        color: #9fb0d8;
+    }
+
+    .fsf-footer-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .fsf-footer-list-item {
+        margin-bottom: 10px;
+    }
+
+    .fsf-footer-link {
+        color: #9fb0d8;
+        text-decoration: none;
+        line-height: 1.7;
+        transition: 0.25s ease;
+    }
+
+    .fsf-footer-link:hover {
         color: #ffffff;
     }
+
+    .fsf-footer-contact-box {
+        background: rgba(255, 255, 255, 0.03);
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .fsf-footer-contact-text {
+        margin: 0 0 10px;
+        color: #ffffff;
+        line-height: 1.7;
+        font-size: 15px;
+    }
+
+    .fsf-footer-contact-box .fsf-footer-link {
+        display: inline-block;
+        margin-bottom: 6px;
+    }
+
+    .fsf-footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        margin-top: 40px;
+        padding-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: wrap;
+        font-size: 13px;
+    }
+
+    .fsf-footer-copy {
+        color: #ffffff;
+    }
+
+    .fsf-footer-bottom-links {
+        color: #9fb0d8;
+    }
+
+    .fsf-footer-bottom-links .fsf-footer-link {
+        color: #9fb0d8;
+    }
+
+    .fsf-footer-bottom-links .fsf-footer-link:hover {
+        color: #ffffff;
+    }
+
+    @media (max-width: 1199px) {
+        .fsf-footer-grid {
+            grid-template-columns: 1.6fr 1fr 1fr 1fr;
+        }
+
+        .fsf-footer-contact-col {
+            grid-column: span 2;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .fsf-footer-container {
+            padding: 50px 24px 28px;
+        }
+
+        .fsf-footer-cta {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .fsf-footer-grid {
+            grid-template-columns: 1fr 1fr;
+            gap: 28px 24px;
+        }
+
+        .fsf-footer-brand-col,
+        .fsf-footer-contact-col {
+            grid-column: span 2;
+        }
+    }
+
+    @media (max-width: 575px) {
+        .fsf-footer-container {
+            padding: 42px 18px 24px;
+        }
+
+        .fsf-footer-cta {
+            margin-bottom: 32px;
+            padding-bottom: 24px;
+        }
+
+        .fsf-footer-cta-title {
+            font-size: 22px;
+        }
+
+        .fsf-footer-cta-text,
+        .fsf-footer-brand-text,
+        .fsf-footer-contact-text,
+        .fsf-footer-link,
+        .fsf-footer-address {
+            font-size: 14px;
+        }
+
+        .fsf-footer-grid {
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        .fsf-footer-brand-col,
+        .fsf-footer-contact-col {
+            grid-column: span 1;
+        }
+
+        .fsf-footer-bottom {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
 </style>
+
+<footer class="fsf-footer-wrap">
+    <div class="fsf-footer-container">
+
+        {{-- CTA --}}
+        <div class="fsf-footer-cta">
+            <div class="fsf-footer-cta-content">
+                <h2 class="fsf-footer-cta-title">
+                    Evaluate whether Fluidstream can simplify your production system
+                </h2>
+                <p class="fsf-footer-cta-text">
+                    Designed for engineers and decision-makers evaluating multiphase compression systems
+                </p>
+            </div>
+
+            {{-- Uncomment if needed --}}
+            {{--
+            <a href="/contact" class="fsf-footer-cta-btn">
+                Request Application Review
+            </a>
+            --}}
+        </div>
+
+        {{-- GRID --}}
+        <div class="fsf-footer-grid">
+
+            {{-- BRAND --}}
+            <div class="fsf-footer-brand-col">
+                <h3 class="fsf-footer-brand-title">Fluidstream</h3>
+                <p class="fsf-footer-brand-text">
+                    Fluidstream delivers advanced multiphase compression systems that eliminate separation, handle
+                    liquids and gas together, reduce downtime, lower emissions, and improve production across vapor
+                    recovery, casing gas, and multiphase operations.
+                </p>
+
+                <div class="fsf-footer-address">
+                    4416 5 St NE, Unit 1A<br>
+                    Calgary, AB T2E 7C3<br>
+                    Canada
+                </div>
+            </div>
+
+            {{-- SOLUTIONS --}}
+            <div class="fsf-footer-col">
+                <h3 class="fsf-footer-col-title">Solutions</h3>
+                <ul class="fsf-footer-list">
+                    <li class="fsf-footer-list-item">
+                        <a href="/multiphase-compression" class="fsf-footer-link">Multiphase Compression</a>
+                    </li>
+                    <li class="fsf-footer-list-item">
+                        <a href="/vapor-recovery" class="fsf-footer-link">Vapor Recovery</a>
+                    </li>
+                    <li class="fsf-footer-list-item">
+                        <a href="/casing-gas-compression" class="fsf-footer-link">Casing Gas Compression</a>
+                    </li>
+                </ul>
+            </div>
+
+            {{-- TECHNOLOGY --}}
+            <div class="fsf-footer-col">
+                <h3 class="fsf-footer-col-title">Technology</h3>
+                <ul class="fsf-footer-list">
+                    <li class="fsf-footer-list-item">
+                        <a href="/technology" class="fsf-footer-link">Technology Overview</a>
+                    </li>
+                    <li class="fsf-footer-list-item">
+                        <a href="/multiphase-compression-technology" class="fsf-footer-link">
+                            Multiphase Compression Technology
+                        </a>
+                    </li>
+                    <li class="fsf-footer-list-item">
+                        <a href="/technology#features" class="fsf-footer-link">Key Features</a>
+                    </li>
+                </ul>
+            </div>
+
+            {{-- RESOURCES --}}
+            <div class="fsf-footer-col">
+                <h3 class="fsf-footer-col-title">Resources</h3>
+                <ul class="fsf-footer-list">
+                    <li class="fsf-footer-list-item">
+                        <a href="/case-studies" class="fsf-footer-link">Case Studies</a>
+                    </li>
+                    <li class="fsf-footer-list-item">
+                        <a href="/insights" class="fsf-footer-link">Insights</a>
+                    </li>
+                    {{--
+                    <li class="fsf-footer-list-item">
+                        <a href="/insights#articles" class="fsf-footer-link">Technical Articles</a>
+                    </li>
+                    --}}
+                </ul>
+            </div>
+
+            {{-- CONTACT --}}
+            <div class="fsf-footer-contact-col">
+                <h3 class="fsf-footer-contact-title">Talk to Fluidstream</h3>
+                <div class="fsf-footer-contact-box">
+                    <p class="fsf-footer-contact-text">
+                        Discuss your application and system requirements
+                    </p>
+                    <a href="/contact" class="fsf-footer-link">Contact Us</a><br>
+                    <a href="/contact" class="fsf-footer-link">Request Technical Review</a><br>
+                    <a href="/multiphase-compression" class="fsf-footer-link">Review Specifications</a>
+                </div>
+            </div>
+
+        </div>
+
+        {{-- BOTTOM --}}
+        <div class="fsf-footer-bottom">
+            <div class="fsf-footer-copy">© 2026 Fluidstream Inc.</div>
+            <div class="fsf-footer-bottom-links">
+                <a href="/privacy-policy" class="fsf-footer-link">Privacy Policy</a> |
+                <a href="/terms" class="fsf-footer-link">Terms of Use</a>
+                {{--
+                | <a href="#" class="fsf-footer-link">Sitemap</a>
+                --}}
+            </div>
+        </div>
+
+    </div>
+</footer>
