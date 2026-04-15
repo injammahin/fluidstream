@@ -196,11 +196,7 @@
 
         @media (min-width: 640px) {
 
-            .fip-hero-inner,
-            .fip-body {
-                padding-left: 24px;
-                padding-right: 24px;
-            }
+
 
             .fip-hero-title {
                 font-size: 56px;
@@ -213,14 +209,14 @@
 
         @media (min-width: 1024px) {
 
-            .fip-hero-inner,
-            .fip-body {
-                padding-left: 32px;
-                padding-right: 32px;
-            }
+
 
             .fip-hero-title {
                 font-size: 72px;
+            }
+
+            .container {
+                max-width: 1200px !important;
             }
 
             .fip-grid {
@@ -230,9 +226,9 @@
         }
     </style>
 
-    <div class="fip-page">
+    <div class="fip-page ">
         <section class="fip-hero">
-            <div class="fip-hero-inner">
+            <div class="fip-hero-inner container">
                 <span class="fip-hero-label">Insights</span>
                 <h1 class="fip-hero-title">Insights</h1>
                 <p class="fip-hero-text">
@@ -242,7 +238,7 @@
             </div>
         </section>
 
-        <section class="fip-body">
+        <section class="fip-body container">
 
             <div class="fip-section-head">
                 <span class="fip-section-label">Latest Perspectives</span>

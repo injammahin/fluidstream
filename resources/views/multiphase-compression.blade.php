@@ -25,6 +25,10 @@
       color: inherit
     }
 
+    body {
+      background: white !important;
+    }
+
     .container {
       width: min(var(--max), calc(100% - 40px));
       margin: 0 auto;
@@ -48,7 +52,7 @@
       gap: 10px;
       padding: 9px 13px;
       border-radius: 999px;
-      background: #eef5ff;
+      background: #ffff !important;
       color: var(--blue);
       border: 1px solid #d8e6ff;
       font-size: .78rem;
@@ -101,7 +105,7 @@
     .btn.primary {
       background: linear-gradient(135deg, var(--blue), #1933ff);
       color: #fff;
-      box-shadow: 0 16px 36px rgba(0, 24, 220, .22)
+      /* box-shadow: 0 16px 36px rgba(0, 24, 220, .22) */
     }
 
     .btn.secondary {
@@ -124,13 +128,13 @@
     .metric {
       background: #fff;
       border: 1px solid var(--line);
-      border-radius: 22px;
+      border-radius: 5px;
       padding: 18px;
-      box-shadow: 0 10px 28px rgba(7, 24, 63, .05);
+      /* box-shadow: 0 10px 28px rgba(7, 24, 63, .05); */
     }
 
     .metric .value {
-      font-size: 1.28rem;
+      font-size: 1rem;
       font-weight: 800;
       color: var(--blue);
       margin-bottom: 4px
@@ -145,9 +149,9 @@
       min-height: 520px;
       position: relative;
       overflow: hidden;
-      border-radius: 34px;
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow);
+      border-radius: 7px;
+      /* border: 1px solid var(--line); */
+      /* box-shadow: var(--shadow); */
       background: radial-gradient(circle at top right, rgb(255 255 255), transparent 34%), linear-gradient(155deg, #ffffff 0%, #ffffff 100%);
       display: flex;
       align-items: center;
@@ -164,6 +168,10 @@
       position: relative
     }
 
+    .container {
+      max-width: 1200px !important;
+    }
+
     .float {
       position: absolute;
       width: 220px;
@@ -171,7 +179,7 @@
       border: 1px solid var(--line);
       border-radius: 18px;
       padding: 14px 16px;
-      box-shadow: 0 16px 36px rgba(7, 24, 63, .10);
+      /* box-shadow: 0 16px 36px rgba(7, 24, 63, .10); */
       z-index: 3;
     }
 
@@ -199,15 +207,16 @@
     }
 
     .section {
+      background: white !important;
       padding: 22px 0
     }
 
     .card {
       background: var(--white);
-      border: 1px solid var(--line);
-      border-radius: 32px;
-      box-shadow: var(--shadow);
-      padding: 34px;
+      /* border: 1px solid var(--line); */
+      border-radius: 7px;
+      /* box-shadow: var(--shadow); */
+      padding: 34px 0px 34px 0px;
     }
 
     .head {
@@ -245,9 +254,9 @@
     }
 
     .tile {
-      background: linear-gradient(180deg, #fff 0%, #f9fcff 100%);
+      /* background: linear-gradient(180deg, #fff 0%, #f9fcff 100%); */
       border: 1px solid var(--line);
-      border-radius: 24px;
+      border-radius: 5px;
       padding: 22px;
     }
 
@@ -327,7 +336,7 @@
     .spec-wrap {
       overflow: auto;
       border: 1px solid var(--line);
-      border-radius: 24px;
+      border-radius: 10px;
       background: #fff;
       margin-top: 20px
     }
@@ -391,7 +400,7 @@
     .note-box,
     .cta-box {
       border: 1px solid var(--line);
-      border-radius: 24px;
+      border-radius: 5px;
       padding: 22px;
       background: linear-gradient(180deg, #fff 0%, #f9fbff 100%);
     }
@@ -521,12 +530,16 @@
       margin: 0 auto;
     }
 
+    .color {
+      background: #f0f0f0;
+    }
+
     .case-box {
       background: var(--white);
       border: 1px solid var(--line);
       border-radius: 22px;
       overflow: hidden;
-      box-shadow: 0 18px 45px rgba(0, 24, 220, .10);
+      /* box-shadow: 0 18px 45px rgba(0, 24, 220, .10); */
     }
 
     .topbar {
@@ -651,7 +664,7 @@
       border-radius: 999px;
       font-weight: 700;
       font-size: 15px;
-      box-shadow: 0 10px 22px rgba(0, 24, 220, .18);
+      /* box-shadow: 0 10px 22px rgba(0, 24, 220, .18); */
       white-space: nowrap;
     }
 
@@ -934,7 +947,7 @@
 
   <section class="section" id="applications">
     <div class="container">
-      <div class="card">
+      <div class="card ">
         <div class="head">
           <div>
             <h2>Applications for BoosterCommander.</h2>

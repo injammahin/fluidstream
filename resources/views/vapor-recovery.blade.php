@@ -26,6 +26,69 @@
       color: inherit;
     }
 
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      background:
+        /* linear-gradient(90deg, rgba(8, 21, 47, 0.82) 0%, rgba(8, 21, 47, 0.68) 52%, rgba(8, 21, 47, 0.58) 100%), */
+        url('{{ asset("/img/hero/vapor-recovery.png") }}');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 18% 20%, rgba(21, 209, 255, 0.14), transparent 26%),
+        radial-gradient(circle at 82% 26%, rgba(255, 255, 255, 0.08), transparent 24%);
+      pointer-events: none;
+    }
+
+    .hero h1 {
+      color: #ffffff;
+    }
+
+    .hero p {
+      color: rgba(255, 255, 255, 0.82);
+    }
+
+    .hero .eyebrow {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.10);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    .hero .btn-primary {
+      background: #15d1ff;
+      color: #08152f;
+      box-shadow: 0 20px 45px rgba(21, 209, 255, 0.22);
+    }
+
+    .hero .btn-secondary {
+      background: rgba(255, 255, 255, 0.10);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      backdrop-filter: blur(8px);
+    }
+
+    .hero .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.16);
+    }
+
+    .hero .stat {
+      background: rgba(255, 255, 255, 0.94);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: 0 14px 32px rgba(8, 21, 47, 0.18);
+    }
+
+    .hero .stat strong {
+      color: var(--navy);
+    }
+
     .wrap {
       width: min(var(--max), calc(100% - 48px));
       margin: 0 auto;
@@ -70,15 +133,7 @@
       box-shadow: var(--shadow);
     }
 
-    .hero {
-      position: relative;
-      overflow: hidden;
-      background:
-        radial-gradient(circle at 78% 20%, rgba(21, 209, 255, .16), transparent 26%),
-        radial-gradient(circle at 10% 0%, rgba(0, 24, 220, .10), transparent 26%),
-        linear-gradient(180deg, #f7fbff 0%, #f2f7ff 42%, #ffffff 100%);
-      border-bottom: 1px solid var(--line);
-    }
+
 
     .hero-grid {
       display: grid;
@@ -111,7 +166,7 @@
     }
 
     .hero p {
-      color: var(--muted);
+      color: #ffffff;
       max-width: 760px;
       font-size: 1.1rem;
       margin: 0 0 26px;
@@ -236,7 +291,7 @@
     .card {
       background: var(--card);
       border: 1px solid var(--line);
-      border-radius: 24px;
+      border-radius: 7px;
       padding: 26px;
       box-shadow: 0 12px 34px rgba(11, 29, 66, .05);
     }
@@ -299,7 +354,7 @@
       overflow: auto;
       border: 1px solid var(--line);
       border-radius: 24px;
-      box-shadow: var(--shadow);
+      /* box-shadow: var(--shadow); */
       background: #fff;
     }
 
@@ -365,9 +420,9 @@
     }
 
     .spec-mini {
-      background: #f8fbff;
+      background: #ffffff;
       border: 1px solid var(--line);
-      border-radius: 20px;
+      border-radius: 7px;
       padding: 20px;
     }
 
@@ -485,7 +540,7 @@
     }
   </style>
 
-  <header class="">
+  <header class="hero">
     <div class="wrap hero-grid">
       <div>
         <div class="eyebrow">Vapor Recovery Technology</div>
@@ -512,12 +567,6 @@
             <strong>Autonomous</strong>
             Control architecture built for upset conditions and reduced intervention
           </div>
-        </div>
-      </div>
-      <div class="product-card">
-        <img src="/img/2270 Rear View.JPG" alt="img">
-        <div class="caption">
-          Fluidstream VaporCommander package platform for vapor recovery applications.
         </div>
       </div>
     </div>
@@ -873,12 +922,11 @@
     </div>
   </section>
   <section class="py-10 sm:py-12 lg:py-16">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="container mx-auto px-4">
       <div class="grid gap-12">
 
         <!-- Card 1 -->
-        <div
-          class="h-full wrap mb-6 overflow-hidden rounded-[24px] border border-slate-200 bg-white shadow-[0_14px_40px_rgba(0,0,0,0.06)]">
+        <div class="h-full wrap mb-6 overflow-hidden rounded-[24px] border border-slate-200 bg-white ">
           <div class="h-[5px] w-full bg-gradient-to-r from-[#0018dc] to-[#15d1ff]"></div>
 
           <div class="flex h-full flex-col p-5 sm:p-6 lg:p-8">
@@ -925,8 +973,7 @@
         </div>
 
         <!-- Card 2 -->
-        <div
-          class="h-full wrap mt-3 overflow-hidden rounded-[22px] border border-[rgba(19,35,63,0.10)] bg-white shadow-[0_18px_50px_rgba(0,24,220,0.10)]">
+        <div class="h-full wrap mt-3 overflow-hidden rounded-[22px] border border-[rgba(19,35,63,0.10)] bg-white ">
           <div class="h-[6px] w-full bg-gradient-to-r from-[#0018dc] to-[#15d1ff]"></div>
 
           <div class="flex h-full flex-col p-5 sm:px-[22px] sm:pt-6 sm:pb-[22px]">
@@ -994,7 +1041,7 @@
   </section>
 
 
-  <section class="cta-section" id="cta" class="section-vapor-recovery">
+  {{-- <section class="cta-section" id="cta" class="section-vapor-recovery">
     <div class="wrap py-12">
       <div class="cta-panel">
         <div class="section-kicker" style="color:#9edbff;">6. Call to action</div>
@@ -1011,6 +1058,6 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> --}}
 
 @endsection

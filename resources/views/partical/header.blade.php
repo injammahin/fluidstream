@@ -144,8 +144,10 @@
 
                     <a href="{{ url('/multiphase-compression') }}"
                         class="mega-item {{ request()->is('multiphase-compression') ? 'mega-item-active' : '' }}">
-                        <div class="mega-head mega-head-first">
-                            <p class="mega-kicker">Featured Highlights</p>
+                        <div class="mega-head">
+                            <div class="mega-kicker-slot">
+                                <p class="mega-kicker">Featured Highlights</p>
+                            </div>
                             <h4 class="mega-title">
                                 Multiphase Pump<br>
                                 Multiphase Compression
@@ -168,7 +170,8 @@
 
                     <a href="{{ url('/vapor-recovery') }}"
                         class="mega-item {{ request()->is('vapor-recovery') ? 'mega-item-active' : '' }}">
-                        <div class="mega-head mega-head-offset">
+                        <div class="mega-head">
+                            <div class="mega-kicker-slot" aria-hidden="true"></div>
                             <h4 class="mega-title">
                                 Vapor Recovery
                             </h4>
@@ -190,7 +193,8 @@
 
                     <a href="{{ url('/casing-gas-compression') }}"
                         class="mega-item {{ request()->is('casing-gas-compression') ? 'mega-item-active' : '' }}">
-                        <div class="mega-head mega-head-offset">
+                        <div class="mega-head">
+                            <div class="mega-kicker-slot" aria-hidden="true"></div>
                             <h4 class="mega-title">
                                 Casing Gas<br>
                                 Compression
@@ -242,8 +246,7 @@
 
                     <a href="{{ url('/case-studies') }}"
                         class="mega-item resource-item {{ request()->is('case-studies') ? 'mega-item-active' : '' }}">
-                        <div class="mega-head resource-head-first">
-                            {{-- <p class="mega-kicker">Featured Highlights</p> --}}
+                        <div class="mega-head resource-head">
                             <h4 class="mega-title">
                                 Case Studies
                             </h4>
@@ -264,7 +267,7 @@
 
                     <a href="{{ url('/insights') }}"
                         class="mega-item resource-item {{ request()->is('insights') ? 'mega-item-active' : '' }}">
-                        <div class="mega-head resource-head-offset">
+                        <div class="mega-head resource-head">
                             <h4 class="mega-title">
                                 Insights
                             </h4>
@@ -452,6 +455,10 @@
         min-height: 392px;
     }
 
+    .mega-tray-resources {
+        min-height: 392px;
+    }
+
     .mega-left {
         padding: 46px 36px 42px 0;
     }
@@ -467,9 +474,9 @@
 
     .mega-left-title {
         max-width: 240px;
-        font-size: 26px;
+        font-size: 22px;
         line-height: 1.24;
-        font-weight: 700;
+        font-weight: 600;
         letter-spacing: -0.02em;
         color: #0018dc;
     }
@@ -485,6 +492,7 @@
         grid-template-columns: repeat(3, minmax(0, 1fr));
         column-gap: 64px;
         padding: 0 8px 0 28px;
+        align-items: stretch;
     }
 
     .resources-right {
@@ -492,6 +500,7 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
         column-gap: 72px;
         padding: 0 8px 0 32px;
+        align-items: stretch;
     }
 
     .mega-item {
@@ -503,23 +512,20 @@
     }
 
     .mega-head {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
         min-height: 148px;
     }
 
-    .mega-head-first {
-        padding-top: 0;
+    .resource-head {
+        min-height: 148px;
+        justify-content: flex-start;
     }
 
-    .mega-head-offset {
-        padding-top: 36px;
-    }
-
-    .resource-head-first {
-        padding-top: 0;
-    }
-
-    .resource-head-offset {
-        padding-top: 10px;
+    .mega-kicker-slot {
+        min-height: 30px;
+        margin-bottom: 14px;
     }
 
     .mega-kicker {
@@ -527,16 +533,17 @@
         line-height: 1.2;
         font-weight: 700;
         color: #111827;
-        margin-bottom: 14px;
+        margin: 0;
     }
 
     .mega-title {
         max-width: 280px;
-        font-size: 27px;
+        font-size: 22px;
         line-height: 1.18;
-        font-weight: 700;
+        font-weight: 500;
         letter-spacing: -0.02em;
         color: #0018dc;
+        margin: 0;
     }
 
     .mega-copy {
@@ -658,7 +665,7 @@
         }
 
         .mega-left-title {
-            font-size: 24px;
+            font-size: 22px;
             max-width: 220px;
         }
     }
@@ -698,8 +705,14 @@
             max-width: 200px;
         }
 
-        .mega-head {
+        .mega-head,
+        .resource-head {
             min-height: 134px;
+        }
+
+        .mega-kicker-slot {
+            min-height: 26px;
+            margin-bottom: 12px;
         }
     }
 </style>

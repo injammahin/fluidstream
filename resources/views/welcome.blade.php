@@ -57,7 +57,7 @@
                             <blockquote
                                 class="mt-5 text-lg font-semibold leading-8 text-white sm:text-[1.35rem] sm:leading-9">
                                 “Fluidstream’s unit has operated consistently and eliminated gas venting. Since installation
-                                15 months ago, the unit has provided 100% uptime and has not required any maintenance.”
+                                17 months ago, the unit has provided 100% uptime and has not required any maintenance.”
                             </blockquote>
 
                             <div class="mt-6">
@@ -237,6 +237,10 @@
         .py-28 {
             padding-top: 1rem;
             padding-bottom: 7rem;
+        }
+
+        .rounded-\[30px\] {
+            border-radius: 2px;
         }
 
 

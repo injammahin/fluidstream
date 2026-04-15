@@ -1,15 +1,20 @@
 @extends('layouts.app')
 
 @section('content')
+    <style>
+        .container {
+            max-width: 1200px !important;
+        }
+    </style>
     <!-- Hero Banner -->
-    <section class="relative h-[62vh] min-h-[480px] w-full overflow-hidden bg-slate-950">
+    <section class=" relative h-[62vh] min-h-[480px] w-full overflow-hidden bg-slate-950">
         <div class="absolute inset-0">
             <img src="{{ asset('/img/banner-contact-01.jpg') }}" alt="Contact Us"
                 class="h-full w-full object-cover object-center">
         </div>
 
         <div class="relative z-10 flex h-full items-center">
-            <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="container mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="max-w-5xl pt-16">
                     <span
                         class="inline-flex items-center rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-sky-200 backdrop-blur-sm">
@@ -32,13 +37,13 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="relative overflow-hidden bg-white py-16 sm:py-20">
+    <section class="relative overflow-hidden bg-white py-16 mx-auto px-12 sm:py-20 ">
         <div class="absolute inset-0 pointer-events-none">
             <div class="absolute left-0 top-0 h-40 w-40 rounded-full bg-slate-100/80 blur-3xl"></div>
             <div class="absolute right-0 bottom-0 h-52 w-52 rounded-full bg-slate-100/70 blur-3xl"></div>
         </div>
 
-        <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="relative  container mx-auto max-w-7xl ">
             @if (session('success'))
                 <div
                     class="mb-8 rounded-2xl border border-emerald-200 bg-emerald-50 px-5 py-4 text-sm font-medium text-emerald-700 shadow-sm">
@@ -60,7 +65,7 @@
             <div class="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-12">
                 <!-- Form Card -->
                 <div
-                    class="rounded-[32px] border border-slate-200 bg-white p-6 shadow-[0_20px_60px_rgba(15,23,42,0.05)] sm:p-8 lg:p-10">
+                    class="rounded-[12px] border border-slate-200 bg-white p-6 shadow-[0_20px_60px_rgba(15,23,42,0.05)] sm:p-8 lg:p-10">
                     <div class="max-w-3xl">
                         <span
                             class="inline-flex items-center rounded-full border border-slate-200 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500">
@@ -155,7 +160,7 @@
                 <!-- Right Side -->
                 <div class="space-y-8">
                     <div
-                        class="rounded-[32px] border border-slate-200 bg-slate-50/70 p-6 shadow-[0_20px_60px_rgba(15,23,42,0.04)] sm:p-8">
+                        class="rounded-[12px] border border-slate-200 bg-slate-50/70 p-6 shadow-[0_20px_60px_rgba(15,23,42,0.04)] sm:p-8">
                         <span
                             class="inline-flex items-center rounded-full border border-slate-200 bg-white px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500">
                             Office
@@ -187,7 +192,7 @@
                     </div>
 
                     <div
-                        class="overflow-hidden rounded-[32px] border border-slate-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.05)]">
+                        class="overflow-hidden rounded-[12px] border border-slate-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.05)]">
                         <div class="border-b border-slate-200 px-6 py-5">
                             <span
                                 class="inline-flex items-center rounded-full border border-slate-200 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500">
@@ -210,9 +215,9 @@
 
     <!-- Extra Section -->
     <section class="bg-slate-50 py-16 sm:py-20">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-7xl  container">
             <div class="grid gap-6 md:grid-cols-3">
-                <div class="rounded-[28px] border border-slate-200 bg-white p-6 shadow-[0_16px_40px_rgba(15,23,42,0.04)]">
+                <div class="rounded-[12px] border border-slate-200 bg-white p-6 shadow-[0_16px_40px_rgba(15,23,42,0.04)]">
                     <div class="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">Fast Response</div>
                     <h3 class="mt-4 text-2xl font-semibold text-slate-900">Professional communication</h3>
                     <p class="mt-4 text-base leading-8 text-slate-600">
@@ -220,7 +225,7 @@
                     </p>
                 </div>
 
-                <div class="rounded-[28px] border border-slate-200 bg-white p-6 shadow-[0_16px_40px_rgba(15,23,42,0.04)]">
+                <div class="rounded-[12px] border border-slate-200 bg-white p-6 shadow-[0_16px_40px_rgba(15,23,42,0.04)]">
                     <div class="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">Partnerships</div>
                     <h3 class="mt-4 text-2xl font-semibold text-slate-900">Distributor opportunities</h3>
                     <p class="mt-4 text-base leading-8 text-slate-600">
@@ -228,7 +233,7 @@
                     </p>
                 </div>
 
-                <div class="rounded-[28px] border border-slate-200 bg-white p-6 shadow-[0_16px_40px_rgba(15,23,42,0.04)]">
+                <div class="rounded-[12px] border border-slate-200 bg-white p-6 shadow-[0_16px_40px_rgba(15,23,42,0.04)]">
                     <div class="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">Support</div>
                     <h3 class="mt-4 text-2xl font-semibold text-slate-900">Project-focused help</h3>
                     <p class="mt-4 text-base leading-8 text-slate-600">
