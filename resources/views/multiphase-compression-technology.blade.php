@@ -317,9 +317,9 @@
     }
 
     /* .cta {
-              background: var(--fs-blue);
-              color: white;
-            } */
+                                        background: var(--fs-blue);
+                                        color: white;
+                                      } */
 
     .cta-wrap {
       display: grid;
@@ -330,10 +330,10 @@
     }
 
     /* .cta p {
-            color: #dbeafe;
-            font-size: 18px;
-            max-width: 760px;
-          } */
+                                      color: #dbeafe;
+                                      font-size: 18px;
+                                      max-width: 760px;
+                                    } */
 
     .cta-actions {
       display: flex;
@@ -659,10 +659,124 @@
     </div>
   </section>
 
+  <section id="technology" class="border-b border-[rgba(16,42,67,0.06)] bg-white py-[72px]">
+    <div class="mx-auto w-[min(1240px,calc(100%-40px))] max-[760px]:w-[min(1240px,calc(100%-28px))]">
+
+      <div
+        class="mb-[30px] grid grid-cols-[minmax(0,1.05fr)_minmax(320px,0.95fr)] items-start gap-[34px] max-[980px]:grid-cols-1">
+        <div>
+          <div class="mb-[10px] text-[13px] font-[850] uppercase tracking-[0.09em] text-[#0018dc]">
+            Rethinking surface facility design
+          </div>
+          <h2
+            class="m-0 max-w-[16ch] text-[clamp(32px,3.1vw,50px)] leading-[1.06] tracking-[-0.04em] text-[#102a43] max-[980px]:max-w-none">
+            A different approach to moving production.
+          </h2>
+        </div>
+
+        <p
+          class="m-0 max-w-[48ch] justify-self-start text-[1.15rem] font-medium leading-[1.65] text-[#52667a] max-[980px]:max-w-none">
+          Conventional oil and gas facilities are built around separation. Production is processed through multiple
+          stages—separators, tanks, scrubbers, and compressors—before gas can be transported. That approach increases
+          capital cost, expands footprint, and introduces operational constraints. Fluidstream takes a different approach
+          by enabling operators to move mixed production streams directly while improving performance across changing
+          field conditions.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-4 gap-[18px] max-[1120px]:grid-cols-2 max-[760px]:grid-cols-1">
+
+        <div
+          class="group relative overflow-hidden border border-[#d9e2ec] bg-white p-7 shadow-[0_18px_45px_rgba(16,42,67,0.08)] transition-all duration-300 ease-[cubic-bezier(.22,.61,.36,1)] hover:-translate-y-[3px] hover:border-[#0018dc] hover:shadow-[0_22px_46px_rgba(16,42,67,0.10)]">
+          <span
+            class="absolute left-0 right-0 top-0 h-[3px] origin-left scale-x-0 bg-[#0018dc] transition-transform duration-300 ease-[cubic-bezier(.22,.61,.36,1)] group-hover:scale-x-100"></span>
+          <div
+            class="relative z-[1] mb-[18px] inline-flex h-12 w-12 items-center justify-center rounded-full bg-[rgba(0,24,220,0.08)] text-[15px] font-[850] text-[#0018dc]">
+            01
+          </div>
+          <h3
+            class="relative z-[1] mb-3 text-[24px] leading-[1.1] tracking-[-0.025em] text-[#102a43] transition-colors duration-300 group-hover:text-[#0018dc]">
+            Eliminate equipment
+          </h3>
+          <p class="relative z-[1] m-0 text-[16px] text-[#52667a]">
+            Reduce or remove separators, tanks, scrubbers, and flare-dependent process steps where the operating envelope
+            supports a flow-through design.
+          </p>
+        </div>
+
+        <div
+          class="group relative overflow-hidden border border-[#d9e2ec] bg-white p-7 shadow-[0_18px_45px_rgba(16,42,67,0.08)] transition-all duration-300 ease-[cubic-bezier(.22,.61,.36,1)] hover:-translate-y-[3px] hover:border-[#0018dc] hover:shadow-[0_22px_46px_rgba(16,42,67,0.10)]">
+          <span
+            class="absolute left-0 right-0 top-0 h-[3px] origin-left scale-x-0 bg-[#0018dc] transition-transform duration-300 ease-[cubic-bezier(.22,.61,.36,1)] group-hover:scale-x-100"></span>
+          <div
+            class="relative z-[1] mb-[18px] inline-flex h-12 w-12 items-center justify-center rounded-full bg-[rgba(0,24,220,0.08)] text-[15px] font-[850] text-[#0018dc]">
+            02
+          </div>
+          <h3
+            class="relative z-[1] mb-3 text-[24px] leading-[1.1] tracking-[-0.025em] text-[#102a43] transition-colors duration-300 group-hover:text-[#0018dc]">
+            Lower cost
+          </h3>
+          <p class="relative z-[1] m-0 text-[16px] text-[#52667a]">
+            Minimize capital investment, installation complexity, and lifecycle maintenance burden by simplifying the
+            facility around fewer major pieces of equipment.
+          </p>
+        </div>
+
+        <div
+          class="group relative overflow-hidden border border-[#d9e2ec] bg-white p-7 shadow-[0_18px_45px_rgba(16,42,67,0.08)] transition-all duration-300 ease-[cubic-bezier(.22,.61,.36,1)] hover:-translate-y-[3px] hover:border-[#0018dc] hover:shadow-[0_22px_46px_rgba(16,42,67,0.10)]">
+          <span
+            class="absolute left-0 right-0 top-0 h-[3px] origin-left scale-x-0 bg-[#0018dc] transition-transform duration-300 ease-[cubic-bezier(.22,.61,.36,1)] group-hover:scale-x-100"></span>
+          <div
+            class="relative z-[1] mb-[18px] inline-flex h-12 w-12 items-center justify-center rounded-full bg-[rgba(0,24,220,0.08)] text-[15px] font-[850] text-[#0018dc]">
+            03
+          </div>
+          <h3
+            class="relative z-[1] mb-3 text-[24px] leading-[1.1] tracking-[-0.025em] text-[#102a43] transition-colors duration-300 group-hover:text-[#0018dc]">
+            Increase uptime
+          </h3>
+          <p class="relative z-[1] m-0 text-[16px] text-[#52667a]">
+            Maintain performance across changing flow conditions, liquid slugs, and unstable production profiles that
+            create difficulty for separation-first systems.
+          </p>
+        </div>
+
+        <div
+          class="group relative overflow-hidden border border-[#d9e2ec] bg-white p-7 shadow-[0_18px_45px_rgba(16,42,67,0.08)] transition-all duration-300 ease-[cubic-bezier(.22,.61,.36,1)] hover:-translate-y-[3px] hover:border-[#0018dc] hover:shadow-[0_22px_46px_rgba(16,42,67,0.10)]">
+          <span
+            class="absolute left-0 right-0 top-0 h-[3px] origin-left scale-x-0 bg-[#0018dc] transition-transform duration-300 ease-[cubic-bezier(.22,.61,.36,1)] group-hover:scale-x-100"></span>
+          <div
+            class="relative z-[1] mb-[18px] inline-flex h-12 w-12 items-center justify-center rounded-full bg-[rgba(0,24,220,0.08)] text-[15px] font-[850] text-[#0018dc]">
+            04
+          </div>
+          <h3
+            class="relative z-[1] mb-3 text-[24px] leading-[1.1] tracking-[-0.025em] text-[#102a43] transition-colors duration-300 group-hover:text-[#0018dc]">
+            Reduce emissions
+          </h3>
+          <p class="relative z-[1] m-0 text-[16px] text-[#52667a]">
+            Capture gas that would otherwise be flared or vented and convert it into useful production value rather than
+            lost site energy and emissions exposure.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
   <section class="section soft">
     <div class="container content-pad">
       <p class="section-label">System comparison</p>
       <h2>Simplifying the production system</h2>
+
+      <p class="mt-2 relative z-[1] m-0 max-w-[620px] text-[16px] leading-[1.65] text-[#52667a]">
+        Fluidstream supports a facility-design shift toward less separation-first infrastructure, fewer major equipment
+        items, and a clearer flow-through production approach where the technology can create value earlier in the
+        process.
+      </p>
+
+
+
 
       <div class="compare-grid">
         <div class="compare-card">
@@ -702,75 +816,143 @@
 
   <section class="section">
     <div class="container content-pad">
-      <div class="split">
-        <div>
+      <div class="economic-block">
+        <div class="economic-head">
           <p class="section-label">Economic advantage</p>
           <h2>Lower cost. Broader deployment.</h2>
-          <div class="body-lg" style="margin-top:22px;">
-            <p>Conventional multiphase technologies are often limited to high-value applications because their capital
-              cost and maintenance complexity restrict where they can be economically deployed.</p>
-            <p>Fluidstream delivers a lower-cost, lower-maintenance system, enabling operators to apply multiphase
-              technology across more wells, pads, and facilities where the economics are stronger and the value case is
-              easier to justify.</p>
-          </div>
+          <p class="economic-copy">
+            Conventional multiphase technologies are often limited to high-value applications because their capital cost
+            and maintenance complexity restrict where they can be economically deployed. Fluidstream is positioned
+            differently: lower cost and lower maintenance support use across more wells, pads, facilities, and brownfield
+            opportunities where the value case is easier to justify.
+          </p>
         </div>
 
-        <div class="cards-4" style="grid-template-columns:1fr 1fr; gap:22px;">
-          <a href="#" class="reveal-card">
-            <div class="reveal-card__base">
-              <h3 class="reveal-card__title">Lower capital cost</h3>
-            </div>
-            <div class="reveal-card__panel">
-              <div>
-                <h3 class="reveal-card__panel-title">Lower capital cost</h3>
-                <p class="reveal-card__panel-text">Simplified system design reduces upfront investment compared with
-                  conventional multiphase solutions.</p>
-              </div>
-            </div>
-          </a>
+        <div class="economic-cards">
+          <div class="economic-card">
+            <h3>Lower capital cost</h3>
+            <p>
+              Simplified system design reduces upfront investment compared with conventional multiphase solutions that
+              depend on more equipment, more integration, and more field complexity.
+            </p>
+          </div>
 
-          <a href="#" class="reveal-card">
-            <div class="reveal-card__base">
-              <h3 class="reveal-card__title">Reduced maintenance</h3>
-            </div>
-            <div class="reveal-card__panel">
-              <div>
-                <h3 class="reveal-card__panel-title">Reduced maintenance</h3>
-                <p class="reveal-card__panel-text">Fewer wear-sensitive elements and a simpler system architecture
-                  decrease service frequency and lifecycle costs.</p>
-              </div>
-            </div>
-          </a>
+          <div class="economic-card">
+            <h3>Reduced maintenance</h3>
+            <p>
+              Fewer wear-sensitive elements and a simpler system architecture decrease service frequency and lifecycle
+              costs, which strengthens economics long after installation.
+            </p>
+          </div>
 
-          <a href="#" class="reveal-card">
-            <div class="reveal-card__base">
-              <h3 class="reveal-card__title">Expanded applications</h3>
-            </div>
-            <div class="reveal-card__panel">
-              <div>
-                <h3 class="reveal-card__panel-title">Expanded applications</h3>
-                <p class="reveal-card__panel-text">Improved economics allow deployment beyond niche or premium projects
-                  and into standard wellsites, pads, and facilities.</p>
-              </div>
-            </div>
-          </a>
+          <div class="economic-card">
+            <h3>Expanded applications</h3>
+            <p>
+              Improved economics allow deployment beyond niche or premium projects and into standard wellsites, pads, and
+              facilities where the technology otherwise would not clear the hurdle.
+            </p>
+          </div>
 
-          <a href="#" class="reveal-card">
-            <div class="reveal-card__base">
-              <h3 class="reveal-card__title">Higher ROI</h3>
-            </div>
-            <div class="reveal-card__panel">
-              <div>
-                <h3 class="reveal-card__panel-title">Higher ROI</h3>
-                <p class="reveal-card__panel-text">Lower capital and operating costs support stronger returns across the
-                  asset lifecycle.</p>
-              </div>
-            </div>
-          </a>
+          <div class="economic-card">
+            <h3>Higher ROI</h3>
+            <p>
+              Lower capital and operating costs support stronger returns across the asset lifecycle while also improving
+              the case for emissions reduction and infrastructure simplification.
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </section>
+  <style>
+    .economic-block {
+      display: block;
+    }
+
+    .economic-head {
+      max-width: 1180px;
+      margin-bottom: 34px;
+    }
+
+    .economic-head .section-label {
+      margin-bottom: 16px;
+    }
+
+
+
+    .economic-copy {
+      margin: 0;
+      max-width: 1000px;
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+
+    .economic-cards {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .economic-card {
+      min-height: 320px;
+      padding: 34px 34px 42px;
+      background: #ffffff;
+      border: 1px solid #d9e2ec;
+      box-shadow: none;
+      transition: border-color .25s ease, transform .25s ease, box-shadow .25s ease;
+    }
+
+    .economic-card h3 {
+      margin: 0 0 18px;
+      font-size: 28px;
+      line-height: 1.08;
+      letter-spacing: -.03em;
+      color: var(--text);
+    }
+
+    .economic-card p {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--muted);
+    }
+
+    .economic-card:hover {
+      transform: translateY(-3px);
+      border-color: #c6d2df;
+      box-shadow: 0 18px 45px rgba(16, 42, 67, .06);
+    }
+
+    @media (max-width: 1200px) {
+      .economic-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 768px) {
+      .economic-head h2 {
+        font-size: clamp(34px, 9vw, 52px);
+      }
+
+      .economic-copy {
+        font-size: 16px;
+      }
+
+      .economic-cards {
+        grid-template-columns: 1fr;
+      }
+
+      .economic-card {
+        min-height: auto;
+        padding: 26px 24px 30px;
+      }
+
+      .economic-card h3 {
+        font-size: 24px;
+      }
+    }
+  </style>
 
   <section id="applications" class="section soft">
     <div class="container content-pad">
