@@ -79,13 +79,25 @@
       isolation: isolate;
     }
 
+    /* .hero-tech::before {
+              content: "";
+              position: absolute;
+              inset: 0;
+              background:
+                linear-gradient(90deg, rgba(0, 24, 220, 0.90) 0%, rgba(0, 24, 220, 0.78) 45%, rgba(0, 24, 220, 0.68) 100%),
+                url('{{ asset("/img/hero/hero.avif") }}');
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;
+              transform: scale(1.02);
+              z-index: -2;
+            }
+             */
     .hero-tech::before {
       content: "";
       position: absolute;
       inset: 0;
-      background:
-        linear-gradient(90deg, rgba(0, 24, 220, 0.90) 0%, rgba(0, 24, 220, 0.78) 45%, rgba(0, 24, 220, 0.68) 100%),
-        url('{{ asset("/img/hero/hero.avif") }}');
+      background: linear-gradient(90deg, rgb(0 24 220 / 34%) 0%, rgb(0 24 220 / 38%) 45%, rgb(0 24 220 / 18%) 100%), url('/img/hero/vapor-recovery.png');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -160,58 +172,154 @@
       transform: translateY(-2px);
     }
 
-    .hero-tech .hero-highlights {
+    .hero-tech .hero-highlights--feature-cards {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
-      max-width: 1120px;
-      margin-top: 34px;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 24px;
+      max-width: 1480px;
+      margin-top: 40px;
     }
 
-    .hero-tech .hero-highlight {
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.08));
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      border-radius: 22px;
-      padding: 20px 20px 18px;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.14);
-      backdrop-filter: blur(10px);
-      min-height: 170px;
-    }
-
-    .hero-tech .hero-highlight .label {
+    .hero-tech .hero-feature-card {
+      position: relative;
       display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 10px;
+      flex-direction: column;
+      min-height: 565px;
+      padding: 26px 13px 26px;
+      border-radius: 5px;
+      background: #ffffff;
+      /* border: 1px solid #dce6ff; */
+      box-shadow: 0 24px 56px rgba(5, 35, 95, .14);
+      color: #0a1c4d;
+      text-decoration: none;
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+      overflow: hidden;
+    }
+
+    .hero-tech .hero-feature-card:hover {
+      transform: translateY(-4px);
+      border-color: #0018dc;
+      box-shadow: 0 30px 62px rgba(5, 35, 95, .18);
+    }
+
+    .hero-tech .hero-feature-card__topline {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #0018dc 0%, #15d1ff 100%);
+    }
+
+    .hero-tech .hero-feature-card__label {
+      margin: 4px 0 5px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: #0018dc;
+    }
+
+    .hero-tech .hero-feature-card__title {
+      margin: 0 0 6px;
+      font-size: 19px;
+      line-height: 1.02;
+      letter-spacing: -.04em;
+      font-weight: 600;
+      color: #0a1c4d;
+    }
+
+    .hero-tech .hero-feature-card__text {
+      margin: 0 0 0px;
+      font-size: 17px;
+      line-height: 1.7;
+      color: #52667a;
+    }
+
+    .hero-tech .hero-feature-card__mini {
+      margin-top: 20px;
+      padding: 11px 7px 16px;
+      border: 1px solid #e2eaf6;
+      border-radius: 7px;
+      background: #f8fbff;
+    }
+
+    .hero-tech .hero-feature-card__mini-label {
+      margin: 0 0 10px;
       font-size: 12px;
       font-weight: 800;
-      letter-spacing: 0.12em;
+      letter-spacing: .16em;
       text-transform: uppercase;
-      color: #8fe8ff;
+      color: #0018dc;
     }
 
-    .hero-tech .hero-highlight .label i {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: #15d1ff;
-      box-shadow: 0 0 0 6px rgba(21, 209, 255, 0.12);
-    }
-
-    .hero-tech .hero-highlight strong {
-      display: block;
-      margin-bottom: 8px;
-      font-size: 20px;
-      line-height: 1.2;
-      letter-spacing: -0.02em;
-      color: #ffffff;
-    }
-
-    .hero-tech .hero-highlight p {
+    .hero-tech .hero-feature-card__mini p {
       margin: 0;
-      font-size: 15px;
-      line-height: 1.6;
-      color: rgba(255, 255, 255, 0.82);
+      font-size: 16px;
+      line-height: 1.7;
+      color: #0a1c4d;
+    }
+
+    .hero-tech .hero-feature-card__cta {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      margin-top: 18px;
+      font-size: 14px;
+      line-height: 1.45;
+      font-weight: 800;
+      color: #0a1c4d;
+    }
+
+    .hero-tech .hero-feature-card__arrow {
+      flex: 0 0 auto;
+      font-size: 28px;
+      line-height: 1;
+      color: #0018dc;
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 1400px) {
+      .hero-tech .hero-highlights--feature-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .hero-tech .hero-feature-card {
+        min-height: unset;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .hero-tech .hero-highlights--feature-cards {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .hero-tech .hero-feature-card {
+        padding: 22px 20px;
+        border-radius: 22px;
+      }
+
+      .hero-tech .hero-feature-card__label {
+        margin: 24px 0 14px;
+        font-size: 11px;
+      }
+
+      .hero-tech .hero-feature-card__title {
+        font-size: 22px;
+      }
+
+      .hero-tech .hero-feature-card__text,
+      .hero-tech .hero-feature-card__mini p,
+      .hero-tech .hero-feature-card__cta {
+        font-size: 15px;
+      }
+
+      .hero-tech .hero-feature-card__mini {
+        border-radius: 18px;
+        padding: 16px;
+      }
     }
 
     .visual-shell {
@@ -333,7 +441,7 @@
       height: 24px;
       border-radius: 8px;
       /* border: 1px solid #dbe5ff;
-                                                                  background-color: #ffffff; */
+                                                                                                                                                                                                                                                                                            background-color: #ffffff; */
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%230018dc' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h12'/%3E%3Cpath d='M13 5l7 7-7 7'/%3E%3C/svg%3E");
       background-repeat: no-repeat;
       background-position: center;
@@ -371,7 +479,7 @@
       gap: 34px;
       align-items: center;
       padding: 32px 0px 32px 0px;
-      border-radius: 28px;
+      /* border-radius: 28px; */
       /* background: rgba(255, 255, 255, 0.88); */
       scroll-margin-top: 90px;
       /* border: 1px solid #e7eefc; */
@@ -539,7 +647,7 @@
     }
 
     .quote p {
-      font-size: clamp(28px, 3.2vw, 46px);
+      font-size: clamp(28px, 3.2vw, 32px);
       line-height: 1.2;
       letter-spacing: -.04em;
       margin: 0;
@@ -630,6 +738,664 @@
     .container {
       max-width: 1200px !important;
     }
+
+    .image-stage {
+      position: relative;
+      border-radius: 22px;
+      overflow: hidden;
+      /* background: #f4f6fa; */
+    }
+
+    .bullet,
+    .adv {
+      position: relative;
+      overflow: hidden;
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease, background .25s ease;
+    }
+
+    .bullet::after,
+    .adv::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 3px;
+      background: #0018dc;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .25s cubic-bezier(.22, .61, .36, 1);
+    }
+
+    .bullet:hover,
+    .adv:hover {
+      transform: translateY(-3px);
+      border-color: #0018dc;
+      box-shadow: 0 18px 36px rgba(16, 42, 67, .08);
+      background: #ffffff;
+    }
+
+    .bullet:hover::after,
+    .adv:hover::after {
+      transform: scaleX(1);
+    }
+
+    .bullet strong,
+    .adv strong {
+      transition: color .25s ease;
+    }
+
+    .bullet:hover strong,
+    .adv:hover strong {
+      color: #0018dc;
+    }
+
+    .overview-stage-copy {
+      position: absolute;
+      top: 38px;
+      left: 110px;
+      z-index: 7;
+      max-width: 820px;
+      pointer-events: none;
+    }
+
+    .overview-stage-kicker {
+      margin: 0 0 10px;
+      color: #0018dc;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0;
+      line-height: 1.2;
+    }
+
+    .overview-stage-title {
+      margin: 0;
+      max-width: 28ch;
+      color: #0a1c4d;
+      font-size: 32px;
+      line-height: 0.95;
+      letter-spacing: -0.045em;
+      font-weight: 700;
+    }
+
+    @media (max-width: 1100px) {
+      .overview-stage-copy {
+        display: none;
+        top: 24px;
+        left: 28px;
+        max-width: 380px;
+      }
+
+      .overview-stage-title {
+        font-size: clamp(26px, 3vw, 40px);
+        max-width: 9ch;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .overview-stage-copy {
+        top: 16px;
+        left: 16px;
+        max-width: 240px;
+      }
+
+      .overview-stage-kicker {
+        font-size: 10px;
+        margin-bottom: 6px;
+      }
+
+      .overview-stage-title {
+        font-size: 18px;
+        line-height: 1;
+        max-width: 10ch;
+      }
+    }
+
+    .features-wrap {
+      display: grid;
+      gap: 30px;
+      margin-top: 34px;
+    }
+
+    .feature {
+      display: block;
+      padding: 0;
+      /* border: 1px solid rgba(7, 24, 62, .10); */
+      border-radius: 14px;
+      /* background: linear-gradient(180deg, #ffffff, #fbfcff); */
+      /* box-shadow: 0 10px 30px rgba(7, 24, 62, .06); */
+      overflow: hidden;
+    }
+
+
+    .feature-inner {
+      display: grid;
+      grid-template-columns: 420px minmax(0, 1fr);
+      gap: 0;
+      align-items: stretch;
+    }
+
+    .feature-intro {
+      padding: 42px 38px 38px;
+      border-right: 1px solid rgba(7, 24, 62, .08);
+      /* background: linear-gradient(180deg, #eef6fb 0%, #f7fbfe 100%); */
+    }
+
+    .feature-intro .tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 12px 18px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #dff5ff, #d1eefb);
+      color: #15bff2;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .feature-intro h3 {
+      margin: 28px 0 18px;
+      font-size: clamp(28px, 2.5vw, 38px);
+      line-height: .98;
+      letter-spacing: -.045em;
+      color: #0a1c4d;
+    }
+
+    .feature-intro p {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.65;
+      color: #4b5563;
+    }
+
+    .feature-body {
+      padding: 40px 36px 38px;
+      /* background: #ffffff; */
+    }
+
+    .feature-body h4 {
+      margin: 0 0 18px;
+      font-size: 24px;
+      line-height: 1.1;
+      letter-spacing: -.03em;
+      color: #0f172a;
+    }
+
+    .feature-body p {
+      margin: 0 0 22px;
+      font-size: 17px;
+      line-height: 1.75;
+      color: #4b5563;
+    }
+
+    .bullets {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .bullet {
+      border: 1px solid rgba(7, 24, 62, .08);
+      border-radius: 5px;
+      background: #ffff;
+      padding: 22px 22px 20px;
+    }
+
+    .bullet strong {
+      display: block;
+      margin: 0 0 10px;
+      font-size: 17px;
+      line-height: 1.25;
+      letter-spacing: -.02em;
+      color: #111827;
+    }
+
+    .bullet span {
+      display: block;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #4b5563;
+    }
+
+    .adv {
+      margin-top: 22px;
+      padding: 24px 24px 22px;
+      border: 1px solid #cfe3ff;
+      border-radius: 5px;
+      /* background: linear-gradient(180deg, #eef9ff 0%, #f8fcff 100%); */
+    }
+
+    .adv strong {
+      display: block;
+      margin: 0 0 10px;
+      font-size: 18px;
+      font-weight: 800;
+      color: #15bff2;
+      letter-spacing: -.01em;
+      text-transform: none;
+    }
+
+    .adv {
+      font-size: 17px;
+      line-height: 1.7;
+      color: #111827;
+    }
+
+    @media (max-width: 1180px) {
+      .feature-inner {
+        grid-template-columns: 340px minmax(0, 1fr);
+      }
+
+      .feature-intro {
+        padding: 34px 28px 30px;
+      }
+
+      .feature-body {
+        padding: 34px 28px 30px;
+      }
+    }
+
+    @media (max-width: 920px) {
+      .feature-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .feature-intro {
+        border-right: none;
+        border-bottom: 1px solid rgba(7, 24, 62, .08);
+      }
+    }
+
+    @media (max-width: 760px) {
+      .features-wrap {
+        gap: 22px;
+      }
+
+      .feature {
+        border-radius: 12px;
+      }
+
+      .feature-intro,
+      .feature-body {
+        padding: 24px 20px;
+      }
+
+      .feature-intro .tag {
+        font-size: 11px;
+        padding: 10px 14px;
+      }
+
+      .feature-intro h3 {
+        margin: 18px 0 14px;
+        font-size: 34px;
+      }
+
+      .feature-intro p,
+      .feature-body p,
+      .bullet span,
+      .adv {
+        font-size: 16px;
+      }
+
+      .feature-body h4 {
+        font-size: 20px;
+      }
+
+      .bullets {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .bullet {
+        border-radius: 20px;
+        padding: 18px;
+      }
+
+      .adv {
+        border-radius: 20px;
+        padding: 20px 18px;
+      }
+
+      .adv strong {
+        font-size: 16px;
+      }
+    }
+
+    .gray {
+      background: #f5f7fb;
+    }
+
+    #overview {
+      background: #ffffff;
+    }
+
+    #overview .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(340px, .95fr);
+      gap: 44px;
+      align-items: end;
+      margin-bottom: 42px;
+    }
+
+    #overview .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--primary);
+    }
+
+    #overview .section-head h2 Specificity: (1, 1, 1) {
+      margin: 0;
+      max-width: 22ch;
+      font-size: clamp(24px, 3vw, 44px);
+      line-height: .95;
+      letter-spacing: -0.05em;
+      color: #0a1c4d;
+      font-weight: 700;
+    }
+
+    #overview .section-head p {
+      margin: 0;
+      max-width: 53ch;
+      font-size: 16px;
+      line-height: 1.75;
+      color: #424f5d;
+    }
+
+    #overview .overview {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    #overview .panel {
+      padding: 34px 34px 36px;
+      border: 1px solid #e3ebf5;
+      border-radius: 7px;
+      background: #ffffff;
+      box-shadow: 0 14px 36px rgba(10, 28, 77, .05);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #overview .panel {
+      padding: 34px 34px 36px;
+      border: 1px solid #e3ebf5;
+      border-radius: 7px;
+      background: #ffffff;
+      box-shadow: 0 14px 36px rgba(10, 28, 77, .05);
+    }
+
+    #overview .panel h3 {
+      margin: 0 0 18px;
+      font-size: clamp(28px, 2.4vw, 38px);
+      line-height: 1.08;
+      letter-spacing: -.03em;
+      color: #0a1c4d;
+      font-weight: 600;
+    }
+
+    #overview .panel>p {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.72;
+      color: #52667a;
+    }
+
+    #overview .stack {
+      display: grid;
+      gap: 18px;
+      margin-top: 26px;
+    }
+
+    #overview .stack .item,
+    #overview .flow .box,
+    #overview .value {
+      position: relative;
+      overflow: hidden;
+      padding: 24px 22px 22px;
+      border: 1px solid #e3ebf5;
+      border-radius: 7px;
+      background: #ffffff;
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease, background .25s ease;
+    }
+
+    #overview .stack .item::after,
+    #overview .flow .box::after,
+    #overview .value::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 3px;
+      background: #0018dc;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .25s cubic-bezier(.22, .61, .36, 1);
+    }
+
+    #overview .stack .item:hover,
+    #overview .flow .box:hover,
+    #overview .value:hover {
+      transform: translateY(-4px);
+      border-color: #0018dc;
+      box-shadow: 0 22px 46px rgba(16, 42, 67, .10);
+      background: #ffffff;
+    }
+
+    #overview .stack .item:hover::after,
+    #overview .flow .box:hover::after,
+    #overview .value:hover::after {
+      transform: scaleX(1);
+    }
+
+    #overview .stack .item strong,
+    #overview .flow .box h4,
+    #overview .value h4 {
+      transition: color .25s ease;
+    }
+
+    #overview .stack .item:hover strong,
+    #overview .flow .box:hover h4,
+    #overview .value:hover h4 {
+      color: #0018dc;
+    }
+
+    #overview .stack .item {
+      font-size: 16px;
+      line-height: 1.65;
+      color: #52667a;
+    }
+
+    #overview .stack .item strong {
+      display: block;
+      margin: 0 0 10px;
+      font-size: 18px;
+      line-height: 1.22;
+      letter-spacing: -.02em;
+      color: #0a1c4d;
+    }
+
+    #overview .flow {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 56px minmax(0, 1fr);
+      gap: 18px;
+      align-items: center;
+      margin-top: 28px;
+    }
+
+    #overview .flow .arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+      line-height: 1;
+      color: #18c8f7;
+      font-weight: 700;
+    }
+
+    #overview .flow .box {
+      min-height: 190px;
+    }
+
+    #overview .flow .box h4 {
+      margin: 0 0 12px;
+      font-size: 20px;
+      line-height: 1.2;
+      color: #0a1c4d;
+      font-weight: 800;
+    }
+
+    #overview .flow .box p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #52667a;
+    }
+
+    #overview .value-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    #overview .value {
+      min-height: 100%;
+    }
+
+    #overview .value h4 {
+      margin: 0 0 12px;
+      font-size: 18px;
+      line-height: 1.18;
+      letter-spacing: -.02em;
+      color: #0a1c4d;
+      font-weight: 800;
+    }
+
+    #overview .value p {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.62;
+      color: #52667a;
+    }
+
+    @media (max-width: 1180px) {
+      #overview .overview {
+        grid-template-columns: 1fr;
+      }
+
+      #overview .value-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 980px) {
+      #overview .section-head {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        align-items: start;
+      }
+
+      #overview .section-head h2 {
+        max-width: none;
+      }
+
+      #overview .section-head p {
+        max-width: none;
+      }
+
+      #overview .flow {
+        grid-template-columns: 1fr;
+      }
+
+      #overview .flow .arrow {
+        transform: rotate(90deg);
+        min-height: 38px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      #overview .panel {
+        padding: 24px 20px;
+        border-radius: 7px;
+      }
+
+      #overview .panel h3 {
+        font-size: 28px;
+      }
+
+      #overview .panel>p {
+        font-size: 16px;
+      }
+
+      #overview .stack .item,
+      #overview .flow .box,
+      #overview .value {
+        padding: 18px 16px;
+        border-radius: 18px;
+      }
+
+      #overview .value-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .scroll-to-stage-btn {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      width: 58px;
+      height: 58px;
+      border: 0;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #0018dc, #2544ff);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 18px 38px rgba(0, 24, 220, .24);
+      cursor: pointer;
+      z-index: 9999;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(14px) scale(.96);
+      transition: opacity .25s ease, visibility .25s ease, transform .25s ease, box-shadow .25s ease;
+    }
+
+    .scroll-to-stage-btn.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0) scale(1);
+    }
+
+    .scroll-to-stage-btn.show:hover {
+      transform: translateY(-2px) scale(1);
+      box-shadow: 0 22px 44px rgba(0, 24, 220, .30);
+    }
+
+    .scroll-to-stage-btn svg {
+      width: 22px;
+      height: 22px;
+      stroke: currentColor;
+    }
+
+    @media (max-width: 760px) {
+      .scroll-to-stage-btn {
+        right: 16px;
+        bottom: 16px;
+        width: 52px;
+        height: 52px;
+      }
+    }
   </style>
 
   <section class="hero-tech ">
@@ -651,26 +1417,169 @@
           <a class="btn secondary" href="#features">View Key Features</a>
         </div>
 
-        <div class="hero-highlights">
-          <div class="hero-highlight">
-            <div class="label"><i></i>Liquid Handling</div>
-            <strong>Handles Liquids Inside Compression</strong>
-            <p>Designed to safely and efficiently manage incompressible liquids directly within the compression chamber,
-              reducing the need for upstream separation equipment.</p>
+        <div class="hero-highlights hero-highlights--feature-cards">
+          <a href="#liquid-method" class="hero-feature-card">
+            <div class="hero-feature-card__topline"></div>
+            <div class="hero-feature-card__label">Direct Multiphase Capability</div>
+            <h3 class="hero-feature-card__title">Compresses mixed flow without forcing separation first</h3>
+            <p class="hero-feature-card__text">
+              Designed to handle gas and liquids inside compression, reducing dependence on separators, scrubbers, and
+              extra process equipment.
+            </p>
+            <div class="hero-feature-card__mini">
+              <div class="hero-feature-card__mini-label">Why it matters</div>
+              <p>Fewer process steps can mean lower footprint, lower complexity, and broader fit across real multiphase
+                service.</p>
+            </div>
+            <div class="hero-feature-card__cta">
+              <span>See how the liquid-handling methodology works</span>
+              <span class="hero-feature-card__arrow">→</span>
+            </div>
+          </a>
+
+          <a href="#gland-section" class="hero-feature-card">
+            <div class="hero-feature-card__topline"></div>
+            <div class="hero-feature-card__label">Advanced Gland Sealing</div>
+            <h3 class="hero-feature-card__title">Wear visibility supports more planned maintenance</h3>
+            <p class="hero-feature-card__text">
+              Patent-pending gland sealing with electronic wear detection gives earlier warning before sealing degradation
+              becomes a leak, outage, or emergency callout.
+            </p>
+            <div class="hero-feature-card__mini">
+              <div class="hero-feature-card__mini-label">Why it matters</div>
+              <p>Better awareness of seal condition helps protect uptime, reduce leak exposure, and shift maintenance away
+                from reactive troubleshooting.</p>
+            </div>
+            <div class="hero-feature-card__cta">
+              <span>Read more on sealing integrity and wear control</span>
+              <span class="hero-feature-card__arrow">→</span>
+            </div>
+          </a>
+
+          <a href="#tracking-section" class="hero-feature-card">
+            <div class="hero-feature-card__topline"></div>
+            <div class="hero-feature-card__label">Adaptive Protection</div>
+            <h3 class="hero-feature-card__title">Piston tracking helps the system respond to upset conditions</h3>
+            <p class="hero-feature-card__text">
+              Full piston tracking gives the controls better operating context so the unit can react to slugs, solids
+              buildup, and changing machine behavior.
+            </p>
+            <div class="hero-feature-card__mini">
+              <div class="hero-feature-card__mini-label">Why it matters</div>
+              <p>More responsive control can reduce trips, limit damage risk, and improve autonomous performance when
+                field conditions move outside the ideal design point.</p>
+            </div>
+            <div class="hero-feature-card__cta">
+              <span>Explore the control and upset-response strategy</span>
+              <span class="hero-feature-card__arrow">→</span>
+            </div>
+          </a>
+
+          <a href="#sand-section" class="hero-feature-card">
+            <div class="hero-feature-card__topline"></div>
+            <div class="hero-feature-card__label">Harsh-Service Durability</div>
+            <h3 class="hero-feature-card__title">Built for abrasive, unstable, and remote field conditions</h3>
+            <p class="hero-feature-card__text">
+              Sand-ready sealing, hazardous-fluid containment, and integrated drive controls make the architecture more
+              credible in harsh service.
+            </p>
+            <div class="hero-feature-card__mini">
+              <div class="hero-feature-card__mini-label">Why it matters</div>
+              <p>When service is dirty, corrosive, or difficult to access, survivability becomes an economic advantage,
+                not just a technical claim.</p>
+            </div>
+            <div class="hero-feature-card__cta">
+              <span>Learn how the design improves field survivability</span>
+              <span class="hero-feature-card__arrow">→</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="overview" class="section contrast">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="section-label">Technology philosophy</span>
+          <h2>A compression architecture built for what operators actually see in the field.</h2>
+        </div>
+        <p>
+          Fluidstream technology is designed to reduce emissions, improve production, and lower maintenance burden
+          through a machine architecture built around the failure modes that make conventional systems unreliable in
+          multiphase service.
+        </p>
+      </div>
+
+      <div class="overview">
+        <div class="panel">
+          <span class="eyebrow">Why it matters</span>
+          <h3>Separation-first systems create cost, footprint, and reliability penalties.</h3>
+          <p>
+            Conventional surface design usually assumes the stream must be cleaned up before compression. That means
+            more separators, tanks, scrubbers, interconnections, controls layers, and maintenance points. Every added
+            component increases capital cost and expands the number of things that can trip, leak, plug, or fail.
+          </p>
+          <div class="stack">
+            <div class="item">
+              <strong>More equipment to protect the compressor</strong>
+              Extra hardware is often installed because the compressor itself is not comfortable with liquid carryover,
+              solids, or unstable flow.
+            </div>
+            <div class="item">
+              <strong>Higher lifecycle burden</strong>
+              More equipment count means more installation work, more inspection, more parts, and more operating
+              complexity over time.
+            </div>
+            <div class="item">
+              <strong>Less flexibility under real conditions</strong>
+              When the stream changes, conventional gas-only assumptions can turn into trips, downtime, and
+              intervention.
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <span class="eyebrow">A different approach</span>
+          <h3>Fluidstream is designed to move production without depending on ideal upstream conditioning.</h3>
+          <p>
+            The Fluidstream approach changes the role of compression in the system. Instead of forcing the production
+            stream through a long chain of equipment just to protect the compressor, the machine is designed to tolerate
+            and manage the reality of mixed-phase flow inside the compression process. That simplifies infrastructure
+            and expands where multiphase technology can be practical.
+          </p>
+
+          <div class="flow">
+            <div class="box">
+              <h4>Conventional system</h4>
+              <p>Wellstream → Separator → Tank → Scrubber → Compressor → Pipeline</p>
+            </div>
+            <div class="arrow">→</div>
+            <div class="box">
+              <h4>Fluidstream system</h4>
+              <p>Wellstream → Fluidstream Multiphase Compression → Pipeline</p>
+            </div>
           </div>
 
-          <div class="hero-highlight">
-            <div class="label"><i></i>Autonomous Control</div>
-            <strong>Autonomous Protection in Upset Conditions</strong>
-            <p>Advanced controls and piston tracking help the system respond to slugs, solids buildup, and changing flow
-              conditions without constant operator intervention.</p>
-          </div>
-
-          <div class="hero-highlight">
-            <div class="label"><i></i>Drive Flexibility</div>
-            <strong>Flexible Power for Field Deployment</strong>
-            <p>Available in both electric and gas-drive configurations, with integrated control logic that maintains
-              performance even when fuel gas quality is inconsistent.</p>
+          <div class="value-grid">
+            <div class="value">
+              <h4>Reduced equipment count</h4>
+              <p>Lower footprint and fewer interconnections compared with separation-heavy facilities.</p>
+            </div>
+            {{-- <div class="value">
+              <h4>Lower cost structure</h4>
+              <p>Simpler facilities can reduce installation complexity and maintenance intensity over the asset life.
+              </p>
+            </div> --}}
+            <div class="value">
+              <h4>Stronger uptime potential</h4>
+              <p>Designed to keep performing through variable gas-liquid ratios and non-steady-state events.</p>
+            </div>
+            <div class="value">
+              <h4>Better emissions capture</h4>
+              <p>Supports recovery of gas that might otherwise be vented or flared when conventional systems become
+                unreliable.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -680,6 +1589,12 @@
   <section class="section-surface-white overview-stage-wrap">
     <div class="visual-shell">
       <div class="image-stage" id="overview-stage">
+        <div class="overview-stage-copy container">
+          <div class="section-label">Inside the Technology</div>
+          <h2 class=" overview-stage-title">
+            See where the technology advantage is built into the system
+          </h2>
+        </div>
         <img src="/img/2270 Rear View.JPG" alt="Fluidstream technology unit" />
         <button class="hotspot active" data-feature="liquid" style="left:46%;top:58%">
           <span class="hotspot-label">Liquid Methodology</span>
@@ -700,191 +1615,402 @@
           <span class="hotspot-label">Sand Optimization</span>
         </button>
       </div>
-      <section class="color">
-        <div class="container ">
-          <div class="hotspot-panel" id="hotspotPanel">
-            <div class="section-label py-4">Interactive System Overview</div>
-            <h3 id="panelTitle">Patent-Focused Methodology for Handling Incompressible Liquids</h3>
-            <p id="panelText">Fluidstream incorporates a patented methodology positioned as the only safe, efficient,
-              reliable, and optimal approach for handling incompressible liquids within a compression chamber.</p>
-            <ul id="panelList">
-              <li>Built specifically for liquid presence inside the compression chamber</li>
-              <li>Focused on safe, efficient, and reliable multiphase operation</li>
-              <li>Supports practical operation where conventional systems avoid liquid loading</li>
-            </ul>
-          </div>
-        </div>
-      </section>
     </div>
   </section>
 
-  <section class="section section-surface-soft py-16 sm:py-20 lg:py-24" id="features">
+
+  <section id="features" class="section contrast">
     <div class="">
-      <div class="overview-head container" id="overview">
-        <div class="section-label py-4">Core Technology Features</div>
-        <h2 class="section-title">Explore Fluidstream Technology</h2>
-        <p class="section-intro">This version restores the interactive image in the hero while keeping the lighter visual
-          system. The feature language reflects your uploaded technology points around liquid handling, gland sealing,
-          hazardous-fluid containment, autonomous control, gas-drive integration, and sand-optimized sealing.</p>
-      </div>
-      <section class="color">
-        <div class="features">
-          <article class="feature container" id="liquid-method">
-            <div class="copy">
-              <div class="section-label py-4">Liquid Handling Methodology</div>
-              <h2>Patent-Focused Methodology for Handling Incompressible Liquids</h2>
-              <p>Fluidstream incorporates a <strong>patented methodology</strong> for handling incompressible liquids
-                within
-                a compression chamber.</p>
-              <ul>
-                <li>Built specifically for liquid presence inside the compression chamber</li>
-                <li>Focused on safe, efficient, and reliable multiphase operation</li>
-                <li>Supports practical operation where conventional systems avoid liquid loading</li>
-              </ul>
-              <div class="adv"><strong>Key Advantage</strong>Rather than treating liquids as a problem to be removed
-                upstream, Fluidstream is designed to manage them directly inside the compression process.</div>
-            </div>
-            <div class="visual">
-              <div class="visual-box">
-                <img src="/img/2270 Rear View.JPG" alt="Fluidstream liquid handling technology" />
-                <div class="feature-indicator" style="left:50%;top:60%">
-                  <span class="dot"></span>
-                  <span class="tag">Liquid handling zone</span>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="feature reverse container" id="gland-section">
-            <div class="copy">
-              <div class="section-label py-4">Advanced Sealing System</div>
-              <h2>Patent Pending Gland Sealing with Electronic Wear Detection</h2>
-              <p>Fluidstream uses a <strong>patent pending gland sealing configuration and methodology</strong> with
-                electronic seal wear detection to protect the system under demanding multiphase conditions.</p>
-              <ul>
-                <li>Electronic detection provides visibility into seal condition</li>
-                <li>Supports earlier maintenance planning before failure occurs</li>
-                <li>Improves reliability in harsh multiphase duty</li>
-              </ul>
-              <div class="adv"><strong>Key Advantage</strong>Advanced sealing and wear awareness help eliminate one of the
-                biggest reliability risks in multiphase compression.</div>
-            </div>
-            <div class="visual">
-              <div class="visual-box">
-                <img src="/img/2270 Rear View.JPG" alt="Fluidstream gland sealing system" />
-                <div class="feature-indicator" style="left:50%;top:44%">
-                  <span class="dot"></span>
-                  <span class="tag">Gland sealing area</span>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="feature container" id="alignment-section">
-            <div class="copy">
-              <div class="section-label py-4">Containment and Mechanical Integrity</div>
-              <h2>Sealed Hazardous-Fluid Containment and Alignment in Critical Wear Areas</h2>
-              <p>Fluidstream features a <strong>completely sealed gland</strong> for hazardous fluids, while the system is
-                designed to keep alignment in key stress and wear areas to extend life of seals and components.</p>
-              <ul>
-                <li>No exposure to toxic or corrosive multiphase fluid, including H2S</li>
-                <li>Controls wear in mechanically critical zones</li>
-                <li>Extends life of sealing and wear components</li>
-              </ul>
-              <div class="adv"><strong>Key Advantage</strong>The design strengthens both safety and durability by
-                combining
-                sealed containment with engineered mechanical stability.</div>
-            </div>
-            <div class="visual">
-              <div class="visual-box">
-                <img src="/img/2270 Rear View.JPG" alt="Fluidstream sealed gland and alignment" />
-                <div class="feature-indicator left" style="left:37%;top:35%">
-                  <span class="dot"></span>
-                  <span class="tag">Alignment + sealed gland</span>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="feature reverse container" id="tracking-section">
-            <div class="copy">
-              <div class="section-label py-4">Piston Tracking & Adaptive Operation</div>
-              <h2>Full Piston Tracking for Optimized Control and Upset Protection</h2>
-              <p>Full tracking of the piston allows optimized control, helps prevent damage from ice and solid buildup,
-                ensures power fluid temperature is optimized, and adjusts the system to safely operate during upset
-                conditions such as slugs.</p>
-              <ul>
-                <li>Helps prevent damage from ice and solids buildup</li>
-                <li>Optimizes power fluid temperature during complex operation</li>
-                <li>Adjusts for upset conditions including large liquid surges</li>
-              </ul>
-              <div class="adv"><strong>Key Advantage</strong>Fluidstream is built to remain controlled under real-world
-                variability, not just steady-state conditions.</div>
-            </div>
-            <div class="visual">
-              <div class="visual-box">
-                <img src="/img/2270 Rear View.JPG" alt="Fluidstream piston tracking" />
-                <div class="feature-indicator" style="left:45%;top:31%">
-                  <span class="dot"></span>
-                  <span class="tag">Piston tracking path</span>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="feature container" id="drives-section">
-            <div class="copy">
-              <div class="section-label py-4">Drive Systems & Autonomous Controls</div>
-              <h2>Electric Standard, Gas Drive Optional, Fully Integrated Into Autonomous Controls</h2>
-              <p>Beyond the standard electric engine solution, Fluidstream also offers a gas drive option. Critical
-                information such as oil temperature, rpm, and motor load from the gas drive is integrated into autonomous
-                controls.</p>
-              <ul>
-                <li>Electric and gas drive configurations available</li>
-                <li>Gas-drive operating data integrated into controls logic</li>
-                <li>Maintains performance under variable fuel gas quality</li>
-              </ul>
-              <div class="adv"><strong>Key Advantage</strong>Drive flexibility is matched by control intelligence,
-                allowing
-                the unit to operate effectively across a wider range of field conditions.</div>
-            </div>
-            <div class="visual">
-              <div class="visual-box">
-                <img src="/img/2270 Rear View.JPG" alt="Fluidstream drive and controls" />
-                <div class="feature-indicator left" style="left:20%;top:38%">
-                  <span class="dot"></span>
-                  <span class="tag">Drive + controls</span>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="feature reverse container" id="sand-section">
-            <div class="copy">
-              <div class="section-label py-4">Sand-Ready Sealing</div>
-              <h2>Multiphase Piston and Gland Sealing Configured to Optimize Life in Sand Service</h2>
-              <p>The multiphase piston sealing and gland sealing system is configured to optimize life in applications
-                with
-                sand, helping preserve equipment life where abrasive solids can rapidly degrade conventional designs.</p>
-              <ul>
-                <li>Designed with abrasive service in mind</li>
-                <li>Optimizes seal life in sand-bearing applications</li>
-                <li>Strengthens suitability for difficult field conditions</li>
-              </ul>
-              <div class="adv"><strong>Key Advantage</strong>Fluidstream is engineered for tougher multiphase realities,
-                including abrasive service, rather than assuming clean flow.</div>
-            </div>
-            <div class="visual">
-              <div class="visual-box">
-                <img src="/img/2270 Rear View.JPG" alt="Fluidstream sand optimized sealing" />
-                <div class="feature-indicator" style="left:34%;top:24%">
-                  <span class="dot"></span>
-                  <span class="tag">Sand-optimized sealing</span>
-                </div>
-              </div>
-          </article>
+      <div class="section-head   container">
+        <div>
+          <span class="section-label">Core technology features</span>
+          <h2>Expanded technical detail for each major technology advantage.</h2>
         </div>
-      </section>
+        <p>
+          Each feature below explains how the technology works, the field problem it addresses, and the practical
+          operating benefit it delivers.
+        </p>
+      </div>
+
+      <div class="features-wrap">
+        <div class="gray">
+          <div class="container">
+            <article class="feature" id="liquid-method">
+              <div class="feature-inner">
+                <div class="feature-intro">
+                  <span class="section-label">Liquid handling methodology</span>
+                  <h3>Patent-focused methodology for handling incompressible liquids.</h3>
+                  <p>
+                    The technology story starts here: Fluidstream is not trying to avoid liquid presence at all costs. It
+                    is
+                    designed around the fact that liquids can enter the compression process and must be handled in a
+                    controlled, credible way.
+                  </p>
+                </div>
+                <div class="feature-body">
+                  <h4>Why it matters technically</h4>
+                  <p>
+                    In conventional compression, liquids are treated as a threat that must be removed before the machine
+                    can
+                    run safely. That assumption drives the need for scrubbers, separators, and additional process steps.
+                    Fluidstream’s methodology changes that architecture by designing for liquid presence inside the
+                    compression chamber. This is a more realistic fit for vapor recovery streams, casing gas with
+                    carryover,
+                    and multiphase production services where liquid breakthrough is not an exception but part of the
+                    normal
+                    operating envelope.
+                  </p>
+                  <p>
+                    By handling incompressible liquids inside the compression process, the system can reduce dependence on
+                    separation hardware as the only line of defense. That does not just simplify the facility. It also
+                    changes the reliability story, because the machine is not destabilized every time the field behaves
+                    like
+                    a field instead of a clean laboratory stream.
+                  </p>
+                  <div class="bullets">
+                    <div class="bullet">
+                      <strong>Built for mixed flow conditions</strong>
+                      <span>Supports operation where gas, liquids, and transient slug behavior are part of real
+                        service.</span>
+                    </div>
+                    <div class="bullet">
+                      <strong>Less reliance on upstream cleanup</strong>
+                      <span>Helps reduce the amount of equipment required to protect a gas-only compressor from liquid
+                        carryover.</span>
+                    </div>
+                    <div class="bullet">
+                      <strong>Broader application range</strong>
+                      <span>Improved economics can make multiphase deployment practical in more wells, pads, and facility
+                        scenarios.</span>
+                    </div>
+                    <div class="bullet">
+                      <strong>Stronger field realism</strong>
+                      <span>The design philosophy starts from real production variability instead of idealized process
+                        assumptions.</span>
+                    </div>
+                  </div>
+                  <div class="adv">
+                    <strong>Real-life benefit</strong>
+                    Operators gain a production-moving solution that remains useful when liquid carryover, changing
+                    gas-liquid ratios, or unstable inflow would otherwise force a conventional system into trips,
+                    workarounds, or additional facility spend.
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="">
+          <div class="container">
+            <article class="feature" id="gland-section">
+              <div class="feature-inner">
+                <div class="feature-intro">
+                  <span class="section-label">Advanced sealing system</span>
+                  <h3>Patent-pending gland sealing with electronic wear detection.</h3>
+                  <p>
+                    Sealing performance is one of the most consequential reliability issues in multiphase compression.
+                    Fluidstream addresses it as a central technology layer, not as an afterthought.
+                  </p>
+                </div>
+                <div class="feature-body">
+                  <h4>Why it matters technically</h4>
+                  <p>
+                    Mixed-phase service is hard on sealing systems because the machine must tolerate not only pressure
+                    differential and cycle loading, but also contaminants, liquid exposure, and changing process behavior.
+                    Fluidstream’s gland sealing configuration is paired with electronic wear detection so the operator has
+                    visibility into seal condition before sealing degradation turns into a leak event, an emergency
+                    intervention, or an extended outage.
+                  </p>
+                  <p>
+                    This matters because predictive awareness is often more valuable than simply having a durable seal on
+                    paper. In field operations, downtime is rarely caused by a single weak component in isolation. It is
+                    caused by a lack of warning, a reactive maintenance pattern, and the inability to plan service before
+                    a
+                    problem becomes operationally expensive.
+                  </p>
+                  <div class="bullets">
+                    <div class="bullet">
+                      <strong>Wear visibility</strong>
+                      <span>Electronic detection improves awareness of seal condition before failure becomes
+                        disruptive.</span>
+                    </div>
+                    <div class="bullet">
+                      <strong>Improved maintenance planning</strong>
+                      <span>Helps shift service from reactive troubleshooting toward scheduled intervention.</span>
+                    </div>
+                    <div class="bullet">
+                      <strong>Better reliability in harsh duty</strong>
+                      <span>Supports sustained operation under demanding multiphase conditions where sealing is a common
+                        weak point.</span>
+                    </div>
+                    <div class="bullet">
+                      <strong>Lower leak exposure</strong>
+                      <span>Stronger sealing integrity helps reduce one of the highest-concern failure modes in multiphase
+                        equipment.</span>
+                    </div>
+                  </div>
+                  <div class="adv">
+                    <strong>Real-life benefit</strong>
+                    Instead of discovering a seal problem only after leakage, downtime, or emergency service, operators
+                    gain
+                    earlier warning and a better chance to protect uptime, maintenance budgets, and site safety
+                    performance.
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="gray">
+          <div class="container">
+            <article class="feature" id="alignment-section">
+              <div class="feature-inner">
+                <div class="feature-intro">
+                  <span class="section-label">Containment and mechanical integrity</span>
+                  <h3>Sealed hazardous-fluid containment and alignment in critical wear areas.</h3>
+                  <p>
+                    Reliability in multiphase service is not only about what the machine compresses. It is also about how
+                    the machine holds alignment, controls wear, and contains the fluid in the areas where failure risk is
+                    concentrated.
+                  </p>
+                </div>
+                <div class="feature-body">
+                  <h4>Why it matters technically</h4>
+                  <p>
+                    The live Fluidstream messaging points to a completely sealed gland for hazardous fluids and to
+                    alignment
+                    in key stress and wear zones. Those two ideas are tightly connected. Poor mechanical stability
+                    accelerates wear in sealing areas. Sealing degradation increases exposure risk and shortens component
+                    life. Fluidstream’s approach addresses both together by pairing containment with structural control in
+                    the wear-critical zones of the machine.
+                  </p>
+                  <p>
+                    This becomes especially important when the stream contains corrosive components such as H₂S, when the
+                    service is remote and intervention is expensive, or when the production system cannot tolerate
+                    repeated
+                    small failures across seals, guides, and wear components.
+                  </p>
+                  <div class="bullets">
+                    <div class="bullet">
+                      <strong>Hazardous-fluid containment</strong>
+                      <span>Supports safer operation in services where exposure to corrosive or toxic fluids is a real
+                        design concern.</span>
+                    </div>
+                    <div class="bullet">
+                      <strong>Alignment control</strong>
+                      <span>Helps preserve seal life and reduce mechanically induced wear in critical load paths.</span>
+                    </div>
+                    <div class="bullet">
+                      <strong>Longer component life</strong>
+                      <span>Wear control in stressed areas helps extend intervals between service events and part
+                        replacement.</span>
+                    </div>
+                    <div class="bullet">
+                      <strong>Durability under demanding duty</strong>
+                      <span>Improves survivability when field conditions are corrosive, unstable, or maintenance access is
+                        limited.</span>
+                    </div>
+                  </div>
+                  <div class="adv">
+                    <strong>Real-life benefit</strong>
+                    The operator is not only buying compression capacity. They are buying a machine architecture that is
+                    more likely to stay sealed, stay aligned, and stay productive when the service environment is harsh
+                    and
+                    the cost of intervention is high.
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="">
+          <div class="container">
+            <article class="feature" id="tracking-section">
+              <div class="feature-inner">
+                <div class="feature-intro">
+                  <span class="section-label">Piston tracking and adaptive operation</span>
+                  <h3>Full piston tracking for optimized control and upset protection.</h3>
+                  <p>
+                    Real field equipment is rarely exposed to perfectly steady operating conditions. Controls must respond
+                    to what the machine is experiencing, not just what the process was expected to be.
+                  </p>
+                </div>
+                <div class="feature-body">
+                  <h4>Why it matters technically</h4>
+                  <p>
+                    Full piston tracking helps prevent damage from ice and solids buildup, optimizes power fluid
+                    temperature, and adjusts the system for upset conditions such as slugs. It is a core part of the
+                    machine’s protection strategy. Tracking piston behavior gives the control system better operating
+                    context, allowing the unit to respond to harmful conditions before they cascade into mechanical
+                    stress,
+                    poor efficiency, or instability.
+                  </p>
+                  <p>
+                    This is particularly relevant in multiphase services because the most expensive failures often do not
+                    begin with a catastrophic event. They begin with changing behavior: higher loads, altered motion,
+                    unstable response, and increasingly unfavorable operating conditions that go unmanaged for too long.
+                  </p>
+                  <div class="bullets">
+                    <div class="bullet">
+                      <strong>Upset response</strong>
+                      <span>Supports operational adjustment when slugs, solids buildup, or transient events begin to
+                        affect
+                        the machine.</span>
+                    </div>
+                    <div class="bullet">
+                      <strong>Protection against damage modes</strong>
+                      <span>Helps reduce risk from ice formation, solids accumulation, and other non-ideal operating
+                        behavior.</span>
+                    </div>
+                    <div class="bullet">
+                      <strong>Optimized operating envelope</strong>
+                      <span>Improves the system’s ability to remain controlled as conditions change instead of relying on
+                        a
+                        narrow design point.</span>
+                    </div>
+                    <div class="bullet">
+                      <strong>More credible autonomy</strong>
+                      <span>Autonomous performance is stronger when the controls have better real-time awareness of
+                        machine
+                        behavior.</span>
+                    </div>
+                  </div>
+                  <div class="adv">
+                    <strong>Real-life benefit</strong>
+                    In the field, this means less dependence on constant manual tuning and a better chance of staying
+                    online
+                    through the conditions that normally create trips, damage, and operator frustration.
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="gray">
+          <div class="container">
+            <article class="feature" id="drives-section">
+              <div class="feature-inner">
+                <div class="feature-intro">
+                  <span class="section-label">Drive systems and controls</span>
+                  <h3>Electric standard, gas drive optional, fully integrated into autonomous controls.</h3>
+                  <p>
+                    Deployment flexibility only becomes valuable when it does not compromise control quality. Fluidstream
+                    links the drive options back into the operating logic so the system remains coherent under different
+                    field constraints.
+                  </p>
+                </div>
+                <div class="feature-body">
+                  <h4>Why it matters technically</h4>
+                  <p>
+                    Fluidstream offers both electric and gas-drive configurations, but the more important point is that
+                    critical gas-drive operating data such as oil temperature, rpm, and motor load are integrated into the
+                    control system. That means the drive package is not treated as a separate black box. It becomes part
+                    of
+                    the system’s protective intelligence and operating strategy.
+                  </p>
+                  <p>
+                    This is a practical advantage in remote and infrastructure-limited deployments where available power
+                    can
+                    shape the entire project. Operators often need a solution that can work with site realities without
+                    sacrificing the automation and protection needed for reliable performance.
+                  </p>
+                  <div class="bullets">
+                    <div class="bullet">
+                      <strong>Deployment flexibility</strong>
+                      <span>Supports both electric-powered and gas-driven field installations depending on site
+                        constraints.</span>
+                    </div>
+                    <div class="bullet">
+                      <strong>Integrated operating data</strong>
+                      <span>Drive information is used by the controls rather than left disconnected from system
+                        logic.</span>
+                    </div>
+                    <div class="bullet">
+                      <strong>Better performance under variable fuel quality</strong>
+                      <span>Control integration helps the unit remain functional even when fuel gas quality is not
+                        ideal.</span>
+                    </div>
+                    <div class="bullet">
+                      <strong>Reduced operator burden</strong>
+                      <span>Autonomous logic supports reliable operation without requiring constant manual attention or
+                        intervention.</span>
+                    </div>
+                  </div>
+                  <div class="adv">
+                    <strong>Real-life benefit</strong>
+                    Operators can deploy the technology in more places, including sites without ideal electric
+                    infrastructure, while still keeping the control quality and protection logic needed for serious field
+                    service.
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="">
+          <div class="container">
+            <article class="feature" id="sand-section">
+              <div class="feature-inner">
+                <div class="feature-intro">
+                  <span class="section-label">Sand-ready sealing</span>
+                  <h3>Multiphase piston and gland sealing configured to optimize life in sand service.</h3>
+                  <p>
+                    Abrasive service is where many technologies stop sounding robust and start showing their limitations.
+                    Fluidstream explicitly addresses survivability in sand-bearing applications.
+                  </p>
+                </div>
+                <div class="feature-body">
+                  <h4>Why it matters technically</h4>
+                  <p>
+                    Sand and other abrasive solids accelerate wear in sealing surfaces, moving interfaces, and other
+                    mechanically sensitive areas. A technology that claims to be multiphase-capable but assumes a clean
+                    stream is still vulnerable where the field is dirtiest. Fluidstream’s multiphase piston sealing and
+                    gland sealing approach is configured to optimize life under abrasive service, reinforcing that the
+                    machine is intended for real operating conditions rather than idealized cases.
+                  </p>
+                  <p>
+                    That matters not only for equipment life but also for economics. Abrasive wear does not just consume
+                    parts. It creates more frequent shutdowns, more service visits, and more uncertainty around operating
+                    continuity. Designing for sand service helps protect the economic case for the technology in wells and
+                    facilities where conventional assumptions break down fastest.
+                  </p>
+                  <div class="bullets">
+                    <div class="bullet">
+                      <strong>Abrasive-duty survivability</strong>
+                      <span>Sealing philosophy is configured with solids-bearing service in mind, not as an after-the-fact
+                        tolerance claim.</span>
+                    </div>
+                    <div class="bullet">
+                      <strong>Optimized seal life</strong>
+                      <span>Targets one of the first areas to degrade when abrasive material is present in the
+                        stream.</span>
+                    </div>
+                    <div class="bullet">
+                      <strong>Stronger suitability for difficult wells</strong>
+                      <span>Supports applications where sand, contaminated fluids, and unstable production conditions
+                        coexist.</span>
+                    </div>
+                    <div class="bullet">
+                      <strong>Improved lifecycle economics</strong>
+                      <span>Lower wear intensity can reduce service frequency and help preserve uptime.</span>
+                    </div>
+                  </div>
+                  <div class="adv">
+                    <strong>Real-life benefit</strong>
+                    The technology is better positioned for the wells and facilities that are hardest to keep online,
+                    where
+                    abrasive solids can quickly erase the economics of a less field-ready design.
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
@@ -935,93 +2061,103 @@
       </div>
     </div>
   </section>
-
+  <button id="scrollToStageBtn" class="scroll-to-stage-btn" type="button" aria-label="Scroll to image section">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 19V5"></path>
+      <path d="M5 12l7-7 7 7"></path>
+    </svg>
+  </button>
   <script>
-    const features = {
-      liquid: {
-        title: "Patent-Focused Methodology for Handling Incompressible Liquids",
-        text: "Fluidstream incorporates a patented methodology positioned around safe, efficient, reliable handling of incompressible liquids within a compression chamber.",
-        bullets: [
-          "Built specifically for liquid presence inside the compression chamber",
-          "Focused on safe, efficient, and reliable multiphase operation",
-          "Supports practical operation where conventional systems avoid liquid loading"
-        ],
-        target: "liquid-method"
-      },
-      gland: {
-        title: "Patent Pending Gland Sealing with Electronic Wear Detection",
-        text: "Fluidstream uses a patent pending gland sealing configuration and methodology with electronic seal wear detection to protect the system under demanding multiphase conditions.",
-        bullets: [
-          "Electronic detection provides visibility into seal condition",
-          "Supports earlier maintenance planning before failure occurs",
-          "Improves reliability in harsh multiphase duty"
-        ],
-        target: "gland-section"
-      },
-      alignment: {
-        title: "Sealed Hazardous-Fluid Containment and Alignment",
-        text: "Fluidstream combines fully sealed hazardous-fluid containment with alignment control in key stress and wear areas to improve safety and component life.",
-        bullets: [
-          "No exposure to toxic or corrosive multiphase fluid, including H2S",
-          "Controls wear in mechanically critical zones",
-          "Extends life of sealing and wear components"
-        ],
-        target: "alignment-section"
-      },
-      tracking: {
-        title: "Full Piston Tracking for Optimized Control",
-        text: "Full tracking of the piston allows optimized control and safer operation during upset conditions such as slugs, ice formation, and solids buildup.",
-        bullets: [
-          "Helps prevent damage from ice and solids buildup",
-          "Optimizes power fluid temperature during complex operation",
-          "Adjusts for upset conditions including large liquid surges"
-        ],
-        target: "tracking-section"
-      },
-      drives: {
-        title: "Electric and Gas Drive Options Integrated Into Autonomous Controls",
-        text: "Beyond the standard electric engine solution, Fluidstream also offers a gas drive option integrated into autonomous controls for broader field flexibility.",
-        bullets: [
-          "Electric and gas drive configurations available",
-          "Gas-drive operating data integrated into controls logic",
-          "Maintains performance under variable fuel gas quality"
-        ],
-        target: "drives-section"
-      },
-      sand: {
-        title: "Sand-Optimized Piston and Gland Sealing",
-        text: "The multiphase piston sealing and gland sealing system is configured to optimize life in applications with sand and abrasive solids.",
-        bullets: [
-          "Designed with abrasive service in mind",
-          "Optimizes seal life in sand-bearing applications",
-          "Strengthens suitability for difficult field conditions"
-        ],
-        target: "sand-section"
-      }
+    const featureTargets = {
+      liquid: "liquid-method",
+      gland: "gland-section",
+      alignment: "alignment-section",
+      tracking: "tracking-section",
+      drives: "drives-section",
+      sand: "sand-section"
     };
 
-    const buttons = document.querySelectorAll('.hotspot');
-    const titleEl = document.getElementById('panelTitle');
-    const textEl = document.getElementById('panelText');
-    const listEl = document.getElementById('panelList');
+    const buttons = document.querySelectorAll(".hotspot");
+    const overviewStage = document.getElementById("overview-stage");
+    const scrollToStageBtn = document.getElementById("scrollToStageBtn");
 
-    buttons.forEach(btn => {
-      btn.addEventListener('click', () => {
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
         const key = btn.dataset.feature;
-        const item = features[key];
+        const targetId = featureTargets[key];
+        const target = document.getElementById(targetId);
 
-        buttons.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
+        buttons.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
 
-        titleEl.textContent = item.title;
-        textEl.textContent = item.text;
-        listEl.innerHTML = item.bullets.map(x => `<li>${x}</li>`).join('');
-
-        const target = document.getElementById(item.target);
         if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
+          const offset = 100;
+          const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+
+          window.scrollTo({
+            top,
+            behavior: "smooth"
+          });
+        }
+      });
+    });
+
+    function toggleScrollToStageBtn() {
+      if (!overviewStage || !scrollToStageBtn) return;
+
+      const rect = overviewStage.getBoundingClientRect();
+      const hasScrolledPastImageSection = rect.bottom < 120;
+
+      if (hasScrolledPastImageSection) {
+        scrollToStageBtn.classList.add("show");
+      } else {
+        scrollToStageBtn.classList.remove("show");
+      }
+    }
+
+    if (scrollToStageBtn && overviewStage) {
+      scrollToStageBtn.addEventListener("click", () => {
+        const offset = 90;
+        const top = overviewStage.getBoundingClientRect().top + window.pageYOffset - offset;
+
+        window.scrollTo({
+          top,
+          behavior: "smooth"
+        });
+      });
+
+      window.addEventListener("scroll", toggleScrollToStageBtn, { passive: true });
+      window.addEventListener("load", toggleScrollToStageBtn);
+    }
+  </script>
+  <script>
+    const featureTargets = {
+      liquid: "liquid-method",
+      gland: "gland-section",
+      alignment: "alignment-section",
+      tracking: "tracking-section",
+      drives: "drives-section",
+      sand: "sand-section"
+    };
+
+    const buttons = document.querySelectorAll(".hotspot");
+
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const key = btn.dataset.feature;
+        const targetId = featureTargets[key];
+        const target = document.getElementById(targetId);
+
+        buttons.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        if (target) {
+          const offset = 100;
+          const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+
+          window.scrollTo({
+            top,
+            behavior: "smooth"
           });
         }
       });

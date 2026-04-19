@@ -7,7 +7,6 @@
         color: #dbe4ff;
         width: 100%;
         position: relative;
-        margin-top: 60px;
     }
 
     .fsf-footer-wrap * {
@@ -291,25 +290,6 @@
 
 <footer class="fsf-footer-wrap">
     <div class="fsf-footer-container">
-
-        {{-- SEPARATE TOP CTA --}}
-        <div class="fsf-footer-cta-shell">
-            <div class="fsf-footer-cta">
-                <div class="fsf-footer-cta-content">
-                    <h2 class="fsf-footer-cta-title">
-                        Evaluate whether Fluidstream can simplify your production system
-                    </h2>
-                    <p class="fsf-footer-cta-text">
-                        Designed for engineers and decision-makers evaluating multiphase compression systems
-                    </p>
-                </div>
-
-                <a href="/contact" class="fsf-footer-cta-btn">
-                    Contact US
-                </a>
-            </div>
-        </div>
-
         {{-- MAIN FOOTER CONTENT --}}
         <div class="fsf-footer-main">
             <div class="fsf-footer-grid">

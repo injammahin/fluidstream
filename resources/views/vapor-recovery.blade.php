@@ -30,22 +30,30 @@
       position: relative;
       overflow: hidden;
       border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-      background:
-        /* linear-gradient(90deg, rgba(8, 21, 47, 0.82) 0%, rgba(8, 21, 47, 0.68) 52%, rgba(8, 21, 47, 0.58) 100%), */
-        url('{{ asset("/img/hero/vapor-recovery.png") }}');
+      background: none;
+      isolation: isolate;
+    }
+
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url('{{ asset("/img/hero/vapor-recovery.png") }}');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      transform: scaleX(-1);
+      transform-origin: center;
+      z-index: -2;
     }
 
     .hero::before {
       content: "";
       position: absolute;
       inset: 0;
-      background:
-        radial-gradient(circle at 18% 20%, rgba(21, 209, 255, 0.14), transparent 26%),
-        radial-gradient(circle at 82% 26%, rgba(255, 255, 255, 0.08), transparent 24%);
       pointer-events: none;
+      z-index: -1;
     }
 
     .hero h1 {
@@ -213,7 +221,7 @@
     .stat {
       background: #fff;
       border: 1px solid var(--line);
-      border-radius: 18px;
+      border-radius: 8px;
       padding: 16px 18px;
       box-shadow: 0 10px 30px rgba(15, 26, 43, .05);
     }

@@ -808,6 +808,76 @@
             align-items: start;
         }
 
+        .tech-grid-equal {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px 24px;
+            align-items: stretch;
+        }
+
+        .tech-grid-equal .item {
+            height: 100%;
+            min-height: 175px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            border: 1px solid var(--line);
+            background: #ffffff;
+            padding: 18px 18px 16px;
+            box-shadow: var(--shadow);
+            transition: background .25s ease, transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+        }
+
+        .tech-grid-equal .item h4 {
+            margin: 0 0 8px;
+            font-size: 1.05rem;
+            letter-spacing: -.02em;
+            color: var(--text);
+            transition: color .25s ease;
+        }
+
+        .tech-grid-equal .item p {
+            margin: 0;
+            color: var(--muted);
+            font-size: .95rem;
+            line-height: 1.55;
+            transition: color .25s ease;
+        }
+
+        .tech-grid-equal .item:hover {
+            background: #ffffff;
+            border-color: #0018dc;
+            box-shadow: 0 22px 46px rgba(16, 42, 67, .10);
+            transform: translateY(-3px);
+        }
+
+        .tech-grid-equal .item::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            height: 3px;
+            background: var(--accent-dark);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.25s cubic-bezier(.22, .61, .36, 1);
+        }
+
+        .tech-grid-equal .item:hover::after {
+            transform: scaleX(1);
+        }
+
+        @media (max-width: 1120px) {
+            .tech-grid-equal {
+                grid-template-columns: 1fr;
+            }
+
+            .tech-grid-equal .item {
+                min-height: auto;
+            }
+        }
+
         .stack {
             display: grid;
             gap: 14px;
@@ -1356,6 +1426,195 @@
         .container {
             max-width: 1200px !important;
         }
+
+        .hero-quote-slide {
+            pointer-events: none;
+            opacity: 0;
+            transform: translateY(12px);
+            transition: opacity .7s ease, transform .7s ease;
+        }
+
+        .hero-quote-slide.active {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+            position: relative;
+        }
+
+        .hero-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 9999px;
+            background: rgba(255, 255, 255, 0.35);
+            border: none;
+            cursor: pointer;
+            transition: all .3s ease;
+            flex: 0 0 auto;
+        }
+
+        .section-kicker {
+            display: block;
+            margin: 0 0 14px;
+            font-size: 13px !important;
+            font-weight: 700 !important;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+            color: var(--accent-dark) !important;
+        }
+
+        .hero-dot.active {
+            background: #38bdf8;
+            transform: scale(1.15);
+        }
+
+        .hero-quote-card {
+            width: 100%;
+            max-width: 460px;
+            min-height: 300px;
+            padding: 24px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, .42);
+            background: linear-gradient(180deg, rgba(255, 255, 255, .92) 0%, rgba(237, 243, 255, .88) 100%);
+            box-shadow: 0 20px 48px rgba(15, 23, 42, .14);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .hero-quote-stage {
+            position: relative;
+            min-height: 205px;
+        }
+
+        .hero-quote-slide {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transform: translateY(12px);
+            pointer-events: none;
+            transition: opacity .65s ease, transform .65s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .hero-quote-slide.active {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+
+        .hero-quote-text {
+            margin: 0;
+            color: #102a43;
+            font-size: clamp(1rem, 1.35vw, 1.35rem);
+            line-height: 1.6;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+
+        .hero-quote-meta {
+            margin-top: 20px;
+            padding-top: 14px;
+            border-top: 1px solid rgba(16, 42, 67, .10);
+        }
+
+        .hero-quote-author {
+            margin: 0;
+            color: #52667a;
+            font-size: 14px;
+            line-height: 1.5;
+            font-weight: 600;
+        }
+
+        .hero-quote-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            margin-top: 16px;
+        }
+
+        .hero-quote-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 46px;
+            padding: 0 18px;
+            border-radius: 12px;
+            background: #0018dc;
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 600;
+            border: 1px solid #0018dc;
+            transition: all .25s ease;
+        }
+
+        .hero-quote-btn:hover {
+            background: #1433ff;
+            border-color: #1433ff;
+            color: #ffffff;
+        }
+
+        .hero-quote-dots {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .hero-dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 9999px;
+            border: none;
+            padding: 0;
+            background: rgba(0, 24, 220, .18);
+            cursor: pointer;
+            transition: all .25s ease;
+            flex: 0 0 auto;
+        }
+
+        .hero-dot.active {
+            background: #15d1ff;
+            transform: scale(1.12);
+            box-shadow: 0 0 0 3px rgba(21, 209, 255, .14);
+        }
+
+        @media (max-width: 1024px) {
+            .hero-quote-card {
+                max-width: 430px;
+                min-height: 420px;
+            }
+
+            .hero-quote-stage {
+                min-height: 270px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero-quote-card {
+                max-width: 100%;
+                min-height: auto;
+                padding: 20px;
+                border-radius: 16px;
+            }
+
+            .hero-quote-stage {
+                min-height: 250px;
+            }
+
+            .hero-quote-text {
+                font-size: 1rem;
+                line-height: 1.58;
+            }
+
+            .hero-quote-footer {
+                flex-wrap: wrap;
+                align-items: flex-start;
+            }
+        }
     </style>
 
 
@@ -1405,30 +1664,62 @@
 
                     <!-- Right Quote Card -->
                     <div class="lg:justify-self-end">
-                        <div
-                            class="max-w-md rounded-[28px] border border-white/15 bg-white/10 p-6 shadow-[0_20px_60px_rgba(15,23,42,0.25)] backdrop-blur-xl sm:p-8">
-                            {{-- <span
-                                class="inline-flex items-center rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-sky-200">
-                                Customer Quote
-                            </span> --}}
+                        <div class="hero-quote-card">
+                            <div class="hero-quote-stage">
+                                <div class="hero-quote-slide active" data-index="0">
+                                    <blockquote class="hero-quote-text">
+                                        “Fluidstream’s unit has operated consistently and eliminated gas venting. Since
+                                        installation 17 months ago, the unit has provided 100% uptime and has not required
+                                        any maintenance.”
+                                    </blockquote>
 
-                            <blockquote
-                                class="mt-5 text-lg font-semibold leading-8 text-white sm:text-[1.35rem] sm:leading-9">
-                                “Fluidstream’s unit has operated consistently and eliminated gas venting. Since installation
-                                17 months ago, the unit has provided 100% uptime and has not required any maintenance.”
-                            </blockquote>
+                                    <div class="hero-quote-meta">
+                                        <p class="hero-quote-author">
+                                            VP Production, Allied Energy II Corp.
+                                        </p>
+                                    </div>
+                                </div>
 
-                            <div class="mt-6">
-                                <p class="text-sm font-semibold text-white">
-                                    VP Production, Allied Energy II Corp.
-                                </p>
+                                <div class="hero-quote-slide" data-index="1">
+                                    <blockquote class="hero-quote-text">
+                                        “Fluidstream’s MultiphaseCommander didn’t just improve performance—it completely
+                                        transformed two dead wells into revenue-generating assets.”
+                                    </blockquote>
+
+                                    <div class="hero-quote-meta">
+                                        <p class="hero-quote-author">
+                                            Production Engineer, Western Canadian Oil &amp; Gas Producer
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="hero-quote-slide" data-index="2">
+                                    <blockquote class="hero-quote-text">
+                                        “We went from zero production to over $1.5 million per year in incremental revenue,
+                                        without adding any separation equipment or infrastructure.”
+                                    </blockquote>
+
+                                    <div class="hero-quote-meta">
+                                        <p class="hero-quote-author">
+                                            Production Engineer, Western Canadian Oil &amp; Gas Producer
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="mt-7">
-                                <a href="{{ url('/case-study') }}"
-                                    class="inline-flex items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition duration-300 hover:bg-slate-100">
+                            <div class="hero-quote-footer">
+                                <a href="{{ url('/case-studies') }}" class="hero-quote-btn">
                                     Learn More
                                 </a>
+
+                                <div class="hero-quote-dots">
+                                    <button type="button" class="hero-dot active" data-index="0"
+                                        aria-label="Show quote 1"></button>
+                                    <button type="button" class="hero-dot" data-index="1"
+                                        aria-label="Show quote 2"></button>
+                                    <button type="button" class="hero-dot" data-index="2"
+                                        aria-label="Show quote 3"></button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1440,7 +1731,10 @@
     <section class="section proof py-5">
         <div class="inner container">
             <div class="section-head" style="margin-bottom:18px">
-                <h2>Case-study proof from real field performance.</h2>
+                <div>
+                    <p class="section-kicker">Case-study proof</p>
+                    <h2>Case-study proof from real field performance.</h2>
+                </div>
                 <p>
                     Fluidstream’s strongest credibility comes from measurable field outcomes: uptime, lower maintenance,
                     reduced
@@ -1469,7 +1763,7 @@
                         the
                         ongoing maintenance burden associated with conventional VRU systems.
                     </p>
-                    <div class="proof-metric">35 months before first seal change</div>
+                    <div class="proof-metric">35 months to first seal change</div>
                     <div class="proof-detail">1 seal change over reported operating life • reduced service intervention •
                         extended
                         seal life performance</div>
@@ -1495,7 +1789,10 @@
     <section class="section solutions">
         <div class="inner container">
             <div class="section-head">
-                <h2>One platform. Three commercial value cases.</h2>
+                <div>
+                    <p class="section-kicker">Commercial applications</p>
+                    <h2>One platform. Three commercial value cases.</h2>
+                </div>
                 <p>
                     Fluidstream’s technology platform supports three core application areas where operators need lower
                     emissions,
@@ -1562,7 +1859,10 @@
     <section class="section leadership">
         <div class="inner container">
             <div class="section-head">
-                <h2>Designed for reliability, cost efficiency, autonomous control, and field flexibility.</h2>
+                <div>
+                    <p class="section-kicker">Core strengths</p>
+                    <h2>Designed for reliability, cost efficiency, autonomous control, and field flexibility.</h2>
+                </div>
                 <p>
                     Fluidstream is engineered to deliver dependable field performance, lower maintenance, broader operating
                     flexibility, and stronger economics than conventional gas-only systems in difficult service.
@@ -1607,7 +1907,10 @@
         <div class="inner container">
             <div class="tech-panel">
                 <div class="section-head" style="margin-bottom:18px">
-                    <h2>Patented technology that sells on outcomes, not just mechanism.</h2>
+                    <div>
+                        <p class="section-kicker">Technology advantage</p>
+                        <h2>Patented technology that sells on outcomes, not just mechanism.</h2>
+                    </div>
                     <p>
                         Fluidstream’s patented technology is built to improve control, efficiency, and reliability in field
                         applications where liquids, slugs, and unstable operating conditions limit conventional compression
@@ -1615,7 +1918,7 @@
                     </p>
                 </div>
 
-                <div class="tech-grid">
+                <div class="tech-grid-equal">
                     <div class="stack">
                         <div class="item">
                             <h4>Liquid handling inside compression</h4>
@@ -1662,9 +1965,8 @@
                 </div>
 
                 <div style="margin-top:22px;display:flex;gap:12px;flex-wrap:wrap">
-                    <a class="btn btn-primary" href="https://fluidstream.nexolioit.com/technology">Explore Technology</a>
-                    <a class="btn btn-secondary"
-                        href="https://fluidstream.nexolioit.com/multiphase-compression-technology">View
+                    <a class="btn btn-primary" href="/technology">Explore Technology</a>
+                    <a class="btn btn-secondary" href="/multiphase-compression-technology">View
                         Key Features</a>
                 </div>
             </div>
@@ -1675,7 +1977,7 @@
         <div class="inner container">
             <div class="case-panel">
                 <div>
-                    <div class="eyebrow" style="margin-bottom:16px"><span class="dot"></span> Case study snapshot</div>
+                    <p class="section-kicker">Case study snapshot</p>
                     <h2>From virtually no production to more than C$1.5 million per year in incremental revenue.</h2>
                     <p>
                         In Alberta, Canada, Fluidstream’s multiphase technology helped revive two liquid-loaded wells that
@@ -1747,34 +2049,59 @@
                     </p>
                 </div>
                 <div style="display:flex;gap:12px;flex-wrap:wrap">
-                    <a class="btn btn-primary" href="https://fluidstream.nexolioit.com/contact">Request Technical Review</a>
-                    <a class="btn btn-secondary" href="https://fluidstream.nexolioit.com/multiphase-compression">Review
+                    <a class="btn btn-primary" href="/contact">Request Technical Review</a>
+                    <a class="btn btn-secondary" href="/multiphase-compression">Review
                         MultiphaseCommander™ Specifications</a>
                 </div>
             </div>
         </div>
     </section>
-
     <script>
-        const slides = document.querySelectorAll('.quote-slide');
-        const dots = document.querySelectorAll('.dot');
-        let current = 0;
+        document.addEventListener('DOMContentLoaded', function () {
+            const heroSlides = document.querySelectorAll('.hero-quote-slide');
+            const heroDots = document.querySelectorAll('.hero-dot');
+            let heroCurrent = 0;
+            let heroInterval = null;
 
-        function showSlide(index) {
-            slides.forEach((slide, i) => {
-                slide.classList.toggle('active', i === index);
-            });
-            dots.forEach((dot, i) => {
-                dot.classList.toggle('active', i === index);
-            });
-        }
+            function showHeroSlide(index) {
+                heroSlides.forEach((slide, i) => {
+                    if (i === index) {
+                        slide.classList.add('active');
+                        slide.classList.remove('opacity-0', 'translate-y-3');
+                    } else {
+                        slide.classList.remove('active');
+                        slide.classList.add('opacity-0', 'translate-y-3');
+                    }
+                });
 
-        if (slides.length && dots.length) {
-            setInterval(() => {
-                current = (current + 1) % slides.length;
-                showSlide(current);
-            }, 4500);
-        }
+                heroDots.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === index);
+                });
+
+                heroCurrent = index;
+            }
+
+            function startHeroSlider() {
+                if (heroInterval) clearInterval(heroInterval);
+
+                heroInterval = setInterval(() => {
+                    const next = (heroCurrent + 1) % heroSlides.length;
+                    showHeroSlide(next);
+                }, 3000);
+            }
+
+            if (heroSlides.length && heroDots.length) {
+                heroDots.forEach((dot) => {
+                    dot.addEventListener('click', function () {
+                        showHeroSlide(Number(this.dataset.index));
+                        startHeroSlider();
+                    });
+                });
+
+                showHeroSlide(0);
+                startHeroSlider();
+            }
+        });
     </script>
 
 @endsection

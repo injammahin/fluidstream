@@ -36,12 +36,9 @@
     }
 
     .container {
-      width: min(1180px, calc(100% - 48px));
+      max-width: 1200px;
+      ;
       margin: 0 auto;
-    }
-
-    .section {
-      border-bottom: 1px solid var(--line);
     }
 
     .hero {
@@ -52,13 +49,21 @@
       border-bottom: 1px solid var(--fs-blue-dark);
     }
 
+    /* .hero::before {
+                                                                                              content: "";
+                                                                                              position: absolute;
+                                                                                              inset: 0;
+                                                                                              background-image:
+                                                                                                linear-gradient(90deg, rgba(0, 24, 220, .88), rgba(0, 24, 220, .72)),
+                                                                                                url('/img/hero/vapor-recovery.png');
+                                                                                              background-size: cover;
+                                                                                              background-position: center;
+                                                                                            } */
     .hero::before {
       content: "";
       position: absolute;
       inset: 0;
-      background-image:
-        linear-gradient(90deg, rgba(0, 24, 220, .88), rgba(0, 24, 220, .72)),
-        url('/img/hero/hero.avif');
+      background-image: linear-gradient(90deg, rgb(0 24 220 / 30%), rgb(0 24 220 / 14%)), url(/img/hero/vapor-recovery.png);
       background-size: cover;
       background-position: center;
     }
@@ -67,10 +72,11 @@
       position: relative;
       padding: 110px 0 96px;
       display: grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap: 48px;
-      align-items: end;
+      grid-template-columns: minmax(0, 1fr) 560px;
+      gap: 56px;
+      align-items: start;
     }
+
 
     .eyebrow {
       display: inline-block;
@@ -203,7 +209,7 @@
     .split {
       display: grid;
       grid-template-columns: .95fr 1.05fr;
-      gap: 56px;
+      gap: 105px;
       align-items: start;
     }
 
@@ -317,9 +323,9 @@
     }
 
     /* .cta {
-                                        background: var(--fs-blue);
-                                        color: white;
-                                      } */
+                                                                                                                                                                  background: var(--fs-blue);
+                                                                                                                                                                  color: white;
+                                                                                                                                                                } */
 
     .cta-wrap {
       display: grid;
@@ -330,10 +336,10 @@
     }
 
     /* .cta p {
-                                      color: #dbeafe;
-                                      font-size: 18px;
-                                      max-width: 760px;
-                                    } */
+                                                                                                                                                                color: #dbeafe;
+                                                                                                                                                                font-size: 18px;
+                                                                                                                                                                max-width: 760px;
+                                                                                                                                                              } */
 
     .cta-actions {
       display: flex;
@@ -524,6 +530,127 @@
         line-height: 1.7;
       }
     }
+
+    .hero-side {
+      background: #ffffff;
+      border: 1px solid var(--line);
+      padding: 24px 34px 20px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+      min-height: auto;
+      width: 100%;
+      max-width: 560px;
+      justify-self: end;
+    }
+
+    .hero-side h3 {
+      margin: 0 0 6px;
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: .16em;
+      color: #0018dc !important;
+      font-weight: 700;
+    }
+
+
+    .hero-side ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0;
+    }
+
+    .hero-side li {
+      padding: 10px 0 10px;
+      border-top: 1px solid var(--line);
+      color: var(--text);
+      font-size: 16px;
+      line-height: 1.4;
+    }
+
+    .hero-side li strong {
+      display: block;
+      margin-bottom: 2px;
+      font-size: 16px;
+      line-height: 1.15;
+      letter-spacing: -.02em;
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .hero-side li:first-child {
+      border-top: 1px solid var(--line);
+    }
+
+    .hero-inner {
+      position: relative;
+      padding: 110px 0 96px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 560px;
+      gap: 56px;
+      align-items: start;
+    }
+
+    .hero-side {
+      background: #ffffff;
+      border: 1px solid var(--line);
+      padding: 26px 34px 24px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+      min-height: auto;
+      width: 100%;
+      max-width: 560px;
+      justify-self: end;
+    }
+
+
+    @media (max-width: 1024px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 34px;
+      }
+
+      .hero-side {
+        max-width: 100%;
+        justify-self: stretch;
+        padding: 24px 26px 22px;
+      }
+
+      .hero-side li strong {
+        font-size: 18px;
+      }
+
+      .hero-side li {
+        font-size: 15px;
+      }
+    }
+
+    .hero-side li strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 16px;
+      line-height: 1.18;
+      letter-spacing: -.02em;
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    @media (max-width: 980px) {
+      .hero-side {
+        padding: 24px;
+      }
+
+      .hero-side li strong {
+        font-size: 20px;
+      }
+
+      .hero-side li {
+        font-size: 15px;
+      }
+    }
   </style>
 
   <section class="hero section">
@@ -542,23 +669,26 @@
         </div>
       </div>
 
-      <div class="hero-panel">
-        <div class="panel-grid">
-          <div class="mini-card">
-            <div class="mini-label">Core Outcome</div>
-            <div class="mini-title">Simplified production systems</div>
-          </div>
-          <div class="two-up">
-            <div class="mini-card">
-              <div class="mini-desc">Traditional</div>
-              <div class="mini-copy">Separator-first infrastructure</div>
-            </div>
-            <div class="mini-card">
-              <div class="mini-desc">Fluidstream</div>
-              <div class="mini-copy">Flow-through production approach</div>
-            </div>
-          </div>
-        </div>
+      <div class="hero-side">
+        <h3>Technology outcomes</h3>
+        <ul>
+          <li>
+            <strong>Simplified production systems</strong><br>
+            Reduce dependence on separators, tanks, scrubbers, and flare-dependent process steps in suitable applications.
+          </li>
+          <li>
+            <strong>Flow-through production approach</strong><br>
+            Move mixed streams directly instead of forcing early processing before useful work can be done.
+          </li>
+          <li>
+            <strong>Lower cost structure</strong><br>
+            Support broader deployment by reducing capital intensity, installation complexity, and lifecycle burden.
+          </li>
+          <li>
+            <strong>Operator-ready economics</strong><br>
+            Make multiphase technology easier to justify beyond niche, premium, or one-off projects.
+          </li>
+        </ul>
       </div>
     </div>
   </section>
@@ -660,10 +790,9 @@
   </section>
 
   <section id="technology" class="border-b border-[rgba(16,42,67,0.06)] bg-white py-[72px]">
-    <div class="mx-auto w-[min(1240px,calc(100%-40px))] max-[760px]:w-[min(1240px,calc(100%-28px))]">
+    <div class="container">
 
-      <div
-        class="mb-[30px] grid grid-cols-[minmax(0,1.05fr)_minmax(320px,0.95fr)] items-start gap-[34px] max-[980px]:grid-cols-1">
+      <div class="mb-[30px] grid grid-cols-[minmax(0,1.05fr)_minmax(320px,0.95fr)] items-start max-[980px]:grid-cols-1">
         <div>
           <div class="mb-[10px] text-[13px] font-[850] uppercase tracking-[0.09em] text-[#0018dc]">
             Rethinking surface facility design
@@ -820,7 +949,7 @@
         <div class="economic-head">
           <p class="section-label">Economic advantage</p>
           <h2>Lower cost. Broader deployment.</h2>
-          <p class="economic-copy">
+          <p class="economic-copy pt-4">
             Conventional multiphase technologies are often limited to high-value applications because their capital cost
             and maintenance complexity restrict where they can be economically deployed. Fluidstream is positioned
             differently: lower cost and lower maintenance support use across more wells, pads, facilities, and brownfield
@@ -895,12 +1024,34 @@
     }
 
     .economic-card {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
       min-height: 320px;
       padding: 34px 34px 42px;
       background: #ffffff;
       border: 1px solid #d9e2ec;
       box-shadow: none;
-      transition: border-color .25s ease, transform .25s ease, box-shadow .25s ease;
+      transition: background .25s ease, transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+
+    .economic-card>* {
+      position: relative;
+      z-index: 1;
+    }
+
+    .economic-card::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 3px;
+      background: #0018dc;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.25s cubic-bezier(.22, .61, .36, 1);
     }
 
     .economic-card h3 {
@@ -909,6 +1060,7 @@
       line-height: 1.08;
       letter-spacing: -.03em;
       color: var(--text);
+      transition: color .25s ease;
     }
 
     .economic-card p {
@@ -916,33 +1068,29 @@
       font-size: 16px;
       line-height: 1.75;
       color: var(--muted);
+      transition: color .25s ease;
     }
 
     .economic-card:hover {
+      background: #ffffff;
+      border-color: #0018dc;
+      box-shadow: 0 22px 46px rgba(16, 42, 67, .10);
       transform: translateY(-3px);
-      border-color: #c6d2df;
-      box-shadow: 0 18px 45px rgba(16, 42, 67, .06);
     }
 
-    @media (max-width: 1200px) {
-      .economic-cards {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
+    .economic-card:hover::after {
+      transform: scaleX(1);
+    }
+
+    .economic-card:hover h3 {
+      color: #0018dc;
+    }
+
+    .economic-card:hover p {
+      color: var(--muted);
     }
 
     @media (max-width: 768px) {
-      .economic-head h2 {
-        font-size: clamp(34px, 9vw, 52px);
-      }
-
-      .economic-copy {
-        font-size: 16px;
-      }
-
-      .economic-cards {
-        grid-template-columns: 1fr;
-      }
-
       .economic-card {
         min-height: auto;
         padding: 26px 24px 30px;
@@ -954,133 +1102,454 @@
     }
   </style>
 
-  <section id="applications" class="section soft">
-    <div class="container content-pad">
-      <div class="split">
+  <section class="section" id="applications">
+    <div class="container">
+      <div class="section-head">
         <div>
           <p class="section-label">Applications</p>
+        </div>
+        <div>
           <h2>Where it creates value</h2>
-          <div class="body-lg" style="margin-top:22px;">
-            <p>Fluidstream multiphase compression can be deployed across upstream and midstream operations where
-              conventional systems introduce cost, complexity, or performance limitations.</p>
+          <p class="width-600">Fluidstream creates the most value where production is being limited by liquids, unstable
+            flow,
+            backpressure, restart problems, or unnecessary surface complexity.</p>
+        </div>
+      </div>
+
+      <div class="app-grid">
+        <article class="app-card">
+          <div class="tag">Production recovery</div>
+          <h3>Liquid-loaded and declining wells</h3>
+          <div class="value-line">Restore flow, extend producing life, and improve the economics of marginal wells.
           </div>
-        </div>
+          <div class="fail-line"><strong>Why conventional fails:</strong> Gas-only compression loses stability when
+            liquid fallback and intermittent loading disrupt normal suction conditions.</div>
+          <ul>
+            <li>Maintains production as liquid fraction increases</li>
+            <li>Reduces compression limits created by liquid carryover</li>
+            <li>Helps keep late-life wells onstream longer</li>
+          </ul>
+        </article>
 
-        <div class="apps-grid">
-          <a href="#" class="reveal-card">
-            <div class="reveal-card__base">
-              <h3 class="reveal-card__title">Casing gas compression</h3>
-            </div>
-            <div class="reveal-card__panel">
-              <div>
-                <h3 class="reveal-card__panel-title">Casing gas compression</h3>
-                <p class="reveal-card__panel-text">Handle low-pressure gas streams with entrained liquids without full
-                  separation.</p>
-              </div>
-            </div>
-          </a>
+        <article class="app-card">
+          <div class="tag">Flow stability</div>
+          <h3>Slugging and unstable multiphase streams</h3>
+          <div class="value-line">Protect throughput and reduce trips when flow conditions change rapidly.</div>
+          <div class="fail-line"><strong>Why conventional fails:</strong> Conventional trains depend on steadier inlet
+            quality and often require more upstream separation as slug frequency rises.</div>
+          <ul>
+            <li>Handles intermittent slugs without full phase conditioning</li>
+            <li>Reduces upset-driven downtime</li>
+            <li>Supports more continuous operation under unstable flow</li>
+          </ul>
+        </article>
 
-          <a href="#" class="reveal-card">
-            <div class="reveal-card__base">
-              <h3 class="reveal-card__title">Vapor recovery</h3>
-            </div>
-            <div class="reveal-card__panel">
-              <div>
-                <h3 class="reveal-card__panel-title">Vapor recovery</h3>
-                <p class="reveal-card__panel-text">Recover tank vapors with variable composition and liquid carryover.</p>
-              </div>
-            </div>
-          </a>
+        <article class="app-card">
+          <div class="tag">System constraints</div>
+          <h3>Constrained gathering and high backpressure systems</h3>
+          <div class="value-line">Increase deliverability without a full facility rebuild.</div>
+          <div class="fail-line"><strong>Why conventional fails:</strong> Adding more surface equipment often increases
+            complexity without materially lowering flowing pressure at the well.</div>
+          <ul>
+            <li>Reduces wellhead flowing pressure</li>
+            <li>Improves response under fixed line constraints</li>
+            <li>Adds production without new separation capacity</li>
+          </ul>
+        </article>
 
-          <a href="#" class="reveal-card">
-            <div class="reveal-card__base">
-              <h3 class="reveal-card__title">Multiphase gathering</h3>
-            </div>
-            <div class="reveal-card__panel">
-              <div>
-                <h3 class="reveal-card__panel-title">Multiphase gathering</h3>
-                <p class="reveal-card__panel-text">Transport combined production streams from wells to centralized
-                  facilities.</p>
-              </div>
-            </div>
-          </a>
+        <article class="app-card">
+          <div class="tag">Restartability</div>
+          <h3>Shut-in and intermittent operations</h3>
+          <div class="value-line">Shorten restart time, improve uptime, and reduce repeat cycling after shutdowns.</div>
+          <div class="fail-line"><strong>Why conventional fails:</strong> Liquid accumulation after shut-ins often
+            requires unloading or repeated cycling before stable compression returns.</div>
+          <ul>
+            <li>Tolerates liquid-rich restart conditions</li>
+            <li>Reduces dependence on pre-unloading steps</li>
+            <li>Supports a steadier return to production</li>
+          </ul>
+        </article>
 
-          <a href="#" class="reveal-card">
-            <div class="reveal-card__base">
-              <h3 class="reveal-card__title">Early production systems</h3>
-            </div>
-            <div class="reveal-card__panel">
-              <div>
-                <h3 class="reveal-card__panel-title">Early production systems</h3>
-                <p class="reveal-card__panel-text">Enable rapid deployment with minimal infrastructure requirements.</p>
-              </div>
-            </div>
-          </a>
+        <article class="app-card">
+          <div class="tag">Remote deployment</div>
+          <h3>Infrastructure-limited and remote sites</h3>
+          <div class="value-line">Lower field burden where access, power, and maintenance resources are limited.</div>
+          <div class="fail-line"><strong>Why conventional fails:</strong> Separation-heavy layouts add equipment,
+            controls, and intervention requirements that are harder to support in remote service environments.</div>
+          <ul>
+            <li>Minimizes equipment count and interdependencies</li>
+            <li>Reduces maintenance exposure in low-access areas</li>
+            <li>Supports compact deployment strategies</li>
+          </ul>
+        </article>
 
-          <a href="#" class="reveal-card">
-            <div class="reveal-card__base">
-              <h3 class="reveal-card__title">Flare gas reduction</h3>
-            </div>
-            <div class="reveal-card__panel">
-              <div>
-                <h3 class="reveal-card__panel-title">Flare gas reduction</h3>
-                <p class="reveal-card__panel-text">Capture and monetize gas that would otherwise be wasted.</p>
-              </div>
-            </div>
-          </a>
-
-          <a href="#" class="reveal-card">
-            <div class="reveal-card__base">
-              <h3 class="reveal-card__title">Remote operations</h3>
-            </div>
-            <div class="reveal-card__panel">
-              <div>
-                <h3 class="reveal-card__panel-title">Remote operations</h3>
-                <p class="reveal-card__panel-text">Reduce maintenance and infrastructure in hard-to-access locations.</p>
-              </div>
-            </div>
-          </a>
-
-          <a href="#" class="reveal-card">
-            <div class="reveal-card__base">
-              <h3 class="reveal-card__title">Brownfield optimization</h3>
-            </div>
-            <div class="reveal-card__panel">
-              <div>
-                <h3 class="reveal-card__panel-title">Brownfield optimization</h3>
-                <p class="reveal-card__panel-text">Increase throughput without expanding existing facility footprint.</p>
-              </div>
-            </div>
-          </a>
-
-          <a href="#" class="reveal-card">
-            <div class="reveal-card__base">
-              <h3 class="reveal-card__title">Mature and high water cut wells</h3>
-            </div>
-            <div class="reveal-card__panel">
-              <div>
-                <h3 class="reveal-card__panel-title">Mature and high water cut wells</h3>
-                <p class="reveal-card__panel-text">Maintain performance in challenging late-life production conditions.
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
+        <article class="app-card">
+          <div class="tag">Commercial impact</div>
+          <h3>Emissions reduction and production value capture</h3>
+          <div class="value-line">Capture more gas value with fewer process steps and less wasted production.</div>
+          <div class="fail-line"><strong>Why conventional fails:</strong> Processing requirements can exceed the value
+            of lower-rate or variable mixed streams when too many steps are needed before compression.</div>
+          <ul>
+            <li>Supports gas capture under variable liquid loading</li>
+            <li>Reduces venting and flaring dependence</li>
+            <li>Applies across vapor, casing gas, and mixed production streams</li>
+          </ul>
+        </article>
       </div>
     </div>
   </section>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --bg-alt: #f4f6f8;
+      --line: #d9e2ec;
+      --text: #102a43;
+      --muted: #52667a;
+      --accent: #15d1ff;
+      --accent-dark: #0018dc;
+      --shadow: 0 18px 45px rgba(16, 42, 67, .08);
+      --shadow-hover: 0 24px 60px rgba(0, 24, 220, .12);
+      --max: 1240px;
+    }
 
-  <section class="cta">
-    <div class="container cta-wrap">
-      <div>
-        <p class="section-label">Next step</p>
-        <h2>Simplify your production system</h2>
+
+
+    .inner {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .section-head {
+      /* display: grid; */
+      grid-template-columns: minmax(200px, .32fr) minmax(0, 1fr);
+      gap: 34px;
+      align-items: start;
+      margin-bottom: 34px;
+    }
+
+    .width-600 {
+      max-width: 600px;
+
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--accent-dark);
+      background: #edf3ff;
+      border: 1px solid #d3e1ff;
+      border-radius: 999px;
+    }
+
+    .eyebrow .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 12px rgba(21, 209, 255, .55);
+    }
+
+    .section-head h2 {
+      font-size: clamp(2.2rem, 4vw, 4rem);
+      line-height: 1.02;
+      letter-spacing: -.04em;
+      color: var(--text);
+      margin-bottom: 14px;
+      max-width: 12ch;
+    }
+
+
+    .app-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .app-card {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 330px;
+      padding: 24px 24px 22px;
+      border: 1px solid var(--line);
+      background: #ffffff;
+      box-shadow: var(--shadow);
+      transition: transform .24s ease, box-shadow .24s ease, border-color .24s ease;
+    }
+
+    .app-card::before {
+      content: "";
+      position: absolute;
+      inset: auto -14% -36% auto;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(21, 209, 255, .10), transparent 66%);
+      pointer-events: none;
+    }
+
+    .app-card>* {
+      position: relative;
+      z-index: 1;
+    }
+
+    .app-card:hover {
+      transform: translateY(-3px);
+      border-color: #9bb6ff;
+      box-shadow: var(--shadow-hover);
+    }
+
+    .tag {
+      display: inline-flex;
+      width: fit-content;
+      padding: 8px 10px;
+      margin-bottom: 16px;
+      border-radius: 999px;
+      background: #edf3ff;
+      color: var(--accent-dark);
+      border: 1px solid #d3e1ff;
+      font-size: .76rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+
+    .app-card h3 {
+      font-size: 1.34rem;
+      line-height: 1.14;
+      letter-spacing: -.03em;
+      color: var(--text);
+      margin-bottom: 12px;
+      max-width: 18ch;
+    }
+
+    .value-line {
+      color: var(--text);
+      font-weight: 700;
+      font-size: 1rem;
+      line-height: 1.52;
+      margin-bottom: 12px;
+    }
+
+    .fail-line {
+      margin-bottom: 16px;
+      padding: 12px 14px;
+      background: #f4f8ff;
+      border-left: 3px solid var(--accent-dark);
+      color: var(--text);
+      font-size: .93rem;
+      line-height: 1.52;
+    }
+
+    .fail-line strong {
+      color: var(--accent-dark);
+    }
+
+    .app-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 9px;
+    }
+
+    .app-card li {
+      position: relative;
+      padding-left: 24px;
+      color: var(--text);
+      font-size: .95rem;
+      line-height: 1.5;
+    }
+
+    .app-card li:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: .22rem;
+      width: 16px;
+      height: 12px;
+      background-repeat: no-repeat;
+      background-size: 16px 12px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 12' fill='none'%3E%3Cpath d='M1 6h11' stroke='%230018dc' stroke-width='1.5' stroke-linecap='round'/%3E%3Cpath d='M8.5 1.75L13 6l-4.5 4.25' stroke='%230018dc' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    }
+
+    @media (max-width: 1080px) {
+      .app-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 900px) {
+      .section-head {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .section-head h2 {
+        max-width: none;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .inner {
+        width: min(var(--max), calc(100% - 28px));
+      }
+
+      .section {
+        padding: 58px 0 62px;
+      }
+
+      .app-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .app-card {
+        min-height: auto;
+      }
+
+      .section-head h2 {
+        font-size: 2.35rem;
+      }
+    }
+
+    .section-head-2 {
+      display: grid !important;
+      grid-template-columns: minmax(0, 1.05fr) minmax(320px, .95fr) !important;
+      gap: 34px !important;
+      align-items: start !important;
+      margin-bottom: 30px !important;
+      max-width: none !important;
+    }
+
+    .section-head>div:first-child {
+      max-width: none !important;
+      display: block !important;
+    }
+
+    .section-head>div:first-child {
+      max-width: 640px;
+    }
+
+    .section-head .kicker {
+      display: block !important;
+      margin-bottom: 10px !important;
+    }
+
+    .kicker {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: .09em;
+      color: var(--accent-dark);
+      font-weight: 850;
+      margin-bottom: 10px;
+    }
+
+    .section-head h2 Specificity: (0, 1, 1) {
+      max-width: 16ch !important;
+      margin: 0 !important;
+    }
+
+    /* .section-head p {
+                      flex: none !important;
+                      max-width: 48ch !important;
+                      margin: 0 !important;
+                      justify-self: start !important;
+                    }
+
+                    .section-head p {
+                      flex: 0 0 420px;
+                      max-width: 48ch;
+                      margin: 6px 0 0;
+                      color: var(--muted);
+                      font-size: 1.15rem;
+                      line-height: 1.65;
+                      font-weight: 500;
+                    } */
+    /* 
+                  .section-head p {
+                    max-width: 48ch;
+                    margin: 6px 0 0;
+                    color: var(--muted);
+                    font-size: 1.15rem;
+                    line-height: 1.65;
+                    font-weight: 500;
+                    opacity: 1;
+                  } */
+
+    .cta-band {
+      display: grid !important;
+      grid-template-columns: minmax(0, 1fr) auto !important;
+      gap: 28px !important;
+      align-items: end !important;
+      padding-top: 6px !important;
+    }
+
+    .roi-band,
+    .cta-band {
+      background: transparent;
+      color: var(--text);
+      border: none;
+      box-shadow: none;
+      padding: 0;
+    }
+
+    .cta-band .btn-row Specificity: (0, 2, 0) {
+      margin-top: 0 !important;
+      justify-content: flex-end;
+      align-items: flex-end;
+    }
+
+    .btn-secondary {
+      background: #ffffff;
+      color: var(--accent-dark);
+      border: 1px solid #c8d6ea !important;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 20px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: .2s ease;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent-dark), #2544ff);
+      color: #ffffff;
+      box-shadow: 0 12px 28px rgba(0, 24, 220, .14);
+    }
+  </style>
+  <section class="pt-5 pb-5" style="border-bottom:none; padding-top: 40px; padding-bottom: 40px;">
+    <div class="container">
+      <div class="section-head-2">
+        <div class="kicker">Next step</div>
+        <h2>Simplify your production system.</h2>
         <p>Evaluate how Fluidstream multiphase compression can reduce cost, eliminate equipment, and improve production
           performance across your operations.</p>
       </div>
-      <div class="cta-actions">
-        <a class="btn btn-accent" href="#">Request Technical Review</a>
-        <a class="btn btn-outline-light" href="#">Contact Engineering</a>
+
+      <div class="cta-band">
+        <div>
+          <h2>Evaluate whether Fluidstream can simplify your production system.</h2>
+          <p>Built for engineers and decision-makers evaluating a technically credible, commercially stronger alternative
+            to separation-first design.</p>
+        </div>
+        <div class="btn-row" style="margin-top:0">
+          <a class="btn btn-secondary" href="/contact">Request Technical Review</a>
+          <a class="btn btn-primary" href="/contact">Contact Engineering</a>
+        </div>
       </div>
     </div>
   </section>
