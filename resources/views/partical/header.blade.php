@@ -5,6 +5,8 @@
 
     $resourcesActive = request()->is('case-studies') ||
         request()->is('insights');
+
+    $patentedTechnologyActive = request()->is('patented-technology');
 @endphp
 
 <header x-data="{
@@ -68,7 +70,7 @@
                         <button type="button" @click.prevent="toggleMenu('solutions')"
                             class="nav-link inline-flex items-center gap-2 {{ $solutionsActive ? 'nav-link-active' : '' }}"
                             :class="activeDesktopMenu === 'solutions' ? 'nav-link-active' : ''">
-                            <span>Solutions</span>
+                            <span>Applications</span>
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition duration-200"
                                 :class="activeDesktopMenu === 'solutions' ? 'rotate-180' : ''" fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
@@ -90,6 +92,10 @@
                             </svg>
                         </button>
                     </div>
+                    <a href="{{ url('/patented-technology') }}"
+                        class="nav-link {{ request()->is('patented-technology') ? 'nav-link-active' : '' }}">
+                        Patented Technology
+                    </a>
                 </nav>
             </div>
 
@@ -315,7 +321,7 @@
                     <button @click="mobileSolutionsOpen = !mobileSolutionsOpen" type="button"
                         class="mobile-toggle {{ $solutionsActive ? 'mobile-toggle-active' : '' }}"
                         :class="mobileSolutionsOpen ? 'mobile-toggle-active' : ''">
-                        <span>Solutions</span>
+                        <span>Applications</span>
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition duration-200"
                             :class="mobileSolutionsOpen ? 'rotate-180' : ''" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor" stroke-width="1.8">
@@ -387,6 +393,10 @@
                         </a>
                     </div>
                 </div>
+                <a href="{{ url('/patented-technology') }}"
+                    class="mobile-link {{ $patentedTechnologyActive ? 'mobile-link-active' : '' }}">
+                    Patented Technology
+                </a>
 
                 <a href="{{ url('/contact') }}"
                     class="mobile-link {{ request()->is('contact') ? 'mobile-link-active' : '' }}">

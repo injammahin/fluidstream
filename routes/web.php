@@ -27,6 +27,7 @@ Route::view('/terms', 'terms');
 Route::view('/perspectives', 'perspectives');
 Route::view('/multiphase-compression-technology', 'multiphase-compression-technology');
 Route::view('/contact', 'contact')->name('contact');
+Route::view('/patented-technology', 'patented-technology')->name('patented-technology');
 Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
 
 Route::get('/case-studies/allied-energy-ii-multiphase-vapor-recovery', function () {

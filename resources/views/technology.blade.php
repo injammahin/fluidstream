@@ -46,9 +46,9 @@
       margin: 0 auto;
     }
 
-    .section {
-      padding: 84px 0;
-    }
+    /* .section {
+                      padding: 84px 0;
+                    } */
 
     .section-surface-white {
       background: #ffffff;
@@ -80,19 +80,19 @@
     }
 
     /* .hero-tech::before {
-              content: "";
-              position: absolute;
-              inset: 0;
-              background:
-                linear-gradient(90deg, rgba(0, 24, 220, 0.90) 0%, rgba(0, 24, 220, 0.78) 45%, rgba(0, 24, 220, 0.68) 100%),
-                url('{{ asset("/img/hero/hero.avif") }}');
-              background-size: cover;
-              background-position: center;
-              background-repeat: no-repeat;
-              transform: scale(1.02);
-              z-index: -2;
-            }
-             */
+                                                              content: "";
+                                                              position: absolute;
+                                                              inset: 0;
+                                                              background:
+                                                                linear-gradient(90deg, rgba(0, 24, 220, 0.90) 0%, rgba(0, 24, 220, 0.78) 45%, rgba(0, 24, 220, 0.68) 100%),
+                                                                url('{{ asset("/img/hero/hero.avif") }}');
+                                                              background-size: cover;
+                                                              background-position: center;
+                                                              background-repeat: no-repeat;
+                                                              transform: scale(1.02);
+                                                              z-index: -2;
+                                                            }
+                                                             */
     .hero-tech::before {
       content: "";
       position: absolute;
@@ -178,17 +178,18 @@
       gap: 24px;
       max-width: 1480px;
       margin-top: 40px;
+      align-items: stretch;
     }
 
     .hero-tech .hero-feature-card {
       position: relative;
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-rows: auto auto auto 1fr auto auto;
+      row-gap: 12px;
       min-height: 565px;
-      padding: 26px 13px 26px;
+      padding: 26px 20px 24px;
       border-radius: 5px;
       background: #ffffff;
-      /* border: 1px solid #dce6ff; */
       box-shadow: 0 24px 56px rgba(5, 35, 95, .14);
       color: #0a1c4d;
       text-decoration: none;
@@ -202,17 +203,8 @@
       box-shadow: 0 30px 62px rgba(5, 35, 95, .18);
     }
 
-    .hero-tech .hero-feature-card__topline {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, #0018dc 0%, #15d1ff 100%);
-    }
-
     .hero-tech .hero-feature-card__label {
-      margin: 4px 0 5px;
+      margin: 4px 0 0;
       font-size: 11px;
       font-weight: 700;
       letter-spacing: .16em;
@@ -221,27 +213,31 @@
     }
 
     .hero-tech .hero-feature-card__title {
-      margin: 0 0 6px;
+      margin: 0;
       font-size: 19px;
-      line-height: 1.02;
+      line-height: 1.06;
       letter-spacing: -.04em;
       font-weight: 600;
       color: #0a1c4d;
     }
 
     .hero-tech .hero-feature-card__text {
-      margin: 0 0 0px;
-      font-size: 17px;
+      margin: 0;
+      font-size: 16px;
       line-height: 1.7;
       color: #52667a;
     }
 
     .hero-tech .hero-feature-card__mini {
-      margin-top: 20px;
-      padding: 11px 7px 16px;
+      margin-top: auto;
+      min-height: 250px;
+      padding: 14px 14px 16px;
       border: 1px solid #e2eaf6;
       border-radius: 7px;
       background: #f8fbff;
+      display: grid;
+      grid-template-rows: auto 1fr;
+      align-content: start;
     }
 
     .hero-tech .hero-feature-card__mini-label {
@@ -256,28 +252,28 @@
     .hero-tech .hero-feature-card__mini p {
       margin: 0;
       font-size: 16px;
-      line-height: 1.7;
+      line-height: 1.65;
       color: #0a1c4d;
     }
 
     .hero-tech .hero-feature-card__cta {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 16px;
-      margin-top: 18px;
+      margin-top: 6px;
+      min-height: 64px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: end;
+      gap: 14px;
       font-size: 14px;
-      line-height: 1.45;
+      line-height: 1.4;
       font-weight: 800;
       color: #0a1c4d;
     }
 
     .hero-tech .hero-feature-card__arrow {
-      flex: 0 0 auto;
+      align-self: end;
       font-size: 28px;
       line-height: 1;
       color: #0018dc;
-      transform: translateY(-1px);
     }
 
     @media (max-width: 1400px) {
@@ -286,7 +282,7 @@
       }
 
       .hero-tech .hero-feature-card {
-        min-height: unset;
+        min-height: 100%;
       }
     }
 
@@ -297,13 +293,10 @@
       }
 
       .hero-tech .hero-feature-card {
+        min-height: auto;
         padding: 22px 20px;
         border-radius: 22px;
-      }
-
-      .hero-tech .hero-feature-card__label {
-        margin: 24px 0 14px;
-        font-size: 11px;
+        grid-template-rows: auto auto auto auto auto auto;
       }
 
       .hero-tech .hero-feature-card__title {
@@ -317,8 +310,13 @@
       }
 
       .hero-tech .hero-feature-card__mini {
+        min-height: auto;
         border-radius: 18px;
         padding: 16px;
+      }
+
+      .hero-tech .hero-feature-card__cta {
+        min-height: auto;
       }
     }
 
@@ -441,7 +439,7 @@
       height: 24px;
       border-radius: 8px;
       /* border: 1px solid #dbe5ff;
-                                                                                                                                                                                                                                                                                            background-color: #ffffff; */
+                                                                                                                                                                                                                                                                                                                                            background-color: #ffffff; */
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%230018dc' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h12'/%3E%3Cpath d='M13 5l7 7-7 7'/%3E%3C/svg%3E");
       background-repeat: no-repeat;
       background-position: center;
@@ -853,7 +851,7 @@
 
     .features-wrap {
       display: grid;
-      gap: 30px;
+      /* gap: 30px; */
       margin-top: 34px;
     }
 
@@ -1075,7 +1073,7 @@
       display: grid;
       grid-template-columns: minmax(0, 1.05fr) minmax(340px, .95fr);
       gap: 44px;
-      align-items: end;
+      align-items: baseline;
       margin-bottom: 42px;
     }
 
@@ -1396,21 +1394,86 @@
         height: 52px;
       }
     }
+
+    .hero-patent-callout {
+      background: #ffffff;
+      border-left: 4px solid #0018dc;
+      padding: 16px 24px;
+      margin-top: 32px;
+      font-size: 16px;
+      color: #0a1c4d;
+      border-radius: 8px;
+    }
+
+    .hero-patent-callout-text {
+      line-height: 1.7;
+    }
+
+    .hero-patent-link {
+      color: #0018dc;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    .hero-patent-callout-text strong {
+      font-weight: bold;
+    }
+
+    .hero-tech-intro {
+      margin-top: 32px;
+      font-size: 18px;
+      color: #0a1c4d;
+    }
+
+    .hero-tech-intro-text {
+      line-height: 1.7;
+    }
+
+    .hero-patent-callout {
+      background: #ffffff;
+      border-left: 4px solid #0018dc;
+      padding: 16px 24px;
+      margin-top: 32px;
+      font-size: 16px;
+      color: #0a1c4d;
+      border-radius: 8px;
+    }
+
+    .hero-patent-callout-text {
+      line-height: 1.7;
+    }
+
+    .hero-patent-link {
+      color: #0018dc;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    .hero-patent-callout-text strong {
+      font-weight: bold;
+    }
   </style>
 
   <section class="hero-tech ">
-    <div class="container max-w-7xl py-16 sm:py-20 lg:py-24">
+    <div class="container max-w-7xl py-12 ">
       <div class="hero-copy">
-        <h2 class="mt-6 text-4xl font-semibold leading-[1.02] tracking-[-0.045em] text-white sm:text-5xl lg:text-[58px]">
+        <h2
+          class="mt-6 max-w-2xl text-4xl font-semibold leading-[1.02] tracking-[-0.045em] text-white sm:text-5xl lg:text-[58px]">
           Engineered for True Multiphase Performance
         </h2>
-
-        <div class="hero-line"></div>
-
         <p class="mt-8 max-w-2xl text-lg leading-8 text-white/85 sm:text-[22px] sm:leading-9">
           Fluidstream technology is built from the ground up to reliably handle gas, liquids, and solids without the
           complexity, maintenance burden, or limitations of conventional systems.
         </p>
+        <div class="hero-patent-callout max-w-2xl">
+          <p class="hero-patent-callout-text max-w-2xl">
+            <strong>Supported by patented operating methods.</strong>
+            Fluidstream’s liquid-influenced compression response is supported by patented operating methods, including
+            <a href="/patented-technology#us11098709b2" class="hero-patent-link">US11098709B2</a>.
+            For the full patent overview, see the <a href="/patented-technology" class="hero-patent-link">Patented
+              Technology page</a>.
+          </p>
+        </div>
 
         <div class="hero-actions mt-4">
           <a class="btn primary" href="#overview">Explore Technology</a>
@@ -1498,7 +1561,7 @@
     </div>
   </section>
   <section id="overview" class="section contrast">
-    <div class="container">
+    <div class="container py-12">
       <div class="section-head">
         <div>
           <span class="section-label">Technology philosophy</span>
@@ -1646,6 +1709,22 @@
                     designed around the fact that liquids can enter the compression process and must be handled in a
                     controlled, credible way.
                   </p>
+                  <div class="hero-tech-intro">
+                    <p class="hero-tech-intro-text">
+                      The technology story starts here: Fluidstream is not trying to avoid liquid presence at all costs.
+                      It is designed
+                      around the fact that liquids can enter the compression process and must be handled in a controlled,
+                      credible way.
+                    </p>
+
+                    <div class="hero-patent-callout">
+                      <p class="hero-patent-callout-text">
+                        <strong>Patent reference:</strong> US11098709B2 supports this liquid-aware compression methodology
+                        and links directly to Fluidstream’s approach to chamber response under multiphase conditions.
+                      </p>
+                    </div>
+                  </div>
+
                 </div>
                 <div class="feature-body">
                   <h4>Why it matters technically</h4>
@@ -2014,7 +2093,7 @@
     </div>
   </section>
 
-  <section class="section section-surface-white py-16 sm:py-20 lg:py-24" id="differentiation">
+  <section class="section section-surface-white py-12" id="differentiation">
     <div class="container">
       <div class="section-label py-4">Technology Differentiation</div>
       <h2 class="section-title">Designed to feel proprietary, precise, and operator-ready</h2>
@@ -2053,7 +2132,7 @@
     </div>
   </section>
 
-  <section class="section section-surface-soft py-16 sm:py-20 lg:py-24">
+  <section class="section section-surface-soft py-12">
     <div class="container">
       <div class="quote">
         <p>Fluidstream technology is engineered not just to handle multiphase flow but to make it <em>practical, reliable,

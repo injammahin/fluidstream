@@ -100,7 +100,7 @@
 
     .fsf-footer-grid {
         display: grid;
-        grid-template-columns: 2fr 1fr 1fr 1fr 1.2fr;
+        grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1.2fr;
         gap: 30px;
     }
 
@@ -200,7 +200,7 @@
 
     @media (max-width: 1199px) {
         .fsf-footer-grid {
-            grid-template-columns: 1.6fr 1fr 1fr 1fr;
+            grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr;
         }
 
         .fsf-footer-contact-col {
@@ -290,7 +290,6 @@
 
 <footer class="fsf-footer-wrap">
     <div class="fsf-footer-container">
-        {{-- MAIN FOOTER CONTENT --}}
         <div class="fsf-footer-main">
             <div class="fsf-footer-grid">
 
@@ -357,6 +356,28 @@
                     </ul>
                 </div>
 
+                {{-- PATENT PAGE --}}
+                <div class="fsf-footer-col">
+                    <h3 class="fsf-footer-col-title">Patent Page</h3>
+                    <ul class="fsf-footer-list">
+                        <li class="fsf-footer-list-item">
+                            <a href="/patented-technology#why-patents-matter" class="fsf-footer-link">
+                                Why Patents Matter
+                            </a>
+                        </li>
+                        <li class="fsf-footer-list-item">
+                            <a href="/patented-technology#us11098709b2" class="fsf-footer-link">
+                                US11098709B2
+                            </a>
+                        </li>
+                        <li class="fsf-footer-list-item">
+                            <a href="/patented-technology#supporting-patents" class="fsf-footer-link">
+                                Supporting Patents
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
                 {{-- CONTACT --}}
                 <div class="fsf-footer-contact-col">
                     <h3 class="fsf-footer-contact-title">Talk to Fluidstream</h3>
@@ -372,7 +393,6 @@
 
             </div>
 
-            {{-- BOTTOM --}}
             <div class="fsf-footer-bottom">
                 <div class="fsf-footer-copy">© 2026 Fluidstream Inc.</div>
                 <div class="fsf-footer-bottom-links">
@@ -381,6 +401,5 @@
                 </div>
             </div>
         </div>
-
     </div>
 </footer>

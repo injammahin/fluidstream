@@ -158,7 +158,7 @@
 
         .section {
             position: relative;
-            padding: 56px 0
+            /* padding: 56px 0 */
         }
 
         .section:nth-of-type(even) {
@@ -419,7 +419,6 @@
         }
 
         .proof {
-            padding: 34px 0 34px;
             background: var(--bg);
         }
 
@@ -619,13 +618,13 @@
         }
 
 
-        .solutions,
-        .leadership,
-        .tech,
-        .caseband,
-        .cta {
-            padding: 72px 0
-        }
+        /* .solutions,
+                    .leadership,
+                    .tech,
+                    .caseband,
+                    .cta {
+                        padding: 72px 0
+                    } */
 
         .section-head {
             display: flex;
@@ -640,7 +639,7 @@
             font-size: clamp(1.9rem, 3vw, 3rem);
             line-height: 1.05;
             letter-spacing: -.04em;
-            max-width: 14ch;
+            max-width: 21ch;
             color: var(--text);
         }
 
@@ -922,7 +921,7 @@
             font-size: clamp(1.8rem, 3vw, 2.8rem);
             line-height: 1.05;
             letter-spacing: -.04em;
-            max-width: 14ch;
+            max-width: 21ch;
             color: var(--text);
         }
 
@@ -1728,7 +1727,7 @@
             </div>
         </div>
     </section>
-    <section class="section proof py-5">
+    <section class="section proof py-12">
         <div class="inner container">
             <div class="section-head" style="margin-bottom:18px">
                 <div>
@@ -1786,7 +1785,7 @@
     </section>
 
 
-    <section class="section solutions">
+    <section class="section solutions py-12">
         <div class="inner container">
             <div class="section-head">
                 <div>
@@ -1856,7 +1855,7 @@
         </div>
     </section>
 
-    <section class="section leadership">
+    <section class="section leadership  py-12">
         <div class="inner container">
             <div class="section-head">
                 <div>
@@ -1903,7 +1902,7 @@
         </div>
     </section>
 
-    <section class="section tech">
+    {{-- <section class="section tech">
         <div class="inner container">
             <div class="tech-panel">
                 <div class="section-head" style="margin-bottom:18px">
@@ -1971,9 +1970,455 @@
                 </div>
             </div>
         </div>
+    </section> --}}
+    <style>
+        .patent-section {
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 12% 18%, rgba(21, 209, 255, 0.08), transparent 22%),
+                radial-gradient(circle at 92% 10%, rgba(0, 24, 220, 0.06), transparent 18%),
+                linear-gradient(180deg, #f7fafc 0%, #eef4f8 100%);
+        }
+
+        .patent-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.15fr) minmax(360px, 0.85fr);
+            gap: 36px;
+            align-items: start;
+            margin-bottom: 34px;
+        }
+
+        .patent-copy .section-kicker {
+            margin-bottom: 18px;
+        }
+
+        .patent-copy h2 {
+            margin: 0;
+            font-size: clamp(1.9rem, 3vw, 3rem);
+            line-height: 1.05;
+            letter-spacing: -.04em;
+            max-width: 21ch;
+            color: var(--text);
+        }
+
+        .patent-copy p {
+            margin: 0 0 18px;
+            max-width: 760px;
+            font-size: 1.18rem;
+            line-height: 1.7;
+            color: #5b6d86;
+        }
+
+        .patent-copy .patent-highlight {
+            margin-top: 6px;
+            font-size: 1.16rem;
+            line-height: 1.7;
+            color: #5b6d86;
+        }
+
+        .patent-copy .patent-highlight strong {
+            color: #1338e2;
+            font-weight: 800;
+        }
+
+        .patent-side-card {
+            position: relative;
+            min-height: 100%;
+            padding: 34px 36px 34px;
+            border-radius: 7px;
+            border: 1px solid rgba(193, 205, 230, 0.85);
+            background: rgba(255, 255, 255, 0.92);
+            box-shadow: 0 20px 54px rgba(16, 42, 67, 0.08);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            transition: background .25s ease, transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+        }
+
+        .patent-side-card,
+        .patent-card-grid>article {
+            position: relative;
+            overflow: hidden;
+            isolation: isolate;
+        }
+
+        .patent-side-card>*,
+        .patent-card-grid>article>* {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* remove this old wrong rule */
+        .patent-card-grid::after {
+            display: none;
+        }
+
+        /* top blue line for big right card and 4 small cards */
+        .patent-side-card::after,
+        .patent-card-grid>article::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            height: 3px;
+            background: var(--accent-dark);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.28s cubic-bezier(.22, .61, .36, 1);
+            z-index: 0;
+        }
+
+        /* hover effect for right big card */
+        .patent-side-card:hover {
+            transform: translateY(-4px);
+            border-color: #0018dc;
+            box-shadow: 0 22px 46px rgba(16, 42, 67, .10);
+        }
+
+        .patent-side-card:hover::after {
+            transform: scaleX(1);
+        }
+
+        /* hover effect for 4 small cards */
+        .patent-card-grid>article:hover {
+            transform: translateY(-4px);
+            border-color: #0018dc !important;
+            box-shadow: 0 22px 46px rgba(16, 42, 67, .10);
+        }
+
+        .patent-card-grid>article:hover::after {
+            transform: scaleX(1);
+        }
+
+        /* optional text polish on hover */
+        .patent-card-grid>article h3,
+        .patent-side-card h3 {
+            transition: color .25s ease;
+        }
+
+        .patent-card-grid>article:hover h3,
+        .patent-side-card:hover h3 {
+            color: var(--accent-dark);
+        }
+
+        .patent-side-bar {
+            width: 84px;
+            height: 5px;
+            border-radius: 999px;
+            margin-bottom: 22px;
+            background: linear-gradient(90deg, #1239e6 0%, #1cb8ff 100%);
+        }
+
+        .patent-side-card h3 {
+            margin: 0 0 18px;
+            font-size: 1.48rem;
+            line-height: 1.12;
+            letter-spacing: -.03em;
+            color: var(--text);
+            transition: color .25s ease;
+        }
+
+        .patent-chip-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 22px;
+        }
+
+        .patent-chip {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 42px;
+            padding: 0 18px;
+            border-radius: 999px;
+            border: 1px solid #c9d4ff;
+            /* background: #edf2ff; */
+            color: #1738e4;
+            font-size: .98rem;
+            font-weight: 800;
+            letter-spacing: 0;
+        }
+
+        .patent-side-card p {
+            margin: 0;
+            font-size: 1.08rem;
+            line-height: 1.72;
+            color: #61738b;
+        }
+
+        .patent-card-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 24px;
+            margin-bottom: 26px;
+        }
+
+        .patent-card-grid::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            height: 3px;
+            background: var(--accent-dark);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.25s cubic-bezier(.22, .61, .36, 1);
+        }
+
+        .patent-card {
+            position: relative;
+            min-height: 300px;
+            padding: 34px 30px 28px;
+            border-radius: 7px;
+            border: 1px solid rgba(201, 211, 228, 0.9);
+            background:
+                radial-gradient(circle at 100% 0%, rgba(21, 209, 255, 0.07), transparent 34%),
+                rgba(255, 255, 255, 0.9);
+            box-shadow: 0 18px 40px rgba(16, 42, 67, 0.07);
+            transition: background .25s ease, transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+            overflow: hidden;
+            isolation: isolate;
+        }
+
+        .patent-card>* {
+            position: relative;
+            z-index: 1;
+        }
+
+        .patent-card:hover {
+            transform: translateY(-4px);
+            border-color: #6d90ff;
+            box-shadow: 0 26px 54px rgba(16, 42, 67, 0.12);
+            background:
+                radial-gradient(circle at 100% 0%, rgba(21, 209, 255, 0.10), transparent 36%),
+                rgba(255, 255, 255, 0.98);
+        }
+
+        .patent-card-number {
+            width: 56px;
+            height: 56px;
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            border: 1px solid #c7cef2;
+            background: #e9edf7;
+            color: #1537e3;
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            transition: background .25s ease, color .25s ease, border-color .25s ease;
+        }
+
+        .patent-card:hover .patent-card-number {
+            background: #edf3ff;
+            border-color: #b7c8ff;
+            color: #0f34df;
+        }
+
+        .patent-card h4 {
+            margin: 0 0 14px;
+            font-size: 2rem;
+            line-height: 1.04;
+            letter-spacing: -0.045em;
+            color: #091d48;
+        }
+
+        /* .patent-card p {
+                                                                                        margin: 0;
+                                                                                        font-size: 1.04rem;
+                                                                                        line-height: 1.72;
+                                                                                        color: #61738b;
+                                                                                    } */
+
+        .patent-callout {
+            position: relative;
+            padding: 20px 18px 20px 36px;
+            border-radius: 6px;
+            border: 1px solid rgba(193, 212, 255, 0.9);
+            background: #fff;
+            box-shadow: 0 20px 48px rgba(16, 42, 67, 0.06);
+            overflow: hidden;
+        }
+
+        .patent-callout::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: -6px;
+            bottom: -5px;
+            width: 6px;
+            border-radius: 0 999px 999px 0;
+            background: linear-gradient(180deg, #1239e6 0%, #1029ea 100%);
+        }
+
+        .patent-callout p {
+            margin: 0;
+            font-size: 1.14rem;
+            line-height: 1.75;
+            color: #61738b;
+        }
+
+        .patent-callout strong {
+            color: #0c1f4f;
+            font-weight: 800;
+        }
+
+        @media (max-width: 1180px) {
+            .patent-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .patent-side-card {
+                max-width: 760px;
+            }
+
+            .patent-card-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .patent-copy h2 {
+                max-width: none;
+            }
+
+            .patent-card-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .patent-side-card,
+            .patent-card,
+            .patent-callout {
+                border-radius: 22px;
+            }
+
+            .patent-side-card {
+                padding: 26px 24px;
+            }
+
+            .patent-card {
+                min-height: auto;
+                padding: 28px 24px 24px;
+            }
+
+            .patent-callout {
+                padding: 28px 24px 28px 34px;
+            }
+
+            .patent-callout::before {
+                top: 14px;
+                bottom: 14px;
+                width: 8px;
+            }
+        }
+    </style>
+    <section class="section patent-section py-12">
+        <div class="inner container">
+            <div class="patent-grid">
+                <div class="patent-copy">
+                    <p class="section-kicker">Patented technology</p>
+                    <h2>Patents that support real multiphase compression value</h2>
+
+                    <p>
+                        Fluidstream’s multiphase platform is supported by U.S. and Canadian patents
+                        focused on how compression systems respond when liquids are present in the
+                        chamber.
+                    </p>
+
+                    <p class="patent-highlight">
+                        <strong>US11098709B2</strong> covers detecting liquid-related conditions and adjusting
+                        compressor operation during the stroke, supporting stable operation where
+                        conventional systems can experience pressure spikes, upset conditions, and
+                        reliability limits.
+                    </p>
+                </div>
+
+                <div class="patent-side-card">
+                    <h3>Core patent coverage</h3>
+
+                    <div class="patent-chip-row">
+                        <span class="patent-chip">US11098709B2</span>
+                        <span class="patent-chip">CA2843321C</span>
+                    </div>
+
+                    <p>
+                        These patents support operating methods where liquid presence affects chamber volume,
+                        pressure response, and compressor behaviour inside the compression process.
+                    </p>
+                </div>
+            </div>
+
+            <div class="patent-card-grid">
+                <article
+                    class="group relative overflow-hidden border border-[#d9e2ec] bg-white p-7 shadow-[0_18px_45px_rgba(16,42,67,0.08)] transition-all duration-300 ease-[cubic-bezier(.22,.61,.36,1)] hover:-translate-y-[3px] hover:border-[#0018dc] hover:shadow-[0_22px_46px_rgba(16,42,67,0.10)]">
+                    <div
+                        class="relative z-[1] mb-[18px] inline-flex h-12 w-12 items-center justify-center rounded-full bg-[rgba(0,24,220,0.08)] text-[15px] font-[850] text-[#0018dc]">
+                        01</div>
+                    <h3
+                        class="relative z-[1] mb-3 text-[24px] leading-[1.1] tracking-[-0.025em] text-[#102a43] transition-colors duration-300 group-hover:text-[#0018dc]">
+                        Handles liquids inside compression</h3>
+                    <p class="relative z-[1] m-0 text-[16px] text-[#52667a]">
+                        Detects liquid influence and adjusts operation in real time.
+                    </p>
+                </article>
+
+                <article
+                    class="group relative overflow-hidden border border-[#d9e2ec] bg-white p-7 shadow-[0_18px_45px_rgba(16,42,67,0.08)] transition-all duration-300 ease-[cubic-bezier(.22,.61,.36,1)] hover:-translate-y-[3px] hover:border-[#0018dc] hover:shadow-[0_22px_46px_rgba(16,42,67,0.10)]">
+                    <div
+                        class="relative z-[1] mb-[18px] inline-flex h-12 w-12 items-center justify-center rounded-full bg-[rgba(0,24,220,0.08)] text-[15px] font-[850] text-[#0018dc]">
+                        02</div>
+                    <h3
+                        class="relative z-[1] mb-3 text-[24px] leading-[1.1] tracking-[-0.025em] text-[#102a43] transition-colors duration-300 group-hover:text-[#0018dc]">
+                        Controls pressure behavior</h3>
+                    <p class="relative z-[1] m-0 text-[16px] text-[#52667a]">
+                        Reduces rapid pressure rise caused by incompressible fluids.
+                    </p>
+                </article>
+
+                <article
+                    class="group relative overflow-hidden border border-[#d9e2ec] bg-white p-7 shadow-[0_18px_45px_rgba(16,42,67,0.08)] transition-all duration-300 ease-[cubic-bezier(.22,.61,.36,1)] hover:-translate-y-[3px] hover:border-[#0018dc] hover:shadow-[0_22px_46px_rgba(16,42,67,0.10)]">
+                    <div
+                        class="relative z-[1] mb-[18px] inline-flex h-12 w-12 items-center justify-center rounded-full bg-[rgba(0,24,220,0.08)] text-[15px] font-[850] text-[#0018dc]">
+                        03</div>
+                    <h3
+                        class="relative z-[1] mb-3 text-[24px] leading-[1.1] tracking-[-0.025em] text-[#102a43] transition-colors duration-300 group-hover:text-[#0018dc]">
+                        Built for wet gas reality</h3>
+                    <p class="relative z-[1] m-0 text-[16px] text-[#52667a]">
+                        Designed for liquids, slugs, and variable field conditions.
+                    </p>
+                </article>
+
+                <article
+                    class="group relative overflow-hidden border border-[#d9e2ec] bg-white p-7 shadow-[0_18px_45px_rgba(16,42,67,0.08)] transition-all duration-300 ease-[cubic-bezier(.22,.61,.36,1)] hover:-translate-y-[3px] hover:border-[#0018dc] hover:shadow-[0_22px_46px_rgba(16,42,67,0.10)]">
+                    <div
+                        class="relative z-[1] mb-[18px] inline-flex h-12 w-12 items-center justify-center rounded-full bg-[rgba(0,24,220,0.08)] text-[15px] font-[850] text-[#0018dc]">
+                        04</div>
+                    <h3
+                        class="relative z-[1] mb-3 text-[24px] leading-[1.1] tracking-[-0.025em] text-[#102a43] transition-colors duration-300 group-hover:text-[#0018dc]">
+                        Protects operating logic</h3>
+                    <p class="relative z-[1] m-0 text-[16px] text-[#52667a]">
+                        Covers how the system responds, not just hardware design.
+                    </p>
+                </article>
+            </div>
+
+            <div class="patent-callout">
+                <p>
+                    <strong>Patented operating methods with practical field value.</strong>
+                    Fluidstream’s systems are supported by patents including US11098709B2, helping
+                    enable stable operation in vapor recovery, casing gas, and multiphase applications
+                    where conventional systems often face limits.
+                </p>
+            </div>
+        </div>
     </section>
 
-    <section class="section caseband">
+    <section class="section caseband py-12">
         <div class="inner container">
             <div class="case-panel">
                 <div>
@@ -2037,7 +2482,7 @@
         </div>
     </section>
 
-    <section class="section cta">
+    <section class="section cta  py-12">
         <div class="inner container">
             <div class="cta-panel">
                 <div>

@@ -4,1068 +4,1433 @@
 
   <style>
     :root {
-      --navy: #0018dc;
+      --blue: #0018dc;
       --cyan: #15d1ff;
-      --ink: #0f1a2b;
-      --muted: #5b6b82;
-      --bg: #f4f8fc;
-      --line: #dce7f3;
-      --card: #ffffff;
-      --soft: #eaf6ff;
-      --dark: #08152f;
-      --success: #0f8f64;
-      --shadow: 0 20px 60px rgba(11, 29, 66, .10);
-      --max: 1220px;
+      --ink: #0f172a;
+      --muted: #4a5568;
+      --line: #d9e6ff;
+      --bg: #f7fbff;
+      --dark: #07124a;
     }
 
     * {
-      box-sizing: border-box;
+      box-sizing: border-box
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #fff;
+      line-height: 1.62
     }
 
     a {
-      color: inherit;
-    }
-
-    .hero {
-      position: relative;
-      overflow: hidden;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-      background: none;
-      isolation: isolate;
-    }
-
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: url('{{ asset("/img/hero/vapor-recovery.png") }}');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      transform: scaleX(-1);
-      transform-origin: center;
-      z-index: -2;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      z-index: -1;
-    }
-
-    .hero h1 {
-      color: #ffffff;
-    }
-
-    .hero p {
-      color: rgba(255, 255, 255, 0.82);
-    }
-
-    .hero .eyebrow {
-      color: #ffffff;
-      background: rgba(255, 255, 255, 0.10);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-    }
-
-    .hero .btn-primary {
-      background: #15d1ff;
-      color: #08152f;
-      box-shadow: 0 20px 45px rgba(21, 209, 255, 0.22);
-    }
-
-    .hero .btn-secondary {
-      background: rgba(255, 255, 255, 0.10);
-      color: #ffffff;
-      border: 1px solid rgba(255, 255, 255, 0.22);
-      backdrop-filter: blur(8px);
-    }
-
-    .hero .btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.16);
-    }
-
-    .hero .stat {
-      background: rgba(255, 255, 255, 0.94);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      box-shadow: 0 14px 32px rgba(8, 21, 47, 0.18);
-    }
-
-    .hero .stat strong {
-      color: var(--navy);
+      color: inherit
     }
 
     .wrap {
-      width: min(var(--max), calc(100% - 48px));
+      max-width: 1200px;
       margin: 0 auto;
     }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 800;
-      letter-spacing: .02em;
-    }
-
-    .brand-mark {
-      width: 38px;
-      height: 38px;
-      border-radius: 10px;
-      background: linear-gradient(135deg, var(--navy), var(--cyan));
-      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .25);
-    }
-
-    .brand span {
-      font-size: 1.05rem;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      color: #29415f;
-      font-size: .95rem;
-    }
-
-    .nav-cta {
-      display: inline-block;
-      text-decoration: none;
-      font-weight: 700;
-      background: var(--navy);
+    header.hero {
+      background: #1029ea;
       color: #fff;
-      padding: 12px 18px;
-      border-radius: 999px;
-      box-shadow: var(--shadow);
     }
 
-
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap: 44px;
-      align-items: center;
-      padding: 76px 0 64px;
+    .breadcrumbs {
+      font-size: 13px;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      opacity: .82;
+      margin-bottom: 18px
     }
 
     .eyebrow {
       display: inline-block;
-      margin-bottom: 18px;
-      font-size: .78rem;
-      font-weight: 800;
-      letter-spacing: .16em;
+      font-size: 13px;
+      letter-spacing: .11em;
       text-transform: uppercase;
-      color: var(--navy);
-      background: rgba(0, 24, 220, .06);
-      border: 1px solid rgba(0, 24, 220, .08);
-      padding: 8px 12px;
-      border-radius: 999px;
+      font-weight: 700;
+      color: #bfeeff;
+      margin-bottom: 14px
     }
 
     h1 {
-      margin: 0 0 18px;
-      font-size: clamp(2.6rem, 5vw, 4.8rem);
-      line-height: 1.02;
-      letter-spacing: -.03em;
-      max-width: 780px;
+      margin: 0 0 14px;
+      font-size: 50px;
+      line-height: 1.04;
+      max-width: 900px;
+      letter-spacing: -.03em
     }
 
-    .hero p {
-      color: #ffffff;
-      max-width: 760px;
-      font-size: 1.1rem;
-      margin: 0 0 26px;
+    .subhead {
+      margin: 0 0 20px;
+      font-size: 22px;
+      line-height: 1.2;
+      color: #e5f1ff;
+      max-width: 920px;
+      font-weight: 700
     }
 
-    .cta-row {
+    .hero-copy {
+      max-width: 880px;
+      color: #edf5ff;
+      font-size: 18px;
+      margin: 0 0 26px
+    }
+
+    .btn-row {
       display: flex;
       gap: 14px;
       flex-wrap: wrap;
-      margin: 30px 0 28px;
+      margin-bottom: 36px
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 50px;
-      padding: 0 20px;
+      padding: 14px 20px;
       border-radius: 999px;
-      font-weight: 700;
       text-decoration: none;
-      transition: .2s ease;
+      font-weight: 700;
+      border: 1px solid rgba(255, 255, 255, .25);
+      transition: .2s ease
+    }
+
+    .btn-1 {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 20px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      border: 1px solid rgb(104 95 95 / 22%);
+      transition: .2s ease
+    }
+
+    .btn:hover {
+      transform: translateY(-1px)
     }
 
     .btn-primary {
-      background: var(--navy);
-      color: #fff;
-      box-shadow: var(--shadow);
+      background: #fff;
+      color: var(--blue)
     }
 
     .btn-secondary {
-      background: #fff;
-      color: var(--navy);
-      border: 1px solid var(--line);
+      background: transparent;
+      color: #fff
     }
 
-    .hero-stats {
+    .btn-secondary-1 {
+      background: transparent;
+      color: #282626c2
+    }
+
+
+    .interactive-card,
+    .hero-card,
+    .card,
+    .feature,
+    .highlight-box,
+    .cta-panel,
+    .model-card,
+    .spec-mobile-card {
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+      transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease, background .28s ease;
+    }
+
+    .interactive-card>*,
+    .hero-card>*,
+    .card>*,
+    .feature>*,
+    .highlight-box>*,
+    .cta-panel>*,
+    .model-card>*,
+    .spec-mobile-card>* {
+      position: relative;
+      z-index: 2;
+    }
+
+    .swipe-left:before,
+    .swipe-right:before,
+    .model-card:before,
+    .spec-mobile-card:before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0, 24, 220, .06) 0%, rgba(21, 209, 255, .12) 48%, rgba(255, 255, 255, 0) 100%);
+      opacity: 0;
+      transition: opacity .28s ease;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .swipe-left:after,
+    .swipe-right:after,
+    .model-card:after,
+    .spec-mobile-card:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 76%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent 0%, rgba(21, 209, 255, .18) 50%, transparent 100%);
+      transform: skewX(-24deg);
+      transition: all .78s ease;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .swipe-left:after,
+    .model-card:after,
+    .spec-mobile-card:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: #0018dc;
+      transform: scaleX(0);
+      /* Start with a scaleX of 0 (hidden) */
+      transform-origin: left;
+      /* Make the scale start from the left */
+      transition: transform 0.3s ease;
+      /* Smooth transition */
+      z-index: 1;
+    }
+
+    .swipe-right:after {
+      right: -135%;
+      transform: skewX(24deg);
+      background: linear-gradient(270deg, transparent 0%, rgba(21, 209, 255, .18) 50%, transparent 100%);
+    }
+
+    .swipe-left:hover,
+    .swipe-right:hover,
+    .model-card:hover,
+    .spec-mobile-card:hover,
+    .blue-fill:hover,
+    .cta-panel:hover {
+      transform: translateY(-3px);
+      border-color: #0018dc !important;
+      /* box-shadow: 0 18px 36px rgba(16, 42, 67, .08); */
+      background: #ffffff;
+    }
+
+    .swipe-left:hover:after,
+    .hero-card:hover:after,
+    .model-card:hover:after,
+    .spec-mobile-card:hover:after {
+      transform: scaleX(1);
+    }
+
+    .hero-card:hover {
+      box-shadow: 0 26px 56px rgba(0, 24, 220, .18);
+      border-color: rgba(255, 255, 255, .3);
+    }
+
+    .swipe-left:hover,
+    .swipe-right:hover,
+    .model-card:hover,
+    .spec-mobile-card:hover {
+      /* box-shadow: 0 24px 52px rgba(13, 32, 84, .12); */
+      border-color: #b9d0ff;
+    }
+
+    .blue-fill:before,
+    .cta-panel:before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, #0018dc 0%, #1438ff 62%, #0b7fe0 100%);
+      transform: translateY(100%);
+      transition: transform .52s cubic-bezier(.22, .61, .36, 1);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .blue-fill:after,
+    .cta-panel:after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 82% 18%, rgba(21, 209, 255, .24), transparent 30%);
+      opacity: 0;
+      transition: opacity .32s ease;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .blue-fill:hover:before,
+    .cta-panel:hover:before {
+      transform: translateY(0);
+    }
+
+    .blue-fill:hover:after,
+    .cta-panel:hover:after {
+      opacity: 1;
+    }
+
+    .blue-fill:hover {
+      box-shadow: 0 24px 58px rgba(0, 24, 220, .18);
+      border-color: #0018dc;
+    }
+
+    .blue-fill:hover h3,
+    .blue-fill:hover p,
+    .blue-fill:hover li,
+    .blue-fill:hover strong,
+    .cta-panel:hover h3,
+    .cta-panel:hover p,
+    .cta-panel:hover li {
+      color: #fff !important;
+    }
+
+    .blue-fill:hover .num {
+      background: rgba(255, 255, 255, .14);
+      color: #fff;
+    }
+
+    .highlight-box:hover a {
+      color: #fff !important;
+    }
+
+    .cta-panel:hover {
+      box-shadow: 0 24px 52px rgba(0, 24, 220, .18);
+      border-color: rgba(255, 255, 255, .22);
+    }
+
+    .model-card-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      max-width: 760px;
+      gap: 18px;
+      margin: 0 0 22px;
     }
 
-    .stat {
+    .model-card {
       background: #fff;
       border: 1px solid var(--line);
-      border-radius: 8px;
-      padding: 16px 18px;
-      box-shadow: 0 10px 30px rgba(15, 26, 43, .05);
+      border-radius: 7px;
+      padding: 22px;
+      box-shadow: 0 18px 44px rgba(13, 32, 84, .06);
     }
 
-    .stat strong {
-      display: block;
-      font-size: 1.25rem;
-      color: var(--navy);
-      line-height: 1.1;
-      margin-bottom: 6px;
+    .model-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: flex-start;
+      margin-bottom: 16px;
     }
 
-    .product-card {
-      background: linear-gradient(180deg, #ffffff 0%, #f6fbff 100%);
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      padding: 24px;
-      box-shadow: var(--shadow);
-    }
-
-    .product-card img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 18px;
-      background: #fff;
-    }
-
-    .caption {
-      margin-top: 14px;
-      color: var(--muted);
-      font-size: .95rem;
-    }
-
-    .section-vapor-recovery {
-      padding: 78px 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    h2 {
-      margin: 0 0 14px;
-      font-size: clamp(2rem, 3vw, 3.2rem);
-      line-height: 1.05;
+    .model-name {
+      font-size: 20px;
+      line-height: 1.15;
+      color: #232325;
+      font-weight: 800;
       letter-spacing: -.02em;
     }
 
-    .lead {
-      margin: 0 0 34px;
-      max-width: 860px;
-      color: var(--muted);
-      font-size: 1.05rem;
+    .model-badge {
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 34px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: #eef5ff;
+      color: var(--blue);
+      font-weight: 800;
+      font-size: 13px;
+      border: 1px solid #d8e8ff;
+    }
+
+    .model-metrics {
+      display: grid;
+      gap: 12px;
+    }
+
+    .model-metrics div {
+      padding-top: 12px;
+      border-top: 1px solid #e7efff;
+    }
+
+    .model-metrics span {
+      display: block;
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #627390;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .model-metrics strong {
+      display: block;
+      color: #232325;
+      font-size: 18px;
+      line-height: 1.2;
+    }
+
+    .spec-wrap-enhanced {
+      overflow: auto;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: 0 16px 40px rgba(13, 32, 84, .05);
+      background: #fff;
+      margin-top: 10px;
+    }
+
+    .spec-table-enhanced {
+      border-collapse: separate;
+      border-spacing: 0;
+      width: 100%;
+      min-width: 1100px;
+      font-size: 14px;
+    }
+
+    .spec-table-enhanced thead th {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      background: #eef5ff;
+      color: #232325;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      border-bottom: 1px solid #dbe7ff;
+    }
+
+    .spec-table-enhanced th,
+    .spec-table-enhanced td {
+      padding: 14px 12px;
+      border-bottom: 1px solid #e8efff;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .spec-table-enhanced tbody tr:nth-child(even) {
+      background: #fbfdff
+    }
+
+    .spec-table-enhanced tbody tr:hover {
+      background: #f5f9ff
+    }
+
+    .spec-col {
+      min-width: 240px;
+      font-weight: 700;
+      color: #232325;
+      background: linear-gradient(180deg, #ffffff, #fbfdff);
+    }
+
+    .cond-col {
+      min-width: 160px;
+      color: #425066;
+      font-weight: 700;
+    }
+
+    .spec-desktop {
+      display: block
+    }
+
+    .spec-mobile {
+      display: none
+    }
+
+    .spec-mobile-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 22px;
+      box-shadow: 0 18px 44px rgba(13, 32, 84, .06);
+      margin-bottom: 16px;
+    }
+
+    .spec-mobile-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: flex-start;
+      margin-bottom: 14px;
+    }
+
+    .spec-mobile-head h3 {
+      margin: 0;
+      font-size: 24px;
+      line-height: 1.14;
+      color: #232325;
+    }
+
+    .spec-mobile-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .spec-mobile-grid div {
+      background: #f7fbff;
+      border: 1px solid #e1ecff;
+      border-radius: 16px;
+      padding: 14px;
+    }
+
+    .spec-mobile-grid span {
+      display: block;
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #627390;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .spec-mobile-grid strong {
+      display: block;
+      color: #232325;
+      font-size: 16px;
+      line-height: 1.25;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px
+    }
+
+    .hero-card {
+      background: rgba(255, 255, 255, .11);
+      border: 1px solid rgba(255, 255, 255, .14);
+      border-radius: 7px;
+      padding: 20px;
+      min-height: 168px;
+      backdrop-filter: blur(7px)
+    }
+
+    .hero-card h3 {
+      margin: 0 0 8px;
+      font-size: 20px;
+      line-height: 1.15;
+      color: #fff
+    }
+
+    .hero-card p {
+      margin: 0;
+      color: #e8f4ff;
+      font-size: 15px
     }
 
     .section-kicker {
-      color: var(--navy);
+      font-size: 12px;
+      letter-spacing: .11em;
       text-transform: uppercase;
-      letter-spacing: .16em;
-      font-size: .77rem;
-      font-weight: 800;
-      margin-bottom: 10px;
+      color: var(--blue);
+      font-weight: 700;
+      margin-bottom: 10px
     }
 
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 24px;
+    h2 {
+      margin: 0 0 16px;
+      font-size: 40px;
+      line-height: 1.08;
+      letter-spacing: -.02em;
+      color: #232325
+    }
+
+    .lead {
+      margin: 0 0 30px;
+      max-width: 960px;
+      font-size: 18px;
+      color: var(--muted)
     }
 
     .grid-3 {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 24px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px
     }
 
     .card {
-      background: var(--card);
+      background: #fff;
       border: 1px solid var(--line);
       border-radius: 7px;
-      padding: 26px;
-      box-shadow: 0 12px 34px rgba(11, 29, 66, .05);
+      padding: 24px;
+      box-shadow: 0 18px 44px rgba(13, 32, 84, .06)
+    }
+
+    .card .num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #eef5ff;
+      color: var(--blue);
+      font-weight: 800;
+      margin-bottom: 14px
     }
 
     .card h3 {
       margin: 0 0 10px;
-      font-size: 1.2rem;
-      line-height: 1.2;
+      font-size: 24px;
+      line-height: 1.14;
+      color: #232325
     }
 
-    .card p,
-    .card li {
-      color: var(--muted);
-    }
-
-    .card ul {
+    .card p {
       margin: 0;
-      padding-left: 18px;
+      color: var(--muted)
     }
 
-    .problem-strip {
-      display: grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 24px;
+    .band {
+      background: #f5f7fb;
+      border-top: 1px solid #dfe9ff;
+      border-bottom: 1px solid #dfe9ff
     }
 
-    .bullets {
+    .split {
       display: grid;
-      gap: 14px;
-      margin-top: 18px;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 26px;
+      align-items: start
+    }
+
+    .feature-stack {
+      display: grid;
+      gap: 18px
+    }
+
+    .feature {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      padding: 22px
+    }
+
+    .feature h3 {
+      margin: 0 0 10px;
+      color: #232325;
+      font-size: 24px;
+      line-height: 1.14
+    }
+
+    .feature p {
+      margin: 0;
+      color: var(--muted)
+    }
+
+    .highlight-box {
+      background: #f5f7fb;
+      border: 1px solid #d8e8ff;
+      border-radius: 7px;
+      padding: 26px;
+      height: 100%
+    }
+
+    .highlight-box h3 {
+      margin: 0 0 12px;
+      font-size: 28px;
+      color: #232325;
+      line-height: 1.12
+    }
+
+    .highlight-box p {
+      margin: 0 0 14px;
+      color: #425066
     }
 
     .bullet {
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-      padding: 14px 0;
-      border-top: 1px solid var(--line);
+      margin: 0;
+      padding-left: 20px;
+      color: #243042
     }
 
-    .bullet:first-child {
-      border-top: none;
-      padding-top: 0;
+    .bullet li {
+      margin: 0 0 10px
     }
 
-    .icon {
-      flex: 0 0 34px;
-      width: 34px;
-      height: 34px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, rgba(0, 24, 220, .10), rgba(21, 209, 255, .20));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--navy);
-      font-weight: 800;
-    }
-
-    .comparison {
+    .spec-wrap {
       overflow: auto;
       border: 1px solid var(--line);
-      border-radius: 24px;
-      /* box-shadow: var(--shadow); */
-      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 16px 40px rgba(13, 32, 84, .05);
+      background: #fff
     }
 
     table {
-      width: 100%;
       border-collapse: collapse;
-      min-width: 820px;
+      width: 100%;
+      min-width: 980px;
+      font-size: 14px
     }
 
     th,
     td {
-      padding: 18px 16px;
+      padding: 14px 12px;
+      border-bottom: 1px solid #e8efff;
       text-align: left;
-      border-bottom: 1px solid var(--line);
-      vertical-align: top;
+      vertical-align: top
     }
 
-    th {
-      background: #f8fbff;
-      color: #14325d;
-      font-size: .93rem;
+    thead th {
+      background: #eef5ff;
+      color: #232325;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: .05em
     }
 
-    td {
-      color: #3c4f69;
-      font-size: .98rem;
+    tbody tr:nth-child(even) {
+      background: #fbfdff
     }
 
-    tr:last-child td {
-      border-bottom: none;
+    .case-study {
+      background: linear-gradient(130deg, #091553, #0018dc 58%, #0a7ad8);
+      color: #fff;
+      border-radius: 12px;
+      padding: 34px;
+      box-shadow: 0 24px 54px rgba(0, 24, 220, .24)
     }
 
-    .best {
-      background: linear-gradient(180deg, rgba(21, 209, 255, .08), rgba(0, 24, 220, .03));
-    }
-
-    .spec-note {
-      margin-top: 16px;
-      color: var(--muted);
-      font-size: .92rem;
-    }
-
-    .check {
-      color: var(--success);
-      font-weight: 800;
-    }
-
-    .warn {
-      color: #bf6a00;
+    .case-study .eyebrow2 {
+      color: #bdeeff;
+      text-transform: uppercase;
+      letter-spacing: .1em;
       font-weight: 700;
+      font-size: 12px;
+      margin-bottom: 10px
     }
 
-    .x {
-      color: #cc3344;
-      font-weight: 800;
+    .case-study h2 {
+      color: #fff;
+      font-size: 40px;
+      margin-bottom: 16px
     }
 
-    .spec-cards {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 18px;
-      margin-top: 24px;
+    .case-study p {
+      color: #ebf4ff;
+      margin: 0 0 16px;
+      font-size: 17px
     }
 
-    .spec-mini {
-      background: #ffffff;
-      border: 1px solid var(--line);
-      border-radius: 7px;
-      padding: 20px;
-    }
-
-    .spec-mini strong {
-      display: block;
-      font-size: 1.35rem;
-      color: var(--navy);
-      margin-bottom: 4px;
-    }
-
-    .case-layout {
-      display: grid;
-      grid-template-columns: 1.05fr .95fr;
-      gap: 24px;
-    }
-
-    .outcome {
+    .stat-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 16px;
-      margin-top: 24px;
+      margin: 24px 0
     }
 
-    .outcome .card strong {
-      display: block;
-      font-size: 1.45rem;
-      color: var(--navy);
-      margin-bottom: 4px;
+    .stat {
+      background: rgba(255, 255, 255, .1);
+      border: 1px solid rgba(255, 255, 255, .14);
+      border-radius: 22px;
+      padding: 22px 20px
     }
 
-    .cta-section {
-      background:
-        radial-gradient(circle at 15% 20%, rgba(0, 24, 220, .10), transparent 22%),
-        radial-gradient(circle at 80% 40%, rgba(21, 209, 255, .16), transparent 26%),
-        linear-gradient(180deg, #0a1530 0%, #081027 100%);
+    .stat .label {
+      font-size: 12px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: #bfeeff;
+      font-weight: 700;
+      margin-bottom: 10px
+    }
+
+    .stat .value {
+      font-size: 34px;
+      line-height: 1.02;
+      font-weight: 800;
+      margin-bottom: 8px
+    }
+
+    blockquote {
+      margin: 22px 0 8px;
+      padding: 0 0 0 20px;
+      border-left: 3px solid rgba(255, 255, 255, .28);
       color: #fff;
-      border-bottom: none;
+      font-size: 22px;
+      line-height: 1.35
     }
 
-    .cta-section .lead {
-      color: rgba(255, 255, 255, .78);
+    .quote-src {
+      color: #cfe7ff;
+      font-weight: 700;
+      margin-bottom: 18px
     }
+
+    /* .cta {
+                              background: linear-gradient(120deg, #061760, #0018dc 56%, #0c79cf);
+                              color: #fff;
+                              padding: 72px 0
+                            } */
+
+    .cta-box {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 24px;
+      align-items: center
+    }
+
+    /* .cta h2 {
+                                color: #fff;
+                                margin-bottom: 14px
+                              }
+
+                              .cta p {
+                                margin: 0;
+                                color: #e3ecff;
+                                font-size: 18px;
+                                max-width: 780px
+                              } */
 
     .cta-panel {
-      background: rgba(255, 255, 255, .06);
-      border: 1px solid rgba(255, 255, 255, .10);
-      border-radius: 28px;
-      padding: 34px;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, .22);
+      background: rgba(255, 255, 255, .1);
+      border: 1px solid rgb(87 87 87 / 14%);
+      border-radius: 24px;
+      padding: 24px;
     }
 
-    .cta-panel .btn-secondary {
-      background: transparent;
-      color: #fff;
-      border-color: rgba(255, 255, 255, .18);
+    .cta-panel h3 {
+      margin: 0 0 10px;
+      /* color: #fff; */
+      font-size: 24px
     }
 
-    footer {
-      background: #081027;
-      color: rgba(255, 255, 255, .65);
-      padding: 22px 0 34px;
-      font-size: .92rem;
+    .cta-panel ul {
+      margin: 0 0 18px;
+      padding-left: 20px;
+      /* color: #ebf4ff */
     }
 
-    @media (max-width: 1080px) {
+    .notes {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 15px
+    }
+
+    @media (max-width:1080px) {
 
       .hero-grid,
-      .problem-strip,
-      .case-layout {
-        grid-template-columns: 1fr;
-      }
-
-      .grid-3 {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .spec-cards {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .hero-stats {
-        grid-template-columns: 1fr;
-        max-width: 420px;
+      .grid-3,
+      .grid-4,
+      .split,
+      .stat-grid,
+      .cta-box,
+      .model-card-grid {
+        grid-template-columns: 1fr 1fr
       }
     }
 
-    @media (max-width: 760px) {
-      .nav {
-        flex-wrap: wrap;
-        padding: 14px 0;
+    @media (max-width:760px) {
+      .spec-desktop {
+        display: none
       }
 
-      .nav-links {
-        display: none;
+      .spec-mobile {
+        display: block
       }
 
-      .grid-2,
-      .grid-3,
-      .spec-cards,
-      .outcome {
-        grid-template-columns: 1fr;
+      .model-card-grid {
+        grid-template-columns: 1fr
       }
 
-      .hero-grid {
-        padding: 52px 0 48px;
-      }
-
-      section {
-        padding: 58px 0;
+      .spec-mobile-grid {
+        grid-template-columns: 1fr 1fr
       }
 
       .wrap {
-        width: min(var(--max), calc(100% - 30px));
+        padding: 0 18px
+      }
+
+      header.hero {
+        /* padding: 58px 0 42px */
+      }
+
+      h1 {
+        font-size: 38px
+      }
+
+      .subhead {
+        font-size: 22px
+      }
+
+      h2 {
+        font-size: 31px
+      }
+
+      .hero-grid,
+      .grid-3,
+      .grid-4,
+      .split,
+      .stat-grid,
+      .cta-box {
+        grid-template-columns: 1fr
+      }
+
+      section {
+        padding: 52px 0
+      }
+
+      .case-study h2 {
+        font-size: 31px
       }
     }
   </style>
 
+
   <header class="hero">
-    <div class="wrap hero-grid">
-      <div>
-        <div class="eyebrow">Vapor Recovery Technology</div>
-        <h1>Vapor recovery built for real-world multiphase conditions.</h1>
-        <p>
-          Conventional vapor recovery units are designed for gas-only conditions. Real field vapor streams
-          are not. Fluidstream combines multiphase compression, sealed hazardous-service design, and autonomous
-          controls to recover vapor where liquids, slugs, sand, and unstable flow can limit conventional systems.
-        </p>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="#cta">Evaluate Your Application</a>
-          <a class="btn btn-secondary" href="#comparison">See the Difference</a>
+    <div class="wrap py-12">
+      <div class="eyebrow">VaporCommander™ • Multiphase vapor recovery</div>
+      <h1>Recover valuable vapor where conventional VRUs lose fit.</h1>
+      <div class="subhead">Capture vapor in wet, unstable, hard-service conditions without forcing the stream through
+        gas-only assumptions.</div>
+      <p class="hero-copy">
+        VaporCommander™ is built for field vapor streams that do not stay clean, dry, and predictable. It combines
+        multiphase compression, sealed hazardous-service design, and autonomous controls to recover gas where liquids,
+        slugs, upset conditions, and changing gas quality make conventional VRUs difficult to justify, maintain, or keep
+        online.
+      </p>
+      <div class="patent-note">
+        Supported by patented operating methods for liquid-influenced compression behavior, including
+        <a href="/patented-technology#us11098709b2">US11098709B2</a>.
+      </div>
+      <div class="btn-row mt-5">
+        <a class="btn btn-primary" href="#specifications">View specifications</a>
+        <a class="btn btn-secondary" href="#comparison">See the difference</a>
+      </div>
+
+      <div class="hero-grid">
+        <div class="hero-card interactive-card ">
+          <h3>Broader site applicability</h3>
+          <p>Recover vapor in field conditions that are too wet, unstable, or maintenance-intensive for conventional
+            gas-only vapor recovery approaches.</p>
         </div>
-        <div class="hero-stats">
-          <div class="stat">
-            <strong>233 mcf/day</strong>
-            Max gas rate in the largest listed VaporCommander configuration
-          </div>
-          <div class="stat">
-            <strong>275 psig</strong>
-            Maximum listed pressure differential in selected configurations
-          </div>
-          <div class="stat">
-            <strong>Autonomous</strong>
-            Control architecture built for upset conditions and reduced intervention
-          </div>
+        <div class="hero-card interactive-card ">
+          <h3>Lower maintenance operation</h3>
+          <p>Autonomous controls, wear-aware sealing, and multiphase handling reduce intervention and support longer-life
+            field performance.</p>
+        </div>
+        <div class="hero-card interactive-card ">
+          <h3>Emissions and gas monetization</h3>
+          <p>Capture valuable vapor, reduce venting, and turn harder vapor recovery sites into practical operating
+            opportunities.</p>
         </div>
       </div>
     </div>
   </header>
 
-  <section id="why" class="section-vapor-recovery">
-    <div class="wrap">
-      <div class="section-kicker">1. Why multiphase compression matters</div>
+  <section>
+    <div class="wrap py-12">
+      <div class="section-kicker">Why multiphase compression matters</div>
       <h2>Vapor recovery is not a gas-only problem.</h2>
       <p class="lead">
         In many field applications, vapor recovery streams contain more than gas. Entrained liquids, intermittent slugs,
         sand, and variable gas quality can force conventional gas-only VRUs into unstable operation, higher maintenance,
-        or narrower operating windows. A vapor recovery solution designed around multiphase reality gives operators a
-        more practical way to recover gas, reduce emissions, and extend deployment into more difficult applications.
-      </p>
-      <div class="problem-strip">
-        <div class="card">
-          <h3>Why conventional VRUs become limiting</h3>
-          <div class="bullets">
-            <div class="bullet">
-              <div class="icon">1</div>
-              <div>
-                <strong>They prefer clean, gas-dominant flow.</strong>
-                <div style="color:var(--muted)">Performance and reliability often deteriorate when liquids enter the
-                  system or when flow becomes unstable.</div>
-              </div>
-            </div>
-            <div class="bullet">
-              <div class="icon">2</div>
-              <div>
-                <strong>They add complexity around the compressor.</strong>
-                <div style="color:var(--muted)">Separators, scrubbers, knockout drums, heaters, and other support
-                  equipment can raise total cost and maintenance burden.</div>
-              </div>
-            </div>
-            <div class="bullet">
-              <div class="icon">3</div>
-              <div>
-                <strong>They reduce the number of viable vapor recovery sites.</strong>
-                <div style="color:var(--muted)">Applications with liquids, slugs, or upset conditions often become more
-                  difficult to justify economically or operationally.</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <h3>Why multiphase compression changes the equation</h3>
-          <p>
-            Fluidstream is designed to work with the actual fluid conditions seen in the field, rather than depending on
-            idealized
-            gas-only behavior. That changes vapor recovery from a narrow technology fit into a broader operating tool.
-          </p>
-          <ul>
-            <li>Broader deployment across difficult field conditions</li>
-            <li>Greater tolerance to liquids and upset behavior</li>
-            <li>Reduced dependence on surrounding support equipment</li>
-            <li>Improved practicality for emissions reduction and gas monetization</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="advantages" class="section-vapor-recovery">
-    <div class="wrap">
-      <div class="section-kicker">2. Advantages of the Fluidstream multiphase vapor recovery package</div>
-      <h2>Built to outperform gas-only vapor recovery approaches.</h2>
-      <p class="lead">
-        Fluidstream's advantage is not a single feature. It is a system architecture that combines multiphase handling,
-        hazardous-service sealing, intelligent controls, and package flexibility to create a more resilient vapor recovery
-        platform.
+        or narrower operating windows. A vapor recovery solution designed around multiphase reality gives operators a more
+        practical path to gas recovery, emissions reduction, and broader deployment.
       </p>
       <div class="grid-3">
-        <div class="card">
-          <h3>Designed for incompressible liquid handling</h3>
-          <p>
-            Fluidstream is built around a patented methodology for safely, efficiently, and reliably handling
-            incompressible
-            liquids within the compression chamber—critical in real vapor recovery streams where liquids are often
-            present.
+        <div class="card interactive-card swipe-left">
+          <div class="num">01</div>
+          <h3>Conventional VRUs prefer clean gas</h3>
+          <p>Performance and reliability often deteriorate when liquids enter the system or when flow becomes unstable.
           </p>
         </div>
-        <div class="card">
-          <h3>Sealed gland architecture for hazardous service</h3>
-          <p>
-            A patent-pending gland sealing configuration with electronic wear detection and a fully sealed gland
-            arrangement
-            helps contain toxic or corrosive multiphase fluids, including H2S-bearing streams.
-          </p>
+        <div class="card interactive-card swipe-left">
+          <div class="num">02</div>
+          <h3>Support equipment adds burden</h3>
+          <p>Separators, scrubbers, knockout drums, heaters, and related hardware can raise total cost, footprint, and
+            maintenance exposure.</p>
         </div>
-        <div class="card">
-          <h3>Autonomous control through upset conditions</h3>
-          <p>
-            Full piston tracking supports optimized control, protects against ice and solid buildup, and helps the system
-            operate safely through slugs and changing process conditions.
-          </p>
-        </div>
-        <div class="card">
-          <h3>Long-life alignment in wear-critical areas</h3>
-          <p>
-            The package is designed to maintain alignment in key stress and wear zones, helping extend component and seal
-            life.
-          </p>
-        </div>
-        <div class="card">
-          <h3>Sand-capable sealing configuration</h3>
-          <p>
-            Multiphase piston sealing and gland sealing are configured to optimize life in applications where sand is
-            present.
-          </p>
-        </div>
-        <div class="card">
-          <h3>Flexible drive options with integrated intelligence</h3>
-          <p>
-            In addition to electric drive, Fluidstream offers gas drive integration with key operating data fed into
-            autonomous controls
-            to maintain performance when fuel gas quality is compromised.
-          </p>
+        <div class="card interactive-card swipe-left">
+          <div class="num">03</div>
+          <h3>Difficult sites get left behind</h3>
+          <p>Applications with liquids, slugs, or upset conditions often become harder to justify economically or
+            operationally with gas-only architecture.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="comparison" class="section-vapor-recovery">
-    <div class="wrap">
-      <div class="section-kicker">3. Why Fluidstream is the stronger choice</div>
-      <h2>A direct comparison against conventional VRUs and alternative multiphase packages.</h2>
-      <p class="lead">
-        Buyers evaluating vapor recovery systems are often comparing gas-only VRUs against competitor packages that offer
-        varying
-        levels of liquid tolerance. The table below presents the strategic distinction: Fluidstream is designed around
-        real multiphase
-        operating conditions, not limited gas-only assumptions.
-      </p>
-      <div class="comparison">
-        <table>
-          <thead>
-            <tr>
-              <th>Capability</th>
-              <th>Conventional Gas-Only VRU</th>
-              <th>Typical Alternative Multiphase Package</th>
-              <th class="best">Fluidstream</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Handles entrained liquids</td>
-              <td><span class="x">✕</span> Limited by gas-only design assumptions</td>
-              <td><span class="warn">△</span> Often positioned as tolerant, but varies by design</td>
-              <td class="best"><span class="check">✓</span> Core design premise of the package</td>
-            </tr>
-            <tr>
-              <td>Operates through slugs and upset conditions</td>
-              <td><span class="x">✕</span> Upsets can drive trips, damage, or shutdowns</td>
-              <td><span class="warn">△</span> Application dependent</td>
-              <td class="best"><span class="check">✓</span> Autonomous logic and piston tracking support upset handling
-              </td>
-            </tr>
-            <tr>
-              <td>Sealed hazardous-service gland design</td>
-              <td><span class="warn">△</span> Varies by package</td>
-              <td><span class="warn">△</span> Varies by package</td>
-              <td class="best"><span class="check">✓</span> Fully sealed gland approach with wear detection</td>
-            </tr>
-            <tr>
-              <td>Sand-oriented sealing strategy</td>
-              <td><span class="x">✕</span> Not typically a design strength</td>
-              <td><span class="warn">△</span> Depends on configuration</td>
-              <td class="best"><span class="check">✓</span> Sealing configured to optimize life in sandy applications</td>
-            </tr>
-            <tr>
-              <td>System simplicity at the site level</td>
-              <td><span class="x">✕</span> Often requires more surrounding equipment</td>
-              <td><span class="warn">△</span> Moderate</td>
-              <td class="best"><span class="check">✓</span> Supports a simpler, broader deployment strategy</td>
-            </tr>
-            <tr>
-              <td>Range of viable vapor recovery applications</td>
-              <td><span class="x">✕</span> Narrower fit to cleaner gas conditions</td>
-              <td><span class="warn">△</span> Moderate</td>
-              <td class="best"><span class="check">✓</span> Stronger fit for difficult real-world streams</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="spec-note">
-        This comparison is framed around technology design philosophy and application fit for vapor recovery. It is
-        intended to show
-        why a multiphase-first platform can create a stronger solution set than gas-only VRU architecture.
-      </div>
-    </div>
-  </section>
-
-  <section id="specs" class="section-vapor-recovery">
-    <div class="wrap">
-      <div class="section-kicker">4. Specifications</div>
-      <h2>VaporCommander model range for vapor recovery deployment.</h2>
-      <p class="lead">
-        The VaporCommander platform gives operators multiple package configurations to match flow, pressure differential,
-        and power requirements while retaining autonomous controls and hazardous-service-ready features across the lineup.
-      </p>
-
-      <div class="comparison">
-        <table>
-          <thead>
-            <tr>
-              <th>Model</th>
-              <th>Max Gas Rate @ 0 psi (e3m3/day) [mcf/day]</th>
-              <th>Max Pressure Differential (kPag) [psig]</th>
-              <th>Motor Size (HP)</th>
-              <th>Standard Package Features</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>VC1235 (050035)</td>
-              <td>2.2 [78]</td>
-              <td>1034 [150]</td>
-              <td>50</td>
-              <td>H2S handling, 3-stage cold weather startup, autonomous controller, color touchscreen & remote control
-              </td>
-            </tr>
-            <tr>
-              <td>VC1245 (050035)</td>
-              <td>1.3 [46]</td>
-              <td>1897 [275]</td>
-              <td>50</td>
-              <td>H2S handling, 3-stage cold weather startup, autonomous controller, color touchscreen & remote control
-              </td>
-            </tr>
-            <tr>
-              <td>VC1245 (100060)</td>
-              <td>2.4 [85]</td>
-              <td>1138 [275]</td>
-              <td>100</td>
-              <td>H2S handling, 3-stage cold weather startup, autonomous controller, color touchscreen & remote control
-              </td>
-            </tr>
-            <tr>
-              <td>VC1645 (100060)</td>
-              <td>4.2 [148]</td>
-              <td>1034 [150]</td>
-              <td>100</td>
-              <td>H2S handling, 3-stage cold weather startup, autonomous controller, color touchscreen & remote control
-              </td>
-            </tr>
-            <tr>
-              <td>VC2270 (100128)</td>
-              <td>6.6 [233]</td>
-              <td>1551 [225]</td>
-              <td>100</td>
-              <td>H2S handling, 3-stage cold weather startup, autonomous controller, color touchscreen & remote control
-              </td>
-            </tr>
-            <tr>
-              <td>VC2270 (150128)</td>
-              <td>6.6 [233]</td>
-              <td>1551 [225]</td>
-              <td>150</td>
-              <td>H2S handling, 3-stage cold weather startup, autonomous controller, color touchscreen & remote control
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="spec-cards">
-        <div class="spec-mini">
-          <strong>Up to 6.6</strong>
-          e3m3/day maximum listed gas rate
-        </div>
-        <div class="spec-mini">
-          <strong>Up to 233</strong>
-          mcf/day maximum listed gas rate
-        </div>
-        <div class="spec-mini">
-          <strong>Up to 1897</strong>
-          kPag maximum listed pressure differential
-        </div>
-        <div class="spec-mini">
-          <strong>50–150 HP</strong>
-          listed motor size range
-        </div>
-      </div>
-
-      <div class="spec-note">
-        Flow conditions are presented from the spreadsheet provided for this page. Actual rates vary with inlet pressure,
-        gas content,
-        liquid rate, and other operating conditions. Parallel or series configurations can expand performance further.
-      </div>
-    </div>
-  </section>
-
-  <section id="case-study" class="section-vapor-recovery">
-    <div class="wrap">
-      <div class="section-kicker">5. Case study framework</div>
-      <h2>Example vapor recovery outcome in a difficult field application.</h2>
-      <p class="lead">
-        Use this section to present a real customer story once approved for publication. The structure below is built to
-        persuade
-        operators and executives by showing the operational problem, the Fluidstream solution, and the measurable value
-        created.
-      </p>
-      <div class="case-layout">
-        <div class="card">
-          <h3>Challenge</h3>
-          <p>
-            The operator needed to recover vapor from a site where liquid carryover, unstable flow, and changing gas
-            quality made
-            conventional vapor recovery packages difficult to keep online consistently.
-          </p>
-          <h3>Fluidstream solution</h3>
-          <p>
-            Fluidstream deployed a multiphase vapor recovery package with liquid-handling capability inside compression,
-            sealed gland
-            protection, and autonomous control logic designed to operate through upset conditions.
-          </p>
-          <h3>Result</h3>
-          <p>
-            The site gained a more resilient vapor recovery platform with lower operator burden and a broader ability to
-            maintain
-            recovery under real field conditions that challenge gas-only systems.
-          </p>
-        </div>
-        <div>
-          <div class="card">
-            <h3>What to include in your published case study</h3>
-            <ul>
-              <li>Site type and fluid conditions</li>
-              <li>Why conventional VRU architecture was limiting</li>
-              <li>Installed Fluidstream package model</li>
-              <li>Before/after maintenance or uptime difference</li>
-              <li>Gas capture or emissions reduction impact</li>
-              <li>Economic result or broader deployability result</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="outcome">
-        <div class="card">
-          <strong>More resilient</strong>
-          Better fit for wet, unstable vapor recovery streams
-        </div>
-        <div class="card">
-          <strong>Less intervention</strong>
-          Autonomous logic supports safer extended operation
-        </div>
-        <div class="card">
-          <strong>Broader deployment</strong>
-          More sites become practical vapor recovery candidates
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="py-10 sm:py-12 lg:py-16">
-    <div class="container mx-auto px-4">
-      <div class="grid gap-12">
-
-        <!-- Card 1 -->
-        <div class="h-full wrap mb-6 overflow-hidden rounded-[24px] border border-slate-200 bg-white ">
-          <div class="h-[5px] w-full bg-gradient-to-r from-[#0018dc] to-[#15d1ff]"></div>
-
-          <div class="flex h-full flex-col p-5 sm:p-6 lg:p-8">
-            <h2 class="mb-4 text-xl font-semibold leading-tight text-slate-900 sm:text-[24px] lg:text-[26px]">
-              Allied Energy II | Multiphase Vapor Recovery
-            </h2>
-
-            <div class="mb-4 text-sm leading-7 text-slate-700 sm:text-[15px] lg:text-base">
-              <span class="font-bold text-[#0018dc]">100% uptime</span>
-              over 15+ months
-              <span class="mx-1 text-slate-400">•</span>
-              <span class="font-bold text-[#0018dc]">0 maintenance</span>
-              <span class="mx-1 text-slate-400">•</span>
-              Operated below
-              <span class="font-bold text-[#0018dc]">-40°C</span>
-              <span class="mx-1 text-slate-400">•</span>
-              Gas venting eliminated
-            </div>
-
-            <div
-              class="mb-5 rounded-r-[10px] border-l-4 border-l-[#15d1ff] bg-gradient-to-r from-[rgba(0,24,220,0.05)] to-[rgba(21,209,255,0.10)] px-4 py-4 text-sm leading-7 text-slate-700 sm:text-[15px]">
-              “...eliminated gas venting…
-              <span class="font-bold text-slate-900">100% uptime and no maintenance</span>
-              since installation.”
-            </div>
-
-            <div
-              class="mt-auto flex flex-col gap-3 border-t border-slate-100 pt-4 sm:flex-row sm:items-center sm:justify-between">
-              <div class="text-sm leading-6 text-slate-500">
-                <span class="font-semibold text-[#0018dc]">Lower maintenance</span>
-                <span class="mx-1 text-slate-300">•</span>
-                Continuous operation
-                <span class="mx-1 text-slate-300">•</span>
-                Reduced emissions
-              </div>
-
-              <a href="{{ route('case-studies.allied-energy') }}"
-                class="group inline-flex shrink-0 items-center font-bold text-[#0018dc] transition duration-300 hover:text-[#15d1ff]">
-                Read full case study
-                <span class="ml-1 transition-transform duration-300 group-hover:translate-x-1">→</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="h-full wrap mt-3 overflow-hidden rounded-[22px] border border-[rgba(19,35,63,0.10)] bg-white ">
-          <div class="h-[6px] w-full bg-gradient-to-r from-[#0018dc] to-[#15d1ff]"></div>
-
-          <div class="flex h-full flex-col p-5 sm:px-[22px] sm:pt-6 sm:pb-[22px]">
-            <div
-              class="mb-3 inline-flex w-fit rounded-full bg-[rgba(21,209,255,0.10)] px-[10px] py-[6px] text-[11px] font-bold uppercase tracking-[0.12em] text-[#0018dc]">
-              Case Study Result
-            </div>
-
-            <h2 class="mb-3 text-[22px] font-semibold leading-[1.1] text-[#0018dc] sm:text-[24px] lg:text-[28px]">
-              4.5+ years of reliable vapor recovery
-            </h2>
-
-            <p class="mb-[18px] text-sm leading-[1.6] text-[#5f6f8a] sm:text-[15px]">
-              A southern Alberta producer used Fluidstream’s VaporCommander™ to capture tank vapors,
-              reduce emissions, and avoid the maintenance burden commonly associated with conventional
-              VRU systems.
-            </p>
-
-            <div class="mb-[18px] grid grid-cols-1 gap-3 sm:grid-cols-2">
-              <div class="rounded-2xl border border-[rgba(19,35,63,0.10)] bg-[#fbfdff] px-[14px] pt-[14px] pb-3">
-                <div class="mb-1.5 text-[28px] font-bold leading-none text-[#0018dc]">
-                  35
-                </div>
-                <div class="text-xs leading-[1.4] text-[#5f6f8a]">
-                  months before first seal change
-                </div>
-              </div>
-
-              <div class="rounded-2xl border border-[rgba(19,35,63,0.10)] bg-[#fbfdff] px-[14px] pt-[14px] pb-3">
-                <div class="mb-1.5 text-[28px] font-bold leading-none text-[#0018dc]">
-                  1
-                </div>
-                <div class="text-xs leading-[1.4] text-[#5f6f8a]">
-                  seal change over reported operating life
-                </div>
-              </div>
-            </div>
-
-            <blockquote
-              class="rounded-2xl border-l-4 border-l-[#15d1ff] bg-gradient-to-b from-[rgba(21,209,255,0.08)] to-[rgba(0,24,220,0.03)] px-[18px] py-[18px] pl-5 text-sm leading-[1.65] text-[#13233f] sm:text-[15px]">
-              “To date, with the exception of the seal change after 35 months, the unit has not had any failures or
-              service issues in more than 4.5 years of operation.”
-              <strong class="mt-[10px] block text-[13px] font-bold uppercase tracking-[0.04em] text-[#0018dc]">
-                Fluidstream Case Study
-              </strong>
-            </blockquote>
-
-            <div
-              class="mt-auto flex flex-col gap-4 border-t border-[rgba(19,35,63,0.10)] pt-4 sm:mt-[18px] sm:flex-row sm:items-center sm:justify-between">
-              <div class="text-xs leading-[1.45] text-[#5f6f8a] sm:max-w-[220px]">
-                Website-ready HTML box for homepage, landing page, or insights section.
-              </div>
-
-              <a href="{{ route('case-studies.reliable-vapor-recovery') }}"
-                class="group inline-flex shrink-0 items-center font-bold text-[#0018dc] transition duration-300 hover:text-[#15d1ff]">
-                Read full case study
-                <span class="ml-1 transition-transform duration-300 group-hover:translate-x-1">→</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  {{-- <section class="cta-section" id="cta" class="section-vapor-recovery">
+  <section class="band">
     <div class="wrap py-12">
-      <div class="cta-panel">
-        <div class="section-kicker" style="color:#9edbff;">6. Call to action</div>
-        <h2>See whether Fluidstream can unlock vapor recovery on your site.</h2>
-        <p class="lead">
-          If your application includes liquids, unstable flow, slugs, H2S, sand, or variable gas quality, a gas-only VRU
-          may not be the
-          strongest answer. Talk with Fluidstream about a vapor recovery approach designed for real multiphase conditions.
-        </p>
-        <div class="cta-row">
-          <a class="btn btn-primary"
-            href="mailto:info@fluidstream.com?subject=Fluidstream%20Vapor%20Recovery%20Inquiry">Request an Evaluation</a>
-          <a class="btn btn-secondary" href="#specs">Review Specifications</a>
+      <div class="section-kicker">Why VaporCommander™ changes the equation</div>
+      <h2>Built to outperform gas-only vapor recovery approaches.</h2>
+      <p class="lead">
+        VaporCommander™ is a multiphase vapor recovery platform built to work with actual field conditions, rather than
+        depending on idealized gas-only behavior.
+      </p>
+      <div class="grid-4">
+        <div class="card interactive-card swipe-left">
+          <h3>Broader deployment</h3>
+          <p>Creates a stronger fit across difficult field conditions where liquids, unstable flow, and upset behavior
+            limit conventional systems.</p>
+        </div>
+        <div class="card interactive-card swipe-left">
+          <h3>Greater liquid tolerance</h3>
+          <p>Built around incompressible liquid handling inside compression rather than treating liquid presence as an
+            off-design event.</p>
+        </div>
+        <div class="card interactive-card swipe-left">
+          <h3>Reduced surrounding equipment dependence</h3>
+          <p>Supports simpler vapor recovery strategies with less dependence on added support equipment in suitable
+            applications.</p>
+        </div>
+        <div class="card interactive-card swipe-left">
+          <h3>Better operating practicality</h3>
+          <p>Improves the practicality of emissions reduction and gas monetization where conventional VRUs become
+            maintenance-heavy or unstable.</p>
         </div>
       </div>
     </div>
-  </section> --}}
+  </section>
+
+  <section>
+    <div class="wrap py-12">
+      <div class="section-kicker">Advantages of the Fluidstream vapor recovery package</div>
+      <h2>Built on Fluidstream multiphase technology.</h2>
+      <p class="lead">
+        VaporCommander™ combines multiphase handling, hazardous-service sealing, intelligent controls, and package
+        flexibility to create a more resilient vapor recovery platform.
+      </p>
+
+      <div class="split">
+        <div class="feature-stack">
+          <div class="feature interactive-card swipe-left">
+            <h3>Designed for incompressible liquid handling</h3>
+            <p>Fluidstream is built around a patented methodology for safely, efficiently, and reliably handling
+              incompressible liquids within the compression chamber—critical in real vapor recovery streams where liquids
+              are often present.</p>
+          </div>
+          <div class="feature interactive-card swipe-left">
+            <h3>Sealed gland architecture for hazardous service</h3>
+            <p>A patent-pending gland sealing configuration with electronic wear detection and a fully sealed gland
+              arrangement helps contain toxic or corrosive multiphase fluids, including H₂S-bearing streams.</p>
+          </div>
+          <div class="feature interactive-card swipe-right">
+            <h3>Autonomous control through upset conditions</h3>
+            <p>Full piston tracking supports optimized control, protects against ice and solids buildup, and helps the
+              system operate safely through slugs and changing process conditions.</p>
+          </div>
+          <div class="feature interactive-card swipe-left">
+            <h3>Long-life alignment in wear-critical areas</h3>
+            <p>The package is designed to maintain alignment in key stress and wear zones, helping extend component and
+              seal life.</p>
+          </div>
+          <div class="feature interactive-card swipe-left">
+            <h3>Sand-capable sealing configuration</h3>
+            <p>Multiphase piston sealing and gland sealing are configured to optimize life in applications where sand is
+              present.</p>
+          </div>
+          <div class="feature interactive-card swipe-left">
+            <h3>Flexible drive options with integrated intelligence</h3>
+            <p>In addition to electric drive, Fluidstream offers gas-drive integration with key operating data fed into
+              autonomous controls to maintain performance when fuel gas quality is compromised.</p>
+          </div>
+        </div>
+
+        <div class="highlight-box interactive-card swipe-left" id="comparison">
+          <h3>Conventional VRUs vs. VaporCommander™</h3>
+          <p>Buyers evaluating vapor recovery systems are often comparing gas-only VRUs against packages that offer
+            varying levels of liquid tolerance. VaporCommander™ is differentiated by a multiphase-first design philosophy
+            built around real operating conditions.</p>
+          <ul class="bullet">
+            <li><strong>Handles entrained liquids:</strong> core design premise of the package rather than a narrow
+              tolerance claim.</li>
+            <li><strong>Operates through slugs and upset conditions:</strong> autonomous logic and piston tracking support
+              upset handling.</li>
+            <li><strong>Sealed hazardous-service gland design:</strong> fully sealed gland approach with wear detection.
+            </li>
+            <li><strong>Sand-oriented sealing strategy:</strong> sealing configured to optimize life in sandy
+              applications.</li>
+            <li><strong>System simplicity at the site level:</strong> supports a simpler, broader deployment strategy.
+            </li>
+            <li><strong>Range of viable vapor recovery applications:</strong> stronger fit for difficult real-world
+              streams.</li>
+          </ul>
+          <p style="margin-top:16px;"><a href="https://fluidstream.nexolioit.com/technology"
+              style="color:var(--blue);font-weight:700;text-decoration:none;">View technology page →</a>
+            &nbsp;&nbsp;|&nbsp;&nbsp; <a href="/patented-technology"
+              style="color:var(--blue);font-weight:700;text-decoration:none;">View patented technology →</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="band" id="specifications">
+    <div class="wrap py-12">
+      <div class="section-kicker">Specifications</div>
+      <h2>VaporCommander™ model range for vapor recovery deployment.</h2>
+      <p class="lead">
+        Compare the lineup visually, then review the detailed package data for gas rate, differential pressure,
+        horsepower, and standard features.
+      </p>
+
+      <div class="model-card-grid">
+
+        <div class="model-card interactive-card swipe-left">
+          <div class="model-top">
+            <div class="model-name">VC1235 (050035)</div>
+            <div class="model-badge">50 HP</div>
+          </div>
+          <div class="model-metrics">
+            <div><span>Gas @ 0 psi<strong>2.2 [78]</strong></div>
+            <div><span>Max ΔP<strong>1034 [150]</strong></div>
+            <div><span>Standard controls<strong>Autonomous + remote</strong></div>
+          </div>
+        </div>
+
+        <div class="model-card interactive-card swipe-left">
+          <div class="model-top">
+            <div class="model-name">VC1245 (050035)</div>
+            <div class="model-badge">50 HP</div>
+          </div>
+          <div class="model-metrics">
+            <div><span>Gas @ 0 psi<strong>1.3 [46]</strong></div>
+            <div><span>Max ΔP<strong>1897 [275]</strong></div>
+            <div><span>Standard controls<strong>Autonomous + remote</strong></div>
+          </div>
+        </div>
+
+        <div class="model-card interactive-card swipe-left">
+          <div class="model-top">
+            <div class="model-name">VC1245 (100060)</div>
+            <div class="model-badge">100 HP</div>
+          </div>
+          <div class="model-metrics">
+            <div><span>Gas @ 0 psi<strong>2.4 [85]</strong></div>
+            <div><span>Max ΔP<strong>1138 [275]</strong></div>
+            <div><span>Standard controls<strong>Autonomous + remote</strong></div>
+          </div>
+        </div>
+
+        <div class="model-card interactive-card swipe-left">
+          <div class="model-top">
+            <div class="model-name">VC1645 (100060)</div>
+            <div class="model-badge">100 HP</div>
+          </div>
+          <div class="model-metrics">
+            <div><span>Gas @ 0 psi<strong>4.2 [148]</strong></div>
+            <div><span>Max ΔP<strong>1034 [150]</strong></div>
+            <div><span>Standard controls<strong>Autonomous + remote</strong></div>
+          </div>
+        </div>
+
+        <div class="model-card interactive-card swipe-left">
+          <div class="model-top">
+            <div class="model-name">VC2270 (100128)</div>
+            <div class="model-badge">100 HP</div>
+          </div>
+          <div class="model-metrics">
+            <div><span>Gas @ 0 psi<strong>6.6 [233]</strong></div>
+            <div><span>Max ΔP<strong>1551 [225]</strong></div>
+            <div><span>Standard controls<strong>Autonomous + remote</strong></div>
+          </div>
+        </div>
+
+        <div class="model-card interactive-card swipe-left">
+          <div class="model-top">
+            <div class="model-name">VC2270 (150128)</div>
+            <div class="model-badge">150 HP</div>
+          </div>
+          <div class="model-metrics">
+            <div><span>Gas @ 0 psi<strong>6.6 [233]</strong></div>
+            <div><span>Max ΔP<strong>1551 [225]</strong></div>
+            <div><span>Standard controls<strong>Autonomous + remote</strong></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="spec-desktop">
+        <div class="spec-wrap spec-wrap-enhanced">
+          <table class="spec-table-enhanced">
+            <thead>
+              <tr>
+                <th class="spec-col">Specification</th>
+                <th class="cond-col">Units / Condition</th>
+                <th>VC1235 (050035)</th>
+                <th>VC1245 (050035)</th>
+                <th>VC1245 (100060)</th>
+                <th>VC1645 (100060)</th>
+                <th>VC2270 (100128)</th>
+                <th>VC2270 (150128)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class='spec-col'>Max Gas Rate (e3m³/day) [mcf/day]</td>
+                <td class='cond-col'>0 psi [0 kPa]</td>
+                <td>2.2 [78]</td>
+                <td>1.3 [46]</td>
+                <td>2.4 [85]</td>
+                <td>4.2 [148]</td>
+                <td>6.6 [233]</td>
+                <td>6.6 [233]</td>
+              </tr>
+              <tr>
+                <td class='spec-col'>Max Pressure Differential (kPag) [psig]</td>
+                <td class='cond-col'>—</td>
+                <td>1034 [150]</td>
+                <td>1897 [275]</td>
+                <td>1138 [275]</td>
+                <td>1034 [150]</td>
+                <td>1551 [225]</td>
+                <td>1551 [225]</td>
+              </tr>
+              <tr>
+                <td class='spec-col'>Motor Size (HP)</td>
+                <td class='cond-col'>—</td>
+                <td>50</td>
+                <td>50</td>
+                <td>100</td>
+                <td>100</td>
+                <td>100</td>
+                <td>150</td>
+              </tr>
+              <tr>
+                <td class='spec-col'>H₂S Handling</td>
+                <td class='cond-col'>—</td>
+                <td>Included</td>
+                <td>Included</td>
+                <td>Included</td>
+                <td>Included</td>
+                <td>Included</td>
+                <td>Included</td>
+              </tr>
+              <tr>
+                <td class='spec-col'>3-Stage Cold Weather Startup</td>
+                <td class='cond-col'>—</td>
+                <td>Included</td>
+                <td>Included</td>
+                <td>Included</td>
+                <td>Included</td>
+                <td>Included</td>
+                <td>Included</td>
+              </tr>
+              <tr>
+                <td class='spec-col'>Autonomous Controller</td>
+                <td class='cond-col'>—</td>
+                <td>Included</td>
+                <td>Included</td>
+                <td>Included</td>
+                <td>Included</td>
+                <td>Included</td>
+                <td>Included</td>
+              </tr>
+              <tr>
+                <td class='spec-col'>Color Touchscreen &amp; Remote Control</td>
+                <td class='cond-col'>—</td>
+                <td>Included</td>
+                <td>Included</td>
+                <td>Included</td>
+                <td>Included</td>
+                <td>Included</td>
+                <td>Included</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="spec-mobile">
+
+        <article class="spec-mobile-card interactive-card swipe-left">
+          <div class="spec-mobile-head">
+            <h3>VC1235 (050035)</h3>
+            <div class="model-badge">50 HP</div>
+          </div>
+          <div class="spec-mobile-grid">
+            <div><span>Gas @ 0 psi<strong>2.2 [78]</strong></div>
+            <div><span>Max ΔP<strong>1034 [150]</strong></div>
+            <div><span>H₂S handling<strong>Included</strong></div>
+            <div><span>Cold-weather startup<strong>Included</strong></div>
+            <div><span>Autonomous controller<strong>Included</strong></div>
+            <div><span>Touchscreen + remote<strong>Included</strong></div>
+          </div>
+        </article>
+
+        <article class="spec-mobile-card interactive-card swipe-left">
+          <div class="spec-mobile-head">
+            <h3>VC1245 (050035)</h3>
+            <div class="model-badge">50 HP</div>
+          </div>
+          <div class="spec-mobile-grid">
+            <div><span>Gas @ 0 psi<strong>1.3 [46]</strong></div>
+            <div><span>Max ΔP<strong>1897 [275]</strong></div>
+            <div><span>H₂S handling<strong>Included</strong></div>
+            <div><span>Cold-weather startup<strong>Included</strong></div>
+            <div><span>Autonomous controller<strong>Included</strong></div>
+            <div><span>Touchscreen + remote<strong>Included</strong></div>
+          </div>
+        </article>
+
+        <article class="spec-mobile-card interactive-card swipe-left">
+          <div class="spec-mobile-head">
+            <h3>VC1245 (100060)</h3>
+            <div class="model-badge">100 HP</div>
+          </div>
+          <div class="spec-mobile-grid">
+            <div><span>Gas @ 0 psi<strong>2.4 [85]</strong></div>
+            <div><span>Max ΔP<strong>1138 [275]</strong></div>
+            <div><span>H₂S handling<strong>Included</strong></div>
+            <div><span>Cold-weather startup<strong>Included</strong></div>
+            <div><span>Autonomous controller<strong>Included</strong></div>
+            <div><span>Touchscreen + remote<strong>Included</strong></div>
+          </div>
+        </article>
+
+        <article class="spec-mobile-card interactive-card swipe-left">
+          <div class="spec-mobile-head">
+            <h3>VC1645 (100060)</h3>
+            <div class="model-badge">100 HP</div>
+          </div>
+          <div class="spec-mobile-grid">
+            <div><span>Gas @ 0 psi<strong>4.2 [148]</strong></div>
+            <div><span>Max ΔP<strong>1034 [150]</strong></div>
+            <div><span>H₂S handling<strong>Included</strong></div>
+            <div><span>Cold-weather startup<strong>Included</strong></div>
+            <div><span>Autonomous controller<strong>Included</strong></div>
+            <div><span>Touchscreen + remote<strong>Included</strong></div>
+          </div>
+        </article>
+
+        <article class="spec-mobile-card interactive-card swipe-left">
+          <div class="spec-mobile-head">
+            <h3>VC2270 (100128)</h3>
+            <div class="model-badge">100 HP</div>
+          </div>
+          <div class="spec-mobile-grid">
+            <div><span>Gas @ 0 psi<strong>6.6 [233]</strong></div>
+            <div><span>Max ΔP<strong>1551 [225]</strong></div>
+            <div><span>H₂S handling<strong>Included</strong></div>
+            <div><span>Cold-weather startup<strong>Included</strong></div>
+            <div><span>Autonomous controller<strong>Included</strong></div>
+            <div><span>Touchscreen + remote<strong>Included</strong></div>
+          </div>
+        </article>
+
+        <article class="spec-mobile-card interactive-card swipe-left">
+          <div class="spec-mobile-head">
+            <h3>VC2270 (150128)</h3>
+            <div class="model-badge">150 HP</div>
+          </div>
+          <div class="spec-mobile-grid">
+            <div><span>Gas @ 0 psi<strong>6.6 [233]</strong></div>
+            <div><span>Max ΔP<strong>1551 [225]</strong></div>
+            <div><span>H₂S handling<strong>Included</strong></div>
+            <div><span>Cold-weather startup<strong>Included</strong></div>
+            <div><span>Autonomous controller<strong>Included</strong></div>
+            <div><span>Touchscreen + remote<strong>Included</strong></div>
+          </div>
+        </article>
+      </div>
+
+      <div class="notes">
+        <p><strong>Engineering notes</strong></p>
+        <ul class="bullet">
+          <li>1 Flow conditions calculated at 15℃ [59℉] inlet pressure and with various components operating at 100%
+            efficiency. Flow rates may vary based on inlet pressures, gas content, and other factors. Max gas rates will
+            be reduced by amount of liquids in total fluid. Ask Fluidstream for max gas flow rates based on specific
+            liquid rates and other varying conditions.</li>
+          <li>2 Max gas rates and max pressure differentials can be increased by configuring additional unit(s) in
+            parallel or in series.</li>
+          <li>3 Higher horsepower units will yield much higher fluid flow rates at various pressure differentials. Please
+            request pump curves to see flow rates at various pressure differentials.</li>
+        </ul>
+        <p><strong>Use the table for comparison. Use Fluidstream for final sizing.</strong> Final configuration still
+          depends on actual gas composition, liquid carryover, inlet pressure, discharge requirements, and site-specific
+          operating conditions.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section>
+    <div class="wrap py-12">
+      <div class="case-study">
+        <div class="eyebrow2">Case Study Result</div>
+        <h2>4.5+ years of reliable vapor recovery with one reported seal change.</h2>
+        <p>A southern Alberta producer used Fluidstream’s VaporCommander™ to capture tank vapors, reduce emissions, and
+          avoid the maintenance burden commonly associated with conventional VRU systems.</p>
+
+        <div class="stat-grid">
+          <div class="stat">
+            <div class="label">First Seal Change</div>
+            <div class="value">35</div>
+            <div>months before the first reported seal change.</div>
+          </div>
+          <div class="stat">
+            <div class="label">Seal Changes</div>
+            <div class="value">1</div>
+            <div>seal change over the reported operating life.</div>
+          </div>
+          <div class="stat">
+            <div class="label">Operating Outcome</div>
+            <div class="value">4.5+ yrs</div>
+            <div>reliable vapor recovery performance with reduced service burden.</div>
+          </div>
+        </div>
+
+        <blockquote>“To date, with the exception of the seal change after 35 months, the unit has not had any failures or
+          service issues in more than 4.5 years of operation.”</blockquote>
+        <div class="quote-src">Fluidstream Case Study</div>
+
+        <p>Lower maintenance. Continuous operation. Reduced emissions.</p>
+        <div class="btn-row" style="margin-bottom:0;">
+          <a class="btn btn-primary" href="#">Read full case study</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap py-12">
+      <div class="cta-box">
+        <div>
+          <div class="section-kicker">Customized Technical CTA</div>
+          <h2>Submit your vapor stream conditions for a VaporCommander™ application review.</h2>
+          <p>
+            If your vapor recovery application includes liquids, slugs, unstable flow, H₂S service, remote operation
+            requirements, or excessive maintenance exposure, Fluidstream can review your operating conditions and identify
+            a VaporCommander™ configuration built for stronger uptime, lower intervention, and broader site applicability.
+          </p>
+        </div>
+        <div class="cta-panel interactive-card wipe-left">
+          <h3>What to send for review</h3>
+          <ul>
+            <li>Gas rate, liquid carryover, and composition</li>
+            <li>Inlet and discharge pressure targets</li>
+            <li>H₂S, sand, cold-weather, or remote-control requirements</li>
+            <li>Current maintenance or uptime pain points</li>
+            <li>Emissions reduction and gas monetization goals</li>
+          </ul>
+          <div class="btn-row" style="margin-bottom:0;">
+            <a class="btn-1 btn-primary" href="#">Request VaporCommander™ Review</a>
+            <a class="btn-1 btn-secondary-1" href="#specifications">Review Specifications</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
 
 @endsection

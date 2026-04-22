@@ -3,1184 +3,1685 @@
 @section('content')
   <style>
     :root {
-      --navy: #031b8c;
       --blue: #0018dc;
       --cyan: #15d1ff;
-      --ink: #0d1730;
-      --muted: #5d6b8a;
-      --line: #dbe6ff;
-      --bg: #f6faff;
-      --white: #ffffff;
-      --shadow: 0 30px 70px rgba(4, 20, 84, .14);
-      --radius: 24px;
+      --ink: #0f172a;
+      --muted: #475569;
+      --line: #d9e6ff;
+      --dark: #07124a;
     }
 
     * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
+      box-sizing: border-box
     }
 
     body {
       margin: 0;
-      font-family: Inter, Arial, Helvetica, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       color: var(--ink);
-      background:
-        radial-gradient(circle at top left, rgba(21, 209, 255, .14), transparent 28%),
-        linear-gradient(180deg, #f9fcff 0%, #ffffff 28%, #f8fbff 100%);
+      background: #fff;
+      line-height: 1.62
     }
 
     a {
-      color: inherit;
-      text-decoration: none;
+      color: inherit
     }
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    .container {
-      width: min(1240px, calc(100% - 48px));
+    .wrap {
+      max-width: 1200px;
       margin: 0 auto;
     }
 
-    .section {
-      padding: 96px 0;
+    header.hero {
+      background: #1029ea;
+      color: #fff;
+      /* padding: 54px 0 54px; */
     }
 
-    h1,
-    h2,
-    h3,
-    p {
-      margin: 0;
+    .breadcrumbs {
+      font-size: 13px;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      opacity: .82;
+      margin-bottom: 18px
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 13px;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #bfeeff;
+      margin-bottom: 14px
     }
 
     h1 {
-      font-size: clamp(44px, 7vw, 76px);
-      line-height: .98;
-      letter-spacing: -.045em;
+      margin: 0 0 14px;
+      font-size: 50px;
+      line-height: 1.04;
+      max-width: 920px;
+      letter-spacing: -.03em
     }
 
-    h2 {
-      font-size: clamp(32px, 4vw, 54px);
-      line-height: 1.02;
-      letter-spacing: -.04em;
-    }
-
-    h3 {
-      font-size: 22px;
-      line-height: 1.1;
-      letter-spacing: -.02em;
-    }
-
-    p {
-      font-size: 18px;
-      line-height: 1.72;
-      color: var(--muted);
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 40;
-      backdrop-filter: blur(18px);
-      background: rgba(255, 255, 255, .76);
-      border-bottom: 1px solid rgba(3, 27, 140, .06);
-    }
-
-    .nav {
-      height: 82px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      font-weight: 900;
-      font-size: 21px;
-      letter-spacing: -.03em;
-    }
-
-    .brand-mark {
-      width: 42px;
-      height: 42px;
-      border-radius: 14px;
-      background: linear-gradient(145deg, var(--blue), var(--cyan));
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, .45), 0 18px 34px rgba(0, 24, 220, .24);
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 28px;
-      color: #30405f;
+    .subhead {
+      margin: 0 0 20px;
+      font-size: 23px;
+      line-height: 1.2;
+      color: #e5f1ff;
+      max-width: 920px;
       font-weight: 600;
-      font-size: 15px;
     }
 
-    .nav-cta {
-      padding: 14px 18px;
-      border-radius: 999px;
-      font-weight: 800;
-      color: white;
-      background: linear-gradient(135deg, var(--blue), #0946ff);
-      box-shadow: 0 18px 30px rgba(0, 24, 220, .22);
+    .hero-copy {
+      max-width: 890px;
+      color: #edf5ff;
+      font-size: 18px;
+      margin: 0 0 26px
     }
 
-    .hero {
-      padding: 58px 0 70px;
-      overflow: hidden;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.08fr .92fr;
-      gap: 44px;
-      align-items: center;
-    }
-
-    .hero-copy p.lead {
-      margin-top: 24px;
-      max-width: 760px;
-      font-size: 21px;
-      color: #445271;
-    }
-
-    .hero-actions {
+    .btn-row {
       display: flex;
+      gap: 14px;
       flex-wrap: wrap;
-      gap: 16px;
-      margin-top: 34px;
+      margin-bottom: 36px
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      padding: 16px 24px;
+      padding: 14px 20px;
       border-radius: 999px;
-      font-weight: 800;
-      font-size: 15px;
-      transition: .25s ease;
+      text-decoration: none;
+      font-weight: 700;
+      border: 1px solid rgba(255, 255, 255, .25);
+      transition: .2s ease
     }
 
-    .btn-primary {
-      color: white;
-      background: linear-gradient(135deg, var(--blue), #0a47ff);
-      box-shadow: 0 20px 35px rgba(0, 24, 220, .24);
-    }
-
-    .btn-secondary {
-      color: var(--ink);
-      background: white;
-      border: 1px solid var(--line);
+    .btn-1 {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 20px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      border: 1px solid rgba(31, 30, 30, 0.25);
+      transition: .2s ease
     }
 
     .btn:hover {
-      transform: translateY(-2px);
+      transform: translateY(-1px)
     }
 
-    .hero-points {
-      margin-top: 28px;
-      display: grid;
-      gap: 12px;
+    .btn-primary {
+      background: #fff;
+      color: var(--blue)
     }
 
-    .hero-point {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
+    .btn-secondary {
+      background: transparent;
+      color: #fff
+    }
+
+    .btn-secondary-1 {
+      background: transparent;
+      color: #1a1818b8
+    }
+
+    .patent-note {
+      margin: 16px 0 14px;
+      padding: 14px 16px;
+      border-left: 4px solid var(--cyan);
+      background: linear-gradient(180deg, rgba(255, 255, 255, .14), rgba(255, 255, 255, .08));
+      color: #eef6ff;
+      border-radius: 0 8px 8px 0;
       font-size: 15px;
-      color: #3b4863;
-      font-weight: 650;
+      line-height: 1.55;
+      max-width: 860px;
     }
 
-    .hero-point i {
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      flex: 0 0 20px;
-      background: linear-gradient(180deg, rgba(21, 209, 255, .22), rgba(0, 24, 220, .06));
-      border: 1px solid rgba(0, 24, 220, .08);
+    .patent-note.light {
+      background: linear-gradient(180deg, #f7fbff 0%, #edf4ff 100%);
+      color: #284163;
+      border-left: 4px solid var(--blue);
+      box-shadow: 0 10px 24px rgba(13, 32, 84, .06);
+    }
+
+    .patent-note a {
+      color: inherit;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      font-weight: 700;
+    }
+
+    .interactive-card,
+    .hero-card,
+    .card,
+    .feature,
+    .highlight-box,
+    .cta-panel,
+    .model-card,
+    .spec-mobile-card,
+    .comparison .box,
+    .reality-item {
       position: relative;
-      margin-top: 2px;
-    }
-
-    .hero-point i::after {
-      content: "";
-      position: absolute;
-      inset: 5px;
-      border-radius: 50%;
-      background: var(--blue);
-    }
-
-    .hero-visual {
-      position: relative;
-      min-height: 590px;
-    }
-
-    section {
-      background: white !important;
-    }
-
-    .glow {
-      position: absolute;
-      inset: auto auto 6% -2%;
-      width: 74%;
-      aspect-ratio: 1/1;
-      border-radius: 50%;
-      /* background: radial-gradient(circle, rgba(21, 209, 255, .42) 0%, rgba(21, 209, 255, .18) 28%, rgba(21, 209, 255, 0) 72%); */
-      filter: blur(12px);
-    }
-
-    .visual-card {
-      position: absolute;
-      inset: 34px 0 0 8%;
-      background: linear-gradient(180deg, rgba(255, 255, 255, .95), rgba(244, 249, 255, .92));
-      border: 1px solid rgba(3, 27, 140, .08);
-      border-radius: 14px;
-      box-shadow: var(--shadow);
       overflow: hidden;
+      isolation: isolate;
+      transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease, background .28s ease;
     }
 
-    .visual-card::before {
+    .interactive-card>*,
+    .hero-card>*,
+    .card>*,
+    .feature>*,
+    .highlight-box>*,
+    .cta-panel>*,
+    .model-card>*,
+    .spec-mobile-card>*,
+    .comparison .box>*,
+    .reality-item>* {
+      position: relative;
+      z-index: 2;
+    }
+
+    .swipe-left:before,
+    .swipe-left:before,
+    .model-card:before,
+    .spec-mobile-card:before,
+    .comparison .box:before,
+    .reality-item:before {
       content: "";
       position: absolute;
       inset: 0;
+      background: linear-gradient(135deg, rgba(0, 24, 220, .06) 0%, rgba(21, 209, 255, .12) 48%, rgba(255, 255, 255, 0) 100%);
+      opacity: 0;
+      transition: opacity .28s ease;
+      z-index: 0;
       pointer-events: none;
-      background: linear-gradient(180deg, rgba(255, 255, 255, .12), rgba(255, 255, 255, 0) 36%);
     }
 
-    .visual-img {
-      width: 100%;
+    .swipe-left:after,
+    .swipe-left:after,
+    .model-card:after,
+    .spec-mobile-card:after,
+    .comparison .box:after,
+    .reality-item:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 76%;
       height: 100%;
-      object-fit: cover;
-      object-position: center center;
+      background: linear-gradient(90deg, transparent 0%, rgba(21, 209, 255, .18) 50%, transparent 100%);
+      transform: skewX(-24deg);
+      transition: all .78s ease;
+      z-index: 1;
+      pointer-events: none;
     }
 
-    .stat-float {
+    .swipe-left:after,
+    .model-card:after,
+    .spec-mobile-card:after,
+    .comparison .box:after,
+    .reality-item:after,
+    .swipe-left:after {
+      content: "";
       position: absolute;
-      left: -18px;
-      bottom: 24px;
-      width: min(340px, 78%);
-      padding: 22px 22px 20px;
-      border-radius: 7px;
-      background: rgba(255, 255, 255, .93);
-      border: 1px solid rgba(3, 27, 140, .08);
-      box-shadow: var(--shadow);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: #0018dc;
+      transform: scaleX(0);
+      /* Start with a scaleX of 0 (hidden) */
+      transform-origin: left;
+      /* Make the scale start from the left */
+      transition: transform 0.3s ease;
+      /* Smooth transition */
+      z-index: 1;
     }
 
-    .stat-float strong {
-      display: block;
-      font-size: 26px;
-      color: var(--blue);
-      letter-spacing: -.05em;
+    .swipe-left:hover,
+    .swipe-left:hover,
+    .model-card:hover,
+    .spec-mobile-card:hover,
+    .blue-fill:hover,
+    .comparison .box:hover,
+    .reality-item:hover {
+      transform: translateY(-3px);
+      border-color: #0018dc !important;
+      /* box-shadow: 0 18px 36px rgba(16, 42, 67, .08); */
+      background: #ffffff;
     }
 
-    .stat-float span {
-      display: block;
-      font-size: 14px;
-      color: #53637f;
-      line-height: 1.45;
-      margin-top: 8px;
+    /* .swipe-left:hover:before,
+                                                                          .swipe-left:hover:before,
+                                                                          .model-card:hover:before,
+                                                                          .spec-mobile-card:hover:before,
+                                                                          .comparison .box:hover:before,
+                                                                          .reality-item:hover:before {
+                                                                            opacity: 1;
+                                                                          } */
+
+    .swipe-left:hover:after,
+    .model-card:hover:after,
+    .spec-mobile-card:hover:after,
+    .comparison .box:hover:after,
+    .reality-item:hover:after {
+      transform: scaleX(1);
     }
 
-    .badge-float {
+    /* .swipe-left:hover:after {
+                                                                        right: 155%;
+                                                                      } */
+
+    .hero-card:hover {
+      box-shadow: 0 26px 56px rgba(0, 24, 220, .18);
+      border-color: rgba(255, 255, 255, .3);
+    }
+
+    /* .swipe-left:hover,
+                                                                    .swipe-left:hover,
+                                                                    .model-card:hover,
+                                                                    .spec-mobile-card:hover,
+                                                                    .comparison .box:hover,
+                                                                    .reality-item:hover {
+                                                                      box-shadow: 0 24px 52px rgba(13, 32, 84, .12);
+                                                                      border-color: #b9d0ff;
+                                                                    } */
+
+    .blue-fill:before {
+      content: "";
       position: absolute;
-      right: -12px;
-      top: 14px;
-      padding: 16px 18px;
-      width: 240px;
-      background: #0f26de;
-      color: white;
-      border-radius: 7px;
-      box-shadow: 0 20px 35px rgba(3, 27, 140, .35);
+      inset: 0;
+      background: linear-gradient(135deg, #0018dc 0%, #1438ff 62%, #0b7fe0 100%);
+      transform: translateY(100%);
+      transition: transform .52s cubic-bezier(.22, .61, .36, 1);
+      z-index: 0;
+      pointer-events: none;
     }
 
-    .badge-float b {
-      display: block;
-      font-size: 13px;
-      letter-spacing: .16em;
-      opacity: .72;
-      text-transform: uppercase;
+    .blue-fill:after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 82% 18%, rgba(21, 209, 255, .24), transparent 30%);
+      opacity: 0;
+      transition: opacity .32s ease;
+      z-index: 1;
+      pointer-events: none;
     }
 
-    .badge-float strong {
-      display: block;
-      margin-top: 10px;
-      font-size: 22px;
-      line-height: 1.15;
-      letter-spacing: -.03em;
+    .blue-fill:hover:before,
+    .cta-panel:hover:before {
+      transform: translateY(0);
     }
 
-    .band {
-      margin-top: 26px;
+    .blue-fill:hover:after {
+      opacity: 1;
+    }
+
+    .blue-fill:hover {
+      box-shadow: 0 24px 58px rgba(0, 24, 220, .18);
+      border-color: #0018dc;
+    }
+
+    .blue-fill:hover h3,
+    .blue-fill:hover p,
+    .blue-fill:hover li,
+    .blue-fill:hover strong {
+      color: #fff !important;
+    }
+
+    .blue-fill:hover .num {
+      background: rgba(255, 255, 255, .14);
+      color: #fff
+    }
+
+    /* 
+                                                    .highlight-box:hover a {
+                                                      color: #fff !important
+                                                    } */
+
+    .cta-panel:hover {
+      /* box-shadow: 0 24px 52px rgba(0, 24, 220, .18); */
+      border-color: rgba(255, 255, 255, .22)
+    }
+
+    .model-card-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-    }
-
-    .band-card {
-      background: white;
-      border: 1px solid #0018dc1c;
-      border-radius: 7px;
-      padding: 18px 20px;
-      box-shadow: 0 12px 24px rgba(17, 39, 100, .06);
-    }
-
-
-
-    .band-card .k {
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: .14em;
-      color: #6f7f9a;
-      font-weight: 800;
-    }
-
-    .band-card .v {
-      display: block;
-      margin-top: 8px;
-      font-size: 28px;
-      color: var(--blue);
-      font-weight: 900;
-      letter-spacing: -.04em;
-    }
-
-    .band-card .s {
-      display: block;
-      margin-top: 6px;
-      font-size: 14px;
-      color: #5d6b8a;
-    }
-
-    .container {
-      max-width: 1200px !important;
-    }
-
-    .panel-pad {
-      padding: 26px 0px 26px 0px;
-    }
-
-    .two-col {
-      display: grid;
-      grid-template-columns: 1.02fr .98fr;
-      gap: 30px;
-      align-items: stretch;
-    }
-
-    .stack {
-      display: grid;
       gap: 18px;
+      margin: 0 0 22px;
     }
 
-    .tile {
-      background: linear-gradient(180deg, #ffffff, #f9fbff);
-      border: 1px solid rgba(3, 27, 140, .08);
-      border-radius: 10px;
-      padding: 26px;
-      box-shadow: 0 14px 28px rgba(17, 39, 100, .05);
-    }
-
-    .tile p {
-      margin-top: 10px;
-      font-size: 16px;
-    }
-
-    .checklist {
-      display: grid;
-      gap: 14px;
-      margin-top: 22px;
-    }
-
-    .check {
-      display: grid;
-      grid-template-columns: 24px 1fr;
-      gap: 12px;
-      align-items: start;
-      color: #374764;
-      font-weight: 650;
-    }
-
-    .check i {
-      width: 24px;
-      height: 24px;
-      border-radius: 8px;
-      background: linear-gradient(180deg, rgba(21, 209, 255, .22), rgba(0, 24, 220, .06));
-      border: 1px solid rgba(0, 24, 220, .08);
-      position: relative;
-      display: block;
-    }
-
-    .check i::after {
-      content: "";
-      position: absolute;
-      left: 7px;
-      top: 4px;
-      width: 7px;
-      height: 11px;
-      border-right: 2px solid var(--blue);
-      border-bottom: 2px solid var(--blue);
-      transform: rotate(40deg);
-    }
-
-    .dark-block {
-      position: relative;
-      background: radial-gradient(circle at 85% 20%, rgba(21, 209, 255, .18), transparent 24%), linear-gradient(135deg, #1029ea, #1029ea 58%, #1029ea 100%);
-      color: white;
-      border-radius: 15px;
-      overflow: hidden;
-      /* box-shadow: 0 34px 80px rgba(4, 20, 84, .25); */
-    }
-
-    .dark-block .panel-pad {
-      padding: 46px;
-    }
-
-    .dark-block p {
-      color: rgba(255, 255, 255, .78);
-    }
-
-    .dark-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-      margin-top: 28px;
-    }
-
-    .dark-card {
-      padding: 22px;
-      border-radius: 24px;
-      background: rgba(255, 255, 255, .08);
-      border: 1px solid rgba(255, 255, 255, .14);
-    }
-
-    .dark-card h3 {
-      font-size: 20px;
-    }
-
-    .dark-card p {
-      font-size: 15px;
-      margin-top: 8px;
-    }
-
-    .compare {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-      margin-top: 28px;
-    }
-
-    .compare-card {
-      border-radius: 7px;
-      padding: 26px;
-      min-height: 100%;
-    }
-
-    .compare-card.left {
-      background: linear-gradient(180deg, #fff8f8, #ffffff);
-      border: 1px solid #ffd9dc;
-    }
-
-    .compare-card.right {
-      background: linear-gradient(180deg, #f5fdff, #ffffff);
-      border: 1px solid #cbecff;
-    }
-
-    .compare-card ul {
-      margin: 18px 0 0;
-      padding: 0;
-      list-style: none;
-      display: grid;
-      gap: 12px;
-    }
-
-    .compare-card li {
-      position: relative;
-      padding-left: 28px;
-      color: #465674;
-      line-height: 1.55;
-      font-weight: 600;
-    }
-
-    .compare-card li::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 8px;
-      width: 14px;
-      height: 14px;
-      border-radius: 50%;
-    }
-
-    .compare-card.left li::before {
-      background: #ff5c6c;
-      box-shadow: 0 0 0 5px rgba(255, 92, 108, .12);
-    }
-
-    .compare-card.right li::before {
-      background: var(--cyan);
-      box-shadow: 0 0 0 5px rgba(21, 209, 255, .12);
-    }
-
-    .flow {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 14px;
-      margin-top: 28px;
-    }
-
-    .flow-step {
-      background: white;
+    .model-card {
+      background: #fff;
       border: 1px solid var(--line);
-      border-radius: 10px;
-      padding: 16px 18px;
+      border-radius: 7px;
+      padding: 22px;
+      box-shadow: 0 18px 44px rgba(13, 32, 84, .06);
+    }
+
+    .model-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: flex-start;
+      margin-bottom: 16px;
+    }
+
+    .model-name {
+      font-size: 20px;
+      line-height: 1.15;
+      color: #232325;
       font-weight: 800;
-      color: #29405b;
-      /* box-shadow: 0 12px 24px rgba(17, 39, 100, .05); */
+      letter-spacing: -.02em;
     }
 
-    .flow-arrow {
-      font-size: 24px;
+    .model-badge {
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 34px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: #eef5ff;
       color: var(--blue);
-      font-weight: 900;
+      font-weight: 800;
+      font-size: 13px;
+      border: 1px solid #d8e8ff;
     }
 
-    .spec-wrap {
-      margin-top: 28px;
+    .model-metrics {
+      display: grid;
+      gap: 12px
+    }
+
+    .model-metrics div {
+      padding-top: 12px;
+      border-top: 1px solid #e7efff
+    }
+
+    .model-metrics span {
+      display: block;
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #627390;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .model-metrics strong {
+      display: block;
+      color: #232325;
+      font-size: 18px;
+      line-height: 1.2;
+    }
+
+    .spec-wrap-enhanced {
       overflow: auto;
-      border: 1px solid rgba(3, 27, 140, .08);
-      border-radius: 12px;
-      box-shadow: 0 24px 50px rgba(17, 39, 100, .08);
-      background: white;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: 0 16px 40px rgba(13, 32, 84, .05);
+      background: #fff;
+      margin-top: 10px;
     }
 
-    table {
-      width: 100%;
-      min-width: 1150px;
+    .spec-table-enhanced {
       border-collapse: separate;
       border-spacing: 0;
+      width: 100%;
+      min-width: 1280px;
+      font-size: 14px;
     }
 
-    thead th {
+    .spec-table-enhanced thead th {
       position: sticky;
       top: 0;
       z-index: 2;
-      background: linear-gradient(180deg, #14a7cd, #159ad6);
-      color: white;
+      background: #eef5ff;
+      color: #232325;
       font-size: 13px;
       text-transform: uppercase;
-      letter-spacing: .12em;
-      padding: 18px 14px;
+      letter-spacing: .05em;
+      border-bottom: 1px solid #dbe7ff;
+    }
+
+    .spec-table-enhanced th,
+    .spec-table-enhanced td {
+      padding: 14px 12px;
+      border-bottom: 1px solid #e8efff;
       text-align: left;
-    }
-
-    tbody td {
-      border-top: 1px solid #e6edff;
-      padding: 16px 14px;
       vertical-align: top;
-      font-size: 15px;
-      color: #30405f;
     }
 
-    tbody tr:nth-child(even) td {
-      background: #fbfdff;
+    .spec-table-enhanced tbody tr:nth-child(even) {
+      background: #fbfdff
     }
 
-    tbody tr:hover td {
-      background: #f4f9ff;
+    .spec-table-enhanced tbody tr:hover {
+      background: #f5f9ff
     }
 
-    td strong {
-      display: block;
-      color: var(--ink);
-      font-size: 15px;
-    }
-
-    td .muted {
-      display: block;
-      color: #7988a4;
-      font-size: 12px;
-      margin-top: 4px;
-    }
-
-    .note {
-      margin-top: 18px;
-      font-size: 14px;
-      color: #60708f;
-      line-height: 1.7;
-    }
-
-    .quote {
-      padding: 34px;
-      border-radius: 15px;
-      background: linear-gradient(180deg, #ffffff, #f8fbff);
-      border: 1px solid rgba(3, 27, 140, .08);
-      box-shadow: var(--shadow);
-    }
-
-    .quote-mark {
-      font-size: 64px;
-      line-height: .65;
-      color: rgba(0, 24, 220, .16);
-      font-weight: 900;
-    }
-
-    .quote p {
-      margin-top: 10px;
-      color: #374764;
-      font-size: 20px;
-      line-height: 1.7;
-    }
-
-    .quote small {
-      display: block;
-      margin-top: 18px;
-      color: #6d7d98;
+    .spec-col {
+      min-width: 230px;
       font-weight: 700;
-      letter-spacing: .04em;
-      text-transform: uppercase;
+      color: #232325;
+      background: linear-gradient(180deg, #ffffff, #fbfdff);
     }
 
-    .footer {
-      padding: 34px 0 90px;
+    .cond-col {
+      min-width: 150px;
+      color: #425066;
+      font-weight: 700;
     }
 
-    .footer-box {
-      background:
-        radial-gradient(circle at 15% 10%, rgba(21, 209, 255, .18), transparent 30%),
-        linear-gradient(135deg, #05125c, #061970 54%, #0b2ab3 100%);
-      border-radius: 36px;
-      color: white;
-      padding: 50px;
-      box-shadow: 0 34px 80px rgba(4, 20, 84, .28);
+    .spec-desktop {
+      display: block
     }
 
-    .footer-box p {
-      color: rgba(255, 255, 255, .78);
-      max-width: 760px;
-      margin-top: 14px;
+    .spec-mobile {
+      display: none
     }
 
-    .footer-actions {
-      margin-top: 26px;
+    .spec-mobile-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 22px;
+      box-shadow: 0 18px 44px rgba(13, 32, 84, .06);
+      margin-bottom: 16px;
+    }
+
+    .spec-mobile-head {
       display: flex;
-      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: flex-start;
+      margin-bottom: 14px;
+    }
+
+    .spec-mobile-head h3 {
+      margin: 0;
+      font-size: 24px;
+      line-height: 1.14;
+      color: #232325;
+    }
+
+    .spec-mobile-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .spec-mobile-grid div {
+      background: #f7fbff;
+      border: 1px solid #e1ecff;
+      border-radius: 16px;
+      padding: 14px;
+    }
+
+    .spec-mobile-grid span {
+      display: block;
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #627390;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .spec-mobile-grid strong {
+      display: block;
+      color: #232325;
+      font-size: 16px;
+      line-height: 1.25;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px
+    }
+
+    .hero-card {
+      background: rgba(255, 255, 255, .11);
+      border: 1px solid rgba(255, 255, 255, .14);
+      border-radius: 8px;
+      padding: 20px;
+      min-height: 164px;
+      backdrop-filter: blur(7px)
+    }
+
+    .hero-card h3 {
+      margin: 0 0 8px;
+      font-size: 20px;
+      line-height: 1.15;
+      color: #fff
+    }
+
+    .hero-card p {
+      margin: 0;
+      color: #e8f4ff;
+      font-size: 15px
+    }
+
+    .section-kicker {
+      font-size: 12px;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+      color: var(--blue);
+      font-weight: 700;
+      margin-bottom: 10px
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      font-size: 40px;
+      line-height: 1.08;
+      letter-spacing: -.02em;
+      color: #232325
+    }
+
+    .lead {
+      margin: 0 0 30px;
+      max-width: 960px;
+      font-size: 18px;
+      color: var(--muted)
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      padding: 24px;
+      box-shadow: 0 18px 44px rgba(13, 32, 84, .06)
+    }
+
+    .card .num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #eef5ff;
+      color: var(--blue);
+      font-weight: 800;
+      margin-bottom: 14px
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 24px;
+      line-height: 1.14;
+      color: #232325
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted)
+    }
+
+    .band {
+      background: #f5f7fb;
+      border-top: 1px solid #dfe9ff;
+      border-bottom: 1px solid #dfe9ff
+    }
+
+    .comparison {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+      margin-top: 24px
+    }
+
+    .comparison .box {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      padding: 26px
+    }
+
+    .comparison .box h3 {
+      margin: 0 0 12px;
+      font-size: 28px;
+      color: #232325
+    }
+
+    .bullet {
+      margin: 0;
+      padding-left: 20px;
+      color: #243042
+    }
+
+    .bullet li {
+      margin: 0 0 10px
+    }
+
+    .reality-box {
+      margin-top: 24px;
+      background: #f5f7fb;
+      border: 1px solid #d8e8ff;
+      border-radius: 7px;
+      padding: 26px;
+    }
+
+    .reality-box h3 {
+      margin: 0 0 12px;
+      font-size: 28px;
+      color: #232325
+    }
+
+    .reality-box p {
+      margin: 0 0 14px;
+      color: #425066
+    }
+
+    .reality-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 18px
+    }
+
+    .reality-item {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      padding: 18px
+    }
+
+    .reality-item strong {
+      display: block;
+      color: #232325;
+      font-size: 16px;
+      margin-bottom: 6px
+    }
+
+    .feature-stack {
+      display: grid;
+      gap: 18px
+    }
+
+    .feature {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      padding: 22px
+    }
+
+    .feature h3 {
+      margin: 0 0 10px;
+      color: #232325;
+      font-size: 24px;
+      line-height: 1.14
+    }
+
+    .feature p {
+      margin: 0;
+      color: var(--muted)
+    }
+
+    .highlight-box {
+      background: #f5f7fb;
+      border: 1px solid #d8e8ff;
+      border-radius: 7px;
+      padding: 26px;
+      height: 100%;
+    }
+
+    .highlight-box h3 {
+      margin: 0 0 12px;
+      font-size: 28px;
+      color: #232325;
+      line-height: 1.12
+    }
+
+    .highlight-box p {
+      margin: 0 0 14px;
+      color: #425066
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 26px;
+      align-items: start
+    }
+
+    .spec-wrap {
+      overflow: auto;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      box-shadow: 0 16px 40px rgba(13, 32, 84, .05);
+      background: #fff
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      min-width: 980px;
+      font-size: 14px
+    }
+
+    th,
+    td {
+      padding: 14px 12px;
+      border-bottom: 1px solid #e8efff;
+      text-align: left;
+      vertical-align: top
+    }
+
+    thead th {
+      background: #eef5ff;
+      color: #232325;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: .05em
+    }
+
+    tbody tr:nth-child(even) {
+      background: #fbfdff
+    }
+
+    .notes {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 15px
+    }
+
+    .case-study {
+      background: linear-gradient(130deg, #091553, #0018dc 58%, #0a7ad8);
+      color: #fff;
+      border-radius: 12px;
+      padding: 34px;
+      box-shadow: 0 24px 54px rgba(0, 24, 220, .24)
+    }
+
+    .case-study .eyebrow2 {
+      color: #bdeeff;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      font-weight: 700;
+      font-size: 12px;
+      margin-bottom: 10px
+    }
+
+    .case-study h2 {
+      color: #fff;
+      font-size: 40px;
+      margin-bottom: 16px
+    }
+
+    .case-study p {
+      color: #ebf4ff;
+      margin: 0 0 16px;
+      font-size: 17px
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       gap: 16px;
+      margin: 24px 0
     }
 
-    .footer .btn-secondary {
-      background: rgba(255, 255, 255, .12);
-      color: white;
-      border-color: rgba(255, 255, 255, .18);
+    .stat {
+      background: rgba(255, 255, 255, .1);
+      border: 1px solid rgba(255, 255, 255, .14);
+      border-radius: 22px;
+      padding: 22px 20px
     }
 
-    .spacer-18 {
-      height: 18px;
+    .stat .label {
+      font-size: 12px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: #bfeeff;
+      font-weight: 700;
+      margin-bottom: 10px
     }
 
-    .spacer-24 {
-      height: 24px;
+    .stat .value {
+      font-size: 34px;
+      line-height: 1.02;
+      font-weight: 800;
+      margin-bottom: 8px
     }
 
-    .spacer-30 {
-      height: 30px;
+    blockquote {
+      margin: 22px 0 8px;
+      padding: 0 0 0 20px;
+      border-left: 3px solid rgba(255, 255, 255, .28);
+      color: #fff;
+      font-size: 22px;
+      line-height: 1.35
     }
 
-    @media (max-width: 1100px) {
+    .quote-src {
+      color: #cfe7ff;
+      font-weight: 700;
+      margin-bottom: 18px
+    }
+
+    .cta {
+      /* background: linear-gradient(120deg, #061760, #0018dc 56%, #0c79cf); */
+      /* color: #fff; */
+      padding: 72px 0
+    }
+
+    .cta-box {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 24px;
+      align-items: center
+    }
+
+    .cta h2 {
+      /* color: #fff; */
+      margin-bottom: 14px
+    }
+
+    .cta p {
+      margin: 0;
+      /* color: #e3ecff; */
+      font-size: 18px;
+      max-width: 780px
+    }
+
+    .cta-panel {
+      background: rgba(255, 255, 255, .1);
+      border: 1px solid rgb(67 64 64 / 14%);
+      border-radius: 7px;
+      padding: 24px;
+    }
+
+    .cta-panel h3 {
+      margin: 0 0 10px;
+      /* color: #fff; */
+      font-size: 24px
+    }
+
+    .cta-panel ul {
+      margin: 0 0 18px;
+      padding-left: 20px;
+      /* color: #ebf4ff */
+    }
+
+    @media (max-width:1080px) {
 
       .hero-grid,
-      .two-col,
-      .dark-grid,
-      .compare {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-visual {
-        min-height: 480px;
-        order: -1;
-      }
-
-      .visual-card {
-        inset: 30px 0 0 0;
-      }
-
-      .stat-float {
-        left: 18px;
-        bottom: 16px;
-      }
-
-      .badge-float {
-        right: 18px;
-        top: 18px;
-      }
-
-      .band {
-        grid-template-columns: repeat(2, 1fr);
+      .grid-3,
+      .comparison,
+      .split,
+      .stat-grid,
+      .cta-box,
+      .reality-grid,
+      .model-card-grid {
+        grid-template-columns: 1fr 1fr
       }
     }
 
-    @media (max-width: 720px) {
-      .container {
-        width: min(100% - 24px, 1240px);
+    @media (max-width:760px) {
+      .spec-desktop {
+        display: none
       }
 
-      .nav {
-        height: 72px;
+      .spec-mobile {
+        display: block
       }
 
-      .nav-links {
-        display: none;
+      .model-card-grid {
+        grid-template-columns: 1fr
       }
 
-      .hero {
-        padding-top: 26px;
+      .spec-mobile-grid {
+        grid-template-columns: 1fr 1fr
       }
 
-      .section {
-        padding: 68px 0;
+      .wrap {
+        padding: 0 18px
       }
 
-      .panel-pad,
-      .dark-block .panel-pad,
-      .footer-box {
-        padding: 26px 0px 26px 0px;
+      header.hero {
+        padding: 58px 0 42px
       }
 
-      .band {
-        grid-template-columns: 1fr;
+      h1 {
+        font-size: 38px
       }
 
-      .hero-actions,
-      .footer-actions {
-        flex-direction: column;
-        align-items: stretch;
+      .subhead {
+        font-size: 22px
       }
 
-      .btn {
-        width: 100%;
+      h2 {
+        font-size: 31px
       }
 
-      p,
-      .hero-copy p.lead {
-        font-size: 17px;
+      .hero-grid,
+      .grid-3,
+      .comparison,
+      .split,
+      .stat-grid,
+      .cta-box,
+      .reality-grid {
+        grid-template-columns: 1fr
+      }
+
+      section {
+        padding: 52px 0
+      }
+
+      .case-study h2 {
+        font-size: 31px
       }
     }
   </style>
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <span class="section-label">Casing gas compression</span>
-          <div class="spacer-24"></div>
-          <h1
-            class="max-w-3xl text-3xl font-extrabold leading-[1.08] tracking-[-0.03em] text-dark sm:text-5xl md:text-6xl lg:text-[54px]">
-            Casing gas isn’t clean gas.<br>Stop compressing it like it is.</h1>
-          <p class="lead">Fluidstream CompressionCommander systems are built for the real casing gas stream operators
-            actually see in the field: variable gas quality, liquid carryover, slugs, H₂S exposure, and unstable operating
-            conditions that conventional gas-only compressors were never designed to survive.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#cta">Request application review</a>
-            <a class="btn btn-secondary" href="#specs">View specifications</a>
+
+
+  <header class="hero">
+    <div class="wrap py-12">
+      <div class="eyebrow">CompressionCommander™ • Casing gas compression systems</div>
+      <h1>Recover casing gas reliably in the wet, variable field conditions conventional packages struggle to handle.</h1>
+      <div class="subhead">Capture low-pressure casing gas, reduce flaring, and support production optimization without
+        forcing variable, liquid-prone service through gas-only compressor assumptions.</div>
+      <p class="hero-copy">
+        CompressionCommander™ systems are designed for real casing gas conditions: variable gas quality, liquid carryover,
+        intermittent slugging, corrosive or H₂S-bearing service, remote operation, and the high-uptime, low-maintenance
+        expectations operators actually face in the field. Instead of depending on scrubbers and separators as the only
+        line of defense, CompressionCommander™ combines multiphase-ready design logic with autonomous control to create a
+        more robust casing gas solution.
+      </p>
+      <div class="patent-note">
+        Supported by patented operating methods for liquid-influenced compression behavior, including
+        <a href="/patented-technology#us11098709b2">US11098709B2</a>.
+      </div>
+      <div class="btn-row mt-5">
+        <a class="btn btn-primary" href="#specifications">View specifications</a>
+        <a class="btn btn-secondary" href="#application-review">Request application review</a>
+      </div>
+
+      <div class="hero-grid">
+        <div class="hero-card interactive-card">
+          <h3>Built for multiphase reality</h3>
+          <p>Designed for casing gas service where liquids, upsets, and variable flow are part of the operating envelope,
+            not just abnormal events.</p>
+        </div>
+        <div class="hero-card interactive-card">
+          <h3>Lower intervention</h3>
+          <p>Autonomous controls help detect harmful operating conditions and respond automatically to reduce trips,
+            downtime, and damage risk.</p>
+        </div>
+        <div class="hero-card interactive-card">
+          <h3>Field-ready durability</h3>
+          <p>Supports H₂S handling, cold-weather startup, remote control, and harder-duty service across the listed
+            CompressionCommander™ configurations.</p>
+        </div>
+        <div class="hero-card interactive-card swipe-left">
+          <h3>Lower-maintenance performance</h3>
+          <p>Designed to reduce the recurring maintenance burden created when conventional gas-only casing gas packages
+            are pushed into liquid-prone service.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="wrap py-12">
+      <div class="section-kicker">Why multiphase matters</div>
+      <h2>Casing gas is inherently imperfect field service.</h2>
+      <p class="lead">
+        Casing gas is often specified and sold like a clean gas application, but field conditions rarely stay that clean.
+        Condensate, produced water, intermittent liquid carryover, pressure swings, contaminants, slug events, and
+        changing operating conditions are exactly what make conventional gas-only casing gas compressors unreliable and
+        maintenance-heavy in real service.
+      </p>
+
+      <div class="grid-3">
+        <div class="card interactive-card swipe-left">
+          <div class="num">01</div>
+          <h3>Scrubbers are not a guarantee</h3>
+          <p>Scrubbers and separation equipment can reduce liquid carryover, but they do not guarantee perfectly dry gas
+            under real field conditions.</p>
+        </div>
+        <div class="card interactive-card swipe-left">
+          <div class="num">02</div>
+          <h3>Slug events still reach the compressor</h3>
+          <p>Intermittent upset conditions still create the trips, stress, and component damage that turn casing gas
+            recovery into a reliability problem.</p>
+        </div>
+        <div class="card interactive-card swipe-left">
+          <div class="num">03</div>
+          <h3>Conventional systems become maintenance burdens</h3>
+          <p>If the package is built around gas-only assumptions, operators often end up buying more intervention, more
+            downtime, and more equipment to manage.</p>
+        </div>
+      </div>
+
+      <div class="reality-box">
+        <h3>What makes casing gas compression difficult in the field</h3>
+        <p>
+          The challenge is not simply moving gas from low pressure to higher pressure. The challenge is doing it reliably
+          when the stream is inconsistent, liquids can break through, and operating conditions do not stay steady. That is
+          where conventional gas-only packages often become maintenance-heavy and why CompressionCommander™ is positioned
+          differently.
+        </p>
+        <div class="reality-grid">
+          <div class="reality-item interactive-card swipe-left">
+            <strong>What operators actually see</strong>
+            Casing gas service can include liquid carryover, intermittent slugging, contaminants, changing pressure, and
+            off-normal events that move the application away from ideal dry-gas operation.
           </div>
-          <div class="hero-points">
-            <div class="hero-point"><i></i><span>Designed to operate without upstream scrubbers being the only line of
-                defense.</span></div>
-            <div class="hero-point"><i></i><span>Handles the upset conditions that cause trips, downtime, and compressor
-                damage in conventional casing gas systems.</span></div>
-            <div class="hero-point"><i></i><span>Autonomous controls mitigate risk when liquid slugs or other harmful
-                operating conditions appear.</span></div>
+          <div class="reality-item interactive-card swipe-left">
+            <strong>Why conventional systems struggle</strong>
+            When those conditions reach a gas-only compressor, the result is often more dependence on separation
+            equipment, more trips, more operator attention, and a higher recurring maintenance burden.
           </div>
         </div>
-        <div class="hero-visual">
-          <div class="glow"></div>
-          <div class="visual-card">
-            <img class="visual-img" src="/img/casing-gas-image-01.jpg"
-              alt="Fluidstream CompressionCommander casing gas compressor unit">
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap py-12">
+      <div class="section-kicker">Conventional vs. Fluidstream</div>
+      <h2>Two very different approaches to casing gas compression.</h2>
+      <p class="lead">
+        CompressionCommander™ is positioned as a casing gas solution built around multiphase behavior and the commercial
+        reality of keeping recovery systems online with less intervention.
+      </p>
+
+      <div class="comparison">
+        <div class="box interactive-card swipe-left">
+          <h3>Conventional casing gas approach</h3>
+          <ul class="bullet">
+            <li>Relies on scrubbers and separation equipment to protect a gas-only compressor.</li>
+            <li>Still becomes vulnerable when liquids break through or slug conditions develop.</li>
+            <li>Creates more equipment, more footprint, more operator attention, and more failure points.</li>
+            <li>Often turns casing gas recovery into a constant reliability and maintenance problem.</li>
+          </ul>
+        </div>
+        <div class="box interactive-card swipe-left">
+          <h3>CompressionCommander™ approach</h3>
+          <ul class="bullet">
+            <li>Built around the reality that casing gas streams are imperfect and often effectively multiphase.</li>
+            <li>Designed to keep operating through the upset conditions that shut down conventional systems.</li>
+            <li>Reduces dependence on separation hardware as the only protection strategy.</li>
+            <li>Gives operators a more robust, lower-intervention path to continuous casing gas recovery.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap py-12">
+      <div class="section-kicker">The CompressionCommander™ difference</div>
+      <h2>Designed for the flow you actually have.</h2>
+      <p class="lead">
+        CompressionCommander™ creates value because it is aligned with what casing gas service really looks like in the
+        field: liquid carryover, changing operating conditions, corrosive exposure, remote operation, and the need for
+        high uptime with low maintenance.
+      </p>
+
+      <div class="split">
+        <div class="feature-stack">
+          <div class="feature interactive-card swipe-left">
+            <h3>Handles real operating envelopes</h3>
+            <p>Designed for gas service in applications where liquids, slugs, and unstable conditions are part of the real
+              field envelope rather than rare exceptions.</p>
           </div>
-          <div class="badge-float">
-            <b>Core advantage</b>
-            <strong>Built for multiphase reality, not ideal gas assumptions.</strong>
+          <div class="feature interactive-card swipe-left">
+            <h3>Sealed architecture for corrosive service</h3>
+            <p>Sealed design supports corrosive and H₂S-bearing service while minimizing exposure risk in harsher
+              operating environments.</p>
           </div>
-          <div class="stat-float">
-            <strong>Up to 1,197 MCFD</strong>
-            <span>From the uploaded CompressionCommander specification sheet, the product family spans 15 to 150 HP and
-              reaches up to 275 psig pressure differential depending on configuration.</span>
+          <div class="feature interactive-card swipe-left">
+            <h3>Sand-conscious sealing philosophy</h3>
+            <p>Sealing strategy is better aligned with harsher field environments where abrasive contaminants can
+              accelerate wear in conventional systems.</p>
+          </div>
+          <div class="feature interactive-card swipe-left">
+            <h3>Autonomous control for lower intervention</h3>
+            <p>Autonomous controls are designed to support extended operation without constant operator attention,
+              especially where remote service and uptime matter.</p>
+          </div>
+        </div>
+
+        <div class="highlight-box interactive-card swipe-left">
+          <h3>Control strategy operators can trust</h3>
+          <p>CompressionCommander™ does not rely on unrealistic promises about perfect gas quality. It monitors operating
+            behavior and responds to the conditions that suggest liquids, slugs, or other upset events are creating damage
+            risk.</p>
+          <ul class="bullet">
+            <li><strong>What it monitors:</strong> pressure behavior, dynamic system response, load changes, and other
+              operating patterns associated with harmful conditions.</li>
+            <li><strong>What it does:</strong> automatically modifies operation to mitigate risk, reduce mechanical
+              stress, and keep the system in a safer operating window.</li>
+            <li><strong>Why it matters:</strong> the result is a casing gas package that is better suited to remote,
+              variable, lower-touch operation.</li>
+          </ul>
+          <div class="patent-note light" style="margin-top:16px;">
+            Patent reference:
+            <a href="/patented-technology#us11098709b2">US11098709B2</a>
+            supports the liquid-aware compression response behind this protection strategy.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap py-12">
+      <div class="section-kicker">Intelligent protection</div>
+      <h2>Detects risk conditions. Responds automatically. Protects continuously.</h2>
+      <p class="lead">
+        In casing gas service, the real value of the controls strategy is not claiming perfect knowledge of what is inside
+        the machine every second. It is recognizing damaging operating behavior early enough to protect components,
+        preserve stability, and reduce avoidable maintenance events.
+      </p>
+      <div class="grid-3">
+        <div class="card interactive-card swipe-left">
+          <h3>Pressure and response awareness</h3>
+          <p>System behavior is monitored for patterns associated with liquid carryover, slug events, abnormal loading,
+            and other harmful conditions.</p>
+        </div>
+        <div class="card interactive-card swipe-left">
+          <h3>Automatic mitigation</h3>
+          <p>Controls adjust operation to reduce stress and keep the package in a safer operating window without relying
+            on constant human intervention.</p>
+        </div>
+        <div class="card interactive-card swipe-left">
+          <h3>Continuous protection value</h3>
+          <p>This lowers the risk of trips, damage, and recurring operator callouts while supporting more dependable
+            casing gas recovery.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="specifications">
+    <div class="wrap py-12">
+      <div class="section-kicker">Specifications</div>
+      <h2>CompressionCommander™ model range for casing gas applications.</h2>
+      <p class="lead">
+        Compare the model range visually, then review flow performance by inlet pressure, pressure differential,
+        horsepower, and standard package features.
+      </p>
+
+      <div class="model-card-grid">
+
+        <div class="model-card interactive-card swipe-left">
+          <div class="model-top">
+            <div class="model-name">1.0 [35]</div>
+            <div class="model-badge">ü HP</div>
+          </div>
+          <div class="model-metrics">
+            <div><span>Flow @ 5 psi<strong>1.3 [46] mcf/d</strong></div>
+            <div><span>Max ΔP<strong>15 psig</strong></div>
+            <div><span>Package features<strong>Autonomous + remote</strong></div>
+          </div>
+        </div>
+
+        <div class="model-card interactive-card swipe-left">
+          <div class="model-top">
+            <div class="model-name">3.0 [106]</div>
+            <div class="model-badge">ü HP</div>
+          </div>
+          <div class="model-metrics">
+            <div><span>Flow @ 5 psi<strong>3.8 [134] mcf/d</strong></div>
+            <div><span>Max ΔP<strong>50 psig</strong></div>
+            <div><span>Package features<strong>Autonomous + remote</strong></div>
+          </div>
+        </div>
+
+        <div class="model-card interactive-card swipe-left">
+          <div class="model-top">
+            <div class="model-name">1.8 [64]</div>
+            <div class="model-badge">ü HP</div>
+          </div>
+          <div class="model-metrics">
+            <div><span>Flow @ 5 psi<strong>2.2 [78] mcf/d</strong></div>
+            <div><span>Max ΔP<strong>50 psig</strong></div>
+            <div><span>Package features<strong>Autonomous + remote</strong></div>
+          </div>
+        </div>
+
+        <div class="model-card interactive-card swipe-left">
+          <div class="model-top">
+            <div class="model-name">3.1 [109]</div>
+            <div class="model-badge">ü HP</div>
+          </div>
+          <div class="model-metrics">
+            <div><span>Flow @ 5 psi<strong>3.9 [138] mcf/d</strong></div>
+            <div><span>Max ΔP<strong>100 psig</strong></div>
+            <div><span>Package features<strong>Autonomous + remote</strong></div>
+          </div>
+        </div>
+
+        <div class="model-card interactive-card swipe-left">
+          <div class="model-top">
+            <div class="model-name">5.7 [201]</div>
+            <div class="model-badge">ü HP</div>
+          </div>
+          <div class="model-metrics">
+            <div><span>Flow @ 5 psi<strong>7.1 [251] mcf/d</strong></div>
+            <div><span>Max ΔP<strong>100 psig</strong></div>
+            <div><span>Package features<strong>Autonomous + remote</strong></div>
+          </div>
+        </div>
+
+        <div class="model-card interactive-card swipe-left">
+          <div class="model-top">
+            <div class="model-name">5.7 [201]</div>
+            <div class="model-badge">ü HP</div>
+          </div>
+          <div class="model-metrics">
+            <div><span>Flow @ 5 psi<strong>7.1 [251] mcf/d</strong></div>
+            <div><span>Max ΔP<strong>100 psig</strong></div>
+            <div><span>Package features<strong>Autonomous + remote</strong></div>
+          </div>
+        </div>
+
+        <div class="model-card interactive-card swipe-left">
+          <div class="model-top">
+            <div class="model-name">10.1 [357]</div>
+            <div class="model-badge">ü HP</div>
+          </div>
+          <div class="model-metrics">
+            <div><span>Flow @ 5 psi<strong>12.7 [449] mcf/d</strong></div>
+            <div><span>Max ΔP<strong>150 psig</strong></div>
+            <div><span>Package features<strong>Autonomous + remote</strong></div>
+          </div>
+        </div>
+
+        <div class="model-card interactive-card swipe-left">
+          <div class="model-top">
+            <div class="model-name">10.3 [364]</div>
+            <div class="model-badge">ü HP</div>
+          </div>
+          <div class="model-metrics">
+            <div><span>Flow @ 5 psi<strong>13.0 [459] mcf/d</strong></div>
+            <div><span>Max ΔP<strong>150 psig</strong></div>
+            <div><span>Package features<strong>Autonomous + remote</strong></div>
           </div>
         </div>
       </div>
 
-      <div class="container">
-        <div class="band">
-          <div class="band-card"><span class="k">Flow range</span><span class="v">35–1,197</span><span class="s">MCFD
-              across the model family</span></div>
-          <div class="band-card"><span class="k">Pressure differential</span><span class="v">Up to 275</span><span
-              class="s">psig depending on package</span></div>
-          <div class="band-card"><span class="k">Controls</span><span class="v">Autonomous</span><span class="s">Remote
-              control + touchscreen standard</span></div>
-          <div class="band-card"><span class="k">Field readiness</span><span class="v">H₂S + cold weather</span><span
-              class="s">Across the listed configurations</span></div>
+      <div class="spec-desktop">
+        <div class="spec-wrap spec-wrap-enhanced">
+          <table class="spec-table-enhanced">
+            <thead>
+              <tr>
+                <th class="spec-col">Specification</th>
+                <th class="cond-col">Units / Condition</th>
+                <th>1.0 [35]</th>
+                <th>3.0 [106]</th>
+                <th>1.8 [64]</th>
+                <th>3.1 [109]</th>
+                <th>5.7 [201]</th>
+                <th>5.7 [201]</th>
+                <th>10.1 [357]</th>
+                <th>10.3 [364]</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class='spec-col'>Flow rate</td>
+                <td class='cond-col'>5 psi</td>
+                <td>1.3 [46]</td>
+                <td>3.8 [134]</td>
+                <td>2.2 [78]</td>
+                <td>3.9 [138]</td>
+                <td>7.1 [251]</td>
+                <td>7.1 [251]</td>
+                <td>12.7 [449]</td>
+                <td>13.0 [459]</td>
+              </tr>
+              <tr>
+                <td class='spec-col'>Flow rate</td>
+                <td class='cond-col'>10 psi</td>
+                <td>1.8 [64]</td>
+                <td>5.3 [187]</td>
+                <td>3.1 [109]</td>
+                <td>5.5 [194]</td>
+                <td>9.9 [350]</td>
+                <td>9.9 [350]</td>
+                <td>17.8 [629]</td>
+                <td>18.2 [643]</td>
+              </tr>
+              <tr>
+                <td class='spec-col'>Flow rate</td>
+                <td class='cond-col'>20 psi</td>
+                <td>2.3 [81]</td>
+                <td>6.8 [240]</td>
+                <td>4.0 [141]</td>
+                <td>7.1 [251]</td>
+                <td>12.8 [452]</td>
+                <td>12.8 [452]</td>
+                <td>22.9 [209]</td>
+                <td>23.4 [826]</td>
+              </tr>
+              <tr>
+                <td class='spec-col'>Flow rate</td>
+                <td class='cond-col'>30 psi</td>
+                <td>3.4 [120]</td>
+                <td>9.9 [350]</td>
+                <td>5.9 [208]</td>
+                <td>10.3 [364]</td>
+                <td>18.5 [653]</td>
+                <td>18.5 [653]</td>
+                <td>33.1 [1,169]</td>
+                <td>33.9 [1,197]</td>
+              </tr>
+              <tr>
+                <td class='spec-col'>Flow rate</td>
+                <td class='cond-col'>50 psi</td>
+                <td>1207 [175]</td>
+                <td>1034 [150]</td>
+                <td>1896 [275]</td>
+                <td>1896 [275]</td>
+                <td>1034 [150]</td>
+                <td>1379 [200]</td>
+                <td>1896 [275]</td>
+                <td>1896 [275]</td>
+              </tr>
+              <tr>
+                <td class='spec-col'>Max pressure differential</td>
+                <td class='cond-col'>psig</td>
+                <td>15</td>
+                <td>50</td>
+                <td>50</td>
+                <td>100</td>
+                <td>100</td>
+                <td>100</td>
+                <td>150</td>
+                <td>150</td>
+              </tr>
+              <tr>
+                <td class='spec-col'>Motor size</td>
+                <td class='cond-col'>HP</td>
+                <td>ü</td>
+                <td>ü</td>
+                <td>ü</td>
+                <td>ü</td>
+                <td>ü</td>
+                <td>ü</td>
+                <td>ü</td>
+                <td>ü</td>
+              </tr>
+              <tr>
+                <td class='spec-col'>H₂S handling</td>
+                <td class='cond-col'>—</td>
+                <td>Included</td>
+                <td>Included</td>
+                <td>Included</td>
+                <td>Included</td>
+                <td>Included</td>
+                <td>Included</td>
+                <td>Included</td>
+                <td>Included</td>
+              </tr>
+              <tr>
+                <td class='spec-col'>Cold weather startup</td>
+                <td class='cond-col'>—</td>
+                <td>Included</td>
+                <td>Included</td>
+                <td>Included</td>
+                <td>Included</td>
+                <td>Included</td>
+                <td>Included</td>
+                <td>Included</td>
+                <td>Included</td>
+              </tr>
+              <tr>
+                <td class='spec-col'>Autonomous controller</td>
+                <td class='cond-col'>—</td>
+                <td>Included</td>
+                <td>Included</td>
+                <td>Included</td>
+                <td>Included</td>
+                <td>Included</td>
+                <td>Included</td>
+                <td>Included</td>
+                <td>Included</td>
+              </tr>
+              <tr>
+                <td class='spec-col'>Remote / HMI</td>
+                <td class='cond-col'>—</td>
+                <td>None</td>
+                <td>None</td>
+                <td>None</td>
+                <td>None</td>
+                <td>None</td>
+                <td>None</td>
+                <td>None</td>
+                <td>None</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
-    </section>
 
-    <section id="why" class="section">
-      <div class="container">
-        <span class="section-label">Why multiphase matters</span>
-        <div class="spacer-24"></div>
-        <div class="panel panel-pad">
-          <div class="two-col">
-            <div>
-              <h2>Casing gas is inherently multiphase.</h2>
-              <div class="spacer-24"></div>
-              <p>That is the core truth your webpage needs to teach. Casing gas is often sold and specified as though it
-                were a dry gas service, but field conditions are rarely that clean. Condensate, produced water,
-                intermittent slugs, contaminants, and changing operating conditions are exactly what make conventional
-                casing gas compressors unreliable.</p>
-              <div class="checklist">
-                <div class="check"><i></i><span>Scrubbers and separators reduce liquid carryover, but they do not
-                    guarantee a perfectly dry gas stream in the real world.</span></div>
-                <div class="check"><i></i><span>Slug events and unstable operating conditions still reach the compressor
-                    and create the conditions that cause damage.</span></div>
-                <div class="check"><i></i><span>If the machine is only designed for gas-only assumptions, the operator
-                    ends up buying downtime, intervention, and maintenance risk.</span></div>
-              </div>
-            </div>
-            <div class="stack">
-              <div class="tile">
-                <h3>What most systems assume</h3>
-                <p>Clean gas. Stable flow. Perfect separation. No meaningful liquid carryover. Minimal upset conditions.
-                </p>
-              </div>
-              <div class="tile">
-                <h3>What casing gas actually looks like</h3>
-                <p>Variable gas quality, intermittent liquids, pressure swings, slug events, corrosive service, remote
-                  operation, and the need for high uptime with low intervention.</p>
-              </div>
-              <div class="tile">
-                <h3>What that means commercially</h3>
-                <p>Multiphase capability is not a nice-to-have. It is the reason a casing gas recovery system will either
-                  keep running or become another maintenance burden.</p>
-              </div>
-            </div>
+      <div class="spec-mobile">
+
+        <article class="spec-mobile-card interactive-card swipe-left">
+          <div class="spec-mobile-head">
+            <h3>1.0 [35]</h3>
+            <div class="model-badge">ü HP</div>
           </div>
-          <div class="flow">
-            <div class="flow-step">Casing gas stream</div>
-            <div class="flow-arrow">→</div>
-            <div class="flow-step">Liquids + slugs + variability</div>
-            <div class="flow-arrow">→</div>
-            <div class="flow-step">Conventional failures</div>
-            <div class="flow-arrow">→</div>
-            <div class="flow-step">Fluidstream multiphase handling</div>
+          <div class="spec-mobile-grid">
+            <div><span>Flow @ 5 psi<strong>1.3 [46] mcf/d</strong></div>
+            <div><span>Flow @ 50 psi<strong>1207 [175] mcf/d</strong></div>
+            <div><span>Max ΔP<strong>15 psig</strong></div>
+            <div><span>H₂S handling<strong>Included</strong></div>
+            <div><span>Autonomous<strong>Included</strong></div>
+            <div><span>Remote / HMI<strong>None</strong></div>
           </div>
+        </article>
+
+        <article class="spec-mobile-card interactive-card swipe-left">
+          <div class="spec-mobile-head">
+            <h3>3.0 [106]</h3>
+            <div class="model-badge">ü HP</div>
+          </div>
+          <div class="spec-mobile-grid">
+            <div><span>Flow @ 5 psi<strong>3.8 [134] mcf/d</strong></div>
+            <div><span>Flow @ 50 psi<strong>1034 [150] mcf/d</strong></div>
+            <div><span>Max ΔP<strong>50 psig</strong></div>
+            <div><span>H₂S handling<strong>Included</strong></div>
+            <div><span>Autonomous<strong>Included</strong></div>
+            <div><span>Remote / HMI<strong>None</strong></div>
+          </div>
+        </article>
+
+        <article class="spec-mobile-card interactive-card swipe-left">
+          <div class="spec-mobile-head">
+            <h3>1.8 [64]</h3>
+            <div class="model-badge">ü HP</div>
+          </div>
+          <div class="spec-mobile-grid">
+            <div><span>Flow @ 5 psi<strong>2.2 [78] mcf/d</strong></div>
+            <div><span>Flow @ 50 psi<strong>1896 [275] mcf/d</strong></div>
+            <div><span>Max ΔP<strong>50 psig</strong></div>
+            <div><span>H₂S handling<strong>Included</strong></div>
+            <div><span>Autonomous<strong>Included</strong></div>
+            <div><span>Remote / HMI<strong>None</strong></div>
+          </div>
+        </article>
+
+        <article class="spec-mobile-card interactive-card swipe-left">
+          <div class="spec-mobile-head">
+            <h3>3.1 [109]</h3>
+            <div class="model-badge">ü HP</div>
+          </div>
+          <div class="spec-mobile-grid">
+            <div><span>Flow @ 5 psi<strong>3.9 [138] mcf/d</strong></div>
+            <div><span>Flow @ 50 psi<strong>1896 [275] mcf/d</strong></div>
+            <div><span>Max ΔP<strong>100 psig</strong></div>
+            <div><span>H₂S handling<strong>Included</strong></div>
+            <div><span>Autonomous<strong>Included</strong></div>
+            <div><span>Remote / HMI<strong>None</strong></div>
+          </div>
+        </article>
+
+        <article class="spec-mobile-card interactive-card swipe-left">
+          <div class="spec-mobile-head">
+            <h3>5.7 [201]</h3>
+            <div class="model-badge">ü HP</div>
+          </div>
+          <div class="spec-mobile-grid">
+            <div><span>Flow @ 5 psi<strong>7.1 [251] mcf/d</strong></div>
+            <div><span>Flow @ 50 psi<strong>1034 [150] mcf/d</strong></div>
+            <div><span>Max ΔP<strong>100 psig</strong></div>
+            <div><span>H₂S handling<strong>Included</strong></div>
+            <div><span>Autonomous<strong>Included</strong></div>
+            <div><span>Remote / HMI<strong>None</strong></div>
+          </div>
+        </article>
+
+        <article class="spec-mobile-card interactive-card swipe-left">
+          <div class="spec-mobile-head">
+            <h3>5.7 [201]</h3>
+            <div class="model-badge">ü HP</div>
+          </div>
+          <div class="spec-mobile-grid">
+            <div><span>Flow @ 5 psi<strong>7.1 [251] mcf/d</strong></div>
+            <div><span>Flow @ 50 psi<strong>1379 [200] mcf/d</strong></div>
+            <div><span>Max ΔP<strong>100 psig</strong></div>
+            <div><span>H₂S handling<strong>Included</strong></div>
+            <div><span>Autonomous<strong>Included</strong></div>
+            <div><span>Remote / HMI<strong>None</strong></div>
+          </div>
+        </article>
+
+        <article class="spec-mobile-card interactive-card swipe-left">
+          <div class="spec-mobile-head">
+            <h3>10.1 [357]</h3>
+            <div class="model-badge">ü HP</div>
+          </div>
+          <div class="spec-mobile-grid">
+            <div><span>Flow @ 5 psi<strong>12.7 [449] mcf/d</strong></div>
+            <div><span>Flow @ 50 psi<strong>1896 [275] mcf/d</strong></div>
+            <div><span>Max ΔP<strong>150 psig</strong></div>
+            <div><span>H₂S handling<strong>Included</strong></div>
+            <div><span>Autonomous<strong>Included</strong></div>
+            <div><span>Remote / HMI<strong>None</strong></div>
+          </div>
+        </article>
+
+        <article class="spec-mobile-card interactive-card swipe-left">
+          <div class="spec-mobile-head">
+            <h3>10.3 [364]</h3>
+            <div class="model-badge">ü HP</div>
+          </div>
+          <div class="spec-mobile-grid">
+            <div><span>Flow @ 5 psi<strong>13.0 [459] mcf/d</strong></div>
+            <div><span>Flow @ 50 psi<strong>1896 [275] mcf/d</strong></div>
+            <div><span>Max ΔP<strong>150 psig</strong></div>
+            <div><span>H₂S handling<strong>Included</strong></div>
+            <div><span>Autonomous<strong>Included</strong></div>
+            <div><span>Remote / HMI<strong>None</strong></div>
+          </div>
+        </article>
+      </div>
+
+      <div class="notes">
+        <strong>Engineering notes</strong>
+        <ul class="bullet">
+
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap py-12">
+      <div class="case-study">
+        <div class="eyebrow2">Field proof</div>
+        <h2>Proven in severe multiphase service that is harder than typical casing gas carryover.</h2>
+        <p>The current Fluidstream case study remains powerful proof for casing gas buyers because continuous liquid-heavy
+          multiphase service is a tougher duty than the intermittent liquid carryover most casing gas systems see. If the
+          technology performs in severe multiphase conditions, it supports a strong argument for casing gas reliability.
+        </p>
+
+        <div class="stat-grid">
+          <div class="stat">
+            <div class="label">Operating Challenge</div>
+            <div class="value">Severe</div>
+            <div>Variable multiphase production with liquids present continuously rather than only during occasional upset
+              conditions.</div>
+          </div>
+          <div class="stat">
+            <div class="label">Surface Simplicity</div>
+            <div class="value">No added separation</div>
+            <div>Stable operation achieved without adding separation equipment or extra site infrastructure.</div>
+          </div>
+          <div class="stat">
+            <div class="label">Casing Gas Relevance</div>
+            <div class="value">High</div>
+            <div>Demonstrates performance in conditions more severe than typical casing gas liquid carryover.</div>
+          </div>
+        </div>
+
+        <blockquote>“Fluidstream’s multiphase compression didn’t just improve performance — it transformed non-producing
+          wells into revenue-generating assets, delivering stable operation in severe multiphase conditions without adding
+          separation equipment or infrastructure.”</blockquote>
+        <div class="quote-src">Field performance proof relevant to the CompressionCommander™ reliability story in casing
+          gas service.</div>
+
+        <p>Read the full case study for the operating challenge, installation context, runtime importance, and why proven
+          severe multiphase performance supports stronger casing gas reliability expectations.</p>
+        <div class="btn-row" style="margin-bottom:0;">
+          <a class="btn btn-primary" href="#">Read More</a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section" style="padding-top:0">
-      <div class="container">
-        <span class="section-label">Conventional vs Fluidstream</span>
-        <div class="spacer-24"></div>
-        <div class="compare">
-          <div class="compare-card left">
-            <h3>Conventional casing gas approach</h3>
-            <ul>
-              <li>Relies on scrubbers and separation equipment to protect a gas-only compressor.</li>
-              <li>Still remains vulnerable when liquids break through or slug conditions develop.</li>
-              <li>Creates more equipment, more footprint, more operator attention, and more failure points.</li>
-              <li>Turns casing gas recovery into a constant reliability problem instead of a simple recovery solution.
-              </li>
-            </ul>
-          </div>
-          <div class="compare-card right">
-            <h3>Fluidstream multiphase approach</h3>
-            <ul>
-              <li>Built around the idea that casing gas streams are imperfect and often multiphase.</li>
-              <li>Designed to keep operating through the upset conditions that shut down conventional systems.</li>
-              <li>Reduces dependence on separation hardware as the only protection strategy.</li>
-              <li>Gives operators a more robust, lower-intervention path to continuous recovery.</li>
-            </ul>
-          </div>
+  <section id="application-review" class="cta-1">
+    <div class="wrap py-12">
+      <div class="cta-box">
+        <div>
+          <div class="section-kicker">Customized Technical CTA</div>
+          <h2>Submit your casing gas conditions for a CompressionCommander™ application review.</h2>
+          <p>
+            If your current system is vulnerable to liquid carryover, scrubber breakthrough, slug-related trips, corrosive
+            service, or too much operator intervention, Fluidstream can review your casing gas stream, pressure targets,
+            maintenance pain points, and site constraints to identify a lower-maintenance CompressionCommander™
+            configuration built for the duty you actually have.
+          </p>
         </div>
-      </div>
-    </section>
-
-    <section id="difference" class="section">
-      <div class="container">
-        <span class="section-label">The Fluidstream difference</span>
-        <div class="spacer-24"></div>
-        <div class="panel panel-pad">
-          <div class="two-col">
-            <div>
-              <h2>Designed for the flow you actually have.</h2>
-              <div class="spacer-18"></div>
-              <p>Fluidstream should not be positioned as just another casing gas compressor. It should be positioned as a
-                casing gas solution built around multiphase behavior. That distinction matters because it explains why the
-                system can create value where conventional designs struggle.</p>
-              <div class="checklist">
-                <div class="check"><i></i><span>Handles gas service in applications where liquids, slugs, and unstable
-                    operating conditions are part of the real envelope.</span></div>
-                <div class="check"><i></i><span>Sealed architecture supports corrosive and H₂S service while minimizing
-                    exposure risk.</span></div>
-                <div class="check"><i></i><span>Sand-conscious sealing philosophy improves survivability in harsher field
-                    environments.</span></div>
-                <div class="check"><i></i><span>Autonomous controls support extended operation without constant operator
-                    intervention.</span></div>
-              </div>
-            </div>
-            <div class="stack">
-              <div class="tile">
-                <h3>No piston tracking claim. Strong protection story.</h3>
-                <p>Fluidstream does <strong>not</strong> need to claim piston tracking. The stronger and more defensible
-                  message is that the system detects <em>harmful operating conditions</em> associated with liquids or
-                  slugs and automatically mitigates risk before those conditions turn into equipment damage.</p>
-              </div>
-              <div class="tile">
-                <h3>Control strategy operators will trust</h3>
-                <p>Rather than claiming perfect knowledge of liquid presence inside the compressor, Fluidstream monitors
-                  system behavior and responds to the conditions that indicate potential damage. That is credible,
-                  field-aligned, and commercially strong.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="spacer-30"></div>
-
-        <div class="dark-block">
-          <div class="panel-pad">
-            <span class="section-label"
-              style="background:rgba(255,255,255,.10); color:white; border-color:rgba(255,255,255,.14)">Intelligent
-              protection system</span>
-            <div class="spacer-24"></div>
-            <h2>Detects risk conditions. Responds automatically. Protects continuously.</h2>
-            <div class="spacer-18"></div>
-            <p>This is the right technical story for your casing gas page. Fluidstream systems do not need to promise
-              direct liquid detection. Instead, they monitor operating behavior and identify the conditions that suggest
-              liquids, slugs, or other upset events are creating damage risk. The controls then adjust operation to
-              protect components and preserve stability.</p>
-            <div class="dark-grid">
-              <div class="dark-card">
-                <h3>What it detects</h3>
-                <p>Pressure behavior, dynamic system response, load changes, and other operating patterns that indicate
-                  potential damage conditions associated with liquid carryover or slug events.</p>
-              </div>
-              <div class="dark-card">
-                <h3>What it does</h3>
-                <p>Automatically modifies operation to mitigate risk, reduce mechanical stress, and keep the system in a
-                  safer operating window without relying on piston tracking.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="specs" class="section">
-      <div class="container">
-        <span class="section-label">Specifications</span>
-        <div class="spacer-24"></div>
-        <div class="panel panel-pad">
-          <div class="two-col">
-            <div>
-              <h2>CompressionCommander model range for casing gas applications.</h2>
-              <div class="spacer-18"></div>
-              <p>The uploaded specification sheet gives you a strong technical credibility section. Use it to show that
-                Fluidstream is not a one-size-fits-all product, but a family of casing gas solutions that can be matched
-                to different inlet pressures, gas rates, and field constraints.</p>
-            </div>
-            <div class="stack">
-              <div class="tile">
-                <h3>Quick highlights</h3>
-                <p>15 to 150 HP model range, up to 275 psig pressure differential, H₂S handling, 3-stage cold weather
-                  startup, autonomous controller, and color touchscreen with remote control across the listed
-                  configurations.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="spec-wrap">
-            <table>
-              <thead>
-                <tr>
-                  <th>Model</th>
-                  <th>Flow @ 5 psi</th>
-                  <th>Flow @ 10 psi</th>
-                  <th>Flow @ 20 psi</th>
-                  <th>Flow @ 30 psi</th>
-                  <th>Flow @ 50 psi</th>
-                  <th>Max ΔP</th>
-                  <th>Motor HP</th>
-                  <th>H₂S</th>
-                  <th>Cold weather</th>
-                  <th>Autonomous</th>
-                  <th>Remote / HMI</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>CC825</strong><span class='muted'>(015013)</span></td>
-                  <td>35</td>
-                  <td>46</td>
-                  <td>64</td>
-                  <td>81</td>
-                  <td>120</td>
-                  <td>175</td>
-                  <td>15</td>
-                  <td>Yes</td>
-                  <td>Yes</td>
-                  <td>Yes</td>
-                  <td>Yes</td>
-                </tr>
-                <tr>
-                  <td><strong>CC1235</strong><span class='muted'>(050035)</span></td>
-                  <td>106</td>
-                  <td>134</td>
-                  <td>187</td>
-                  <td>240</td>
-                  <td>350</td>
-                  <td>150</td>
-                  <td>50</td>
-                  <td>Yes</td>
-                  <td>Yes</td>
-                  <td>Yes</td>
-                  <td>Yes</td>
-                </tr>
-                <tr>
-                  <td><strong>CC1245</strong><span class='muted'>(050035)</span></td>
-                  <td>64</td>
-                  <td>78</td>
-                  <td>109</td>
-                  <td>141</td>
-                  <td>208</td>
-                  <td>275</td>
-                  <td>50</td>
-                  <td>Yes</td>
-                  <td>Yes</td>
-                  <td>Yes</td>
-                  <td>Yes</td>
-                </tr>
-                <tr>
-                  <td><strong>CC1245</strong><span class='muted'>(100060)</span></td>
-                  <td>109</td>
-                  <td>138</td>
-                  <td>194</td>
-                  <td>251</td>
-                  <td>364</td>
-                  <td>275</td>
-                  <td>100</td>
-                  <td>Yes</td>
-                  <td>Yes</td>
-                  <td>Yes</td>
-                  <td>Yes</td>
-                </tr>
-                <tr>
-                  <td><strong>CC1645</strong><span class='muted'>(100060)</span></td>
-                  <td>201</td>
-                  <td>251</td>
-                  <td>350</td>
-                  <td>452</td>
-                  <td>653</td>
-                  <td>150</td>
-                  <td>100</td>
-                  <td>Yes</td>
-                  <td>Yes</td>
-                  <td>Yes</td>
-                  <td>Yes</td>
-                </tr>
-                <tr>
-                  <td><strong>CC2270</strong><span class='muted'>(100128)</span></td>
-                  <td>201</td>
-                  <td>251</td>
-                  <td>350</td>
-                  <td>452</td>
-                  <td>653</td>
-                  <td>200</td>
-                  <td>100</td>
-                  <td>Yes</td>
-                  <td>Yes</td>
-                  <td>Yes</td>
-                  <td>Yes</td>
-                </tr>
-                <tr>
-                  <td><strong>CC2270</strong><span class='muted'>(150128)</span></td>
-                  <td>357</td>
-                  <td>449</td>
-                  <td>629</td>
-                  <td>809</td>
-                  <td>1,169</td>
-                  <td>275</td>
-                  <td>150</td>
-                  <td>Yes</td>
-                  <td>Yes</td>
-                  <td>Yes</td>
-                  <td>Yes</td>
-                </tr>
-                <tr>
-                  <td><strong>CC2270</strong><span class='muted'>(150128)</span></td>
-                  <td>364</td>
-                  <td>459</td>
-                  <td>643</td>
-                  <td>826</td>
-                  <td>1,197</td>
-                  <td>275</td>
-                  <td>150</td>
-                  <td>Yes</td>
-                  <td>Yes</td>
-                  <td>Yes</td>
-                  <td>Yes</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <p class="note">Flow values shown above are MCFD from the uploaded CompressionCommander specification sheet. The
-            sheet also notes that max gas rates vary with inlet pressure, gas content, and other factors, and that gas
-            rates are reduced by the amount of liquids in the total fluid stream. Additional units in parallel or series
-            can increase total gas rate or pressure differential. Package-specific sizing should be confirmed against
-            actual field conditions.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="proof" class="section">
-      <div class="container">
-        <span class="section-label">Field proof</span>
-        <div class="spacer-24"></div>
-        <div class="panel panel-pad">
-          <div class="two-col">
-            <div>
-              <h2>Use your strongest multiphase case study as proof.</h2>
-              <div class="spacer-18"></div>
-              <p>Because you do not have a casing gas-specific case study, the best move is to use your most severe
-                liquid-heavy multiphase example and position it correctly: proven performance in conditions that are
-                harsher than typical casing gas service.</p>
-              <div class="checklist">
-                <div class="check"><i></i><span>Continuous liquid flow is harder than intermittent casing gas liquid
-                    carryover.</span></div>
-                <div class="check"><i></i><span>If the system performs in severe multiphase service, it supports a strong
-                    argument for casing gas reliability.</span></div>
-                <div class="check"><i></i><span>This gives your page real proof without pretending the case study is
-                    something it is not.</span></div>
-              </div>
-            </div>
-            <div class="quote">
-              <div class="quote-mark">“</div>
-              <p>Fluidstream’s multiphase compression didn’t just improve performance — it transformed non-producing wells
-                into revenue-generating assets, delivering stable operation in severe multiphase conditions without adding
-                separation equipment or infrastructure.</p>
-              <small>Use as “Proven in severe multiphase conditions” on the casing gas page</small>
-            </div>
+        <div class="cta-panel interactive-card swipe-left">
+          <h3>What to send for review</h3>
+          <ul>
+            <li>Casing gas rate and expected operating range</li>
+            <li>Inlet pressure, discharge pressure, and flare or recovery target</li>
+            <li>Expected liquids, slugging behavior, and scrubber limitations</li>
+            <li>H₂S, cold-weather, sand, or corrosive-service requirements</li>
+            <li>Remote-control needs, maintenance issues, and uptime priorities</li>
+          </ul>
+          <div class="btn-row" style="margin-bottom:0;">
+            <a class="btn-1 btn-primary" href="#">Request CompressionCommander™ Review</a>
+            <a class="btn-1 btn-secondary-1" href="#specifications">Review Specifications</a>
           </div>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
+
+
 @endsection
