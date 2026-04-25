@@ -220,10 +220,10 @@
     }
 
     /* .swipe-left:after {
-                                                                        right: -135%;
-                                                                        transform: skewX(24deg);
-                                                                        background: linear-gradient(270deg, transparent 0%, rgba(21, 209, 255, .18) 50%, transparent 100%);
-                                                                      } */
+                                                                                                    right: -135%;
+                                                                                                    transform: skewX(24deg);
+                                                                                                    background: linear-gradient(270deg, transparent 0%, rgba(21, 209, 255, .18) 50%, transparent 100%);
+                                                                                                  } */
 
     .swipe-left:hover,
     .swipe-left:hover,
@@ -239,13 +239,13 @@
     }
 
     /* 
-                                                                                .swipe-left:hover:before,
-                                                                                .swipe-left:hover:before,
-                                                                                .hero-card:hover:before,
-                                                                                .model-card:hover:before,
-                                                                                .spec-mobile-card:hover:before {
-                                                                                  opacity: 1;
-                                                                                } */
+                                                                                                            .swipe-left:hover:before,
+                                                                                                            .swipe-left:hover:before,
+                                                                                                            .hero-card:hover:before,
+                                                                                                            .model-card:hover:before,
+                                                                                                            .spec-mobile-card:hover:before {
+                                                                                                              opacity: 1;
+                                                                                                            } */
 
     .swipe-left:hover:after,
     .hero-card:hover:after,
@@ -556,28 +556,31 @@
       font-size: 15px;
     }
 
-    .section-kicker {
-      font-size: 12px;
-      letter-spacing: .11em;
-      text-transform: uppercase;
-      color: var(--blue);
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
+    /* 
+                                .kicker mb-2 {
+                                  font-size: 12px;
+                                  letter-spacing: .11em;
+                                  text-transform: uppercase;
+                                  color: var(--blue);
+                                  font-weight: 700;
+                                  margin-bottom: 10px;
+                                } */
 
     h2 {
       margin: 0 0 16px;
-      font-size: 40px;
-      line-height: 1.08;
-      letter-spacing: -.02em;
-      color: #0f1013;
+      font-size: clamp(1.9rem, 3vw, 3rem);
+      line-height: 1.05;
+      letter-spacing: -.04em;
+      max-width: 23ch;
+      color: #1f1f21;
     }
 
     .lead {
-      margin: 0 0 30px;
-      max-width: 940px;
-      font-size: 18px;
-      color: var(--muted);
+      margin-bottom: 20px;
+      max-width: 59ch;
+      font-size: 16px;
+      line-height: 1.75;
+      color: #424f5d;
     }
 
     .grid-3 {
@@ -716,6 +719,7 @@
     }
 
     .case-study p {
+      max-width: 62ch;
       color: #ebf4ff;
       margin: 0 0 16px;
       font-size: 17px;
@@ -731,7 +735,7 @@
     .stat {
       background: rgba(255, 255, 255, .1);
       border: 1px solid rgba(255, 255, 255, .14);
-      border-radius: 22px;
+      border-radius: 7px;
       padding: 22px 20px;
     }
 
@@ -835,7 +839,7 @@
     .cta-panel {
       background: rgba(255, 255, 255, .1);
       border: 1px solid rgb(47 47 47 / 14%);
-      border-radius: 24px;
+      border-radius: 7px;
       padding: 24px;
     }
 
@@ -965,7 +969,7 @@
   <section>
     <div class="wrap py-12">
 
-      <div class="section-kicker">Built for reality</div>
+      <div class="kicker mb-2">Built for reality</div>
       <h2>Designed for mixed-phase, unstable field conditions.</h2>
       <p class="lead">
         MultiphaseCommander™ is built for gas streams with liquids present rather than dry-gas assumptions. It combines
@@ -998,7 +1002,7 @@
   <section class="band">
     <div class="wrap py-12">
 
-      <div class="section-kicker">The challenge</div>
+      <div class="kicker mb-2">The challenge</div>
       <h2>Boosting production when gas and liquids move together.</h2>
       <p class="lead">
         In real production systems, gas rarely moves alone. Liquids, unstable flow, and rising backpressure create a
@@ -1030,7 +1034,7 @@
   <section>
     <div class="wrap py-12">
 
-      <div class="section-kicker">How MultiphaseCommander™ solves it</div>
+      <div class="kicker mb-2">How MultiphaseCommander™ solves it</div>
       <h2>Multiphase boosting that works on the stream you actually have.</h2>
       <p class="lead">
         MultiphaseCommander™ is a multiphase booster and transfer solution that boosts the untreated stream directly,
@@ -1068,7 +1072,7 @@
   <section class="band">
     <div class="wrap py-12">
 
-      <div class="section-kicker">Production impact</div>
+      <div class="kicker mb-2">Production impact</div>
       <h2>Why this matters to production performance.</h2>
       <p class="lead">
         MultiphaseCommander™ is more than surface equipment. It is a production tool that improves the conditions the well
@@ -1102,7 +1106,7 @@
   <section id="technology-benefits">
     <div class="wrap py-12">
 
-      <div class="section-kicker">Technology benefits</div>
+      <div class="kicker mb-2">Technology benefits</div>
       <h2>Built on Fluidstream multiphase technology.</h2>
       <p class="lead">
         MultiphaseCommander™ is built on Fluidstream’s core technology platform: direct liquid handling inside
@@ -1152,20 +1156,63 @@
 
         <div class="highlight-box-1 interactive-card swipe-left">
           <h3>Conventional systems vs. MultiphaseCommander™</h3>
-          <p>Conventional gas-only systems are usually strongest when the field delivers stable, dry gas and low
+          <p>
+            Conventional gas-only systems are usually strongest when the field delivers stable, dry gas and low
             variability. MultiphaseCommander™ is positioned for a different duty: mixed-phase streams, increasing
-            backpressure, unstable flow, and the need to keep gas and liquids moving together.</p>
-          <ul class="bullet">
-            <li><strong>Conventional gas-only boosters:</strong> more sensitive to liquid carryover, often rely on extra
-              site equipment, and can become maintenance-heavy when forced into mixed-phase service.</li>
-            <li><strong>MultiphaseCommander™:</strong> designed for gas streams with liquids present, supports multiphase
-              boosting and transfer directly, and reduces dependence on added wellsite handling equipment in suitable
-              applications.</li>
-            <li><strong>Conventional separation-heavy layouts:</strong> more footprint, more interfaces, more pressure
-              drop, and more equipment to maintain.</li>
-            <li><strong>MultiphaseCommander™ approach:</strong> lower backpressure, move untreated flow, and support
-              centralized processing or leaner site architecture where it makes operational and economic sense.</li>
+            backpressure, unstable flow, and the need to keep gas and liquids moving together.
+          </p>
+
+          <ul class="bullet space-y-4">
+            <li class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 text-[#0018dc] mt-[4px]" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h12" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
+              </svg>
+              <span>
+                <strong>Conventional gas-only boosters:</strong> more sensitive to liquid carryover, often rely on extra
+                site equipment, and can become maintenance-heavy when forced into mixed-phase service.
+              </span>
+            </li>
+
+            <li class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 text-[#0018dc] mt-[4px]" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h12" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
+              </svg>
+              <span>
+                <strong>MultiphaseCommander™:</strong> designed for gas streams with liquids present, supports multiphase
+                boosting and transfer directly, and reduces dependence on added wellsite handling equipment in suitable
+                applications.
+              </span>
+            </li>
+
+            <li class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 text-[#0018dc] mt-[4px]" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h12" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
+              </svg>
+              <span>
+                <strong>Conventional separation-heavy layouts:</strong> more footprint, more interfaces, more pressure
+                drop, and more equipment to maintain.
+              </span>
+            </li>
+
+            <li class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 text-[#0018dc] mt-[4px]" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h12" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
+              </svg>
+              <span>
+                <strong>MultiphaseCommander™ approach:</strong> lower backpressure, move untreated flow, and support
+                centralized processing or leaner site architecture where it makes operational and economic sense.
+              </span>
+            </li>
           </ul>
+
           <p style="margin-top:16px;">
             <a href="https://fluidstream.nexolioit.com/technology"
               style="color:var(--blue);font-weight:700;text-decoration:none;">View technology page →</a>
@@ -1181,7 +1228,7 @@
   <section class="band">
     <div class="wrap py-12">
 
-      <div class="section-kicker">The Fluidstream advantage</div>
+      <div class="kicker mb-2">The Fluidstream advantage</div>
       <h2>Specific reasons to choose MultiphaseCommander™.</h2>
       <p class="lead">
         MultiphaseCommander™ combines true multiphase boosting, facility simplification potential, strong control
@@ -1215,7 +1262,7 @@
   <section>
     <div class="wrap py-12">
 
-      <div class="section-kicker">Applications</div>
+      <div class="kicker mb-2">Applications</div>
       <h2>Applications for MultiphaseCommander™.</h2>
       <p class="lead">
         MultiphaseCommander™ is suited to field problems where gas definitely has liquids present and where lower
@@ -1298,7 +1345,7 @@
   <section id="specifications" class="band">
     <div class="wrap py-12">
 
-      <div class="section-kicker">Technical specifications</div>
+      <div class="kicker mb-2">Technical specifications</div>
       <h2>Engineering validation for the MultiphaseCommander™ family.</h2>
       <p class="lead">
         Compare the model range visually, then review the detailed specifications for sizing, horsepower, gas-rate
@@ -1776,13 +1823,12 @@
     </div>
   </section>
 
-
   <section class="cta">
     <div class="wrap py-12">
 
       <div class="cta-box">
         <div>
-          <div class="section-kicker" style="color:#0018dc;">Customized Technical CTA</div>
+          <div class="kicker mb-2" style="color:#0018dc;">Customized Technical CTA</div>
           <h2>Submit your fluid conditions for a MultiphaseCommander™ application review.</h2>
           <p>
             If your system is constrained by liquid-loaded gas flow, unstable operating conditions, rising system
@@ -1791,15 +1837,57 @@
             MultiphaseCommander™ configuration.
           </p>
         </div>
+
         <div class="cta-panel interactive-card swipe-left">
           <h3>What to send for review</h3>
-          <ul>
-            <li>Gas rate, liquid rate, and fluid composition</li>
-            <li>Inlet and discharge pressure targets</li>
-            <li>Backpressure or gathering-system constraints</li>
-            <li>Artificial-lift or pad-level operating context</li>
-            <li>H₂S, cold-weather, sand, or remote-control requirements</li>
+
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 text-[#0018dc] mt-[4px]" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h12" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
+              </svg>
+              <span>Gas rate, liquid rate, and fluid composition</span>
+            </li>
+
+            <li class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 text-[#0018dc] mt-[4px]" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h12" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
+              </svg>
+              <span>Inlet and discharge pressure targets</span>
+            </li>
+
+            <li class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 text-[#0018dc] mt-[4px]" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h12" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
+              </svg>
+              <span>Backpressure or gathering-system constraints</span>
+            </li>
+
+            <li class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 text-[#0018dc] mt-[4px]" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h12" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
+              </svg>
+              <span>Artificial-lift or pad-level operating context</span>
+            </li>
+
+            <li class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 text-[#0018dc] mt-[4px]" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h12" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
+              </svg>
+              <span>H₂S, cold-weather, sand, or remote-control requirements</span>
+            </li>
           </ul>
+
           <div class="btn-row" style="margin-bottom:0;">
             <a class="btn btn-1 btn-primary" href="#">Request MultiphaseCommander™ Review</a>
             <a class="btn btn-1 btn-secondary-1" href="#specifications">Review Specifications</a>

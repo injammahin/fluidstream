@@ -358,7 +358,7 @@
 
                 {{-- PATENT PAGE --}}
                 <div class="fsf-footer-col">
-                    <h3 class="fsf-footer-col-title">Patent Page</h3>
+                    <h3 class="fsf-footer-col-title">Patents</h3>
                     <ul class="fsf-footer-list">
                         <li class="fsf-footer-list-item">
                             <a href="/patented-technology#why-patents-matter" class="fsf-footer-link">

@@ -137,7 +137,6 @@
     .card,
     .feature,
     .highlight-box,
-    .cta-panel,
     .model-card,
     .spec-mobile-card {
       position: relative;
@@ -151,7 +150,6 @@
     .card>*,
     .feature>*,
     .highlight-box>*,
-    .cta-panel>*,
     .model-card>*,
     .spec-mobile-card>* {
       position: relative;
@@ -217,8 +215,7 @@
     .swipe-right:hover,
     .model-card:hover,
     .spec-mobile-card:hover,
-    .blue-fill:hover,
-    .cta-panel:hover {
+    .blue-fill:hover {
       transform: translateY(-3px);
       border-color: #0018dc !important;
       /* box-shadow: 0 18px 36px rgba(16, 42, 67, .08); */
@@ -245,53 +242,9 @@
       border-color: #b9d0ff;
     }
 
-    .blue-fill:before,
-    .cta-panel:before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, #0018dc 0%, #1438ff 62%, #0b7fe0 100%);
-      transform: translateY(100%);
-      transition: transform .52s cubic-bezier(.22, .61, .36, 1);
-      z-index: 0;
-      pointer-events: none;
-    }
-
-    .blue-fill:after,
-    .cta-panel:after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at 82% 18%, rgba(21, 209, 255, .24), transparent 30%);
-      opacity: 0;
-      transition: opacity .32s ease;
-      z-index: 1;
-      pointer-events: none;
-    }
-
-    .blue-fill:hover:before,
-    .cta-panel:hover:before {
-      transform: translateY(0);
-    }
-
-    .blue-fill:hover:after,
-    .cta-panel:hover:after {
-      opacity: 1;
-    }
-
     .blue-fill:hover {
       box-shadow: 0 24px 58px rgba(0, 24, 220, .18);
       border-color: #0018dc;
-    }
-
-    .blue-fill:hover h3,
-    .blue-fill:hover p,
-    .blue-fill:hover li,
-    .blue-fill:hover strong,
-    .cta-panel:hover h3,
-    .cta-panel:hover p,
-    .cta-panel:hover li {
-      color: #fff !important;
     }
 
     .blue-fill:hover .num {
@@ -299,12 +252,9 @@
       color: #fff;
     }
 
-    .highlight-box:hover a {
-      color: #fff !important;
-    }
 
     .cta-panel:hover {
-      box-shadow: 0 24px 52px rgba(0, 24, 220, .18);
+      /* box-shadow: 0 24px 52px rgba(0, 24, 220, .18); */
       border-color: rgba(255, 255, 255, .22);
     }
 
@@ -530,28 +480,31 @@
       font-size: 15px
     }
 
-    .section-kicker {
-      font-size: 12px;
-      letter-spacing: .11em;
-      text-transform: uppercase;
-      color: var(--blue);
-      font-weight: 700;
-      margin-bottom: 10px
-    }
+    /* 
+                                .kicker {
+                                  font-size: 12px;
+                                  letter-spacing: .11em;
+                                  text-transform: uppercase;
+                                  color: var(--blue);
+                                  font-weight: 700;
+                                  margin-bottom: 10px
+                                } */
 
     h2 {
       margin: 0 0 16px;
-      font-size: 40px;
-      line-height: 1.08;
-      letter-spacing: -.02em;
-      color: #232325
+      font-size: clamp(1.9rem, 3vw, 3rem);
+      line-height: 1.05;
+      letter-spacing: -.04em;
+      max-width: 26ch;
+      color: #1f1f21;
     }
 
     .lead {
-      margin: 0 0 30px;
-      max-width: 960px;
-      font-size: 18px;
-      color: var(--muted)
+      margin-bottom: 20px;
+      max-width: 68ch;
+      font-size: 16px;
+      line-height: 1.75;
+      color: #424f5d;
     }
 
     .grid-3 {
@@ -740,7 +693,7 @@
     .stat {
       background: rgba(255, 255, 255, .1);
       border: 1px solid rgba(255, 255, 255, .14);
-      border-radius: 22px;
+      border-radius: 7px;
       padding: 22px 20px
     }
 
@@ -776,10 +729,10 @@
     }
 
     /* .cta {
-                              background: linear-gradient(120deg, #061760, #0018dc 56%, #0c79cf);
-                              color: #fff;
-                              padding: 72px 0
-                            } */
+                                                          background: linear-gradient(120deg, #061760, #0018dc 56%, #0c79cf);
+                                                          color: #fff;
+                                                          padding: 72px 0
+                                                        } */
 
     .cta-box {
       display: grid;
@@ -789,21 +742,21 @@
     }
 
     /* .cta h2 {
-                                color: #fff;
-                                margin-bottom: 14px
-                              }
+                                                            color: #fff;
+                                                            margin-bottom: 14px
+                                                          }
 
-                              .cta p {
-                                margin: 0;
-                                color: #e3ecff;
-                                font-size: 18px;
-                                max-width: 780px
-                              } */
+                                                          .cta p {
+                                                            margin: 0;
+                                                            color: #e3ecff;
+                                                            font-size: 18px;
+                                                            max-width: 780px
+                                                          } */
 
     .cta-panel {
       background: rgba(255, 255, 255, .1);
       border: 1px solid rgb(87 87 87 / 14%);
-      border-radius: 24px;
+      border-radius: 7px;
       padding: 24px;
     }
 
@@ -938,7 +891,7 @@
 
   <section>
     <div class="wrap py-12">
-      <div class="section-kicker">Why multiphase compression matters</div>
+      <div class="kicker">Why multiphase compression matters</div>
       <h2>Vapor recovery is not a gas-only problem.</h2>
       <p class="lead">
         In many field applications, vapor recovery streams contain more than gas. Entrained liquids, intermittent slugs,
@@ -971,7 +924,7 @@
 
   <section class="band">
     <div class="wrap py-12">
-      <div class="section-kicker">Why VaporCommander™ changes the equation</div>
+      <div class="kicker">Why VaporCommander™ changes the equation</div>
       <h2>Built to outperform gas-only vapor recovery approaches.</h2>
       <p class="lead">
         VaporCommander™ is a multiphase vapor recovery platform built to work with actual field conditions, rather than
@@ -1004,7 +957,7 @@
 
   <section>
     <div class="wrap py-12">
-      <div class="section-kicker">Advantages of the Fluidstream vapor recovery package</div>
+      <div class="kicker">Advantages of the Fluidstream vapor recovery package</div>
       <h2>Built on Fluidstream multiphase technology.</h2>
       <p class="lead">
         VaporCommander™ combines multiphase handling, hazardous-service sealing, intelligent controls, and package
@@ -1051,24 +1004,77 @@
           <p>Buyers evaluating vapor recovery systems are often comparing gas-only VRUs against packages that offer
             varying levels of liquid tolerance. VaporCommander™ is differentiated by a multiphase-first design philosophy
             built around real operating conditions.</p>
-          <ul class="bullet">
-            <li><strong>Handles entrained liquids:</strong> core design premise of the package rather than a narrow
-              tolerance claim.</li>
-            <li><strong>Operates through slugs and upset conditions:</strong> autonomous logic and piston tracking support
-              upset handling.</li>
-            <li><strong>Sealed hazardous-service gland design:</strong> fully sealed gland approach with wear detection.
+
+          <ul class="bullet space-y-4">
+            <li class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 text-[#0018dc] mt-[4px]" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h12" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
+              </svg>
+              <span><strong>Handles entrained liquids:</strong> core design premise of the package rather than a narrow
+                tolerance claim.</span>
             </li>
-            <li><strong>Sand-oriented sealing strategy:</strong> sealing configured to optimize life in sandy
-              applications.</li>
-            <li><strong>System simplicity at the site level:</strong> supports a simpler, broader deployment strategy.
+
+            <li class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 text-[#0018dc] mt-[4px]" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h12" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
+              </svg>
+              <span><strong>Operates through slugs and upset conditions:</strong> autonomous logic and piston tracking
+                support
+                upset handling.</span>
             </li>
-            <li><strong>Range of viable vapor recovery applications:</strong> stronger fit for difficult real-world
-              streams.</li>
+
+            <li class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 text-[#0018dc] mt-[4px]" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h12" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
+              </svg>
+              <span><strong>Sealed hazardous-service gland design:</strong> fully sealed gland approach with wear
+                detection.</span>
+            </li>
+
+            <li class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 text-[#0018dc] mt-[4px]" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h12" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
+              </svg>
+              <span><strong>Sand-oriented sealing strategy:</strong> sealing configured to optimize life in sandy
+                applications.</span>
+            </li>
+
+            <li class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 text-[#0018dc] mt-[4px]" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h12" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
+              </svg>
+              <span><strong>System simplicity at the site level:</strong> supports a simpler, broader deployment
+                strategy.</span>
+            </li>
+
+            <li class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 text-[#0018dc] mt-[4px]" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h12" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
+              </svg>
+              <span><strong>Range of viable vapor recovery applications:</strong> stronger fit for difficult real-world
+                streams.</span>
+            </li>
           </ul>
-          <p style="margin-top:16px;"><a href="https://fluidstream.nexolioit.com/technology"
+
+          <p style="margin-top:16px;">
+            <a href="https://fluidstream.nexolioit.com/technology"
               style="color:var(--blue);font-weight:700;text-decoration:none;">View technology page →</a>
-            &nbsp;&nbsp;|&nbsp;&nbsp; <a href="/patented-technology"
-              style="color:var(--blue);font-weight:700;text-decoration:none;">View patented technology →</a></p>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="/patented-technology" style="color:var(--blue);font-weight:700;text-decoration:none;">View patented
+              technology →</a>
+          </p>
         </div>
       </div>
     </div>
@@ -1077,7 +1083,7 @@
 
   <section class="band" id="specifications">
     <div class="wrap py-12">
-      <div class="section-kicker">Specifications</div>
+      <div class="kicker">Specifications</div>
       <h2>VaporCommander™ model range for vapor recovery deployment.</h2>
       <p class="lead">
         Compare the lineup visually, then review the detailed package data for gas rate, differential pressure,
@@ -1405,7 +1411,7 @@
     <div class="wrap py-12">
       <div class="cta-box">
         <div>
-          <div class="section-kicker">Customized Technical CTA</div>
+          <div class="kicker">Customized Technical CTA</div>
           <h2>Submit your vapor stream conditions for a VaporCommander™ application review.</h2>
           <p>
             If your vapor recovery application includes liquids, slugs, unstable flow, H₂S service, remote operation
@@ -1413,7 +1419,7 @@
             a VaporCommander™ configuration built for stronger uptime, lower intervention, and broader site applicability.
           </p>
         </div>
-        <div class="cta-panel interactive-card wipe-left">
+        <div class="cta-panel interactive-card swipe-left">
           <h3>What to send for review</h3>
           <ul>
             <li>Gas rate, liquid carryover, and composition</li>

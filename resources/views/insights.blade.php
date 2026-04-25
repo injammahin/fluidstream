@@ -72,33 +72,9 @@
             padding-bottom: 64px;
         }
 
-        .fip-breadcrumb {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 26px;
-            font-size: 13px;
-            color: var(--fip-text-muted);
-        }
-
-        .fip-breadcrumb a {
-            color: var(--fip-text-muted);
-            text-decoration: none;
-        }
-
-        .fip-breadcrumb a:hover {
-            color: var(--fip-blue);
-        }
-
-        .fip-breadcrumb-current {
-            color: var(--fip-dark);
-            font-weight: 600;
-        }
-
         .fip-section-head {
             margin-bottom: 28px;
-            max-width: 760px;
+            max-width: 60ch;
         }
 
         .fip-section-label {
@@ -134,24 +110,58 @@
         }
 
         .fip-card {
-            border: 1px solid var(--fip-border);
-            border-radius: 24px;
-            background: var(--fip-white);
-            padding: 24px;
-            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+            position: relative;
+            overflow: hidden;
+            isolation: isolate;
+            display: flex;
+            flex-direction: column;
+            min-height: 330px;
+            border: 1px solid var(--fip-border-soft);
+            border-radius: 7px;
+            background: #ffffff;
+            padding: 28px;
+            transition:
+                transform 0.24s ease,
+                box-shadow 0.24s ease,
+                border-color 0.24s ease,
+                background 0.24s ease;
+        }
+
+        .fip-card::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--fip-blue);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+            z-index: 1;
         }
 
         .fip-card:hover {
-            transform: translateY(-2px);
-            border-color: var(--fip-border-soft);
-            box-shadow: 0 14px 30px rgba(15, 23, 42, 0.06);
+            transform: translateY(-3px);
+            border-color: var(--fip-blue);
+            background: #ffffff;
+            box-shadow: 0 18px 36px rgba(16, 42, 67, 0.08);
+        }
+
+        .fip-card:hover::after {
+            transform: scaleX(1);
+        }
+
+        .fip-card>* {
+            position: relative;
+            z-index: 2;
         }
 
         .fip-card-label {
             display: inline-flex;
             margin-bottom: 16px;
             font-size: 12px;
-            font-weight: 700;
+            font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 0.12em;
             color: var(--fip-blue);
@@ -177,11 +187,13 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            margin-top: 22px;
+            margin-top: auto;
+            padding-top: 22px;
             font-size: 16px;
             font-weight: 700;
             color: var(--fip-blue);
             text-decoration: none;
+            transition: color 0.2s ease;
         }
 
         .fip-card-link:hover {
@@ -192,12 +204,14 @@
         .fip-card-arrow {
             font-size: 20px;
             line-height: 1;
+            transition: transform 0.2s ease;
+        }
+
+        .fip-card:hover .fip-card-arrow {
+            transform: translateX(4px);
         }
 
         @media (min-width: 640px) {
-
-
-
             .fip-hero-title {
                 font-size: 56px;
             }
@@ -208,9 +222,6 @@
         }
 
         @media (min-width: 1024px) {
-
-
-
             .fip-hero-title {
                 font-size: 72px;
             }
@@ -226,8 +237,8 @@
         }
     </style>
 
-    <div class="fip-page ">
-        <section class="fip-hero">
+    <div class="fip-page">
+        {{-- <section class="fip-hero">
             <div class="fip-hero-inner container">
                 <span class="fip-hero-label">Insights</span>
                 <h1 class="fip-hero-title">Insights</h1>
@@ -236,10 +247,9 @@
                     the future of production systems, emissions performance, and field deployment.
                 </p>
             </div>
-        </section>
+        </section> --}}
 
         <section class="fip-body container">
-
             <div class="fip-section-head">
                 <span class="fip-section-label">Latest Perspectives</span>
                 <h2 class="fip-section-title">Technical thinking and strategic viewpoints</h2>
@@ -251,37 +261,73 @@
 
             <div class="fip-grid">
                 <article class="fip-card">
-                    <span class="fip-card-label">Perspective</span>
-                    <h3 class="fip-card-title">Rethinking Production Systems</h3>
+                    <span class="fip-card-label">Article 1</span>
+                    <h3 class="fip-card-title">Vapor Recovery, Fluidstream Style</h3>
                     <p class="fip-card-text">
-                        Why simplified flow-through production models are becoming more important in
-                        modern field design and operating strategies.
+                        A technical perspective on how Fluidstream approaches vapor recovery using a more field-ready,
+                        multiphase-aware operating philosophy.
                     </p>
-                    <a href="{{ url('/insights/rethinking-production-systems') }}" class="fip-card-link">
+                    <a href="{{ url('/insights/fluidstream-vapor-recovery-fluidstream-style') }}" class="fip-card-link">
                         Read More <span class="fip-card-arrow">→</span>
                     </a>
                 </article>
 
                 <article class="fip-card">
-                    <span class="fip-card-label">Perspective</span>
-                    <h3 class="fip-card-title">Lower Cost, Broader Deployment</h3>
+                    <span class="fip-card-label">Article 2</span>
+                    <h3 class="fip-card-title">Casing Gas Compression Long Form</h3>
                     <p class="fip-card-text">
-                        A closer look at how lower complexity systems can unlock wider application
-                        opportunities across more operating environments.
+                        Why casing gas recovery often needs a more tolerant compression approach when streams are unstable,
+                        wet, or difficult to keep within gas-only assumptions.
                     </p>
-                    <a href="{{ url('/insights/lower-cost-broader-deployment') }}" class="fip-card-link">
+                    <a href="{{ url('/insights/fluidstream-casing-gas-compression-long-form') }}" class="fip-card-link">
                         Read More <span class="fip-card-arrow">→</span>
                     </a>
                 </article>
 
                 <article class="fip-card">
-                    <span class="fip-card-label">Perspective</span>
-                    <h3 class="fip-card-title">The Role of Emissions Reduction</h3>
+                    <span class="fip-card-label">Article 3</span>
+                    <h3 class="fip-card-title">Multiphase Compression vs. Conventional Compression</h3>
                     <p class="fip-card-text">
-                        Understanding how technology decisions can improve operational efficiency,
-                        reduce waste, and support lower-emission production models.
+                        A comparison of separation-first conventional systems and multiphase compression models designed
+                        around the actual behavior of mixed production streams.
                     </p>
-                    <a href="{{ url('/insights/emissions-reduction') }}" class="fip-card-link">
+                    <a href="{{ url('/insights/fluidstream-multiphase-vs-conventional-long-form') }}" class="fip-card-link">
+                        Read More <span class="fip-card-arrow">→</span>
+                    </a>
+                </article>
+
+                <article class="fip-card">
+                    <span class="fip-card-label">Article 4</span>
+                    <h3 class="fip-card-title">Why Conventional VRUs Fail Wet Gas</h3>
+                    <p class="fip-card-text">
+                        Wet gas, entrained liquids, and real operating variation can expose the weakness of conventional
+                        vapor recovery units built around clean-gas expectations.
+                    </p>
+                    <a href="{{ url('/insights/why-conventional-vrus-fail-wet-gas') }}" class="fip-card-link">
+                        Read More <span class="fip-card-arrow">→</span>
+                    </a>
+                </article>
+
+                <article class="fip-card">
+                    <span class="fip-card-label">Article 5</span>
+                    <h3 class="fip-card-title">Production Optimization with Multiphase Compression</h3>
+                    <p class="fip-card-text">
+                        How operators can think about production recovery, backpressure reduction, and lower site
+                        complexity through a multiphase compression strategy.
+                    </p>
+                    <a href="{{ url('/insights/production-optimization-multiphase-compression') }}" class="fip-card-link">
+                        Read More <span class="fip-card-arrow">→</span>
+                    </a>
+                </article>
+
+                <article class="fip-card">
+                    <span class="fip-card-label">Article 6</span>
+                    <h3 class="fip-card-title">Multiphase Compression for Liquid-Loaded Gas Wells</h3>
+                    <p class="fip-card-text">
+                        A field-focused discussion on liquid-loaded gas wells and why multiphase compression can help
+                        restore production without adding unnecessary separation complexity.
+                    </p>
+                    <a href="{{ url('/insights/multiphase-compression-liquid-loaded-gas-wells') }}" class="fip-card-link">
                         Read More <span class="fip-card-arrow">→</span>
                     </a>
                 </article>

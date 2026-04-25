@@ -47,8 +47,8 @@
     }
 
     /* .section {
-                      padding: 84px 0;
-                    } */
+                                                                                            padding: 84px 0;
+                                                                                          } */
 
     .section-surface-white {
       background: #ffffff;
@@ -61,7 +61,7 @@
       /* border-bottom: 1px solid #edf2fb; */
     }
 
-    .section-label {
+    .kicker mb-2 {
       display: inline-flex;
       align-items: center;
       font-size: 13px;
@@ -80,19 +80,19 @@
     }
 
     /* .hero-tech::before {
-                                                              content: "";
-                                                              position: absolute;
-                                                              inset: 0;
-                                                              background:
-                                                                linear-gradient(90deg, rgba(0, 24, 220, 0.90) 0%, rgba(0, 24, 220, 0.78) 45%, rgba(0, 24, 220, 0.68) 100%),
-                                                                url('{{ asset("/img/hero/hero.avif") }}');
-                                                              background-size: cover;
-                                                              background-position: center;
-                                                              background-repeat: no-repeat;
-                                                              transform: scale(1.02);
-                                                              z-index: -2;
-                                                            }
-                                                             */
+                                                                                                                                    content: "";
+                                                                                                                                    position: absolute;
+                                                                                                                                    inset: 0;
+                                                                                                                                    background:
+                                                                                                                                      linear-gradient(90deg, rgba(0, 24, 220, 0.90) 0%, rgba(0, 24, 220, 0.78) 45%, rgba(0, 24, 220, 0.68) 100%),
+                                                                                                                                      url('{{ asset("/img/hero/hero.avif") }}');
+                                                                                                                                    background-size: cover;
+                                                                                                                                    background-position: center;
+                                                                                                                                    background-repeat: no-repeat;
+                                                                                                                                    transform: scale(1.02);
+                                                                                                                                    z-index: -2;
+                                                                                                                                  }
+                                                                                                                                   */
     .hero-tech::before {
       content: "";
       position: absolute;
@@ -439,7 +439,7 @@
       height: 24px;
       border-radius: 8px;
       /* border: 1px solid #dbe5ff;
-                                                                                                                                                                                                                                                                                                                                            background-color: #ffffff; */
+                                                                                                                                                                                                                                                                                                                                                                                                                  background-color: #ffffff; */
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%230018dc' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h12'/%3E%3Cpath d='M13 5l7 7-7 7'/%3E%3C/svg%3E");
       background-repeat: no-repeat;
       background-position: center;
@@ -790,14 +790,14 @@
 
     .overview-stage-copy {
       position: absolute;
-      top: 38px;
+      top: 0px;
       left: 110px;
       z-index: 7;
       max-width: 820px;
       pointer-events: none;
     }
 
-    .overview-stage-kicker {
+    .overview-stage-kicker mb-2 {
       margin: 0 0 10px;
       color: #0018dc;
       font-size: 12px;
@@ -807,13 +807,13 @@
     }
 
     .overview-stage-title {
-      margin: 0;
-      max-width: 28ch;
-      color: #0a1c4d;
-      font-size: 32px;
-      line-height: 0.95;
-      letter-spacing: -0.045em;
-      font-weight: 700;
+      margin-bottom: 2.5rem;
+      max-width: 25ch;
+      /* color: #0a1c4d; */
+      /* font-size: 32px; */
+      /* line-height: 0.95; */
+      /* letter-spacing: -0.045em; */
+      /* font-weight: 700; */
     }
 
     @media (max-width: 1100px) {
@@ -837,7 +837,7 @@
         max-width: 240px;
       }
 
-      .overview-stage-kicker {
+      .overview-stage-kicker mb-2 {
         font-size: 10px;
         margin-bottom: 6px;
       }
@@ -874,7 +874,7 @@
     }
 
     .feature-intro {
-      padding: 42px 38px 38px;
+      padding: 42px 35px 38px 0px;
       border-right: 1px solid rgba(7, 24, 62, .08);
       /* background: linear-gradient(180deg, #eef6fb 0%, #f7fbfe 100%); */
     }
@@ -893,11 +893,11 @@
     }
 
     .feature-intro h3 {
-      margin: 28px 0 18px;
+      margin: 10px 0 18px;
       font-size: clamp(28px, 2.5vw, 38px);
       line-height: .98;
       letter-spacing: -.045em;
-      color: #0a1c4d;
+      color: #1f1f21;
     }
 
     .feature-intro p {
@@ -1070,14 +1070,14 @@
     }
 
     #overview .section-head {
-      display: grid;
-      grid-template-columns: minmax(0, 1.05fr) minmax(340px, .95fr);
-      gap: 44px;
+      /* display: grid;
+                                                                          grid-template-columns: minmax(0, 1.05fr) minmax(340px, .95fr);
+                                                                          gap: 44px; */
       align-items: baseline;
       margin-bottom: 42px;
     }
 
-    #overview .eyebrow {
+    #overview .kicker mb-2 {
       display: inline-flex;
       align-items: center;
       font-size: 13px;
@@ -1097,39 +1097,40 @@
       font-weight: 700;
     }
 
-    #overview .section-head p {
+    #overview .section-head p,
+    .pp {
       margin: 0;
-      max-width: 53ch;
+      max-width: 68ch;
       font-size: 16px;
       line-height: 1.75;
       color: #424f5d;
     }
 
     #overview .overview {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-      gap: 28px;
+      /* display: grid;
+                                                                            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+                                                                            gap: 28px; */
       align-items: stretch;
     }
 
-    #overview .panel {
-      padding: 34px 34px 36px;
-      border: 1px solid #e3ebf5;
-      border-radius: 7px;
-      background: #ffffff;
-      box-shadow: 0 14px 36px rgba(10, 28, 77, .05);
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-    }
+    /* #overview .panel {
+                                                            padding: 34px 34px 36px;
+                                                            border: 1px solid #e3ebf5;
+                                                            border-radius: 7px;
+                                                            background: #ffffff;
+                                                            box-shadow: 0 14px 36px rgba(10, 28, 77, .05);
+                                                            height: 100%;
+                                                            display: flex;
+                                                            flex-direction: column;
+                                                          }
 
-    #overview .panel {
-      padding: 34px 34px 36px;
-      border: 1px solid #e3ebf5;
-      border-radius: 7px;
-      background: #ffffff;
-      box-shadow: 0 14px 36px rgba(10, 28, 77, .05);
-    }
+                                                          #overview .panel {
+                                                            padding: 34px 34px 36px;
+                                                            border: 1px solid #e3ebf5;
+                                                            border-radius: 7px;
+                                                            background: #ffffff;
+                                                            box-shadow: 0 14px 36px rgba(10, 28, 77, .05);
+                                                          } */
 
     #overview .panel h3 {
       margin: 0 0 18px;
@@ -1140,15 +1141,15 @@
       font-weight: 600;
     }
 
-    #overview .panel>p {
-      margin: 0;
-      font-size: 18px;
-      line-height: 1.72;
-      color: #52667a;
-    }
+    /* #overview .panel>p {
+                                                                  margin: 0;
+                                                                  font-size: 18px;
+                                                                  line-height: 1.72;
+                                                                  color: #52667a;
+                                                                } */
 
     #overview .stack {
-      display: grid;
+      display: flex;
       gap: 18px;
       margin-top: 26px;
     }
@@ -1298,8 +1299,8 @@
 
     @media (max-width: 980px) {
       #overview .section-head {
-        grid-template-columns: 1fr;
-        gap: 22px;
+        /* grid-template-columns: 1fr;
+                                                                            gap: 22px; */
         align-items: start;
       }
 
@@ -1452,6 +1453,15 @@
     .hero-patent-callout-text strong {
       font-weight: bold;
     }
+
+    h2 {
+      margin: 0 0 16px;
+      font-size: clamp(1.9rem, 3vw, 3rem);
+      line-height: 1.05;
+      letter-spacing: -.04em;
+      max-width: 24ch;
+      color: #1f1f21;
+    }
   </style>
 
   <section class="hero-tech ">
@@ -1563,8 +1573,8 @@
   <section id="overview" class="section contrast">
     <div class="container py-12">
       <div class="section-head">
-        <div>
-          <span class="section-label">Technology philosophy</span>
+        {{-- <div>
+          <span class="kicker mb-2">Technology philosophy</span>
           <h2>A compression architecture built for what operators actually see in the field.</h2>
         </div>
         <p>
@@ -1572,13 +1582,13 @@
           through a machine architecture built around the failure modes that make conventional systems unreliable in
           multiphase service.
         </p>
-      </div>
+      </div> --}}
 
       <div class="overview">
         <div class="panel">
-          <span class="eyebrow">Why it matters</span>
-          <h3>Separation-first systems create cost, footprint, and reliability penalties.</h3>
-          <p>
+          <span class="kicker mb-2">Why it matters</span>
+          <h2>Separation-first systems create cost, footprint, and reliability penalties.</h2>
+          <p class="pp">
             Conventional surface design usually assumes the stream must be cleaned up before compression. That means
             more separators, tanks, scrubbers, interconnections, controls layers, and maintenance points. Every added
             component increases capital cost and expands the number of things that can trip, leak, plug, or fail.
@@ -1602,9 +1612,9 @@
           </div>
         </div>
 
-        <div class="panel">
-          <span class="eyebrow">A different approach</span>
-          <h3>Fluidstream is designed to move production without depending on ideal upstream conditioning.</h3>
+        <div class="panel mt-12">
+          <span class="kicker mb-2">A different approach</span>
+          <h2>Fluidstream is designed to move production without depending on ideal upstream conditioning.</h2>
           <p>
             The Fluidstream approach changes the role of compression in the system. Instead of forcing the production
             stream through a long chain of equipment just to protect the compressor, the machine is designed to tolerate
@@ -1653,7 +1663,7 @@
     <div class="visual-shell">
       <div class="image-stage" id="overview-stage">
         <div class="overview-stage-copy container">
-          <div class="section-label">Inside the Technology</div>
+          <div class="kicker mb-2">Inside the Technology</div>
           <h2 class=" overview-stage-title">
             See where the technology advantage is built into the system
           </h2>
@@ -1686,10 +1696,10 @@
     <div class="">
       <div class="section-head   container">
         <div>
-          <span class="section-label">Core technology features</span>
+          <span class="kicker mb-2">Core technology features</span>
           <h2>Expanded technical detail for each major technology advantage.</h2>
         </div>
-        <p>
+        <p class="pp">
           Each feature below explains how the technology works, the field problem it addresses, and the practical
           operating benefit it delivers.
         </p>
@@ -1701,7 +1711,7 @@
             <article class="feature" id="liquid-method">
               <div class="feature-inner">
                 <div class="feature-intro">
-                  <span class="section-label">Liquid handling methodology</span>
+                  <span class="kicker mb-2">Liquid handling methodology</span>
                   <h3>Patent-focused methodology for handling incompressible liquids.</h3>
                   <p>
                     The technology story starts here: Fluidstream is not trying to avoid liquid presence at all costs. It
@@ -1785,7 +1795,7 @@
             <article class="feature" id="gland-section">
               <div class="feature-inner">
                 <div class="feature-intro">
-                  <span class="section-label">Advanced sealing system</span>
+                  <span class="kicker mb-2">Advanced sealing system</span>
                   <h3>Patent-pending gland sealing with electronic wear detection.</h3>
                   <p>
                     Sealing performance is one of the most consequential reliability issues in multiphase compression.
@@ -1847,7 +1857,7 @@
             <article class="feature" id="alignment-section">
               <div class="feature-inner">
                 <div class="feature-intro">
-                  <span class="section-label">Containment and mechanical integrity</span>
+                  <span class="kicker mb-2">Containment and mechanical integrity</span>
                   <h3>Sealed hazardous-fluid containment and alignment in critical wear areas.</h3>
                   <p>
                     Reliability in multiphase service is not only about what the machine compresses. It is also about how
@@ -1909,7 +1919,7 @@
             <article class="feature" id="tracking-section">
               <div class="feature-inner">
                 <div class="feature-intro">
-                  <span class="section-label">Piston tracking and adaptive operation</span>
+                  <span class="kicker mb-2">Piston tracking and adaptive operation</span>
                   <h3>Full piston tracking for optimized control and upset protection.</h3>
                   <p>
                     Real field equipment is rarely exposed to perfectly steady operating conditions. Controls must respond
@@ -1972,7 +1982,7 @@
             <article class="feature" id="drives-section">
               <div class="feature-inner">
                 <div class="feature-intro">
-                  <span class="section-label">Drive systems and controls</span>
+                  <span class="kicker mb-2">Drive systems and controls</span>
                   <h3>Electric standard, gas drive optional, fully integrated into autonomous controls.</h3>
                   <p>
                     Deployment flexibility only becomes valuable when it does not compromise control quality. Fluidstream
@@ -2034,7 +2044,7 @@
             <article class="feature" id="sand-section">
               <div class="feature-inner">
                 <div class="feature-intro">
-                  <span class="section-label">Sand-ready sealing</span>
+                  <span class="kicker mb-2">Sand-ready sealing</span>
                   <h3>Multiphase piston and gland sealing configured to optimize life in sand service.</h3>
                   <p>
                     Abrasive service is where many technologies stop sounding robust and start showing their limitations.
@@ -2095,36 +2105,32 @@
 
   <section class="section section-surface-white py-12" id="differentiation">
     <div class="container">
-      <div class="section-label py-4">Technology Differentiation</div>
+      <div class="kicker mb-2 py-4">Technology Differentiation</div>
       <h2 class="section-title">Designed to feel proprietary, precise, and operator-ready</h2>
-      <p class="section-intro">The page keeps the earlier differentiation structure while sharpening the message around
+      <p class="pp">The page keeps the earlier differentiation structure while sharpening the message around
         direct liquid handling, fully sealed containment, autonomous control, and hard-duty multiphase operation.</p>
 
       <div class="diff-grid">
         <div class="diff-card">
           <h3>Designed for Multiphase Not Adapted to It</h3>
-          <div class="line"></div>
           <p>Fluidstream is engineered specifically for multiphase flow, not repurposed from conventional compression
             architectures.</p>
         </div>
 
         <div class="diff-card">
           <h3>Sealed. Controlled. Predictable.</h3>
-          <div class="line"></div>
           <p>Advanced gland sealing, wear detection, and autonomous control remove major operational risks found in
             competing systems.</p>
         </div>
 
         <div class="diff-card">
           <h3>Handles Variability Without Compromise</h3>
-          <div class="line"></div>
           <p>From incompressible liquids and slugs to solids, sand, and unstable gas-drive conditions, the system is built
             for real field variation.</p>
         </div>
 
         <div class="diff-card">
           <h3>Lower Maintenance by Design</h3>
-          <div class="line"></div>
           <p>Alignment control, wear-focused sealing, and autonomous operation all work together to reduce service burden
             and extend component life.</p>
         </div>

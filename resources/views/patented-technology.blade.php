@@ -447,11 +447,11 @@
         }
 
         /* .visual-card:hover {
-                                                                                    background: #fff;
-                                                                                    border-color: #9bb6ff;
-                                                                                    box-shadow: 0 24px 50px rgba(16, 42, 67, .10);
-                                                                                    transform: translateY(-2px);
-                                                                                } */
+                                                                                                    background: #fff;
+                                                                                                    border-color: #9bb6ff;
+                                                                                                    box-shadow: 0 24px 50px rgba(16, 42, 67, .10);
+                                                                                                    transform: translateY(-2px);
+                                                                                                } */
 
         .main-title {
             display: flex;
@@ -776,11 +776,11 @@
         }
 
         /* .impact:hover {
-                                                                            background: #f4f8ff;
-                                                                            border-color: #9bb6ff;
-                                                                            box-shadow: 0 18px 38px rgba(16, 42, 67, .09);
-                                                                            transform: translateY(-2px);
-                                                                        } */
+                                                                                            background: #f4f8ff;
+                                                                                            border-color: #9bb6ff;
+                                                                                            box-shadow: 0 18px 38px rgba(16, 42, 67, .09);
+                                                                                            transform: translateY(-2px);
+                                                                                        } */
 
         .impact strong {
             display: block;
@@ -1092,6 +1092,14 @@
             .footer .inner {
                 grid-template-columns: 1fr;
             }
+        }
+
+        #why-patents-matter,
+        #us11098709b2,
+        #field-value,
+        #supporting-patents,
+        #products {
+            scroll-margin-top: 120px;
         }
 
         @media (max-width: 640px) {

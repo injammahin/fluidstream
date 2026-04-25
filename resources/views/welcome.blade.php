@@ -540,11 +540,21 @@
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
             gap: 18px;
+            align-items: stretch;
+        }
+
+
+        .proof-cards {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+            align-items: stretch;
         }
 
         .proof-card {
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-rows: auto auto 1fr auto auto;
+            height: 100%;
             position: relative;
             overflow: hidden;
             border-radius: 0;
@@ -580,20 +590,36 @@
         }
 
         .proof-card p {
-            flex-grow: 1;
-            margin: 0 0 16px;
+            margin: 0 0 18px;
             color: var(--muted);
             transition: color .22s ease .18s;
         }
 
         .proof-metric {
-            margin-top: auto;
-            padding-top: 14px;
+            margin-top: 0;
+            min-height: 56px;
+            padding-top: 16px;
             border-top: 1px solid rgba(16, 42, 67, .10);
+            font-size: 1.32rem;
+            font-weight: 700;
+            letter-spacing: -.02em;
+            line-height: 1.2;
+            color: var(--accent-dark);
+            margin-bottom: 6px;
+            transition: color .22s ease .18s, border-color .22s ease .18s;
+        }
+
+        .proof-detail {
+            min-height: 72px;
+            color: var(--muted);
+            font-size: .95rem;
+            font-weight: 500;
+            line-height: 1.45;
+            letter-spacing: 0;
+            transition: color .22s ease .18s;
         }
 
         .proof-card:hover .proof-metric {
-            margin-top: auto;
             border-top-color: rgba(255, 255, 255, .18);
         }
 
@@ -619,18 +645,18 @@
 
 
         /* .solutions,
-                    .leadership,
-                    .tech,
-                    .caseband,
-                    .cta {
-                        padding: 72px 0
-                    } */
+                                                                                                                                                                                                                                                    .leadership,
+                                                                                                                                                                                                                                                    .tech,
+                                                                                                                                                                                                                                                    .caseband,
+                                                                                                                                                                                                                                                    .cta {
+                                                                                                                                                                                                                                                        padding: 72px 0
+                                                                                                                                                                                                                                                    } */
 
         .section-head {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 28px;
+            /* display: flex;
+                                                                                            justify-content: space-between;
+                                                                                            align-items: flex-start;
+                                                                                            gap: 28px; */
             margin-bottom: 28px;
         }
 
@@ -639,7 +665,7 @@
             font-size: clamp(1.9rem, 3vw, 3rem);
             line-height: 1.05;
             letter-spacing: -.04em;
-            max-width: 21ch;
+            max-width: 24ch;
             color: var(--text);
         }
 
@@ -650,12 +676,12 @@
         .section-head p {
             padding: 4px;
             text-align: justify;
-            max-width: 31ch;
+            max-width: 59ch;
             margin: 6px 0 0;
-            color: var(--muted);
-            font-size: 1.20rem;
+            /* color: var(--muted); */
+            /* font-size: 1.20rem; */
             line-height: 1.65;
-            font-weight: 500;
+            /* font-weight: 500; */
             opacity: 1;
         }
 
@@ -667,7 +693,7 @@
 
         .card {
             position: relative;
-            min-height: 360px;
+            min-height: 500px;
             border-radius: 0;
             border: 1px solid var(--line);
             background: #ffffff;
@@ -921,14 +947,15 @@
             font-size: clamp(1.8rem, 3vw, 2.8rem);
             line-height: 1.05;
             letter-spacing: -.04em;
-            max-width: 21ch;
+            max-width: 22ch;
             color: var(--text);
         }
 
         .case-panel p {
             margin: 0 0 16px;
             color: var(--muted);
-            max-width: 70ch;
+            max-width: 59ch;
+            text-align: justify;
         }
 
         .impact-grid {
@@ -1451,15 +1478,15 @@
             flex: 0 0 auto;
         }
 
-        .section-kicker {
-            display: block;
-            margin: 0 0 14px;
-            font-size: 13px !important;
-            font-weight: 700 !important;
-            letter-spacing: .16em;
-            text-transform: uppercase;
-            color: var(--accent-dark) !important;
-        }
+        /* .kicker {
+                                                                                                                            display: block;
+                                                                                                                            margin: 0 0 14px;
+                                                                                                                            font-size: 13px !important;
+                                                                                                                            font-weight: 700 !important;
+                                                                                                                            letter-spacing: .16em;
+                                                                                                                            text-transform: uppercase;
+                                                                                                                            color: var(--accent-dark) !important;
+                                                                                                                        } */
 
         .hero-dot.active {
             background: #38bdf8;
@@ -1469,7 +1496,7 @@
         .hero-quote-card {
             width: 100%;
             max-width: 460px;
-            min-height: 300px;
+            min-height: 360px;
             padding: 24px;
             border-radius: 10px;
             border: 1px solid rgba(255, 255, 255, .42);
@@ -1637,15 +1664,34 @@
                     <!-- Left Content -->
                     <div class="max-w-3xl">
                         <h1
-                            class="max-w-3xl text-3xl font-extrabold leading-[1.08] tracking-[-0.03em] text-white sm:text-5xl md:text-6xl lg:text-[54px]">
+                            class="max-w-4xl text-3xl font-extrabold leading-[1.08] tracking-[-0.03em] text-white sm:text-5xl md:text-6xl lg:text-[54px]">
                             Reduce Methane Emissions and Increase Oil Production
                         </h1>
 
                         <div class="mt-5 h-1 w-20 rounded-full bg-sky-400"></div>
+                        <p class="mt-7 max-w-4xl text-base font-bold leading-7 text-slate-200 sm:text-2xl sm:leading-8">
+                            Conventional compression struggles with liquids. Fluidstream is built for them.
+                        </p>
 
-                        <p class="mt-7 max-w-2xl text-base font-medium leading-7 text-slate-200 sm:text-lg sm:leading-8">
-                            Fluidstream provides reliable, low-maintenance, fully autonomous multiphase compression
-                            technology to lower methane emissions and improve production efficiency.
+                        <p class="mt-4 max-w-2xl text-base font-medium leading-7 text-slate-200 sm:text-lg sm:leading-8">
+                            Patented multiphase compression systems for vapor recovery, casing gas, and multiphase flow.
+                        </p>
+                        <p class="mt-3 max-w-2xl text-base font-medium leading-7 text-slate-200 sm:text-lg sm:leading-8">
+                            Fluidstream delivers patented multiphase compression technology that compresses gas and liquids
+                            together, eliminating the need for upstream separation while maintaining stable operation under
+                            real field conditions, including slugging and variable flow.
+                        </p>
+                        <p class="mt-4 max-w-2xl text-base font-semibold leading-7 text-slate-200 sm:text-xl sm:leading-8">
+                            Field-proven: restored gas production from 0 to 10,000 m³/day and condensate production from 0
+                            to 5 m³/day, generating more than C$1.5M/year.
+                        </p>
+                        <p class="mt-3 max-w-2xl text-base font-semibold leading-7 text-slate-200 sm:text-xl sm:leading-8">
+                            No separation required. No complex surface systems. Just compression that works in real
+                            conditions.
+                        </p>
+                        <p class="mt-4 max-w-2xl text-base font-medium leading-7 text-slate-200 sm:text-lg sm:leading-8">
+                            Eliminates the need for separators, tanks, and complex support equipment in suitable
+                            applications.
                         </p>
 
                         <div class="mt-9 flex flex-col gap-3 sm:flex-row">
@@ -1665,11 +1711,13 @@
                     <div class="lg:justify-self-end">
                         <div class="hero-quote-card">
                             <div class="hero-quote-stage">
+                                <p class="kicker">Proven Field Performance</p>
                                 <div class="hero-quote-slide active" data-index="0">
                                     <blockquote class="hero-quote-text">
                                         “Fluidstream’s unit has operated consistently and eliminated gas venting. Since
-                                        installation 17 months ago, the unit has provided 100% uptime and has not required
-                                        any maintenance.”
+                                        installation 17 months ago, the unit has provided 100% uptime since installation and
+                                        has not
+                                        required any maintenance.”
                                     </blockquote>
 
                                     <div class="hero-quote-meta">
@@ -1731,7 +1779,7 @@
         <div class="inner container">
             <div class="section-head" style="margin-bottom:18px">
                 <div>
-                    <p class="section-kicker">Case-study proof</p>
+                    <p class="kicker">Case-study proof</p>
                     <h2>Case-study proof from real field performance.</h2>
                 </div>
                 <p>
@@ -1789,7 +1837,7 @@
         <div class="inner container">
             <div class="section-head">
                 <div>
-                    <p class="section-kicker">Commercial applications</p>
+                    <p class="kicker">Commercial applications</p>
                     <h2>One platform. Three commercial value cases.</h2>
                 </div>
                 <p>
@@ -1859,7 +1907,7 @@
         <div class="inner container">
             <div class="section-head">
                 <div>
-                    <p class="section-kicker">Core strengths</p>
+                    <p class="kicker">Core strengths</p>
                     <h2>Designed for reliability, cost efficiency, autonomous control, and field flexibility.</h2>
                 </div>
                 <p>
@@ -1907,7 +1955,7 @@
             <div class="tech-panel">
                 <div class="section-head" style="margin-bottom:18px">
                     <div>
-                        <p class="section-kicker">Technology advantage</p>
+                        <p class="kicker">Technology advantage</p>
                         <h2>Patented technology that sells on outcomes, not just mechanism.</h2>
                     </div>
                     <p>
@@ -1989,32 +2037,32 @@
             margin-bottom: 34px;
         }
 
-        .patent-copy .section-kicker {
-            margin-bottom: 18px;
-        }
+        /* .patent-copy .kicker {
+                                                                    margin-bottom: 18px;
+                                                                }
 
-        .patent-copy h2 {
-            margin: 0;
-            font-size: clamp(1.9rem, 3vw, 3rem);
-            line-height: 1.05;
-            letter-spacing: -.04em;
-            max-width: 21ch;
-            color: var(--text);
-        }
-
-        .patent-copy p {
-            margin: 0 0 18px;
-            max-width: 760px;
-            font-size: 1.18rem;
-            line-height: 1.7;
-            color: #5b6d86;
-        }
+                                                                .patent-copy h2 {
+                                                                    margin: 0;
+                                                                    font-size: clamp(1.9rem, 3vw, 3rem);
+                                                                    line-height: 1.05;
+                                                                    letter-spacing: -.04em;
+                                                                    max-width: 21ch;
+                                                                    color: var(--text);
+                                                                } */
+        /* 
+                        .patent-copy p {
+                            margin: 0 0 18px;
+                            max-width: 760px;
+                            font-size: 1.18rem;
+                            line-height: 1.7;
+                            color: #5b6d86;
+                        } */
 
         .patent-copy .patent-highlight {
             margin-top: 6px;
-            font-size: 1.16rem;
+            /* font-size: 1.16rem; */
             line-height: 1.7;
-            color: #5b6d86;
+            /* color: #5b6d86; */
         }
 
         .patent-copy .patent-highlight strong {
@@ -2229,11 +2277,11 @@
         }
 
         /* .patent-card p {
-                                                                                        margin: 0;
-                                                                                        font-size: 1.04rem;
-                                                                                        line-height: 1.72;
-                                                                                        color: #61738b;
-                                                                                    } */
+                                                                                                                                                                                                                                                                                                                        margin: 0;
+                                                                                                                                                                                                                                                                                                                        font-size: 1.04rem;
+                                                                                                                                                                                                                                                                                                                        line-height: 1.72;
+                                                                                                                                                                                                                                                                                                                        color: #61738b;
+                                                                                                                                                                                                                                                                                                                    } */
 
         .patent-callout {
             position: relative;
@@ -2320,8 +2368,8 @@
     <section class="section patent-section py-12">
         <div class="inner container">
             <div class="patent-grid">
-                <div class="patent-copy">
-                    <p class="section-kicker">Patented technology</p>
+                <div class="patent-copy section-head">
+                    <div class="kicker mb-3">Patented technology</div>
                     <h2>Patents that support real multiphase compression value</h2>
 
                     <p>
@@ -2422,7 +2470,7 @@
         <div class="inner container">
             <div class="case-panel">
                 <div>
-                    <p class="section-kicker">Case study snapshot</p>
+                    <div class="kicker mb-2">Case study snapshot</div>
                     <h2>From virtually no production to more than C$1.5 million per year in incremental revenue.</h2>
                     <p>
                         In Alberta, Canada, Fluidstream’s multiphase technology helped revive two liquid-loaded wells that
@@ -2495,8 +2543,8 @@
                 </div>
                 <div style="display:flex;gap:12px;flex-wrap:wrap">
                     <a class="btn btn-primary" href="/contact">Request Technical Review</a>
-                    <a class="btn btn-secondary" href="/multiphase-compression">Review
-                        MultiphaseCommander™ Specifications</a>
+                    <a class="btn btn-secondary" href="/multiphase-compression-technology">Understand Multiphase
+                        Compression</a>
                 </div>
             </div>
         </div>

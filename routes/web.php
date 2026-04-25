@@ -30,14 +30,51 @@ Route::view('/contact', 'contact')->name('contact');
 Route::view('/patented-technology', 'patented-technology')->name('patented-technology');
 Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
 
-Route::get('/case-studies/allied-energy-ii-multiphase-vapor-recovery', function () {
-    return view('case-studies.allied-energy-ii-multiphase-vapor-recovery');
-})->name('case-studies.allied-energy');
+Route::get('/case-studies/multiphasecommander-production-recovery', function () {
+    return view('case-studies.multiphasecommander-production-recovery');
+})->name('case-studies.multiphasecommander-production-recovery');
 
-Route::get('/case-studies/4-5-years-of-reliable-vapor-recovery', function () {
-    return view('case-studies.reliable-vapor-recovery');
-})->name('case-studies.reliable-vapor-recovery');
+Route::get('/case-studies/vaporcommander-4-5-year-reliability', function () {
+    return view('case-studies.vaporcommander-4-5-year-reliability');
+})->name('case-studies.vaporcommander-4-5-year-reliability');
 
-Route::get('/case-studies/incremental-revenue-case-study', function () {
-    return view('case-studies.incremental-revenue-case-study');
-})->name('case-studies.incremental-revenue');
+Route::get('/case-studies/vaporcommander-vcu-replacement', function () {
+    return view('case-studies.vaporcommander-vcu-replacement');
+})->name('case-studies.vaporcommander-vcu-replacement');
+
+Route::get('/case-studies/allied-energy-vaporcommander-vru', function () {
+    return view('case-studies.allied-energy-vaporcommander-vru');
+})->name('case-studies.allied-energy-vaporcommander-vru');
+
+Route::get('/case-studies/whitecap-vaporcommander-vru', function () {
+    return view('case-studies.whitecap-vaporcommander-vru');
+})->name('case-studies.whitecap-vaporcommander-vru');
+Route::view(
+    '/insights/fluidstream-vapor-recovery-fluidstream-style',
+    'insights.fluidstream-vapor-recovery-fluidstream-style'
+)->name('insights.fluidstream-vapor-recovery-fluidstream-style');
+
+Route::view(
+    '/insights/fluidstream-casing-gas-compression-long-form',
+    'insights.fluidstream-casing-gas-compression-long-form'
+)->name('insights.fluidstream-casing-gas-compression-long-form');
+
+Route::view(
+    '/insights/fluidstream-multiphase-vs-conventional-long-form',
+    'insights.fluidstream-multiphase-vs-conventional-long-form'
+)->name('insights.fluidstream-multiphase-vs-conventional-long-form');
+
+Route::view(
+    '/insights/why-conventional-vrus-fail-wet-gas',
+    'insights.why-conventional-vrus-fail-wet-gas'
+)->name('insights.why-conventional-vrus-fail-wet-gas');
+
+Route::view(
+    '/insights/production-optimization-multiphase-compression',
+    'insights.production-optimization-multiphase-compression'
+)->name('insights.production-optimization-multiphase-compression');
+
+Route::view(
+    '/insights/multiphase-compression-liquid-loaded-gas-wells',
+    'insights.multiphase-compression-liquid-loaded-gas-wells'
+)->name('insights.multiphase-compression-liquid-loaded-gas-wells');

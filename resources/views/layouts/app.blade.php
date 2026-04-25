@@ -15,6 +15,16 @@
         body {
             font-family: 'Manrope', sans-serif;
         }
+
+        .kicker{
+            display: inline-flex;
+            align-items: center;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            color:#0018dc;
+        }
     </style>
 </head>
 

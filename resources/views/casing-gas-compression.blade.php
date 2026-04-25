@@ -256,13 +256,13 @@
     }
 
     /* .swipe-left:hover:before,
-                                                                          .swipe-left:hover:before,
-                                                                          .model-card:hover:before,
-                                                                          .spec-mobile-card:hover:before,
-                                                                          .comparison .box:hover:before,
-                                                                          .reality-item:hover:before {
-                                                                            opacity: 1;
-                                                                          } */
+                                                                                                        .swipe-left:hover:before,
+                                                                                                        .model-card:hover:before,
+                                                                                                        .spec-mobile-card:hover:before,
+                                                                                                        .comparison .box:hover:before,
+                                                                                                        .reality-item:hover:before {
+                                                                                                          opacity: 1;
+                                                                                                        } */
 
     .swipe-left:hover:after,
     .model-card:hover:after,
@@ -273,8 +273,8 @@
     }
 
     /* .swipe-left:hover:after {
-                                                                        right: 155%;
-                                                                      } */
+                                                                                                      right: 155%;
+                                                                                                    } */
 
     .hero-card:hover {
       box-shadow: 0 26px 56px rgba(0, 24, 220, .18);
@@ -282,14 +282,14 @@
     }
 
     /* .swipe-left:hover,
-                                                                    .swipe-left:hover,
-                                                                    .model-card:hover,
-                                                                    .spec-mobile-card:hover,
-                                                                    .comparison .box:hover,
-                                                                    .reality-item:hover {
-                                                                      box-shadow: 0 24px 52px rgba(13, 32, 84, .12);
-                                                                      border-color: #b9d0ff;
-                                                                    } */
+                                                                                                  .swipe-left:hover,
+                                                                                                  .model-card:hover,
+                                                                                                  .spec-mobile-card:hover,
+                                                                                                  .comparison .box:hover,
+                                                                                                  .reality-item:hover {
+                                                                                                    box-shadow: 0 24px 52px rgba(13, 32, 84, .12);
+                                                                                                    border-color: #b9d0ff;
+                                                                                                  } */
 
     .blue-fill:before {
       content: "";
@@ -340,9 +340,9 @@
     }
 
     /* 
-                                                    .highlight-box:hover a {
-                                                      color: #fff !important
-                                                    } */
+                                                                                  .highlight-box:hover a {
+                                                                                    color: #fff !important
+                                                                                  } */
 
     .cta-panel:hover {
       /* box-shadow: 0 24px 52px rgba(0, 24, 220, .18); */
@@ -571,28 +571,30 @@
       font-size: 15px
     }
 
-    .section-kicker {
-      font-size: 12px;
-      letter-spacing: .11em;
-      text-transform: uppercase;
-      color: var(--blue);
-      font-weight: 700;
-      margin-bottom: 10px
-    }
+    /* .kicker mb-2 {
+                                    font-size: 12px;
+                                    letter-spacing: .11em;
+                                    text-transform: uppercase;
+                                    color: var(--blue);
+                                    font-weight: 700;
+                                    margin-bottom: 10px
+                                  } */
 
     h2 {
       margin: 0 0 16px;
-      font-size: 40px;
-      line-height: 1.08;
-      letter-spacing: -.02em;
-      color: #232325
+      font-size: clamp(1.9rem, 3vw, 3rem);
+      line-height: 1.05;
+      letter-spacing: -.04em;
+      max-width: 26ch;
+      color: #1f1f21;
     }
 
     .lead {
-      margin: 0 0 30px;
-      max-width: 960px;
-      font-size: 18px;
-      color: var(--muted)
+      margin-bottom: 20px;
+      max-width: 68ch;
+      font-size: 16px;
+      line-height: 1.75;
+      color: #424f5d;
     }
 
     .grid-3 {
@@ -750,7 +752,7 @@
     }
 
     .highlight-box p {
-      margin: 0 0 14px;
+      margin: 0 0 22px;
       color: #425066
     }
 
@@ -886,7 +888,7 @@
       display: grid;
       grid-template-columns: 1.1fr .9fr;
       gap: 24px;
-      align-items: center
+      align-items: start;
     }
 
     .cta h2 {
@@ -1041,7 +1043,7 @@
 
   <section>
     <div class="wrap py-12">
-      <div class="section-kicker">Why multiphase matters</div>
+      <div class="kicker mb-2">Why multiphase matters</div>
       <h2>Casing gas is inherently imperfect field service.</h2>
       <p class="lead">
         Casing gas is often specified and sold like a clean gas application, but field conditions rarely stay that clean.
@@ -1072,8 +1074,8 @@
       </div>
 
       <div class="reality-box">
-        <h3>What makes casing gas compression difficult in the field</h3>
-        <p>
+        <h2>What makes casing gas compression difficult in the field</h2>
+        <p class="lead">
           The challenge is not simply moving gas from low pressure to higher pressure. The challenge is doing it reliably
           when the stream is inconsistent, liquids can break through, and operating conditions do not stay steady. That is
           where conventional gas-only packages often become maintenance-heavy and why CompressionCommander™ is positioned
@@ -1097,7 +1099,7 @@
 
   <section class="band">
     <div class="wrap py-12">
-      <div class="section-kicker">Conventional vs. Fluidstream</div>
+      <div class="kicker mb-2">Conventional vs. Fluidstream</div>
       <h2>Two very different approaches to casing gas compression.</h2>
       <p class="lead">
         CompressionCommander™ is positioned as a casing gas solution built around multiphase behavior and the commercial
@@ -1107,20 +1109,84 @@
       <div class="comparison">
         <div class="box interactive-card swipe-left">
           <h3>Conventional casing gas approach</h3>
-          <ul class="bullet">
-            <li>Relies on scrubbers and separation equipment to protect a gas-only compressor.</li>
-            <li>Still becomes vulnerable when liquids break through or slug conditions develop.</li>
-            <li>Creates more equipment, more footprint, more operator attention, and more failure points.</li>
-            <li>Often turns casing gas recovery into a constant reliability and maintenance problem.</li>
+          <ul class="bullet space-y-4">
+            <li class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 text-[#0018dc] mt-[4px]" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h12" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
+              </svg>
+              <span>Relies on scrubbers and separation equipment to protect a gas-only compressor.</span>
+            </li>
+
+            <li class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 text-[#0018dc] mt-[4px]" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h12" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
+              </svg>
+              <span>Still becomes vulnerable when liquids break through or slug conditions develop.</span>
+            </li>
+
+            <li class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 text-[#0018dc] mt-[4px]" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h12" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
+              </svg>
+              <span>Creates more equipment, more footprint, more operator attention, and more failure points.</span>
+            </li>
+
+            <li class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 text-[#0018dc] mt-[4px]" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h12" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
+              </svg>
+              <span>Often turns casing gas recovery into a constant reliability and maintenance problem.</span>
+            </li>
           </ul>
         </div>
+
         <div class="box interactive-card swipe-left">
           <h3>CompressionCommander™ approach</h3>
-          <ul class="bullet">
-            <li>Built around the reality that casing gas streams are imperfect and often effectively multiphase.</li>
-            <li>Designed to keep operating through the upset conditions that shut down conventional systems.</li>
-            <li>Reduces dependence on separation hardware as the only protection strategy.</li>
-            <li>Gives operators a more robust, lower-intervention path to continuous casing gas recovery.</li>
+          <ul class="bullet space-y-4">
+            <li class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 text-[#0018dc] mt-[4px]" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h12" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
+              </svg>
+              <span>Built around the reality that casing gas streams are imperfect and often effectively
+                multiphase.</span>
+            </li>
+
+            <li class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 text-[#0018dc] mt-[4px]" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h12" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
+              </svg>
+              <span>Designed to keep operating through the upset conditions that shut down conventional systems.</span>
+            </li>
+
+            <li class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 text-[#0018dc] mt-[4px]" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h12" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
+              </svg>
+              <span>Reduces dependence on separation hardware as the only protection strategy.</span>
+            </li>
+
+            <li class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 text-[#0018dc] mt-[4px]" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h12" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
+              </svg>
+              <span>Gives operators a more robust, lower-intervention path to continuous casing gas recovery.</span>
+            </li>
           </ul>
         </div>
       </div>
@@ -1129,7 +1195,7 @@
 
   <section>
     <div class="wrap py-12">
-      <div class="section-kicker">The CompressionCommander™ difference</div>
+      <div class="kicker mb-2">The CompressionCommander™ difference</div>
       <h2>Designed for the flow you actually have.</h2>
       <p class="lead">
         CompressionCommander™ creates value because it is aligned with what casing gas service really looks like in the
@@ -1166,15 +1232,40 @@
           <p>CompressionCommander™ does not rely on unrealistic promises about perfect gas quality. It monitors operating
             behavior and responds to the conditions that suggest liquids, slugs, or other upset events are creating damage
             risk.</p>
-          <ul class="bullet">
-            <li><strong>What it monitors:</strong> pressure behavior, dynamic system response, load changes, and other
-              operating patterns associated with harmful conditions.</li>
-            <li><strong>What it does:</strong> automatically modifies operation to mitigate risk, reduce mechanical
-              stress, and keep the system in a safer operating window.</li>
-            <li><strong>Why it matters:</strong> the result is a casing gas package that is better suited to remote,
-              variable, lower-touch operation.</li>
+
+          <ul class="bullet space-y-4">
+            <li class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 text-[#0018dc] mt-[4px]" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h12" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
+              </svg>
+              <span><strong>What it monitors:</strong> pressure behavior, dynamic system response, load changes, and other
+                operating patterns associated with harmful conditions.</span>
+            </li>
+
+            <li class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 text-[#0018dc] mt-[4px]" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h12" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
+              </svg>
+              <span><strong>What it does:</strong> automatically modifies operation to mitigate risk, reduce mechanical
+                stress, and keep the system in a safer operating window.</span>
+            </li>
+
+            <li class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 text-[#0018dc] mt-[4px]" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h12" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
+              </svg>
+              <span><strong>Why it matters:</strong> the result is a casing gas package that is better suited to remote,
+                variable, lower-touch operation.</span>
+            </li>
           </ul>
-          <div class="patent-note light" style="margin-top:16px;">
+
+          <div class="patent-note light" style="margin-top:55px;">
             Patent reference:
             <a href="/patented-technology#us11098709b2">US11098709B2</a>
             supports the liquid-aware compression response behind this protection strategy.
@@ -1186,7 +1277,7 @@
 
   <section class="band">
     <div class="wrap py-12">
-      <div class="section-kicker">Intelligent protection</div>
+      <div class="kicker mb-2">Intelligent protection</div>
       <h2>Detects risk conditions. Responds automatically. Protects continuously.</h2>
       <p class="lead">
         In casing gas service, the real value of the controls strategy is not claiming perfect knowledge of what is inside
@@ -1215,7 +1306,7 @@
 
   <section id="specifications">
     <div class="wrap py-12">
-      <div class="section-kicker">Specifications</div>
+      <div class="kicker mb-2">Specifications</div>
       <h2>CompressionCommander™ model range for casing gas applications.</h2>
       <p class="lead">
         Compare the model range visually, then review flow performance by inlet pressure, pressure differential,
@@ -1656,7 +1747,7 @@
     <div class="wrap py-12">
       <div class="cta-box">
         <div>
-          <div class="section-kicker">Customized Technical CTA</div>
+          <div class="kicker mb-2">Customized Technical CTA</div>
           <h2>Submit your casing gas conditions for a CompressionCommander™ application review.</h2>
           <p>
             If your current system is vulnerable to liquid carryover, scrubber breakthrough, slug-related trips, corrosive
@@ -1667,13 +1758,54 @@
         </div>
         <div class="cta-panel interactive-card swipe-left">
           <h3>What to send for review</h3>
-          <ul>
-            <li>Casing gas rate and expected operating range</li>
-            <li>Inlet pressure, discharge pressure, and flare or recovery target</li>
-            <li>Expected liquids, slugging behavior, and scrubber limitations</li>
-            <li>H₂S, cold-weather, sand, or corrosive-service requirements</li>
-            <li>Remote-control needs, maintenance issues, and uptime priorities</li>
+
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 text-[#0018dc] mt-[4px]" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h12" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
+              </svg>
+              <span>Casing gas rate and expected operating range</span>
+            </li>
+
+            <li class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 text-[#0018dc] mt-[4px]" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h12" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
+              </svg>
+              <span>Inlet pressure, discharge pressure, and flare or recovery target</span>
+            </li>
+
+            <li class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 text-[#0018dc] mt-[4px]" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h12" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
+              </svg>
+              <span>Expected liquids, slugging behavior, and scrubber limitations</span>
+            </li>
+
+            <li class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 text-[#0018dc] mt-[4px]" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h12" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
+              </svg>
+              <span>H₂S, cold-weather, sand, or corrosive-service requirements</span>
+            </li>
+
+            <li class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 text-[#0018dc] mt-[4px]" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h12" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
+              </svg>
+              <span>Remote-control needs, maintenance issues, and uptime priorities</span>
+            </li>
           </ul>
+
           <div class="btn-row" style="margin-bottom:0;">
             <a class="btn-1 btn-primary" href="#">Request CompressionCommander™ Review</a>
             <a class="btn-1 btn-secondary-1" href="#specifications">Review Specifications</a>
