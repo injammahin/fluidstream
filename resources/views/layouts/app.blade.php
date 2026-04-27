@@ -353,7 +353,7 @@
 <body class="bg-white text-slate-900 antialiased">
     @include('partical.header')
 
-    <div class="pt-[86px]">
+    <div class="pt-[96px]">
         <x-breadcrumb />
 
         <main>
