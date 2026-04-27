@@ -331,6 +331,94 @@
                         Read More <span class="fip-card-arrow">→</span>
                     </a>
                 </article>
+                <article class="fip-card">
+                    <span class="fip-card-label">Article 7</span>
+                    <h3 class="fip-card-title">VRU vs. Flaring: Complete Comparison</h3>
+                    <p class="fip-card-text">
+                        A practical comparison of vapor recovery and flaring decisions, with focus on emissions, economics,
+                        reliability, and field operating value.
+                    </p>
+                    <a href="{{ url('/insights/fluidstream-vru-vs-flaring-complete') }}" class="fip-card-link">
+                        Read More <span class="fip-card-arrow">→</span>
+                    </a>
+                </article>
+
+                <article class="fip-card">
+                    <span class="fip-card-label">Article 8</span>
+                    <h3 class="fip-card-title">Fluidstream Methane Reduction Story</h3>
+                    <p class="fip-card-text">
+                        How Fluidstream’s technology story connects methane reduction, vapor recovery, field reliability,
+                        and production-focused emissions performance.
+                    </p>
+                    <a href="{{ url('/insights/fluidstream-methane-reduction-story-white-sections') }}"
+                        class="fip-card-link">
+                        Read More <span class="fip-card-arrow">→</span>
+                    </a>
+                </article>
+
+                <article class="fip-card">
+                    <span class="fip-card-label">Article 9</span>
+                    <h3 class="fip-card-title">How to Select the Right Compression Application</h3>
+                    <p class="fip-card-text">
+                        A selection guide for matching compression technology to vapor recovery, casing gas,
+                        liquid-loaded wells, and mixed-phase field conditions.
+                    </p>
+                    <a href="{{ url('/insights/how-to-select-right-compression-applications-final-fixed') }}"
+                        class="fip-card-link">
+                        Read More <span class="fip-card-arrow">→</span>
+                    </a>
+                </article>
+
+                <article class="fip-card">
+                    <span class="fip-card-label">Article 10</span>
+                    <h3 class="fip-card-title">When Is Casing Gas CompressionCommander™ Needed?</h3>
+                    <p class="fip-card-text">
+                        A field-focused explanation of when casing gas recovery conditions may require a more tolerant
+                        CompressionCommander™ approach.
+                    </p>
+                    <a href="{{ url('/insights/when-is-casing-gas-compressioncommander') }}" class="fip-card-link">
+                        Read More <span class="fip-card-arrow">→</span>
+                    </a>
+                </article>
+
+                <article class="fip-card">
+                    <span class="fip-card-label">Article 11</span>
+                    <h3 class="fip-card-title">Why Conventional Compression Fails Wet, Unstable Wells</h3>
+                    <p class="fip-card-text">
+                        Why wet gas, liquid carryover, slugging, and unstable production conditions can expose the limits
+                        of conventional gas-only compression.
+                    </p>
+                    <a href="{{ url('/insights/why-conventional-compression-fails-wet-unstable-wells') }}"
+                        class="fip-card-link">
+                        Read More <span class="fip-card-arrow">→</span>
+                    </a>
+                </article>
+
+                <article class="fip-card">
+                    <span class="fip-card-label">Article 12</span>
+                    <h3 class="fip-card-title">How Casing Gas Compression Increases Oil Production</h3>
+                    <p class="fip-card-text">
+                        How improved casing gas handling can reduce constraints, improve production behavior,
+                        and support better oil recovery outcomes.
+                    </p>
+                    <a href="{{ url('/insights/how-casing-gas-compression-increases-oil-production') }}"
+                        class="fip-card-link">
+                        Read More <span class="fip-card-arrow">→</span>
+                    </a>
+                </article>
+
+                <article class="fip-card">
+                    <span class="fip-card-label">Article 13</span>
+                    <h3 class="fip-card-title">How Multiphase Compression Supports Production Recovery</h3>
+                    <p class="fip-card-text">
+                        A production recovery perspective on how multiphase compression can help restore flow,
+                        lower backpressure, and simplify site infrastructure.
+                    </p>
+                    <a href="{{ url('/insights/how-multiphase-compression-supports-production-recovery') }}"
+                        class="fip-card-link">
+                        Read More <span class="fip-card-arrow">→</span>
+                    </a>
+                </article>
             </div>
         </section>
     </div>

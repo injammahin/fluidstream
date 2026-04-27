@@ -94,13 +94,13 @@
         }
 
         /* 
-                                                                                                                                                                                                                                .section-label:before {
-                                                                                                                                                                                                                                    content: "";
-                                                                                                                                                                                                                                    width: 38px;
-                                                                                                                                                                                                                                    height: 2px;
-                                                                                                                                                                                                                                    background: var(--cyan);
-                                                                                                                                                                                                                                    display: inline-block;
-                                                                                                                                                                                                                                } */
+                                                                                                                                                                                                                                            .section-label:before {
+                                                                                                                                                                                                                                                content: "";
+                                                                                                                                                                                                                                                width: 38px;
+                                                                                                                                                                                                                                                height: 2px;
+                                                                                                                                                                                                                                                background: var(--cyan);
+                                                                                                                                                                                                                                                display: inline-block;
+                                                                                                                                                                                                                                            } */
 
         /* Header matches the clean Fluidstream homepage feel */
         .site-header {
@@ -265,14 +265,14 @@
         }
 
         /* .quote-card:before {
-                                                                                                                                                                                                                                                                    content: "";
-                                                                                                                                                                                                                                                                    position: absolute;
-                                                                                                                                                                                                                                                                    top: 0;
-                                                                                                                                                                                                                                                                    left: 0;
-                                                                                                                                                                                                                                                                    right: 0;
-                                                                                                                                                                                                                                                                    height: 4px;
-                                                                                                                                                                                                                                                                    background: linear-gradient(90deg, var(--cyan), rgba(255, 255, 255, 0));
-                                                                                                                                                                                                                                                                } */
+                                                                                                                                                                                                                                                                                content: "";
+                                                                                                                                                                                                                                                                                position: absolute;
+                                                                                                                                                                                                                                                                                top: 0;
+                                                                                                                                                                                                                                                                                left: 0;
+                                                                                                                                                                                                                                                                                right: 0;
+                                                                                                                                                                                                                                                                                height: 4px;
+                                                                                                                                                                                                                                                                                background: linear-gradient(90deg, var(--cyan), rgba(255, 255, 255, 0));
+                                                                                                                                                                                                                                                                            } */
 
         .quote-card strong {
             color: #000000;
@@ -313,8 +313,8 @@
 
         /* Page sections */
         /* .section {
-                                                                                                                                                padding: 78px 0;
-                                                                                                                                            } */
+                                                                                                                                                            padding: 78px 0;
+                                                                                                                                                        } */
 
         .section-soft {
             background: var(--soft);
@@ -460,9 +460,9 @@
         }
 
         /* .fs-card:hover h3,
-                                                                                                                                                                                    .fs-card:hover p {
-                                                                                                                                                                                        color: #fff;
-                                                                                                                                                                                    } */
+                                                                                                                                                                                                .fs-card:hover p {
+                                                                                                                                                                                                    color: #fff;
+                                                                                                                                                                                                } */
 
         .line-card:before {
             content: "";
@@ -508,13 +508,13 @@
         }
 
         /* .fs-card,
-                                                                                                                                                                                            .line-card,
-                                                                                                                                                                                            .stat-card,
-                                                                                                                                                                                            .callout {
-                                                                                                                                                                                                position: relative;
-                                                                                                                                                                                                overflow: hidden;
-                                                                                                                                                                                                transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
-                                                                                                                                                                                            } */
+                                                                                                                                                                                                        .line-card,
+                                                                                                                                                                                                        .stat-card,
+                                                                                                                                                                                                        .callout {
+                                                                                                                                                                                                            position: relative;
+                                                                                                                                                                                                            overflow: hidden;
+                                                                                                                                                                                                            transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+                                                                                                                                                                                                        } */
         .cta-panel::after,
         .fs-card::after,
         .line-card::after,
@@ -813,12 +813,12 @@
             }
 
             /* .section {
-                                                                                                                                                    padding: 58px 0;
-                                                                                                                                                } */
+                                                                                                                                                                padding: 58px 0;
+                                                                                                                                                            } */
 
             /* .hero {
-                                                                                                                                                padding: 74px 0;
-                                                                                                                                            } */
+                                                                                                                                                            padding: 74px 0;
+                                                                                                                                                        } */
 
             article {
                 padding: 28px;
@@ -920,5 +920,403 @@
             margin-bottom: 0;
         }
     </style>
+
+
+    <script type="application/ld+json">
+              {
+                "@context": "https://schema.org",
+                "@type": "Article",
+                "headline": "How Casing Gas Compression Increases Oil Production",
+                "description": "A technical guide explaining how casing gas compression increases oil production by lowering casing pressure, improving drawdown, reducing liquid loading, and supporting artificial lift performance.",
+                "author": { "@type": "Organization", "name": "Fluidstream" },
+                "publisher": { "@type": "Organization", "name": "Fluidstream" },
+                "mainEntityOfPage": "https://fluidstream.co/insights/how-casing-gas-compression-increases-oil-production"
+              }
+              </script>
+
+
+    <section class="hero py-12">
+        <div class="wrap hero-grid">
+            <div>
+                <div class="eyebrow">Technical Article / Casing Gas Compression</div>
+                <h1>How Casing Gas Compression Increases Oil Production</h1>
+                <p class="hero-lede">An engineering-focused guide to annulus pressure reduction, reservoir drawdown, fluid
+                    loading
+                    relief, artificial lift support, and why reliable multiphase-capable compression matters in real casing
+                    gas
+                    applications.</p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="/compressioncommander">Explore CompressionCommander™</a>
+                    <a class="btn btn-outline" href="#article">Read the Technical Guide</a>
+                </div>
+            </div>
+
+            <div class="hero-card-stack">
+                <div class="quote-card">
+                    <strong>Lower casing pressure can improve production — but only when the compressor can operate reliably
+                        in the
+                        well’s real conditions.</strong>
+                    <p>Casing gas streams can be wet, unstable, low-pressure, and tied to liquid loading, artificial lift
+                        behavior,
+                        and winter field conditions.</p>
+                </div>
+                <div class="hero-mini-grid">
+                    <div class="hero-mini"><b>Drawdown</b><span>Reduce backpressure and improve inflow</span></div>
+                    <div class="hero-mini"><b>Fluid loading</b><span>Support better wellbore unloading</span></div>
+                    <div class="hero-mini"><b>Artificial lift</b><span>Improve operating conditions for lift systems</span>
+                    </div>
+                    <div class="hero-mini"><b>Proof</b><span>Gas and condensate restored in field service</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section class="section article-zone py-12" id="article">
+            <div class="wrap article-shell">
+                <aside class="toc" aria-label="Article contents">
+                    <div class="toc-title">Article Contents</div>
+                    <a href="#executive-summary">Executive summary</a>
+                    <a href="#pressure-matters">Why casing pressure matters</a>
+                    <a href="#drawdown">How lower casing pressure improves drawdown</a>
+                    <a href="#fluid-loading">Fluid loading relief</a>
+                    <a href="#artificial-lift">Artificial lift performance</a>
+                    <a href="#well-response">Why some wells respond more</a>
+                    <a href="#conventional-limits">Why conventional systems underperform</a>
+                    <a href="#fluidstream">Fluidstream reliability advantage</a>
+                    <a href="#case-study">Alberta case-study proof</a>
+                    <a href="#final-thoughts">Final thoughts</a>
+                </aside>
+
+                <article>
+                    <section class="article-section white" id="executive-summary">
+                        <div class="section-label">Executive summary</div>
+                        <h2>Casing gas compression increases production by changing wellbore pressure conditions.</h2>
+                        <p class="lead">Many casing gas compression articles stop at a simple statement: lowering casing
+                            pressure can
+                            increase oil production. While true, that explanation rarely addresses the engineering
+                            mechanisms that
+                            determine why some wells respond dramatically while others see limited benefit.</p>
+                        <p>Casing gas compression improves well performance by reducing annulus backpressure, improving
+                            reservoir
+                            drawdown, lowering bottomhole flowing pressure, reducing fluid loading effects, and supporting
+                            artificial
+                            lift performance.</p>
+                        <p>The production opportunity is only valuable when the compression system can operate reliably in
+                            real casing
+                            gas conditions. Many casing gas streams are wet, unstable, low-pressure, and
+                            maintenance-sensitive, which is
+                            why compression reliability becomes central to project economics.</p>
+                        <div class="callout">
+                            <span class="callout-title">Core point</span>
+                            <p>Casing gas compression is not just gas handling. It is a production optimization tool that
+                                must be
+                                matched to both reservoir physics and field-operating realities.</p>
+                        </div>
+                    </section>
+
+                    <section class="article-section grey" id="pressure-matters">
+                        <div class="section-label">Production physics</div>
+                        <h2>Why casing pressure matters</h2>
+                        <p>As oil flows from the reservoir into the wellbore, associated gas breaks out of solution and
+                            accumulates in
+                            the casing annulus. If that gas is not effectively removed, casing pressure rises and creates
+                            additional
+                            backpressure against the well.</p>
+                        <p>That elevated casing pressure can suppress production by increasing bottomhole flowing pressure,
+                            reducing
+                            reservoir drawdown, and making it harder for the formation to deliver fluids into the wellbore.
+                        </p>
+                        <div class="card-grid">
+                            <div class="fs-card">
+                                <h3>Higher backpressure</h3>
+                                <p>Elevated annulus pressure increases the pressure the reservoir must overcome to move
+                                    fluids into the
+                                    wellbore.</p>
+                            </div>
+                            <div class="line-card">
+                                <h3>Lower drawdown</h3>
+                                <p>Reduced pressure differential between reservoir and wellbore can limit inflow from
+                                    productive zones.
+                                </p>
+                            </div>
+                            <div class="line-card">
+                                <h3>Fluid accumulation</h3>
+                                <p>Backpressure can contribute to liquid loading and make unloading more difficult in
+                                    marginal wells.</p>
+                            </div>
+                            <div class="fs-card">
+                                <h3>Production suppression</h3>
+                                <p>In mature wells, small pressure changes can have meaningful impact on production and
+                                    economic life.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="article-section white" id="drawdown">
+                        <div class="section-label">Drawdown mechanism</div>
+                        <h2>How lowering casing pressure improves drawdown</h2>
+                        <p>Reservoir inflow is driven by pressure differential between the reservoir and the wellbore.
+                            Reducing casing
+                            pressure can lower bottomhole flowing pressure and increase drawdown across the reservoir.</p>
+                        <p>Greater drawdown can increase instantaneous production rate, restore production from marginal
+                            wells,
+                            improve long-term recovery potential, and delay premature economic abandonment where the well is
+                            still
+                            capable of producing.</p>
+                        <div class="callout">
+                            <span class="callout-title">Important distinction</span>
+                            <p>Casing gas compression does not create reservoir energy. It helps remove backpressure and
+                                operating
+                                constraints that may prevent the well from producing to its practical potential.</p>
+                        </div>
+                    </section>
+
+                    <section class="article-section grey" id="fluid-loading">
+                        <div class="section-label">Fluid level management</div>
+                        <h2>Fluid level reduction and liquid loading relief</h2>
+                        <p>Lower annulus pressure can also reduce fluid loading and improve fluid level management in the
+                            wellbore. In
+                            many mature or marginal wells, excess backpressure contributes to fluid buildup that suppresses
+                            inflow and
+                            burdens artificial lift systems.</p>
+                        <p>Lowering casing pressure can help reduce fluid head and improve unloading behavior, particularly
+                            in wells
+                            experiencing intermittent loading or unstable production.</p>
+                        <div class="compare-strip">
+                            <div class="compare-box">
+                                <h3>When casing pressure remains high</h3>
+                                <ul>
+                                    <li>Higher bottomhole flowing pressure</li>
+                                    <li>Reduced reservoir drawdown</li>
+                                    <li>Greater risk of fluid accumulation</li>
+                                    <li>More difficult artificial lift conditions</li>
+                                </ul>
+                            </div>
+                            <div class="compare-box blue">
+                                <h3>When casing pressure is reduced</h3>
+                                <ul>
+                                    <li>Lower annulus backpressure</li>
+                                    <li>Improved pressure differential</li>
+                                    <li>Better unloading opportunity</li>
+                                    <li>Improved operating window for lift systems</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="article-section white" id="artificial-lift">
+                        <div class="section-label">Artificial lift support</div>
+                        <h2>Artificial lift performance benefits</h2>
+                        <p>Casing gas compression can improve the performance of multiple artificial lift methods when the
+                            well is
+                            constrained by backpressure, fluid level, or casing gas accumulation.</p>
+                        <div class="card-grid">
+                            <div class="fs-card">
+                                <h3>Rod-pumped wells</h3>
+                                <p>Lower casing pressure can improve pump fillage and reduce fluid fallback under the right
+                                    conditions.
+                                </p>
+                            </div>
+                            <div class="line-card">
+                                <h3>Plunger-lift wells</h3>
+                                <p>Reduced annulus pressure can improve unloading efficiency and support more effective
+                                    cycle performance.
+                                </p>
+                            </div>
+                            <div class="line-card">
+                                <h3>Marginal flowing wells</h3>
+                                <p>Reducing backpressure may restore natural flow or delay the need for additional lift
+                                    methods.</p>
+                            </div>
+                            <div class="fs-card">
+                                <h3>Loaded wells</h3>
+                                <p>Casing gas compression can support wells where accumulated liquids and pressure
+                                    constraints limit
+                                    production.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="article-section grey" id="well-response">
+                        <div class="section-label">Candidate screening</div>
+                        <h2>Why some wells respond more than others</h2>
+                        <p>Not every well responds equally to casing gas compression. The magnitude of response depends on
+                            reservoir
+                            pressure, inflow performance, artificial lift configuration, gas breakout behavior, fluid
+                            loading severity,
+                            completion design, and pump placement.</p>
+                        <p>Testing and engineering review remain critical before assuming economic benefit. A well with
+                            meaningful
+                            backpressure and fluid loading constraints may respond strongly. A well limited primarily by
+                            reservoir
+                            depletion, mechanical damage, or unrelated artificial lift problems may respond less.</p>
+                        <div class="callout">
+                            <span class="callout-title">Application-fit mindset</span>
+                            <p>The strongest casing gas compression candidates usually combine production upside with a
+                                compression
+                                stream that requires reliable operation through wet, variable, or low-pressure conditions.
+                            </p>
+                        </div>
+                    </section>
+
+                    <section class="article-section white" id="conventional-limits">
+                        <div class="section-label">Real field failure logic</div>
+                        <h2>Why conventional casing gas compressors sometimes underperform</h2>
+                        <p>Many casing gas streams are wet, unstable, and highly variable. Conventional gas-only compressors
+                            often
+                            depend on upstream separation and idealized dry-gas assumptions.</p>
+                        <p>In real field service, those assumptions can break down due to entrained liquids, condensate
+                            carryover,
+                            slugging from unstable wells, freeze-prone separators and drains, flow variability, unstable
+                            suction
+                            conditions, and high maintenance burden in remote applications.</p>
+                        <div class="card-grid">
+                            <div class="fs-card">
+                                <h3>Entrained liquids</h3>
+                                <p>Liquid carryover can create shutdowns, damage risk, and maintenance exposure for gas-only
+                                    machines.</p>
+                            </div>
+                            <div class="line-card">
+                                <h3>Unstable suction</h3>
+                                <p>Low-pressure casing gas can fluctuate rapidly with well behavior and artificial lift
+                                    cycles.</p>
+                            </div>
+                            <div class="line-card">
+                                <h3>Winter support risks</h3>
+                                <p>Separators, drains, and instruments can freeze, creating downtime in cold operating
+                                    environments.</p>
+                            </div>
+                            <div class="fs-card">
+                                <h3>Remote maintenance</h3>
+                                <p>Repeated service calls can erase project economics where wells are remote or marginal.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="article-section grey" id="fluidstream">
+                        <div class="section-label">Fluidstream application</div>
+                        <h2>How Fluidstream improves reliability in difficult casing gas applications</h2>
+                        <p>Fluidstream’s CompressionCommander™ applies patented multiphase compression technology to casing
+                            gas
+                            applications where wet gas, unstable production, and liquid carryover challenge conventional
+                            systems.</p>
+                        <p>Rather than assuming perfect upstream separation, Fluidstream technology is engineered around
+                            real field
+                            conditions where liquids and upset events may occur during normal operation.</p>
+                        <p>Supported by Fluidstream’s core patent portfolio, including US11098709B2, CompressionCommander™
+                            uses
+                            liquid-aware operating methodology and autonomous control logic to help manage liquid-influenced
+                            compression
+                            events. The patent reference is used as a credibility anchor for Fluidstream’s engineering
+                            approach and does
+                            not replace application-specific technical review.</p>
+                        <div class="card-grid">
+                            <div class="fs-card">
+                                <h3>Liquid-aware compression</h3>
+                                <p>Designed around wet and variable casing gas streams rather than ideal dry-gas
+                                    assumptions.</p>
+                            </div>
+                            <div class="line-card">
+                                <h3>Autonomous response</h3>
+                                <p>Controls are intended to support stable operation around user-defined pressure targets
+                                    and system
+                                    health.</p>
+                            </div>
+                            <div class="line-card">
+                                <h3>Reduced separation dependence</h3>
+                                <p>Less reliance on perfect upstream separation can reduce maintenance and freeze-related
+                                    exposure.</p>
+                            </div>
+                            <div class="fs-card">
+                                <h3>Field-fit review</h3>
+                                <p>Each application should be reviewed around pressure, flow, liquids, winter operation, and
+                                    economics.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="article-section white" id="case-study">
+                        <div class="section-label">Case-study proof</div>
+                        <h2>Alberta production restoration shows the value of reliable compression.</h2>
+                        <p>Fluidstream’s Alberta, Canada field case study demonstrates the impact casing gas compression can
+                            have when
+                            properly applied in difficult field conditions.</p>
+                        <p>The project restored production from wells that were previously non-producing and showed that
+                            compression
+                            reliability, liquid tolerance, winter operation, and field-fit execution are central to
+                            achieving production
+                            and economic results.</p>
+                        <div class="dark-card">
+                            <div class="eyebrow">Alberta, Canada field example</div>
+                            <h2>Gas and condensate production restored in real field conditions.</h2>
+                            <p>The referenced field case demonstrates why casing gas compression should be evaluated through
+                                both
+                                production physics and operating reliability.</p>
+                            <div class="proof-grid">
+                                <div class="proof-item"><strong>~10,000 m³/day</strong><span>Gas production restored in the
+                                        referenced
+                                        field case study.</span></div>
+                                <div class="proof-item"><strong>~5 m³/day</strong><span>Condensate production achieved in
+                                        the referenced
+                                        field case study.</span></div>
+                                <div class="proof-item"><strong>&gt;C$1.5M/year</strong><span>Incremental revenue potential
+                                        highlighted in
+                                        the case study.</span></div>
+                                <div class="proof-item"><strong>Winter operation</strong><span>Reliable operation in harsh
+                                        winter and
+                                        variable liquid-flow conditions.</span></div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="article-section grey" id="final-thoughts">
+                        <div class="section-label">Final thoughts</div>
+                        <h2>The best casing gas compression projects combine well physics with field reliability.</h2>
+                        <p>Casing gas compression improves oil production by reducing annulus backpressure, increasing
+                            drawdown,
+                            lowering bottomhole flowing pressure, and improving wellbore fluid management.</p>
+                        <p>But successful projects require more than theoretical pressure reduction. They require
+                            compression
+                            technology capable of operating reliably under the wet, unstable, and maintenance-sensitive
+                            realities of
+                            actual casing gas service.</p>
+                        <p>The best casing gas compression projects are built around both reservoir physics and
+                            field-operating
+                            realities.</p>
+                    </section>
+                </article>
+            </div>
+        </section>
+
+        <section class="py-12" id="application-review">
+            <div class="wrap cta-inner">
+                <div>
+                    <div class="eyebrow">Talk to Fluidstream</div>
+                    <h2>Evaluate whether CompressionCommander™ can improve your well performance.</h2>
+                    <p>Built for engineers, production teams, and decision-makers evaluating casing pressure reduction,
+                        liquid-loaded wells, low-pressure annulus gas, harsh-weather operation, and maintenance-sensitive
+                        field sites.
+                        Submit your operating conditions and Fluidstream can assess the technical and economic fit.</p>
+                    <div class="cta-actions">
+                        <a class="btn-1 btn-primary" href="/contact">Request Technical Review</a>
+                        <a class="btn-1 btn-outline" href="/compressioncommander">Review CompressionCommander™
+                            Specifications</a>
+                    </div>
+                </div>
+                <div class="cta-panel">
+                    <h3>Application review focus</h3>
+                    <ul>
+                        <li>Current casing pressure and target pressure reduction</li>
+                        <li>Reservoir response, fluid loading, and artificial lift interaction</li>
+                        <li>Wet-gas risk, liquid carryover, and winter operation</li>
+                        <li>Production uplift potential, condensate recovery, and project economics</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
 
 @endsection

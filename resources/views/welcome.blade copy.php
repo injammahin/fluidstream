@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
-@section('content')<style>
+@section('content')
+    <style>
         :root {
             --bg: #ffffff;
             --bg-alt: #f4f6f8;
@@ -644,18 +645,18 @@
 
 
         /* .solutions,
-                                                                                                                                                                                                                                                                            .leadership,
-                                                                                                                                                                                                                                                                            .tech,
-                                                                                                                                                                                                                                                                            .caseband,
-                                                                                                                                                                                                                                                                            .cta {
-                                                                                                                                                                                                                                                                                padding: 72px 0
-                                                                                                                                                                                                                                                                            } */
+                                                                                                                                                                                                                                                        .leadership,
+                                                                                                                                                                                                                                                        .tech,
+                                                                                                                                                                                                                                                        .caseband,
+                                                                                                                                                                                                                                                        .cta {
+                                                                                                                                                                                                                                                            padding: 72px 0
+                                                                                                                                                                                                                                                        } */
 
         .section-head {
             /* display: flex;
-                                                                                                                    justify-content: space-between;
-                                                                                                                    align-items: flex-start;
-                                                                                                                    gap: 28px; */
+                                                                                                justify-content: space-between;
+                                                                                                align-items: flex-start;
+                                                                                                gap: 28px; */
             margin-bottom: 28px;
         }
 
@@ -1478,14 +1479,14 @@
         }
 
         /* .kicker {
-                                                                                                                                                    display: block;
-                                                                                                                                                    margin: 0 0 14px;
-                                                                                                                                                    font-size: 13px !important;
-                                                                                                                                                    font-weight: 700 !important;
-                                                                                                                                                    letter-spacing: .16em;
-                                                                                                                                                    text-transform: uppercase;
-                                                                                                                                                    color: var(--accent-dark) !important;
-                                                                                                                                                } */
+                                                                                                                                display: block;
+                                                                                                                                margin: 0 0 14px;
+                                                                                                                                font-size: 13px !important;
+                                                                                                                                font-weight: 700 !important;
+                                                                                                                                letter-spacing: .16em;
+                                                                                                                                text-transform: uppercase;
+                                                                                                                                color: var(--accent-dark) !important;
+                                                                                                                            } */
 
         .hero-dot.active {
             background: #38bdf8;
@@ -1669,10 +1670,28 @@
 
                         <div class="mt-5 h-1 w-20 rounded-full bg-sky-400"></div>
                         <p class="mt-7 max-w-4xl text-base font-bold leading-7 text-slate-200 sm:text-2xl sm:leading-8">
-                            Patented multiphase compression built for liquids, slugs, and real field conditions.
+                            Conventional compression struggles with liquids. Fluidstream is built for them.
+                        </p>
+
+                        <p class="mt-4 max-w-2xl text-base font-medium leading-7 text-slate-200 sm:text-lg sm:leading-8">
+                            Patented multiphase compression systems for vapor recovery, casing gas, and multiphase flow.
                         </p>
                         <p class="mt-3 max-w-2xl text-base font-medium leading-7 text-slate-200 sm:text-lg sm:leading-8">
-                            Field-proven to restore shut-in wells and generate more than C$1.5M/year in incremental revenue.
+                            Fluidstream delivers patented multiphase compression technology that compresses gas and liquids
+                            together, eliminating the need for upstream separation while maintaining stable operation under
+                            real field conditions, including slugging and variable flow.
+                        </p>
+                        <p class="mt-4 max-w-2xl text-base font-semibold leading-7 text-slate-200 sm:text-xl sm:leading-8">
+                            Field-proven: restored gas production from 0 to 10,000 m³/day and condensate production from 0
+                            to 5 m³/day, generating more than C$1.5M/year.
+                        </p>
+                        <p class="mt-3 max-w-2xl text-base font-semibold leading-7 text-slate-200 sm:text-xl sm:leading-8">
+                            No separation required. No complex surface systems. Just compression that works in real
+                            conditions.
+                        </p>
+                        <p class="mt-4 max-w-2xl text-base font-medium leading-7 text-slate-200 sm:text-lg sm:leading-8">
+                            Eliminates the need for separators, tanks, and complex support equipment in suitable
+                            applications.
                         </p>
 
                         <div class="mt-9 flex flex-col gap-3 sm:flex-row">
@@ -2019,25 +2038,25 @@
         }
 
         /* .patent-copy .kicker {
-                                                                                            margin-bottom: 18px;
-                                                                                        }
+                                                                        margin-bottom: 18px;
+                                                                    }
 
-                                                                                        .patent-copy h2 {
-                                                                                            margin: 0;
-                                                                                            font-size: clamp(1.9rem, 3vw, 3rem);
-                                                                                            line-height: 1.05;
-                                                                                            letter-spacing: -.04em;
-                                                                                            max-width: 21ch;
-                                                                                            color: var(--text);
-                                                                                        } */
+                                                                    .patent-copy h2 {
+                                                                        margin: 0;
+                                                                        font-size: clamp(1.9rem, 3vw, 3rem);
+                                                                        line-height: 1.05;
+                                                                        letter-spacing: -.04em;
+                                                                        max-width: 21ch;
+                                                                        color: var(--text);
+                                                                    } */
         /* 
-                                                .patent-copy p {
-                                                    margin: 0 0 18px;
-                                                    max-width: 760px;
-                                                    font-size: 1.18rem;
-                                                    line-height: 1.7;
-                                                    color: #5b6d86;
-                                                } */
+                            .patent-copy p {
+                                margin: 0 0 18px;
+                                max-width: 760px;
+                                font-size: 1.18rem;
+                                line-height: 1.7;
+                                color: #5b6d86;
+                            } */
 
         .patent-copy .patent-highlight {
             margin-top: 6px;
@@ -2258,11 +2277,11 @@
         }
 
         /* .patent-card p {
-                                                                                                                                                                                                                                                                                                                                                margin: 0;
-                                                                                                                                                                                                                                                                                                                                                font-size: 1.04rem;
-                                                                                                                                                                                                                                                                                                                                                line-height: 1.72;
-                                                                                                                                                                                                                                                                                                                                                color: #61738b;
-                                                                                                                                                                                                                                                                                                                                            } */
+                                                                                                                                                                                                                                                                                                                            margin: 0;
+                                                                                                                                                                                                                                                                                                                            font-size: 1.04rem;
+                                                                                                                                                                                                                                                                                                                            line-height: 1.72;
+                                                                                                                                                                                                                                                                                                                            color: #61738b;
+                                                                                                                                                                                                                                                                                                                        } */
 
         .patent-callout {
             position: relative;

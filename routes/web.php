@@ -2,20 +2,17 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
 */
 
 Route::get('/', function () {
     return view('welcome');
 });
+
 Route::view('/multiphase-compression', 'multiphase-compression');
 Route::view('/vapor-recovery', 'vapor-recovery');
 Route::view('/casing-gas-compression', 'casing-gas-compression');
@@ -28,7 +25,14 @@ Route::view('/perspectives', 'perspectives');
 Route::view('/multiphase-compression-technology', 'multiphase-compression-technology');
 Route::view('/contact', 'contact')->name('contact');
 Route::view('/patented-technology', 'patented-technology')->name('patented-technology');
+
 Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
+
+/*
+|--------------------------------------------------------------------------
+| Case Study Pages
+|--------------------------------------------------------------------------
+*/
 
 Route::get('/case-studies/multiphasecommander-production-recovery', function () {
     return view('case-studies.multiphasecommander-production-recovery');
@@ -49,6 +53,14 @@ Route::get('/case-studies/allied-energy-vaporcommander-vru', function () {
 Route::get('/case-studies/whitecap-vaporcommander-vru', function () {
     return view('case-studies.whitecap-vaporcommander-vru');
 })->name('case-studies.whitecap-vaporcommander-vru');
+
+/*
+|--------------------------------------------------------------------------
+| Insight Pages
+|--------------------------------------------------------------------------
+| Article 1 to Article 13
+*/
+
 Route::view(
     '/insights/fluidstream-vapor-recovery-fluidstream-style',
     'insights.fluidstream-vapor-recovery-fluidstream-style'
@@ -78,3 +90,49 @@ Route::view(
     '/insights/multiphase-compression-liquid-loaded-gas-wells',
     'insights.multiphase-compression-liquid-loaded-gas-wells'
 )->name('insights.multiphase-compression-liquid-loaded-gas-wells');
+
+/*
+|--------------------------------------------------------------------------
+| New Insight Pages
+|--------------------------------------------------------------------------
+| Article 7 to Article 13
+*/
+
+Route::view(
+    '/insights/fluidstream-vru-vs-flaring-complete',
+    'insights.fluidstream-vru-vs-flaring-complete'
+)->name('insights.fluidstream-vru-vs-flaring-complete');
+
+Route::view(
+    '/insights/fluidstream-methane-reduction-story-white-sections',
+    'insights.fluidstream-methane-reduction-story-white-sections'
+)->name('insights.fluidstream-methane-reduction-story-white-sections');
+
+Route::view(
+    '/insights/how-to-select-right-compression-applications-final-fixed',
+    'insights.how-to-select-right-compression-applications-final-fixed'
+)->name('insights.how-to-select-right-compression-applications-final-fixed');
+
+Route::view(
+    '/insights/when-is-casing-gas-compressioncommander',
+    'insights.when-is-casing-gas-compressioncommander'
+)->name('insights.when-is-casing-gas-compressioncommander');
+
+Route::view(
+    '/insights/why-conventional-compression-fails-wet-unstable-wells',
+    'insights.why-conventional-compression-fails-wet-unstable-wells'
+)->name('insights.why-conventional-compression-fails-wet-unstable-wells');
+
+Route::view(
+    '/insights/how-casing-gas-compression-increases-oil-production',
+    'insights.how-casing-gas-compression-increases-oil-production'
+)->name('insights.how-casing-gas-compression-increases-oil-production');
+
+Route::view(
+    '/insights/how-multiphase-compression-supports-production-recovery',
+    'insights.how-multiphase-compression-supports-production-recovery'
+)->name('insights.how-multiphase-compression-supports-production-recovery');
+Route::view(
+    'technical-review',
+    'technical-review'
+)->name('technical-review');
