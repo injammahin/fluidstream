@@ -256,13 +256,13 @@
     }
 
     /* .swipe-left:hover:before,
-                                                                                                        .swipe-left:hover:before,
-                                                                                                        .model-card:hover:before,
-                                                                                                        .spec-mobile-card:hover:before,
-                                                                                                        .comparison .box:hover:before,
-                                                                                                        .reality-item:hover:before {
-                                                                                                          opacity: 1;
-                                                                                                        } */
+                                                                                                                                    .swipe-left:hover:before,
+                                                                                                                                    .model-card:hover:before,
+                                                                                                                                    .spec-mobile-card:hover:before,
+                                                                                                                                    .comparison .box:hover:before,
+                                                                                                                                    .reality-item:hover:before {
+                                                                                                                                      opacity: 1;
+                                                                                                                                    } */
 
     .swipe-left:hover:after,
     .model-card:hover:after,
@@ -273,8 +273,8 @@
     }
 
     /* .swipe-left:hover:after {
-                                                                                                      right: 155%;
-                                                                                                    } */
+                                                                                                                                  right: 155%;
+                                                                                                                                } */
 
     .hero-card:hover {
       box-shadow: 0 26px 56px rgba(0, 24, 220, .18);
@@ -282,14 +282,14 @@
     }
 
     /* .swipe-left:hover,
-                                                                                                  .swipe-left:hover,
-                                                                                                  .model-card:hover,
-                                                                                                  .spec-mobile-card:hover,
-                                                                                                  .comparison .box:hover,
-                                                                                                  .reality-item:hover {
-                                                                                                    box-shadow: 0 24px 52px rgba(13, 32, 84, .12);
-                                                                                                    border-color: #b9d0ff;
-                                                                                                  } */
+                                                                                                                              .swipe-left:hover,
+                                                                                                                              .model-card:hover,
+                                                                                                                              .spec-mobile-card:hover,
+                                                                                                                              .comparison .box:hover,
+                                                                                                                              .reality-item:hover {
+                                                                                                                                box-shadow: 0 24px 52px rgba(13, 32, 84, .12);
+                                                                                                                                border-color: #b9d0ff;
+                                                                                                                              } */
 
     .blue-fill:before {
       content: "";
@@ -340,9 +340,9 @@
     }
 
     /* 
-                                                                                  .highlight-box:hover a {
-                                                                                    color: #fff !important
-                                                                                  } */
+                                                                                                              .highlight-box:hover a {
+                                                                                                                color: #fff !important
+                                                                                                              } */
 
     .cta-panel:hover {
       /* box-shadow: 0 24px 52px rgba(0, 24, 220, .18); */
@@ -572,13 +572,13 @@
     }
 
     /* .kicker mb-2 {
-                                    font-size: 12px;
-                                    letter-spacing: .11em;
-                                    text-transform: uppercase;
-                                    color: var(--blue);
-                                    font-weight: 700;
-                                    margin-bottom: 10px
-                                  } */
+                                                                font-size: 12px;
+                                                                letter-spacing: .11em;
+                                                                text-transform: uppercase;
+                                                                color: var(--blue);
+                                                                font-weight: 700;
+                                                                margin-bottom: 10px
+                                                              } */
 
     h2 {
       margin: 0 0 16px;
@@ -1304,399 +1304,928 @@
     </div>
   </section>
 
-  <section id="specifications">
-    <div class="wrap py-12">
-      <div class="kicker mb-2">Specifications</div>
-      <h2>CompressionCommander™ model range for casing gas applications.</h2>
-      <p class="lead">
-        Compare the model range visually, then review flow performance by inlet pressure, pressure differential,
-        horsepower, and standard package features.
-      </p>
+  <section class="fs-model-selector-section" id="specifications">
+    <style>
+      .fs-model-selector-section {
+        --blue: #0018dc;
+        --cyan: #15d1ff;
+        --ink: #071126;
+        --text: #19243a;
+        --muted: #647086;
+        --line: #dfe6f1;
+        --soft: #f5f7fb;
+        --white: #ffffff;
+        background: var(--soft);
+        padding: 66px 0;
+        color: var(--text);
+      }
 
-      <div class="model-card-grid">
+      .fs-model-selector-section,
+      .fs-model-selector-section * {
+        box-sizing: border-box;
+      }
 
-        <div class="model-card interactive-card swipe-left">
-          <div class="model-top">
-            <div class="model-name">1.0 [35]</div>
-            <div class="model-badge">ü HP</div>
-          </div>
-          <div class="model-metrics">
-            <div><span>Flow @ 5 psi<strong>1.3 [46] mcf/d</strong></div>
-            <div><span>Max ΔP<strong>15 psig</strong></div>
-            <div><span>Package features<strong>Autonomous + remote</strong></div>
-          </div>
-        </div>
+      .fs-ms-wrap {
+        width: min(1200px, calc(100% - 44px));
+        margin: 0 auto;
+      }
 
-        <div class="model-card interactive-card swipe-left">
-          <div class="model-top">
-            <div class="model-name">3.0 [106]</div>
-            <div class="model-badge">ü HP</div>
-          </div>
-          <div class="model-metrics">
-            <div><span>Flow @ 5 psi<strong>3.8 [134] mcf/d</strong></div>
-            <div><span>Max ΔP<strong>50 psig</strong></div>
-            <div><span>Package features<strong>Autonomous + remote</strong></div>
-          </div>
-        </div>
+      .fs-ms-section-head {
+        /* display: grid; */
+        grid-template-columns: 260px 1fr;
+        gap: 44px;
+        align-items: start;
+        margin-bottom: 28px;
+      }
 
-        <div class="model-card interactive-card swipe-left">
-          <div class="model-top">
-            <div class="model-name">1.8 [64]</div>
-            <div class="model-badge">ü HP</div>
-          </div>
-          <div class="model-metrics">
-            <div><span>Flow @ 5 psi<strong>2.2 [78] mcf/d</strong></div>
-            <div><span>Max ΔP<strong>50 psig</strong></div>
-            <div><span>Package features<strong>Autonomous + remote</strong></div>
-          </div>
-        </div>
+      .fs-ms-rail {
+        padding-top: 14px;
+        color: var(--blue);
+        font-size: 13px;
+        font-weight: 950;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+      }
 
-        <div class="model-card interactive-card swipe-left">
-          <div class="model-top">
-            <div class="model-name">3.1 [109]</div>
-            <div class="model-badge">ü HP</div>
-          </div>
-          <div class="model-metrics">
-            <div><span>Flow @ 5 psi<strong>3.9 [138] mcf/d</strong></div>
-            <div><span>Max ΔP<strong>100 psig</strong></div>
-            <div><span>Package features<strong>Autonomous + remote</strong></div>
-          </div>
-        </div>
+      /* .fs-ms-section-head h2 {
+                      font-size: clamp(30px, 3.2vw, 46px);
+                      line-height: 1.02;
+                      margin: 0 0 14px;
+                      letter-spacing: -.035em;
+                      color: var(--ink);
+                    } */
+      /* 
+                  .fs-ms-lead {
+                    font-size: 17px;
+                    color: #56647a;
+                    max-width: 860px;
+                    margin: 0;
+                    line-height: 1.65;
+                  } */
 
-        <div class="model-card interactive-card swipe-left">
-          <div class="model-top">
-            <div class="model-name">5.7 [201]</div>
-            <div class="model-badge">ü HP</div>
-          </div>
-          <div class="model-metrics">
-            <div><span>Flow @ 5 psi<strong>7.1 [251] mcf/d</strong></div>
-            <div><span>Max ΔP<strong>100 psig</strong></div>
-            <div><span>Package features<strong>Autonomous + remote</strong></div>
-          </div>
-        </div>
+      .fs-ms-spec-note {
+        margin: 14px 0 0;
+        font-size: 14px;
+        color: var(--muted);
+        font-weight: 700;
+        line-height: 1.6;
+      }
 
-        <div class="model-card interactive-card swipe-left">
-          <div class="model-top">
-            <div class="model-name">5.7 [201]</div>
-            <div class="model-badge">ü HP</div>
-          </div>
-          <div class="model-metrics">
-            <div><span>Flow @ 5 psi<strong>7.1 [251] mcf/d</strong></div>
-            <div><span>Max ΔP<strong>100 psig</strong></div>
-            <div><span>Package features<strong>Autonomous + remote</strong></div>
-          </div>
-        </div>
+      .fs-ms-global-control {
+        position: sticky;
+        top: 102px;
+        z-index: 20;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 14px;
+        width: fit-content;
+        max-width: 100%;
+        margin: 0 0 18px auto;
+        background: rgba(255, 255, 255, .94);
+        border: 1px solid rgba(223, 230, 241, .95);
+        border-radius: 999px;
+        padding: 10px 12px 10px 18px;
+        box-shadow: 0 10px 24px rgba(7, 17, 38, .07);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      }
 
-        <div class="model-card interactive-card swipe-left">
-          <div class="model-top">
-            <div class="model-name">10.1 [357]</div>
-            <div class="model-badge">ü HP</div>
-          </div>
-          <div class="model-metrics">
-            <div><span>Flow @ 5 psi<strong>12.7 [449] mcf/d</strong></div>
-            <div><span>Max ΔP<strong>150 psig</strong></div>
-            <div><span>Package features<strong>Autonomous + remote</strong></div>
-          </div>
-        </div>
+      .fs-ms-global-control strong {
+        display: inline;
+        color: var(--ink);
+        font-size: 15px;
+        font-weight: 950;
+        white-space: nowrap;
+      }
 
-        <div class="model-card interactive-card swipe-left">
-          <div class="model-top">
-            <div class="model-name">10.3 [364]</div>
-            <div class="model-badge">ü HP</div>
-          </div>
-          <div class="model-metrics">
-            <div><span>Flow @ 5 psi<strong>13.0 [459] mcf/d</strong></div>
-            <div><span>Max ΔP<strong>150 psig</strong></div>
-            <div><span>Package features<strong>Autonomous + remote</strong></div>
-          </div>
+      .fs-model-selector-section select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+
+        background-color: #ffffff;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%230018dc' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 14px center;
+
+        border: 1px solid #cfd8ea;
+        border-radius: 999px;
+        color: var(--ink);
+
+        font-size: 15px !important;
+        line-height: 1.25 !important;
+        font-weight: 800 !important;
+
+        padding: 10px 44px 10px 15px;
+        min-width: 220px;
+        outline: none;
+        cursor: pointer;
+
+        transition: border-color .24s ease, box-shadow .24s ease;
+      }
+
+      .fs-model-selector-section select {
+        font-size: 15px !important;
+        line-height: 1.25 !important;
+        font-weight: 800 !important;
+      }
+
+      .fs-model-selector-section select option {
+        font-size: 15px !important;
+        line-height: 1.35 !important;
+        font-weight: 500 !important;
+      }
+
+      .fs-model-selector-section select option {
+        font-size: 15px !important;
+        line-height: 1.35 !important;
+        font-weight: 500 !important;
+        color: #071126;
+        background: #ffffff;
+      }
+
+      .fs-model-selector-section select:focus {
+        border-color: var(--blue);
+        box-shadow: 0 0 0 4px rgba(0, 24, 220, .08);
+      }
+
+      .fs-ms-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+
+      .fs-ms-model-card {
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+        background: #ffffff;
+        border: 1px solid var(--line);
+        border-radius: 7px;
+        box-shadow: 0 14px 36px rgba(7, 17, 38, .065);
+        transition:
+          transform .24s ease,
+          border-color .24s ease,
+          box-shadow .24s ease,
+          background .24s ease;
+      }
+
+      .fs-ms-model-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 5;
+        height: 4px;
+        background: var(--blue);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform .3s ease;
+      }
+
+      .fs-ms-model-card:hover {
+        transform: translateY(-3px);
+        border-color: var(--blue);
+        /* box-shadow: 0 22px 46px rgba(16, 42, 67, .10); */
+        background: #ffffff;
+      }
+
+      .fs-ms-model-card:hover::before {
+        transform: scaleX(1);
+      }
+
+      .fs-ms-card-top {
+        padding: 24px 22px 18px;
+        border-bottom: 1px solid rgba(223, 230, 241, .9);
+        background: linear-gradient(180deg, #ffffff, #f9fbff);
+      }
+
+      .fs-ms-family {
+        display: inline-flex;
+        color: var(--blue);
+        font-size: 10px;
+        font-weight: 950;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+      }
+
+      .fs-ms-model-line {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 12px;
+        margin-top: 8px;
+      }
+
+      .fs-ms-model-line h3 {
+        font-size: 24px;
+        line-height: 1.08;
+        margin: 0;
+        color: var(--ink);
+        letter-spacing: -.02em;
+        font-weight: 900;
+      }
+
+      .fs-ms-hp-badge {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+        padding: 7px 11px;
+        border-radius: 999px;
+        background: #f2f6ff;
+        color: var(--blue);
+        border: 1px solid #dce6fb;
+        font-weight: 900;
+        font-size: 12px;
+        letter-spacing: .04em;
+      }
+
+      .fs-ms-pressure-control {
+        padding: 16px 18px 0;
+      }
+
+      .fs-ms-pressure-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 8px;
+      }
+
+      .fs-ms-pressure-control label,
+      .fs-ms-reading-label,
+      .fs-ms-card-specs b {
+        display: block;
+        color: #647086;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: .075em;
+        font-weight: 900;
+      }
+
+      .fs-ms-primary-reading {
+        margin: 14px 18px 16px;
+        background: #0018dc;
+        color: #ffffff;
+        border-radius: 7px;
+        padding: 17px 18px;
+        box-shadow: none;
+      }
+
+      .fs-ms-reading-label {
+        color: #98edff !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+        margin-bottom: 8px;
+      }
+
+      .fs-ms-reading-value {
+        display: grid;
+        gap: 4px;
+        font-size: 20px;
+        font-weight: 950;
+      }
+
+      .fs-ms-reading-value .metric,
+      .fs-ms-reading-value .imperial {
+        font-size: 20px;
+        line-height: 1.2;
+        font-weight: 950;
+        color: #ffffff;
+        white-space: nowrap;
+      }
+
+      .fs-ms-reading-value small {
+        font-size: 12px;
+        color: #dcecff;
+        font-weight: 800;
+      }
+
+      .fs-ms-card-specs {
+        padding: 0 18px 18px;
+        display: grid;
+        gap: 10px;
+      }
+
+      .fs-ms-card-specs>div {
+        position: relative;
+        background: #f7f9fd;
+        border: 1px solid #e7edf6;
+        border-radius: 7px;
+        padding: 13px 14px 13px 42px;
+        box-shadow: none;
+      }
+
+      .fs-ms-card-specs>div::before {
+        content: "";
+        position: absolute;
+        left: 13px;
+        top: 15px;
+        width: 17px;
+        height: 17px;
+        border-radius: 5px;
+        background: var(--blue);
+        opacity: .9;
+      }
+
+      .fs-ms-card-specs span {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        align-items: baseline;
+        font-size: 16px;
+        font-weight: 950;
+        color: var(--ink);
+      }
+
+      .fs-ms-card-specs small {
+        font-size: 12px;
+        color: #647086;
+        font-weight: 850;
+      }
+
+      .fs-ms-sizing-notes {
+        margin-top: 22px;
+        background: #fbfcff;
+        border: 1px solid var(--line);
+        border-radius: 7px;
+        padding: 18px 20px;
+        color: #647086;
+        font-size: 13px;
+        box-shadow: 0 10px 28px rgba(7, 17, 38, .045);
+        line-height: 1.65;
+      }
+
+      .fs-ms-sizing-notes strong {
+        display: block;
+        color: var(--ink);
+        font-size: 14px;
+        margin-bottom: 8px;
+      }
+
+      .fs-ms-sizing-notes ol {
+        margin: 0;
+        padding-left: 18px;
+        display: grid;
+        gap: 7px;
+      }
+
+      .fs-ms-sizing-notes li {
+        padding-left: 4px;
+      }
+
+      @media(max-width:1120px) {
+        .fs-ms-cards {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .fs-ms-section-head {
+          grid-template-columns: 1fr;
+          gap: 12px;
+        }
+      }
+
+      @media(max-width:720px) {
+        .fs-model-selector-section {
+          padding: 46px 0;
+        }
+
+        .fs-ms-wrap {
+          width: min(100% - 30px, 1200px);
+        }
+
+        .fs-ms-global-control {
+          position: static;
+          width: 100%;
+          margin-left: 0;
+          margin-right: 0;
+          border-radius: 7px;
+          align-items: stretch;
+          flex-direction: column;
+          padding: 14px;
+        }
+
+        .fs-ms-global-control strong {
+          font-size: 14px;
+        }
+
+        .fs-model-selector-section select {
+          width: 100%;
+          min-width: 0;
+        }
+
+        .fs-ms-cards {
+          grid-template-columns: 1fr;
+        }
+
+        .fs-ms-model-line h3 {
+          font-size: 22px;
+        }
+      }
+    </style>
+
+    <div class="fs-ms-wrap">
+      <div class="fs-ms-section-head">
+        <div class="fs-ms-rail">Specifications</div>
+        <div>
+          <h2>Compare models by inlet pressure.</h2>
+          <p class="lead">
+            Select an inlet pressure to review gas capacity across the CompressionCommander™ model range.
+          </p>
+          <p class="lead">
+            Additional model sizes and configurations are available for applications outside the standard range shown.
+          </p>
         </div>
       </div>
 
-      <div class="spec-desktop">
-        <div class="spec-wrap spec-wrap-enhanced">
-          <table class="spec-table-enhanced">
-            <thead>
-              <tr>
-                <th class="spec-col">Specification</th>
-                <th class="cond-col">Units / Condition</th>
-                <th>1.0 [35]</th>
-                <th>3.0 [106]</th>
-                <th>1.8 [64]</th>
-                <th>3.1 [109]</th>
-                <th>5.7 [201]</th>
-                <th>5.7 [201]</th>
-                <th>10.1 [357]</th>
-                <th>10.3 [364]</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class='spec-col'>Flow rate</td>
-                <td class='cond-col'>5 psi</td>
-                <td>1.3 [46]</td>
-                <td>3.8 [134]</td>
-                <td>2.2 [78]</td>
-                <td>3.9 [138]</td>
-                <td>7.1 [251]</td>
-                <td>7.1 [251]</td>
-                <td>12.7 [449]</td>
-                <td>13.0 [459]</td>
-              </tr>
-              <tr>
-                <td class='spec-col'>Flow rate</td>
-                <td class='cond-col'>10 psi</td>
-                <td>1.8 [64]</td>
-                <td>5.3 [187]</td>
-                <td>3.1 [109]</td>
-                <td>5.5 [194]</td>
-                <td>9.9 [350]</td>
-                <td>9.9 [350]</td>
-                <td>17.8 [629]</td>
-                <td>18.2 [643]</td>
-              </tr>
-              <tr>
-                <td class='spec-col'>Flow rate</td>
-                <td class='cond-col'>20 psi</td>
-                <td>2.3 [81]</td>
-                <td>6.8 [240]</td>
-                <td>4.0 [141]</td>
-                <td>7.1 [251]</td>
-                <td>12.8 [452]</td>
-                <td>12.8 [452]</td>
-                <td>22.9 [209]</td>
-                <td>23.4 [826]</td>
-              </tr>
-              <tr>
-                <td class='spec-col'>Flow rate</td>
-                <td class='cond-col'>30 psi</td>
-                <td>3.4 [120]</td>
-                <td>9.9 [350]</td>
-                <td>5.9 [208]</td>
-                <td>10.3 [364]</td>
-                <td>18.5 [653]</td>
-                <td>18.5 [653]</td>
-                <td>33.1 [1,169]</td>
-                <td>33.9 [1,197]</td>
-              </tr>
-              <tr>
-                <td class='spec-col'>Flow rate</td>
-                <td class='cond-col'>50 psi</td>
-                <td>1207 [175]</td>
-                <td>1034 [150]</td>
-                <td>1896 [275]</td>
-                <td>1896 [275]</td>
-                <td>1034 [150]</td>
-                <td>1379 [200]</td>
-                <td>1896 [275]</td>
-                <td>1896 [275]</td>
-              </tr>
-              <tr>
-                <td class='spec-col'>Max pressure differential</td>
-                <td class='cond-col'>psig</td>
-                <td>15</td>
-                <td>50</td>
-                <td>50</td>
-                <td>100</td>
-                <td>100</td>
-                <td>100</td>
-                <td>150</td>
-                <td>150</td>
-              </tr>
-              <tr>
-                <td class='spec-col'>Motor size</td>
-                <td class='cond-col'>HP</td>
-                <td>ü</td>
-                <td>ü</td>
-                <td>ü</td>
-                <td>ü</td>
-                <td>ü</td>
-                <td>ü</td>
-                <td>ü</td>
-                <td>ü</td>
-              </tr>
-              <tr>
-                <td class='spec-col'>H₂S handling</td>
-                <td class='cond-col'>—</td>
-                <td>Included</td>
-                <td>Included</td>
-                <td>Included</td>
-                <td>Included</td>
-                <td>Included</td>
-                <td>Included</td>
-                <td>Included</td>
-                <td>Included</td>
-              </tr>
-              <tr>
-                <td class='spec-col'>Cold weather startup</td>
-                <td class='cond-col'>—</td>
-                <td>Included</td>
-                <td>Included</td>
-                <td>Included</td>
-                <td>Included</td>
-                <td>Included</td>
-                <td>Included</td>
-                <td>Included</td>
-                <td>Included</td>
-              </tr>
-              <tr>
-                <td class='spec-col'>Autonomous controller</td>
-                <td class='cond-col'>—</td>
-                <td>Included</td>
-                <td>Included</td>
-                <td>Included</td>
-                <td>Included</td>
-                <td>Included</td>
-                <td>Included</td>
-                <td>Included</td>
-                <td>Included</td>
-              </tr>
-              <tr>
-                <td class='spec-col'>Remote / HMI</td>
-                <td class='cond-col'>—</td>
-                <td>None</td>
-                <td>None</td>
-                <td>None</td>
-                <td>None</td>
-                <td>None</td>
-                <td>None</td>
-                <td>None</td>
-                <td>None</td>
-              </tr>
-            </tbody>
-          </table>
+      <div class="fs-ms-global-control">
+        <div>
+          <strong>Compare all models at</strong>
         </div>
+
+        <select id="fsGlobalPressure">
+          <option value="0">5 psi | 34 kPa</option>
+          <option value="1">10 psi | 69 kPa</option>
+          <option value="2">20 psi | 138 kPa</option>
+          <option value="3">30 psi | 207 kPa</option>
+          <option value="4" selected>50 psi | 345 kPa</option>
+        </select>
       </div>
 
-      <div class="spec-mobile">
-
-        <article class="spec-mobile-card interactive-card swipe-left">
-          <div class="spec-mobile-head">
-            <h3>1.0 [35]</h3>
-            <div class="model-badge">ü HP</div>
+      <div class="fs-ms-cards">
+        <article class="fs-ms-model-card" data-card-index="0">
+          <div class="fs-ms-card-top">
+            <span class="fs-ms-family">CompressionCommander™</span>
+            <div class="fs-ms-model-line">
+              <h3>CC825 (015013)</h3>
+              <span class="fs-ms-hp-badge">15 HP</span>
+            </div>
           </div>
-          <div class="spec-mobile-grid">
-            <div><span>Flow @ 5 psi<strong>1.3 [46] mcf/d</strong></div>
-            <div><span>Flow @ 50 psi<strong>1207 [175] mcf/d</strong></div>
-            <div><span>Max ΔP<strong>15 psig</strong></div>
-            <div><span>H₂S handling<strong>Included</strong></div>
-            <div><span>Autonomous<strong>Included</strong></div>
-            <div><span>Remote / HMI<strong>None</strong></div>
+
+          <div class="fs-ms-pressure-control">
+            <div class="fs-ms-pressure-row">
+              <label for="fsPressure0">Inlet pressure</label>
+            </div>
+            <select id="fsPressure0" class="fs-pressure-select" data-card="0">
+              <option value="0">5 psi | 34 kPa</option>
+              <option value="1">10 psi | 69 kPa</option>
+              <option value="2">20 psi | 138 kPa</option>
+              <option value="3">30 psi | 207 kPa</option>
+              <option value="4" selected>50 psi | 345 kPa</option>
+            </select>
+          </div>
+
+          <div class="fs-ms-primary-reading">
+            <span class="fs-ms-reading-label">Gas Capacity</span>
+            <div class="fs-ms-reading-value" id="fsGasReading0"></div>
+          </div>
+
+          <div class="fs-ms-card-specs">
+            <div>
+              <b>Max ΔP</b>
+              <span>
+                <span class="metric">1207 <small>kPag</small></span>
+                <span class="imperial">175 <small>psig</small></span>
+              </span>
+            </div>
           </div>
         </article>
 
-        <article class="spec-mobile-card interactive-card swipe-left">
-          <div class="spec-mobile-head">
-            <h3>3.0 [106]</h3>
-            <div class="model-badge">ü HP</div>
+        <article class="fs-ms-model-card" data-card-index="1">
+          <div class="fs-ms-card-top">
+            <span class="fs-ms-family">CompressionCommander™</span>
+            <div class="fs-ms-model-line">
+              <h3>CC835 (015013)</h3>
+              <span class="fs-ms-hp-badge">15 HP</span>
+            </div>
           </div>
-          <div class="spec-mobile-grid">
-            <div><span>Flow @ 5 psi<strong>3.8 [134] mcf/d</strong></div>
-            <div><span>Flow @ 50 psi<strong>1034 [150] mcf/d</strong></div>
-            <div><span>Max ΔP<strong>50 psig</strong></div>
-            <div><span>H₂S handling<strong>Included</strong></div>
-            <div><span>Autonomous<strong>Included</strong></div>
-            <div><span>Remote / HMI<strong>None</strong></div>
+
+          <div class="fs-ms-pressure-control">
+            <div class="fs-ms-pressure-row">
+              <label for="fsPressure1">Inlet pressure</label>
+            </div>
+            <select id="fsPressure1" class="fs-pressure-select" data-card="1">
+              <option value="0">5 psi | 34 kPa</option>
+              <option value="1">10 psi | 69 kPa</option>
+              <option value="2">20 psi | 138 kPa</option>
+              <option value="3">30 psi | 207 kPa</option>
+              <option value="4" selected>50 psi | 345 kPa</option>
+            </select>
+          </div>
+
+          <div class="fs-ms-primary-reading">
+            <span class="fs-ms-reading-label">Gas Capacity</span>
+            <div class="fs-ms-reading-value" id="fsGasReading1"></div>
+          </div>
+
+          <div class="fs-ms-card-specs">
+            <div>
+              <b>Max ΔP</b>
+              <span>
+                <span class="metric">2586 <small>kPag</small></span>
+                <span class="imperial">375 <small>psig</small></span>
+              </span>
+            </div>
           </div>
         </article>
 
-        <article class="spec-mobile-card interactive-card swipe-left">
-          <div class="spec-mobile-head">
-            <h3>1.8 [64]</h3>
-            <div class="model-badge">ü HP</div>
+        <article class="fs-ms-model-card" data-card-index="2">
+          <div class="fs-ms-card-top">
+            <span class="fs-ms-family">CompressionCommander™</span>
+            <div class="fs-ms-model-line">
+              <h3>CC1035 (050035)</h3>
+              <span class="fs-ms-hp-badge">50 HP</span>
+            </div>
           </div>
-          <div class="spec-mobile-grid">
-            <div><span>Flow @ 5 psi<strong>2.2 [78] mcf/d</strong></div>
-            <div><span>Flow @ 50 psi<strong>1896 [275] mcf/d</strong></div>
-            <div><span>Max ΔP<strong>50 psig</strong></div>
-            <div><span>H₂S handling<strong>Included</strong></div>
-            <div><span>Autonomous<strong>Included</strong></div>
-            <div><span>Remote / HMI<strong>None</strong></div>
+
+          <div class="fs-ms-pressure-control">
+            <div class="fs-ms-pressure-row">
+              <label for="fsPressure2">Inlet pressure</label>
+            </div>
+            <select id="fsPressure2" class="fs-pressure-select" data-card="2">
+              <option value="0">5 psi | 34 kPa</option>
+              <option value="1">10 psi | 69 kPa</option>
+              <option value="2">20 psi | 138 kPa</option>
+              <option value="3">30 psi | 207 kPa</option>
+              <option value="4" selected>50 psi | 345 kPa</option>
+            </select>
+          </div>
+
+          <div class="fs-ms-primary-reading">
+            <span class="fs-ms-reading-label">Gas Capacity</span>
+            <div class="fs-ms-reading-value" id="fsGasReading2"></div>
+          </div>
+
+          <div class="fs-ms-card-specs">
+            <div>
+              <b>Max ΔP</b>
+              <span>
+                <span class="metric">1724 <small>kPag</small></span>
+                <span class="imperial">250 <small>psig</small></span>
+              </span>
+            </div>
           </div>
         </article>
 
-        <article class="spec-mobile-card interactive-card swipe-left">
-          <div class="spec-mobile-head">
-            <h3>3.1 [109]</h3>
-            <div class="model-badge">ü HP</div>
+        <article class="fs-ms-model-card" data-card-index="3">
+          <div class="fs-ms-card-top">
+            <span class="fs-ms-family">CompressionCommander™</span>
+            <div class="fs-ms-model-line">
+              <h3>CC1235 (050035)</h3>
+              <span class="fs-ms-hp-badge">50 HP</span>
+            </div>
           </div>
-          <div class="spec-mobile-grid">
-            <div><span>Flow @ 5 psi<strong>3.9 [138] mcf/d</strong></div>
-            <div><span>Flow @ 50 psi<strong>1896 [275] mcf/d</strong></div>
-            <div><span>Max ΔP<strong>100 psig</strong></div>
-            <div><span>H₂S handling<strong>Included</strong></div>
-            <div><span>Autonomous<strong>Included</strong></div>
-            <div><span>Remote / HMI<strong>None</strong></div>
+
+          <div class="fs-ms-pressure-control">
+            <div class="fs-ms-pressure-row">
+              <label for="fsPressure3">Inlet pressure</label>
+            </div>
+            <select id="fsPressure3" class="fs-pressure-select" data-card="3">
+              <option value="0">5 psi | 34 kPa</option>
+              <option value="1">10 psi | 69 kPa</option>
+              <option value="2">20 psi | 138 kPa</option>
+              <option value="3">30 psi | 207 kPa</option>
+              <option value="4" selected>50 psi | 345 kPa</option>
+            </select>
+          </div>
+
+          <div class="fs-ms-primary-reading">
+            <span class="fs-ms-reading-label">Gas Capacity</span>
+            <div class="fs-ms-reading-value" id="fsGasReading3"></div>
+          </div>
+
+          <div class="fs-ms-card-specs">
+            <div>
+              <b>Max ΔP</b>
+              <span>
+                <span class="metric">1034 <small>kPag</small></span>
+                <span class="imperial">150 <small>psig</small></span>
+              </span>
+            </div>
           </div>
         </article>
 
-        <article class="spec-mobile-card interactive-card swipe-left">
-          <div class="spec-mobile-head">
-            <h3>5.7 [201]</h3>
-            <div class="model-badge">ü HP</div>
+        <article class="fs-ms-model-card" data-card-index="4">
+          <div class="fs-ms-card-top">
+            <span class="fs-ms-family">CompressionCommander™</span>
+            <div class="fs-ms-model-line">
+              <h3>CC1245 (050035)</h3>
+              <span class="fs-ms-hp-badge">50 HP</span>
+            </div>
           </div>
-          <div class="spec-mobile-grid">
-            <div><span>Flow @ 5 psi<strong>7.1 [251] mcf/d</strong></div>
-            <div><span>Flow @ 50 psi<strong>1034 [150] mcf/d</strong></div>
-            <div><span>Max ΔP<strong>100 psig</strong></div>
-            <div><span>H₂S handling<strong>Included</strong></div>
-            <div><span>Autonomous<strong>Included</strong></div>
-            <div><span>Remote / HMI<strong>None</strong></div>
+
+          <div class="fs-ms-pressure-control">
+            <div class="fs-ms-pressure-row">
+              <label for="fsPressure4">Inlet pressure</label>
+            </div>
+            <select id="fsPressure4" class="fs-pressure-select" data-card="4">
+              <option value="0">5 psi | 34 kPa</option>
+              <option value="1">10 psi | 69 kPa</option>
+              <option value="2">20 psi | 138 kPa</option>
+              <option value="3">30 psi | 207 kPa</option>
+              <option value="4" selected>50 psi | 345 kPa</option>
+            </select>
+          </div>
+
+          <div class="fs-ms-primary-reading">
+            <span class="fs-ms-reading-label">Gas Capacity</span>
+            <div class="fs-ms-reading-value" id="fsGasReading4"></div>
+          </div>
+
+          <div class="fs-ms-card-specs">
+            <div>
+              <b>Max ΔP</b>
+              <span>
+                <span class="metric">1896 <small>kPag</small></span>
+                <span class="imperial">275 <small>psig</small></span>
+              </span>
+            </div>
           </div>
         </article>
 
-        <article class="spec-mobile-card interactive-card swipe-left">
-          <div class="spec-mobile-head">
-            <h3>5.7 [201]</h3>
-            <div class="model-badge">ü HP</div>
+        <article class="fs-ms-model-card" data-card-index="5">
+          <div class="fs-ms-card-top">
+            <span class="fs-ms-family">CompressionCommander™</span>
+            <div class="fs-ms-model-line">
+              <h3>CC1245 (100060)</h3>
+              <span class="fs-ms-hp-badge">100 HP</span>
+            </div>
           </div>
-          <div class="spec-mobile-grid">
-            <div><span>Flow @ 5 psi<strong>7.1 [251] mcf/d</strong></div>
-            <div><span>Flow @ 50 psi<strong>1379 [200] mcf/d</strong></div>
-            <div><span>Max ΔP<strong>100 psig</strong></div>
-            <div><span>H₂S handling<strong>Included</strong></div>
-            <div><span>Autonomous<strong>Included</strong></div>
-            <div><span>Remote / HMI<strong>None</strong></div>
+
+          <div class="fs-ms-pressure-control">
+            <div class="fs-ms-pressure-row">
+              <label for="fsPressure5">Inlet pressure</label>
+            </div>
+            <select id="fsPressure5" class="fs-pressure-select" data-card="5">
+              <option value="0">5 psi | 34 kPa</option>
+              <option value="1">10 psi | 69 kPa</option>
+              <option value="2">20 psi | 138 kPa</option>
+              <option value="3">30 psi | 207 kPa</option>
+              <option value="4" selected>50 psi | 345 kPa</option>
+            </select>
+          </div>
+
+          <div class="fs-ms-primary-reading">
+            <span class="fs-ms-reading-label">Gas Capacity</span>
+            <div class="fs-ms-reading-value" id="fsGasReading5"></div>
+          </div>
+
+          <div class="fs-ms-card-specs">
+            <div>
+              <b>Max ΔP</b>
+              <span>
+                <span class="metric">1896 <small>kPag</small></span>
+                <span class="imperial">275 <small>psig</small></span>
+              </span>
+            </div>
           </div>
         </article>
 
-        <article class="spec-mobile-card interactive-card swipe-left">
-          <div class="spec-mobile-head">
-            <h3>10.1 [357]</h3>
-            <div class="model-badge">ü HP</div>
+        <article class="fs-ms-model-card" data-card-index="6">
+          <div class="fs-ms-card-top">
+            <span class="fs-ms-family">CompressionCommander™</span>
+            <div class="fs-ms-model-line">
+              <h3>CC1645 (100060)</h3>
+              <span class="fs-ms-hp-badge">100 HP</span>
+            </div>
           </div>
-          <div class="spec-mobile-grid">
-            <div><span>Flow @ 5 psi<strong>12.7 [449] mcf/d</strong></div>
-            <div><span>Flow @ 50 psi<strong>1896 [275] mcf/d</strong></div>
-            <div><span>Max ΔP<strong>150 psig</strong></div>
-            <div><span>H₂S handling<strong>Included</strong></div>
-            <div><span>Autonomous<strong>Included</strong></div>
-            <div><span>Remote / HMI<strong>None</strong></div>
+
+          <div class="fs-ms-pressure-control">
+            <div class="fs-ms-pressure-row">
+              <label for="fsPressure6">Inlet pressure</label>
+            </div>
+            <select id="fsPressure6" class="fs-pressure-select" data-card="6">
+              <option value="0">5 psi | 34 kPa</option>
+              <option value="1">10 psi | 69 kPa</option>
+              <option value="2">20 psi | 138 kPa</option>
+              <option value="3">30 psi | 207 kPa</option>
+              <option value="4" selected>50 psi | 345 kPa</option>
+            </select>
+          </div>
+
+          <div class="fs-ms-primary-reading">
+            <span class="fs-ms-reading-label">Gas Capacity</span>
+            <div class="fs-ms-reading-value" id="fsGasReading6"></div>
+          </div>
+
+          <div class="fs-ms-card-specs">
+            <div>
+              <b>Max ΔP</b>
+              <span>
+                <span class="metric">1034 <small>kPag</small></span>
+                <span class="imperial">150 <small>psig</small></span>
+              </span>
+            </div>
           </div>
         </article>
 
-        <article class="spec-mobile-card interactive-card swipe-left">
-          <div class="spec-mobile-head">
-            <h3>10.3 [364]</h3>
-            <div class="model-badge">ü HP</div>
+        <article class="fs-ms-model-card" data-card-index="7">
+          <div class="fs-ms-card-top">
+            <span class="fs-ms-family">CompressionCommander™</span>
+            <div class="fs-ms-model-line">
+              <h3>CC2270 (100128)</h3>
+              <span class="fs-ms-hp-badge">100 HP</span>
+            </div>
           </div>
-          <div class="spec-mobile-grid">
-            <div><span>Flow @ 5 psi<strong>13.0 [459] mcf/d</strong></div>
-            <div><span>Flow @ 50 psi<strong>1896 [275] mcf/d</strong></div>
-            <div><span>Max ΔP<strong>150 psig</strong></div>
-            <div><span>H₂S handling<strong>Included</strong></div>
-            <div><span>Autonomous<strong>Included</strong></div>
-            <div><span>Remote / HMI<strong>None</strong></div>
+
+          <div class="fs-ms-pressure-control">
+            <div class="fs-ms-pressure-row">
+              <label for="fsPressure7">Inlet pressure</label>
+            </div>
+            <select id="fsPressure7" class="fs-pressure-select" data-card="7">
+              <option value="0">5 psi | 34 kPa</option>
+              <option value="1">10 psi | 69 kPa</option>
+              <option value="2">20 psi | 138 kPa</option>
+              <option value="3">30 psi | 207 kPa</option>
+              <option value="4" selected>50 psi | 345 kPa</option>
+            </select>
+          </div>
+
+          <div class="fs-ms-primary-reading">
+            <span class="fs-ms-reading-label">Gas Capacity</span>
+            <div class="fs-ms-reading-value" id="fsGasReading7"></div>
+          </div>
+
+          <div class="fs-ms-card-specs">
+            <div>
+              <b>Max ΔP</b>
+              <span>
+                <span class="metric">1551 <small>kPag</small></span>
+                <span class="imperial">225 <small>psig</small></span>
+              </span>
+            </div>
+          </div>
+        </article>
+
+        <article class="fs-ms-model-card" data-card-index="8">
+          <div class="fs-ms-card-top">
+            <span class="fs-ms-family">CompressionCommander™</span>
+            <div class="fs-ms-model-line">
+              <h3>CC2270 (150128)</h3>
+              <span class="fs-ms-hp-badge">150 HP</span>
+            </div>
+          </div>
+
+          <div class="fs-ms-pressure-control">
+            <div class="fs-ms-pressure-row">
+              <label for="fsPressure8">Inlet pressure</label>
+            </div>
+            <select id="fsPressure8" class="fs-pressure-select" data-card="8">
+              <option value="0">5 psi | 34 kPa</option>
+              <option value="1">10 psi | 69 kPa</option>
+              <option value="2">20 psi | 138 kPa</option>
+              <option value="3">30 psi | 207 kPa</option>
+              <option value="4" selected>50 psi | 345 kPa</option>
+            </select>
+          </div>
+
+          <div class="fs-ms-primary-reading">
+            <span class="fs-ms-reading-label">Gas Capacity</span>
+            <div class="fs-ms-reading-value" id="fsGasReading8"></div>
+          </div>
+
+          <div class="fs-ms-card-specs">
+            <div>
+              <b>Max ΔP</b>
+              <span>
+                <span class="metric">1551 <small>kPag</small></span>
+                <span class="imperial">225 <small>psig</small></span>
+              </span>
+            </div>
           </div>
         </article>
       </div>
 
-      <div class="notes">
+      <div class="fs-ms-sizing-notes">
         <strong>Engineering notes</strong>
-        <ul class="bullet">
-
-        </ul>
+        <ol>
+          <li>
+            Flow conditions calculated at 15℃ [59℉] inlet pressure and with various components operating at
+            100% efficiency. Flow rates may vary based on inlet pressures, gas content, and other factors.
+            Max gas rates will be reduced by amount of liquids in total fluid. Contact Fluidstream for gas
+            capacity review based on specific liquid rates and operating conditions.
+          </li>
+          <li>
+            Max gas rates and max pressure differentials can be increased by configuring additional unit(s)
+            in parallel or in series.
+          </li>
+          <li>
+            Higher horsepower units will yield much higher fluid flow rates at various pressure differentials.
+            Please request pump curves to see flow rates at various pressure differentials.
+          </li>
+        </ol>
       </div>
     </div>
+
+    <script>
+      (function () {
+        const gasData = [
+          [
+            '<span class="metric">1.0 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">35 <small>MCF/day</small></span>',
+            '<span class="metric">1.3 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">46 <small>MCF/day</small></span>',
+            '<span class="metric">1.8 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">64 <small>MCF/day</small></span>',
+            '<span class="metric">2.3 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">81 <small>MCF/day</small></span>',
+            '<span class="metric">3.4 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">120 <small>MCF/day</small></span>'
+          ],
+          [
+            '<span class="metric">0.6 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">21 <small>MCF/day</small></span>',
+            '<span class="metric">0.7 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">25 <small>MCF/day</small></span>',
+            '<span class="metric">1.0 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">35 <small>MCF/day</small></span>',
+            '<span class="metric">1.3 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">46 <small>MCF/day</small></span>',
+            '<span class="metric">1.9 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">67 <small>MCF/day</small></span>'
+          ],
+          [
+            '<span class="metric">1.5 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">53 <small>MCF/day</small></span>',
+            '<span class="metric">2.6 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">92 <small>MCF/day</small></span>',
+            '<span class="metric">3.6 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">127 <small>MCF/day</small></span>',
+            '<span class="metric">4.6 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">162 <small>MCF/day</small></span>',
+            '<span class="metric">6.7 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">237 <small>MCF/day</small></span>'
+          ],
+          [
+            '<span class="metric">3.0 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">106 <small>MCF/day</small></span>',
+            '<span class="metric">3.8 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">134 <small>MCF/day</small></span>',
+            '<span class="metric">5.3 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">187 <small>MCF/day</small></span>',
+            '<span class="metric">6.8 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">240 <small>MCF/day</small></span>',
+            '<span class="metric">9.9 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">350 <small>MCF/day</small></span>'
+          ],
+          [
+            '<span class="metric">1.8 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">64 <small>MCF/day</small></span>',
+            '<span class="metric">2.2 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">78 <small>MCF/day</small></span>',
+            '<span class="metric">3.1 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">109 <small>MCF/day</small></span>',
+            '<span class="metric">4.0 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">141 <small>MCF/day</small></span>',
+            '<span class="metric">5.9 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">208 <small>MCF/day</small></span>'
+          ],
+          [
+            '<span class="metric">3.1 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">109 <small>MCF/day</small></span>',
+            '<span class="metric">3.9 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">138 <small>MCF/day</small></span>',
+            '<span class="metric">5.5 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">194 <small>MCF/day</small></span>',
+            '<span class="metric">7.1 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">251 <small>MCF/day</small></span>',
+            '<span class="metric">10.3 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">364 <small>MCF/day</small></span>'
+          ],
+          [
+            '<span class="metric">5.7 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">201 <small>MCF/day</small></span>',
+            '<span class="metric">7.1 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">251 <small>MCF/day</small></span>',
+            '<span class="metric">9.9 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">350 <small>MCF/day</small></span>',
+            '<span class="metric">12.8 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">452 <small>MCF/day</small></span>',
+            '<span class="metric">18.5 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">653 <small>MCF/day</small></span>'
+          ],
+          [
+            '<span class="metric">8.9 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">357 <small>MCF/day</small></span>',
+            '<span class="metric">11.1 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">449 <small>MCF/day</small></span>',
+            '<span class="metric">15.6 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">629 <small>MCF/day</small></span>',
+            '<span class="metric">20.1 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">209 <small>MCF/day</small></span>',
+            '<span class="metric">29.1 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">1,169 <small>MCF/day</small></span>'
+          ],
+          [
+            '<span class="metric">8.9 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">357 <small>MCF/day</small></span>',
+            '<span class="metric">11.1 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">449 <small>MCF/day</small></span>',
+            '<span class="metric">15.6 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">629 <small>MCF/day</small></span>',
+            '<span class="metric">20.1 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">209 <small>MCF/day</small></span>',
+            '<span class="metric">29.1 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">1,169 <small>MCF/day</small></span>'
+          ]
+        ];
+
+        function updateCard(index, pressureIndex) {
+          const element = document.getElementById('fsGasReading' + index);
+
+          if (!element || !gasData[index]) {
+            return;
+          }
+
+          element.innerHTML = gasData[index][pressureIndex] || '<span class="empty">—</span>';
+        }
+
+        document.querySelectorAll('.fs-pressure-select').forEach(function (select) {
+          const cardIndex = Number(select.dataset.card);
+          select.value = '4';
+          updateCard(cardIndex, Number(select.value));
+
+          select.addEventListener('change', function (event) {
+            updateCard(Number(event.target.dataset.card), Number(event.target.value));
+          });
+        });
+
+        const globalPressure = document.getElementById('fsGlobalPressure');
+
+        if (globalPressure) {
+          globalPressure.value = '4';
+
+          globalPressure.addEventListener('change', function (event) {
+            const pressureIndex = Number(event.target.value);
+
+            document.querySelectorAll('.fs-pressure-select').forEach(function (select) {
+              select.value = String(pressureIndex);
+              updateCard(Number(select.dataset.card), pressureIndex);
+            });
+          });
+        }
+      })();
+    </script>
   </section>
 
   <section>

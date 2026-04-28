@@ -481,14 +481,14 @@
     }
 
     /* 
-                                .kicker {
-                                  font-size: 12px;
-                                  letter-spacing: .11em;
-                                  text-transform: uppercase;
-                                  color: var(--blue);
-                                  font-weight: 700;
-                                  margin-bottom: 10px
-                                } */
+                                              .kicker {
+                                                font-size: 12px;
+                                                letter-spacing: .11em;
+                                                text-transform: uppercase;
+                                                color: var(--blue);
+                                                font-weight: 700;
+                                                margin-bottom: 10px
+                                              } */
 
     h2 {
       margin: 0 0 16px;
@@ -729,10 +729,10 @@
     }
 
     /* .cta {
-                                                          background: linear-gradient(120deg, #061760, #0018dc 56%, #0c79cf);
-                                                          color: #fff;
-                                                          padding: 72px 0
-                                                        } */
+                                                                        background: linear-gradient(120deg, #061760, #0018dc 56%, #0c79cf);
+                                                                        color: #fff;
+                                                                        padding: 72px 0
+                                                                      } */
 
     .cta-box {
       display: grid;
@@ -742,16 +742,16 @@
     }
 
     /* .cta h2 {
-                                                            color: #fff;
-                                                            margin-bottom: 14px
-                                                          }
+                                                                          color: #fff;
+                                                                          margin-bottom: 14px
+                                                                        }
 
-                                                          .cta p {
-                                                            margin: 0;
-                                                            color: #e3ecff;
-                                                            font-size: 18px;
-                                                            max-width: 780px
-                                                          } */
+                                                                        .cta p {
+                                                                          margin: 0;
+                                                                          color: #e3ecff;
+                                                                          font-size: 18px;
+                                                                          max-width: 780px
+                                                                        } */
 
     .cta-panel {
       background: rgba(255, 255, 255, .1);
@@ -1081,289 +1081,658 @@
   </section>
 
 
-  <section class="band" id="specifications">
-    <div class="wrap py-12">
-      <div class="kicker">Specifications</div>
-      <h2>VaporCommander™ model range for vapor recovery deployment.</h2>
-      <p class="lead">
-        Compare the lineup visually, then review the detailed package data for gas rate, differential pressure,
-        horsepower, and standard features.
-      </p>
+  <section class="fs-vc-spec-section" id="specifications">
+    <style>
+      .fs-vc-spec-section {
+        --vc-blue: #0018dc;
+        --vc-cyan: #15d1ff;
+        --vc-ink: #071126;
+        --vc-text: #19243a;
+        --vc-muted: #647086;
+        --vc-line: #dfe6f1;
+        --vc-soft: #f5f7fb;
+        --vc-white: #ffffff;
+        background: var(--vc-soft);
+        padding: 66px 0;
+        color: var(--vc-text);
+      }
 
-      <div class="model-card-grid">
+      .fs-vc-spec-section,
+      .fs-vc-spec-section * {
+        box-sizing: border-box;
+      }
 
-        <div class="model-card interactive-card swipe-left">
-          <div class="model-top">
-            <div class="model-name">VC1235 (050035)</div>
-            <div class="model-badge">50 HP</div>
-          </div>
-          <div class="model-metrics">
-            <div><span>Gas @ 0 psi<strong>2.2 [78]</strong></div>
-            <div><span>Max ΔP<strong>1034 [150]</strong></div>
-            <div><span>Standard controls<strong>Autonomous + remote</strong></div>
-          </div>
-        </div>
+      .fs-vc-spec-wrap {
+        width: min(1200px, calc(100% - 44px));
+        margin: 0 auto;
+      }
 
-        <div class="model-card interactive-card swipe-left">
-          <div class="model-top">
-            <div class="model-name">VC1245 (050035)</div>
-            <div class="model-badge">50 HP</div>
-          </div>
-          <div class="model-metrics">
-            <div><span>Gas @ 0 psi<strong>1.3 [46]</strong></div>
-            <div><span>Max ΔP<strong>1897 [275]</strong></div>
-            <div><span>Standard controls<strong>Autonomous + remote</strong></div>
-          </div>
-        </div>
+      .fs-vc-spec-head {
+        /* display: grid; */
+        grid-template-columns: 260px 1fr;
+        gap: 44px;
+        align-items: start;
+        margin-bottom: 28px;
+      }
 
-        <div class="model-card interactive-card swipe-left">
-          <div class="model-top">
-            <div class="model-name">VC1245 (100060)</div>
-            <div class="model-badge">100 HP</div>
-          </div>
-          <div class="model-metrics">
-            <div><span>Gas @ 0 psi<strong>2.4 [85]</strong></div>
-            <div><span>Max ΔP<strong>1138 [275]</strong></div>
-            <div><span>Standard controls<strong>Autonomous + remote</strong></div>
-          </div>
-        </div>
+      .fs-vc-spec-rail {
+        /* border-top: 3px solid var(--vc-blue); */
+        padding-top: 14px;
+        color: var(--vc-blue);
+        font-size: 13px;
+        font-weight: 950;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+      }
 
-        <div class="model-card interactive-card swipe-left">
-          <div class="model-top">
-            <div class="model-name">VC1645 (100060)</div>
-            <div class="model-badge">100 HP</div>
-          </div>
-          <div class="model-metrics">
-            <div><span>Gas @ 0 psi<strong>4.2 [148]</strong></div>
-            <div><span>Max ΔP<strong>1034 [150]</strong></div>
-            <div><span>Standard controls<strong>Autonomous + remote</strong></div>
-          </div>
-        </div>
+      /* .fs-vc-spec-head h2 {
+                font-size: clamp(30px, 3.2vw, 46px);
+                line-height: 1.02;
+                margin: 0 0 14px;
+                letter-spacing: -.035em;
+                color: var(--vc-ink);
+              } */
 
-        <div class="model-card interactive-card swipe-left">
-          <div class="model-top">
-            <div class="model-name">VC2270 (100128)</div>
-            <div class="model-badge">100 HP</div>
-          </div>
-          <div class="model-metrics">
-            <div><span>Gas @ 0 psi<strong>6.6 [233]</strong></div>
-            <div><span>Max ΔP<strong>1551 [225]</strong></div>
-            <div><span>Standard controls<strong>Autonomous + remote</strong></div>
-          </div>
-        </div>
+      .fs-vc-spec-lead {
+        font-size: 17px;
+        color: #56647a;
+        max-width: 860px;
+        margin: 0;
+        line-height: 1.65;
+      }
 
-        <div class="model-card interactive-card swipe-left">
-          <div class="model-top">
-            <div class="model-name">VC2270 (150128)</div>
-            <div class="model-badge">150 HP</div>
-          </div>
-          <div class="model-metrics">
-            <div><span>Gas @ 0 psi<strong>6.6 [233]</strong></div>
-            <div><span>Max ΔP<strong>1551 [225]</strong></div>
-            <div><span>Standard controls<strong>Autonomous + remote</strong></div>
-          </div>
+      .fs-vc-spec-note {
+        margin: 14px 0 0;
+        font-size: 14px;
+        color: var(--vc-muted);
+        font-weight: 700;
+        line-height: 1.6;
+      }
+
+      .fs-vc-model-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+
+      .fs-vc-model-card {
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+        background: #ffffff;
+        border: 1px solid var(--vc-line);
+        border-radius: 7px;
+        /* box-shadow: 0 14px 36px rgba(7, 17, 38, .065); */
+        transition:
+          transform .24s ease,
+          border-color .24s ease,
+          box-shadow .24s ease,
+          background .24s ease;
+      }
+
+      .fs-vc-model-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 5;
+        height: 4px;
+        background: var(--vc-blue);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform .3s ease;
+      }
+
+      .fs-vc-model-card:hover {
+        transform: translateY(-3px);
+        border-color: var(--vc-blue);
+        /* box-shadow: 0 22px 46px rgba(16, 42, 67, .10); */
+        background: #ffffff;
+      }
+
+      .fs-vc-model-card:hover::before {
+        transform: scaleX(1);
+      }
+
+      .fs-vc-card-top {
+        padding: 24px 22px 18px;
+        border-bottom: 1px solid rgba(223, 230, 241, .9);
+        background: linear-gradient(180deg, #ffffff, #f9fbff);
+      }
+
+      .fs-vc-family {
+        display: inline-flex;
+        color: var(--vc-blue);
+        font-size: 10px;
+        font-weight: 950;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+      }
+
+      .fs-vc-model-line {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 12px;
+        margin-top: 8px;
+      }
+
+      .fs-vc-model-line h3 {
+        font-size: 24px;
+        line-height: 1.08;
+        margin: 0;
+        color: var(--vc-ink);
+        letter-spacing: -.02em;
+        font-weight: 900;
+      }
+
+      .fs-vc-hp-badge {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+        padding: 7px 11px;
+        border-radius: 999px;
+        background: #f2f6ff;
+        color: var(--vc-blue);
+        border: 1px solid #dce6fb;
+        font-weight: 900;
+        font-size: 12px;
+        letter-spacing: .04em;
+      }
+
+      .fs-vc-pressure-control {
+        padding: 16px 18px 0;
+      }
+
+      .fs-vc-pressure-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 8px;
+      }
+
+      .fs-vc-pressure-control label,
+      .fs-vc-reading-label,
+      .fs-vc-card-specs b {
+        display: block;
+        color: #647086;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: .075em;
+        font-weight: 900;
+      }
+
+      .fs-vc-static-pressure-value {
+        display: inline-flex;
+        width: 100%;
+        align-items: center;
+        border: 1px solid #dce6fb;
+        border-radius: 999px;
+        background: #f7f9fd;
+        color: var(--vc-ink);
+        font-size: 14px;
+        font-weight: 900;
+        padding: 10px 15px;
+      }
+
+      .fs-vc-primary-reading {
+        margin: 14px 18px 16px;
+        background: #0018dc;
+        color: #ffffff;
+        border-radius: 7px;
+        padding: 17px 18px;
+        box-shadow: none;
+      }
+
+      .fs-vc-reading-label {
+        color: #98edff !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+        margin-bottom: 8px;
+      }
+
+      .fs-vc-reading-value {
+        display: grid;
+        gap: 4px;
+        font-size: 20px;
+        font-weight: 950;
+      }
+
+      .fs-vc-reading-value .metric,
+      .fs-vc-reading-value .imperial {
+        font-size: 20px;
+        line-height: 1.2;
+        font-weight: 950;
+        color: #ffffff;
+        white-space: nowrap;
+      }
+
+      .fs-vc-reading-value small {
+        font-size: 12px;
+        color: #dcecff;
+        font-weight: 800;
+      }
+
+      .fs-vc-card-specs {
+        padding: 0 18px 18px;
+        display: grid;
+        gap: 10px;
+      }
+
+      .fs-vc-card-specs>div {
+        position: relative;
+        background: #f7f9fd;
+        border: 1px solid #e7edf6;
+        border-radius: 7px;
+        padding: 13px 14px 13px 42px;
+        box-shadow: none;
+      }
+
+      .fs-vc-card-specs>div::before {
+        content: "";
+        position: absolute;
+        left: 13px;
+        top: 15px;
+        width: 17px;
+        height: 17px;
+        border-radius: 5px;
+        background: var(--vc-blue);
+        opacity: .9;
+      }
+
+      .fs-vc-card-specs span {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        align-items: baseline;
+        font-size: 16px;
+        font-weight: 950;
+        color: var(--vc-ink);
+      }
+
+      .fs-vc-card-specs small {
+        font-size: 12px;
+        color: #647086;
+        font-weight: 850;
+      }
+
+      .fs-vc-feature-list {
+        margin: 0 18px 18px;
+        display: grid;
+        gap: 8px;
+        padding: 14px 16px;
+        border: 1px solid #e7edf6;
+        border-radius: 7px;
+        background: #ffffff;
+      }
+
+      .fs-vc-feature-list span {
+        position: relative;
+        display: block;
+        padding-left: 22px;
+        color: #56647a;
+        font-size: 13px;
+        font-weight: 750;
+        line-height: 1.45;
+      }
+
+      .fs-vc-feature-list span::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 5px;
+        width: 14px;
+        height: 10px;
+        background-repeat: no-repeat;
+        background-size: 14px 10px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 12' fill='none'%3E%3Cpath d='M1 6h11' stroke='%230018dc' stroke-width='1.7' stroke-linecap='round'/%3E%3Cpath d='M8.5 1.75L13 6l-4.5 4.25' stroke='%230018dc' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      }
+
+      .fs-vc-sizing-notes {
+        margin-top: 22px;
+        background: #fbfcff;
+        border: 1px solid var(--vc-line);
+        border-radius: 7px;
+        padding: 18px 20px;
+        color: #647086;
+        font-size: 13px;
+        box-shadow: 0 10px 28px rgba(7, 17, 38, .045);
+        line-height: 1.65;
+      }
+
+      .fs-vc-sizing-notes strong {
+        display: block;
+        color: var(--vc-ink);
+        font-size: 14px;
+        margin-bottom: 8px;
+      }
+
+      .fs-vc-sizing-notes ol {
+        margin: 0;
+        padding-left: 18px;
+        display: grid;
+        gap: 7px;
+      }
+
+      .fs-vc-sizing-notes li {
+        padding-left: 4px;
+      }
+
+      @media(max-width:1120px) {
+        .fs-vc-model-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .fs-vc-spec-head {
+          grid-template-columns: 1fr;
+          gap: 12px;
+        }
+      }
+
+      @media(max-width:720px) {
+        .fs-vc-spec-section {
+          padding: 46px 0;
+        }
+
+        .fs-vc-spec-wrap {
+          width: min(100% - 30px, 1200px);
+        }
+
+        .fs-vc-model-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .fs-vc-model-line h3 {
+          font-size: 22px;
+        }
+      }
+    </style>
+
+    <div class="fs-vc-spec-wrap">
+      <div class="fs-vc-spec-head">
+        <div class="fs-vc-spec-rail">Specifications</div>
+        <div>
+          <h2>Compare VaporCommander™ models.</h2>
+          <p class="lead">
+            Gas capacity is shown at the typical 0 psig inlet condition used for vapor recovery applications.
+          </p>
+          <p class="lead">
+            Additional model sizes and configurations are available for applications outside the standard range shown.
+          </p>
         </div>
       </div>
 
-      <div class="spec-desktop">
-        <div class="spec-wrap spec-wrap-enhanced">
-          <table class="spec-table-enhanced">
-            <thead>
-              <tr>
-                <th class="spec-col">Specification</th>
-                <th class="cond-col">Units / Condition</th>
-                <th>VC1235 (050035)</th>
-                <th>VC1245 (050035)</th>
-                <th>VC1245 (100060)</th>
-                <th>VC1645 (100060)</th>
-                <th>VC2270 (100128)</th>
-                <th>VC2270 (150128)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class='spec-col'>Max Gas Rate (e3m³/day) [mcf/day]</td>
-                <td class='cond-col'>0 psi [0 kPa]</td>
-                <td>2.2 [78]</td>
-                <td>1.3 [46]</td>
-                <td>2.4 [85]</td>
-                <td>4.2 [148]</td>
-                <td>6.6 [233]</td>
-                <td>6.6 [233]</td>
-              </tr>
-              <tr>
-                <td class='spec-col'>Max Pressure Differential (kPag) [psig]</td>
-                <td class='cond-col'>—</td>
-                <td>1034 [150]</td>
-                <td>1897 [275]</td>
-                <td>1138 [275]</td>
-                <td>1034 [150]</td>
-                <td>1551 [225]</td>
-                <td>1551 [225]</td>
-              </tr>
-              <tr>
-                <td class='spec-col'>Motor Size (HP)</td>
-                <td class='cond-col'>—</td>
-                <td>50</td>
-                <td>50</td>
-                <td>100</td>
-                <td>100</td>
-                <td>100</td>
-                <td>150</td>
-              </tr>
-              <tr>
-                <td class='spec-col'>H₂S Handling</td>
-                <td class='cond-col'>—</td>
-                <td>Included</td>
-                <td>Included</td>
-                <td>Included</td>
-                <td>Included</td>
-                <td>Included</td>
-                <td>Included</td>
-              </tr>
-              <tr>
-                <td class='spec-col'>3-Stage Cold Weather Startup</td>
-                <td class='cond-col'>—</td>
-                <td>Included</td>
-                <td>Included</td>
-                <td>Included</td>
-                <td>Included</td>
-                <td>Included</td>
-                <td>Included</td>
-              </tr>
-              <tr>
-                <td class='spec-col'>Autonomous Controller</td>
-                <td class='cond-col'>—</td>
-                <td>Included</td>
-                <td>Included</td>
-                <td>Included</td>
-                <td>Included</td>
-                <td>Included</td>
-                <td>Included</td>
-              </tr>
-              <tr>
-                <td class='spec-col'>Color Touchscreen &amp; Remote Control</td>
-                <td class='cond-col'>—</td>
-                <td>Included</td>
-                <td>Included</td>
-                <td>Included</td>
-                <td>Included</td>
-                <td>Included</td>
-                <td>Included</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+      <div class="fs-vc-model-grid">
+        <article class="fs-vc-model-card">
+          <div class="fs-vc-card-top">
+            <span class="fs-vc-family">VaporCommander™</span>
+            <div class="fs-vc-model-line">
+              <h3>VC1235 (050035)</h3>
+              <span class="fs-vc-hp-badge">50 HP</span>
+            </div>
+          </div>
+
+          <div class="fs-vc-pressure-control">
+            <div class="fs-vc-pressure-row">
+              <label>Typical VRU inlet pressure</label>
+            </div>
+            <div class="fs-vc-static-pressure-value">0 psi | 0 kPa</div>
+          </div>
+
+          <div class="fs-vc-primary-reading">
+            <span class="fs-vc-reading-label">Gas Capacity</span>
+            <div class="fs-vc-reading-value">
+              <span class="metric">2.2 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span>
+              <span class="imperial">78 <small>MCF/day</small></span>
+            </div>
+          </div>
+
+          <div class="fs-vc-card-specs">
+            <div>
+              <b>Max ΔP</b>
+              <span>
+                <span class="metric">1034 <small>kPag</small></span>
+                <span class="imperial">150 <small>psig</small></span>
+              </span>
+            </div>
+          </div>
+
+          <div class="fs-vc-feature-list">
+            <span>H₂S handling included</span>
+            <span>3-stage cold-weather startup included</span>
+            <span>Autonomous controller and remote control included</span>
+          </div>
+        </article>
+
+        <article class="fs-vc-model-card">
+          <div class="fs-vc-card-top">
+            <span class="fs-vc-family">VaporCommander™</span>
+            <div class="fs-vc-model-line">
+              <h3>VC1245 (050035)</h3>
+              <span class="fs-vc-hp-badge">50 HP</span>
+            </div>
+          </div>
+
+          <div class="fs-vc-pressure-control">
+            <div class="fs-vc-pressure-row">
+              <label>Typical VRU inlet pressure</label>
+            </div>
+            <div class="fs-vc-static-pressure-value">0 psi | 0 kPa</div>
+          </div>
+
+          <div class="fs-vc-primary-reading">
+            <span class="fs-vc-reading-label">Gas Capacity</span>
+            <div class="fs-vc-reading-value">
+              <span class="metric">1.3 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span>
+              <span class="imperial">46 <small>MCF/day</small></span>
+            </div>
+          </div>
+
+          <div class="fs-vc-card-specs">
+            <div>
+              <b>Max ΔP</b>
+              <span>
+                <span class="metric">1897 <small>kPag</small></span>
+                <span class="imperial">275 <small>psig</small></span>
+              </span>
+            </div>
+          </div>
+
+          <div class="fs-vc-feature-list">
+            <span>H₂S handling included</span>
+            <span>3-stage cold-weather startup included</span>
+            <span>Autonomous controller and remote control included</span>
+          </div>
+        </article>
+
+        <article class="fs-vc-model-card">
+          <div class="fs-vc-card-top">
+            <span class="fs-vc-family">VaporCommander™</span>
+            <div class="fs-vc-model-line">
+              <h3>VC1245 (100060)</h3>
+              <span class="fs-vc-hp-badge">100 HP</span>
+            </div>
+          </div>
+
+          <div class="fs-vc-pressure-control">
+            <div class="fs-vc-pressure-row">
+              <label>Typical VRU inlet pressure</label>
+            </div>
+            <div class="fs-vc-static-pressure-value">0 psi | 0 kPa</div>
+          </div>
+
+          <div class="fs-vc-primary-reading">
+            <span class="fs-vc-reading-label">Gas Capacity</span>
+            <div class="fs-vc-reading-value">
+              <span class="metric">2.4 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span>
+              <span class="imperial">85 <small>MCF/day</small></span>
+            </div>
+          </div>
+
+          <div class="fs-vc-card-specs">
+            <div>
+              <b>Max ΔP</b>
+              <span>
+                <span class="metric">1138 <small>kPag</small></span>
+                <span class="imperial">275 <small>psig</small></span>
+              </span>
+            </div>
+          </div>
+
+          <div class="fs-vc-feature-list">
+            <span>H₂S handling included</span>
+            <span>3-stage cold-weather startup included</span>
+            <span>Autonomous controller and remote control included</span>
+          </div>
+        </article>
+
+        <article class="fs-vc-model-card">
+          <div class="fs-vc-card-top">
+            <span class="fs-vc-family">VaporCommander™</span>
+            <div class="fs-vc-model-line">
+              <h3>VC1645 (100060)</h3>
+              <span class="fs-vc-hp-badge">100 HP</span>
+            </div>
+          </div>
+
+          <div class="fs-vc-pressure-control">
+            <div class="fs-vc-pressure-row">
+              <label>Typical VRU inlet pressure</label>
+            </div>
+            <div class="fs-vc-static-pressure-value">0 psi | 0 kPa</div>
+          </div>
+
+          <div class="fs-vc-primary-reading">
+            <span class="fs-vc-reading-label">Gas Capacity</span>
+            <div class="fs-vc-reading-value">
+              <span class="metric">4.2 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span>
+              <span class="imperial">148 <small>MCF/day</small></span>
+            </div>
+          </div>
+
+          <div class="fs-vc-card-specs">
+            <div>
+              <b>Max ΔP</b>
+              <span>
+                <span class="metric">1034 <small>kPag</small></span>
+                <span class="imperial">150 <small>psig</small></span>
+              </span>
+            </div>
+          </div>
+
+          <div class="fs-vc-feature-list">
+            <span>H₂S handling included</span>
+            <span>3-stage cold-weather startup included</span>
+            <span>Autonomous controller and remote control included</span>
+          </div>
+        </article>
+
+        <article class="fs-vc-model-card">
+          <div class="fs-vc-card-top">
+            <span class="fs-vc-family">VaporCommander™</span>
+            <div class="fs-vc-model-line">
+              <h3>VC2270 (100128)</h3>
+              <span class="fs-vc-hp-badge">100 HP</span>
+            </div>
+          </div>
+
+          <div class="fs-vc-pressure-control">
+            <div class="fs-vc-pressure-row">
+              <label>Typical VRU inlet pressure</label>
+            </div>
+            <div class="fs-vc-static-pressure-value">0 psi | 0 kPa</div>
+          </div>
+
+          <div class="fs-vc-primary-reading">
+            <span class="fs-vc-reading-label">Gas Capacity</span>
+            <div class="fs-vc-reading-value">
+              <span class="metric">6.6 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span>
+              <span class="imperial">233 <small>MCF/day</small></span>
+            </div>
+          </div>
+
+          <div class="fs-vc-card-specs">
+            <div>
+              <b>Max ΔP</b>
+              <span>
+                <span class="metric">1551 <small>kPag</small></span>
+                <span class="imperial">225 <small>psig</small></span>
+              </span>
+            </div>
+          </div>
+
+          <div class="fs-vc-feature-list">
+            <span>H₂S handling included</span>
+            <span>3-stage cold-weather startup included</span>
+            <span>Autonomous controller and remote control included</span>
+          </div>
+        </article>
+
+        <article class="fs-vc-model-card">
+          <div class="fs-vc-card-top">
+            <span class="fs-vc-family">VaporCommander™</span>
+            <div class="fs-vc-model-line">
+              <h3>VC2270 (150128)</h3>
+              <span class="fs-vc-hp-badge">150 HP</span>
+            </div>
+          </div>
+
+          <div class="fs-vc-pressure-control">
+            <div class="fs-vc-pressure-row">
+              <label>Typical VRU inlet pressure</label>
+            </div>
+            <div class="fs-vc-static-pressure-value">0 psi | 0 kPa</div>
+          </div>
+
+          <div class="fs-vc-primary-reading">
+            <span class="fs-vc-reading-label">Gas Capacity</span>
+            <div class="fs-vc-reading-value">
+              <span class="metric">6.6 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span>
+              <span class="imperial">233 <small>MCF/day</small></span>
+            </div>
+          </div>
+
+          <div class="fs-vc-card-specs">
+            <div>
+              <b>Max ΔP</b>
+              <span>
+                <span class="metric">1551 <small>kPag</small></span>
+                <span class="imperial">225 <small>psig</small></span>
+              </span>
+            </div>
+          </div>
+
+          <div class="fs-vc-feature-list">
+            <span>H₂S handling included</span>
+            <span>3-stage cold-weather startup included</span>
+            <span>Autonomous controller and remote control included</span>
+          </div>
+        </article>
       </div>
 
-      <div class="spec-mobile">
-
-        <article class="spec-mobile-card interactive-card swipe-left">
-          <div class="spec-mobile-head">
-            <h3>VC1235 (050035)</h3>
-            <div class="model-badge">50 HP</div>
-          </div>
-          <div class="spec-mobile-grid">
-            <div><span>Gas @ 0 psi<strong>2.2 [78]</strong></div>
-            <div><span>Max ΔP<strong>1034 [150]</strong></div>
-            <div><span>H₂S handling<strong>Included</strong></div>
-            <div><span>Cold-weather startup<strong>Included</strong></div>
-            <div><span>Autonomous controller<strong>Included</strong></div>
-            <div><span>Touchscreen + remote<strong>Included</strong></div>
-          </div>
-        </article>
-
-        <article class="spec-mobile-card interactive-card swipe-left">
-          <div class="spec-mobile-head">
-            <h3>VC1245 (050035)</h3>
-            <div class="model-badge">50 HP</div>
-          </div>
-          <div class="spec-mobile-grid">
-            <div><span>Gas @ 0 psi<strong>1.3 [46]</strong></div>
-            <div><span>Max ΔP<strong>1897 [275]</strong></div>
-            <div><span>H₂S handling<strong>Included</strong></div>
-            <div><span>Cold-weather startup<strong>Included</strong></div>
-            <div><span>Autonomous controller<strong>Included</strong></div>
-            <div><span>Touchscreen + remote<strong>Included</strong></div>
-          </div>
-        </article>
-
-        <article class="spec-mobile-card interactive-card swipe-left">
-          <div class="spec-mobile-head">
-            <h3>VC1245 (100060)</h3>
-            <div class="model-badge">100 HP</div>
-          </div>
-          <div class="spec-mobile-grid">
-            <div><span>Gas @ 0 psi<strong>2.4 [85]</strong></div>
-            <div><span>Max ΔP<strong>1138 [275]</strong></div>
-            <div><span>H₂S handling<strong>Included</strong></div>
-            <div><span>Cold-weather startup<strong>Included</strong></div>
-            <div><span>Autonomous controller<strong>Included</strong></div>
-            <div><span>Touchscreen + remote<strong>Included</strong></div>
-          </div>
-        </article>
-
-        <article class="spec-mobile-card interactive-card swipe-left">
-          <div class="spec-mobile-head">
-            <h3>VC1645 (100060)</h3>
-            <div class="model-badge">100 HP</div>
-          </div>
-          <div class="spec-mobile-grid">
-            <div><span>Gas @ 0 psi<strong>4.2 [148]</strong></div>
-            <div><span>Max ΔP<strong>1034 [150]</strong></div>
-            <div><span>H₂S handling<strong>Included</strong></div>
-            <div><span>Cold-weather startup<strong>Included</strong></div>
-            <div><span>Autonomous controller<strong>Included</strong></div>
-            <div><span>Touchscreen + remote<strong>Included</strong></div>
-          </div>
-        </article>
-
-        <article class="spec-mobile-card interactive-card swipe-left">
-          <div class="spec-mobile-head">
-            <h3>VC2270 (100128)</h3>
-            <div class="model-badge">100 HP</div>
-          </div>
-          <div class="spec-mobile-grid">
-            <div><span>Gas @ 0 psi<strong>6.6 [233]</strong></div>
-            <div><span>Max ΔP<strong>1551 [225]</strong></div>
-            <div><span>H₂S handling<strong>Included</strong></div>
-            <div><span>Cold-weather startup<strong>Included</strong></div>
-            <div><span>Autonomous controller<strong>Included</strong></div>
-            <div><span>Touchscreen + remote<strong>Included</strong></div>
-          </div>
-        </article>
-
-        <article class="spec-mobile-card interactive-card swipe-left">
-          <div class="spec-mobile-head">
-            <h3>VC2270 (150128)</h3>
-            <div class="model-badge">150 HP</div>
-          </div>
-          <div class="spec-mobile-grid">
-            <div><span>Gas @ 0 psi<strong>6.6 [233]</strong></div>
-            <div><span>Max ΔP<strong>1551 [225]</strong></div>
-            <div><span>H₂S handling<strong>Included</strong></div>
-            <div><span>Cold-weather startup<strong>Included</strong></div>
-            <div><span>Autonomous controller<strong>Included</strong></div>
-            <div><span>Touchscreen + remote<strong>Included</strong></div>
-          </div>
-        </article>
-      </div>
-
-      <div class="notes">
-        <p><strong>Engineering notes</strong></p>
-        <ul class="bullet">
-          <li>1 Flow conditions calculated at 15℃ [59℉] inlet pressure and with various components operating at 100%
-            efficiency. Flow rates may vary based on inlet pressures, gas content, and other factors. Max gas rates will
-            be reduced by amount of liquids in total fluid. Ask Fluidstream for max gas flow rates based on specific
-            liquid rates and other varying conditions.</li>
-          <li>2 Max gas rates and max pressure differentials can be increased by configuring additional unit(s) in
-            parallel or in series.</li>
-          <li>3 Higher horsepower units will yield much higher fluid flow rates at various pressure differentials. Please
-            request pump curves to see flow rates at various pressure differentials.</li>
-        </ul>
-        <p><strong>Use the table for comparison. Use Fluidstream for final sizing.</strong> Final configuration still
-          depends on actual gas composition, liquid carryover, inlet pressure, discharge requirements, and site-specific
-          operating conditions.</p>
+      <div class="fs-vc-sizing-notes">
+        <strong>Engineering notes</strong>
+        <ol>
+          <li>
+            Flow conditions calculated at 15℃ [59℉] inlet pressure and with various components operating at
+            100% efficiency. Flow rates may vary based on inlet pressures, gas content, and other factors.
+            Max gas rates will be reduced by amount of liquids in total fluid. Contact Fluidstream for gas
+            capacity review based on specific liquid rates and operating conditions.
+          </li>
+          <li>
+            Max gas rates and max pressure differentials can be increased by configuring additional unit(s)
+            in parallel or in series.
+          </li>
+          <li>
+            Higher horsepower units will yield much higher fluid flow rates at various pressure differentials.
+            Please request pump curves to see flow rates at various pressure differentials.
+          </li>
+        </ol>
       </div>
     </div>
   </section>

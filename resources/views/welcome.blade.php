@@ -644,18 +644,18 @@
 
 
         /* .solutions,
-                                                                                                                                                                                                                                                                            .leadership,
-                                                                                                                                                                                                                                                                            .tech,
-                                                                                                                                                                                                                                                                            .caseband,
-                                                                                                                                                                                                                                                                            .cta {
-                                                                                                                                                                                                                                                                                padding: 72px 0
-                                                                                                                                                                                                                                                                            } */
+                                                                                                                                                                                                                                                                                                                                        .leadership,
+                                                                                                                                                                                                                                                                                                                                        .tech,
+                                                                                                                                                                                                                                                                                                                                        .caseband,
+                                                                                                                                                                                                                                                                                                                                        .cta {
+                                                                                                                                                                                                                                                                                                                                            padding: 72px 0
+                                                                                                                                                                                                                                                                                                                                        } */
 
         .section-head {
             /* display: flex;
-                                                                                                                    justify-content: space-between;
-                                                                                                                    align-items: flex-start;
-                                                                                                                    gap: 28px; */
+                                                                                                                                                                                justify-content: space-between;
+                                                                                                                                                                                align-items: flex-start;
+                                                                                                                                                                                gap: 28px; */
             margin-bottom: 28px;
         }
 
@@ -1478,14 +1478,14 @@
         }
 
         /* .kicker {
-                                                                                                                                                    display: block;
-                                                                                                                                                    margin: 0 0 14px;
-                                                                                                                                                    font-size: 13px !important;
-                                                                                                                                                    font-weight: 700 !important;
-                                                                                                                                                    letter-spacing: .16em;
-                                                                                                                                                    text-transform: uppercase;
-                                                                                                                                                    color: var(--accent-dark) !important;
-                                                                                                                                                } */
+                                                                                                                                                                                                                display: block;
+                                                                                                                                                                                                                margin: 0 0 14px;
+                                                                                                                                                                                                                font-size: 13px !important;
+                                                                                                                                                                                                                font-weight: 700 !important;
+                                                                                                                                                                                                                letter-spacing: .16em;
+                                                                                                                                                                                                                text-transform: uppercase;
+                                                                                                                                                                                                                color: var(--accent-dark) !important;
+                                                                                                                                                                                                            } */
 
         .hero-dot.active {
             background: #38bdf8;
@@ -1643,119 +1643,379 @@
     </style>
 
 
-    <section class="relative min-h-screen overflow-hidden">
-        <!-- Background Video -->
-        <video autoplay muted loop playsinline class="absolute inset-0 h-full w-full object-cover">
+    <style>
+        .fs-home-hero {
+            position: relative;
+            min-height: 100vh;
+            overflow: hidden;
+            isolation: isolate;
+        }
+
+        .fs-home-hero-video {
+            position: absolute;
+            inset: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            z-index: -3;
+        }
+
+        .fs-home-hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -2;
+            background: rgba(2, 8, 23, .38);
+        }
+
+        .fs-home-hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background-color: #02061759;
+            /* background: radial-gradient(circle at 72% 22%, rgb(21 209 255 / 0%), transparent 26%), linear-gradient(90deg, rgb(2 6 23 / 11%) 0%, rgb(2 6 23 / 0%) 43%, rgb(0 24 220 / 0%) 100%); */
+        }
+
+        .fs-home-hero-inner {
+            width: min(1320px, calc(100% - 48px));
+            max-width: 1200px;
+            margin: 0 auto;
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: minmax(0, 1.05fr) minmax(420px, .95fr);
+            align-items: center;
+            gap: 54px;
+            padding: 96px 0 72px;
+        }
+
+        .fs-home-hero-copy {
+            max-width: 720px;
+        }
+
+        .fs-home-hero-title {
+            margin: 0;
+            max-width: 760px;
+            color: #ffffff;
+            font-size: clamp(28px, 4.5vw, 54px);
+            line-height: .98;
+            letter-spacing: -.065em;
+            font-weight: 800;
+        }
+
+        .fs-home-hero-line {
+            margin-top: 24px;
+            height: 4px;
+            width: 80px;
+            border-radius: 999px;
+            background: #38bdf8;
+        }
+
+        .fs-home-hero-lead {
+            margin: 26px 0 0;
+            max-width: 760px;
+            color: rgba(255, 255, 255, .88);
+            font-size: clamp(17px, 1.45vw, 23px);
+            line-height: 1.55;
+            font-weight: 700;
+        }
+
+        .fs-home-hero-support {
+            margin: 14px 0 0;
+            max-width: 690px;
+            color: rgba(255, 255, 255, .82);
+            font-size: clamp(16px, 1.15vw, 19px);
+            line-height: 1.65;
+            font-weight: 500;
+        }
+
+        .fs-home-hero-actions {
+            margin-top: 34px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .fs-home-hero-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 52px;
+            padding: 0 22px;
+            border-radius: 14px;
+            font-size: 14px;
+            font-weight: 800;
+            transition: transform .25s ease, background .25s ease, border-color .25s ease, box-shadow .25s ease;
+        }
+
+        .fs-home-hero-btn-primary {
+            background: #0ea5e9;
+            color: #ffffff;
+            border: 1px solid #0ea5e9;
+        }
+
+        .fs-home-hero-btn-primary:hover {
+            background: #0284c7;
+            border-color: #0284c7;
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 16px 36px rgba(14, 165, 233, .22);
+        }
+
+        .fs-home-hero-btn-secondary {
+            background: rgba(255, 255, 255, .06);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, .22);
+        }
+
+        .fs-home-hero-btn-secondary:hover {
+            background: rgba(255, 255, 255, .12);
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        .fs-home-metric-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+            margin-top: 36px;
+        }
+
+        .fs-home-metric-card {
+            min-height: 165px;
+            padding: 22px;
+            border-radius: 7px;
+            border: 1px solid rgba(255, 255, 255, .20);
+            background: rgba(255, 255, 255, .08);
+            box-shadow: 0 18px 45px rgba(0, 0, 0, .16);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            transition: transform .25s ease, border-color .25s ease, background .25s ease;
+        }
+
+        .fs-home-metric-card:hover {
+            transform: translateY(-3px);
+            /* border-color: rgba(21, 209, 255, .50); */
+            background: rgba(255, 255, 255, .12);
+        }
+
+        .fs-home-metric-card strong {
+            display: block;
+            margin-bottom: 10px;
+            color: #ffffff;
+            font-size: clamp(20px, 1.6vw, 25px);
+            line-height: 1.1;
+            letter-spacing: -.04em;
+            font-weight: 900;
+        }
+
+        .fs-home-metric-card span {
+            display: block;
+            color: rgba(226, 232, 240, .92);
+            font-size: 15px;
+            line-height: 1.65;
+            font-weight: 600;
+        }
+
+        .fs-home-proof-card {
+            width: 100%;
+            max-width: 580px;
+            justify-self: end;
+            padding: 34px 34px 32px;
+            border-radius: 7px;
+            border: 1px solid rgba(255, 255, 255, .22);
+            /* background:
+                                                    radial-gradient(circle at 88% 18%, rgba(21, 209, 255, .12), transparent 28%),
+                                                    linear-gradient(145deg, rgba(255, 255, 255, .13), rgba(255, 255, 255, .07)); */
+            box-shadow: 0 26px 70px rgba(0, 0, 0, .25);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+
+        .fs-home-proof-card h2 {
+            margin: 0 0 24px;
+            color: #ffffff;
+            font-size: clamp(21px, 1.9vw, 30px);
+            line-height: 1.35;
+            letter-spacing: -.04em;
+            font-weight: 900;
+        }
+
+        .fs-home-proof-card blockquote {
+            margin: 0;
+            color: #ffffff;
+            font-size: clamp(16px, 1.2vw, 22px);
+            line-height: 1.35;
+            letter-spacing: -.035em;
+            font-weight: 750;
+        }
+
+        .fs-home-proof-card cite {
+            display: block;
+            margin-top: 22px;
+            color: rgba(226, 232, 240, .88);
+            font-style: normal;
+            font-size: 15px;
+            line-height: 1.5;
+            font-weight: 850;
+        }
+
+        .fs-home-proof-list {
+            display: grid;
+            gap: 14px;
+            margin-top: 30px;
+        }
+
+        .fs-home-proof-item {
+            display: flex;
+            align-items: center;
+            min-height: 58px;
+            padding: 16px 18px;
+            border-radius: 7px;
+            border: 1px solid rgba(255, 255, 255, .18);
+            background: rgba(255, 255, 255, .08);
+            color: #ffffff;
+            font-size: 16px;
+            line-height: 1.35;
+            font-weight: 850;
+        }
+
+        @media (max-width: 1180px) {
+            .fs-home-hero-inner {
+                grid-template-columns: 1fr;
+                gap: 38px;
+            }
+
+            .fs-home-hero-copy {
+                max-width: 880px;
+            }
+
+            .fs-home-proof-card {
+                justify-self: start;
+                max-width: 760px;
+            }
+        }
+
+        @media (max-width: 760px) {
+            .fs-home-hero-inner {
+                width: min(100%, calc(100% - 28px));
+                padding: 72px 0 54px;
+            }
+
+            .fs-home-hero-title {
+                font-size: clamp(40px, 13vw, 62px);
+            }
+
+            .fs-home-metric-grid {
+                grid-template-columns: 1fr;
+                margin-top: 28px;
+            }
+
+            .fs-home-metric-card {
+                min-height: auto;
+            }
+
+            .fs-home-proof-card {
+                padding: 26px 22px;
+                border-radius: 22px;
+            }
+
+            .fs-home-proof-list {
+                gap: 10px;
+            }
+
+            .fs-home-proof-item {
+                min-height: auto;
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .fs-home-hero-actions {
+                flex-direction: column;
+            }
+
+            .fs-home-hero-btn {
+                width: 100%;
+            }
+        }
+    </style>
+
+    <section class="fs-home-hero" aria-labelledby="home-hero-title">
+        <video autoplay muted loop playsinline class="fs-home-hero-video">
             <source src="{{ asset('/video/video1.mp4') }}" type="video/mp4">
             Your browser does not support the video tag.
         </video>
 
-        <!-- Overlay -->
-        <div class="absolute inset-0 bg-slate-950/35"></div>
-        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/70 via-slate-950/35 to-slate-950/20"></div>
+        <div class="fs-home-hero-inner">
+            <div class="fs-home-hero-copy">
+                <h1 id="home-hero-title" class="fs-home-hero-title">
+                    Reduce Methane Emissions and Increase Oil Production
+                </h1>
 
-        <!-- Hero Content -->
-        <div class="relative z-10 flex min-h-screen items-center ">
-            <div class="mx-auto w-full max-w-7xl  container">
-                <div
-                    class="grid min-h-screen items-center gap-10 py-28 lg:grid-cols-[minmax(0,1.2fr)_minmax(340px,0.8fr)] lg:gap-14">
+                <div class="fs-home-hero-line"></div>
 
-                    <!-- Left Content -->
-                    <div class="max-w-3xl">
-                        <h1
-                            class="max-w-4xl text-3xl font-extrabold leading-[1.08] tracking-[-0.03em] text-white sm:text-5xl md:text-6xl lg:text-[54px]">
-                            Reduce Methane Emissions and Increase Oil Production
-                        </h1>
+                <p class="fs-home-hero-lead">
+                    Patented multiphase compression built for liquids, slugs, and real field conditions.
+                </p>
 
-                        <div class="mt-5 h-1 w-20 rounded-full bg-sky-400"></div>
-                        <p class="mt-7 max-w-4xl text-base font-bold leading-7 text-slate-200 sm:text-2xl sm:leading-8">
-                            Patented multiphase compression built for liquids, slugs, and real field conditions.
-                        </p>
-                        <p class="mt-3 max-w-2xl text-base font-medium leading-7 text-slate-200 sm:text-lg sm:leading-8">
-                            Field-proven to restore shut-in wells and generate more than C$1.5M/year in incremental revenue.
-                        </p>
+                <p class="fs-home-hero-support">
+                    Field-proven to restore shut-in wells and generate more than C$1.5M/year in incremental revenue.
+                </p>
 
-                        <div class="mt-9 flex flex-col gap-3 sm:flex-row">
-                            <a href="{{ url('/multiphase-compression') }}"
-                                class="inline-flex items-center justify-center rounded-xl bg-sky-500 px-6 py-3.5 text-sm font-semibold text-white transition duration-300 hover:bg-sky-600">
-                                Explore Multiphase Compression
-                            </a>
+                <div class="fs-home-hero-actions">
+                    <a href="{{ url('/multiphase-compression') }}" class="fs-home-hero-btn fs-home-hero-btn-primary">
+                        Explore Multiphase Compression
+                    </a>
 
-                            <a href="{{ url('/contact') }}"
-                                class="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white transition duration-300 hover:bg-white/10">
-                                Contact Us
-                            </a>
-                        </div>
+                    <a href="{{ url('/contact') }}" class="fs-home-hero-btn fs-home-hero-btn-secondary">
+                        Contact Us
+                    </a>
+                </div>
+
+                <div class="fs-home-metric-grid">
+                    <div class="fs-home-metric-card">
+                        <strong>C$1.5M+</strong>
+                        <span>estimated annual incremental revenue in one Alberta field case study</span>
                     </div>
 
-                    <!-- Right Quote Card -->
-                    <div class="lg:justify-self-end">
-                        <div class="hero-quote-card">
-                            <div class="hero-quote-stage">
-                                <p class="kicker">Proven Field Performance</p>
-                                <div class="hero-quote-slide active" data-index="0">
-                                    <blockquote class="hero-quote-text">
-                                        “Fluidstream’s unit has operated consistently and eliminated gas venting. Since
-                                        installation 17 months ago, the unit has provided 100% uptime since installation and
-                                        has not
-                                        required any maintenance.”
-                                    </blockquote>
-
-                                    <div class="hero-quote-meta">
-                                        <p class="hero-quote-author">
-                                            VP Production, Allied Energy II Corp.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="hero-quote-slide" data-index="1">
-                                    <blockquote class="hero-quote-text">
-                                        “Fluidstream’s MultiphaseCommander didn’t just improve performance—it completely
-                                        transformed two dead wells into revenue-generating assets.”
-                                    </blockquote>
-
-                                    <div class="hero-quote-meta">
-                                        <p class="hero-quote-author">
-                                            Production Engineer, Western Canadian Oil &amp; Gas Producer
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="hero-quote-slide" data-index="2">
-                                    <blockquote class="hero-quote-text">
-                                        “We went from zero production to over $1.5 million per year in incremental revenue,
-                                        without adding any separation equipment or infrastructure.”
-                                    </blockquote>
-
-                                    <div class="hero-quote-meta">
-                                        <p class="hero-quote-author">
-                                            Production Engineer, Western Canadian Oil &amp; Gas Producer
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="hero-quote-footer">
-                                <a href="{{ url('/case-studies') }}" class="hero-quote-btn">
-                                    Learn More
-                                </a>
-
-                                <div class="hero-quote-dots">
-                                    <button type="button" class="hero-dot active" data-index="0"
-                                        aria-label="Show quote 1"></button>
-                                    <button type="button" class="hero-dot" data-index="1"
-                                        aria-label="Show quote 2"></button>
-                                    <button type="button" class="hero-dot" data-index="2"
-                                        aria-label="Show quote 3"></button>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="fs-home-metric-card">
+                        <strong>0–10e³ m³/d</strong>
+                        <span>gas production restored across two liquid-loaded wells in one deployment</span>
                     </div>
 
+                    <div class="fs-home-metric-card">
+                        <strong>35 months</strong>
+                        <span>to first reported seal change in one vapor recovery installation</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fs-home-proof-card">
+                <h2>Field-proven performance in real operating conditions.</h2>
+
+                <blockquote>
+                    “Fluidstream’s MultiphaseCommander didn’t just improve performance—it transformed two non-producing
+                    wells into revenue-generating assets.”
+                </blockquote>
+
+                <cite>
+                    Production Engineer, Western Canadian oil and gas producer
+                </cite>
+
+                <div class="fs-home-proof-list">
+                    <div class="fs-home-proof-item">No added separation package required in the field application</div>
+                    <div class="fs-home-proof-item">Variable gas and liquid flow handled</div>
+                    <div class="fs-home-proof-item">Built for harsh Canadian winter operation</div>
                 </div>
             </div>
         </div>
     </section>
+
+
+
+
+
     <section class="section proof py-12">
         <div class="inner container">
             <div class="section-head" style="margin-bottom:18px">
@@ -2019,25 +2279,25 @@
         }
 
         /* .patent-copy .kicker {
-                                                                                            margin-bottom: 18px;
-                                                                                        }
+                                                                                                                                                        margin-bottom: 18px;
+                                                                                                                                                    }
 
-                                                                                        .patent-copy h2 {
-                                                                                            margin: 0;
-                                                                                            font-size: clamp(1.9rem, 3vw, 3rem);
-                                                                                            line-height: 1.05;
-                                                                                            letter-spacing: -.04em;
-                                                                                            max-width: 21ch;
-                                                                                            color: var(--text);
-                                                                                        } */
+                                                                                                                                                    .patent-copy h2 {
+                                                                                                                                                        margin: 0;
+                                                                                                                                                        font-size: clamp(1.9rem, 3vw, 3rem);
+                                                                                                                                                        line-height: 1.05;
+                                                                                                                                                        letter-spacing: -.04em;
+                                                                                                                                                        max-width: 21ch;
+                                                                                                                                                        color: var(--text);
+                                                                                                                                                    } */
         /* 
-                                                .patent-copy p {
-                                                    margin: 0 0 18px;
-                                                    max-width: 760px;
-                                                    font-size: 1.18rem;
-                                                    line-height: 1.7;
-                                                    color: #5b6d86;
-                                                } */
+                                                                                                            .patent-copy p {
+                                                                                                                margin: 0 0 18px;
+                                                                                                                max-width: 760px;
+                                                                                                                font-size: 1.18rem;
+                                                                                                                line-height: 1.7;
+                                                                                                                color: #5b6d86;
+                                                                                                            } */
 
         .patent-copy .patent-highlight {
             margin-top: 6px;
@@ -2258,11 +2518,11 @@
         }
 
         /* .patent-card p {
-                                                                                                                                                                                                                                                                                                                                                margin: 0;
-                                                                                                                                                                                                                                                                                                                                                font-size: 1.04rem;
-                                                                                                                                                                                                                                                                                                                                                line-height: 1.72;
-                                                                                                                                                                                                                                                                                                                                                color: #61738b;
-                                                                                                                                                                                                                                                                                                                                            } */
+                                                                                                                                                                                                                                                                                                                                                                                                            margin: 0;
+                                                                                                                                                                                                                                                                                                                                                                                                            font-size: 1.04rem;
+                                                                                                                                                                                                                                                                                                                                                                                                            line-height: 1.72;
+                                                                                                                                                                                                                                                                                                                                                                                                            color: #61738b;
+                                                                                                                                                                                                                                                                                                                                                                                                        } */
 
         .patent-callout {
             position: relative;
