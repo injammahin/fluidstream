@@ -47,8 +47,8 @@
     }
 
     /* .section {
-                                                                                                                                                          padding: 84px 0;
-                                                                                                                                                        } */
+                                                                                                                                                                                        padding: 84px 0;
+                                                                                                                                                                                      } */
 
     .section-surface-white {
       background: #ffffff;
@@ -80,19 +80,19 @@
     }
 
     /* .hero-tech::before {
-                                                                                                                                                                                                  content: "";
-                                                                                                                                                                                                  position: absolute;
-                                                                                                                                                                                                  inset: 0;
-                                                                                                                                                                                                  background:
-                                                                                                                                                                                                    linear-gradient(90deg, rgba(0, 24, 220, 0.90) 0%, rgba(0, 24, 220, 0.78) 45%, rgba(0, 24, 220, 0.68) 100%),
-                                                                                                                                                                                                    url('{{ asset("/img/hero/hero.avif") }}');
-                                                                                                                                                                                                  background-size: cover;
-                                                                                                                                                                                                  background-position: center;
-                                                                                                                                                                                                  background-repeat: no-repeat;
-                                                                                                                                                                                                  transform: scale(1.02);
-                                                                                                                                                                                                  z-index: -2;
-                                                                                                                                                                                                }
-                                                                                                                                                                                                 */
+                                                                                                                                                                                                                                content: "";
+                                                                                                                                                                                                                                position: absolute;
+                                                                                                                                                                                                                                inset: 0;
+                                                                                                                                                                                                                                background:
+                                                                                                                                                                                                                                  linear-gradient(90deg, rgba(0, 24, 220, 0.90) 0%, rgba(0, 24, 220, 0.78) 45%, rgba(0, 24, 220, 0.68) 100%),
+                                                                                                                                                                                                                                  url('{{ asset("/img/hero/hero.avif") }}');
+                                                                                                                                                                                                                                background-size: cover;
+                                                                                                                                                                                                                                background-position: center;
+                                                                                                                                                                                                                                background-repeat: no-repeat;
+                                                                                                                                                                                                                                transform: scale(1.02);
+                                                                                                                                                                                                                                z-index: -2;
+                                                                                                                                                                                                                              }
+                                                                                                                                                                                                                               */
     .hero-tech::before {
       content: "";
       position: absolute;
@@ -187,17 +187,19 @@
       min-height: 565px;
       padding: 26px 20px 24px;
       border-radius: 5px;
-      background: #ffffff;
+      background: #ffffff00;
       box-shadow: 0 24px 56px rgba(5, 35, 95, .14);
+      backdrop-filter: blur(22px);
       color: #0a1c4d;
       text-decoration: none;
       transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
       overflow: hidden;
+      border: 1px solid #848484;
     }
 
     .hero-tech .hero-feature-card:hover {
       transform: translateY(-4px);
-      border-color: #0018dc;
+      /* border-color: #0018dc; */
       box-shadow: 0 30px 62px rgba(5, 35, 95, .18);
     }
 
@@ -207,7 +209,7 @@
       font-weight: 700;
       letter-spacing: .16em;
       text-transform: uppercase;
-      color: #0018dc;
+      color: #ffffff;
     }
 
     .hero-tech .hero-feature-card__title {
@@ -216,24 +218,25 @@
       line-height: 1.06;
       letter-spacing: -.04em;
       font-weight: 600;
-      color: #0a1c4d;
+      color: #ffffff;
     }
 
     .hero-tech .hero-feature-card__text {
       margin: 0;
       font-size: 16px;
       line-height: 1.7;
-      color: #52667a;
+      color: #ffffff;
     }
 
     .hero-tech .hero-feature-card__mini {
       margin-top: auto;
       min-height: 250px;
       padding: 14px 14px 16px;
-      border: 1px solid #e2eaf6;
+      border: 1px solid #3f4043;
       border-radius: 7px;
-      background: #f8fbff;
+      background: #f8fbff00;
       display: grid;
+      backdrop-filter: blur(32px);
       grid-template-rows: auto 1fr;
       align-content: start;
     }
@@ -244,14 +247,14 @@
       font-weight: 800;
       letter-spacing: .16em;
       text-transform: uppercase;
-      color: #0018dc;
+      color: #ffffff;
     }
 
     .hero-tech .hero-feature-card__mini p {
       margin: 0;
       font-size: 16px;
       line-height: 1.65;
-      color: #0a1c4d;
+      color: #eeeeee;
     }
 
     .hero-tech .hero-feature-card__cta {
@@ -264,14 +267,14 @@
       font-size: 14px;
       line-height: 1.4;
       font-weight: 800;
-      color: #0a1c4d;
+      color: #ffffff;
     }
 
     .hero-tech .hero-feature-card__arrow {
       align-self: end;
       font-size: 28px;
       line-height: 1;
-      color: #0018dc;
+      color: #ffffff;
     }
 
     @media (max-width: 1400px) {
@@ -550,7 +553,7 @@
       height: 24px;
       border-radius: 8px;
       /* border: 1px solid #dbe5ff;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                background-color: #ffffff; */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              background-color: #ffffff; */
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%230018dc' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h12'/%3E%3Cpath d='M13 5l7 7-7 7'/%3E%3C/svg%3E");
       background-repeat: no-repeat;
       background-position: center;
@@ -1182,8 +1185,8 @@
 
     #overview .section-head {
       /* display: grid;
-                                                                                                                                        grid-template-columns: minmax(0, 1.05fr) minmax(340px, .95fr);
-                                                                                                                                        gap: 44px; */
+                                                                                                                                                                      grid-template-columns: minmax(0, 1.05fr) minmax(340px, .95fr);
+                                                                                                                                                                      gap: 44px; */
       align-items: baseline;
       margin-bottom: 42px;
     }
@@ -1219,29 +1222,29 @@
 
     #overview .overview {
       /* display: grid;
-                                                                                                                                          grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-                                                                                                                                          gap: 28px; */
+                                                                                                                                                                        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+                                                                                                                                                                        gap: 28px; */
       align-items: stretch;
     }
 
     /* #overview .panel {
-                                                                                                                          padding: 34px 34px 36px;
-                                                                                                                          border: 1px solid #e3ebf5;
-                                                                                                                          border-radius: 7px;
-                                                                                                                          background: #ffffff;
-                                                                                                                          box-shadow: 0 14px 36px rgba(10, 28, 77, .05);
-                                                                                                                          height: 100%;
-                                                                                                                          display: flex;
-                                                                                                                          flex-direction: column;
-                                                                                                                        }
+                                                                                                                                                        padding: 34px 34px 36px;
+                                                                                                                                                        border: 1px solid #e3ebf5;
+                                                                                                                                                        border-radius: 7px;
+                                                                                                                                                        background: #ffffff;
+                                                                                                                                                        box-shadow: 0 14px 36px rgba(10, 28, 77, .05);
+                                                                                                                                                        height: 100%;
+                                                                                                                                                        display: flex;
+                                                                                                                                                        flex-direction: column;
+                                                                                                                                                      }
 
-                                                                                                                        #overview .panel {
-                                                                                                                          padding: 34px 34px 36px;
-                                                                                                                          border: 1px solid #e3ebf5;
-                                                                                                                          border-radius: 7px;
-                                                                                                                          background: #ffffff;
-                                                                                                                          box-shadow: 0 14px 36px rgba(10, 28, 77, .05);
-                                                                                                                        } */
+                                                                                                                                                      #overview .panel {
+                                                                                                                                                        padding: 34px 34px 36px;
+                                                                                                                                                        border: 1px solid #e3ebf5;
+                                                                                                                                                        border-radius: 7px;
+                                                                                                                                                        background: #ffffff;
+                                                                                                                                                        box-shadow: 0 14px 36px rgba(10, 28, 77, .05);
+                                                                                                                                                      } */
 
     #overview .panel h3 {
       margin: 0 0 18px;
@@ -1253,11 +1256,11 @@
     }
 
     /* #overview .panel>p {
-                                                                                                                                margin: 0;
-                                                                                                                                font-size: 18px;
-                                                                                                                                line-height: 1.72;
-                                                                                                                                color: #52667a;
-                                                                                                                              } */
+                                                                                                                                                              margin: 0;
+                                                                                                                                                              font-size: 18px;
+                                                                                                                                                              line-height: 1.72;
+                                                                                                                                                              color: #52667a;
+                                                                                                                                                            } */
 
     #overview .stack {
       display: flex;
@@ -1411,7 +1414,7 @@
     @media (max-width: 980px) {
       #overview .section-head {
         /* grid-template-columns: 1fr;
-                                                                                                                                          gap: 22px; */
+                                                                                                                                                                        gap: 22px; */
         align-items: start;
       }
 
@@ -1508,12 +1511,12 @@
     }
 
     .hero-patent-callout {
-      background: #ffffff;
+      background: #00000000;
       border-left: 4px solid #0018dc;
       padding: 16px 24px;
       margin-top: 32px;
       font-size: 16px;
-      color: #0a1c4d;
+      color: #ececec;
       border-radius: 8px;
     }
 
@@ -1542,12 +1545,13 @@
     }
 
     .hero-patent-callout {
-      background: #ffffff;
-      border-left: 4px solid #0018dc;
+      background: #ffffff06;
+      border-left: 4px solid #dfe2f6;
       padding: 16px 24px;
       margin-top: 32px;
       font-size: 16px;
-      color: #0a1c4d;
+      backdrop-filter: blur(22px);
+      color: #ffffff;
       border-radius: 8px;
     }
 
@@ -1556,7 +1560,7 @@
     }
 
     .hero-patent-link {
-      color: #0018dc;
+      color: #dde1ff;
       font-weight: bold;
       text-decoration: underline;
     }
@@ -1745,8 +1749,8 @@
     }
 
     /* ================================
-                 TECHNOLOGY CTA SECTION
-              ================================ */
+                                               TECHNOLOGY CTA SECTION
+                                            ================================ */
 
     .fs-technology-cta {
       background: #f6f8fc;
