@@ -921,7 +921,169 @@
     </style>
 
 
+    <style>
+        /* Sidebar / Article Contents - line style */
+        .toc {
+            position: sticky;
+            top: 104px;
 
+            background: transparent !important;
+            border: 0 !important;
+            border-radius: 0 !important;
+            box-shadow: none !important;
+
+            padding: 0 !important;
+            margin-top: 12px !important;
+
+            overflow: visible;
+        }
+
+        .toc-title {
+            display: none !important;
+        }
+
+        .toc::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background: #cfd7e4;
+        }
+
+        .toc a {
+            position: relative;
+            display: block;
+
+            padding: 9px 12px 9px 20px !important;
+            margin: 0 !important;
+
+            color: #5d6a80 !important;
+            font-size: 15px !important;
+            font-weight: 400 !important;
+            line-height: 1.25;
+
+            border-bottom: 0 !important;
+            text-decoration: none !important;
+
+            transition: color 0.22s ease, text-shadow 0.22s ease;
+        }
+
+        .toc a::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 2px;
+            bottom: 2px;
+
+            width: 4px;
+            background: transparent;
+
+            transition: background 0.22s ease;
+        }
+
+        .toc a:hover,
+        .toc a.active {
+            color: #061126 !important;
+            font-weight: 400 !important;
+            text-shadow: 0.35px 0 0 #061126;
+        }
+
+        .toc a:hover::before,
+        .toc a.active::before {
+            background: #0018dc !important;
+        }
+
+        /* Fix anchor scroll hiding under sticky header */
+        html {
+            scroll-padding-top: 135px;
+        }
+
+        .article-section {
+            scroll-margin-top: 135px;
+        }
+
+        @media (max-width: 1020px) {
+            .toc {
+                position: static;
+                margin-top: 25px !important;
+                margin-bottom: 25px !important;
+            }
+
+            html {
+                scroll-padding-top: 90px;
+            }
+
+            .article-section {
+                scroll-margin-top: 90px;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tocLinks = Array.from(document.querySelectorAll('.toc a[href^="#"]'));
+
+            const sections = tocLinks
+                .map(function (link) {
+                    return document.querySelector(link.getAttribute('href'));
+                })
+                .filter(Boolean);
+
+            if (!tocLinks.length || !sections.length) return;
+
+            const headerOffset = 135;
+
+            function setActive(id) {
+                tocLinks.forEach(function (link) {
+                    link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+                });
+            }
+
+            function updateActiveOnScroll() {
+                let currentId = sections[0].id;
+
+                sections.forEach(function (section) {
+                    const sectionTop = section.getBoundingClientRect().top;
+
+                    if (sectionTop <= headerOffset + 20) {
+                        currentId = section.id;
+                    }
+                });
+
+                setActive(currentId);
+            }
+
+            tocLinks.forEach(function (link) {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault();
+
+                    const targetId = link.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+
+                    if (!targetSection) return;
+
+                    const targetPosition =
+                        targetSection.getBoundingClientRect().top +
+                        window.pageYOffset -
+                        headerOffset;
+
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+
+                    setActive(targetId.replace('#', ''));
+                });
+            });
+
+            updateActiveOnScroll();
+
+            window.addEventListener('scroll', updateActiveOnScroll, {
+                passive: true
+            });
+        });
+    </script>
     <section class="hero">
         <div class="wrap hero-grid py-12">
             <div>
@@ -931,7 +1093,7 @@
                     service, and how wet gas, unstable production, liquid carryover, separator dependence, winter
                     conditions, and downtime affect real project economics.</p>
                 <div class="hero-actions">
-                    <a class="btn btn-primary" href="/compressioncommander">Explore CompressionCommander™</a>
+                    <a class="btn btn-primary" href="/casing-gas-compression">Explore CompressionCommander™</a>
                     <a class="btn btn-outline" href="#case-study-proof">View Field Proof</a>
                 </div>
             </div>
@@ -1265,7 +1427,7 @@
                         determine whether CompressionCommander™ is the right fit.</p>
                     <div class="cta-actions">
                         <a class="btn-1 btn-primary" href="/contact">Request Technical Review</a>
-                        <a class="btn-1 btn-outline" href="/compressioncommander">Review CompressionCommander™</a>
+                        <a class="btn-1 btn-outline" href="/casing-gas-compression">Review CompressionCommander™</a>
                     </div>
                 </div>
                 <div class="cta-panel">

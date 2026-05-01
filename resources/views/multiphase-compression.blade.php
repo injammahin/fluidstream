@@ -220,10 +220,10 @@
     }
 
     /* .swipe-left:after {
-                                                                                                              right: -135%;
-                                                                                                              transform: skewX(24deg);
-                                                                                                              background: linear-gradient(270deg, transparent 0%, rgba(21, 209, 255, .18) 50%, transparent 100%);
-                                                                                                            } */
+                                                                                                                                                              right: -135%;
+                                                                                                                                                              transform: skewX(24deg);
+                                                                                                                                                              background: linear-gradient(270deg, transparent 0%, rgba(21, 209, 255, .18) 50%, transparent 100%);
+                                                                                                                                                            } */
 
     .swipe-left:hover,
     .swipe-left:hover,
@@ -239,13 +239,13 @@
     }
 
     /* 
-                                                                                                                      .swipe-left:hover:before,
-                                                                                                                      .swipe-left:hover:before,
-                                                                                                                      .hero-card:hover:before,
-                                                                                                                      .model-card:hover:before,
-                                                                                                                      .spec-mobile-card:hover:before {
-                                                                                                                        opacity: 1;
-                                                                                                                      } */
+                                                                                                                                                                      .swipe-left:hover:before,
+                                                                                                                                                                      .swipe-left:hover:before,
+                                                                                                                                                                      .hero-card:hover:before,
+                                                                                                                                                                      .model-card:hover:before,
+                                                                                                                                                                      .spec-mobile-card:hover:before {
+                                                                                                                                                                        opacity: 1;
+                                                                                                                                                                      } */
 
     .swipe-left:hover:after,
     .hero-card:hover:after,
@@ -557,14 +557,14 @@
     }
 
     /* 
-                                          .kicker mb-2 {
-                                            font-size: 12px;
-                                            letter-spacing: .11em;
-                                            text-transform: uppercase;
-                                            color: var(--blue);
-                                            font-weight: 700;
-                                            margin-bottom: 10px;
-                                          } */
+                                                                                          .kicker mb-2 {
+                                                                                            font-size: 12px;
+                                                                                            letter-spacing: .11em;
+                                                                                            text-transform: uppercase;
+                                                                                            color: var(--blue);
+                                                                                            font-weight: 700;
+                                                                                            margin-bottom: 10px;
+                                                                                          } */
 
     h2 {
       margin: 0 0 16px;
@@ -918,6 +918,148 @@
         font-size: 31px
       }
     }
+
+    /* =========================================
+                                 HERO BACKGROUND IMAGE FULL HEIGHT FIX
+                              ========================================= */
+
+    header.hero {
+      position: relative !important;
+      isolation: isolate;
+      overflow: hidden;
+      min-height: calc(100vh - 108px);
+      display: flex;
+      align-items: stretch;
+      background: #07111f !important;
+      color: #ffffff;
+      padding: 0 !important;
+    }
+
+    /* Background image */
+    header.hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+
+      background-image: url("/img/hero/vapor-recovery.png");
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+
+      transform: scaleX(-1) scale(1.04);
+      transform-origin: center;
+    }
+
+    /* Dark overlay for readable white text */
+    header.hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+
+      background: #0206177a;
+    }
+
+    /* Make content also fill hero height */
+    header.hero>.wrap {
+      position: relative;
+      z-index: 2;
+
+      width: min(1200px, calc(100% - 40px));
+      min-height: calc(100vh - 108px);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      padding-top: 76px !important;
+      padding-bottom: 76px !important;
+    }
+
+    /* Ensure all hero text stays white */
+    header.hero h1,
+    header.hero .subhead,
+    header.hero .hero-copy,
+    header.hero .eyebrow {
+      color: #ffffff !important;
+    }
+
+    header.hero .eyebrow {
+      color: #bfeeff !important;
+    }
+
+    header.hero .hero-copy {
+      color: rgba(237, 245, 255, 0.92) !important;
+    }
+
+    /* Transparent hero cards */
+    header.hero .hero-card-1 {
+      position: relative;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.12) !important;
+      border: 1px solid rgba(255, 255, 255, 0.16) !important;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.14);
+      transition: transform 0.28s ease, border-color 0.28s ease, background 0.28s ease, box-shadow 0.28s ease;
+    }
+
+    header.hero .hero-card-1:hover {
+      transform: translateY(-5px);
+      /* border-color: rgba(21, 209, 255, 0.44) !important; */
+      background: rgba(255, 255, 255, 0.18) !important;
+      /* box-shadow: 0 30px 64px rgba(0, 24, 220, 0.22); */
+    }
+
+    header.hero .hero-card-1 h3 {
+      color: #ffffff !important;
+    }
+
+    header.hero .hero-card-1 p {
+      color: rgba(232, 244, 255, 0.90) !important;
+    }
+
+    /* Mobile */
+    @media (max-width: 1080px) {
+      header.hero {
+        min-height: auto;
+      }
+
+      header.hero>.wrap {
+        min-height: auto;
+        padding-top: 72px !important;
+        padding-bottom: 62px !important;
+      }
+    }
+
+    @media (max-width: 760px) {
+      header.hero {
+        min-height: auto;
+        padding: 0 !important;
+      }
+
+      header.hero::before {
+        background-position: center center;
+        transform: scaleX(-1) scale(1.06);
+      }
+
+      header.hero::after {
+        background:
+          linear-gradient(180deg,
+            rgba(2, 6, 23, 0.94) 0%,
+            rgba(2, 6, 23, 0.84) 54%,
+            rgba(0, 24, 220, 0.70) 100%);
+      }
+
+      header.hero>.wrap {
+        width: min(1200px, calc(100% - 30px));
+        min-height: auto;
+        padding-top: 58px !important;
+        padding-bottom: 48px !important;
+      }
+    }
   </style>
 
   <header class="hero">
@@ -1103,128 +1245,353 @@
     </div>
   </section>
 
-  <section id="technology-benefits">
+  <section id="technology-benefits" class="technology-benefits-section">
     <div class="wrap py-12">
 
       <div class="kicker mb-2">Technology benefits</div>
+
       <h2>Built on Fluidstream multiphase technology.</h2>
+
       <p class="lead">
         MultiphaseCommander™ is built on Fluidstream’s core technology platform: direct liquid handling inside
         compression, stronger sealing and wear awareness, better control through upset conditions, and lower-maintenance
         operation in real field service.
       </p>
 
-      <div class="split">
-        <div class="feature-stack">
-          <div class="feature interactive-card swipe-left">
-            <h3>Liquid handling inside compression</h3>
-            <p>Fluidstream technology is built to safely manage incompressible liquids within the compression chamber,
-              which is fundamental to true multiphase service and directly supports applications where gas definitely has
-              liquids present.</p>
-            <div class="patent-note light" style="margin-top:14px;">
-              Patent reference:
-              <a href="/patented-technology#us11098709b2">US11098709B2</a>
-              supports this liquid-aware compression methodology within MultiphaseCommander™.
-            </div>
-          </div>
-          <div class="feature interactive-card swipe-left">
-            <h3>Sealed gland protection with wear awareness</h3>
-            <p>Advanced gland sealing and electronic seal wear detection support safer, more controlled multiphase
-              operation while helping operators identify service needs earlier and reduce reactive maintenance.</p>
-          </div>
-          <div class="feature interactive-card swipe-left">
-            <h3>Alignment and life extension</h3>
-            <p>The platform is designed to maintain alignment in key stress and wear areas, supporting longer seal life,
-              longer component life, and more dependable field performance.</p>
-          </div>
-          <div class="feature interactive-card swipe-left">
-            <h3>Piston tracking and smarter control</h3>
-            <p>Piston-location awareness helps the system respond to slugs, solids buildup, ice risk, and other changing
-              operating conditions with better control confidence in unstable flow.</p>
-          </div>
-          <div class="feature interactive-card swipe-left">
-            <h3>Autonomous upset-condition response</h3>
-            <p>Autonomous control logic is designed to keep operating through multiphase and gas-only upset conditions
-              with less operator intervention and a lower-touch maintenance profile.</p>
-          </div>
-          <div class="feature interactive-card swipe-left">
-            <h3>Field-ready hard-service flexibility</h3>
-            <p>The technology platform supports electric and gas-drive configurations, plus sealing approaches optimized
-              for difficult services such as H₂S-bearing and sand-bearing applications.</p>
-          </div>
+      {{-- 6 equal cards: 3 columns x 2 rows --}}
+      <div class="technology-benefits-grid">
+        <div class="technology-benefit-card">
+          <h3>Liquid handling inside compression</h3>
+          <p>
+            Fluidstream technology is built to safely manage incompressible liquids within the compression chamber,
+            which is fundamental to true multiphase service and directly supports applications where gas has liquids
+            present.
+          </p>
+
+          {{-- <div class="technology-benefit-note">
+            Patent reference:
+            <a href="/patented-technology#us11098709b2">US11098709B2</a>
+            supports this liquid-aware compression methodology within MultiphaseCommander™.
+          </div> --}}
         </div>
 
-        <div class="highlight-box-1 interactive-card swipe-left">
+        <div class="technology-benefit-card">
+          <h3>Sealed gland protection with wear awareness</h3>
+          <p>
+            Advanced gland sealing and electronic seal wear detection support safer, more controlled multiphase
+            operation while helping operators identify service needs earlier and reduce reactive maintenance.
+          </p>
+        </div>
+
+        <div class="technology-benefit-card">
+          <h3>Alignment and life extension</h3>
+          <p>
+            The platform is designed to maintain alignment in key stress and wear areas, supporting longer seal life,
+            longer component life, and more dependable field performance.
+          </p>
+        </div>
+
+        <div class="technology-benefit-card">
+          <h3>Piston tracking and smarter control</h3>
+          <p>
+            Piston-location awareness helps the system respond to slugs, solids buildup, ice risk, and other changing
+            operating conditions with better control confidence in unstable flow.
+          </p>
+        </div>
+
+        <div class="technology-benefit-card">
+          <h3>Autonomous upset-condition response</h3>
+          <p>
+            Autonomous control logic is designed to keep operating through multiphase and gas-only upset conditions
+            with less operator intervention and a lower-touch maintenance profile.
+          </p>
+        </div>
+
+        <div class="technology-benefit-card">
+          <h3>Field-ready hard-service flexibility</h3>
+          <p>
+            The technology platform supports electric and gas-drive configurations, plus sealing approaches optimized
+            for difficult services such as H₂S-bearing and sand-bearing applications.
+          </p>
+        </div>
+      </div>
+
+      {{-- Big bottom card --}}
+      <div class="technology-comparison-card">
+        <div class="technology-comparison-copy">
           <h3>Conventional systems vs. MultiphaseCommander™</h3>
+
           <p>
             Conventional gas-only systems are usually strongest when the field delivers stable, dry gas and low
             variability. MultiphaseCommander™ is positioned for a different duty: mixed-phase streams, increasing
             backpressure, unstable flow, and the need to keep gas and liquids moving together.
           </p>
+        </div>
 
-          <ul class="bullet space-y-4">
-            <li class="flex items-start gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 text-[#0018dc] mt-[4px]" fill="none"
-                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h12" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
-              </svg>
-              <span>
-                <strong>Conventional gas-only boosters:</strong> more sensitive to liquid carryover, often rely on extra
-                site equipment, and can become maintenance-heavy when forced into mixed-phase service.
-              </span>
+        <div class="technology-comparison-list">
+          <ul>
+            <li>
+              <strong>Conventional gas-only boosters:</strong>
+              more sensitive to liquid carryover, often rely on extra site equipment, and can become maintenance-heavy
+              when forced into mixed-phase service.
             </li>
 
-            <li class="flex items-start gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 text-[#0018dc] mt-[4px]" fill="none"
-                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h12" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
-              </svg>
-              <span>
-                <strong>MultiphaseCommander™:</strong> designed for gas streams with liquids present, supports multiphase
-                boosting and transfer directly, and reduces dependence on added wellsite handling equipment in suitable
-                applications.
-              </span>
+            <li>
+              <strong>MultiphaseCommander™:</strong>
+              designed for gas streams with liquids present, supports multiphase boosting and transfer directly, and
+              reduces dependence on added wellsite handling equipment in suitable applications.
             </li>
 
-            <li class="flex items-start gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 text-[#0018dc] mt-[4px]" fill="none"
-                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h12" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
-              </svg>
-              <span>
-                <strong>Conventional separation-heavy layouts:</strong> more footprint, more interfaces, more pressure
-                drop, and more equipment to maintain.
-              </span>
+            <li>
+              <strong>Conventional separation-heavy layouts:</strong>
+              more footprint, more interfaces, more pressure drop, and more equipment to maintain.
             </li>
 
-            <li class="flex items-start gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 text-[#0018dc] mt-[4px]" fill="none"
-                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h12" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
-              </svg>
-              <span>
-                <strong>MultiphaseCommander™ approach:</strong> lower backpressure, move untreated flow, and support
-                centralized processing or leaner site architecture where it makes operational and economic sense.
-              </span>
+            <li>
+              <strong>MultiphaseCommander™ approach:</strong>
+              lower backpressure, move untreated flow, and support centralized processing or leaner site architecture
+              where it makes operational and economic sense.
             </li>
           </ul>
 
-          <p style="margin-top:16px;">
-            <a href="https://fluidstream.nexolioit.com/technology"
-              style="color:var(--blue);font-weight:700;text-decoration:none;">View technology page →</a>
-            &nbsp;&nbsp;|&nbsp;&nbsp;
-            <a href="/patented-technology" style="color:var(--blue);font-weight:700;text-decoration:none;">View patented
-              technology →</a>
-          </p>
+          <div class="technology-comparison-links">
+            <a href="{{ url('/technology') }}">View technology page →</a>
+            <a href="{{ url('/patented-technology') }}">View patented technology →</a>
+          </div>
         </div>
       </div>
+
     </div>
   </section>
+  <style>
+    /* ================================
+                     TECHNOLOGY BENEFITS 3x2 LAYOUT
+                  ================================ */
 
+    .technology-benefits-section {
+      background: #ffffff;
+    }
+
+    .technology-benefits-section .lead {
+      max-width: 760px;
+    }
+
+    .technology-benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-auto-rows: 1fr;
+      gap: 18px;
+      margin-top: 34px;
+      align-items: stretch;
+    }
+
+    .technology-benefit-card {
+      position: relative;
+      overflow: hidden;
+      /* min-height: 285px; */
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 24px 24px 22px;
+      border: 1px solid #d9e6ff;
+      border-radius: 7px;
+      background: #ffffff;
+      box-shadow: 0 18px 44px rgba(13, 32, 84, .06);
+      transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease,
+        background .25s ease;
+    }
+
+    .technology-benefit-card::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 4px;
+      background: #0018dc;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .25s cubic-bezier(.22, .61, .36, 1);
+    }
+
+    .technology-benefit-card:hover {
+      transform: translateY(-4px);
+      border-color: #0018dc;
+      /* box-shadow: 0 24px 54px rgba(0, 24, 220, .14); */
+      background: #ffffff;
+    }
+
+    .technology-benefit-card:hover::after {
+      transform: scaleX(1);
+    }
+
+    .technology-benefit-card h3 {
+      margin: 0 0 12px;
+      color: #232325;
+      font-size: 23px;
+      line-height: 1.12;
+      letter-spacing: -.035em;
+      font-weight: 500;
+    }
+
+    .technology-benefit-card p {
+      margin: 0;
+      color: #4a5568;
+      font-size: 16px;
+      line-height: 1.62;
+    }
+
+    .technology-benefit-note {
+      margin-top: auto;
+      padding: 14px 15px;
+      border-left: 4px solid #0018dc;
+      border-radius: 0 7px 7px 0;
+      background: #f5f7fb;
+      color: #284163;
+      font-size: 14px;
+      line-height: 1.52;
+    }
+
+    .technology-benefit-note a {
+      color: #0018dc;
+      font-weight: 800;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    /* Bottom comparison card */
+    .technology-comparison-card {
+      display: grid;
+      grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+      gap: 42px;
+      align-items: start;
+      margin-top: 26px;
+      padding: 42px 46px;
+      border: 1px solid #d9e6ff;
+      border-radius: 7px;
+      background: #f6f7fb;
+      box-shadow: 0 18px 44px rgba(13, 32, 84, .06);
+    }
+
+    .technology-comparison-copy h3 {
+      margin: 0 0 18px;
+      color: #0a1c4d;
+      font-size: clamp(24px, 2.6vw, 45px);
+      line-height: .98;
+      letter-spacing: -.055em;
+      font-weight: 500;
+    }
+
+    .technology-comparison-copy p {
+      margin: 0;
+      color: #52667a;
+      font-size: 17px;
+      line-height: 1.62;
+    }
+
+    .technology-comparison-list ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 16px;
+    }
+
+    .technology-comparison-list li {
+      position: relative;
+      padding-left: 34px;
+      color: #334155;
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    .technology-comparison-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 7px;
+      width: 20px;
+      height: 14px;
+      background-repeat: no-repeat;
+      background-size: 20px 14px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='14' viewBox='0 0 20 14' fill='none'%3E%3Cpath d='M1 7h15' stroke='%230018dc' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M11 1.5L17 7l-6 5.5' stroke='%230018dc' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    }
+
+    .technology-comparison-list strong {
+      color: #0f172a;
+      font-weight: 800;
+    }
+
+    .technology-comparison-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 24px;
+      justify-content: end;
+    }
+
+    .technology-comparison-links a {
+      color: #0018dc;
+      font-size: 16px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .technology-comparison-links a:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /* Responsive */
+    @media (max-width: 1100px) {
+      .technology-benefits-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .technology-comparison-card {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 34px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .technology-benefits-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .technology-benefit-card {
+        min-height: auto;
+        padding: 22px 20px;
+        border-radius: 12px;
+      }
+
+      .technology-benefit-card h3 {
+        font-size: 22px;
+      }
+
+      .technology-comparison-card {
+        padding: 26px 22px;
+        border-radius: 12px;
+      }
+
+      .technology-comparison-copy h3 {
+        font-size: 34px;
+      }
+
+      .technology-comparison-copy p {
+        font-size: 17px;
+      }
+
+      .technology-comparison-links {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
   <section class="band">
     <div class="wrap py-12">
 
@@ -1387,12 +1754,12 @@
       }
 
       /* .fs-mpc-section-head h2 {
-            font-size: clamp(30px, 3.2vw, 46px);
-            line-height: 1.02;
-            margin: 0 0 14px;
-            letter-spacing: -.035em;
-            color: var(--mpc-ink);
-          } */
+                                                font-size: clamp(30px, 3.2vw, 46px);
+                                                line-height: 1.02;
+                                                margin: 0 0 14px;
+                                                letter-spacing: -.035em;
+                                                color: var(--mpc-ink);
+                                              } */
 
       .fs-mpc-lead {
         font-size: 17px;
@@ -1486,11 +1853,7 @@
         border: 1px solid var(--mpc-line);
         border-radius: 7px;
         box-shadow: 0 14px 36px rgba(7, 17, 38, .065);
-        transition:
-          transform .24s ease,
-          border-color .24s ease,
-          box-shadow .24s ease,
-          background .24s ease;
+        transition: transform .24s ease, border-color .24s ease, box-shadow .24s ease, background .24s ease;
       }
 
       .fs-mpc-model-card::before {
@@ -1759,12 +2122,15 @@
     <div class="fs-mpc-wrap">
       <div class="fs-mpc-section-head">
         <div class="fs-mpc-rail">Technical specifications</div>
+
         <div>
           <h2>Engineering validation for the MultiphaseCommander™ family.</h2>
+
           <p class="lead">
             Compare the model range visually, then review the detailed specifications for sizing, horsepower,
-            gas-rate performance, and site requirements sourced from the latest model spreadsheet.
+            gas-rate performance, and site requirements.
           </p>
+
           <p class="lead">
             Select an inlet pressure to review gas capacity across the MultiphaseCommander™ model range.
           </p>
@@ -1789,6 +2155,7 @@
         <article class="fs-mpc-model-card">
           <div class="fs-mpc-card-top">
             <span class="fs-mpc-family">MultiphaseCommander™</span>
+
             <div class="fs-mpc-model-line">
               <h3>MC1235 (050035)</h3>
               <span class="fs-mpc-hp-badge">50 HP</span>
@@ -1799,6 +2166,7 @@
             <div class="fs-mpc-pressure-row">
               <label for="fsMpcPressure0">Inlet pressure</label>
             </div>
+
             <select id="fsMpcPressure0" class="fs-mpc-pressure-select" data-card="0">
               <option value="0">5 psi | 34 kPa</option>
               <option value="1">50 psi | 345 kPa</option>
@@ -1821,6 +2189,7 @@
                 <span class="imperial">14,077 <small>bbl/d</small></span>
               </span>
             </div>
+
             <div>
               <b>Max ΔP</b>
               <span>
@@ -1834,6 +2203,7 @@
         <article class="fs-mpc-model-card">
           <div class="fs-mpc-card-top">
             <span class="fs-mpc-family">MultiphaseCommander™</span>
+
             <div class="fs-mpc-model-line">
               <h3>MC1245 (050035)</h3>
               <span class="fs-mpc-hp-badge">50 HP</span>
@@ -1844,6 +2214,7 @@
             <div class="fs-mpc-pressure-row">
               <label for="fsMpcPressure1">Inlet pressure</label>
             </div>
+
             <select id="fsMpcPressure1" class="fs-mpc-pressure-select" data-card="1">
               <option value="0">5 psi | 34 kPa</option>
               <option value="1">50 psi | 345 kPa</option>
@@ -1866,6 +2237,7 @@
                 <span class="imperial">8,454 <small>bbl/d</small></span>
               </span>
             </div>
+
             <div>
               <b>Max ΔP</b>
               <span>
@@ -1879,8 +2251,9 @@
         <article class="fs-mpc-model-card">
           <div class="fs-mpc-card-top">
             <span class="fs-mpc-family">MultiphaseCommander™</span>
+
             <div class="fs-mpc-model-line">
-              <h3>VC1245 (100060)</h3>
+              <h3>MC1245 (100060)</h3>
               <span class="fs-mpc-hp-badge">100 HP</span>
             </div>
           </div>
@@ -1889,6 +2262,7 @@
             <div class="fs-mpc-pressure-row">
               <label for="fsMpcPressure2">Inlet pressure</label>
             </div>
+
             <select id="fsMpcPressure2" class="fs-mpc-pressure-select" data-card="2">
               <option value="0">5 psi | 34 kPa</option>
               <option value="1">50 psi | 345 kPa</option>
@@ -1907,13 +2281,16 @@
             <div>
               <b>Max liquid rate</b>
               <span>
-                <span class="metric">3160 <small>m³/d</small></span>
+                <span class="metric">2,345 <small>m³/d</small></span>
+                <span class="imperial">14,750 <small>bbl/d</small></span>
               </span>
             </div>
+
             <div>
               <b>Max ΔP</b>
               <span>
-                <span class="metric">450 <small>kPag</small></span>
+                <span class="metric">1896 <small>kPag</small></span>
+                <span class="imperial">275 <small>psig</small></span>
               </span>
             </div>
           </div>
@@ -1922,8 +2299,9 @@
         <article class="fs-mpc-model-card">
           <div class="fs-mpc-card-top">
             <span class="fs-mpc-family">MultiphaseCommander™</span>
+
             <div class="fs-mpc-model-line">
-              <h3>CC1245 (100060)</h3>
+              <h3>MC1645 (100060)</h3>
               <span class="fs-mpc-hp-badge">100 HP</span>
             </div>
           </div>
@@ -1932,6 +2310,7 @@
             <div class="fs-mpc-pressure-row">
               <label for="fsMpcPressure3">Inlet pressure</label>
             </div>
+
             <select id="fsMpcPressure3" class="fs-mpc-pressure-select" data-card="3">
               <option value="0">5 psi | 34 kPa</option>
               <option value="1">50 psi | 345 kPa</option>
@@ -1950,15 +2329,16 @@
             <div>
               <b>Max liquid rate</b>
               <span>
-                <span class="metric">2,345 <small>m³/d</small></span>
-                <span class="imperial">14,750 <small>bbl/d</small></span>
+                <span class="metric">4,200 <small>m³/d</small></span>
+                <span class="imperial">26,417 <small>bbl/d</small></span>
               </span>
             </div>
+
             <div>
               <b>Max ΔP</b>
               <span>
-                <span class="metric">1896 <small>kPag</small></span>
-                <span class="imperial">275 <small>psig</small></span>
+                <span class="metric">1034 <small>kPag</small></span>
+                <span class="imperial">150 <small>psig</small></span>
               </span>
             </div>
           </div>
@@ -1967,8 +2347,9 @@
         <article class="fs-mpc-model-card">
           <div class="fs-mpc-card-top">
             <span class="fs-mpc-family">MultiphaseCommander™</span>
+
             <div class="fs-mpc-model-line">
-              <h3>MC1645 (100060)</h3>
+              <h3>MC2270 (100128)</h3>
               <span class="fs-mpc-hp-badge">100 HP</span>
             </div>
           </div>
@@ -1977,6 +2358,7 @@
             <div class="fs-mpc-pressure-row">
               <label for="fsMpcPressure4">Inlet pressure</label>
             </div>
+
             <select id="fsMpcPressure4" class="fs-mpc-pressure-select" data-card="4">
               <option value="0">5 psi | 34 kPa</option>
               <option value="1">50 psi | 345 kPa</option>
@@ -1995,15 +2377,16 @@
             <div>
               <b>Max liquid rate</b>
               <span>
-                <span class="metric">4,200 <small>m³/d</small></span>
-                <span class="imperial">26,417 <small>bbl/d</small></span>
+                <span class="metric">6,600 <small>m³/d</small></span>
+                <span class="imperial">41,513 <small>bbl/d</small></span>
               </span>
             </div>
+
             <div>
               <b>Max ΔP</b>
               <span>
-                <span class="metric">1034 <small>kPag</small></span>
-                <span class="imperial">150 <small>psig</small></span>
+                <span class="metric">1551 <small>kPag</small></span>
+                <span class="imperial">225 <small>psig</small></span>
               </span>
             </div>
           </div>
@@ -2012,9 +2395,10 @@
         <article class="fs-mpc-model-card">
           <div class="fs-mpc-card-top">
             <span class="fs-mpc-family">MultiphaseCommander™</span>
+
             <div class="fs-mpc-model-line">
-              <h3>MC2270 (100128)</h3>
-              <span class="fs-mpc-hp-badge">100 HP</span>
+              <h3>MC2270 (150128)</h3>
+              <span class="fs-mpc-hp-badge">150 HP</span>
             </div>
           </div>
 
@@ -2022,6 +2406,7 @@
             <div class="fs-mpc-pressure-row">
               <label for="fsMpcPressure5">Inlet pressure</label>
             </div>
+
             <select id="fsMpcPressure5" class="fs-mpc-pressure-select" data-card="5">
               <option value="0">5 psi | 34 kPa</option>
               <option value="1">50 psi | 345 kPa</option>
@@ -2040,124 +2425,47 @@
             <div>
               <b>Max liquid rate</b>
               <span>
-                <span class="metric">8,000 <small>m³/d</small></span>
-                <span class="imperial">50,318 <small>bbl/d</small></span>
+                <span class="metric">6,600 <small>m³/d</small></span>
+                <span class="imperial">41,513 <small>bbl/d</small></span>
               </span>
             </div>
+
             <div>
               <b>Max ΔP</b>
               <span>
-                <span class="metric">689 <small>kPag</small></span>
-                <span class="imperial">100 <small>psig</small></span>
-              </span>
-            </div>
-          </div>
-        </article>
-
-        <article class="fs-mpc-model-card">
-          <div class="fs-mpc-card-top">
-            <span class="fs-mpc-family">MultiphaseCommander™</span>
-            <div class="fs-mpc-model-line">
-              <h3>MC2270 (150128)</h3>
-              <span class="fs-mpc-hp-badge">150 HP</span>
-            </div>
-          </div>
-
-          <div class="fs-mpc-pressure-control">
-            <div class="fs-mpc-pressure-row">
-              <label for="fsMpcPressure6">Inlet pressure</label>
-            </div>
-            <select id="fsMpcPressure6" class="fs-mpc-pressure-select" data-card="6">
-              <option value="0">5 psi | 34 kPa</option>
-              <option value="1">50 psi | 345 kPa</option>
-              <option value="2">100 psi | 690 kPa</option>
-              <option value="3">150 psi | 1034 kPa</option>
-              <option value="4" selected>200 psi | 1379 kPa</option>
-            </select>
-          </div>
-
-          <div class="fs-mpc-primary-reading">
-            <span class="fs-mpc-reading-label">Gas Capacity</span>
-            <div class="fs-mpc-reading-value" id="fsMpcGasReading6"></div>
-          </div>
-
-          <div class="fs-mpc-card-specs">
-            <div>
-              <b>Max liquid rate</b>
-              <span>
-                <span class="metric">7,500 <small>m³/d</small></span>
-                <span class="imperial">47,174 <small>bbl/d</small></span>
-              </span>
-            </div>
-            <div>
-              <b>Max ΔP</b>
-              <span>
-                <span class="metric">1896 <small>kPag</small></span>
-                <span class="imperial">275 <small>psig</small></span>
-              </span>
-            </div>
-          </div>
-        </article>
-
-        <article class="fs-mpc-model-card">
-          <div class="fs-mpc-card-top">
-            <span class="fs-mpc-family">MultiphaseCommander™</span>
-            <div class="fs-mpc-model-line">
-              <h3>MC2270-127</h3>
-              <span class="fs-mpc-hp-badge">150 HP</span>
-            </div>
-          </div>
-
-          <div class="fs-mpc-pressure-control">
-            <div class="fs-mpc-pressure-row">
-              <label for="fsMpcPressure7">Inlet pressure</label>
-            </div>
-            <select id="fsMpcPressure7" class="fs-mpc-pressure-select" data-card="7">
-              <option value="0">5 psi | 34 kPa</option>
-              <option value="1">50 psi | 345 kPa</option>
-              <option value="2">100 psi | 690 kPa</option>
-              <option value="3">150 psi | 1034 kPa</option>
-              <option value="4" selected>200 psi | 1379 kPa</option>
-            </select>
-          </div>
-
-          <div class="fs-mpc-primary-reading">
-            <span class="fs-mpc-reading-label">Gas Capacity</span>
-            <div class="fs-mpc-reading-value" id="fsMpcGasReading7"></div>
-          </div>
-
-          <div class="fs-mpc-card-specs">
-            <div>
-              <b>Max liquid rate</b>
-              <span>
-                <span class="metric">8,000 <small>m³/d</small></span>
-                <span class="imperial">50,300 <small>bbl/d</small></span>
-              </span>
-            </div>
-            <div>
-              <b>Max ΔP</b>
-              <span>
-                <span class="metric">1896 <small>kPag</small></span>
-                <span class="imperial">275 <small>psig</small></span>
+                <span class="metric">1551 <small>kPag</small></span>
+                <span class="imperial">225 <small>psig</small></span>
               </span>
             </div>
           </div>
         </article>
       </div>
 
+      <style>
+        .fs-mpc-sizing-notes ol {
+          list-style-type: decimal !important;
+          padding-left: 24px;
+        }
+
+        .fs-mpc-sizing-notes ol li::before {
+          content: none !important;
+        }
+      </style>
+
       <div class="fs-mpc-sizing-notes">
         <strong>Engineering notes</strong>
+
         <ol>
           <li>
-            Flow conditions calculated at 15℃ [59℉] inlet pressure and with various components operating at
+            Flow conditions are calculated at 15℃ [59℉] inlet pressure and with various components operating at
             100% efficiency. Flow rates may vary based on inlet pressures, gas content, and other factors.
-            Max gas rates will be reduced by amount of liquids in total fluid. Ask Fluidstream for max gas
-            flow rates based on specific liquid rates and other varying conditions.
           </li>
+
           <li>
-            Max gas rates and max pressure differentials can be increased by configuring additional unit(s)
-            in parallel or in series.
+            Max gas rates and max pressure differentials can be increased by configuring additional units in
+            parallel or in series.
           </li>
+
           <li>
             Higher horsepower units will yield much higher fluid flow rates at various pressure differentials.
             Please request pump curves to see flow rates at various pressure differentials.
@@ -2184,13 +2492,6 @@
             '<span class="metric">19.4 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">685 <small>MCF/day</small></span>'
           ],
           [
-            '<span class="metric">—</span><span class="imperial">—</span>',
-            '<span class="metric">—</span><span class="imperial">—</span>',
-            '<span class="metric">—</span><span class="imperial">—</span>',
-            '<span class="metric">—</span><span class="imperial">—</span>',
-            '<span class="metric">—</span><span class="imperial">—</span>'
-          ],
-          [
             '<span class="metric">3.1 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">109 <small>MCF/day</small></span>',
             '<span class="metric">10.3 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">364 <small>MCF/day</small></span>',
             '<span class="metric">18.3 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">646 <small>MCF/day</small></span>',
@@ -2205,25 +2506,18 @@
             '<span class="metric">61.5 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">2,172 <small>MCF/day</small></span>'
           ],
           [
-            '<span class="metric">10.7 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">378 <small>MCF/day</small></span>',
-            '<span class="metric">35.3 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">1,247 <small>MCF/day</small></span>',
-            '<span class="metric">62.5 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">2,207 <small>MCF/day</small></span>',
-            '<span class="metric">89.7 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">3,168 <small>MCF/day</small></span>',
-            '<span class="metric">117 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">4,132 <small>MCF/day</small></span>'
+            '<span class="metric">8.9 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">314 <small>MCF/day</small></span>',
+            '<span class="metric">29.1 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">1,028 <small>MCF/day</small></span>',
+            '<span class="metric">51.5 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">1,819 <small>MCF/day</small></span>',
+            '<span class="metric">74 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">2,613 <small>MCF/day</small></span>',
+            '<span class="metric">96.4 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">3,404 <small>MCF/day</small></span>'
           ],
           [
-            '<span class="metric">10.1 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">357 <small>MCF/day</small></span>',
-            '<span class="metric">33.1 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">1,169 <small>MCF/day</small></span>',
-            '<span class="metric">58.8 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">2,076 <small>MCF/day</small></span>',
-            '<span class="metric">84.4 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">2,981 <small>MCF/day</small></span>',
-            '<span class="metric">110.0 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">3,885 <small>MCF/day</small></span>'
-          ],
-          [
-            '<span class="metric">10.3 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">364 <small>MCF/day</small></span>',
-            '<span class="metric">33.9 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">1,197 <small>MCF/day</small></span>',
-            '<span class="metric">60.1 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">2,122 <small>MCF/day</small></span>',
-            '<span class="metric">86.3 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">3,048 <small>MCF/day</small></span>',
-            '<span class="metric">112.5 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">3,973 <small>MCF/day</small></span>'
+            '<span class="metric">8.9 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">314 <small>MCF/day</small></span>',
+            '<span class="metric">29.1 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">1,028 <small>MCF/day</small></span>',
+            '<span class="metric">51.5 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">1,819 <small>MCF/day</small></span>',
+            '<span class="metric">74 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">2,613 <small>MCF/day</small></span>',
+            '<span class="metric">96.4 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">3,404 <small>MCF/day</small></span>'
           ]
         ];
 
@@ -2234,11 +2528,12 @@
             return;
           }
 
-          element.innerHTML = gasData[index][pressureIndex] || '<span class="metric">—</span><span class="imperial">—</span>';
+          element.innerHTML = gasData[index][pressureIndex] || '<span class="metric">N/A</span><span class="imperial">N/A</span>';
         }
 
         document.querySelectorAll('.fs-mpc-pressure-select').forEach(function (select) {
           const cardIndex = Number(select.dataset.card);
+
           select.value = '4';
           updateMpcCard(cardIndex, Number(select.value));
 

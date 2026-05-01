@@ -4,15 +4,18 @@
 <head>
     @php
         $siteName = 'Fluidstream';
-        $currentPath = request()->path();
-        $currentPath = $currentPath === '/' ? '/' : trim($currentPath, '/');
+
+        $rawPath = request()->path();
+        $currentPath = $rawPath === '/' ? '/' : trim($rawPath, '/');
 
         /*
         |--------------------------------------------------------------------------
         | Automatic Page SEO Map
         |--------------------------------------------------------------------------
-        | Add or edit page SEO data here only.
-        | No need to add @section('title') or meta sections inside every page.
+        | Add or update page SEO here.
+        | Every listed page automatically gets:
+        | title, description, keywords, canonical, Open Graph, Twitter Card,
+        | WebPage or Article schema, and breadcrumb schema.
         */
 
         $seoPages = [
@@ -21,6 +24,20 @@
                 'description' => 'Fluidstream provides multiphase compression systems for vapor recovery, casing gas compression, methane emissions reduction, production recovery, and simplified field infrastructure.',
                 'keywords' => 'Fluidstream, multiphase compression, vapor recovery, casing gas compression, methane emissions reduction, production optimization',
                 'type' => 'website',
+            ],
+
+            'about-us' => [
+                'title' => 'About Fluidstream',
+                'description' => 'Learn how Fluidstream helps upstream producers reduce emissions, improve production economics, and simplify field infrastructure with multiphase compression technology.',
+                'keywords' => 'about Fluidstream, Fluidstream Calgary, multiphase compression company, emissions reduction, production optimization',
+                'type' => 'webpage',
+            ],
+
+            'about' => [
+                'title' => 'About Fluidstream',
+                'description' => 'Learn how Fluidstream helps upstream producers reduce emissions, improve production economics, and simplify field infrastructure with multiphase compression technology.',
+                'keywords' => 'about Fluidstream, Fluidstream Calgary, multiphase compression company, emissions reduction, production optimization',
+                'type' => 'webpage',
             ],
 
             'multiphase-compression' => [
@@ -114,45 +131,183 @@
                 'type' => 'webpage',
             ],
 
+            /*
+            |--------------------------------------------------------------------------
+            | Insights Articles, Current URLs
+            |--------------------------------------------------------------------------
+            */
+
             'insights/fluidstream-vapor-recovery-fluidstream-style' => [
-                'title' => 'Vapor Recovery, Fluidstream Style',
-                'description' => 'A technical perspective on how Fluidstream approaches vapor recovery using a field-ready, multiphase-aware operating philosophy.',
-                'keywords' => 'vapor recovery, Fluidstream vapor recovery, wet gas VRU, VaporCommander',
+                'title' => 'Vapor Recovery Units for Oil & Gas',
+                'description' => 'Learn how Fluidstream vapor recovery units improve wet-gas reliability, reduce emissions, and support field-ready VRU performance.',
+                'keywords' => 'vapor recovery unit, VRU oil gas, wet gas vapor recovery, VaporCommander',
                 'type' => 'article',
             ],
 
             'insights/fluidstream-casing-gas-compression-long-form' => [
-                'title' => 'Casing Gas Compression Long Form',
-                'description' => 'Why casing gas recovery often needs a more tolerant compression approach when streams are unstable, wet, or difficult for gas-only compressors.',
-                'keywords' => 'casing gas compression, casing gas recovery, wet casing gas, CompressionCommander',
+                'title' => 'Casing Gas Compression for Well Optimization',
+                'description' => 'See how casing gas compression reduces backpressure, supports oil uplift, and improves well performance in wet or unstable field conditions.',
+                'keywords' => 'casing gas compression, casing gas compressor, casing gas recovery, well optimization',
                 'type' => 'article',
             ],
 
             'insights/fluidstream-multiphase-vs-conventional-long-form' => [
-                'title' => 'Multiphase Compression vs. Conventional Compression',
-                'description' => 'A comparison of separation-first conventional compression and multiphase compression designed around real mixed production streams.',
-                'keywords' => 'multiphase compression vs conventional compression, separation first compression, mixed stream compression',
+                'title' => 'Multiphase Compression vs Conventional Compression',
+                'description' => 'Compare multiphase compression with conventional compression and learn why mixed-stream handling matters in real oil and gas field conditions.',
+                'keywords' => 'multiphase compression vs conventional compression, mixed stream compression, separation first compression',
                 'type' => 'article',
             ],
 
             'insights/why-conventional-vrus-fail-wet-gas' => [
-                'title' => 'Why Conventional VRUs Fail Wet Gas',
-                'description' => 'Learn why conventional vapor recovery units struggle with wet gas, liquid carryover, unstable flow, and real field vapor conditions.',
-                'keywords' => 'why conventional VRUs fail, wet gas VRU, liquid carryover, vapor recovery unit failure',
+                'title' => 'Why Conventional VRUs Fail in Wet Gas Applications',
+                'description' => 'Learn why conventional VRUs struggle with wet gas, liquid carryover, unstable flow, and real vapor recovery field conditions.',
+                'keywords' => 'conventional VRU failure wet gas, wet gas vapor recovery, VRU failure, vapor recovery unit failure',
                 'type' => 'article',
             ],
 
             'insights/production-optimization-multiphase-compression' => [
                 'title' => 'Production Optimization with Multiphase Compression',
-                'description' => 'How operators can use multiphase compression to improve production recovery, reduce backpressure, and lower site complexity.',
+                'description' => 'Learn how multiphase compression can reduce backpressure, restore production, and simplify field infrastructure for production optimization.',
                 'keywords' => 'production optimization, multiphase compression, production recovery, backpressure reduction',
                 'type' => 'article',
             ],
 
             'insights/multiphase-compression-liquid-loaded-gas-wells' => [
                 'title' => 'Multiphase Compression for Liquid-Loaded Gas Wells',
-                'description' => 'A field-focused discussion on liquid-loaded gas wells and why multiphase compression can help restore production without added separation complexity.',
-                'keywords' => 'liquid loaded gas wells, multiphase compression, gas well recovery, production restoration',
+                'description' => 'See how multiphase compression supports liquid-loaded gas wells, production recovery, and field performance without added separation complexity.',
+                'keywords' => 'multiphase compression liquid loaded gas wells, liquid loaded gas well recovery, gas well recovery',
+                'type' => 'article',
+            ],
+
+            'insights/fluidstream-vru-vs-flaring-complete' => [
+                'title' => 'Vapor Recovery Unit vs Flaring',
+                'description' => 'Compare vapor recovery units and flaring to understand emissions reduction, gas capture value, and VRU economics in oil and gas operations.',
+                'keywords' => 'vapor recovery unit vs flaring, VRU vs flare, vapor recovery economics, gas capture',
+                'type' => 'article',
+            ],
+
+            'insights/fluidstream-methane-reduction-story-white-sections' => [
+                'title' => 'Methane Emissions Reduction Solutions for Oil & Gas',
+                'description' => 'Explore methane emissions reduction solutions for oil and gas using vapor recovery, gas capture, and field-ready compression technology.',
+                'keywords' => 'methane emissions reduction oil gas, methane reduction vapor recovery, gas capture, emissions reduction',
+                'type' => 'article',
+            ],
+
+            'insights/how-to-select-right-compression-applications-final-fixed' => [
+                'title' => 'How to Select a Vapor Recovery Unit for Wet Gas',
+                'description' => 'Learn how to select a vapor recovery unit for wet gas applications by evaluating liquids, turndown, reliability, and lifecycle economics.',
+                'keywords' => 'how to select vapor recovery unit, VRU selection wet gas, wet gas VRU, vapor recovery selection',
+                'type' => 'article',
+            ],
+
+            'insights/when-is-casing-gas-compressioncommander' => [
+                'title' => 'When Is Casing Gas Compression Economically Viable?',
+                'description' => 'Review casing gas compression economics, ROI drivers, screening criteria, and when compression can improve oil production value.',
+                'keywords' => 'casing gas compression economics, casing gas compression ROI, casing gas compressor economics',
+                'type' => 'article',
+            ],
+
+            'insights/why-conventional-compression-fails-wet-unstable-wells' => [
+                'title' => 'Why Conventional Casing Gas Compressors Fail in Wet Wells',
+                'description' => 'Learn why conventional casing gas compressors fail in wet or unstable wells and how liquid-prone conditions affect reliability.',
+                'keywords' => 'casing gas compressor failure wet gas, conventional compression wet wells, unstable wells compression',
+                'type' => 'article',
+            ],
+
+            'insights/how-casing-gas-compression-increases-oil-production' => [
+                'title' => 'How Casing Gas Compression Increases Oil Production',
+                'description' => 'See how casing gas compression can lower casing pressure, improve drawdown, support oil uplift, and improve well performance.',
+                'keywords' => 'casing gas compression oil production, casing pressure oil uplift, casing gas compression increase oil production',
+                'type' => 'article',
+            ],
+
+            'insights/how-multiphase-compression-supports-production-recovery' => [
+                'title' => 'How Multiphase Compression Supports Production Recovery',
+                'description' => 'Learn how multiphase compression supports loaded gas wells, production recovery, flow stability, and mixed-stream field performance.',
+                'keywords' => 'multiphase compression loaded gas wells, liquid loaded gas well recovery, production recovery compression',
+                'type' => 'article',
+            ],
+
+            /*
+            |--------------------------------------------------------------------------
+            | Recommended Clean Future Slugs
+            |--------------------------------------------------------------------------
+            | Keep these here so SEO is already correct if you create these cleaner URLs.
+            */
+
+            'insights/vapor-recovery-units-oil-gas' => [
+                'title' => 'Vapor Recovery Units for Oil & Gas',
+                'description' => 'Learn how Fluidstream vapor recovery units improve wet-gas reliability, reduce emissions, and support field-ready VRU performance.',
+                'keywords' => 'vapor recovery unit, VRU oil gas, wet gas vapor recovery, VaporCommander',
+                'type' => 'article',
+            ],
+
+            'insights/casing-gas-compression-well-optimization' => [
+                'title' => 'Casing Gas Compression for Well Optimization',
+                'description' => 'See how casing gas compression reduces backpressure, supports oil uplift, and improves well performance in wet or unstable field conditions.',
+                'keywords' => 'casing gas compression, casing gas compressor, casing gas recovery, well optimization',
+                'type' => 'article',
+            ],
+
+            'insights/multiphase-vs-conventional-compression' => [
+                'title' => 'Multiphase Compression vs Conventional Compression',
+                'description' => 'Compare multiphase compression with conventional compression and learn why mixed-stream handling matters in real oil and gas field conditions.',
+                'keywords' => 'multiphase compression vs conventional compression, mixed stream compression, separation first compression',
+                'type' => 'article',
+            ],
+
+            'insights/vapor-recovery-vs-flaring' => [
+                'title' => 'Vapor Recovery Unit vs Flaring',
+                'description' => 'Compare vapor recovery units and flaring to understand emissions reduction, gas capture value, and VRU economics in oil and gas operations.',
+                'keywords' => 'vapor recovery unit vs flaring, VRU vs flare, vapor recovery economics, gas capture',
+                'type' => 'article',
+            ],
+
+            'insights/methane-emissions-reduction-oil-gas' => [
+                'title' => 'Methane Emissions Reduction Solutions for Oil & Gas',
+                'description' => 'Explore methane emissions reduction solutions for oil and gas using vapor recovery, gas capture, and field-ready compression technology.',
+                'keywords' => 'methane emissions reduction oil gas, methane reduction vapor recovery, gas capture, emissions reduction',
+                'type' => 'article',
+            ],
+
+            'insights/how-to-select-vapor-recovery-unit-wet-gas' => [
+                'title' => 'How to Select a Vapor Recovery Unit for Wet Gas',
+                'description' => 'Learn how to select a vapor recovery unit for wet gas applications by evaluating liquids, turndown, reliability, and lifecycle economics.',
+                'keywords' => 'how to select vapor recovery unit, VRU selection wet gas, wet gas VRU, vapor recovery selection',
+                'type' => 'article',
+            ],
+
+            'insights/casing-gas-compression-economics' => [
+                'title' => 'When Is Casing Gas Compression Economically Viable?',
+                'description' => 'Review casing gas compression economics, ROI drivers, screening criteria, and when compression can improve oil production value.',
+                'keywords' => 'casing gas compression economics, casing gas compression ROI, casing gas compressor economics',
+                'type' => 'article',
+            ],
+
+            /*
+            |--------------------------------------------------------------------------
+            | Extra Insight Stub Pages
+            |--------------------------------------------------------------------------
+            */
+
+            'insights/rethinking-production-systems' => [
+                'title' => 'Rethinking Production Systems',
+                'description' => 'Explore how simplified production systems can reduce complexity, improve recovery, and support emissions reduction in oil and gas operations.',
+                'keywords' => 'production systems, simplified infrastructure, oil and gas production optimization, emissions reduction',
+                'type' => 'article',
+            ],
+
+            'insights/lower-cost-broader-deployment' => [
+                'title' => 'Lower-Cost Broader Deployment',
+                'description' => 'Learn how lower-complexity compression infrastructure can improve the commercial fit of emissions reduction and production recovery projects.',
+                'keywords' => 'lower cost compression deployment, production recovery economics, emissions reduction economics',
+                'type' => 'article',
+            ],
+
+            'insights/emissions-reduction' => [
+                'title' => 'Emissions Reduction with Multiphase Compression',
+                'description' => 'Learn how multiphase compression can support methane emissions reduction, vapor recovery, and better field gas capture outcomes.',
+                'keywords' => 'emissions reduction, methane emissions reduction, vapor recovery, multiphase compression',
                 'type' => 'article',
             ],
 
@@ -189,16 +344,16 @@
 
         /*
         |--------------------------------------------------------------------------
-        | Fallback Auto Generator
+        | Fallback SEO Generator
         |--------------------------------------------------------------------------
-        | If a page is not listed above, this will create a usable SEO title,
-        | description, and keywords from the URL automatically.
+        | If a page is not listed above, it still gets usable SEO.
         */
 
         $fallbackTitle = $currentPath === '/'
             ? 'Multiphase Compression Technology'
             : collect(explode('/', $currentPath))
-                ->map(fn ($part) => ucwords(str_replace(['-', '_'], ' ', $part)))
+                ->filter()
+                ->map(fn($part) => ucwords(str_replace(['-', '_'], ' ', $part)))
                 ->implode(' - ');
 
         $defaultSeo = [
@@ -211,19 +366,96 @@
 
         $seo = array_merge($defaultSeo, $seoPages[$currentPath] ?? []);
 
-        $pageTitle = $seo['title'];
+        /*
+        |--------------------------------------------------------------------------
+        | Optional Per-Page Overrides
+        |--------------------------------------------------------------------------
+        | If a controller passes $seoTitle, $seoDescription, $seoKeywords, or $seoImage,
+        | those values override this map.
+        */
+
+        if (isset($seoTitle) && $seoTitle) {
+            $seo['title'] = $seoTitle;
+        }
+
+        if (isset($seoDescription) && $seoDescription) {
+            $seo['description'] = $seoDescription;
+        }
+
+        if (isset($seoKeywords) && $seoKeywords) {
+            $seo['keywords'] = $seoKeywords;
+        }
+
+        if (isset($seoType) && $seoType) {
+            $seo['type'] = $seoType;
+        }
+
+        if (isset($seoRobots) && $seoRobots) {
+            $seo['robots'] = $seoRobots;
+        }
+
+        if (isset($seoImage) && $seoImage) {
+            $seo['og_image'] = $seoImage;
+        }
+
+        $pageTitle = trim($seo['title']);
         $metaTitle = str_contains($pageTitle, $siteName) ? $pageTitle : $pageTitle . ' | ' . $siteName;
-        $metaDescription = $seo['description'];
-        $metaKeywords = $seo['keywords'];
+        $metaDescription = trim($seo['description']);
+        $metaKeywords = trim($seo['keywords']);
         $robotsMeta = $seo['robots'] ?? 'index, follow';
 
         $canonicalUrl = $currentPath === '/'
             ? url('/')
             : url('/' . $currentPath);
 
-        $ogType = $seo['type'] === 'article' ? 'article' : 'website';
-
+        $ogType = ($seo['type'] ?? 'webpage') === 'article' ? 'article' : 'website';
         $ogImage = $seo['og_image'] ?? asset('img/og/fluidstream-og.jpg');
+
+        /*
+        |--------------------------------------------------------------------------
+        | Breadcrumb Schema
+        |--------------------------------------------------------------------------
+        */
+
+        $breadcrumbItems = [
+            [
+                '@type' => 'ListItem',
+                'position' => 1,
+                'name' => 'Home',
+                'item' => url('/'),
+            ],
+        ];
+
+        if ($currentPath !== '/') {
+            $pathParts = collect(explode('/', $currentPath))->filter()->values();
+            $runningPath = '';
+
+            foreach ($pathParts as $index => $part) {
+                $runningPath .= '/' . $part;
+                $isLast = $index === $pathParts->count() - 1;
+
+                $breadcrumbItems[] = [
+                    '@type' => 'ListItem',
+                    'position' => $index + 2,
+                    'name' => $isLast
+                        ? $pageTitle
+                        : ucwords(str_replace(['-', '_'], ' ', $part)),
+                    'item' => url($runningPath),
+                ];
+            }
+        }
+
+        $breadcrumbSchema = [
+            '@context' => 'https://schema.org',
+            '@type' => 'BreadcrumbList',
+            'itemListElement' => $breadcrumbItems,
+        ];
+
+        /*
+        |--------------------------------------------------------------------------
+        | Global Schema
+        |--------------------------------------------------------------------------
+        */
 
         $organizationSchema = [
             '@context' => 'https://schema.org',
@@ -247,6 +479,12 @@
             'name' => 'Fluidstream',
             'url' => url('/'),
         ];
+
+        /*
+        |--------------------------------------------------------------------------
+        | Auto Page Schema
+        |--------------------------------------------------------------------------
+        */
 
         $pageSchema = [
             '@context' => 'https://schema.org',
@@ -275,6 +513,36 @@
             $pageSchema['mainEntityOfPage'] = [
                 '@type' => 'WebPage',
                 '@id' => $canonicalUrl,
+            ];
+        }
+
+        /*
+        |--------------------------------------------------------------------------
+        | Optional FAQ Schema
+        |--------------------------------------------------------------------------
+        | To use this from a page, pass $seoFaqs from controller or define it before rendering.
+        | Format:
+        | $seoFaqs = [
+        |   ['question' => 'Question?', 'answer' => 'Answer text.'],
+        | ];
+        */
+
+        $faqSchema = null;
+
+        if (isset($seoFaqs) && is_array($seoFaqs) && count($seoFaqs)) {
+            $faqSchema = [
+                '@context' => 'https://schema.org',
+                '@type' => 'FAQPage',
+                'mainEntity' => collect($seoFaqs)->map(function ($faq) {
+                    return [
+                        '@type' => 'Question',
+                        'name' => $faq['question'] ?? '',
+                        'acceptedAnswer' => [
+                            '@type' => 'Answer',
+                            'text' => $faq['answer'] ?? '',
+                        ],
+                    ];
+                })->values()->toArray(),
             ];
         }
     @endphp
@@ -313,25 +581,41 @@
     {{-- CSS/JS --}}
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-    {{-- Global Schema --}}
+    {{-- Organization Schema --}}
     <script type="application/ld+json">
         {!! json_encode($organizationSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
     </script>
 
+    {{-- Website Schema --}}
     <script type="application/ld+json">
         {!! json_encode($websiteSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
     </script>
 
-    {{-- Auto Page Schema --}}
+    {{-- Breadcrumb Schema --}}
+    <script type="application/ld+json">
+        {!! json_encode($breadcrumbSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+    </script>
+
+    {{-- Auto Page or Article Schema --}}
     <script type="application/ld+json">
         {!! json_encode($pageSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
     </script>
 
-    {{-- Optional extra schema if you still want to add page-specific schema later --}}
+    {{-- Optional FAQ Schema --}}
+    @if ($faqSchema)
+        <script type="application/ld+json">
+                                {!! json_encode($faqSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+                            </script>
+    @endif
+
+    {{-- Extra page-specific schema if needed --}}
     @yield('schema')
 
     {{-- Extra page-specific head code --}}
     @stack('head')
+
+    {{-- Important: page-specific styles from @push('style') --}}
+    @stack('style')
 
     <style>
         body {
@@ -347,13 +631,18 @@
             text-transform: uppercase;
             color: #0018dc;
         }
+
+        h1 {
+            font-weight: 700 !important;
+            font-size: 54px !important;
+        }
     </style>
 </head>
 
 <body class="bg-white text-slate-900 antialiased">
     @include('partical.header')
 
-    <div class="pt-[96px]">
+    <div>
         <x-breadcrumb />
 
         <main>

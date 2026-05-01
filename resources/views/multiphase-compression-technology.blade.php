@@ -25,8 +25,45 @@
     }
 
     header.hero {
-      background: #1029ea;
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+      background: #0018dc;
       color: #fff;
+    }
+
+    /* Flipped hero background image */
+    header.hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(2, 8, 23, .38) url(/img/hero/facility-vru.JPG);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transform: scaleX(-1) scale(1.03);
+      z-index: -2;
+    }
+
+    /* Blue overlay stays normal */
+    header.hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: #0206177a;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    header.hero .wrap {
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 760px) {
+      header.hero::after {
+        background: linear-gradient(90deg, rgb(0 24 220 / 39%) 0%, rgb(0 24 220 / 44%) 45%, rgb(0 24 220 / 42%) 100%), radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.16), transparent 28%), radial-gradient(circle at 80% 30%, rgba(21, 209, 255, 0.12), transparent 26%);
+      }
     }
 
     .eyebrow {
@@ -35,13 +72,14 @@
       letter-spacing: .11em;
       text-transform: uppercase;
       font-weight: 700;
-      color: #bfeeff;
+      color: #ffffff;
       margin-bottom: 14px;
     }
 
     h1 {
       margin: 0 0 16px;
-      font-size: 50px;
+      font-size: 54px;
+      font-weight: 700;
       line-height: 1.01;
       max-width: 1040px;
       letter-spacing: -.04em;
@@ -148,8 +186,9 @@
 
     .hero-proof-panel {
       position: sticky;
+      backdrop-filter: blur(5px);
       top: 120px;
-      background: #ffffff;
+      background: #ffffff24;
       border: 1px solid rgba(255, 255, 255, .18);
       border-radius: 7px;
       padding: 26px;
@@ -163,9 +202,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background:
-        radial-gradient(circle at 100% 0%, rgba(21, 209, 255, .10), transparent 34%),
-        linear-gradient(180deg, #ffffff 0%, #f9fbff 100%);
+      background: #0018dc00 !important;
       z-index: 0;
       pointer-events: none;
     }
@@ -180,7 +217,7 @@
       letter-spacing: .11em;
       text-transform: uppercase;
       font-weight: 700;
-      color: #1029ea;
+      color: #ffffff;
       margin-bottom: 10px;
     }
 
@@ -188,13 +225,13 @@
       font-size: 21px;
       line-height: 1.22;
       font-weight: 800;
-      color: #262525;
+      color: #ffffff;
       max-width: 600px;
     }
 
     .hero-proof-author {
       margin-top: 14px;
-      color: #262525;
+      color: #ffffff;
       font-weight: 700;
       font-size: 15px;
       line-height: 1.5;
@@ -216,8 +253,8 @@
     .hero-proof-stat {
       padding: 16px 18px;
       border-radius: 7px;
-      background: #ffffff;
-      border: 1px solid rgba(25, 25, 25, .20);
+      background: #ffffff05;
+      border: 1px solid #ffffff36;
       box-shadow: 0 10px 28px rgba(13, 32, 84, .06);
       transition: .25s ease;
     }
@@ -230,7 +267,7 @@
 
     .hero-proof-stat strong {
       display: block;
-      color: #262525;
+      color: #ffffff;
       font-size: 20px;
       line-height: 1.05;
       margin-bottom: 6px;
@@ -238,7 +275,7 @@
 
     .hero-proof-stat span {
       display: block;
-      color: #1e1e1f;
+      color: #ffffff;
       font-size: 14px;
       line-height: 1.45;
     }
@@ -490,10 +527,16 @@
     .failure-card,
     .fit-card,
     .proof-stat {
+      display: grid;
+      /* height: 385px; */
       background: #fff;
       border: 1px solid var(--line);
       border-radius: 4px;
       padding: 14px;
+    }
+
+    .app-card {
+      height: 395px;
     }
 
     .card .num,
@@ -522,7 +565,7 @@
     .fit-card h3,
     .proof-stat h3 {
       margin: 0 0 10px;
-      font-size: 24px;
+      font-size: 22px;
       line-height: 1.14;
       color: #232325;
     }
@@ -845,6 +888,17 @@
         font-size: 16px;
       }
     }
+
+
+
+    #applications {
+      scroll-margin-top: 90px;
+    }
+
+    /* keeps the top border visible after anchor jump */
+    #applications.band {
+      border-top: 1px solid #dbe7f7;
+    }
   </style>
 
   <header class="hero">
@@ -877,7 +931,7 @@
 
           <div class="btn-row">
             <a class="btn btn-primary" href="/case-studies">See Field Proof</a>
-            <a class="btn btn-1 btn-secondary" href="#applications">View applications</a>
+            <a class="btn btn-1 btn-secondary" href="#applications">View Applications</a>
           </div>
         </div>
 
@@ -890,7 +944,7 @@
           </div>
 
           <div class="hero-proof-author">
-            Production Engineer, Western Canadian Oil &amp; Gas Producer
+            Production Engineer, International Oil &amp; Gas Producer
           </div>
 
           <div class="hero-proof-divider"></div>
@@ -902,8 +956,8 @@
             </div>
 
             <div class="hero-proof-stat">
-              <strong>10e3 m³/d</strong>
-              <span>Gas restored from two liquid-loaded wells</span>
+              <strong>10e³ m³/d Gas + 5 m³/d Condensate</strong>
+              <span>Restored production from shut-in wells</span>
             </div>
 
             <div class="hero-proof-stat">
@@ -941,10 +995,11 @@
 
         <div class="proof-card interactive-card swipe-left">
           <div class="tag">Multiphase production</div>
-          <h3>Production restored from near-zero to meaningful revenue generation.</h3>
+          <h3>Production restored from near-zero to meaningful revenue.</h3>
           <p>
-            The most commercially powerful multiphase proof point on the site is the Alberta case where Fluidstream
-            helped revive two liquid-loaded wells without adding separation equipment or extra site infrastructure.
+            The most commercially powerful multiphase proof point on the site is the Alberta case where Fluidstream helped
+            revive two liquid-loaded wells without adding separation equipment or extra site infrastructure, showcasing
+            unmatched efficiency.
           </p>
           <span class="metric">C$1.5M+/year</span>
           <span class="submetric">10e3 m³/d gas restored • 5 m³/d condensate • no added separation</span>
@@ -963,11 +1018,11 @@
         </div>
       </div>
 
-      <div class="proof-quote">
+      {{-- <div class="proof-quote">
         “We went from zero production to over $1.5 million per year in incremental revenue, without adding any separation
         equipment or infrastructure.”
-        <small>Production Engineer, Western Canadian Oil &amp; Gas Producer</small>
-      </div>
+        <small>Production Engineer, International Oil &amp; Gas Producer</small>
+      </div> --}}
     </div>
   </section>
 
@@ -1337,6 +1392,63 @@
       </div>
     </div>
   </section>
+  <style>
+    .fit-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px;
+      margin-top: 42px;
+      align-items: stretch;
+    }
+
+    .fit-card {
+      height: 100%;
+      min-height: 230px;
+      padding: 28px 32px;
+      border: 1px solid #cfe0ff;
+      border-radius: 6px;
+      background: #fff;
+
+      display: flex;
+      flex-direction: column;
+    }
+
+    .fit-label {
+      margin-bottom: 14px;
+      font-size: 14px;
+      line-height: 1;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #0018dc;
+    }
+
+    .fit-card h3 {
+      margin: 0 0 18px;
+      min-height: 50px;
+      /* font-size: 25px; */
+      line-height: 1.12;
+      font-weight: 400;
+      color: #202124;
+    }
+
+    /* .fit-card p {
+                                                                                                                          margin: 0;
+                                                                                                                          font-size: 22px;
+                                                                                                                          line-height: 1.42;
+                                                                                                                          color: #53647c;
+                                                                                                                        } */
+
+    @media (max-width: 991px) {
+      .fit-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .fit-card h3 {
+        min-height: auto;
+      }
+    }
+  </style>
 
   <section id="applications" class="band">
     <div class="wrap py-12">
@@ -1357,7 +1469,7 @@
         <div class="app-card interactive-card swipe-left">
           <div class="app-tag">Production recovery</div>
           <h3>Liquid-loaded and declining wells</h3>
-          <p>Restore flow, extend producing life, and improve the economics of marginal wells.</p>
+          <p>Restore,extend producing life and improve the economics of marginal wells.</p>
           <p style="margin-top:12px;">
             <strong>Why conventional fails:</strong> Gas-only compression loses stability when liquid fallback and
             intermittent loading disrupt normal suction conditions and turn compression into a recurring intervention
@@ -1467,7 +1579,7 @@
         <div class="app-card interactive-card swipe-right">
           <div class="app-tag">Restartability</div>
           <h3>Shut-in and intermittent operations</h3>
-          <p>Shorten restart time, improve uptime, and reduce repeat cycling after shutdowns.</p>
+          <p>Shorten restart time and reduce repeat cycling after shutdowns.</p>
           <p style="margin-top:12px;">
             <strong>Why conventional fails:</strong> Liquid accumulation after shut-ins often requires unloading or
             repeated cycling before stable compression returns, extending downtime and frustrating operators.
@@ -1631,7 +1743,7 @@
 
           <div class="btn-row">
             <a class="btn btn-primary" href="/contact">Request Technical Review</a>
-            <a class="btn btn-secondary-1" href="/contact">Contact Engineering</a>
+            <a class="btn btn-secondary-1" href="/contact">Contact Us</a>
           </div>
         </div>
       </div>

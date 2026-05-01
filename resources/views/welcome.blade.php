@@ -644,18 +644,18 @@
 
 
         /* .solutions,
-                                                                                                                                                                                                                                                                                                                                        .leadership,
-                                                                                                                                                                                                                                                                                                                                        .tech,
-                                                                                                                                                                                                                                                                                                                                        .caseband,
-                                                                                                                                                                                                                                                                                                                                        .cta {
-                                                                                                                                                                                                                                                                                                                                            padding: 72px 0
-                                                                                                                                                                                                                                                                                                                                        } */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        .leadership,
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        .tech,
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        .caseband,
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        .cta {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                            padding: 72px 0
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        } */
 
         .section-head {
             /* display: flex;
-                                                                                                                                                                                justify-content: space-between;
-                                                                                                                                                                                align-items: flex-start;
-                                                                                                                                                                                gap: 28px; */
+                                                                                                                                                                                                                                                                                                justify-content: space-between;
+                                                                                                                                                                                                                                                                                                align-items: flex-start;
+                                                                                                                                                                                                                                                                                                gap: 28px; */
             margin-bottom: 28px;
         }
 
@@ -766,7 +766,7 @@
 
         .card .link {
             position: absolute;
-            left: 24px;
+            right: 15px;
             bottom: 22px;
             display: inline-flex;
             align-items: center;
@@ -1128,6 +1128,7 @@
         .proof-card:hover .proof-tag,
         .proof-card:hover .proof-metric,
         .proof-card:hover .proof-detail,
+        .proof-view-link,
         .proof-card:hover * {
             color: #ffffff !important;
         }
@@ -1478,14 +1479,14 @@
         }
 
         /* .kicker {
-                                                                                                                                                                                                                display: block;
-                                                                                                                                                                                                                margin: 0 0 14px;
-                                                                                                                                                                                                                font-size: 13px !important;
-                                                                                                                                                                                                                font-weight: 700 !important;
-                                                                                                                                                                                                                letter-spacing: .16em;
-                                                                                                                                                                                                                text-transform: uppercase;
-                                                                                                                                                                                                                color: var(--accent-dark) !important;
-                                                                                                                                                                                                            } */
+                                                                                                                                                                                                                                                                                                                                display: block;
+                                                                                                                                                                                                                                                                                                                                margin: 0 0 14px;
+                                                                                                                                                                                                                                                                                                                                font-size: 13px !important;
+                                                                                                                                                                                                                                                                                                                                font-weight: 700 !important;
+                                                                                                                                                                                                                                                                                                                                letter-spacing: .16em;
+                                                                                                                                                                                                                                                                                                                                text-transform: uppercase;
+                                                                                                                                                                                                                                                                                                                                color: var(--accent-dark) !important;
+                                                                                                                                                                                                                                                                                                                            } */
 
         .hero-dot.active {
             background: #38bdf8;
@@ -1825,8 +1826,8 @@
             border-radius: 7px;
             border: 1px solid rgba(255, 255, 255, .22);
             /* background:
-                                                    radial-gradient(circle at 88% 18%, rgba(21, 209, 255, .12), transparent 28%),
-                                                    linear-gradient(145deg, rgba(255, 255, 255, .13), rgba(255, 255, 255, .07)); */
+                                                                                                                                                                    radial-gradient(circle at 88% 18%, rgba(21, 209, 255, .12), transparent 28%),
+                                                                                                                                                                    linear-gradient(145deg, rgba(255, 255, 255, .13), rgba(255, 255, 255, .07)); */
             box-shadow: 0 26px 70px rgba(0, 0, 0, .25);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
@@ -1969,7 +1970,7 @@
                     </a>
 
                     <a href="{{ url('/contact') }}" class="fs-home-hero-btn fs-home-hero-btn-secondary">
-                        Contact Us
+                        Request Technical Review
                     </a>
                 </div>
 
@@ -1991,24 +1992,376 @@
                 </div>
             </div>
 
-            <div class="fs-home-proof-card">
-                <h2>Field-proven performance in real operating conditions.</h2>
+            <aside class="fs-home-proof-card fs-home-quote-card" aria-label="Cycling field proof quotes">
+                <div class="fs-home-quote-header">
+                    <div>
+                        <div class="fs-home-quote-kicker">Field-Proven Results</div>
+                        <h2 class="fs-home-quote-title">Three proof points from demanding applications.</h2>
+                    </div>
 
-                <blockquote>
-                    “Fluidstream’s MultiphaseCommander didn’t just improve performance—it transformed two non-producing
-                    wells into revenue-generating assets.”
-                </blockquote>
-
-                <cite>
-                    Production Engineer, Western Canadian oil and gas producer
-                </cite>
-
-                <div class="fs-home-proof-list">
-                    <div class="fs-home-proof-item">No added separation package required in the field application</div>
-                    <div class="fs-home-proof-item">Variable gas and liquid flow handled</div>
-                    <div class="fs-home-proof-item">Built for harsh Canadian winter operation</div>
+                    <div class="fs-home-quote-mark">“</div>
                 </div>
-            </div>
+
+                <div class="fs-home-quote-stage">
+                    <article class="fs-home-quote-slide">
+                        <span class="fs-home-quote-metric">Revenue Impact</span>
+                        <p class="fs-home-quote-text">
+                            “C$1.5M+ annual incremental revenue from restored production.”
+                        </p>
+                        <span class="fs-home-quote-source">
+                            — Alberta Production Recovery Operator
+                        </span>
+                    </article>
+
+                    <article class="fs-home-quote-slide">
+                        <span class="fs-home-quote-metric">Reliability</span>
+                        <p class="fs-home-quote-text">
+                            “100% uptime with no maintenance since installation.”
+                        </p>
+                        <span class="fs-home-quote-source">
+                            — Allied Energy II
+                        </span>
+                    </article>
+
+                    <article class="fs-home-quote-slide">
+                        <span class="fs-home-quote-metric">Mechanical Longevity</span>
+                        <p class="fs-home-quote-text">
+                            “35 months before first seal change.”
+                        </p>
+                        <span class="fs-home-quote-source">
+                            — Long-Term Vapor Recovery Customer
+                        </span>
+                    </article>
+                </div>
+
+                <div class="fs-home-quote-nav" aria-hidden="true">
+                    <span class="fs-home-quote-dot"></span>
+                    <span class="fs-home-quote-dot"></span>
+                    <span class="fs-home-quote-dot"></span>
+                </div>
+
+                <p class="fs-home-quote-note">
+                    <strong>Real operating proof</strong> across production recovery, vapor recovery, and long-run
+                    reliability applications.
+                </p>
+            </aside>
+            <style>
+                .fs-home-quote-card {
+                    position: relative;
+                    width: 100%;
+                    max-width: 580px;
+                    min-height: 500px;
+                    justify-self: end;
+                    padding: 34px 34px 32px;
+                    border-radius: 7px;
+                    border: 1px solid rgba(255, 255, 255, .22);
+                    box-shadow: 0 26px 70px rgba(0, 0, 0, .25);
+                    backdrop-filter: blur(16px);
+                    -webkit-backdrop-filter: blur(16px);
+                    overflow: hidden;
+                    isolation: isolate;
+                }
+
+                .fs-home-quote-card::before {
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    z-index: 0;
+                    pointer-events: none;
+                    background:
+                        linear-gradient(rgba(255, 255, 255, .045) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(255, 255, 255, .04) 1px, transparent 1px);
+                    background-size: 42px 42px;
+                    mask-image: linear-gradient(180deg, rgba(0, 0, 0, .62), transparent 78%);
+                }
+
+                .fs-home-quote-card>* {
+                    position: relative;
+                    z-index: 1;
+                }
+
+                .fs-home-quote-header {
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: space-between;
+                    gap: 18px;
+                    margin-bottom: 24px;
+                }
+
+                .fs-home-quote-kicker {
+                    color: #38bdf8;
+                    font-size: 13px;
+                    font-weight: 900;
+                    letter-spacing: .15em;
+                    text-transform: uppercase;
+                    margin-bottom: 10px;
+                }
+
+                .fs-home-quote-title {
+                    margin: 0;
+                    color: #ffffff;
+                    font-size: clamp(24px, 2.2vw, 34px);
+                    line-height: 1.12;
+                    letter-spacing: -.045em;
+                    font-weight: 900;
+                    max-width: 360px;
+                }
+
+                .fs-home-quote-mark {
+                    flex: 0 0 auto;
+                    width: 64px;
+                    height: 64px;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 7px;
+                    /* background: #0018dc; */
+                    color: #ffffff;
+                    font-size: 48px;
+                    line-height: 1;
+                    font-weight: 950;
+                    /* box-shadow: 0 18px 34px rgba(0, 24, 220, .28); */
+                }
+
+                .fs-home-quote-stage {
+                    position: relative;
+                    min-height: 260px;
+                    border-radius: 7px;
+                    border: 1px solid rgba(255, 255, 255, .18);
+                    background: rgba(255, 255, 255, .08);
+                    overflow: hidden;
+                }
+
+                .fs-home-quote-slide {
+                    position: absolute;
+                    inset: 0;
+                    display: grid;
+                    align-content: center;
+                    padding: 30px;
+                    opacity: 0;
+                    transform: translateX(22px);
+                    animation: fsHomeQuoteCycle 15s infinite;
+                }
+
+                .fs-home-quote-slide:nth-child(1) {
+                    animation-delay: 0s;
+                }
+
+                .fs-home-quote-slide:nth-child(2) {
+                    animation-delay: 5s;
+                }
+
+                .fs-home-quote-slide:nth-child(3) {
+                    animation-delay: 10s;
+                }
+
+                .fs-home-quote-metric {
+                    display: block;
+                    margin-bottom: 18px;
+                    color: #ffffff;
+                    font-size: clamp(22px, 2.2vw, 26px);
+                    line-height: .95;
+                    letter-spacing: -.06em;
+                    font-weight: 950;
+                }
+
+                .fs-home-quote-text {
+                    margin: 0;
+                    color: #ffffff;
+                    font-size: clamp(18px, 1.4vw, 26px);
+                    line-height: 1.42;
+                    letter-spacing: -.025em;
+                    font-weight: 850;
+                }
+
+                .fs-home-quote-source {
+                    display: block;
+                    margin-top: 22px;
+                    color: rgba(226, 232, 240, .88);
+                    font-size: 15px;
+                    line-height: 1.45;
+                    font-weight: 850;
+                }
+
+                .fs-home-quote-nav {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 12px;
+                    margin-top: 24px;
+                }
+
+                .fs-home-quote-dot {
+                    height: 4px;
+                    border-radius: 999px;
+                    background: rgba(255, 255, 255, .22);
+                    overflow: hidden;
+                }
+
+                .fs-home-quote-dot::before {
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    transform: translateX(-100%);
+                    background: linear-gradient(90deg, #15d1ff, #ffffff);
+                    animation: fsHomeDotCycle 15s infinite;
+                }
+
+                .fs-home-quote-dot:nth-child(1)::before {
+                    animation-delay: 0s;
+                }
+
+                .fs-home-quote-dot:nth-child(2)::before {
+                    animation-delay: 5s;
+                }
+
+                .fs-home-quote-dot:nth-child(3)::before {
+                    animation-delay: 10s;
+                }
+
+                .fs-home-quote-note {
+                    margin: 22px 0 0;
+                    color: rgba(226, 232, 240, .88);
+                    font-size: 16px;
+                    line-height: 1.6;
+                    font-weight: 750;
+                }
+
+                .fs-home-quote-note strong {
+                    color: #ffffff;
+                    font-weight: 950;
+                }
+
+                .fs-home-quote-card:hover .fs-home-quote-slide,
+                .fs-home-quote-card:hover .fs-home-quote-dot::before {
+                    animation-play-state: paused;
+                }
+
+                @keyframes fsHomeQuoteCycle {
+                    0% {
+                        opacity: 0;
+                        transform: translateX(22px);
+                    }
+
+                    6% {
+                        opacity: 1;
+                        transform: translateX(0);
+                    }
+
+                    28% {
+                        opacity: 1;
+                        transform: translateX(0);
+                    }
+
+                    34% {
+                        opacity: 0;
+                        transform: translateX(-22px);
+                    }
+
+                    100% {
+                        opacity: 0;
+                        transform: translateX(-22px);
+                    }
+                }
+
+                @keyframes fsHomeDotCycle {
+                    0% {
+                        transform: translateX(-100%);
+                    }
+
+                    6% {
+                        transform: translateX(-100%);
+                    }
+
+                    28% {
+                        transform: translateX(0);
+                    }
+
+                    34% {
+                        transform: translateX(100%);
+                    }
+
+                    100% {
+                        transform: translateX(100%);
+                    }
+                }
+
+                @media (prefers-reduced-motion: reduce) {
+
+                    .fs-home-quote-slide,
+                    .fs-home-quote-dot::before {
+                        animation: none;
+                    }
+
+                    .fs-home-quote-slide {
+                        position: relative;
+                        opacity: 1;
+                        transform: none;
+                    }
+
+                    .fs-home-quote-slide+.fs-home-quote-slide {
+                        display: none;
+                    }
+                }
+
+                @media (max-width: 1180px) {
+                    .fs-home-quote-card {
+                        justify-self: start;
+                        max-width: 760px;
+                    }
+                }
+
+                @media (max-width: 760px) {
+                    .fs-home-quote-card {
+                        min-height: 450px;
+                        padding: 26px 22px;
+                    }
+
+                    .fs-home-quote-header {
+                        margin-bottom: 18px;
+                    }
+
+                    .fs-home-quote-mark {
+                        width: 52px;
+                        height: 52px;
+                        font-size: 38px;
+                    }
+
+                    .fs-home-quote-stage {
+                        min-height: 250px;
+                    }
+
+                    .fs-home-quote-slide {
+                        padding: 24px;
+                    }
+
+                    .fs-home-quote-metric {
+                        font-size: 42px;
+                    }
+
+                    .fs-home-quote-text {
+                        font-size: 20px;
+                    }
+                }
+
+                @media (max-width: 520px) {
+                    .fs-home-quote-card {
+                        min-height: 480px;
+                    }
+
+                    .fs-home-quote-header {
+                        gap: 12px;
+                    }
+
+                    .fs-home-quote-title {
+                        font-size: 24px;
+                    }
+
+                    .fs-home-quote-stage {
+                        min-height: 280px;
+                    }
+                }
+            </style>
         </div>
     </section>
 
@@ -2017,57 +2370,183 @@
 
 
     <section class="section proof py-12">
+        <style>
+            .proof .proof-card {
+                position: relative;
+                padding-bottom: 82px;
+            }
+
+            .proof .proof-view-link {
+                position: absolute;
+                right: 18px;
+                bottom: 18px;
+                z-index: 5;
+
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                gap: 12px;
+
+                min-width: 136px;
+                min-height: 48px;
+                padding: 0 18px;
+
+                /* background: #ffffff; */
+                color: #0018dc !important;
+                /* border: 1px solid #e3e9f4; */
+                border-radius: 0;
+
+                font-size: 18px;
+                font-weight: 800;
+                line-height: 1;
+                text-decoration: none;
+
+                /* box-shadow: 0 12px 28px rgba(16, 42, 67, .08); */
+                transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease, background .25s ease;
+            }
+
+            .proof .proof-view-link span,
+            .proof .proof-view-link svg {
+                position: relative;
+                z-index: 2;
+            }
+
+            .proof .proof-view-link svg {
+                width: 24px;
+                height: 24px;
+                stroke: currentColor;
+                transition: transform .25s ease;
+            }
+
+            .proof .proof-view-link:hover {
+                transform: translateY(-2px);
+                /* border-color: #0018dc; */
+                box-shadow: 0 18px 36px rgba(0, 24, 220, .16);
+                /* background: #ffffff; */
+                color: #ffffff !important;
+            }
+
+            .proof .proof-view-link:hover svg {
+                transform: translateX(4px);
+            }
+
+            /* .proof .proof-card:hover .proof-view-link,
+                                                                    .proof .proof-card:hover .proof-view-link *,
+                                                                    .proof .proof-card:hover .proof-view-link span,
+                                                                    .proof .proof-card:hover .proof-view-link svg {
+                                                                        color: #0018dc !important;
+                                                                        stroke: #0018dc !important;
+                                                                    } */
+
+            @media (max-width: 640px) {
+                .proof .proof-card {
+                    padding-bottom: 78px;
+                }
+
+                .proof .proof-view-link {
+                    right: 16px;
+                    bottom: 16px;
+                    min-width: 120px;
+                    min-height: 44px;
+                    font-size: 16px;
+                }
+            }
+        </style>
+
         <div class="inner container">
             <div class="section-head" style="margin-bottom:18px">
                 <div>
                     <p class="kicker">Case-study proof</p>
                     <h2>Case-study proof from real field performance.</h2>
                 </div>
+
                 <p>
                     Fluidstream’s strongest credibility comes from measurable field outcomes: uptime, lower maintenance,
-                    reduced
-                    emissions, and meaningful production or revenue improvement under real operating conditions.
+                    reduced emissions, and meaningful production or revenue improvement under real operating conditions.
                 </p>
             </div>
 
             <div class="proof-cards">
                 <article class="proof-card">
                     <div class="proof-tag">Allied Energy II</div>
+
                     <h3>100% uptime over 17+ months with no maintenance.</h3>
+
                     <p>
                         Fluidstream’s unit operated consistently, eliminated gas venting, and delivered continuous, reliable
                         performance in extreme cold-weather field conditions.
                     </p>
+
                     <div class="proof-metric">100% uptime</div>
-                    <div class="proof-detail">17+ months • 0 maintenance • continuous operation below -40°C • gas venting
-                        eliminated</div>
+
+                    <div class="proof-detail">
+                        17+ months • 0 maintenance • continuous operation below -40°C • gas venting eliminated
+                    </div>
+
+                    <a class="proof-view-link " href="/case-studies/allied-energy-vaporcommander-vru"
+                        aria-label="View Allied Energy II case study">
+                        <span>View</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round"
+                            stroke-linejoin="round" aria-hidden="true">
+                            <path d="M5 12h14"></path>
+                            <path d="m13 6 6 6-6 6"></path>
+                        </svg>
+                    </a>
                 </article>
 
                 <article class="proof-card">
                     <div class="proof-tag">Vapor Recovery</div>
+
                     <h3>4.5+ years of reliable vapor recovery with one seal change.</h3>
+
                     <p>
                         A southern Alberta producer used VaporCommander™ to capture tank vapors, reduce emissions, and avoid
-                        the
-                        ongoing maintenance burden associated with conventional VRU systems.
+                        the ongoing maintenance burden associated with conventional VRU systems.
                     </p>
+
                     <div class="proof-metric">35 months to first seal change</div>
-                    <div class="proof-detail">1 seal change over reported operating life • reduced service intervention •
-                        extended
-                        seal life performance</div>
+
+                    <div class="proof-detail">
+                        1 seal change over reported operating life • reduced service intervention • extended seal life
+                        performance
+                    </div>
+
+                    <a class="proof-view-link" href="/case-studies/vaporcommander-4-5-year-reliability"
+                        aria-label="View Vapor Recovery case study">
+                        <span>View</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round"
+                            stroke-linejoin="round" aria-hidden="true">
+                            <path d="M5 12h14"></path>
+                            <path d="m13 6 6 6-6 6"></path>
+                        </svg>
+                    </a>
                 </article>
 
                 <article class="proof-card">
                     <div class="proof-tag">Multiphase Production</div>
+
                     <h3>From virtually no production to more than C$1.5M/year in incremental revenue.</h3>
+
                     <p>
                         Fluidstream’s MultiphaseCommander™ helped revive two liquid-loaded wells in Alberta, restoring gas
-                        and
-                        condensate production without requiring additional separation infrastructure.
+                        and condensate production without requiring additional separation infrastructure.
                     </p>
+
                     <div class="proof-metric">C$1.5M+</div>
-                    <div class="proof-detail">10e3 m³/d gas restored • 5 m³/d condensate • no added separation equipment
+
+                    <div class="proof-detail">
+                        10e3 m³/d gas restored • 5 m³/d condensate • no added separation equipment
                     </div>
+
+                    <a class="proof-view-link" href="/case-studies/multiphasecommander-production-recovery"
+                        aria-label="View Multiphase Production case study">
+                        <span>View</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round"
+                            stroke-linejoin="round" aria-hidden="true">
+                            <path d="M5 12h14"></path>
+                            <path d="m13 6 6 6-6 6"></path>
+                        </svg>
+                    </a>
                 </article>
             </div>
         </div>
@@ -2109,7 +2588,7 @@
 
                 <article class="card">
                     <div class="label">VaporCommander™</div>
-                    <h3>Recover vapors in the real field stream, not an idealized gas-only stream.</h3>
+                    <h3>Recover vapors from the real field, not an idealized gas stream.</h3>
                     <p>
                         VaporCommander™ is designed for what many sites already know: entrained liquids, slugs, and unstable
                         flow
@@ -2120,7 +2599,7 @@
                         <li>Reduce dependence on support equipment around the compressor</li>
                         <li>Extend vapor recovery into harder, mixed-phase applications</li>
                     </ul>
-                    <a class="link" href="/vapor-recovery">Explore Vapor Recovery →</a>
+                    <a class="link" href="/vapor-recovery">Explore VaporCommander™ →</a>
                 </article>
 
                 <article class="card">
@@ -2136,8 +2615,7 @@
                         <li>Autonomous controls help mitigate liquid-slug and damage risk</li>
                         <li>Support cleaner, more productive site operation</li>
                     </ul>
-                    <a class="link" href="/casing-gas-compression">Explore Casing Gas
-                        Compression
+                    <a class="link" href="/casing-gas-compression">Explore CompressionCommander™
                         →</a>
                 </article>
             </div>
@@ -2279,25 +2757,25 @@
         }
 
         /* .patent-copy .kicker {
-                                                                                                                                                        margin-bottom: 18px;
-                                                                                                                                                    }
+                                                                                                                                                                                                                                                                        margin-bottom: 18px;
+                                                                                                                                                                                                                                                                    }
 
-                                                                                                                                                    .patent-copy h2 {
-                                                                                                                                                        margin: 0;
-                                                                                                                                                        font-size: clamp(1.9rem, 3vw, 3rem);
-                                                                                                                                                        line-height: 1.05;
-                                                                                                                                                        letter-spacing: -.04em;
-                                                                                                                                                        max-width: 21ch;
-                                                                                                                                                        color: var(--text);
-                                                                                                                                                    } */
+                                                                                                                                                                                                                                                                    .patent-copy h2 {
+                                                                                                                                                                                                                                                                        margin: 0;
+                                                                                                                                                                                                                                                                        font-size: clamp(1.9rem, 3vw, 3rem);
+                                                                                                                                                                                                                                                                        line-height: 1.05;
+                                                                                                                                                                                                                                                                        letter-spacing: -.04em;
+                                                                                                                                                                                                                                                                        max-width: 21ch;
+                                                                                                                                                                                                                                                                        color: var(--text);
+                                                                                                                                                                                                                                                                    } */
         /* 
-                                                                                                            .patent-copy p {
-                                                                                                                margin: 0 0 18px;
-                                                                                                                max-width: 760px;
-                                                                                                                font-size: 1.18rem;
-                                                                                                                line-height: 1.7;
-                                                                                                                color: #5b6d86;
-                                                                                                            } */
+                                                                                                                                                                                                                            .patent-copy p {
+                                                                                                                                                                                                                                margin: 0 0 18px;
+                                                                                                                                                                                                                                max-width: 760px;
+                                                                                                                                                                                                                                font-size: 1.18rem;
+                                                                                                                                                                                                                                line-height: 1.7;
+                                                                                                                                                                                                                                color: #5b6d86;
+                                                                                                                                                                                                                            } */
 
         .patent-copy .patent-highlight {
             margin-top: 6px;
@@ -2518,11 +2996,11 @@
         }
 
         /* .patent-card p {
-                                                                                                                                                                                                                                                                                                                                                                                                            margin: 0;
-                                                                                                                                                                                                                                                                                                                                                                                                            font-size: 1.04rem;
-                                                                                                                                                                                                                                                                                                                                                                                                            line-height: 1.72;
-                                                                                                                                                                                                                                                                                                                                                                                                            color: #61738b;
-                                                                                                                                                                                                                                                                                                                                                                                                        } */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            margin: 0;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            font-size: 1.04rem;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            line-height: 1.72;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            color: #61738b;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        } */
 
         .patent-callout {
             position: relative;
@@ -2626,7 +3104,60 @@
                         reliability limits.
                     </p>
                 </div>
+                <style>
+                    .patent-side-card {
+                        display: flex;
+                        flex-direction: column;
+                    }
 
+                    .patent-explore-link {
+                        align-self: flex-end;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: flex-end;
+                        gap: 12px;
+
+                        margin-top: auto;
+                        padding-top: 34px;
+
+                        color: #0018dc;
+                        font-size: 17px;
+                        font-weight: 900;
+                        line-height: 1;
+                        text-decoration: none;
+
+                        transition: color .25s ease, transform .25s ease;
+                    }
+
+                    .patent-explore-link svg {
+                        width: 24px;
+                        height: 24px;
+                        stroke: currentColor;
+                        transition: transform .25s ease;
+                    }
+
+                    .patent-explore-link:hover {
+                        color: #0018dc;
+                        transform: translateX(3px);
+                    }
+
+                    .patent-explore-link:hover svg {
+                        transform: translateX(4px);
+                    }
+
+                    @media (max-width: 768px) {
+                        .patent-explore-link {
+                            align-self: flex-start;
+                            padding-top: 26px;
+                            font-size: 16px;
+                        }
+
+                        .patent-explore-link svg {
+                            width: 22px;
+                            height: 22px;
+                        }
+                    }
+                </style>
                 <div class="patent-side-card">
                     <h3>Core patent coverage</h3>
 
@@ -2639,6 +3170,15 @@
                         These patents support operating methods where liquid presence affects chamber volume,
                         pressure response, and compressor behaviour inside the compression process.
                     </p>
+
+                    <a class="patent-explore-link" href="/patented-technology" aria-label="Explore patents">
+                        <span>Explore Patents</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round"
+                            stroke-linejoin="round" aria-hidden="true">
+                            <path d="M5 12h14"></path>
+                            <path d="m13 6 6 6-6 6"></path>
+                        </svg>
+                    </a>
                 </div>
             </div>
 

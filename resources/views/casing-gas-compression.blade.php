@@ -33,9 +33,41 @@
     }
 
     header.hero {
-      background: #1029ea;
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
       color: #fff;
-      /* padding: 54px 0 54px; */
+      min-height: calc(100vh - 108px);
+      display: flex;
+      align-items: stretch;
+      background: #07111f;
+    }
+
+
+    header.hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url("/img/hero/pump-jack.jpg");
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      transform: scaleX(-1) scale(1.03);
+      z-index: -2;
+    }
+
+    /* dark overlay */
+    header.hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg,
+          rgba(2, 6, 23, 0.82) 0%,
+          rgba(2, 6, 23, 0.66) 48%,
+          rgba(2, 6, 23, 0.42) 100%);
+      z-index: -1;
+      pointer-events: none;
     }
 
     .breadcrumbs {
@@ -44,6 +76,18 @@
       text-transform: uppercase;
       opacity: .82;
       margin-bottom: 18px
+    }
+
+    header.hero .wrap {
+      position: relative;
+      z-index: 2;
+      width: min(calc(100% - 40px), 1200px);
+      min-height: calc(100vh - 108px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 70px;
+      padding-bottom: 70px;
     }
 
     .eyebrow {
@@ -58,7 +102,8 @@
 
     h1 {
       margin: 0 0 14px;
-      font-size: 50px;
+      font-weight: 700px;
+      font-size: 54px;
       line-height: 1.04;
       max-width: 920px;
       letter-spacing: -.03em
@@ -256,13 +301,13 @@
     }
 
     /* .swipe-left:hover:before,
-                                                                                                                                    .swipe-left:hover:before,
-                                                                                                                                    .model-card:hover:before,
-                                                                                                                                    .spec-mobile-card:hover:before,
-                                                                                                                                    .comparison .box:hover:before,
-                                                                                                                                    .reality-item:hover:before {
-                                                                                                                                      opacity: 1;
-                                                                                                                                    } */
+                                                                                                                                                                                        .swipe-left:hover:before,
+                                                                                                                                                                                        .model-card:hover:before,
+                                                                                                                                                                                        .spec-mobile-card:hover:before,
+                                                                                                                                                                                        .comparison .box:hover:before,
+                                                                                                                                                                                        .reality-item:hover:before {
+                                                                                                                                                                                          opacity: 1;
+                                                                                                                                                                                        } */
 
     .swipe-left:hover:after,
     .model-card:hover:after,
@@ -273,8 +318,8 @@
     }
 
     /* .swipe-left:hover:after {
-                                                                                                                                  right: 155%;
-                                                                                                                                } */
+                                                                                                                                                                                      right: 155%;
+                                                                                                                                                                                    } */
 
     .hero-card:hover {
       box-shadow: 0 26px 56px rgba(0, 24, 220, .18);
@@ -282,14 +327,14 @@
     }
 
     /* .swipe-left:hover,
-                                                                                                                              .swipe-left:hover,
-                                                                                                                              .model-card:hover,
-                                                                                                                              .spec-mobile-card:hover,
-                                                                                                                              .comparison .box:hover,
-                                                                                                                              .reality-item:hover {
-                                                                                                                                box-shadow: 0 24px 52px rgba(13, 32, 84, .12);
-                                                                                                                                border-color: #b9d0ff;
-                                                                                                                              } */
+                                                                                                                                                                                  .swipe-left:hover,
+                                                                                                                                                                                  .model-card:hover,
+                                                                                                                                                                                  .spec-mobile-card:hover,
+                                                                                                                                                                                  .comparison .box:hover,
+                                                                                                                                                                                  .reality-item:hover {
+                                                                                                                                                                                    box-shadow: 0 24px 52px rgba(13, 32, 84, .12);
+                                                                                                                                                                                    border-color: #b9d0ff;
+                                                                                                                                                                                  } */
 
     .blue-fill:before {
       content: "";
@@ -340,9 +385,9 @@
     }
 
     /* 
-                                                                                                              .highlight-box:hover a {
-                                                                                                                color: #fff !important
-                                                                                                              } */
+                                                                                                                                                                  .highlight-box:hover a {
+                                                                                                                                                                    color: #fff !important
+                                                                                                                                                                  } */
 
     .cta-panel:hover {
       /* box-shadow: 0 24px 52px rgba(0, 24, 220, .18); */
@@ -572,13 +617,13 @@
     }
 
     /* .kicker mb-2 {
-                                                                font-size: 12px;
-                                                                letter-spacing: .11em;
-                                                                text-transform: uppercase;
-                                                                color: var(--blue);
-                                                                font-weight: 700;
-                                                                margin-bottom: 10px
-                                                              } */
+                                                                                                                    font-size: 12px;
+                                                                                                                    letter-spacing: .11em;
+                                                                                                                    text-transform: uppercase;
+                                                                                                                    color: var(--blue);
+                                                                                                                    font-weight: 700;
+                                                                                                                    margin-bottom: 10px
+                                                                                                                  } */
 
     h2 {
       margin: 0 0 16px;
@@ -983,12 +1028,35 @@
         grid-template-columns: 1fr
       }
 
-      section {
-        padding: 52px 0
-      }
 
       .case-study h2 {
         font-size: 31px
+      }
+    }
+
+    @media (max-width: 760px) {
+      header.hero {
+        min-height: auto;
+      }
+
+      header.hero::before {
+        background-size: cover;
+        background-position: center center;
+        transform: scaleX(-1) scale(1.04);
+      }
+
+      header.hero::after {
+        background:
+          linear-gradient(180deg,
+            rgba(2, 6, 23, 0.88) 0%,
+            rgba(2, 6, 23, 0.76) 56%,
+            rgba(2, 6, 23, 0.62) 100%);
+      }
+
+      header.hero .wrap {
+        min-height: auto;
+        padding-top: 58px;
+        padding-bottom: 46px;
       }
     }
   </style>
@@ -1032,7 +1100,7 @@
           <p>Supports H₂S handling, cold-weather startup, remote control, and harder-duty service across the listed
             CompressionCommander™ configurations.</p>
         </div>
-        <div class="hero-card interactive-card swipe-left">
+        <div class="hero-card interactive-card">
           <h3>Lower-maintenance performance</h3>
           <p>Designed to reduce the recurring maintenance burden created when conventional gas-only casing gas packages
             are pushed into liquid-prone service.</p>
@@ -1304,6 +1372,468 @@
     </div>
   </section>
 
+  <section class="fs-cg-diff-section band" id="casing-gas-comparison">
+    <style>
+      .fs-cg-diff-section {
+        --cg-blue: #0018dc;
+        --cg-cyan: #15d1ff;
+        --cg-ink: #07111f;
+        --cg-muted: #475569;
+        --cg-line: #d9e6ff;
+        --cg-dark: #07124a;
+
+        position: relative;
+        overflow: hidden;
+        background: #f5f7fb;
+        border-top: 1px solid #dfe9ff;
+        border-bottom: 1px solid #dfe9ff;
+      }
+
+      .fs-cg-diff-section,
+      .fs-cg-diff-section * {
+        box-sizing: border-box;
+      }
+
+      .fs-cg-diff-head {
+        /* display: grid; */
+        grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.78fr);
+        gap: 34px;
+        align-items: end;
+        margin-bottom: 26px;
+      }
+
+      .fs-cg-diff-kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 12px;
+        color: var(--cg-blue);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: .11em;
+        text-transform: uppercase;
+      }
+
+      /* .fs-cg-diff-head h2 {
+                                                      margin: 0;
+                                                      max-width: 760px;
+                                                      font-size: clamp(1.9rem, 3vw, 3rem);
+                                                      line-height: 1.05;
+                                                      letter-spacing: -.04em;
+                                                      color: #1f1f21;
+                                                    } */
+
+      /* .fs-cg-diff-head h2 span {
+                                                      color: var(--cg-blue);
+                                                    }
+
+                                                    .fs-cg-diff-head p {
+                                                      margin: 0;
+                                                      color: var(--cg-muted);
+                                                      font-size: 16px;
+                                                      line-height: 1.75;
+                                                    } */
+
+      .fs-cg-diff-summary {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+        margin-bottom: 22px;
+      }
+
+      .fs-cg-diff-card {
+        position: relative;
+        overflow: hidden;
+        isolation: isolate;
+        background: #ffffff;
+        border: 1px solid var(--cg-line);
+        border-radius: 7px;
+        padding: 24px;
+        box-shadow: 0 18px 44px rgba(13, 32, 84, .06);
+        transition: transform .28s ease, border-color .28s ease, background .28s ease;
+      }
+
+      .fs-cg-diff-card::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: var(--cg-blue);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform .3s ease;
+        z-index: 1;
+      }
+
+      .fs-cg-diff-card:hover {
+        transform: translateY(-3px);
+        border-color: var(--cg-blue);
+        background: #ffffff;
+      }
+
+      .fs-cg-diff-card:hover::after {
+        transform: scaleX(1);
+      }
+
+      .fs-cg-diff-card strong {
+        position: relative;
+        z-index: 2;
+        display: block;
+        margin-bottom: 10px;
+        color: #232325;
+        font-size: 20px;
+        line-height: 1.15;
+        letter-spacing: -.02em;
+        font-weight: 800;
+      }
+
+      .fs-cg-diff-card p {
+        position: relative;
+        z-index: 2;
+        margin: 0;
+        color: var(--cg-muted);
+        font-size: 15px;
+        line-height: 1.62;
+      }
+
+      .fs-cg-diff-table {
+        overflow: hidden;
+        border: 1px solid var(--cg-line);
+        border-radius: 7px;
+        background: #ffffff;
+        box-shadow: 0 18px 44px rgba(13, 32, 84, .06);
+      }
+
+      .fs-cg-diff-table-head,
+      .fs-cg-diff-row {
+        display: grid;
+        grid-template-columns: 0.9fr 1fr 1fr;
+      }
+
+      .fs-cg-diff-table-head {
+        background: #0018dc;
+        color: #ffffff;
+      }
+
+      .fs-cg-diff-table-head div {
+        padding: 18px 20px;
+        border-right: 1px solid rgba(255, 255, 255, .12);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+      }
+
+      .fs-cg-diff-table-head div:last-child {
+        border-right: none;
+        background: var(--cg-blue);
+      }
+
+      .fs-cg-diff-row {
+        border-top: 1px solid var(--cg-line);
+        transition: background .22s ease;
+      }
+
+      .fs-cg-diff-row:hover {
+        background: #f8fbff;
+      }
+
+      .fs-cg-diff-cell {
+        min-height: 78px;
+        padding: 18px 20px;
+        display: flex;
+        align-items: center;
+        border-right: 1px solid var(--cg-line);
+        color: var(--cg-muted);
+        font-size: 15px;
+        line-height: 1.45;
+        font-weight: 650;
+      }
+
+      .fs-cg-diff-cell:last-child {
+        border-right: none;
+      }
+
+      .fs-cg-diff-criteria {
+        color: #232325;
+        font-weight: 800;
+        letter-spacing: -.015em;
+      }
+
+      .fs-cg-diff-fluidstream {
+        position: relative;
+        color: #232325;
+        font-weight: 800;
+        background: #f6f7fb;
+      }
+
+      .fs-cg-diff-fluidstream::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        margin-right: 11px;
+        flex: 0 0 auto;
+        border-radius: 999px;
+        background: var(--cg-cyan);
+        box-shadow: 0 0 0 5px rgba(21, 209, 255, .14);
+      }
+
+
+
+      .fs-cg-diff-bottom {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 22px;
+        align-items: center;
+        margin-top: 22px;
+        padding: 26px;
+        border-radius: 7px;
+        background: #0018dc;
+        color: #ffffff;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .fs-cg-diff-bottom::after {
+        content: "";
+        position: absolute;
+        width: 230px;
+        height: 230px;
+        right: -90px;
+        top: -120px;
+        border-radius: 999px;
+        background: rgba(21, 209, 255, .18);
+        pointer-events: none;
+      }
+
+      .fs-cg-diff-bottom-content {
+        position: relative;
+        z-index: 1;
+      }
+
+      .fs-cg-diff-bottom strong {
+        display: block;
+        margin-bottom: 8px;
+        color: #ffffff;
+        font-size: 22px;
+        line-height: 1.18;
+        letter-spacing: -.02em;
+        font-weight: 800;
+      }
+
+      .fs-cg-diff-bottom p {
+        margin: 0;
+        max-width: 760px;
+        color: #e8f4ff;
+        line-height: 1.65;
+        font-size: 15px;
+      }
+
+      .fs-cg-diff-bottom .btn {
+        position: relative;
+        z-index: 1;
+        white-space: nowrap;
+        box-shadow: none;
+      }
+
+      @media (max-width: 1080px) {
+
+        .fs-cg-diff-head,
+        .fs-cg-diff-summary,
+        .fs-cg-diff-bottom {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 900px) {
+        .fs-cg-diff-table-head {
+          display: none;
+        }
+
+        .fs-cg-diff-row {
+          grid-template-columns: 1fr;
+          border-top: 8px solid #f1f4f9;
+        }
+
+        .fs-cg-diff-row:first-child {
+          border-top: 0;
+        }
+
+        .fs-cg-diff-cell {
+          min-height: auto;
+          display: block;
+          border-right: none;
+          border-bottom: 1px solid var(--cg-line);
+          padding: 16px 18px;
+        }
+
+        .fs-cg-diff-cell:last-child {
+          border-bottom: 0;
+        }
+
+        .fs-cg-diff-cell::before {
+          display: block;
+          margin-bottom: 7px;
+          color: var(--cg-blue);
+          font-size: 11px;
+          font-weight: 850;
+          letter-spacing: .11em;
+          text-transform: uppercase;
+        }
+
+        .fs-cg-diff-criteria::before {
+          content: "Criteria";
+        }
+
+        .fs-cg-diff-conventional::before {
+          content: "Conventional Casing Gas Compression";
+        }
+
+        .fs-cg-diff-fluidstream::before {
+          content: "CompressionCommander™";
+          width: auto;
+          height: auto;
+          margin: 0 0 7px 0;
+          border-radius: 0;
+          background: transparent;
+          box-shadow: none;
+        }
+
+        .fs-cg-diff-fluidstream {
+          display: block;
+        }
+      }
+
+      @media (max-width: 760px) {
+        .fs-cg-diff-bottom {
+          padding: 22px;
+        }
+      }
+    </style>
+
+    <div class="wrap py-12">
+      <div class="kicker mb-2">Casing Gas Differentiation</div>
+
+      <div class="fs-cg-diff-head">
+        <div>
+          <h2>
+            Built for casing gas conditions where production optimization depends on
+            <span>stable drawdown.</span>
+          </h2>
+        </div>
+
+        <p class="lead">
+          CompressionCommander™ is designed for casing gas applications where changing well rates,
+          liquid loading, intermittent flow, separator dependence, winter freeze exposure, and restart
+          conditions can limit how aggressively operators reduce casing pressure and improve production.
+        </p>
+      </div>
+
+      <div class="fs-cg-diff-summary">
+        <article class="fs-cg-diff-card">
+          <strong>Production-focused pressure reduction</strong>
+          <p>
+            Supports casing pressure reduction where lower backpressure can improve drawdown, well unloading,
+            and production response.
+          </p>
+        </article>
+
+        <article class="fs-cg-diff-card">
+          <strong>Reduced separator dependence</strong>
+          <p>
+            Handles wet, liquid-influenced casing gas without requiring perfect upstream gas-liquid separation
+            before compression.
+          </p>
+        </article>
+
+        <article class="fs-cg-diff-card">
+          <strong>Less freeze-prone infrastructure</strong>
+          <p>
+            Reducing reliance on scrubbers and upstream separation equipment helps avoid common winter operating
+            problems in casing gas service.
+          </p>
+        </article>
+      </div>
+
+      <div class="fs-cg-diff-table" role="table"
+        aria-label="Conventional casing gas compression versus Fluidstream CompressionCommander comparison">
+        <div class="fs-cg-diff-table-head" role="row">
+          <div role="columnheader">Criteria</div>
+          <div role="columnheader">Conventional Casing Gas Compression</div>
+          <div role="columnheader">Fluidstream CompressionCommander™</div>
+        </div>
+
+        <div class="fs-cg-diff-row" role="row">
+          <div class="fs-cg-diff-cell fs-cg-diff-criteria" role="cell">Variable well flow</div>
+          <div class="fs-cg-diff-cell fs-cg-diff-conventional" role="cell">Struggles with unstable or intermittent flow
+          </div>
+          <div class="fs-cg-diff-cell fs-cg-diff-fluidstream" role="cell">Adapts to changing well flow</div>
+        </div>
+
+        <div class="fs-cg-diff-row" role="row">
+          <div class="fs-cg-diff-cell fs-cg-diff-criteria" role="cell">Liquid loading and slugging</div>
+          <div class="fs-cg-diff-cell fs-cg-diff-conventional" role="cell">Can cause trips, limits, or damage risk</div>
+          <div class="fs-cg-diff-cell fs-cg-diff-fluidstream" role="cell">Built for liquid-influenced operation</div>
+        </div>
+
+        <div class="fs-cg-diff-row" role="row">
+          <div class="fs-cg-diff-cell fs-cg-diff-criteria" role="cell">Separator dependence</div>
+          <div class="fs-cg-diff-cell fs-cg-diff-conventional" role="cell">Often needs upstream separation</div>
+          <div class="fs-cg-diff-cell fs-cg-diff-fluidstream" role="cell">Reduces or eliminates separator reliance</div>
+        </div>
+
+        <div class="fs-cg-diff-row" role="row">
+          <div class="fs-cg-diff-cell fs-cg-diff-criteria" role="cell">Winter freeze exposure</div>
+          <div class="fs-cg-diff-cell fs-cg-diff-conventional" role="cell">Scrubbers can freeze, trip, or need attention
+          </div>
+          <div class="fs-cg-diff-cell fs-cg-diff-fluidstream" role="cell">Less freeze-prone upstream equipment</div>
+        </div>
+
+        <div class="fs-cg-diff-row" role="row">
+          <div class="fs-cg-diff-cell fs-cg-diff-criteria" role="cell">Backpressure reduction</div>
+          <div class="fs-cg-diff-cell fs-cg-diff-conventional" role="cell">Limited by upset sensitivity</div>
+          <div class="fs-cg-diff-cell fs-cg-diff-fluidstream" role="cell">Supports lower casing pressure and drawdown
+          </div>
+        </div>
+
+        <div class="fs-cg-diff-row" role="row">
+          <div class="fs-cg-diff-cell fs-cg-diff-criteria" role="cell">Restart after shut-in</div>
+          <div class="fs-cg-diff-cell fs-cg-diff-conventional" role="cell">Restart can be unreliable after slugging</div>
+          <div class="fs-cg-diff-cell fs-cg-diff-fluidstream" role="cell">Better suited for wet, variable restarts</div>
+        </div>
+
+        <div class="fs-cg-diff-row" role="row">
+          <div class="fs-cg-diff-cell fs-cg-diff-criteria" role="cell">Production optimization</div>
+          <div class="fs-cg-diff-cell fs-cg-diff-conventional" role="cell">Can force conservative operating limits</div>
+          <div class="fs-cg-diff-cell fs-cg-diff-fluidstream" role="cell">Supports more aggressive optimization</div>
+        </div>
+
+        <div class="fs-cg-diff-row" role="row">
+          <div class="fs-cg-diff-cell fs-cg-diff-criteria" role="cell">Maintenance in unstable service</div>
+          <div class="fs-cg-diff-cell fs-cg-diff-conventional" role="cell">Higher with liquids and repeated restarts</div>
+          <div class="fs-cg-diff-cell fs-cg-diff-fluidstream" role="cell">Lower-maintenance casing gas approach</div>
+        </div>
+      </div>
+
+      <div class="fs-cg-diff-bottom">
+        <div class="fs-cg-diff-bottom-content">
+          <strong>
+            For casing gas wells where the objective is not just compression, it is production response.
+          </strong>
+          <p>
+            CompressionCommander™ is best suited for wells where casing pressure reduction, liquid-tolerant operation,
+            reduced separator dependence, and cold-weather uptime can support stronger production optimization economics.
+          </p>
+        </div>
+
+        <a class="btn btn-primary" href="/contact">Request casing gas fit review</a>
+      </div>
+    </div>
+  </section>
+
+
   <section class="fs-model-selector-section" id="specifications">
     <style>
       .fs-model-selector-section {
@@ -1348,20 +1878,20 @@
       }
 
       /* .fs-ms-section-head h2 {
-                      font-size: clamp(30px, 3.2vw, 46px);
-                      line-height: 1.02;
-                      margin: 0 0 14px;
-                      letter-spacing: -.035em;
-                      color: var(--ink);
-                    } */
+                                                                          font-size: clamp(30px, 3.2vw, 46px);
+                                                                          line-height: 1.02;
+                                                                          margin: 0 0 14px;
+                                                                          letter-spacing: -.035em;
+                                                                          color: var(--ink);
+                                                                        } */
       /* 
-                  .fs-ms-lead {
-                    font-size: 17px;
-                    color: #56647a;
-                    max-width: 860px;
-                    margin: 0;
-                    line-height: 1.65;
-                  } */
+                                                                      .fs-ms-lead {
+                                                                        font-size: 17px;
+                                                                        color: #56647a;
+                                                                        max-width: 860px;
+                                                                        margin: 0;
+                                                                        line-height: 1.65;
+                                                                      } */
 
       .fs-ms-spec-note {
         margin: 14px 0 0;
@@ -2100,6 +2630,17 @@
           </div>
         </article>
       </div>
+
+      <style>
+        .fs-ms-sizing-notes ol {
+          list-style-type: decimal !important;
+          padding-left: 24px;
+        }
+
+        .fs-ms-sizing-notes ol li::before {
+          content: none !important;
+        }
+      </style>
 
       <div class="fs-ms-sizing-notes">
         <strong>Engineering notes</strong>

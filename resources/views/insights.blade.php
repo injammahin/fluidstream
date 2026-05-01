@@ -22,9 +22,9 @@
             box-sizing: border-box;
         }
 
-        .fip-page {
-            background: var(--fip-bg);
-        }
+        /* .fip-page {
+                    background: var(--fip-bg);
+                } */
 
         .fip-hero {
             background: var(--fip-blue);
@@ -261,134 +261,13 @@
 
             <div class="fip-grid">
                 <article class="fip-card">
-                    <span class="fip-card-label">Article 1</span>
-                    <h3 class="fip-card-title">Vapor Recovery, Fluidstream Style</h3>
+                    <span class="fip-card-label">Article 13</span>
+                    <h3 class="fip-card-title">How Multiphase Compression Supports Production Recovery</h3>
                     <p class="fip-card-text">
-                        A technical perspective on how Fluidstream approaches vapor recovery using a more field-ready,
-                        multiphase-aware operating philosophy.
+                        A production recovery perspective on how multiphase compression can help restore flow,
+                        lower backpressure, and simplify site infrastructure.
                     </p>
-                    <a href="{{ url('/insights/fluidstream-vapor-recovery-fluidstream-style') }}" class="fip-card-link">
-                        Read More <span class="fip-card-arrow">→</span>
-                    </a>
-                </article>
-
-                <article class="fip-card">
-                    <span class="fip-card-label">Article 2</span>
-                    <h3 class="fip-card-title">Casing Gas Compression Long Form</h3>
-                    <p class="fip-card-text">
-                        Why casing gas recovery often needs a more tolerant compression approach when streams are unstable,
-                        wet, or difficult to keep within gas-only assumptions.
-                    </p>
-                    <a href="{{ url('/insights/fluidstream-casing-gas-compression-long-form') }}" class="fip-card-link">
-                        Read More <span class="fip-card-arrow">→</span>
-                    </a>
-                </article>
-
-                <article class="fip-card">
-                    <span class="fip-card-label">Article 3</span>
-                    <h3 class="fip-card-title">Multiphase Compression vs. Conventional Compression</h3>
-                    <p class="fip-card-text">
-                        A comparison of separation-first conventional systems and multiphase compression models designed
-                        around the actual behavior of mixed production streams.
-                    </p>
-                    <a href="{{ url('/insights/fluidstream-multiphase-vs-conventional-long-form') }}" class="fip-card-link">
-                        Read More <span class="fip-card-arrow">→</span>
-                    </a>
-                </article>
-
-                <article class="fip-card">
-                    <span class="fip-card-label">Article 4</span>
-                    <h3 class="fip-card-title">Why Conventional VRUs Fail Wet Gas</h3>
-                    <p class="fip-card-text">
-                        Wet gas, entrained liquids, and real operating variation can expose the weakness of conventional
-                        vapor recovery units built around clean-gas expectations.
-                    </p>
-                    <a href="{{ url('/insights/why-conventional-vrus-fail-wet-gas') }}" class="fip-card-link">
-                        Read More <span class="fip-card-arrow">→</span>
-                    </a>
-                </article>
-
-                <article class="fip-card">
-                    <span class="fip-card-label">Article 5</span>
-                    <h3 class="fip-card-title">Production Optimization with Multiphase Compression</h3>
-                    <p class="fip-card-text">
-                        How operators can think about production recovery, backpressure reduction, and lower site
-                        complexity through a multiphase compression strategy.
-                    </p>
-                    <a href="{{ url('/insights/production-optimization-multiphase-compression') }}" class="fip-card-link">
-                        Read More <span class="fip-card-arrow">→</span>
-                    </a>
-                </article>
-
-                <article class="fip-card">
-                    <span class="fip-card-label">Article 6</span>
-                    <h3 class="fip-card-title">Multiphase Compression for Liquid-Loaded Gas Wells</h3>
-                    <p class="fip-card-text">
-                        A field-focused discussion on liquid-loaded gas wells and why multiphase compression can help
-                        restore production without adding unnecessary separation complexity.
-                    </p>
-                    <a href="{{ url('/insights/multiphase-compression-liquid-loaded-gas-wells') }}" class="fip-card-link">
-                        Read More <span class="fip-card-arrow">→</span>
-                    </a>
-                </article>
-                <article class="fip-card">
-                    <span class="fip-card-label">Article 7</span>
-                    <h3 class="fip-card-title">VRU vs. Flaring: Complete Comparison</h3>
-                    <p class="fip-card-text">
-                        A practical comparison of vapor recovery and flaring decisions, with focus on emissions, economics,
-                        reliability, and field operating value.
-                    </p>
-                    <a href="{{ url('/insights/fluidstream-vru-vs-flaring-complete') }}" class="fip-card-link">
-                        Read More <span class="fip-card-arrow">→</span>
-                    </a>
-                </article>
-
-                <article class="fip-card">
-                    <span class="fip-card-label">Article 8</span>
-                    <h3 class="fip-card-title">Fluidstream Methane Reduction Story</h3>
-                    <p class="fip-card-text">
-                        How Fluidstream’s technology story connects methane reduction, vapor recovery, field reliability,
-                        and production-focused emissions performance.
-                    </p>
-                    <a href="{{ url('/insights/fluidstream-methane-reduction-story-white-sections') }}"
-                        class="fip-card-link">
-                        Read More <span class="fip-card-arrow">→</span>
-                    </a>
-                </article>
-
-                <article class="fip-card">
-                    <span class="fip-card-label">Article 9</span>
-                    <h3 class="fip-card-title">How to Select the Right Compression Application</h3>
-                    <p class="fip-card-text">
-                        A selection guide for matching compression technology to vapor recovery, casing gas,
-                        liquid-loaded wells, and mixed-phase field conditions.
-                    </p>
-                    <a href="{{ url('/insights/how-to-select-right-compression-applications-final-fixed') }}"
-                        class="fip-card-link">
-                        Read More <span class="fip-card-arrow">→</span>
-                    </a>
-                </article>
-
-                <article class="fip-card">
-                    <span class="fip-card-label">Article 10</span>
-                    <h3 class="fip-card-title">When Is Casing Gas CompressionCommander™ Needed?</h3>
-                    <p class="fip-card-text">
-                        A field-focused explanation of when casing gas recovery conditions may require a more tolerant
-                        CompressionCommander™ approach.
-                    </p>
-                    <a href="{{ url('/insights/when-is-casing-gas-compressioncommander') }}" class="fip-card-link">
-                        Read More <span class="fip-card-arrow">→</span>
-                    </a>
-                </article>
-
-                <article class="fip-card">
-                    <span class="fip-card-label">Article 11</span>
-                    <h3 class="fip-card-title">Why Conventional Compression Fails Wet, Unstable Wells</h3>
-                    <p class="fip-card-text">
-                        Why wet gas, liquid carryover, slugging, and unstable production conditions can expose the limits
-                        of conventional gas-only compression.
-                    </p>
-                    <a href="{{ url('/insights/why-conventional-compression-fails-wet-unstable-wells') }}"
+                    <a href="{{ url('/insights/how-multiphase-compression-supports-production-recovery') }}"
                         class="fip-card-link">
                         Read More <span class="fip-card-arrow">→</span>
                     </a>
@@ -408,14 +287,136 @@
                 </article>
 
                 <article class="fip-card">
-                    <span class="fip-card-label">Article 13</span>
-                    <h3 class="fip-card-title">How Multiphase Compression Supports Production Recovery</h3>
+                    <span class="fip-card-label">Article 11</span>
+                    <h3 class="fip-card-title">Why Conventional Compression Fails Wet, Unstable Wells</h3>
                     <p class="fip-card-text">
-                        A production recovery perspective on how multiphase compression can help restore flow,
-                        lower backpressure, and simplify site infrastructure.
+                        Why wet gas, liquid carryover, slugging, and unstable production conditions can expose the limits
+                        of conventional gas-only compression.
                     </p>
-                    <a href="{{ url('/insights/how-multiphase-compression-supports-production-recovery') }}"
+                    <a href="{{ url('/insights/why-conventional-compression-fails-wet-unstable-wells') }}"
                         class="fip-card-link">
+                        Read More <span class="fip-card-arrow">→</span>
+                    </a>
+                </article>
+
+                <article class="fip-card">
+                    <span class="fip-card-label">Article 10</span>
+                    <h3 class="fip-card-title">When Is Casing Gas CompressionCommander™ Needed?</h3>
+                    <p class="fip-card-text">
+                        A field-focused explanation of when casing gas recovery conditions may require a more tolerant
+                        CompressionCommander™ approach.
+                    </p>
+                    <a href="{{ url('/insights/when-is-casing-gas-compressioncommander') }}" class="fip-card-link">
+                        Read More <span class="fip-card-arrow">→</span>
+                    </a>
+                </article>
+
+                <article class="fip-card">
+                    <span class="fip-card-label">Article 9</span>
+                    <h3 class="fip-card-title">How to Select the Right Compression Application</h3>
+                    <p class="fip-card-text">
+                        A selection guide for matching compression technology to vapor recovery, casing gas,
+                        liquid-loaded wells, and mixed-phase field conditions.
+                    </p>
+                    <a href="{{ url('/insights/how-to-select-right-compression-applications-final-fixed') }}"
+                        class="fip-card-link">
+                        Read More <span class="fip-card-arrow">→</span>
+                    </a>
+                </article>
+
+                <article class="fip-card">
+                    <span class="fip-card-label">Article 8</span>
+                    <h3 class="fip-card-title">Fluidstream Methane Reduction Story</h3>
+                    <p class="fip-card-text">
+                        How Fluidstream’s technology story connects methane reduction, vapor recovery, field reliability,
+                        and production-focused emissions performance.
+                    </p>
+                    <a href="{{ url('/insights/fluidstream-methane-reduction-story-white-sections') }}"
+                        class="fip-card-link">
+                        Read More <span class="fip-card-arrow">→</span>
+                    </a>
+                </article>
+
+                <article class="fip-card">
+                    <span class="fip-card-label">Article 7</span>
+                    <h3 class="fip-card-title">VRU vs. Flaring: Complete Comparison</h3>
+                    <p class="fip-card-text">
+                        A practical comparison of vapor recovery and flaring decisions, with focus on emissions, economics,
+                        reliability, and field operating value.
+                    </p>
+                    <a href="{{ url('/insights/fluidstream-vru-vs-flaring-complete') }}" class="fip-card-link">
+                        Read More <span class="fip-card-arrow">→</span>
+                    </a>
+                </article>
+
+                <article class="fip-card">
+                    <span class="fip-card-label">Article 6</span>
+                    <h3 class="fip-card-title">Multiphase Compression for Liquid-Loaded Gas Wells</h3>
+                    <p class="fip-card-text">
+                        A field-focused discussion on liquid-loaded gas wells and why multiphase compression can help
+                        restore production without adding unnecessary separation complexity.
+                    </p>
+                    <a href="{{ url('/insights/multiphase-compression-liquid-loaded-gas-wells') }}" class="fip-card-link">
+                        Read More <span class="fip-card-arrow">→</span>
+                    </a>
+                </article>
+
+                <article class="fip-card">
+                    <span class="fip-card-label">Article 5</span>
+                    <h3 class="fip-card-title">Production Optimization with Multiphase Compression</h3>
+                    <p class="fip-card-text">
+                        How operators can think about production recovery, backpressure reduction, and lower site
+                        complexity through a multiphase compression strategy.
+                    </p>
+                    <a href="{{ url('/insights/production-optimization-multiphase-compression') }}" class="fip-card-link">
+                        Read More <span class="fip-card-arrow">→</span>
+                    </a>
+                </article>
+
+                <article class="fip-card">
+                    <span class="fip-card-label">Article 4</span>
+                    <h3 class="fip-card-title">Why Conventional VRUs Fail Wet Gas</h3>
+                    <p class="fip-card-text">
+                        Wet gas, entrained liquids, and real operating variation can expose the weakness of conventional
+                        vapor recovery units built around clean-gas expectations.
+                    </p>
+                    <a href="{{ url('/insights/why-conventional-vrus-fail-wet-gas') }}" class="fip-card-link">
+                        Read More <span class="fip-card-arrow">→</span>
+                    </a>
+                </article>
+
+                <article class="fip-card">
+                    <span class="fip-card-label">Article 3</span>
+                    <h3 class="fip-card-title">Multiphase Compression vs. Conventional Compression</h3>
+                    <p class="fip-card-text">
+                        A comparison of separation-first conventional systems and multiphase compression models designed
+                        around the actual behavior of mixed production streams.
+                    </p>
+                    <a href="{{ url('/insights/fluidstream-multiphase-vs-conventional-long-form') }}" class="fip-card-link">
+                        Read More <span class="fip-card-arrow">→</span>
+                    </a>
+                </article>
+
+                <article class="fip-card">
+                    <span class="fip-card-label">Article 2</span>
+                    <h3 class="fip-card-title">Casing Gas Compression Long Form</h3>
+                    <p class="fip-card-text">
+                        Why casing gas recovery often needs a more tolerant compression approach when streams are unstable,
+                        wet, or difficult to keep within gas-only assumptions.
+                    </p>
+                    <a href="{{ url('/insights/fluidstream-casing-gas-compression-long-form') }}" class="fip-card-link">
+                        Read More <span class="fip-card-arrow">→</span>
+                    </a>
+                </article>
+
+                <article class="fip-card">
+                    <span class="fip-card-label">Article 1</span>
+                    <h3 class="fip-card-title">Vapor Recovery, Fluidstream Style</h3>
+                    <p class="fip-card-text">
+                        A technical perspective on how Fluidstream approaches vapor recovery using a more field-ready,
+                        multiphase-aware operating philosophy.
+                    </p>
+                    <a href="{{ url('/insights/fluidstream-vapor-recovery-fluidstream-style') }}" class="fip-card-link">
                         Read More <span class="fip-card-arrow">→</span>
                     </a>
                 </article>

@@ -153,8 +153,8 @@
     }
 
     .fsf-footer-contact-box {
-        background: rgba(255, 255, 255, 0.03);
-        padding: 15px;
+        /* background: rgba(255, 255, 255, 0.03); */
+        /* padding: 15px; */
         border-radius: 10px;
     }
 
@@ -308,10 +308,28 @@
                         Canada
                     </div>
                 </div>
+                {{-- TECHNOLOGY --}}
+                <div class="fsf-footer-col">
+                    <h3 class="fsf-footer-col-title">Technology</h3>
+                    <ul class="fsf-footer-list">
+                        <li class="fsf-footer-list-item">
+                            <a href="/multiphase-compression-technology" class="fsf-footer-link">
+                                Multiphase Compression Technology
+                            </a>
+                        </li>
+                        <li class="fsf-footer-list-item">
+                            <a href="/technology" class="fsf-footer-link">Technology Overview</a>
+                        </li>
+                        <li class="fsf-footer-list-item">
+                            <a href="/technology#features" class="fsf-footer-link">Key Features</a>
+                        </li>
+                    </ul>
+                </div>
+
 
                 {{-- SOLUTIONS --}}
                 <div class="fsf-footer-col">
-                    <h3 class="fsf-footer-col-title">Solutions</h3>
+                    <h3 class="fsf-footer-col-title">Applications</h3>
                     <ul class="fsf-footer-list">
                         <li class="fsf-footer-list-item">
                             <a href="/multiphase-compression" class="fsf-footer-link">Multiphase Compression</a>
@@ -325,23 +343,6 @@
                     </ul>
                 </div>
 
-                {{-- TECHNOLOGY --}}
-                <div class="fsf-footer-col">
-                    <h3 class="fsf-footer-col-title">Technology</h3>
-                    <ul class="fsf-footer-list">
-                        <li class="fsf-footer-list-item">
-                            <a href="/technology" class="fsf-footer-link">Technology Overview</a>
-                        </li>
-                        <li class="fsf-footer-list-item">
-                            <a href="/multiphase-compression-technology" class="fsf-footer-link">
-                                Multiphase Compression Technology
-                            </a>
-                        </li>
-                        <li class="fsf-footer-list-item">
-                            <a href="/technology#features" class="fsf-footer-link">Key Features</a>
-                        </li>
-                    </ul>
-                </div>
 
                 {{-- RESOURCES --}}
                 <div class="fsf-footer-col">
@@ -382,9 +383,6 @@
                 <div class="fsf-footer-contact-col">
                     <h3 class="fsf-footer-contact-title">Talk to Fluidstream</h3>
                     <div class="fsf-footer-contact-box">
-                        <p class="fsf-footer-contact-text">
-                            Discuss your application and system requirements
-                        </p>
                         <a href="/contact" class="fsf-footer-link">Contact Us</a><br>
                         <a href="/contact" class="fsf-footer-link">Request Technical Review</a><br>
                         <a href="/multiphase-compression" class="fsf-footer-link">Review Specifications</a>

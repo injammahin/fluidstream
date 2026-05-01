@@ -25,6 +25,7 @@ Route::view('/perspectives', 'perspectives');
 Route::view('/multiphase-compression-technology', 'multiphase-compression-technology');
 Route::view('/contact', 'contact')->name('contact');
 Route::view('/patented-technology', 'patented-technology')->name('patented-technology');
+Route::view('/about-us', 'about-us')->name('about-us');
 
 Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
 

@@ -1038,131 +1038,213 @@
                 border-radius: 22px
             }
         }
+
+        /* ================================
+                                                                           CASE STUDY INTRO SECTION
+                                                                        ================================ */
+
+        .case-study-intro {
+            max-width: 1180px;
+            margin: 0 auto 42px;
+            padding: 0;
+        }
+
+        .case-study-intro-label {
+            display: inline-block;
+            margin-bottom: 10px;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color:#0018dc;
+        }
+
+        .case-study-intro-title {
+            margin: 0;
+            max-width: 25ch;
+
+            color: #000000;
+            font-size: clamp(25px, 3vw, 36px);
+            line-height: 1.12;
+            letter-spacing: -0.04em;
+            font-weight: 500;
+        }
+
+        .case-study-intro-text {
+            margin: 26px 0 0;
+            max-width: 65ch;
+            font-size: 17px;
+            line-height: 1.8;
+            color: #535353;
+            letter-spacing: -0.025em;
+            font-weight: 500;
+        }
+
+        @media (max-width: 760px) {
+            .case-study-intro {
+                margin-bottom: 32px;
+            }
+
+            .case-study-intro-label {
+                font-size: 16px;
+            }
+
+            .case-study-intro-title {
+                font-size: 28px;
+            }
+
+            .case-study-intro-text {
+                font-size: 20px;
+                line-height: 1.5;
+            }
+        }
     </style>
 
 
     <section>
-        <div class="container">
-            <div class="case-grid my-12">
+        <section>
+            <div class="container pt-12">
 
-                <article class="case-card">
-                    <div class="case-top">
-                        <div class="case-product">MultiphaseCommander™</div>
-                        <div class="case-location">Alberta, Canada</div>
-                    </div>
-                    <h3>Two liquid-loaded wells restored to C$1.5M+ per year in recovered production.</h3>
-                    <p>A gas-driven MultiphaseCommander™ reduced backpressure, handled slugs and wide variable flow, and
-                        restored
-                        two nearly dead wells without adding separation-first infrastructure.</p>
-                    <div class="case-metrics">
-                        <div class="case-metric"><strong>~10e3</strong><span>m³/day gas restored</span></div>
-                        <div class="case-metric"><strong>C$1.5M+</strong><span>incremental annual revenue</span></div>
-                        <div class="case-metric"><strong>~95e3</strong><span>m³/day peak gas flow</span></div>
-                    </div>
-                    <div class="case-hook">Best for readers evaluating liquid-loaded wells, plunger-lift limits, variable
-                        multiphase
-                        flow, and production recovery without a larger facility build.</div>
-                    <div class="case-actions">
-                        <span class="case-tagline">Production recovery</span>
-                        <a class="read-more" href="/case-studies/multiphasecommander-production-recovery">Read more</a>
-                    </div>
-                </article>
+                <div class="case-study-intro">
+                    <div class="case-study-intro-label">Field-Proven Performance</div>
 
-                <article class="case-card">
-                    <div class="case-top">
-                        <div class="case-product">VaporCommander™</div>
-                        <div class="case-location">Alberta, Canada</div>
-                    </div>
-                    <h3>More than 4.5 years of VRU operation with only one seal change to date.</h3>
-                    <p>VaporCommander™ operated in wet gas service through harsh Alberta winters, reaching approximately 35
-                        months
-                        before the first seal change and continuing with negligible maintenance.</p>
-                    <div class="case-metrics">
-                        <div class="case-metric"><strong>4.5+</strong><span>years operation</span></div>
-                        <div class="case-metric"><strong>35</strong><span>months to first seal change</span></div>
-                        <div class="case-metric"><strong>1</strong><span>seal change to date</span></div>
-                    </div>
-                    <div class="case-hook">A strong reliability story for operators concerned about wet gas, seal life,
-                        cold-weather
-                        performance, and maintenance-heavy conventional VRUs.</div>
-                    <div class="case-actions">
-                        <span class="case-tagline">Long-run reliability</span>
-                        <a class="read-more" href="/case-studies/vaporcommander-4-5-year-reliability">Read more</a>
-                    </div>
-                </article>
+                    <h2 class="case-study-intro-title">
+                        Documented Results from Real Operating Environments
+                    </h2>
 
-                <article class="case-card">
-                    <div class="case-top">
-                        <div class="case-product">VaporCommander™</div>
-                        <div class="case-location">Southern Alberta, Canada</div>
-                    </div>
-                    <h3>Vapor combustor replaced with gas capture and revenue-generating vapor recovery.</h3>
-                    <p>Instead of burning tank vapors, VaporCommander™ captured approximately 500,000 m³ of natural gas over
-                        12
-                        months and created more than C$46,000/year in estimated gas value.</p>
-                    <div class="case-metrics">
-                        <div class="case-metric"><strong>500k</strong><span>m³/year gas captured</span></div>
-                        <div class="case-metric"><strong>C$46k+</strong><span>estimated annual gas value</span></div>
-                        <div class="case-metric"><strong>0</strong><span>cold-weather stoppages</span></div>
-                    </div>
-                    <div class="case-hook">Built for readers comparing VCUs, conventional VRUs, carbon exposure, active
-                        pressure
-                        control, and recovered gas economics.</div>
-                    <div class="case-actions">
-                        <span class="case-tagline">VCU replacement</span>
-                        <a class="read-more" href="/case-studies/vaporcommander-vcu-replacement">Read more</a>
-                    </div>
-                </article>
+                    <p class="case-study-intro-text">
+                        These case studies provide documented field performance and operating context to help engineers
+                        evaluate application fit, validate expected outcomes, and understand how Fluidstream technology
+                        performs under real operating conditions.
+                    </p>
+                </div>
 
-                <article class="case-card">
-                    <div class="case-top">
-                        <div class="case-product">VaporCommander™</div>
-                        <div class="case-location">Alberta, Canada</div>
-                    </div>
-                    <h3>100% uptime vapor recovery with no maintenance or service required to date.</h3>
-                    <p>Allied Energy II used VaporCommander™ to eliminate tank gas venting while operating through wet gas,
-                        variable
-                        gas flow, and winter conditions without service intervention.</p>
-                    <div class="case-metrics">
-                        <div class="case-metric"><strong>100%</strong><span>uptime since install</span></div>
-                        <div class="case-metric"><strong>16+</strong><span>months at report date</span></div>
-                        <div class="case-metric"><strong>0</strong><span>maintenance or service</span></div>
-                    </div>
-                    <div class="case-hook">A concise proof point for operators needing emissions compliance, wet-gas
-                        tolerance,
-                        low-touch operation, and winter reliability.</div>
-                    <div class="case-actions">
-                        <span class="case-tagline">Uptime and emissions</span>
-                        <a class="read-more" href="/case-studies/allied-energy-vaporcommander-vru">Read more</a>
-                    </div>
-                </article>
-                <article class="case-card">
-                    <div class="case-top">
-                        <div class="case-product">VaporCommander™</div>
-                        <div class="case-location">Saskatchewan, Canada</div>
-                    </div>
-                    <h3>Whitecap VRU deployment delivers continuous winter-ready vapor recovery.</h3>
-                    <p>Whitecap Resources deployed VaporCommander™ units for vapor recovery in Saskatchewan facilities where
-                        cold-weather reliability, entrained liquids, low suction pressure, and minimal operator intervention
-                        were key requirements.</p>
-                    <div class="case-metrics">
-                        <div class="case-metric"><strong>0%</strong><span>reported downtime</span></div>
-                        <div class="case-metric"><strong>5 min</strong><span>routine filter change</span></div>
-                        <div class="case-metric"><strong>2+</strong><span>units installed / planned</span></div>
-                    </div>
-                    <div class="case-hook">A strong fit for readers evaluating VRUs in cold climates, liquid-prone vapor
-                        streams, remote facilities, and applications where conventional dry-gas VRUs create winter
-                        maintenance risk.</div>
-                    <div class="case-actions">
-                        <span class="case-tagline">Winter VRU reliability</span>
-                        <a class="read-more" href="/case-studies/whitecap-vaporcommander-vru">Read more</a>
-                    </div>
-                </article>
+                <div class="case-grid my-12">
 
+                    <article class="case-card">
+                        <div class="case-top">
+                            <div class="case-product">MultiphaseCommander™</div>
+                            <div class="case-location">Alberta, Canada</div>
+                        </div>
+                        <h3>Two liquid-loaded wells restored to C$1.5M+ per year in recovered production.</h3>
+                        <p>A gas-driven MultiphaseCommander™ reduced backpressure, handled slugs and wide variable flow, and
+                            restored
+                            two nearly dead wells without adding separation-first infrastructure.</p>
+                        <div class="case-metrics">
+                            <div class="case-metric"><strong>~10e3</strong><span>m³/day gas restored</span></div>
+                            <div class="case-metric"><strong>C$1.5M+</strong><span>incremental annual revenue</span></div>
+                            <div class="case-metric"><strong>~95e3</strong><span>m³/day peak gas flow</span></div>
+                        </div>
+                        <div class="case-hook">Best for readers evaluating liquid-loaded wells, plunger-lift limits,
+                            variable
+                            multiphase
+                            flow, and production recovery without a larger facility build.</div>
+                        <div class="case-actions">
+                            <span class="case-tagline">Production recovery</span>
+                            <a class="read-more" href="/case-studies/multiphasecommander-production-recovery">Read more</a>
+                        </div>
+                    </article>
+
+                    <article class="case-card">
+                        <div class="case-top">
+                            <div class="case-product">VaporCommander™</div>
+                            <div class="case-location">Alberta, Canada</div>
+                        </div>
+                        <h3>More than 4.5 years of VRU operation with only one seal change to date.</h3>
+                        <p>VaporCommander™ operated in wet gas service through harsh Alberta winters, reaching approximately
+                            35
+                            months
+                            before the first seal change and continuing with negligible maintenance.</p>
+                        <div class="case-metrics">
+                            <div class="case-metric"><strong>4.5+</strong><span>years operation</span></div>
+                            <div class="case-metric"><strong>35</strong><span>months to first seal change</span></div>
+                            <div class="case-metric"><strong>1</strong><span>seal change to date</span></div>
+                        </div>
+                        <div class="case-hook">A strong reliability story for operators concerned about wet gas, seal life,
+                            cold-weather
+                            performance, and maintenance-heavy conventional VRUs.</div>
+                        <div class="case-actions">
+                            <span class="case-tagline">Long-run reliability</span>
+                            <a class="read-more" href="/case-studies/vaporcommander-4-5-year-reliability">Read more</a>
+                        </div>
+                    </article>
+
+                    <article class="case-card">
+                        <div class="case-top">
+                            <div class="case-product">VaporCommander™</div>
+                            <div class="case-location">Southern Alberta, Canada</div>
+                        </div>
+                        <h3>Vapor combustor replaced with gas capture and revenue-generating vapor recovery.</h3>
+                        <p>Instead of burning tank vapors, VaporCommander™ captured approximately 500,000 m³ of natural gas
+                            over
+                            12
+                            months and created more than C$46,000/year in estimated gas value.</p>
+                        <div class="case-metrics">
+                            <div class="case-metric"><strong>500k</strong><span>m³/year gas captured</span></div>
+                            <div class="case-metric"><strong>C$46k+</strong><span>estimated annual gas value</span></div>
+                            <div class="case-metric"><strong>0</strong><span>cold-weather stoppages</span></div>
+                        </div>
+                        <div class="case-hook">Built for readers comparing VCUs, conventional VRUs, carbon exposure, active
+                            pressure
+                            control, and recovered gas economics.</div>
+                        <div class="case-actions">
+                            <span class="case-tagline">VCU replacement</span>
+                            <a class="read-more" href="/case-studies/vaporcommander-vcu-replacement">Read more</a>
+                        </div>
+                    </article>
+
+                    <article class="case-card">
+                        <div class="case-top">
+                            <div class="case-product">VaporCommander™</div>
+                            <div class="case-location">Alberta, Canada</div>
+                        </div>
+                        <h3>100% uptime vapor recovery with no maintenance or service required to date.</h3>
+                        <p>Allied Energy II used VaporCommander™ to eliminate tank gas venting while operating through wet
+                            gas,
+                            variable
+                            gas flow, and winter conditions without service intervention.</p>
+                        <div class="case-metrics">
+                            <div class="case-metric"><strong>100%</strong><span>uptime since install</span></div>
+                            <div class="case-metric"><strong>16+</strong><span>months at report date</span></div>
+                            <div class="case-metric"><strong>0</strong><span>maintenance or service</span></div>
+                        </div>
+                        <div class="case-hook">A concise proof point for operators needing emissions compliance, wet-gas
+                            tolerance,
+                            low-touch operation, and winter reliability.</div>
+                        <div class="case-actions">
+                            <span class="case-tagline">Uptime and emissions</span>
+                            <a class="read-more" href="/case-studies/allied-energy-vaporcommander-vru">Read more</a>
+                        </div>
+                    </article>
+                    <article class="case-card">
+                        <div class="case-top">
+                            <div class="case-product">VaporCommander™</div>
+                            <div class="case-location">Saskatchewan, Canada</div>
+                        </div>
+                        <h3>Whitecap VRU deployment delivers continuous winter-ready vapor recovery.</h3>
+                        <p>Whitecap Resources deployed VaporCommander™ units for vapor recovery in Saskatchewan facilities
+                            where
+                            cold-weather reliability, entrained liquids, low suction pressure, and minimal operator
+                            intervention
+                            were key requirements.</p>
+                        <div class="case-metrics">
+                            <div class="case-metric"><strong>0%</strong><span>reported downtime</span></div>
+                            <div class="case-metric"><strong>5 min</strong><span>routine filter change</span></div>
+                            <div class="case-metric"><strong>2+</strong><span>units installed / planned</span></div>
+                        </div>
+                        <div class="case-hook">A strong fit for readers evaluating VRUs in cold climates, liquid-prone vapor
+                            streams, remote facilities, and applications where conventional dry-gas VRUs create winter
+                            maintenance risk.</div>
+                        <div class="case-actions">
+                            <span class="case-tagline">Winter VRU reliability</span>
+                            <a class="read-more" href="/case-studies/whitecap-vaporcommander-vru">Read more</a>
+                        </div>
+                    </article>
+
+                </div>
             </div>
+        </section>
         </div>
-    </section>
-    </div>
     </section>
 
 
