@@ -57,8 +57,8 @@
         }
 
         /* ================================
-                       HERO WITH BACKGROUND IMAGE
-                    ================================ */
+                                                               HERO WITH BACKGROUND IMAGE
+                                                            ================================ */
 
         .patent-page .hero {
             position: relative;
@@ -204,10 +204,10 @@
         }
 
         .patent-page .btn-secondary {
-            background: rgba(255, 255, 255, .10);
+            /* background: rgba(255, 255, 255, .10); */
             color: #ffffff;
             border-color: rgba(255, 255, 255, .28);
-            backdrop-filter: blur(10px);
+            /* backdrop-filter: blur(10px); */
         }
 
         .patent-page .btn-secondary:hover {
@@ -229,8 +229,8 @@
             overflow: hidden;
             padding: 18px 16px;
             border: 1px solid rgba(255, 255, 255, .16);
-            background: rgba(255, 255, 255, .12);
-            backdrop-filter: blur(12px);
+            /* background: rgba(255, 255, 255, .12); */
+            /* backdrop-filter: blur(12px); */
             color: #ffffff;
             box-shadow: 0 20px 48px rgba(0, 0, 0, .14);
             transition: transform .25s ease, border-color .25s ease, background .25s ease, box-shadow .25s ease;
@@ -291,9 +291,9 @@
             gap: 16px;
             align-content: start;
             padding: 24px;
-            border: 1px solid rgba(255, 255, 255, .16);
-            background: rgba(255, 255, 255, .10);
-            backdrop-filter: blur(16px);
+            /* border: 1px solid rgba(255, 255, 255, .16); */
+            /* background: rgba(255, 255, 255, .10); */
+            /* backdrop-filter: blur(16px); */
             box-shadow: 0 28px 70px rgba(0, 0, 0, .22);
         }
 
@@ -304,8 +304,8 @@
             min-height: 132px;
             padding: 18px;
             border: 1px solid rgba(255, 255, 255, .15);
-            background: rgba(255, 255, 255, .12);
-            backdrop-filter: blur(10px);
+            /* background: rgba(255, 255, 255, .12); */
+            /* backdrop-filter: blur(10px); */
             color: #ffffff;
             box-shadow: 0 18px 40px rgba(0, 0, 0, .10);
             transition: transform .25s ease, border-color .25s ease, background .25s ease, box-shadow .25s ease;
@@ -318,7 +318,7 @@
             right: 0;
             top: 0;
             height: 3px;
-            background: var(--fs-cyan);
+            background: #f1f8fa;
             transform: scaleX(0);
             transform-origin: left;
             transition: transform .25s cubic-bezier(.22, .61, .36, 1);
@@ -326,7 +326,7 @@
 
         .patent-page .visual-card:hover {
             transform: translateY(-4px);
-            border-color: rgba(21, 209, 255, .44);
+            border-color: rgba(177, 177, 177, 0.44);
             background: rgba(255, 255, 255, .17);
             box-shadow: 0 26px 56px rgba(0, 24, 220, .20);
         }
@@ -355,7 +355,7 @@
 
         .patent-page .visual-card h4 {
             margin: 0 0 9px;
-            color: var(--fs-cyan);
+            color: white;
             font-size: .82rem;
             font-weight: 850;
             letter-spacing: .08em;
@@ -392,8 +392,8 @@
         }
 
         /* ================================
-                       COMMON SECTION STYLES
-                    ================================ */
+                                                               COMMON SECTION STYLES
+                                                            ================================ */
 
         .patent-page .section-head {
             display: flex;
@@ -798,8 +798,8 @@
         }
 
         /* ================================
-                       RESPONSIVE
-                    ================================ */
+                                                               RESPONSIVE
+                                                            ================================ */
 
         @media (max-width: 1120px) {
             .patent-page .hero {
@@ -938,10 +938,7 @@
             <div class="inner">
                 <div class="hero-grid">
                     <div>
-                        <div class="eyebrow">
-                            <span class="dot"></span>
-                            Patented Technology
-                        </div>
+
 
                         <h1>Patent-backed operating methods for real oil and gas compression duty.</h1>
 

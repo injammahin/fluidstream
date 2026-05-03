@@ -15,13 +15,6 @@
       box-sizing: border-box
     }
 
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--ink);
-      background: #fff;
-      line-height: 1.62
-    }
 
     a {
       color: inherit
@@ -301,13 +294,13 @@
     }
 
     /* .swipe-left:hover:before,
-                                                                                                                                                                                        .swipe-left:hover:before,
-                                                                                                                                                                                        .model-card:hover:before,
-                                                                                                                                                                                        .spec-mobile-card:hover:before,
-                                                                                                                                                                                        .comparison .box:hover:before,
-                                                                                                                                                                                        .reality-item:hover:before {
-                                                                                                                                                                                          opacity: 1;
-                                                                                                                                                                                        } */
+                                                                                                                                                                                            .swipe-left:hover:before,
+                                                                                                                                                                                            .model-card:hover:before,
+                                                                                                                                                                                            .spec-mobile-card:hover:before,
+                                                                                                                                                                                            .comparison .box:hover:before,
+                                                                                                                                                                                            .reality-item:hover:before {
+                                                                                                                                                                                              opacity: 1;
+                                                                                                                                                                                            } */
 
     .swipe-left:hover:after,
     .model-card:hover:after,
@@ -318,8 +311,8 @@
     }
 
     /* .swipe-left:hover:after {
-                                                                                                                                                                                      right: 155%;
-                                                                                                                                                                                    } */
+                                                                                                                                                                                          right: 155%;
+                                                                                                                                                                                        } */
 
     .hero-card:hover {
       box-shadow: 0 26px 56px rgba(0, 24, 220, .18);
@@ -327,14 +320,14 @@
     }
 
     /* .swipe-left:hover,
-                                                                                                                                                                                  .swipe-left:hover,
-                                                                                                                                                                                  .model-card:hover,
-                                                                                                                                                                                  .spec-mobile-card:hover,
-                                                                                                                                                                                  .comparison .box:hover,
-                                                                                                                                                                                  .reality-item:hover {
-                                                                                                                                                                                    box-shadow: 0 24px 52px rgba(13, 32, 84, .12);
-                                                                                                                                                                                    border-color: #b9d0ff;
-                                                                                                                                                                                  } */
+                                                                                                                                                                                      .swipe-left:hover,
+                                                                                                                                                                                      .model-card:hover,
+                                                                                                                                                                                      .spec-mobile-card:hover,
+                                                                                                                                                                                      .comparison .box:hover,
+                                                                                                                                                                                      .reality-item:hover {
+                                                                                                                                                                                        box-shadow: 0 24px 52px rgba(13, 32, 84, .12);
+                                                                                                                                                                                        border-color: #b9d0ff;
+                                                                                                                                                                                      } */
 
     .blue-fill:before {
       content: "";
@@ -385,9 +378,9 @@
     }
 
     /* 
-                                                                                                                                                                  .highlight-box:hover a {
-                                                                                                                                                                    color: #fff !important
-                                                                                                                                                                  } */
+                                                                                                                                                                      .highlight-box:hover a {
+                                                                                                                                                                        color: #fff !important
+                                                                                                                                                                      } */
 
     .cta-panel:hover {
       /* box-shadow: 0 24px 52px rgba(0, 24, 220, .18); */
@@ -617,13 +610,13 @@
     }
 
     /* .kicker mb-2 {
-                                                                                                                    font-size: 12px;
-                                                                                                                    letter-spacing: .11em;
-                                                                                                                    text-transform: uppercase;
-                                                                                                                    color: var(--blue);
-                                                                                                                    font-weight: 700;
-                                                                                                                    margin-bottom: 10px
-                                                                                                                  } */
+                                                                                                                        font-size: 12px;
+                                                                                                                        letter-spacing: .11em;
+                                                                                                                        text-transform: uppercase;
+                                                                                                                        color: var(--blue);
+                                                                                                                        font-weight: 700;
+                                                                                                                        margin-bottom: 10px
+                                                                                                                      } */
 
     h2 {
       margin: 0 0 16px;
@@ -1064,7 +1057,7 @@
 
   <header class="hero">
     <div class="wrap py-12">
-      <div class="eyebrow">CompressionCommander™ • Casing gas compression systems</div>
+      {{-- <div class="eyebrow">CompressionCommander™ • Casing gas compression systems</div> --}}
       <h1>Recover casing gas reliably in the wet, variable field conditions conventional packages struggle to handle.</h1>
       <div class="subhead">Capture low-pressure casing gas, reduce flaring, and support production optimization without
         forcing variable, liquid-prone service through gas-only compressor assumptions.</div>
@@ -1415,24 +1408,24 @@
       }
 
       /* .fs-cg-diff-head h2 {
-                                                      margin: 0;
-                                                      max-width: 760px;
-                                                      font-size: clamp(1.9rem, 3vw, 3rem);
-                                                      line-height: 1.05;
-                                                      letter-spacing: -.04em;
-                                                      color: #1f1f21;
-                                                    } */
+                                                          margin: 0;
+                                                          max-width: 760px;
+                                                          font-size: clamp(1.9rem, 3vw, 3rem);
+                                                          line-height: 1.05;
+                                                          letter-spacing: -.04em;
+                                                          color: #1f1f21;
+                                                        } */
 
       /* .fs-cg-diff-head h2 span {
-                                                      color: var(--cg-blue);
-                                                    }
+                                                          color: var(--cg-blue);
+                                                        }
 
-                                                    .fs-cg-diff-head p {
-                                                      margin: 0;
-                                                      color: var(--cg-muted);
-                                                      font-size: 16px;
-                                                      line-height: 1.75;
-                                                    } */
+                                                        .fs-cg-diff-head p {
+                                                          margin: 0;
+                                                          color: var(--cg-muted);
+                                                          font-size: 16px;
+                                                          line-height: 1.75;
+                                                        } */
 
       .fs-cg-diff-summary {
         display: grid;
@@ -1878,20 +1871,20 @@
       }
 
       /* .fs-ms-section-head h2 {
-                                                                          font-size: clamp(30px, 3.2vw, 46px);
-                                                                          line-height: 1.02;
-                                                                          margin: 0 0 14px;
-                                                                          letter-spacing: -.035em;
-                                                                          color: var(--ink);
-                                                                        } */
+                                                                              font-size: clamp(30px, 3.2vw, 46px);
+                                                                              line-height: 1.02;
+                                                                              margin: 0 0 14px;
+                                                                              letter-spacing: -.035em;
+                                                                              color: var(--ink);
+                                                                            } */
       /* 
-                                                                      .fs-ms-lead {
-                                                                        font-size: 17px;
-                                                                        color: #56647a;
-                                                                        max-width: 860px;
-                                                                        margin: 0;
-                                                                        line-height: 1.65;
-                                                                      } */
+                                                                          .fs-ms-lead {
+                                                                            font-size: 17px;
+                                                                            color: #56647a;
+                                                                            max-width: 860px;
+                                                                            margin: 0;
+                                                                            line-height: 1.65;
+                                                                          } */
 
       .fs-ms-spec-note {
         margin: 14px 0 0;

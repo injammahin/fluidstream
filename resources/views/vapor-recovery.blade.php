@@ -17,14 +17,6 @@
       box-sizing: border-box
     }
 
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--ink);
-      background: #fff;
-      line-height: 1.62
-    }
-
     a {
       color: inherit
     }
@@ -43,11 +35,11 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(2, 8, 23, .38) url(/img/hero/vapor-recovery-winter.jpg);
+      /* background: rgba(2, 8, 23, .38) url(/img/hero/vapor-recovery-winter.jpg); */
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      transform: scaleX(-1) scale(1.03);
+      /* transform: scaleX(-1) scale(1.03); */
       z-index: -2;
     }
 
@@ -55,7 +47,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background-color: #0206177a;
+      background-color: #0206174a;
       z-index: -1;
       pointer-events: none;
     }
@@ -502,14 +494,14 @@
     }
 
     /* 
-                                                                                                      .kicker {
-                                                                                                        font-size: 12px;
-                                                                                                        letter-spacing: .11em;
-                                                                                                        text-transform: uppercase;
-                                                                                                        color: var(--blue);
-                                                                                                        font-weight: 700;
-                                                                                                        margin-bottom: 10px
-                                                                                                      } */
+                                                                                                                                                .kicker {
+                                                                                                                                                  font-size: 12px;
+                                                                                                                                                  letter-spacing: .11em;
+                                                                                                                                                  text-transform: uppercase;
+                                                                                                                                                  color: var(--blue);
+                                                                                                                                                  font-weight: 700;
+                                                                                                                                                  margin-bottom: 10px
+                                                                                                                                                } */
 
     h2 {
       margin: 0 0 16px;
@@ -750,10 +742,10 @@
     }
 
     /* .cta {
-                                                                                                                                background: linear-gradient(120deg, #061760, #0018dc 56%, #0c79cf);
-                                                                                                                                color: #fff;
-                                                                                                                                padding: 72px 0
-                                                                                                                              } */
+                                                                                                                                                                          background: linear-gradient(120deg, #061760, #0018dc 56%, #0c79cf);
+                                                                                                                                                                          color: #fff;
+                                                                                                                                                                          padding: 72px 0
+                                                                                                                                                                        } */
 
     .cta-box {
       display: grid;
@@ -763,16 +755,16 @@
     }
 
     /* .cta h2 {
-                                                                                                                                  color: #fff;
-                                                                                                                                  margin-bottom: 14px
-                                                                                                                                }
+                                                                                                                                                                            color: #fff;
+                                                                                                                                                                            margin-bottom: 14px
+                                                                                                                                                                          }
 
-                                                                                                                                .cta p {
-                                                                                                                                  margin: 0;
-                                                                                                                                  color: #e3ecff;
-                                                                                                                                  font-size: 18px;
-                                                                                                                                  max-width: 780px
-                                                                                                                                } */
+                                                                                                                                                                          .cta p {
+                                                                                                                                                                            margin: 0;
+                                                                                                                                                                            color: #e3ecff;
+                                                                                                                                                                            font-size: 18px;
+                                                                                                                                                                            max-width: 780px
+                                                                                                                                                                          } */
 
     .cta-panel {
       background: rgba(255, 255, 255, .1);
@@ -866,46 +858,387 @@
         font-size: 31px
       }
     }
+
+    /* ================================
+                                 VAPOR HERO LEFT TEXT + RIGHT CARDS
+                              ================================ */
+
+    header.hero.fs-vapor-hero {
+      position: relative !important;
+      isolation: isolate;
+      overflow: hidden;
+      min-height: calc(100vh - 108px);
+      display: flex;
+      align-items: stretch;
+      padding: 0 !important;
+      background: #07111f !important;
+      color: #ffffff;
+    }
+
+    /* Background image */
+    header.hero.fs-vapor-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+
+      background-image: url("/img/hero/vru facility-with-pump-jack-truck.png");
+      background-size: cover;
+      background-position: center bottom;
+      background-repeat: no-repeat;
+
+      transform: none !important;
+      transform-origin: center;
+    }
+
+    /* Softer right and bottom overlay so background remains visible */
+    header.hero.fs-vapor-hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+
+      /* background:
+                        linear-gradient(90deg,
+                          rgba(2, 6, 23, 0.92) 0%,
+                          rgba(2, 6, 23, 0.82) 34%,
+                          rgba(2, 6, 23, 0.42) 62%,
+                          rgba(2, 6, 23, 0.10) 100%),
+                        linear-gradient(180deg,
+                          rgba(2, 6, 23, 0.10) 0%,
+                          rgba(2, 6, 23, 0.16) 68%,
+                          rgba(2, 6, 23, 0.04) 100%); */
+    }
+
+    /* Main hero wrapper */
+    header.hero.fs-vapor-hero>.fs-vapor-hero-wrap {
+      position: relative;
+      z-index: 2;
+
+      width: min(calc(100% - 40px), 1200px);
+      max-width: 1200px;
+      min-height: calc(100vh - 108px);
+
+      display: flex;
+      align-items: center;
+
+      padding-top: 72px !important;
+      padding-bottom: clamp(115px, 15vh, 170px) !important;
+    }
+
+    /* Two-column layout */
+    .fs-vapor-hero-layout {
+      position: absolute;
+      top: 34px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: minmax(0, 650px) minmax(300px, 380px);
+      gap: clamp(48px, 7vw, 110px);
+      align-items: start;
+    }
+
+    /* Left text must not cross into right card area */
+    .fs-vapor-hero-copy {
+      max-width: 650px;
+    }
+
+    header.hero.fs-vapor-hero .eyebrow {
+      display: inline-block;
+      margin-bottom: 14px;
+
+      color: #bfeeff !important;
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    header.hero.fs-vapor-hero h1 {
+      max-width: 640px;
+      margin: 0 0 18px;
+
+      color: #ffffff !important;
+      font-size: clamp(46px, 4.4vw, 74px);
+      line-height: .98;
+      letter-spacing: -0.06em;
+      font-weight: 800;
+    }
+
+    header.hero.fs-vapor-hero .subhead {
+      max-width: 680px;
+      margin: -11px 0 22px;
+      color: #e5f1ff !important;
+      font-size: clamp(19px, 1vw, 18px);
+      line-height: 1.26;
+      font-weight: 800;
+    }
+
+    header.hero.fs-vapor-hero .hero-copy {
+      max-width: 670px;
+      margin: 0 0 26px;
+
+      color: rgba(237, 245, 255, 0.88) !important;
+      font-size: 18px;
+      line-height: 1.72;
+    }
+
+    header.hero.fs-vapor-hero .patent-note {
+      max-width: 650px;
+      margin: 16px 0 24px;
+      padding: 15px 18px;
+      border: 1px solid #d7d7d7;
+      border-left: 4px solid #15d1ff;
+      border-radius: 0 10px 10px 0;
+      /* background: rgba(255, 255, 255, 0.12); */
+      /* backdrop-filter: blur(10px); */
+      -webkit-backdrop-filter: blur(10px);
+
+      color: rgba(255, 255, 255, 0.88);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    header.hero.fs-vapor-hero .patent-note a {
+      color: #ffffff;
+      font-weight: 800;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    header.hero.fs-vapor-hero .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 4px;
+      margin-bottom: 0 !important;
+    }
+
+    /* Right side 3 cards */
+    .fs-vapor-hero-cards {
+      width: 100%;
+      max-width: 370px;
+      justify-self: end;
+
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+
+      transform: translateY(38px);
+    }
+
+    header.hero.fs-vapor-hero .hero-card {
+      position: relative;
+      overflow: hidden;
+
+      min-height: 150px;
+      padding: 22px 24px;
+
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.10);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+
+      color: #ffffff;
+      box-shadow: 0 22px 54px rgba(0, 0, 0, 0.16);
+
+      transition:
+        transform 0.28s ease,
+        border-color 0.28s ease,
+        background 0.28s ease,
+        box-shadow 0.28s ease;
+    }
+
+    header.hero.fs-vapor-hero .hero-card::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 4px;
+
+      background: #15d1ff;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.28s ease;
+    }
+
+    header.hero.fs-vapor-hero .hero-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(21, 209, 255, 0.48);
+      background: rgba(255, 255, 255, 0.16);
+      box-shadow: 0 30px 64px rgba(0, 24, 220, 0.20);
+    }
+
+    header.hero.fs-vapor-hero .hero-card:hover::after {
+      transform: scaleX(1);
+    }
+
+    header.hero.fs-vapor-hero .hero-card h3 {
+      margin: 0 0 10px;
+
+      color: #ffffff !important;
+      font-size: 22px;
+      line-height: 1.14;
+      letter-spacing: -0.035em;
+      font-weight: 800;
+    }
+
+    header.hero.fs-vapor-hero .hero-card p {
+      margin: 0;
+
+      color: rgba(232, 244, 255, 0.90) !important;
+      font-size: 15px;
+      line-height: 1.58;
+    }
+
+    /* Tablet */
+    @media (max-width: 1080px) {
+      header.hero.fs-vapor-hero {
+        min-height: auto;
+      }
+
+      header.hero.fs-vapor-hero>.fs-vapor-hero-wrap {
+        min-height: auto;
+        padding-top: 72px !important;
+        padding-bottom: 72px !important;
+      }
+
+      .fs-vapor-hero-layout {
+        grid-template-columns: 1fr;
+        gap: 34px;
+      }
+
+      .fs-vapor-hero-copy {
+        max-width: 760px;
+      }
+
+      .fs-vapor-hero-cards {
+        max-width: 100%;
+        justify-self: start;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        transform: none;
+      }
+
+      header.hero.fs-vapor-hero::after {
+        /* background:
+                          linear-gradient(90deg,
+                            rgba(2, 6, 23, 0.92) 0%,
+                            rgba(2, 6, 23, 0.78) 58%,
+                            rgba(2, 6, 23, 0.52) 100%); */
+      }
+    }
+
+    /* Mobile */
+    @media (max-width: 760px) {
+      header.hero.fs-vapor-hero::before {
+        background-position: center bottom;
+      }
+
+      header.hero.fs-vapor-hero::after {
+        background:
+          linear-gradient(180deg,
+            rgba(2, 6, 23, 0.94) 0%,
+            rgba(2, 6, 23, 0.84) 54%,
+            rgba(2, 6, 23, 0.62) 100%);
+      }
+
+      header.hero.fs-vapor-hero>.fs-vapor-hero-wrap {
+        width: min(calc(100% - 30px), 1200px);
+        padding-top: 58px !important;
+        padding-bottom: 52px !important;
+      }
+
+      header.hero.fs-vapor-hero h1 {
+        font-size: 40px;
+        line-height: 1.03;
+      }
+
+      header.hero.fs-vapor-hero .subhead {
+        font-size: 21px;
+      }
+
+      header.hero.fs-vapor-hero .hero-copy {
+        font-size: 16px;
+      }
+
+      .fs-vapor-hero-cards {
+        grid-template-columns: 1fr;
+      }
+
+      header.hero.fs-vapor-hero .hero-card {
+        min-height: auto;
+      }
+
+      header.hero.fs-vapor-hero .btn {
+        width: 100%;
+      }
+    }
   </style>
 
 
-  <header class="hero">
-    <div class="wrap py-12">
-      <div class="eyebrow">VaporCommander™ • Multiphase vapor recovery</div>
-      <h1>Recover valuable vapor where conventional VRUs lose fit.</h1>
-      <div class="subhead">Capture vapor in wet, unstable, hard-service conditions without forcing the stream through
-        gas-only assumptions.</div>
-      <p class="hero-copy">
-        VaporCommander™ is built for field vapor streams that do not stay clean, dry, and predictable. It combines
-        multiphase compression, sealed hazardous-service design, and autonomous controls to recover gas where liquids,
-        slugs, upset conditions, and changing gas quality make conventional VRUs difficult to justify, maintain, or keep
-        online.
-      </p>
-      <div class="patent-note">
-        Supported by patented operating methods for liquid-influenced compression behavior, including
-        <a href="/patented-technology#us11098709b2">US11098709B2</a>.
-      </div>
-      <div class="btn-row mt-5">
-        <a class="btn btn-primary" href="#specifications">View specifications</a>
-        <a class="btn btn-secondary" href="#comparison">See the difference</a>
-      </div>
+  <header class="hero fs-vapor-hero">
+    <div class="wrap fs-vapor-hero-wrap">
+      <div class="fs-vapor-hero-layout">
 
-      <div class="hero-grid">
-        <div class="hero-card interactive-card ">
-          <h3>Broader site applicability</h3>
-          <p>Recover vapor in field conditions that are too wet, unstable, or maintenance-intensive for conventional
-            gas-only vapor recovery approaches.</p>
+        {{-- Left Text --}}
+        <div class="fs-vapor-hero-copy">
+
+          <h1>Recover valuable vapor where conventional VRUs lose fit.</h1>
+
+          <div class="subhead">
+            Capture vapor in wet, unstable, hard-service conditions without forcing the stream through gas-only
+            assumptions.
+          </div>
+
+          <p class="hero-copy">
+            VaporCommander™ is built for field vapor streams that do not stay clean, dry, and predictable. It combines
+            multiphase compression, sealed hazardous-service design, and autonomous controls to recover gas where liquids,
+            slugs, upset conditions, and changing gas quality make conventional VRUs difficult to justify, maintain, or
+            keep
+            online.
+          </p>
+
+          <div class="patent-note">
+            Supported by patented operating methods for liquid-influenced compression behavior, including
+            <a href="/patented-technology#us11098709b2">US11098709B2</a>.
+          </div>
+
+          <div class="btn-row mt-5">
+            <a class="btn btn-primary" href="#specifications">View specifications</a>
+            <a class="btn btn-secondary" href="#comparison">See the difference</a>
+          </div>
         </div>
-        <div class="hero-card interactive-card ">
-          <h3>Lower maintenance operation</h3>
-          <p>Autonomous controls, wear-aware sealing, and multiphase handling reduce intervention and support longer-life
-            field performance.</p>
+
+        {{-- Right Cards --}}
+        <div class="fs-vapor-hero-cards">
+          <div class="hero-card interactive-card">
+            <h3>Broader site applicability</h3>
+            <p>
+              Recover vapor in field conditions that are too wet, unstable, or maintenance-intensive for conventional
+              gas-only vapor recovery approaches.
+            </p>
+          </div>
+
+          <div class="hero-card interactive-card">
+            <h3>Lower maintenance operation</h3>
+            <p>
+              Autonomous controls, wear-aware sealing, and multiphase handling reduce intervention and support longer-life
+              field performance.
+            </p>
+          </div>
+
+          <div class="hero-card interactive-card">
+            <h3>Emissions and gas monetization</h3>
+            <p>
+              Capture valuable vapor, reduce venting, and turn harder vapor recovery sites into practical operating
+              opportunities.
+            </p>
+          </div>
         </div>
-        <div class="hero-card interactive-card ">
-          <h3>Emissions and gas monetization</h3>
-          <p>Capture valuable vapor, reduce venting, and turn harder vapor recovery sites into practical operating
-            opportunities.</p>
-        </div>
+
       </div>
     </div>
   </header>
@@ -1094,9 +1427,9 @@
   </section>
   <style>
     /* ================================
-                 VAPOR BENEFITS SECTION
-                 2 COLUMNS x 3 ROWS + BIG CARD
-              ================================ */
+                                                           VAPOR BENEFITS SECTION
+                                                           2 COLUMNS x 3 ROWS + BIG CARD
+                                                        ================================ */
 
     .vapor-benefits-section {
       background: #ffffff;
@@ -1171,9 +1504,9 @@
       position: absolute;
       inset: 0;
       /* background: linear-gradient(135deg,
-                  rgba(0, 24, 220, .045) 0%,
-                  rgba(21, 209, 255, .10) 48%,
-                  rgba(255, 255, 255, 0) 100%); */
+                                                            rgba(0, 24, 220, .045) 0%,
+                                                            rgba(21, 209, 255, .10) 48%,
+                                                            rgba(255, 255, 255, 0) 100%); */
       opacity: 0;
       pointer-events: none;
       transition: opacity .25s ease;
@@ -1433,24 +1766,24 @@
       }
 
       /* .fs-vru-diff-head h2 {
-                                                      margin: 0;
-                                                      max-width: 760px;
-                                                      font-size: clamp(1.9rem, 3vw, 3rem);
-                                                      line-height: 1.05;
-                                                      letter-spacing: -.04em;
-                                                      color: #1f1f21;
-                                                    } */
+                                                                                                margin: 0;
+                                                                                                max-width: 760px;
+                                                                                                font-size: clamp(1.9rem, 3vw, 3rem);
+                                                                                                line-height: 1.05;
+                                                                                                letter-spacing: -.04em;
+                                                                                                color: #1f1f21;
+                                                                                              } */
 
       .fs-vru-diff-head h2 span {
         color: var(--vru-blue);
       }
 
       /* .fs-vru-diff-head p {
-                                                    margin: 0;
-                                                    color: var(--vru-muted);
-                                                    font-size: 16px;
-                                                    line-height: 1.75;
-                                                  } */
+                                                                                              margin: 0;
+                                                                                              color: var(--vru-muted);
+                                                                                              font-size: 16px;
+                                                                                              line-height: 1.75;
+                                                                                            } */
 
       .fs-vru-diff-summary {
         display: grid;
@@ -1729,8 +2062,8 @@
       }
 
       /* ================================
-                       VAPOR RECOVERY HERO FULL IMAGE FIX
-                    ================================ */
+                                                                 VAPOR RECOVERY HERO FULL IMAGE FIX
+                                                              ================================ */
 
       header.hero {
         position: relative;
@@ -1753,12 +2086,12 @@
         inset: 0;
         z-index: -2;
 
-        background-image: url("/img/hero/vapor-recovery-winter.jpg");
+        background-image: url("/img/hero/vru facility-with-pump-jack-truck.png");
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
 
-        transform: scaleX(-1) scale(1.04);
+        /* transform: scaleX(-1) scale(1.04); */
         transform-origin: center;
       }
 
@@ -1770,12 +2103,7 @@
         z-index: -1;
         pointer-events: none;
 
-        background:
-          linear-gradient(90deg,
-            rgba(2, 6, 23, 0.88) 0%,
-            rgba(2, 6, 23, 0.74) 46%,
-            rgba(2, 6, 23, 0.50) 100%),
-          radial-gradient(circle at 82% 18%, rgba(21, 209, 255, 0.16), transparent 30%);
+        /* background: linear-gradient(90deg, rgba(2, 6, 23, 0.88) 0%, rgb(2 6 23 / 59%) 46%, rgb(2 6 23 / 9%) 100%), radial-gradient(circle at 82% 18%, rgba(21, 209, 255, 0.16), transparent 30%); */
       }
 
       /* Hero content wrapper */
@@ -1848,8 +2176,8 @@
 
         border-left: 4px solid #15d1ff;
         border-radius: 0 10px 10px 0;
-        background: rgba(255, 255, 255, 0.12);
-        backdrop-filter: blur(10px);
+        /* background: rgba(255, 255, 255, 0.12); */
+        /* backdrop-filter: blur(10px); */
 
         color: rgba(255, 255, 255, 0.88);
         font-size: 15px;
@@ -1991,8 +2319,8 @@
       }
 
       /* ================================
-                       RESPONSIVE HERO
-                    ================================ */
+                                                                 RESPONSIVE HERO
+                                                              ================================ */
 
       @media (max-width: 1080px) {
         header.hero {
@@ -2026,7 +2354,7 @@
         header.hero::before {
           background-size: cover;
           background-position: center center;
-          transform: scaleX(-1) scale(1.06);
+          /* transform: scaleX(-1) scale(1.06); */
         }
 
         header.hero::after {
@@ -2210,12 +2538,12 @@
       }
 
       /* .fs-vc-spec-head h2 {
-                                                                        font-size: clamp(30px, 3.2vw, 46px);
-                                                                        line-height: 1.02;
-                                                                        margin: 0 0 14px;
-                                                                        letter-spacing: -.035em;
-                                                                        color: var(--vc-ink);
-                                                                      } */
+                                                                                                                  font-size: clamp(30px, 3.2vw, 46px);
+                                                                                                                  line-height: 1.02;
+                                                                                                                  margin: 0 0 14px;
+                                                                                                                  letter-spacing: -.035em;
+                                                                                                                  color: var(--vc-ink);
+                                                                                                                } */
 
       .fs-vc-spec-lead {
         font-size: 17px;
@@ -2520,8 +2848,8 @@
 
       @media(max-width:720px) {
         /* .fs-vc-spec-section {
-                                            padding: 46px 0;
-                                          } */
+                                                                                      padding: 46px 0;
+                                                                                    } */
 
         .fs-vc-spec-wrap {
           width: min(100% - 30px, 1200px);

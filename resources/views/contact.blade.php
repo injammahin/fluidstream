@@ -250,12 +250,12 @@
         }
 
         /* .fs-contact-info-card>*,
-                    .fs-contact-form-card>*,
-                    .fs-contact-route-card>*,
-                    .fs-contact-tech-card>* {
-                        position: relative;
-                        z-index: 3;
-                    } */
+                        .fs-contact-form-card>*,
+                        .fs-contact-route-card>*,
+                        .fs-contact-tech-card>* {
+                            position: relative;
+                            z-index: 3;
+                        } */
 
         .fs-contact-info-card:hover,
         .fs-contact-form-card:hover,
@@ -453,21 +453,21 @@
 
         /* Moving shine effect only for route cards */
         /* .fs-contact-route-card::after {
-                        content: "";
-                        position: absolute;
-                        left: -70%;
-                        top: 0;
-                        width: 55%;
-                        height: 100%;
-                        background: linear-gradient(90deg, transparent, rgba(21, 209, 255, .35), transparent);
-                        transform: skewX(-18deg);
-                        transition: left .55s ease;
-                        z-index: 1;
-                    } */
+                            content: "";
+                            position: absolute;
+                            left: -70%;
+                            top: 0;
+                            width: 55%;
+                            height: 100%;
+                            background: linear-gradient(90deg, transparent, rgba(21, 209, 255, .35), transparent);
+                            transform: skewX(-18deg);
+                            transition: left .55s ease;
+                            z-index: 1;
+                        } */
         /* 
-                    .fs-contact-route-card:hover::after {
-                        left: 120%;
-                    } */
+                        .fs-contact-route-card:hover::after {
+                            left: 120%;
+                        } */
 
         .fs-contact-route-card small {
             display: inline-flex;
@@ -571,7 +571,7 @@
         <section class="fs-contact-hero py-12">
             <div class="fs-contact-hero-inner">
                 <div class="fs-contact-hero-content">
-                    <div class="fs-contact-eyebrow">Contact Fluidstream</div>
+                    {{-- <div class="fs-contact-eyebrow">Contact Fluidstream</div> --}}
                     <h1>Let’s connect the right conversation to the right team.</h1>
                     <p>
                         Contact Fluidstream for general inquiries, sales discussions, partnerships, service support,

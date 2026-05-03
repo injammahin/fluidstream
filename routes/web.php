@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\SearchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,7 +13,7 @@ use App\Http\Controllers\ContactController;
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('/search', [SearchController::class, 'index'])->name('search');
 Route::view('/multiphase-compression', 'multiphase-compression');
 Route::view('/vapor-recovery', 'vapor-recovery');
 Route::view('/casing-gas-compression', 'casing-gas-compression');

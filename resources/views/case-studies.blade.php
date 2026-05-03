@@ -25,13 +25,6 @@
             scroll-behavior: smooth
         }
 
-        body {
-            margin: 0;
-            font-family: Inter, Arial, Helvetica, sans-serif;
-            color: var(--ink);
-            background: #fff;
-            line-height: 1.55
-        }
 
         a {
             color: inherit;
@@ -1040,8 +1033,8 @@
         }
 
         /* ================================
-                                                                           CASE STUDY INTRO SECTION
-                                                                        ================================ */
+                                                                                       CASE STUDY INTRO SECTION
+                                                                                    ================================ */
 
         .case-study-intro {
             max-width: 1180px;
@@ -1056,7 +1049,7 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.12em;
-            color:#0018dc;
+            color: #0018dc;
         }
 
         .case-study-intro-title {

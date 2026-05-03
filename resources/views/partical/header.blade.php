@@ -13,64 +13,257 @@
     $patentedTechnologyActive = request()->is('patented-technology');
     $aboutActive = request()->is('about-us') || request()->is('about');
     $contactActive = request()->is('contact');
+
+    /*
+        Static search index.
+        Add your real page content, case study title, case study keywords, and article text here.
+        Search will NOT show suggestions. It will redirect only after pressing Enter or Go.
+    */
+    $searchPages = [
+        [
+            'title' => 'Home',
+            'url' => url('/'),
+            'description' => 'Fluidstream main website page',
+            'keywords' => 'home fluidstream multiphase compression methane reduction oil production emissions',
+            'content' => 'Reduce methane emissions and increase oil production with Fluidstream technology. Field proven results for demanding applications.',
+        ],
+        [
+            'title' => 'Why Multiphase',
+            'url' => url('/multiphase-compression-technology'),
+            'description' => 'Why multiphase compression technology matters',
+            'keywords' => 'why multiphase multiphase compression multiphase pump oil gas emissions',
+            'content' => 'Multiphase compression supports liquid and gas handling, production optimization, methane reduction and lower maintenance field operation.',
+        ],
+        [
+            'title' => 'Technology',
+            'url' => url('/technology'),
+            'description' => 'Fluidstream technology overview',
+            'keywords' => 'technology fluidstream compressor pump engineering autonomous field system',
+            'content' => 'Fluidstream technology uses patented multiphase compression methods for autonomous field performance and reliable operation.',
+        ],
+        [
+            'title' => 'Patented Technology',
+            'url' => url('/patented-technology'),
+            'description' => 'Patented Fluidstream technology',
+            'keywords' => 'patented technology patent innovation compression pump system',
+            'content' => 'Patented technology for multiphase compression, vapor recovery, casing gas compression and emissions reduction.',
+        ],
+        [
+            'title' => 'About Us',
+            'url' => url('/about-us'),
+            'description' => 'Company information and background',
+            'keywords' => 'about us company team fluidstream background mission',
+            'content' => 'Fluidstream company profile, mission, technology background and industry focus.',
+        ],
+        [
+            'title' => 'Contact',
+            'url' => url('/contact'),
+            'description' => 'Contact Fluidstream',
+            'keywords' => 'contact quote inquiry email phone location support',
+            'content' => 'Contact Fluidstream for project inquiries, applications, technical discussion and business communication.',
+        ],
+        [
+            'title' => 'Multiphase Pump / Multiphase Compression',
+            'url' => url('/multiphase-compression'),
+            'description' => 'Multiphase pump and compression solution',
+            'keywords' => 'multiphase pump multiphase compression methane production optimization oil gas',
+            'content' => 'Reliable autonomous multiphase compression technology for methane reduction, production improvement and low maintenance field performance.',
+        ],
+        [
+            'title' => 'Vapor Recovery',
+            'url' => url('/vapor-recovery'),
+            'description' => 'Vapor recovery application',
+            'keywords' => 'vapor recovery venting emissions gas capture recovery tank vapor',
+            'content' => 'Capture valuable gas, reduce venting and emissions and improve operational efficiency with compact field ready vapor recovery systems.',
+        ],
+        [
+            'title' => 'Casing Gas Compression',
+            'url' => url('/casing-gas-compression'),
+            'description' => 'Casing gas compression application',
+            'keywords' => 'casing gas compression casing gas flaring low pressure gas production',
+            'content' => 'Compress low pressure casing gas to support production optimization, reduce flaring and unlock additional site value.',
+        ],
+        [
+            'title' => 'Case Studies',
+            'url' => url('/case-studies'),
+            'description' => 'Real-world case studies',
+            'keywords' => 'case studies results field performance proof points demanding applications production emissions',
+            'content' => 'Case studies include real world field applications, measurable production gains, emissions reduction, reliability improvements and documented Fluidstream performance.',
+        ],
+        [
+            'title' => 'Insights',
+            'url' => url('/insights'),
+            'description' => 'Technical insights and articles',
+            'keywords' => 'insights articles technical knowledge resources engineering compression fundamentals',
+            'content' => 'Technical content covering industry challenges, compression fundamentals, operating mechanics and engineering perspectives on Fluidstream performance.',
+        ],
+    ];
 @endphp
 
-<header x-data="{
-        mobileMenuOpen: false,
-        activeDesktopMenu: null,
-        closeTimer: null,
-        lastScrollY: 0,
-        headerHidden: false,
+<script>
+    window.fsHeaderNavigation = function () {
+        return {
+            mobileMenuOpen: false,
+            activeDesktopMenu: null,
+            closeTimer: null,
+            lastScrollY: 0,
+            headerHidden: false,
 
-        setupScroll() {
-            this.lastScrollY = window.pageYOffset || document.documentElement.scrollTop;
+            searchOpen: false,
+            searchQuery: '',
+            searchMessage: '',
+            searchSubmitted: false,
+            searchPages: @json($searchPages),
 
-            window.addEventListener('scroll', () => {
-                const currentY = window.pageYOffset || document.documentElement.scrollTop;
-                const diff = currentY - this.lastScrollY;
+            setupScroll() {
+                this.lastScrollY = window.pageYOffset || document.documentElement.scrollTop;
 
-                if (this.mobileMenuOpen || this.activeDesktopMenu) {
-                    this.headerHidden = false;
-                    this.lastScrollY = currentY;
+                window.addEventListener('scroll', () => {
+                    const currentY = window.pageYOffset || document.documentElement.scrollTop;
+                    const diff = currentY - this.lastScrollY;
+
+                    if (this.mobileMenuOpen || this.activeDesktopMenu || this.searchOpen) {
+                        this.headerHidden = false;
+                        this.lastScrollY = currentY;
+                        return;
+                    }
+
+                    if (currentY < 40) {
+                        this.headerHidden = false;
+                    } else if (diff > 8 && currentY > 120) {
+                        this.headerHidden = true;
+                        this.activeDesktopMenu = null;
+                        this.searchOpen = false;
+                    } else if (diff < -8) {
+                        this.headerHidden = false;
+                    }
+
+                    this.lastScrollY = Math.max(currentY, 0);
+                }, { passive: true });
+            },
+
+            normalizeText(value) {
+                return (value || '')
+                    .toString()
+                    .toLowerCase()
+                    .replace(/[^a-z0-9]+/gi, ' ')
+                    .replace(/\s+/g, ' ')
+                    .trim();
+            },
+
+            getSearchScore(page, query) {
+                const q = this.normalizeText(query);
+
+                if (!q) {
+                    return 0;
+                }
+
+                const title = this.normalizeText(page.title);
+                const description = this.normalizeText(page.description);
+                const keywords = this.normalizeText(page.keywords);
+                const content = this.normalizeText(page.content);
+                const fullText = `${title} ${description} ${keywords} ${content}`;
+                const words = q.split(' ').filter(Boolean);
+
+                let score = 0;
+
+                if (title === q) score += 120;
+                if (title.startsWith(q)) score += 90;
+                if (title.includes(q)) score += 70;
+                if (keywords.includes(q)) score += 60;
+                if (description.includes(q)) score += 50;
+                if (content.includes(q)) score += 45;
+                if (fullText.includes(q)) score += 35;
+
+                words.forEach((word) => {
+                    if (title.includes(word)) score += 22;
+                    if (keywords.includes(word)) score += 18;
+                    if (description.includes(word)) score += 14;
+                    if (content.includes(word)) score += 10;
+                });
+
+                return score;
+            },
+
+            submitSearch() {
+                const q = this.searchQuery.trim();
+
+                this.searchSubmitted = true;
+                this.searchMessage = '';
+
+                if (!q) {
+                    this.searchMessage = 'Please type something to search.';
                     return;
                 }
 
-                if (currentY < 40) {
-                    this.headerHidden = false;
-                } else if (diff > 8 && currentY > 120) {
-                    this.headerHidden = true;
-                    this.activeDesktopMenu = null;
-                } else if (diff < -8) {
-                    this.headerHidden = false;
+                window.location.href = `{{ route('search') }}?q=${encodeURIComponent(q)}`;
+            },
+            resetSearchMessage() {
+                this.searchSubmitted = false;
+                this.searchMessage = '';
+            },
+
+            openMenu(menu) {
+                clearTimeout(this.closeTimer);
+                this.searchOpen = false;
+                this.activeDesktopMenu = menu;
+            },
+
+            closeMenu(menu) {
+                this.closeTimer = setTimeout(() => {
+                    if (this.activeDesktopMenu === menu) {
+                        this.activeDesktopMenu = null;
+                    }
+                }, 120);
+            },
+
+            toggleMenu(menu) {
+                this.searchOpen = false;
+                this.activeDesktopMenu = this.activeDesktopMenu === menu ? null : menu;
+            },
+
+            openSearch() {
+                this.activeDesktopMenu = null;
+                this.mobileMenuOpen = false;
+                this.searchOpen = true;
+
+                this.$nextTick(() => {
+                    const input = this.$refs.desktopSearchInput;
+
+                    if (input) {
+                        input.focus();
+                    }
+                });
+            },
+
+            toggleSearch() {
+                if (this.searchOpen) {
+                    this.closeSearch();
+                } else {
+                    this.openSearch();
                 }
+            },
 
-                this.lastScrollY = Math.max(currentY, 0);
-            }, { passive: true });
-        },
+            closeSearch() {
+                this.searchOpen = false;
+                this.searchMessage = '';
+                this.searchSubmitted = false;
+            },
 
-        openMenu(menu) {
-            clearTimeout(this.closeTimer);
-            this.activeDesktopMenu = menu;
-        },
+            closeAllMenus() {
+                this.activeDesktopMenu = null;
+                this.mobileMenuOpen = false;
+                this.searchOpen = false;
+                this.searchMessage = '';
+                this.searchSubmitted = false;
+            }
+        };
+    };
+</script>
 
-        closeMenu(menu) {
-            this.closeTimer = setTimeout(() => {
-                if (this.activeDesktopMenu === menu) {
-                    this.activeDesktopMenu = null;
-                }
-            }, 120);
-        },
-
-        toggleMenu(menu) {
-            this.activeDesktopMenu = this.activeDesktopMenu === menu ? null : menu;
-        },
-
-        closeAllMenus() {
-            this.activeDesktopMenu = null;
-            this.mobileMenuOpen = false;
-        }
-    }" x-init="setupScroll()" :class="headerHidden ? 'fs-header-hidden' : 'fs-header-visible'"
-    @keydown.escape.window="closeAllMenus()" class="fs-header">
+<header x-data="fsHeaderNavigation()" x-init="setupScroll()"
+    :class="headerHidden ? 'fs-header-hidden' : 'fs-header-visible'" @keydown.escape.window="closeAllMenus()"
+    class="fs-header">
     <div class="fs-header-inner">
         <div class="fs-header-grid">
 
@@ -84,9 +277,11 @@
             {{-- Topbar --}}
             <div class="fs-topbar-panel">
                 <nav class="fs-topbar-grid" aria-label="Top navigation">
+                    <span class="fs-topbar-bottom-line" aria-hidden="true"></span>
+
                     <a href="{{ url('/patented-technology') }}"
                         class="fs-topbar-link fs-topbar-patent {{ $patentedTechnologyActive ? 'fs-topbar-link-active' : '' }}">
-                        Patented Technology
+                        Patents
                     </a>
 
                     <a href="{{ url('/about-us') }}"
@@ -99,6 +294,43 @@
                             class="fs-topbar-contact {{ $contactActive ? 'fs-topbar-contact-active' : '' }}">
                             Contact
                         </a>
+                    </div>
+
+                    <div class="fs-topbar-search-cell" @click.outside="if (searchOpen) closeSearch()">
+                        <button type="button" class="fs-topbar-search-button"
+                            :class="searchOpen ? 'fs-topbar-search-button-active' : ''" @click.prevent="toggleSearch()"
+                            :aria-expanded="searchOpen.toString()" aria-label="Search">
+                            <svg x-show="!searchOpen" xmlns="http://www.w3.org/2000/svg" class="fs-search-icon"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="m21 21-4.35-4.35M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Z" />
+                            </svg>
+
+                            <svg x-show="searchOpen" x-cloak xmlns="http://www.w3.org/2000/svg" class="fs-search-icon"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+
+                        <div x-show="searchOpen" x-transition:enter="transition ease-out duration-160"
+                            x-transition:enter-start="opacity-0 translate-y-2"
+                            x-transition:enter-end="opacity-100 translate-y-0"
+                            x-transition:leave="transition ease-in duration-120"
+                            x-transition:leave-start="opacity-100 translate-y-0"
+                            x-transition:leave-end="opacity-0 translate-y-2" x-cloak class="fs-search-popover">
+                            <form class="fs-search-form" @submit.prevent="submitSearch()">
+                                <input x-ref="desktopSearchInput" x-model="searchQuery" @input="resetSearchMessage()"
+                                    type="search" class="fs-search-input" placeholder="Search pages..."
+                                    autocomplete="off">
+
+                                <button type="submit" class="fs-search-submit">
+                                    Go
+                                </button>
+                            </form>
+
+                            <p x-show="searchSubmitted && searchMessage" x-text="searchMessage"
+                                class="fs-search-message"></p>
+                        </div>
                     </div>
                 </nav>
             </div>
@@ -206,8 +438,7 @@
 
                             <p class="fs-mega-copy">
                                 Capture valuable gas, reduce venting and emissions, and improve operational efficiency
-                                with
-                                compact, field-ready recovery systems.
+                                with compact, field-ready recovery systems.
                             </p>
 
                             <span class="fs-mega-view">
@@ -312,6 +543,25 @@
         x-transition:leave-end="opacity-0 -translate-y-2" x-cloak class="fs-mobile-menu-panel">
         <div class="fs-mobile-menu-inner">
             <nav class="fs-mobile-nav">
+
+                <div class="fs-mobile-search-box">
+                    <form class="fs-mobile-search-form" @submit.prevent="submitSearch()">
+                        <input x-model="searchQuery" @input="resetSearchMessage()" type="search"
+                            class="fs-mobile-search-input" placeholder="Search pages..." autocomplete="off">
+
+                        <button type="submit" class="fs-mobile-search-submit" aria-label="Search">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="fs-mobile-search-icon" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="m21 21-4.35-4.35M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Z" />
+                            </svg>
+                        </button>
+                    </form>
+
+                    <p x-show="searchSubmitted && searchMessage" x-text="searchMessage"
+                        class="fs-mobile-search-message"></p>
+                </div>
+
                 <a href="{{ url('/multiphase-compression-technology') }}"
                     class="fs-mobile-link {{ $multiphaseTechnologyActive ? 'fs-mobile-link-active' : '' }}">
                     Why Multiphase
@@ -409,9 +659,9 @@
 
     .fs-header {
         --fs-logo-col: clamp(330px, 23vw, 430px);
-        --fs-top-row: 40px;
-        --fs-main-row: 68px;
-        --fs-header-height: 108px;
+        --fs-top-row: 44px;
+        --fs-main-row: 70px;
+        --fs-header-height: 114px;
 
         position: fixed;
         inset: 0 0 auto 0;
@@ -468,47 +718,80 @@
     .fs-topbar-panel {
         grid-column: 2;
         grid-row: 1;
-        border-bottom: 1px solid #e7edf6;
+        height: var(--fs-top-row);
+        position: relative;
+        z-index: 30;
     }
 
-    .fs-topbar-grid,
-    .fs-desktop-nav-grid {
+    .fs-topbar-grid {
+        position: relative;
         display: grid;
         grid-template-columns:
-            minmax(260px, 1fr) minmax(145px, 200px) minmax(180px, 220px) minmax(145px, 200px) minmax(165px, 1fr);
-        align-items: center;
-        height: 100%;
+            minmax(240px, 1fr) minmax(170px, 220px) minmax(145px, 200px) minmax(150px, 220px) 72px;
+        align-items: stretch;
+        height: var(--fs-top-row);
+    }
+
+    .fs-topbar-bottom-line {
+        position: relative;
+        grid-column: 1 / 4;
+        grid-row: 1;
+        align-self: end;
+        height: 1px;
+        width: 100%;
+        background: #e7edf6;
+        pointer-events: none;
+        z-index: 1;
     }
 
     .fs-topbar-patent {
-        grid-column: 3;
+        grid-column: 2;
+        grid-row: 1;
     }
 
     .fs-topbar-about {
-        grid-column: 4;
+        grid-column: 3;
+        grid-row: 1;
+        border-right: 1px solid #e7edf6;
     }
 
     .fs-topbar-contact-cell {
+        grid-column: 4;
+        grid-row: 1;
+        position: relative;
+        z-index: 3;
+        height: var(--fs-top-row);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 18px;
+        border-left: 0;
+    }
+
+    .fs-topbar-search-cell {
         grid-column: 5;
+        grid-row: 1;
+        position: relative;
+        z-index: 4;
         height: var(--fs-top-row);
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        padding-left: 22px;
-        border-left: 1px solid #e7edf6;
     }
 
     .fs-topbar-link {
-        height: var(--fs-top-row);
+        position: relative;
+        z-index: 2;
+        height: var(--fs-top-row) !important;
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        padding: 0 22px;
+        padding: 0 20px;
         border-left: 1px solid #e7edf6;
         color: #334155;
-        font-size: 14px;
+        font-size: 14px !important;
         line-height: 1;
-        font-weight: 600;
+        font-weight: 600 !important;
         white-space: nowrap;
         text-align: center;
         transition: color .2s ease, background .2s ease;
@@ -521,7 +804,7 @@
     }
 
     .fs-topbar-contact {
-        height: 31px;
+        height: 32px;
         min-width: 126px;
         display: inline-flex;
         align-items: center;
@@ -529,9 +812,11 @@
         border: 1px solid #9aa8ff;
         border-radius: 999px;
         color: #0018dc;
+        background: #ffffff;
         font-size: 14px;
         font-weight: 700;
         line-height: 1;
+        white-space: nowrap;
         transition: all .2s ease;
     }
 
@@ -542,11 +827,106 @@
         color: #ffffff;
     }
 
+    .fs-topbar-search-button {
+        width: 46px;
+        height: 32px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #9aa8ff;
+        border-radius: 999px;
+        background: #ffffff;
+        color: #0018dc;
+        cursor: pointer;
+        transition: all .2s ease;
+    }
+
+    .fs-topbar-search-button:hover,
+    .fs-topbar-search-button-active {
+        background: #1028ea;
+        border-color: #1028ea;
+        color: #ffffff;
+    }
+
+    .fs-search-icon {
+        width: 17px;
+        height: 17px;
+    }
+
+    .fs-search-popover {
+        position: absolute;
+        top: calc(100% + 14px);
+        right: 0;
+        width: min(480px, calc(100vw - 36px));
+        padding: 20px;
+        border: 1px solid #e5edf7;
+        border-radius: 7px;
+        background: #ffffff;
+        box-shadow: 0 24px 54px rgba(15, 23, 42, 0.14);
+        text-align: left;
+    }
+
+    .fs-search-form {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .fs-search-input {
+        width: 100%;
+        height: 50px;
+        padding: 0 18px;
+        border: 1px solid #9aa8ff;
+        border-radius: 999px;
+        color: #0f172a;
+        background: #ffffff;
+        font-size: 16px;
+        font-weight: 500;
+        outline: none;
+        transition: border-color .2s ease, box-shadow .2s ease;
+    }
+
+    .fs-search-input:focus {
+        border-color: #1028ea;
+        box-shadow: 0 0 0 4px rgba(16, 40, 234, 0.10);
+    }
+
+    .fs-search-submit {
+        height: 50px;
+        min-width: 70px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 0;
+        border-radius: 999px;
+        background: #1028ea;
+        color: #ffffff;
+        font-size: 15px;
+        font-weight: 800;
+        cursor: pointer;
+    }
+
+    .fs-search-message {
+        margin: 12px 4px 0;
+        color: #64748b;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 1.4;
+    }
+
     .fs-mainnav-panel {
         grid-column: 2;
         grid-row: 2;
         position: relative;
         border-bottom: 1px solid #e7edf6;
+    }
+
+    .fs-desktop-nav-grid {
+        display: grid;
+        grid-template-columns:
+            minmax(240px, 1fr) minmax(145px, 200px) minmax(170px, 220px) minmax(145px, 200px) minmax(220px, 1fr);
+        align-items: center;
+        height: var(--fs-main-row);
     }
 
     .fs-nav-1 {
@@ -796,6 +1176,57 @@
         background: #ffffff;
     }
 
+    .fs-mobile-search-box {
+        padding: 6px;
+        border: 1px solid #e5edf7;
+        border-radius: 14px;
+        background: #f8fbff;
+    }
+
+    .fs-mobile-search-form {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .fs-mobile-search-input {
+        width: 100%;
+        height: 42px;
+        padding: 0 13px;
+        border: 1px solid #dbe5f2;
+        border-radius: 12px;
+        color: #0f172a;
+        background: #ffffff;
+        font-size: 14px;
+        font-weight: 600;
+        outline: none;
+    }
+
+    .fs-mobile-search-submit {
+        width: 42px;
+        height: 42px;
+        flex: 0 0 42px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 0;
+        border-radius: 12px;
+        background: #1028ea;
+        color: #ffffff;
+    }
+
+    .fs-mobile-search-icon {
+        width: 19px;
+        height: 19px;
+    }
+
+    .fs-mobile-search-message {
+        margin: 8px 4px 2px;
+        color: #64748b;
+        font-size: 13px;
+        font-weight: 600;
+    }
+
     .fs-mobile-link,
     .fs-mobile-toggle {
         width: 100%;
@@ -865,7 +1296,7 @@
     }
 
     .fs-header-spacer {
-        height: 108px;
+        height: 114px;
     }
 
     @media (max-width: 1500px) {
@@ -877,10 +1308,14 @@
             width: min(calc(100% - 48px), 1440px);
         }
 
-        .fs-topbar-grid,
+        .fs-topbar-grid {
+            grid-template-columns:
+                minmax(220px, 1fr) minmax(160px, 205px) minmax(130px, 180px) minmax(145px, 205px) 68px;
+        }
+
         .fs-desktop-nav-grid {
             grid-template-columns:
-                minmax(240px, 1fr) minmax(130px, 180px) minmax(165px, 205px) minmax(130px, 180px) minmax(150px, 1fr);
+                minmax(220px, 1fr) minmax(130px, 180px) minmax(160px, 205px) minmax(130px, 180px) minmax(200px, 1fr);
         }
 
         .fs-mega-right-3 {
@@ -901,10 +1336,14 @@
             height: 52px;
         }
 
-        .fs-topbar-grid,
+        .fs-topbar-grid {
+            grid-template-columns:
+                minmax(190px, 1fr) minmax(150px, 185px) minmax(120px, 160px) minmax(130px, 185px) 62px;
+        }
+
         .fs-desktop-nav-grid {
             grid-template-columns:
-                minmax(210px, 1fr) minmax(120px, 160px) minmax(150px, 185px) minmax(120px, 160px) minmax(135px, 1fr);
+                minmax(190px, 1fr) minmax(120px, 160px) minmax(150px, 185px) minmax(120px, 160px) minmax(160px, 1fr);
         }
 
         .fs-nav-link {
@@ -912,7 +1351,7 @@
         }
 
         .fs-topbar-link {
-            padding: 0 16px;
+            padding: 0 14px;
             font-size: 14px;
         }
 
@@ -923,7 +1362,12 @@
         }
 
         .fs-topbar-contact-cell {
-            padding-left: 14px;
+            padding: 0 12px;
+        }
+
+        .fs-topbar-search-button {
+            width: 44px;
+            height: 30px;
         }
 
         .fs-mega-left-title {
@@ -950,6 +1394,10 @@
     }
 
     @media (max-width: 1100px) {
+        .fs-header {
+            --fs-header-height: 74px;
+        }
+
         .fs-header-inner {
             width: min(calc(100% - 32px), 100%);
         }

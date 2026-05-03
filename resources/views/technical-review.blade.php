@@ -588,12 +588,139 @@
                     grid-template-columns: 1fr;
                 }
             }
+            /* =========================================
+   CONTACT / TECHNICAL REVIEW HERO ALIGN FIX
+   Left text inside centered container
+========================================= */
+
+.tr-hero {
+    position: relative;
+    overflow: hidden;
+    background: #0018dc;
+    color: #ffffff;
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+}
+
+.tr-hero::after {
+    display: none;
+}
+
+.tr-hero-inner {
+    width: min(1200px, calc(100% - 80px)) !important;
+    max-width: 1200px;
+    margin: 0 auto !important;
+    padding: 86px 0 82px !important;
+    text-align: left !important;
+}
+
+.tr-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0;
+    margin: 0 0 24px !important;
+    color: #15d1ff;
+    font-size: 13px;
+    line-height: 1.2;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .16em;
+}
+
+.tr-eyebrow::before,
+.tr-eyebrow::after {
+    display: none !important;
+    content: none !important;
+}
+
+.tr-hero h1 {
+    max-width: 920px !important;
+    margin: 0 0 26px !important;
+    color: #ffffff;
+    font-size: clamp(46px, 5.2vw, 76px);
+    line-height: .98;
+    letter-spacing: -.07em;
+    font-weight: 800;
+    text-align: left !important;
+}
+
+.tr-hero p {
+    max-width: 780px !important;
+    margin: 0 0 34px !important;
+    color: rgba(255, 255, 255, .82);
+    font-size: clamp(19px, 1.6vw, 25px);
+    line-height: 1.55;
+    font-weight: 400;
+    text-align: left !important;
+}
+
+.tr-hero-actions {
+    display: flex;
+    justify-content: flex-start !important;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.tr-btn {
+    min-height: 58px;
+    padding: 0 28px;
+    border-radius: 999px;
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.tr-btn-primary {
+    background: #15d1ff;
+    color: #ffffff;
+    border-color: #15d1ff;
+}
+
+.tr-btn-secondary {
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, .36);
+    background: rgba(255, 255, 255, .04);
+}
+
+/* Mobile */
+@media (max-width: 760px) {
+    .tr-hero {
+        min-height: auto;
+    }
+
+    .tr-hero-inner {
+        width: min(100% - 32px, 1200px) !important;
+        padding: 64px 0 66px !important;
+    }
+
+    .tr-hero h1 {
+        font-size: clamp(40px, 13vw, 56px);
+        line-height: 1;
+    }
+
+    .tr-hero p {
+        font-size: 18px;
+        line-height: 1.55;
+    }
+
+    .tr-hero-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .tr-btn {
+        width: 100%;
+    }
+}
         </style>
 
         <main class="technical-review-page">
             <section class="tr-hero">
                 <div class="tr-hero-inner">
-                    <div class="tr-eyebrow">Application Review</div>
+                    {{-- <div class="tr-eyebrow">Application Review</div> --}}
 
                     <h1>Submit your compression challenge for technical review.</h1>
 

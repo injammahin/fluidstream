@@ -37,11 +37,11 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(2, 8, 23, .38) url(/img/hero/facility-vru.JPG);
+      background: rgba(2, 8, 23, .38) url(/img/hero/Vermilion-5.png);
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      transform: scaleX(-1) scale(1.03);
+      /* transform: scaleX(-1) scale(1.03); */
       z-index: -2;
     }
 
@@ -906,7 +906,7 @@
       <div class="hero-layout">
 
         <div class="hero-left">
-          <div class="eyebrow">Fluidstream Technology</div>
+          {{-- <div class="eyebrow">Fluidstream Technology</div> --}}
 
           <h1>
             Move mixed production streams with fewer constraints, lower cost, and less separation-driven complexity.
@@ -916,14 +916,6 @@
             Fluidstream multiphase compression helps operators recover production, reduce methane exposure,
             and simplify facilities in liquid-heavy field conditions conventional gas-only systems struggle to handle.
           </div>
-
-          <p class="hero-copy">
-            Instead of forcing variable field streams through separation-first design, Fluidstream compresses gas,
-            liquids,
-            and solids together so production can move with fewer handoffs, fewer protective workarounds, and a stronger
-            operating outcome.
-          </p>
-
           <div class="patent-note">
             Based on patented operating methods for liquid-influenced compression behavior, including
             <a href="/patented-technology#us11098709b2">US11098709B2</a>.
@@ -1433,11 +1425,11 @@
     }
 
     /* .fit-card p {
-                                                                                                                          margin: 0;
-                                                                                                                          font-size: 22px;
-                                                                                                                          line-height: 1.42;
-                                                                                                                          color: #53647c;
-                                                                                                                        } */
+                                                                                                                                  margin: 0;
+                                                                                                                                  font-size: 22px;
+                                                                                                                                  line-height: 1.42;
+                                                                                                                                  color: #53647c;
+                                                                                                                                } */
 
     @media (max-width: 991px) {
       .fit-grid {

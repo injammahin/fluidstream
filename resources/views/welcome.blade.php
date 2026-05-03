@@ -644,18 +644,18 @@
 
 
         /* .solutions,
-                                                                                                                                                                                                                                                                                                                                                                                                                                                        .leadership,
-                                                                                                                                                                                                                                                                                                                                                                                                                                                        .tech,
-                                                                                                                                                                                                                                                                                                                                                                                                                                                        .caseband,
-                                                                                                                                                                                                                                                                                                                                                                                                                                                        .cta {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                            padding: 72px 0
-                                                                                                                                                                                                                                                                                                                                                                                                                                                        } */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            .leadership,
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            .tech,
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            .caseband,
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            .cta {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                padding: 72px 0
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            } */
 
         .section-head {
             /* display: flex;
-                                                                                                                                                                                                                                                                                                justify-content: space-between;
-                                                                                                                                                                                                                                                                                                align-items: flex-start;
-                                                                                                                                                                                                                                                                                                gap: 28px; */
+                                                                                                                                                                                                                                                                                                                                    justify-content: space-between;
+                                                                                                                                                                                                                                                                                                                                    align-items: flex-start;
+                                                                                                                                                                                                                                                                                                                                    gap: 28px; */
             margin-bottom: 28px;
         }
 
@@ -1479,14 +1479,14 @@
         }
 
         /* .kicker {
-                                                                                                                                                                                                                                                                                                                                display: block;
-                                                                                                                                                                                                                                                                                                                                margin: 0 0 14px;
-                                                                                                                                                                                                                                                                                                                                font-size: 13px !important;
-                                                                                                                                                                                                                                                                                                                                font-weight: 700 !important;
-                                                                                                                                                                                                                                                                                                                                letter-spacing: .16em;
-                                                                                                                                                                                                                                                                                                                                text-transform: uppercase;
-                                                                                                                                                                                                                                                                                                                                color: var(--accent-dark) !important;
-                                                                                                                                                                                                                                                                                                                            } */
+                                                                                                                                                                                                                                                                                                                                                                    display: block;
+                                                                                                                                                                                                                                                                                                                                                                    margin: 0 0 14px;
+                                                                                                                                                                                                                                                                                                                                                                    font-size: 13px !important;
+                                                                                                                                                                                                                                                                                                                                                                    font-weight: 700 !important;
+                                                                                                                                                                                                                                                                                                                                                                    letter-spacing: .16em;
+                                                                                                                                                                                                                                                                                                                                                                    text-transform: uppercase;
+                                                                                                                                                                                                                                                                                                                                                                    color: var(--accent-dark) !important;
+                                                                                                                                                                                                                                                                                                                                                                } */
 
         .hero-dot.active {
             background: #38bdf8;
@@ -1824,12 +1824,12 @@
             justify-self: end;
             padding: 34px 34px 32px;
             border-radius: 7px;
-            border: 1px solid rgba(255, 255, 255, .22);
+            /* border: 1px solid rgba(255, 255, 255, .22); */
             /* background:
-                                                                                                                                                                    radial-gradient(circle at 88% 18%, rgba(21, 209, 255, .12), transparent 28%),
-                                                                                                                                                                    linear-gradient(145deg, rgba(255, 255, 255, .13), rgba(255, 255, 255, .07)); */
-            box-shadow: 0 26px 70px rgba(0, 0, 0, .25);
-            backdrop-filter: blur(16px);
+                                                                                                                                                                                                        radial-gradient(circle at 88% 18%, rgba(21, 209, 255, .12), transparent 28%),
+                                                                                                                                                                                                        linear-gradient(145deg, rgba(255, 255, 255, .13), rgba(255, 255, 255, .07)); */
+            /* box-shadow: 0 26px 70px rgba(0, 0, 0, .25); */
+            /* backdrop-filter: blur(16px); */
             -webkit-backdrop-filter: blur(16px);
         }
 
@@ -1993,21 +1993,16 @@
             </div>
 
             <aside class="fs-home-proof-card fs-home-quote-card" aria-label="Cycling field proof quotes">
-                <div class="fs-home-quote-header">
-                    <div>
-                        <div class="fs-home-quote-kicker">Field-Proven Results</div>
-                        <h2 class="fs-home-quote-title">Three proof points from demanding applications.</h2>
-                    </div>
-
-                    <div class="fs-home-quote-mark">“</div>
-                </div>
+                <div class="fs-home-quote-card-glow"></div>
 
                 <div class="fs-home-quote-stage">
-                    <article class="fs-home-quote-slide">
+                    <article class="fs-home-quote-slide active">
                         <span class="fs-home-quote-metric">Revenue Impact</span>
+
                         <p class="fs-home-quote-text">
                             “C$1.5M+ annual incremental revenue from restored production.”
                         </p>
+
                         <span class="fs-home-quote-source">
                             — Alberta Production Recovery Operator
                         </span>
@@ -2015,9 +2010,11 @@
 
                     <article class="fs-home-quote-slide">
                         <span class="fs-home-quote-metric">Reliability</span>
+
                         <p class="fs-home-quote-text">
                             “100% uptime with no maintenance since installation.”
                         </p>
+
                         <span class="fs-home-quote-source">
                             — Allied Energy II
                         </span>
@@ -2025,25 +2022,23 @@
 
                     <article class="fs-home-quote-slide">
                         <span class="fs-home-quote-metric">Mechanical Longevity</span>
+
                         <p class="fs-home-quote-text">
                             “35 months before first seal change.”
                         </p>
+
                         <span class="fs-home-quote-source">
                             — Long-Term Vapor Recovery Customer
                         </span>
                     </article>
                 </div>
 
-                <div class="fs-home-quote-nav" aria-hidden="true">
-                    <span class="fs-home-quote-dot"></span>
-                    <span class="fs-home-quote-dot"></span>
-                    <span class="fs-home-quote-dot"></span>
+                <div class="fs-home-quote-nav" aria-label="Quote navigation">
+                    <button type="button" class="fs-home-quote-dot active" data-index="0"
+                        aria-label="Show quote 1"></button>
+                    <button type="button" class="fs-home-quote-dot" data-index="1" aria-label="Show quote 2"></button>
+                    <button type="button" class="fs-home-quote-dot" data-index="2" aria-label="Show quote 3"></button>
                 </div>
-
-                <p class="fs-home-quote-note">
-                    <strong>Real operating proof</strong> across production recovery, vapor recovery, and long-run
-                    reliability applications.
-                </p>
             </aside>
             <style>
                 .fs-home-quote-card {
@@ -2054,9 +2049,9 @@
                     justify-self: end;
                     padding: 34px 34px 32px;
                     border-radius: 7px;
-                    border: 1px solid rgba(255, 255, 255, .22);
-                    box-shadow: 0 26px 70px rgba(0, 0, 0, .25);
-                    backdrop-filter: blur(16px);
+                    /* border: 1px solid rgba(255, 255, 255, .22); */
+                    /* box-shadow: 0 26px 70px rgba(0, 0, 0, .25); */
+                    /* backdrop-filter: blur(16px); */
                     -webkit-backdrop-filter: blur(16px);
                     overflow: hidden;
                     isolation: isolate;
@@ -2361,7 +2356,158 @@
                         min-height: 280px;
                     }
                 }
+
+                /* Make quote navigation lines into close circle dots */
+                .fs-home-quote-nav {
+                    display: flex !important;
+                    grid-template-columns: none !important;
+                    align-items: center !important;
+                    justify-content: center !important;
+                    gap: 9px !important;
+                    margin-top: 24px !important;
+                }
+
+                .fs-home-quote-dot {
+                    width: 10px !important;
+                    height: 10px !important;
+                    min-width: 10px !important;
+                    min-height: 10px !important;
+                    padding: 0 !important;
+                    border: 1px solid rgba(255, 255, 255, .55) !important;
+                    border-radius: 999px !important;
+                    background: rgba(255, 255, 255, .30) !important;
+                    overflow: visible !important;
+                    cursor: pointer !important;
+                    transition: background .25s ease, border-color .25s ease, transform .25s ease, box-shadow .25s ease !important;
+                }
+
+                /* Remove old animated line fill */
+                .fs-home-quote-dot::before {
+                    display: none !important;
+                    content: none !important;
+                    animation: none !important;
+                }
+
+                /* Active dot */
+                .fs-home-quote-dot.active {
+                    background: #ffffff !important;
+                    border-color: #ffffff !important;
+                    transform: scale(1.25) !important;
+                    box-shadow: 0 0 0 5px rgba(255, 255, 255, .12) !important;
+                }
             </style>
+            <style>
+                /* JS controlled quote slider */
+                .fs-home-quote-slide {
+                    animation: none !important;
+                    opacity: 0 !important;
+                    visibility: hidden !important;
+                    transform: translateX(18px) !important;
+                    transition:
+                        opacity .45s ease,
+                        visibility .45s ease,
+                        transform .45s ease !important;
+                }
+
+                .fs-home-quote-slide.active {
+                    opacity: 1 !important;
+                    visibility: visible !important;
+                    transform: translateX(0) !important;
+                }
+
+                .fs-home-quote-nav {
+                    display: flex !important;
+                    grid-template-columns: none !important;
+                    align-items: center !important;
+                    justify-content: center !important;
+                    gap: 9px !important;
+                    margin-top: 24px !important;
+                }
+
+                .fs-home-quote-dot {
+                    width: 10px !important;
+                    height: 10px !important;
+                    min-width: 10px !important;
+                    min-height: 10px !important;
+                    padding: 0 !important;
+                    border: 1px solid rgba(255, 255, 255, .55) !important;
+                    border-radius: 999px !important;
+                    background: rgba(255, 255, 255, .30) !important;
+                    overflow: visible !important;
+                    cursor: pointer !important;
+                    transition:
+                        background .25s ease,
+                        border-color .25s ease,
+                        transform .25s ease,
+                        box-shadow .25s ease !important;
+                }
+
+                .fs-home-quote-dot::before {
+                    display: none !important;
+                    content: none !important;
+                    animation: none !important;
+                }
+
+                .fs-home-quote-dot.active {
+                    background: #ffffff !important;
+                    border-color: #ffffff !important;
+                    transform: scale(1.25) !important;
+                    box-shadow: 0 0 0 5px rgba(255, 255, 255, .12) !important;
+                }
+            </style>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const slides = document.querySelectorAll('.fs-home-quote-slide');
+                    const dots = document.querySelectorAll('.fs-home-quote-dot');
+
+                    if (!slides.length || !dots.length) {
+                        return;
+                    }
+
+                    let currentIndex = 0;
+                    let quoteTimer = null;
+
+                    function showQuote(index) {
+                        slides.forEach(function (slide, i) {
+                            slide.classList.toggle('active', i === index);
+                        });
+
+                        dots.forEach(function (dot, i) {
+                            dot.classList.toggle('active', i === index);
+                        });
+
+                        currentIndex = index;
+                    }
+
+                    function startQuoteAutoChange() {
+                        if (quoteTimer) {
+                            clearInterval(quoteTimer);
+                        }
+
+                        quoteTimer = setInterval(function () {
+                            const nextIndex = (currentIndex + 1) % slides.length;
+                            showQuote(nextIndex);
+                        }, 5000);
+                    }
+
+                    dots.forEach(function (dot) {
+                        dot.addEventListener('click', function () {
+                            const index = Number(dot.dataset.index);
+
+                            if (Number.isNaN(index)) {
+                                return;
+                            }
+
+                            showQuote(index);
+                            startQuoteAutoChange();
+                        });
+                    });
+
+                    showQuote(0);
+                    startQuoteAutoChange();
+                });
+            </script>
         </div>
     </section>
 
@@ -2431,12 +2577,12 @@
             }
 
             /* .proof .proof-card:hover .proof-view-link,
-                                                                    .proof .proof-card:hover .proof-view-link *,
-                                                                    .proof .proof-card:hover .proof-view-link span,
-                                                                    .proof .proof-card:hover .proof-view-link svg {
-                                                                        color: #0018dc !important;
-                                                                        stroke: #0018dc !important;
-                                                                    } */
+                                                                                                        .proof .proof-card:hover .proof-view-link *,
+                                                                                                        .proof .proof-card:hover .proof-view-link span,
+                                                                                                        .proof .proof-card:hover .proof-view-link svg {
+                                                                                                            color: #0018dc !important;
+                                                                                                            stroke: #0018dc !important;
+                                                                                                        } */
 
             @media (max-width: 640px) {
                 .proof .proof-card {
@@ -2757,25 +2903,25 @@
         }
 
         /* .patent-copy .kicker {
-                                                                                                                                                                                                                                                                        margin-bottom: 18px;
-                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                                                            margin-bottom: 18px;
+                                                                                                                                                                                                                                                                                                        }
 
-                                                                                                                                                                                                                                                                    .patent-copy h2 {
-                                                                                                                                                                                                                                                                        margin: 0;
-                                                                                                                                                                                                                                                                        font-size: clamp(1.9rem, 3vw, 3rem);
-                                                                                                                                                                                                                                                                        line-height: 1.05;
-                                                                                                                                                                                                                                                                        letter-spacing: -.04em;
-                                                                                                                                                                                                                                                                        max-width: 21ch;
-                                                                                                                                                                                                                                                                        color: var(--text);
-                                                                                                                                                                                                                                                                    } */
+                                                                                                                                                                                                                                                                                                        .patent-copy h2 {
+                                                                                                                                                                                                                                                                                                            margin: 0;
+                                                                                                                                                                                                                                                                                                            font-size: clamp(1.9rem, 3vw, 3rem);
+                                                                                                                                                                                                                                                                                                            line-height: 1.05;
+                                                                                                                                                                                                                                                                                                            letter-spacing: -.04em;
+                                                                                                                                                                                                                                                                                                            max-width: 21ch;
+                                                                                                                                                                                                                                                                                                            color: var(--text);
+                                                                                                                                                                                                                                                                                                        } */
         /* 
-                                                                                                                                                                                                                            .patent-copy p {
-                                                                                                                                                                                                                                margin: 0 0 18px;
-                                                                                                                                                                                                                                max-width: 760px;
-                                                                                                                                                                                                                                font-size: 1.18rem;
-                                                                                                                                                                                                                                line-height: 1.7;
-                                                                                                                                                                                                                                color: #5b6d86;
-                                                                                                                                                                                                                            } */
+                                                                                                                                                                                                                                                                .patent-copy p {
+                                                                                                                                                                                                                                                                    margin: 0 0 18px;
+                                                                                                                                                                                                                                                                    max-width: 760px;
+                                                                                                                                                                                                                                                                    font-size: 1.18rem;
+                                                                                                                                                                                                                                                                    line-height: 1.7;
+                                                                                                                                                                                                                                                                    color: #5b6d86;
+                                                                                                                                                                                                                                                                } */
 
         .patent-copy .patent-highlight {
             margin-top: 6px;
@@ -2996,11 +3142,11 @@
         }
 
         /* .patent-card p {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            margin: 0;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            font-size: 1.04rem;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            line-height: 1.72;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            color: #61738b;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        } */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                margin: 0;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                font-size: 1.04rem;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                line-height: 1.72;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                color: #61738b;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            } */
 
         .patent-callout {
             position: relative;

@@ -23,13 +23,13 @@
       scroll-behavior: smooth;
     }
 
-    body {
-      margin: 0;
-      font-family: Inter, Arial, Helvetica, sans-serif;
-      background: #ffffff;
-      color: var(--text);
-      line-height: 1.55;
-    }
+    /* body {
+                                                              margin: 0;
+                                                              font-family: Inter, Arial, Helvetica, sans-serif;
+                                                              background: #ffffff;
+                                                              color: var(--text);
+                                                              line-height: 1.55;
+                                                            } */
 
     img {
       display: block;
@@ -47,8 +47,8 @@
     }
 
     /* .section {
-                                                                                                                                                                                        padding: 84px 0;
-                                                                                                                                                                                      } */
+                                                                                                                                                                                                                                                            padding: 84px 0;
+                                                                                                                                                                                                                                                          } */
 
     .section-surface-white {
       background: #ffffff;
@@ -80,19 +80,19 @@
     }
 
     /* .hero-tech::before {
-                                                                                                                                                                                                                                content: "";
-                                                                                                                                                                                                                                position: absolute;
-                                                                                                                                                                                                                                inset: 0;
-                                                                                                                                                                                                                                background:
-                                                                                                                                                                                                                                  linear-gradient(90deg, rgba(0, 24, 220, 0.90) 0%, rgba(0, 24, 220, 0.78) 45%, rgba(0, 24, 220, 0.68) 100%),
-                                                                                                                                                                                                                                  url('{{ asset("/img/hero/hero.avif") }}');
-                                                                                                                                                                                                                                background-size: cover;
-                                                                                                                                                                                                                                background-position: center;
-                                                                                                                                                                                                                                background-repeat: no-repeat;
-                                                                                                                                                                                                                                transform: scale(1.02);
-                                                                                                                                                                                                                                z-index: -2;
-                                                                                                                                                                                                                              }
-                                                                                                                                                                                                                               */
+                                                                                                                                                                                                                                                                                                    content: "";
+                                                                                                                                                                                                                                                                                                    position: absolute;
+                                                                                                                                                                                                                                                                                                    inset: 0;
+                                                                                                                                                                                                                                                                                                    background:
+                                                                                                                                                                                                                                                                                                      linear-gradient(90deg, rgba(0, 24, 220, 0.90) 0%, rgba(0, 24, 220, 0.78) 45%, rgba(0, 24, 220, 0.68) 100%),
+                                                                                                                                                                                                                                                                                                      url('{{ asset("/img/hero/hero.avif") }}');
+                                                                                                                                                                                                                                                                                                    background-size: cover;
+                                                                                                                                                                                                                                                                                                    background-position: center;
+                                                                                                                                                                                                                                                                                                    background-repeat: no-repeat;
+                                                                                                                                                                                                                                                                                                    transform: scale(1.02);
+                                                                                                                                                                                                                                                                                                    z-index: -2;
+                                                                                                                                                                                                                                                                                                  }
+                                                                                                                                                                                                                                                                                                   */
     .hero-tech::before {
       content: "";
       position: absolute;
@@ -184,7 +184,7 @@
       display: grid;
       grid-template-rows: auto auto auto 1fr auto auto;
       row-gap: 12px;
-      min-height: 565px;
+      min-height: 420px;
       padding: 26px 20px 24px;
       border-radius: 5px;
       background: #ffffff00;
@@ -385,7 +385,7 @@
       border-radius: 50%;
       background: var(--accent);
       border: 3px solid #ffffff;
-      box-shadow: 0 0 0 10px rgba(21, 209, 255, .16), 0 0 22px rgba(21, 209, 255, .35);
+      /* box-shadow: 0 0 0 10px rgba(21, 209, 255, .16), 0 0 22px rgba(21, 209, 255, .35); */
       cursor: pointer;
       transition: .18s ease;
       z-index: 5;
@@ -394,13 +394,64 @@
     .hotspot:hover,
     .hotspot.active {
       transform: scale(1.08);
-      box-shadow: 0 0 0 14px rgba(21, 209, 255, .18), 0 0 28px rgba(21, 209, 255, .45);
+      /* box-shadow: 0 0 0 14px rgba(21, 209, 255, .18), 0 0 28px rgba(21, 209, 255, .45); */
     }
 
     .hotspot-label {
       position: absolute;
       top: -8px;
       left: 30px;
+      white-space: nowrap;
+      background: rgba(255, 255, 255, .96);
+      color: var(--text);
+      border: 1px solid var(--line);
+      padding: 9px 14px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      box-shadow: 0 18px 50px rgba(5, 35, 95, .10);
+    }
+
+    .hotspot-label-4 {
+      position: absolute;
+      top: -29px;
+      left: 19px;
+      white-space: nowrap;
+      background: rgba(255, 255, 255, .96);
+      color: var(--text);
+      border: 1px solid var(--line);
+      padding: 9px 14px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      box-shadow: 0 18px 50px rgba(5, 35, 95, .10);
+    }
+
+    .hotspot-label-2 {
+      position: absolute;
+      top: 26px;
+      left: -112px;
+      white-space: nowrap;
+      background: rgba(255, 255, 255, .96);
+      color: var(--text);
+      border: 1px solid var(--line);
+      padding: 9px 14px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      box-shadow: 0 18px 50px rgba(5, 35, 95, .10);
+    }
+
+    .hotspot-label-1 {
+      position: absolute;
+      top: -46px !important;
+      left: -92px !important;
       white-space: nowrap;
       background: rgba(255, 255, 255, .96);
       color: var(--text);
@@ -462,7 +513,7 @@
       border-radius: 50%;
       background: var(--accent);
       border: 3px solid #fff;
-      box-shadow: 0 0 0 10px rgba(21, 209, 255, .16), 0 0 22px rgba(21, 209, 255, .35);
+      /* box-shadow: 0 0 0 10px rgba(21, 209, 255, .16), 0 0 22px rgba(21, 209, 255, .35); */
       cursor: pointer;
       transition: .18s ease;
       z-index: 5;
@@ -471,13 +522,30 @@
     .hotspot:hover,
     .hotspot.active {
       transform: scale(1.08);
-      box-shadow: 0 0 0 14px rgba(21, 209, 255, .18), 0 0 28px rgba(21, 209, 255, .45);
+      /* box-shadow: 0 0 0 14px rgba(21, 209, 255, .18), 0 0 28px rgba(21, 209, 255, .45); */
     }
 
     .hotspot-label {
       position: absolute;
       top: -6px;
       left: 28px;
+      white-space: nowrap;
+      background: rgba(255, 255, 255, .95);
+      color: var(--text);
+      border: 1px solid var(--line);
+      padding: 9px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      box-shadow: var(--shadow);
+    }
+
+    .hotspot-label-3 {
+      position: absolute;
+      top: -37px;
+      left: 16px;
       white-space: nowrap;
       background: rgba(255, 255, 255, .95);
       color: var(--text);
@@ -553,7 +621,7 @@
       height: 24px;
       border-radius: 8px;
       /* border: 1px solid #dbe5ff;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              background-color: #ffffff; */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  background-color: #ffffff; */
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%230018dc' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h12'/%3E%3Cpath d='M13 5l7 7-7 7'/%3E%3C/svg%3E");
       background-repeat: no-repeat;
       background-position: center;
@@ -1185,8 +1253,8 @@
 
     #overview .section-head {
       /* display: grid;
-                                                                                                                                                                      grid-template-columns: minmax(0, 1.05fr) minmax(340px, .95fr);
-                                                                                                                                                                      gap: 44px; */
+                                                                                                                                                                                                                                          grid-template-columns: minmax(0, 1.05fr) minmax(340px, .95fr);
+                                                                                                                                                                                                                                          gap: 44px; */
       align-items: baseline;
       margin-bottom: 42px;
     }
@@ -1222,29 +1290,29 @@
 
     #overview .overview {
       /* display: grid;
-                                                                                                                                                                        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-                                                                                                                                                                        gap: 28px; */
+                                                                                                                                                                                                                                            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+                                                                                                                                                                                                                                            gap: 28px; */
       align-items: stretch;
     }
 
     /* #overview .panel {
-                                                                                                                                                        padding: 34px 34px 36px;
-                                                                                                                                                        border: 1px solid #e3ebf5;
-                                                                                                                                                        border-radius: 7px;
-                                                                                                                                                        background: #ffffff;
-                                                                                                                                                        box-shadow: 0 14px 36px rgba(10, 28, 77, .05);
-                                                                                                                                                        height: 100%;
-                                                                                                                                                        display: flex;
-                                                                                                                                                        flex-direction: column;
-                                                                                                                                                      }
+                                                                                                                                                                                                                            padding: 34px 34px 36px;
+                                                                                                                                                                                                                            border: 1px solid #e3ebf5;
+                                                                                                                                                                                                                            border-radius: 7px;
+                                                                                                                                                                                                                            background: #ffffff;
+                                                                                                                                                                                                                            box-shadow: 0 14px 36px rgba(10, 28, 77, .05);
+                                                                                                                                                                                                                            height: 100%;
+                                                                                                                                                                                                                            display: flex;
+                                                                                                                                                                                                                            flex-direction: column;
+                                                                                                                                                                                                                          }
 
-                                                                                                                                                      #overview .panel {
-                                                                                                                                                        padding: 34px 34px 36px;
-                                                                                                                                                        border: 1px solid #e3ebf5;
-                                                                                                                                                        border-radius: 7px;
-                                                                                                                                                        background: #ffffff;
-                                                                                                                                                        box-shadow: 0 14px 36px rgba(10, 28, 77, .05);
-                                                                                                                                                      } */
+                                                                                                                                                                                                                          #overview .panel {
+                                                                                                                                                                                                                            padding: 34px 34px 36px;
+                                                                                                                                                                                                                            border: 1px solid #e3ebf5;
+                                                                                                                                                                                                                            border-radius: 7px;
+                                                                                                                                                                                                                            background: #ffffff;
+                                                                                                                                                                                                                            box-shadow: 0 14px 36px rgba(10, 28, 77, .05);
+                                                                                                                                                                                                                          } */
 
     #overview .panel h3 {
       margin: 0 0 18px;
@@ -1256,11 +1324,11 @@
     }
 
     /* #overview .panel>p {
-                                                                                                                                                              margin: 0;
-                                                                                                                                                              font-size: 18px;
-                                                                                                                                                              line-height: 1.72;
-                                                                                                                                                              color: #52667a;
-                                                                                                                                                            } */
+                                                                                                                                                                                                                                  margin: 0;
+                                                                                                                                                                                                                                  font-size: 18px;
+                                                                                                                                                                                                                                  line-height: 1.72;
+                                                                                                                                                                                                                                  color: #52667a;
+                                                                                                                                                                                                                                } */
 
     #overview .stack {
       display: flex;
@@ -1414,7 +1482,7 @@
     @media (max-width: 980px) {
       #overview .section-head {
         /* grid-template-columns: 1fr;
-                                                                                                                                                                        gap: 22px; */
+                                                                                                                                                                                                                                            gap: 22px; */
         align-items: start;
       }
 
@@ -1749,8 +1817,8 @@
     }
 
     /* ================================
-                                               TECHNOLOGY CTA SECTION
-                                            ================================ */
+                                                                                                                   TECHNOLOGY CTA SECTION
+                                                                                                                ================================ */
 
     .fs-technology-cta {
       background: #f6f8fc;
@@ -1885,6 +1953,65 @@
         width: 100%;
       }
     }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 114px;
+    }
+
+    #overview,
+    #features,
+    #liquid-method,
+    #gland-section,
+    #alignment-section,
+    #tracking-section,
+    #drives-section,
+    #sand-section,
+    #different-approach,
+    #differentiation,
+    #overview-stage {
+      scroll-margin-top: 114px;
+    }
+
+    @media (max-width: 1100px) {
+      html {
+        scroll-padding-top: 74px;
+      }
+
+      #overview,
+      #features,
+      #liquid-method,
+      #gland-section,
+      #alignment-section,
+      #tracking-section,
+      #drives-section,
+      #sand-section,
+      #different-approach,
+      #differentiation,
+      #overview-stage {
+        scroll-margin-top: 74px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      html {
+        scroll-padding-top: 68px;
+      }
+
+      #overview,
+      #features,
+      #liquid-method,
+      #gland-section,
+      #alignment-section,
+      #tracking-section,
+      #drives-section,
+      #sand-section,
+      #different-approach,
+      #differentiation,
+      #overview-stage {
+        scroll-margin-top: 68px;
+      }
+    }
   </style>
 
   <section class="hero-tech ">
@@ -1916,17 +2043,17 @@
         <div class="hero-highlights hero-highlights--feature-cards">
           <a href="#liquid-method" class="hero-feature-card">
             <div class="hero-feature-card__topline"></div>
-            <div class="hero-feature-card__label">Direct Multiphase Capability</div>
+            <div class="hero-feature-card__label">Multiphase Capability</div>
             <h3 class="hero-feature-card__title">Compresses mixed flow without forcing separation first</h3>
             <p class="hero-feature-card__text">
               Designed to handle gas and liquids inside compression, reducing dependence on separators, scrubbers, and
               extra process equipment.
             </p>
-            <div class="hero-feature-card__mini">
+            {{-- <div class="hero-feature-card__mini">
               <div class="hero-feature-card__mini-label">Why it matters</div>
               <p>Fewer process steps can mean lower footprint, lower complexity, and broader fit across real multiphase
                 service.</p>
-            </div>
+            </div> --}}
             <div class="hero-feature-card__cta">
               <span>See how the liquid-handling methodology works</span>
               <span class="hero-feature-card__arrow">→</span>
@@ -1941,11 +2068,11 @@
               Patent-pending gland sealing with electronic wear detection gives earlier warning before sealing degradation
               becomes a leak, outage, or emergency callout.
             </p>
-            <div class="hero-feature-card__mini">
+            {{-- <div class="hero-feature-card__mini">
               <div class="hero-feature-card__mini-label">Why it matters</div>
               <p>Better awareness of seal condition helps protect uptime, reduce leak exposure, and shift maintenance away
                 from reactive troubleshooting.</p>
-            </div>
+            </div> --}}
             <div class="hero-feature-card__cta">
               <span>Read more on sealing integrity and wear control</span>
               <span class="hero-feature-card__arrow">→</span>
@@ -1960,11 +2087,11 @@
               Full piston tracking gives the controls better operating context so the unit can react to slugs, solids
               buildup, and changing machine behavior.
             </p>
-            <div class="hero-feature-card__mini">
+            {{-- <div class="hero-feature-card__mini">
               <div class="hero-feature-card__mini-label">Why it matters</div>
               <p>More responsive control can reduce trips, limit damage risk, and improve autonomous performance when
                 field conditions move outside the ideal design point.</p>
-            </div>
+            </div> --}}
             <div class="hero-feature-card__cta">
               <span>Explore the control and upset-response strategy</span>
               <span class="hero-feature-card__arrow">→</span>
@@ -1979,11 +2106,11 @@
               Sand-ready sealing, hazardous-fluid containment, and integrated drive controls make the architecture more
               credible in harsh service.
             </p>
-            <div class="hero-feature-card__mini">
+            {{-- <div class="hero-feature-card__mini">
               <div class="hero-feature-card__mini-label">Why it matters</div>
               <p>When service is dirty, corrosive, or difficult to access, survivability becomes an economic advantage,
                 not just a technical claim.</p>
-            </div>
+            </div> --}}
             <div class="hero-feature-card__cta">
               <span>Learn how the design improves field survivability</span>
               <span class="hero-feature-card__arrow">→</span>
@@ -2093,28 +2220,28 @@
         <div class="image-stage" id="overview-stage">
           <img src="/img/2270 Rear View.JPG" alt="Fluidstream technology unit" />
 
-          <button class="hotspot active" data-feature="liquid" style="left:25%;top:36%">
-            <span class="hotspot-label">Liquid Methodology</span>
+          <button class="hotspot active" data-feature="liquid" style="left:16%;top:36%">
+            <span class="hotspot-label-3">Liquid Methodology</span>
           </button>
 
           <button class="hotspot" data-feature="gland" style="left:30%;top:45%">
-            <span class="hotspot-label">Gland Sealing</span>
+            <span class="hotspot-label-4">Gland Sealing</span>
           </button>
 
-          <button class="hotspot left" data-feature="alignment" style="left:53%;top:48%">
+          <button class="hotspot left" data-feature="alignment" style="left:45%;top:50%">
             <span class="hotspot-label">Alignment</span>
           </button>
 
-          <button class="hotspot" data-feature="tracking" style="left:17%;top:53%">
-            <span class="hotspot-label">Piston Tracking</span>
+          <button class="hotspot" data-feature="tracking" style="left:21%;top:45%">
+            <span class="hotspot-label-2">Piston Tracking</span>
           </button>
 
-          <button class="hotspot left" data-feature="drives" style="left:83%;top:50%">
+          <button class="hotspot left" data-feature="drives" style="left:67%;top:41%">
             <span class="hotspot-label">Drive + Controls</span>
           </button>
 
-          <button class="hotspot" data-feature="sand" style="left:5%;top:40%">
-            <span class="hotspot-label">Sand Optimization</span>
+          <button class="hotspot" data-feature="sand" style="left:8%;top:38%">
+            <span class="hotspot-label hotspot-label-1">Sand Optimization</span>
           </button>
         </div>
       </div>
@@ -2150,13 +2277,6 @@
                     controlled, credible way.
                   </p>
                   <div class="hero-tech-intro">
-                    <p class="hero-tech-intro-text">
-                      The technology story starts here: Fluidstream is not trying to avoid liquid presence at all costs.
-                      It is designed
-                      around the fact that liquids can enter the compression process and must be handled in a controlled,
-                      credible way.
-                    </p>
-
                     <div class="hero-patent-callout">
                       <p class="hero-patent-callout-text">
                         <strong>Patent reference:</strong> US11098709B2 supports this liquid-aware compression methodology
@@ -2537,8 +2657,6 @@
     <div class="container">
       <div class="kicker mb-2 py-4">Technology Differentiation</div>
       <h2 class="section-title">Designed to feel proprietary, precise, and operator-ready</h2>
-      <p class="pp">The page keeps the earlier differentiation structure while sharpening the message around
-        direct liquid handling, fully sealed containment, autonomous control, and hard-duty multiphase operation.</p>
 
       <div class="diff-grid">
         <div class="diff-card">
@@ -2600,99 +2718,121 @@
     </svg>
   </button>
   <script>
-    const featureTargets = {
-      liquid: "liquid-method",
-      gland: "gland-section",
-      alignment: "alignment-section",
-      tracking: "tracking-section",
-      drives: "drives-section",
-      sand: "sand-section"
-    };
+    (function () {
+      const featureTargets = {
+        liquid: "liquid-method",
+        gland: "gland-section",
+        alignment: "alignment-section",
+        tracking: "tracking-section",
+        drives: "drives-section",
+        sand: "sand-section"
+      };
 
-    const buttons = document.querySelectorAll(".hotspot");
-    const overviewStage = document.getElementById("overview-stage");
-    const scrollToStageBtn = document.getElementById("scrollToStageBtn");
+      const overviewStage = document.getElementById("overview-stage");
+      const scrollToStageBtn = document.getElementById("scrollToStageBtn");
 
-    buttons.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const key = btn.dataset.feature;
-        const targetId = featureTargets[key];
+      function getHeaderOffset() {
+        const header = document.querySelector(".fs-header");
+
+        if (!header) {
+          if (window.innerWidth <= 640) return 68;
+          if (window.innerWidth <= 1100) return 74;
+          return 114;
+        }
+
+        return header.offsetHeight;
+      }
+
+      function showHeader() {
+        const header = document.querySelector(".fs-header");
+
+        if (!header) return;
+
+        header.classList.remove("fs-header-hidden");
+        header.classList.add("fs-header-visible");
+      }
+
+      function scrollToTarget(targetId, updateHash = true) {
         const target = document.getElementById(targetId);
 
-        buttons.forEach((b) => b.classList.remove("active"));
-        btn.classList.add("active");
+        if (!target) return;
 
-        if (target) {
-          const offset = 100;
-          const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+        showHeader();
 
-          window.scrollTo({
-            top,
-            behavior: "smooth"
-          });
-        }
-      });
-    });
-
-    function toggleScrollToStageBtn() {
-      if (!overviewStage || !scrollToStageBtn) return;
-
-      const rect = overviewStage.getBoundingClientRect();
-      const hasScrolledPastImageSection = rect.bottom < 120;
-
-      if (hasScrolledPastImageSection) {
-        scrollToStageBtn.classList.add("show");
-      } else {
-        scrollToStageBtn.classList.remove("show");
-      }
-    }
-
-    if (scrollToStageBtn && overviewStage) {
-      scrollToStageBtn.addEventListener("click", () => {
-        const offset = 90;
-        const top = overviewStage.getBoundingClientRect().top + window.pageYOffset - offset;
+        const top = target.getBoundingClientRect().top + window.pageYOffset - getHeaderOffset();
 
         window.scrollTo({
-          top,
+          top: top,
           behavior: "smooth"
+        });
+
+        if (updateHash) {
+          history.pushState(null, "", "#" + targetId);
+        }
+      }
+
+      document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+        link.addEventListener("click", function (event) {
+          const targetId = link.getAttribute("href").replace("#", "");
+
+          if (!targetId) return;
+
+          const target = document.getElementById(targetId);
+
+          if (!target) return;
+
+          event.preventDefault();
+          scrollToTarget(targetId, true);
         });
       });
 
-      window.addEventListener("scroll", toggleScrollToStageBtn, { passive: true });
-      window.addEventListener("load", toggleScrollToStageBtn);
-    }
-  </script>
-  <script>
-    const featureTargets = {
-      liquid: "liquid-method",
-      gland: "gland-section",
-      alignment: "alignment-section",
-      tracking: "tracking-section",
-      drives: "drives-section",
-      sand: "sand-section"
-    };
+      document.querySelectorAll(".hotspot").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          const key = btn.dataset.feature;
+          const targetId = featureTargets[key];
 
-    const buttons = document.querySelectorAll(".hotspot");
-
-    buttons.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const key = btn.dataset.feature;
-        const targetId = featureTargets[key];
-        const target = document.getElementById(targetId);
-
-        buttons.forEach((b) => b.classList.remove("active"));
-        btn.classList.add("active");
-
-        if (target) {
-          const offset = 100;
-          const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
-
-          window.scrollTo({
-            top,
-            behavior: "smooth"
+          document.querySelectorAll(".hotspot").forEach(function (b) {
+            b.classList.remove("active");
           });
+
+          btn.classList.add("active");
+
+          if (targetId) {
+            scrollToTarget(targetId, true);
+          }
+        });
+      });
+
+      function toggleScrollToStageBtn() {
+        if (!overviewStage || !scrollToStageBtn) return;
+
+        const rect = overviewStage.getBoundingClientRect();
+
+        if (rect.bottom < 120) {
+          scrollToStageBtn.classList.add("show");
+        } else {
+          scrollToStageBtn.classList.remove("show");
+        }
+      }
+
+      if (scrollToStageBtn && overviewStage) {
+        scrollToStageBtn.addEventListener("click", function () {
+          scrollToTarget("overview-stage", true);
+        });
+
+        window.addEventListener("scroll", toggleScrollToStageBtn, { passive: true });
+        window.addEventListener("load", toggleScrollToStageBtn);
+      }
+
+      window.addEventListener("load", function () {
+        if (window.location.hash) {
+          const targetId = window.location.hash.replace("#", "");
+
+          setTimeout(function () {
+            scrollToTarget(targetId, false);
+          }, 250);
         }
       });
-    });
+    })();
   </script>
 @endsection

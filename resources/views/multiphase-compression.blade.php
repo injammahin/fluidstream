@@ -16,19 +16,17 @@
     }
 
     a {
-      color: inherit
+      color: inherit;
     }
 
     .wrap {
       max-width: 1200px;
       margin: 0 auto;
-      /* padding: 0 28px */
     }
 
     header.hero {
       background: radial-gradient(circle at 78% 22%, rgba(21, 209, 255, .18), transparent 20%), linear-gradient(125deg, rgba(0, 24, 220, .96), rgba(0, 24, 220, .88) 52%, rgb(15 39 223));
       color: #fff;
-      /* padding: 72px 0 54px; */
     }
 
     .breadcrumbs {
@@ -105,22 +103,22 @@
     }
 
     .btn:hover {
-      transform: translateY(-1px)
+      transform: translateY(-1px);
     }
 
     .btn-primary {
       background: #fff;
-      color: var(--blue)
+      color: var(--blue);
     }
 
     .btn-secondary {
       background: transparent;
-      color: #fff
+      color: #fff;
     }
 
     .btn-secondary-1 {
       background: transparent;
-      color: #212121
+      color: #212121;
     }
 
     .patent-note {
@@ -139,7 +137,6 @@
       background: #f5f7fb;
       color: #284163;
       border-left: 4px solid var(--blue);
-      /* box-shadow: 0 10px 24px rgba(13, 32, 84, .06); */
     }
 
     .patent-note a {
@@ -176,7 +173,6 @@
     }
 
     .swipe-left:before,
-    .swipe-left:before,
     .hero-card:before,
     .model-card:before,
     .spec-mobile-card:before {
@@ -191,7 +187,6 @@
     }
 
     .swipe-left:after,
-    .swipe-left:after,
     .hero-card:after,
     .model-card:after,
     .spec-mobile-card:after {
@@ -203,11 +198,8 @@
       height: 4px;
       background-color: #0018dc;
       transform: scaleX(0);
-      /* Start with a scaleX of 0 (hidden) */
       transform-origin: left;
-      /* Make the scale start from the left */
       transition: transform 0.3s ease;
-      /* Smooth transition */
       z-index: 1;
     }
 
@@ -216,16 +208,8 @@
     .model-card:hover:after,
     .spec-mobile-card:hover:after {
       transform: scaleX(1);
-      /* Expand the line to full width */
     }
 
-    /* .swipe-left:after {
-                                                                                                                                                              right: -135%;
-                                                                                                                                                              transform: skewX(24deg);
-                                                                                                                                                              background: linear-gradient(270deg, transparent 0%, rgba(21, 209, 255, .18) 50%, transparent 100%);
-                                                                                                                                                            } */
-
-    .swipe-left:hover,
     .swipe-left:hover,
     .hero-card:hover,
     .model-card:hover,
@@ -234,18 +218,8 @@
     .cta-panel:hover {
       transform: translateY(-3px);
       border-color: #0018dc !important;
-      /* box-shadow: 0 18px 36px rgba(16, 42, 67, .08); */
       background: #ffffff;
     }
-
-    /* 
-                                                                                                                                                                      .swipe-left:hover:before,
-                                                                                                                                                                      .swipe-left:hover:before,
-                                                                                                                                                                      .hero-card:hover:before,
-                                                                                                                                                                      .model-card:hover:before,
-                                                                                                                                                                      .spec-mobile-card:hover:before {
-                                                                                                                                                                        opacity: 1;
-                                                                                                                                                                      } */
 
     .swipe-left:hover:after,
     .hero-card:hover:after,
@@ -263,11 +237,8 @@
       border-color: rgba(255, 255, 255, .3);
     }
 
-    .swipe-left:hover,
-    .swipe-left:hover,
     .model-card:hover,
     .spec-mobile-card:hover {
-      /* box-shadow: 0 24px 52px rgba(13, 32, 84, .12); */
       border-color: #b9d0ff;
     }
 
@@ -283,7 +254,6 @@
       z-index: 1;
       pointer-events: none;
     }
-
 
     .blue-fill:hover,
     .highlight-box:hover {
@@ -422,11 +392,11 @@
     }
 
     .spec-table-enhanced tbody tr:nth-child(even) {
-      background: #fbfdff
+      background: #fbfdff;
     }
 
     .spec-table-enhanced tbody tr:hover {
-      background: #f5f9ff
+      background: #f5f9ff;
     }
 
     .spec-col {
@@ -443,11 +413,11 @@
     }
 
     .spec-desktop {
-      display: block
+      display: block;
     }
 
     .spec-mobile {
-      display: none
+      display: none;
     }
 
     .spec-mobile-card {
@@ -521,11 +491,11 @@
     }
 
     .gas-rate-row span {
-      color: #4a5568
+      color: #4a5568;
     }
 
     .gas-rate-row strong {
-      color: #232325
+      color: #232325;
     }
 
     .hero-grid {
@@ -535,12 +505,12 @@
     }
 
     .hero-card-1 {
-      background: rgba(255, 255, 255, .11);
+      /* background: rgba(255, 255, 255, .11); */
       border: 1px solid rgba(255, 255, 255, .14);
       border-radius: 12px;
       padding: 20px;
       min-height: 164px;
-      backdrop-filter: blur(7px);
+      /* backdrop-filter: blur(7px); */
     }
 
     .hero-card-1 h3 {
@@ -555,16 +525,6 @@
       color: #e8f4ff;
       font-size: 15px;
     }
-
-    /* 
-                                                                                          .kicker mb-2 {
-                                                                                            font-size: 12px;
-                                                                                            letter-spacing: .11em;
-                                                                                            text-transform: uppercase;
-                                                                                            color: var(--blue);
-                                                                                            font-weight: 700;
-                                                                                            margin-bottom: 10px;
-                                                                                          } */
 
     h2 {
       margin: 0 0 16px;
@@ -686,7 +646,7 @@
     }
 
     .bullet li {
-      margin: 0 0 10px
+      margin: 0 0 10px;
     }
 
     .band {
@@ -802,7 +762,7 @@
     }
 
     tbody tr:nth-child(even) {
-      background: #fbfdff
+      background: #fbfdff;
     }
 
     .notes {
@@ -814,7 +774,6 @@
     .cta {
       background: #fff;
       color: #fff;
-      /* padding: 72px 0; */
     }
 
     .cta-box {
@@ -825,7 +784,6 @@
     }
 
     .cta h2 {
-      /* color: #fff; */
       margin-bottom: 14px;
     }
 
@@ -855,73 +813,9 @@
       color: #252525 !important;
     }
 
-    @media (max-width:1080px) {
-
-      .hero-grid,
-      .grid-3,
-      .grid-4,
-      .split,
-      .stat-grid,
-      .cta-box,
-      .model-card-grid {
-        grid-template-columns: 1fr 1fr
-      }
-    }
-
-    @media (max-width:760px) {
-      .spec-desktop {
-        display: none
-      }
-
-      .spec-mobile {
-        display: block
-      }
-
-      .model-card-grid {
-        grid-template-columns: 1fr
-      }
-
-      .spec-mobile-grid {
-        grid-template-columns: 1fr 1fr
-      }
-
-      .wrap {
-        padding: 0 18px
-      }
-
-      header.hero {
-        padding: 58px 0 42px
-      }
-
-      h1 {
-        font-size: 38px
-      }
-
-      .subhead {
-        font-size: 22px
-      }
-
-      h2 {
-        font-size: 31px
-      }
-
-      .hero-grid,
-      .grid-3,
-      .grid-4,
-      .split,
-      .stat-grid,
-      .cta-box {
-        grid-template-columns: 1fr
-      }
-
-      .case-study h2 {
-        font-size: 31px
-      }
-    }
-
     /* =========================================
-                                 HERO BACKGROUND IMAGE FULL HEIGHT FIX
-                              ========================================= */
+                         HERO SECTION FIXED STYLE
+                      ========================================= */
 
     header.hero {
       position: relative !important;
@@ -935,106 +829,265 @@
       padding: 0 !important;
     }
 
-    /* Background image */
     header.hero::before {
       content: "";
       position: absolute;
       inset: 0;
-      z-index: -2;
-
-      background-image: url("/img/hero/vapor-recovery.png");
+      z-index: -3;
+      background-image: url("/img/hero/Vermilion.png");
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
-
-      transform: scaleX(-1) scale(1.04);
+      transform: scale(1.02);
       transform-origin: center;
     }
 
-    /* Dark overlay for readable white text */
     header.hero::after {
       content: "";
       position: absolute;
       inset: 0;
-      z-index: -1;
+      z-index: -2;
       pointer-events: none;
-
-      background: #0206177a;
+      background:
+        linear-gradient(90deg,
+          rgba(2, 6, 23, 0.96) 0%,
+          rgba(2, 6, 23, 0.88) 22%,
+          rgba(2, 6, 23, 0.64) 44%,
+          rgba(2, 6, 23, 0.28) 70%,
+          rgba(2, 6, 23, 0.18) 100%),
+        linear-gradient(180deg,
+          rgba(2, 6, 23, 0.18) 0%,
+          rgba(2, 6, 23, 0.32) 100%);
     }
 
-    /* Make content also fill hero height */
     header.hero>.wrap {
       position: relative;
       z-index: 2;
-
-      width: min(1200px, calc(100% - 40px));
+      width: 1200px;
+      max-width: none;
       min-height: calc(100vh - 108px);
-
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-
-      padding-top: 76px !important;
-      padding-bottom: 76px !important;
+      align-items: center;
+      justify-content: flex-start;
+      padding-top: 72px !important;
+      padding-bottom: 72px !important;
     }
 
-    /* Ensure all hero text stays white */
-    header.hero h1,
-    header.hero .subhead,
-    header.hero .hero-copy,
-    header.hero .eyebrow {
+    .fs-hero-content {
+      width: min(900px, 100%);
+    }
+
+    header.hero h1 {
+      margin: 0 0 22px;
+      max-width: 620px;
       color: #ffffff !important;
-    }
-
-    header.hero .eyebrow {
-      color: #bfeeff !important;
+      font-size: clamp(58px, 6.4vw, 108px);
+      line-height: 0.92;
+      letter-spacing: -0.075em;
+      font-weight: 900;
     }
 
     header.hero .hero-copy {
-      color: rgba(237, 245, 255, 0.92) !important;
+      max-width: 640px;
+      margin: 0 0 24px;
+      color: rgba(255, 255, 255, 0.88) !important;
+      font-size: clamp(22px, 2vw, 29px);
+      line-height: 1.28;
+      letter-spacing: -0.035em;
+      font-weight: 800;
     }
 
-    /* Transparent hero cards */
+    header.hero .patent-note {
+      max-width: 610px;
+      margin: 0 0 26px;
+      padding: 0;
+      border-left: 0;
+      border-radius: 0;
+      background: transparent;
+      color: rgba(255, 255, 255, 0.70);
+      font-size: 17px;
+      line-height: 1.45;
+      font-weight: 500;
+    }
+
+    header.hero .btn-row {
+      gap: 16px;
+      margin-bottom: 42px;
+    }
+
+    header.hero .btn {
+      min-height: 56px;
+      padding: 0 30px;
+      border-radius: 999px;
+      font-size: 16px;
+      font-weight: 900;
+    }
+
+    header.hero .btn-primary {
+      background: #ffffff;
+      color: #0f172a;
+      /* border-color: #1028ea; */
+    }
+
+    header.hero .btn-primary:hover {
+      background: #0018dc;
+      border-color: #0018dc;
+    }
+
+    header.hero .btn-secondary {
+      background: rgba(255, 255, 255, 0.12);
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.30);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    header.hero .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.18);
+    }
+
+    header.hero .hero-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+      width: min(900px, 100%);
+    }
+
     header.hero .hero-card-1 {
       position: relative;
       overflow: hidden;
-      background: rgba(255, 255, 255, 0.12) !important;
-      border: 1px solid rgba(255, 255, 255, 0.16) !important;
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.14);
+      min-height: 190px;
+      padding: 22px 22px 20px;
+      border-radius: 6px;
+      /* background: rgb(3 13 40 / 0%) !important; */
+      border: 1px solid rgba(172, 197, 255, 0.26) !important;
+      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.20);
+      /* backdrop-filter: blur(12px); */
+      /* -webkit-backdrop-filter: blur(12px); */
       transition: transform 0.28s ease, border-color 0.28s ease, background 0.28s ease, box-shadow 0.28s ease;
     }
 
     header.hero .hero-card-1:hover {
       transform: translateY(-5px);
-      /* border-color: rgba(21, 209, 255, 0.44) !important; */
-      background: rgba(255, 255, 255, 0.18) !important;
-      /* box-shadow: 0 30px 64px rgba(0, 24, 220, 0.22); */
+      /* border-color: rgba(21, 209, 255, 0.42) !important; */
+      background: rgb(3 13 40 / 0%) !important;
+      /* box-shadow: 0 26px 58px rgba(0, 24, 220, 0.20); */
+    }
+
+    header.hero .hero-card-icon {
+      width: 42px;
+      height: 42px;
+      margin-bottom: 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      background: #9aa8ff17;
+      color: #ffffff;
+    }
+
+    header.hero .hero-card-icon svg {
+      width: 20px;
+      height: 20px;
     }
 
     header.hero .hero-card-1 h3 {
+      margin: 0 0 10px;
       color: #ffffff !important;
+      font-size: 23px;
+      line-height: 1.02;
+      letter-spacing: -0.045em;
+      font-weight: 900;
     }
 
     header.hero .hero-card-1 p {
-      color: rgba(232, 244, 255, 0.90) !important;
+      margin: 0;
+      color: rgba(232, 244, 255, 0.80) !important;
+      font-size: 16px;
+      line-height: 1.36;
+      font-weight: 800;
     }
 
-    /* Mobile */
     @media (max-width: 1080px) {
+
+      .hero-grid,
+      .grid-3,
+      .grid-4,
+      .split,
+      .stat-grid,
+      .cta-box,
+      .model-card-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
       header.hero {
         min-height: auto;
       }
 
       header.hero>.wrap {
+        width: 1200px;
         min-height: auto;
-        padding-top: 72px !important;
-        padding-bottom: 62px !important;
+        padding-top: 76px !important;
+        padding-bottom: 64px !important;
+      }
+
+      .fs-hero-content {
+        width: 100%;
+      }
+
+      header.hero h1 {
+        max-width: 760px;
+      }
+
+      header.hero .hero-copy,
+      header.hero .patent-note {
+        max-width: 720px;
+      }
+
+      header.hero .hero-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 100%;
       }
     }
 
     @media (max-width: 760px) {
+      .spec-desktop {
+        display: none;
+      }
+
+      .spec-mobile {
+        display: block;
+      }
+
+      .model-card-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .spec-mobile-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .wrap {
+        padding: 0 18px;
+      }
+
+      h2 {
+        font-size: 31px;
+      }
+
+      .hero-grid,
+      .grid-3,
+      .grid-4,
+      .split,
+      .stat-grid,
+      .cta-box {
+        grid-template-columns: 1fr;
+      }
+
+      .case-study h2 {
+        font-size: 31px;
+      }
+
       header.hero {
         min-height: auto;
         padding: 0 !important;
@@ -1042,67 +1095,128 @@
 
       header.hero::before {
         background-position: center center;
-        transform: scaleX(-1) scale(1.06);
+        transform: scale(1.04);
       }
 
       header.hero::after {
         background:
           linear-gradient(180deg,
             rgba(2, 6, 23, 0.94) 0%,
-            rgba(2, 6, 23, 0.84) 54%,
-            rgba(0, 24, 220, 0.70) 100%);
+            rgba(2, 6, 23, 0.86) 46%,
+            rgba(0, 24, 220, 0.62) 100%);
       }
 
       header.hero>.wrap {
-        width: min(1200px, calc(100% - 30px));
+        width: min(100% - 30px, 1200px);
         min-height: auto;
         padding-top: 58px !important;
-        padding-bottom: 48px !important;
+        padding-bottom: 46px !important;
+      }
+
+      header.hero h1 {
+        max-width: 100%;
+        margin-bottom: 18px;
+        font-size: clamp(44px, 15vw, 64px);
+        line-height: 0.94;
+      }
+
+      header.hero .hero-copy {
+        font-size: 20px;
+        line-height: 1.35;
+      }
+
+      header.hero .patent-note {
+        font-size: 15px;
+      }
+
+      header.hero .btn-row {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-bottom: 30px;
+      }
+
+      header.hero .btn {
+        width: 100%;
+      }
+
+      header.hero .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      header.hero .hero-card-1 {
+        min-height: auto;
       }
     }
   </style>
 
   <header class="hero">
-    <div class="wrap py-12">
-      <div class="eyebrow">MultiphaseCommander™ • Multiphase booster and transfer pump</div>
-      <h1>Lower pressure and move untreated multiphase flow.</h1>
-      <div class="subhead">Improve production without forcing mixed-phase reality through gas-only equipment.</div>
-      <p class="hero-copy">
-        MultiphaseCommander™ is built for production systems where gas, oil, water, and condensate move together and need
-        to be boosted as one stream. It helps operators reduce wellhead and gathering pressure, move untreated multiphase
-        flow downstream, and avoid the complexity, maintenance burden, and operating mismatch created by gas-only
-        boosters, separators, scrubbers, tanks, and flare-dependent handling strategies.
-      </p>
-      <div class="patent-note">
-        Supported by patented operating methods for liquid-influenced compression behavior, including
-        <a href="/patented-technology#us11098709b2">US11098709B2</a>. For the full patent overview, see the
-        <a href="/patented-technology">Patented Technology page</a>.
-      </div>
-      <div class="btn-row mt-5">
-        <a class="btn btn-primary" href="#specifications">View specifications</a>
-        <a class="btn btn-secondary" href="#technology-benefits">See technology benefits</a>
-      </div>
+    <div class="wrap fs-hero-wrap">
+      <div class="fs-hero-content">
+        <h1>Move mixed flow. Lower pressure.</h1>
 
-      <div class="hero-grid">
-        <div class="hero-card-1 ">
-          <h3>Lower backpressure</h3>
-          <p>Reduce flowing wellhead and gathering pressure to support improved inflow, production continuity, and
-            stronger upstream operating conditions.</p>
+        <p class="hero-copy">
+          Compress gas, oil, water, and condensate together to reduce backpressure and support production without gas-only
+          separation first.
+        </p>
+
+        <div class="patent-note">
+          Supported by patented liquid-influenced compression behavior, including US11098709B2.
         </div>
-        <div class="hero-card-1">
-          <h3>Move untreated flow</h3>
-          <p>Boost gas and liquids together in one system instead of forcing complete wellsite separation before useful
-            work can be done.</p>
+
+        <div class="btn-row mt-5">
+          <a class="btn btn-primary" href="#specifications">View specifications</a>
+          <a class="btn btn-secondary" href="#technology-benefits">See technology benefits</a>
         </div>
-        <div class="hero-card-1">
-          <h3>Reduce surface complexity</h3>
-          <p>Support leaner facility strategies with less dependence on site-level separators, scrubbers, tanks, flares,
-            and added control layers in suitable applications.</p>
-        </div>
-        <div class="hero-card-1">
-          <h3>Lower maintenance operation</h3>
-          <p>Fluidstream technology pairs liquid handling, sealed gland protection, piston tracking, and autonomous
-            control to reduce intervention and support longer-life field performance.</p>
+
+        <div class="hero-grid">
+          <div class="hero-card-1">
+            <div class="hero-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                stroke-width="2.4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14m0 0 5-5m-5 5-5-5" />
+              </svg>
+            </div>
+
+            <h3>Lower backpressure</h3>
+            <p>Improve inflow and production continuity.</p>
+          </div>
+
+          <div class="hero-card-1">
+            <div class="hero-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                stroke-width="2.4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7 12c2.5-4 7.5 4 10 0" />
+              </svg>
+            </div>
+
+            <h3>Untreated flow</h3>
+            <p>Move gas and liquids in one stream.</p>
+          </div>
+
+          <div class="hero-card-1">
+            <div class="hero-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                stroke-width="2.4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m5 13 4 4L19 7" />
+              </svg>
+            </div>
+
+            <h3>Less equipment</h3>
+            <p>Reduce separator and scrubber dependency.</p>
+          </div>
+
+          <div class="hero-card-1">
+            <div class="hero-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M12 3v18M5.64 5.64l12.72 12.72M3 12h18M5.64 18.36 18.36 5.64" />
+              </svg>
+            </div>
+
+            <h3>Field-ready</h3>
+            <p>Built for slugs, solids, liquids, and winter duty.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -1365,8 +1479,8 @@
   </section>
   <style>
     /* ================================
-                     TECHNOLOGY BENEFITS 3x2 LAYOUT
-                  ================================ */
+                                                   TECHNOLOGY BENEFITS 3x2 LAYOUT
+                                                ================================ */
 
     .technology-benefits-section {
       background: #ffffff;
@@ -1754,12 +1868,12 @@
       }
 
       /* .fs-mpc-section-head h2 {
-                                                font-size: clamp(30px, 3.2vw, 46px);
-                                                line-height: 1.02;
-                                                margin: 0 0 14px;
-                                                letter-spacing: -.035em;
-                                                color: var(--mpc-ink);
-                                              } */
+                                                                              font-size: clamp(30px, 3.2vw, 46px);
+                                                                              line-height: 1.02;
+                                                                              margin: 0 0 14px;
+                                                                              letter-spacing: -.035em;
+                                                                              color: var(--mpc-ink);
+                                                                            } */
 
       .fs-mpc-lead {
         font-size: 17px;

@@ -192,8 +192,8 @@
         }
 
         /* .fs-hero h1 span {
-                                                                                                                                                                                                                                                                                            color: var(--fs-light-blue);
-                                                                                                                                                                                                                                                                                        } */
+                                                                                                                                                                                                                                                                                                                                                                                    color: var(--fs-light-blue);
+                                                                                                                                                                                                                                                                                                                                                                                } */
 
         .fs-hero-copy {
             max-width: 720px;
@@ -449,6 +449,7 @@
         }
 
         .fs-tech::after,
+        .fs-about-exact-proof::after,
         .fs-outcome-card::after {
             content: "";
             position: absolute;
@@ -466,12 +467,14 @@
             z-index: 1;
         }
 
+        .fs-about-exact-proof:hover:after,
         .fs-tech:hover::after,
         .fs-outcome-card:hover:after {
             transform: scaleX(1);
 
         }
 
+        .fs-about-exact-proof:hover,
         .fs-tech:hover,
         .fs-outcome-card:hover {
             transform: translateY(-3px);
@@ -761,43 +764,306 @@
             max-width: 1200px;
             margin: 0 auto;
         }
+
+        /* =========================================
+                                                                                           ABOUT PAGE PREMIUM HERO EXACT STYLE
+                                                                                        ========================================= */
+
+        .fs-about-exact-hero {
+            --fluid-blue: #0018dc;
+            --fluid-cyan: #15d1ff;
+            --ink: #07111f;
+
+            min-height: 760px;
+            /* margin: 32px; */
+            /* border-radius: 30px; */
+            overflow: hidden;
+            position: relative;
+            /* box-shadow: 0 28px 80px rgba(8, 22, 48, .16); */
+            /* background:
+                                                                                    radial-gradient(circle at 82% 18%, rgba(21, 209, 255, .13), transparent 27%),
+                                                                                    radial-gradient(circle at 18% 84%, rgba(0, 24, 220, .11), transparent 34%),
+                                                                                    linear-gradient(135deg, #ffffff 0%, #f7f9fd 44%, #edf2fa 100%); */
+        }
+
+        .fs-about-exact-hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(0, 24, 220, .055) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 24, 220, .055) 1px, transparent 1px);
+            background-size: 46px 46px;
+            mask-image: linear-gradient(90deg, transparent, #000 18%, #000 72%, transparent);
+            pointer-events: none;
+        }
+
+        .fs-about-exact-inner {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 84px 2px 58px;
+        }
+
+        .fs-about-exact-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 17px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 850;
+            letter-spacing: .075em;
+            text-transform: uppercase;
+            background: #ffffff;
+            border: 1px solid #dfe6f1;
+            color: #20304a;
+        }
+
+        .fs-about-exact-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--fluid-cyan);
+            box-shadow: 0 0 20px rgba(21, 209, 255, .65);
+        }
+
+        .fs-about-exact-hero h1 {
+            margin: 24px 0 18px;
+            max-width: 850px;
+            color: var(--ink);
+            font-size: clamp(52px, 6.4vw, 96px);
+            line-height: .94;
+            letter-spacing: -.07em;
+            font-weight: 900;
+        }
+
+        .fs-about-exact-lead {
+            max-width: 760px;
+            margin: 0 0 28px;
+            font-size: clamp(20px, 1.65vw, 26px);
+            line-height: 1.34;
+            font-weight: 520;
+            color: #47546a;
+        }
+
+        .fs-about-exact-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin: 0 0 38px;
+        }
+
+        .fs-about-exact-btn {
+            min-height: 54px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 25px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 850;
+            line-height: 1;
+            transition:
+                transform .22s ease,
+                box-shadow .22s ease,
+                background .22s ease,
+                border-color .22s ease;
+        }
+
+        .fs-about-exact-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .fs-about-exact-btn.primary {
+            background: var(--fluid-blue);
+            color: #ffffff;
+            box-shadow: 0 18px 36px rgba(0, 24, 220, .16);
+        }
+
+        .fs-about-exact-btn.primary:hover {
+            background: #0012b9;
+            box-shadow: 0 22px 46px rgba(0, 24, 220, .22);
+        }
+
+        .fs-about-exact-btn.secondary {
+            background: #ffffff;
+            color: var(--ink);
+            border: 1px solid #d9e1ee;
+        }
+
+        .fs-about-exact-btn.secondary:hover {
+            color: var(--fluid-blue);
+            border-color: var(--fluid-blue);
+        }
+
+        .fs-about-exact-proof-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 14px;
+            max-width: 980px;
+        }
+
+        .fs-about-exact-proof {
+            border-radius: 4px;
+            padding: 21px 22px 20px;
+            background: #ffffff;
+            border: 1px solid #dfe6f1;
+            box-shadow: 0 18px 42px rgba(10, 28, 60, .08);
+            transition:
+                transform .24s ease,
+                border-color .24s ease,
+                box-shadow .24s ease;
+        }
+
+        .fs-about-exact-proof:hover {
+            transform: translateY(-3px);
+            border-color: rgba(0, 24, 220, .28);
+            box-shadow: 0 24px 52px rgba(10, 28, 60, .11);
+        }
+
+        .fs-about-exact-proof strong {
+            display: block;
+            font-size: 18px;
+            line-height: 1.15;
+            letter-spacing: -.02em;
+            margin-bottom: 8px;
+            color: var(--ink);
+        }
+
+        .fs-about-exact-proof span {
+            display: block;
+            font-size: 14px;
+            line-height: 1.42;
+            color: #5d6878;
+        }
+
+        .fs-about-exact-score {
+            position: absolute;
+            right: 58px;
+            top: 58px;
+            width: 210px;
+            border-radius: 9px;
+            padding: 22px;
+            background: #07111f;
+            color: #ffffff;
+            box-shadow: 0 22px 60px rgba(0, 0, 0, .18);
+            z-index: 3;
+        }
+
+        .fs-about-exact-score small {
+            display: block;
+            color: rgba(255, 255, 255, .62);
+            font-weight: 750;
+            text-transform: uppercase;
+            letter-spacing: .08em;
+        }
+
+        .fs-about-exact-score b {
+            display: block;
+            font-size: 42px;
+            letter-spacing: -.06em;
+            margin: 8px 0 6px;
+            line-height: 1;
+        }
+
+        .fs-about-exact-score span {
+            font-size: 14px;
+            color: rgba(255, 255, 255, .72);
+            line-height: 1.4;
+        }
+
+        @media (max-width: 1050px) {
+            .fs-about-exact-hero {
+                margin: 18px;
+                min-height: auto;
+                border-radius: 24px;
+            }
+
+            .fs-about-exact-inner {
+                padding: 42px 28px;
+            }
+
+            .fs-about-exact-proof-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .fs-about-exact-score {
+                display: none;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .fs-about-exact-hero {
+                margin: 12px;
+                border-radius: 20px;
+            }
+
+            .fs-about-exact-inner {
+                padding: 34px 20px;
+            }
+
+            .fs-about-exact-hero h1 {
+                font-size: clamp(42px, 14vw, 62px);
+            }
+
+            .fs-about-exact-actions {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+
+            .fs-about-exact-btn {
+                width: 100%;
+            }
+        }
     </style>
 
 
     <main>
-        <section class="fs-hero py-12">
-            <div class="fs-wrap fs-hero-grid">
-                <div>
-                    <div class="fs-eyebrow">About Fluidstream</div>
-                    <h1>More production. <br>Fewer emissions.<br> From the same field.</h1>
-                    <p class="fs-hero-copy">
-                        Fluidstream helps upstream producers reduce emissions and improve production economics with field
-                        solutions
-                        built for wet gas, liquids, unstable flow, and remote operation.
-                    </p>
-                    <div class="fs-hero-actions">
-                        <a class="fs-btn fs-btn-primary" href="/technical-review">Request Technical Review</a>
-                        <a class="fs-btn fs-btn-secondary" href="/case-studies">Explore Case Studies</a>
-                    </div>
-                </div>
+        <section class="fs-about-exact-hero">
+            <div class="fs-about-exact-score">
+                <small>Recommended</small>
+                <b>9.5/10</b>
+                <span>Best balance of premium, readable, engineering-forward, and credible.</span>
+            </div>
 
-                <aside class="fs-hero-card">
-                    <h2>Outcome-focused solutions enabled by patented multiphase compression.</h2>
-                    <p>
-                        Fluidstream is built to make emissions reduction and production optimization projects viable where
-                        conventional compression is limited by liquids, infrastructure, or operating conditions.
+            <div class="fs-about-exact-inner">
+                <div class="fs-about-exact-copy-area">
+                    <h1>More production. Fewer emissions. From the same field.</h1>
+
+                    <p class="fs-about-exact-lead">
+                        Fluidstream helps upstream producers reduce emissions and improve production economics with field
+                        solutions built for wet gas, liquids, unstable flow, and remote operation.
                     </p>
-                    <div class="fs-meta-grid">
-                        <div class="fs-meta-card">
+
+                    <div class="fs-about-exact-actions">
+                        <a class="fs-about-exact-btn primary" href="{{ url('/technical-review') }}">
+                            Request Technical Review
+                        </a>
+
+                        <a class="fs-about-exact-btn secondary" href="{{ url('/case-studies') }}">
+                            Explore Case Studies
+                        </a>
+                    </div>
+
+                    <div class="fs-about-exact-proof-grid">
+                        <div class="fs-about-exact-proof">
                             <strong>Calgary, Alberta, Canada</strong>
                             <span>Built for Western Canadian field conditions and broader upstream applications.</span>
                         </div>
-                        <div class="fs-meta-card">
+
+                        <div class="fs-about-exact-proof">
                             <strong>Founded 2010</strong>
                             <span>Focused on practical emissions reduction and production optimization solutions.</span>
                         </div>
+
+                        <div class="fs-about-exact-proof">
+                            <strong>Patented multiphase platform</strong>
+                            <span>Core IP includes U.S. Patent US11098709B2 and Canadian Patent CA2843321C.</span>
+                        </div>
                     </div>
-                </aside>
+                </div>
             </div>
         </section>
 
