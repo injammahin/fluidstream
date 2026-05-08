@@ -2013,7 +2013,7 @@
 
                 <div style="margin-top:22px;display:flex;gap:12px;flex-wrap:wrap">
                     <a class="btn btn-primary" href="/technology">Explore Technology</a>
-                    <a class="btn btn-secondary" href="/multiphase-compression-technology">View
+                    <a class="btn btn-secondary" href="/why-multiphase">View
                         Key Features</a>
                 </div>
             </div>
@@ -2543,7 +2543,7 @@
                 </div>
                 <div style="display:flex;gap:12px;flex-wrap:wrap">
                     <a class="btn btn-primary" href="/contact">Request Technical Review</a>
-                    <a class="btn btn-secondary" href="/multiphase-compression-technology">Understand Multiphase
+                    <a class="btn btn-secondary" href="/why-multiphase">Understand Multiphase
                         Compression</a>
                 </div>
             </div>

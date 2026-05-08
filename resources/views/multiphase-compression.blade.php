@@ -780,7 +780,7 @@
       display: grid;
       grid-template-columns: 1.1fr .9fr;
       gap: 24px;
-      align-items: center;
+      align-items: start;
     }
 
     .cta h2 {
@@ -814,8 +814,8 @@
     }
 
     /* =========================================
-                         HERO SECTION FIXED STYLE
-                      ========================================= */
+                                                         HERO SECTION FIXED STYLE
+                                                      ========================================= */
 
     header.hero {
       position: relative !important;
@@ -848,16 +848,7 @@
       inset: 0;
       z-index: -2;
       pointer-events: none;
-      background:
-        linear-gradient(90deg,
-          rgba(2, 6, 23, 0.96) 0%,
-          rgba(2, 6, 23, 0.88) 22%,
-          rgba(2, 6, 23, 0.64) 44%,
-          rgba(2, 6, 23, 0.28) 70%,
-          rgba(2, 6, 23, 0.18) 100%),
-        linear-gradient(180deg,
-          rgba(2, 6, 23, 0.18) 0%,
-          rgba(2, 6, 23, 0.32) 100%);
+      background: linear-gradient(90deg, rgba(2, 6, 23, 0.96) 0%, rgb(2 6 23 / 72%) 22%, rgb(2 6 23 / 42%) 44%, rgb(2 6 23 / 0%) 70%, rgba(2, 6, 23, 0.18) 100%), linear-gradient(180deg, rgba(2, 6, 23, 0.18) 0%, rgb(2 6 23 / 0%) 100%);
     }
 
     header.hero>.wrap {
@@ -1149,78 +1140,462 @@
     }
   </style>
 
-  <header class="hero">
-    <div class="wrap fs-hero-wrap">
-      <div class="fs-hero-content">
-        <h1>Move mixed flow. Lower pressure.</h1>
+  <header class="fs-mpc-hero">
+    <style>
+      .fs-mpc-hero {
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+        min-height: calc(100vh - 108px);
+        display: flex;
+        align-items: center;
+        color: #ffffff;
+        background: #07111f;
+      }
 
-        <p class="hero-copy">
-          Compress gas, oil, water, and condensate together to reduce backpressure and support production without gas-only
-          separation first.
+      .fs-mpc-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -3;
+        background-image: url("{{ asset('img/hero/Vermilion.png') }}");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        transform: scale(1.03);
+        transform-origin: center;
+      }
+
+      .fs-mpc-hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -2;
+        pointer-events: none;
+        background:
+          linear-gradient(90deg,
+            rgba(2, 6, 23, 0.94) 0%,
+            rgba(2, 6, 23, 0.78) 38%,
+            rgba(2, 6, 23, 0.46) 64%,
+            rgba(2, 6, 23, 0.20) 100%),
+          radial-gradient(circle at 82% 18%, rgba(21, 209, 255, .20), transparent 30%);
+      }
+
+      .fs-mpc-hero-wrap {
+        position: relative;
+        z-index: 2;
+        width: min(1200px, calc(100% - 40px));
+        margin: 0 auto;
+        min-height: calc(100vh - 108px);
+        display: grid;
+        grid-template-columns: minmax(0, 760px) minmax(320px, 390px);
+        gap: 54px;
+        align-items: end;
+        padding: 92px 0 78px;
+      }
+
+      .fs-mpc-hero-breadcrumb {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 24px;
+        color: rgba(255, 255, 255, .68);
+        font-size: 13px;
+        line-height: 1.4;
+      }
+
+      .fs-mpc-hero-breadcrumb a {
+        color: rgba(255, 255, 255, .82);
+        text-decoration: none;
+      }
+
+      .fs-mpc-hero-breadcrumb a:hover {
+        color: #ffffff;
+      }
+
+      .fs-mpc-hero-kicker {
+        margin: 0 0 16px;
+        color: #15d1ff;
+        font-size: 13px;
+        line-height: 1.2;
+        font-weight: 900;
+        letter-spacing: .14em;
+        text-transform: uppercase;
+      }
+
+      .fs-mpc-hero-title {
+        margin: 0;
+        max-width: 820px;
+        color: #ffffff;
+        font-size: clamp(50px, 6vw, 92px);
+        line-height: .92;
+        letter-spacing: -.075em;
+        font-weight: 900;
+      }
+
+      .fs-mpc-hero-lead {
+        margin: 24px 0 0;
+        max-width: 720px;
+        color: rgba(255, 255, 255, .86);
+        font-size: clamp(20px, 1.8vw, 26px);
+        line-height: 1.34;
+        letter-spacing: -.035em;
+        font-weight: 750;
+      }
+
+      .fs-mpc-hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 30px;
+      }
+
+      .fs-mpc-hero-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 54px;
+        padding: 0 26px;
+        border-radius: 999px;
+        font-size: 15px;
+        line-height: 1;
+        font-weight: 900;
+        text-decoration: none;
+        transition:
+          transform .22s ease,
+          box-shadow .22s ease,
+          background .22s ease,
+          color .22s ease,
+          border-color .22s ease;
+        white-space: nowrap;
+      }
+
+      .fs-mpc-hero-btn-primary {
+        color: #0018dc;
+        background: #ffffff;
+        border: 1px solid #ffffff;
+        box-shadow: 0 18px 38px rgba(0, 0, 0, .22);
+      }
+
+      .fs-mpc-hero-btn-primary:hover {
+        color: #ffffff;
+        background: #0018dc;
+        border-color: #0018dc;
+        transform: translateY(-2px);
+      }
+
+      .fs-mpc-hero-btn-secondary {
+        color: #ffffff;
+        background: rgba(255, 255, 255, 0);
+        border: 1px solid rgba(255, 255, 255, .28);
+        /* backdrop-filter: blur(10px); */
+        -webkit-backdrop-filter: blur(10px);
+      }
+
+      .fs-mpc-hero-btn-secondary:hover {
+        background: rgba(255, 255, 255, .16);
+        border-color: rgba(255, 255, 255, .42);
+        transform: translateY(-2px);
+      }
+
+      .fs-mpc-hero-benefits {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 34px;
+        max-width: 860px;
+      }
+
+      .fs-mpc-hero-benefit {
+        position: relative;
+        overflow: hidden;
+        min-height: 112px;
+        padding: 16px 15px;
+        border-radius: 7px;
+        border: 1px solid rgba(255, 255, 255, .20);
+        background: rgba(255, 255, 255, 0);
+        /* backdrop-filter: blur(10px); */
+        -webkit-backdrop-filter: blur(10px);
+        transition:
+          transform .25s ease,
+          border-color .25s ease,
+          background .25s ease,
+          box-shadow .25s ease;
+      }
+
+
+
+      .fs-mpc-hero-benefit:hover {
+        transform: translateY(-4px);
+        /* border-color: rgba(21, 209, 255, .48); */
+        background: rgba(255, 255, 255, .12);
+        /* box-shadow: 0 22px 46px rgba(0, 0, 0, .20); */
+      }
+
+      .fs-mpc-hero-benefit:hover::after {
+        transform: scaleX(1);
+      }
+
+      .fs-mpc-hero-benefit strong {
+        display: block;
+        margin-bottom: 7px;
+        color: #ffffff;
+        font-size: 15px;
+        line-height: 1.18;
+        font-weight: 900;
+      }
+
+      .fs-mpc-hero-benefit span {
+        display: block;
+        color: rgba(255, 255, 255, .76);
+        font-size: 13px;
+        line-height: 1.36;
+        font-weight: 650;
+      }
+
+      .fs-mpc-hero-proof-card {
+        position: relative;
+        overflow: hidden;
+        isolation: isolate;
+        padding: 26px;
+        border-radius: 7px;
+        background: rgba(255, 255, 255, 0);
+        border: 1px solid rgba(255, 255, 255, .18);
+        box-shadow: 0 26px 70px rgba(0, 0, 0, .24);
+        /* backdrop-filter: blur(15px); */
+        -webkit-backdrop-filter: blur(15px);
+        transition:
+          transform .28s ease,
+          box-shadow .28s ease,
+          border-color .28s ease;
+      }
+
+      .fs-mpc-hero-proof-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+        background:
+          linear-gradient(135deg,
+            rgba(255, 255, 255, .17) 0%,
+            rgba(255, 255, 255, .06) 48%,
+            rgba(255, 255, 255, .025) 100%);
+      }
+
+
+
+      .fs-mpc-hero-proof-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(255, 255, 255, .35);
+        box-shadow: 0 30px 78px rgba(0, 0, 0, .30);
+      }
+
+      .fs-mpc-hero-proof-card:hover::after {
+        transform: scaleX(1);
+      }
+
+      .fs-mpc-hero-proof-card>* {
+        position: relative;
+        z-index: 1;
+      }
+
+      .fs-mpc-hero-proof-card h2 {
+        margin: 0 0 13px;
+        max-width: none;
+        color: #ffffff;
+        font-size: 25px;
+        line-height: 1.08;
+        letter-spacing: -.035em;
+        font-weight: 800;
+      }
+
+      .fs-mpc-hero-proof-card p {
+        margin: 0 0 22px;
+        color: rgba(255, 255, 255, .78);
+        font-size: 15.5px;
+        line-height: 1.6;
+        font-weight: 450;
+      }
+
+      .fs-mpc-hero-proof-list {
+        display: grid;
+        gap: 14px;
+      }
+
+      .fs-mpc-hero-proof-item {
+        display: grid;
+        grid-template-columns: 10px minmax(0, 1fr);
+        gap: 12px;
+        align-items: start;
+        padding-top: 14px;
+        border-top: 1px solid rgba(255, 255, 255, .12);
+        color: rgba(255, 255, 255, .88);
+        font-size: 14px;
+        line-height: 1.48;
+        font-weight: 750;
+        text-decoration: none;
+        transition: color .22s ease;
+      }
+
+      .fs-mpc-hero-proof-item:first-child {
+        padding-top: 0;
+        border-top: 0;
+      }
+
+      .fs-mpc-hero-proof-item:hover {
+        color: #ffffff;
+      }
+
+      .fs-mpc-hero-proof-dot {
+        width: 7px;
+        height: 7px;
+        margin-top: 7px;
+        border-radius: 999px;
+        background: #15d1ff;
+        box-shadow: 0 0 0 7px rgba(21, 209, 255, .10);
+      }
+
+      @media (max-width: 1080px) {
+        .fs-mpc-hero {
+          min-height: auto;
+        }
+
+        .fs-mpc-hero-wrap {
+          min-height: auto;
+          grid-template-columns: 1fr;
+          gap: 34px;
+          align-items: start;
+          padding: 82px 0 64px;
+        }
+
+        .fs-mpc-hero-proof-card {
+          max-width: 640px;
+        }
+
+        .fs-mpc-hero-benefits {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 760px) {
+        .fs-mpc-hero::after {
+          background:
+            linear-gradient(180deg,
+              rgba(2, 6, 23, 0.94) 0%,
+              rgba(2, 6, 23, 0.86) 46%,
+              rgba(0, 24, 220, 0.62) 100%);
+        }
+
+        .fs-mpc-hero-wrap {
+          width: min(100%, calc(100% - 28px));
+          padding: 68px 0 54px;
+        }
+
+        .fs-mpc-hero-title {
+          font-size: clamp(44px, 15vw, 64px);
+          line-height: .94;
+        }
+
+        .fs-mpc-hero-lead {
+          font-size: 18px;
+          line-height: 1.4;
+        }
+
+        .fs-mpc-hero-actions {
+          flex-direction: column;
+        }
+
+        .fs-mpc-hero-btn {
+          width: 100%;
+        }
+
+        .fs-mpc-hero-benefits {
+          grid-template-columns: 1fr;
+        }
+
+        .fs-mpc-hero-benefit {
+          min-height: auto;
+        }
+
+        .fs-mpc-hero-proof-card {
+          padding: 22px;
+        }
+      }
+    </style>
+
+    <div class="fs-mpc-hero-wrap">
+      <div class="fs-mpc-hero-copy">
+
+        <h1 class="fs-mpc-hero-title">
+          Move mixed flow. Lower pressure.
+        </h1>
+
+        <p class="fs-mpc-hero-lead">
+          Boost gas, oil, water, and condensate together to reduce backpressure and move untreated multiphase
+          production without gas-only separation first.
         </p>
 
-        <div class="patent-note">
-          Supported by patented liquid-influenced compression behavior, including US11098709B2.
+        <div class="fs-mpc-hero-actions">
+          <a class="fs-mpc-hero-btn fs-mpc-hero-btn-primary" href="#specifications">
+            View Specifications
+          </a>
+
+          <a class="fs-mpc-hero-btn fs-mpc-hero-btn-secondary" href="#technology-benefits">
+            See Technology Benefits
+          </a>
         </div>
 
-        <div class="btn-row mt-5">
-          <a class="btn btn-primary" href="#specifications">View specifications</a>
-          <a class="btn btn-secondary" href="#technology-benefits">See technology benefits</a>
-        </div>
-
-        <div class="hero-grid">
-          <div class="hero-card-1">
-            <div class="hero-card-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                stroke-width="2.4">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14m0 0 5-5m-5 5-5-5" />
-              </svg>
-            </div>
-
-            <h3>Lower backpressure</h3>
-            <p>Improve inflow and production continuity.</p>
+        <div class="fs-mpc-hero-benefits" aria-label="MultiphaseCommander benefits">
+          <div class="fs-mpc-hero-benefit">
+            <strong>Lower backpressure</strong>
+            <span>Support stronger inflow and production continuity.</span>
           </div>
 
-          <div class="hero-card-1">
-            <div class="hero-card-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                stroke-width="2.4">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M7 12c2.5-4 7.5 4 10 0" />
-              </svg>
-            </div>
-
-            <h3>Untreated flow</h3>
-            <p>Move gas and liquids in one stream.</p>
+          <div class="fs-mpc-hero-benefit">
+            <strong>Untreated flow</strong>
+            <span>Move gas and liquids as one stream.</span>
           </div>
 
-          <div class="hero-card-1">
-            <div class="hero-card-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                stroke-width="2.4">
-                <path stroke-linecap="round" stroke-linejoin="round" d="m5 13 4 4L19 7" />
-              </svg>
-            </div>
-
-            <h3>Less equipment</h3>
-            <p>Reduce separator and scrubber dependency.</p>
+          <div class="fs-mpc-hero-benefit">
+            <strong>Less equipment</strong>
+            <span>Reduce separator and scrubber dependency.</span>
           </div>
 
-          <div class="hero-card-1">
-            <div class="hero-card-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M12 3v18M5.64 5.64l12.72 12.72M3 12h18M5.64 18.36 18.36 5.64" />
-              </svg>
-            </div>
-
-            <h3>Field-ready</h3>
-            <p>Built for slugs, solids, liquids, and winter duty.</p>
+          <div class="fs-mpc-hero-benefit">
+            <strong>Field-ready</strong>
+            <span>Built for slugs, solids, liquids, and winter duty.</span>
           </div>
         </div>
       </div>
+
+      <aside class="fs-mpc-hero-proof-card">
+        <h2>Liquid-aware compression response.</h2>
+
+        <p>
+          Supported by patented liquid-influenced compression behavior, including US11098709B2.
+        </p>
+
+        <div class="fs-mpc-hero-proof-list">
+          <a class="fs-mpc-hero-proof-item" href="#technology-benefits">
+            <span class="fs-mpc-hero-proof-dot"></span>
+            <span>Handles mixed gas and liquid streams directly.</span>
+          </a>
+
+          <a class="fs-mpc-hero-proof-item" href="#case-study">
+            <span class="fs-mpc-hero-proof-dot"></span>
+            <span>Field-proven production recovery in Alberta, Canada.</span>
+          </a>
+
+          <a class="fs-mpc-hero-proof-item" href="#specifications">
+            <span class="fs-mpc-hero-proof-dot"></span>
+            <span>Model range available for application review.</span>
+          </a>
+        </div>
+      </aside>
     </div>
   </header>
+
 
   <section>
     <div class="wrap py-12">
@@ -1479,8 +1854,8 @@
   </section>
   <style>
     /* ================================
-                                                   TECHNOLOGY BENEFITS 3x2 LAYOUT
-                                                ================================ */
+                                                                                   TECHNOLOGY BENEFITS 3x2 LAYOUT
+                                                                                ================================ */
 
     .technology-benefits-section {
       background: #ffffff;
@@ -1780,7 +2155,7 @@
     </div>
   </section>
 
-  <section>
+  <section id="case-study">
     <div class="wrap py-12">
 
       <div class="case-study">
@@ -1868,12 +2243,12 @@
       }
 
       /* .fs-mpc-section-head h2 {
-                                                                              font-size: clamp(30px, 3.2vw, 46px);
-                                                                              line-height: 1.02;
-                                                                              margin: 0 0 14px;
-                                                                              letter-spacing: -.035em;
-                                                                              color: var(--mpc-ink);
-                                                                            } */
+                                                                                                              font-size: clamp(30px, 3.2vw, 46px);
+                                                                                                              line-height: 1.02;
+                                                                                                              margin: 0 0 14px;
+                                                                                                              letter-spacing: -.035em;
+                                                                                                              color: var(--mpc-ink);
+                                                                                                            } */
 
       .fs-mpc-lead {
         font-size: 17px;
@@ -2677,9 +3052,9 @@
   <section class="cta">
     <div class="wrap py-12">
 
-      <div class="cta-box">
+      <div class="cta-box flex items-start">
         <div>
-          <div class="kicker mb-2" style="color:#0018dc;">Customized Technical CTA</div>
+          {{-- <div class="kicker mb-2" style="color:#0018dc;">Customized Technical CTA</div> --}}
           <h2>Submit your fluid conditions for a MultiphaseCommander™ application review.</h2>
           <p>
             If your system is constrained by liquid-loaded gas flow, unstable operating conditions, rising system

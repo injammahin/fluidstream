@@ -57,8 +57,8 @@
         }
 
         /* ================================
-                                                               HERO WITH BACKGROUND IMAGE
-                                                            ================================ */
+                                                                       HERO WITH BACKGROUND IMAGE
+                                                                    ================================ */
 
         .patent-page .hero {
             position: relative;
@@ -392,8 +392,8 @@
         }
 
         /* ================================
-                                                               COMMON SECTION STYLES
-                                                            ================================ */
+                                                                       COMMON SECTION STYLES
+                                                                    ================================ */
 
         .patent-page .section-head {
             display: flex;
@@ -798,8 +798,8 @@
         }
 
         /* ================================
-                                                               RESPONSIVE
-                                                            ================================ */
+                                                                       RESPONSIVE
+                                                                    ================================ */
 
         @media (max-width: 1120px) {
             .patent-page .hero {
@@ -1349,7 +1349,7 @@
                     </div>
 
                     <div style="display:flex;gap:12px;flex-wrap:wrap">
-                        <a class="btn btn-primary" href="{{ url('/contact') }}">Request Technical Review</a>
+                        <a class="btn btn-primary" href="{{ url('/technical-review') }}">Request Technical Review</a>
                         <a class="btn btn-secondary" href="{{ url('/technology') }}">Explore Technology</a>
                     </div>
                 </div>

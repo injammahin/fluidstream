@@ -23,7 +23,7 @@ Route::view('/insights', 'insights');
 Route::view('/privacy-policy', 'privacy-policy');
 Route::view('/terms', 'terms');
 Route::view('/perspectives', 'perspectives');
-Route::view('/multiphase-compression-technology', 'multiphase-compression-technology');
+Route::view('/why-multiphase', 'why-multiphase');
 Route::view('/contact', 'contact')->name('contact');
 Route::view('/patented-technology', 'patented-technology')->name('patented-technology');
 Route::view('/about-us', 'about-us')->name('about-us');

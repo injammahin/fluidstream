@@ -313,8 +313,8 @@
                     <h3 class="fsf-footer-col-title">Technology</h3>
                     <ul class="fsf-footer-list">
                         <li class="fsf-footer-list-item">
-                            <a href="/multiphase-compression-technology" class="fsf-footer-link">
-                                Multiphase Compression Technology
+                            <a href="/why-multiphase" class="fsf-footer-link">
+                                Why Multiphase
                             </a>
                         </li>
                         <li class="fsf-footer-list-item">

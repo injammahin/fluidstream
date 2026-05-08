@@ -250,8 +250,8 @@
         }
 
         /* section {
-                                                                                                                                                                                                                                                                                                    padding: 78px 22px
-                                                                                                                                                                                                                                                                                                } */
+                                                                                                                                                                                                                                                                                                        padding: 78px 22px
+                                                                                                                                                                                                                                                                                                    } */
 
         .container {
             max-width: var(--max);
@@ -260,8 +260,8 @@
 
         .section-head {
             /* display: grid;
-                                                                                                                                                                                            grid-template-columns: .72fr 1.28fr;
-                                                                                                                                                                                            gap: 42px; */
+                                                                                                                                                                                                grid-template-columns: .72fr 1.28fr;
+                                                                                                                                                                                                gap: 42px; */
             align-items: start;
             margin-bottom: 34px
         }
@@ -470,36 +470,36 @@
         }
 
         /* .card.swipe:after {
-                                                                                                                    content: "";
-                                                                                                                    position: absolute;
-                                                                                                                    left: -110%;
-                                                                                                                    top: 0;
-                                                                                                                    width: 100%;
-                                                                                                                    height: 100%;
-                                                                                                                    background: linear-gradient(105deg, transparent, rgba(21, 209, 255, .16), transparent);
-                                                                                                                    transition: .5s ease
-                                                                                                                } */
+                                                                                                                        content: "";
+                                                                                                                        position: absolute;
+                                                                                                                        left: -110%;
+                                                                                                                        top: 0;
+                                                                                                                        width: 100%;
+                                                                                                                        height: 100%;
+                                                                                                                        background: linear-gradient(105deg, transparent, rgba(21, 209, 255, .16), transparent);
+                                                                                                                        transition: .5s ease
+                                                                                                                    } */
 
         /* .card.swipe:hover:after {
-                                                                                                                    left: 110%
-                                                                                                                } */
+                                                                                                                        left: 110%
+                                                                                                                    } */
 
         /* .card:hover {
-                                                                                                                    transform: translateY(-5px);
-                                                                                                                    border-color: rgba(0, 24, 220, .3);
-                                                                                                                    box-shadow: 0 26px 60px rgba(0, 24, 220, .12)
-                                                                                                                }
+                                                                                                                        transform: translateY(-5px);
+                                                                                                                        border-color: rgba(0, 24, 220, .3);
+                                                                                                                        box-shadow: 0 26px 60px rgba(0, 24, 220, .12)
+                                                                                                                    }
 
-                                                                                                                .card.fill:hover {
-                                                                                                                    background: var(--blue);
-                                                                                                                    color: #fff;
-                                                                                                                    border-color: var(--blue)
-                                                                                                                } */
+                                                                                                                    .card.fill:hover {
+                                                                                                                        background: var(--blue);
+                                                                                                                        color: #fff;
+                                                                                                                        border-color: var(--blue)
+                                                                                                                    } */
         /* 
-                                                                                                            .card.fill:hover p,
-                                                                                                            .card.fill:hover .tag {
-                                                                                                                color: rgba(255, 255, 255, .78)
-                                                                                                            } */
+                                                                                                                .card.fill:hover p,
+                                                                                                                .card.fill:hover .tag {
+                                                                                                                    color: rgba(255, 255, 255, .78)
+                                                                                                                } */
 
         .number {
             width: 42px;
@@ -514,9 +514,9 @@
         }
 
         /* .card.fill:hover .number {
-                                                                                                            background: rgba(255, 255, 255, .14);
-                                                                                                            color: #fff
-                                                                                                        } */
+                                                                                                                background: rgba(255, 255, 255, .14);
+                                                                                                                color: #fff
+                                                                                                            } */
 
         .blue-section {
             background: var(--blue);
@@ -629,8 +629,8 @@
         }
 
         /* .seo-copy p {
-                                                                margin-bottom: 20px
-                                                            } */
+                                                                    margin-bottom: 20px
+                                                                } */
 
         .comparison {
             overflow: hidden;
@@ -761,8 +761,8 @@
             }
 
             /* section {
-                                                                                                                                                                                                                                                                                                        padding: 58px 18px
-                                                                                                                                                                                                                                                                                                    } */
+                                                                                                                                                                                                                                                                                                            padding: 58px 18px
+                                                                                                                                                                                                                                                                                                        } */
 
             .hero-inner {
                 padding-top: 62px
@@ -804,7 +804,6 @@
         <section class="hero ">
             <div class="hero-inner py-12">
                 <div>
-                    <div class="eyebrow">Alberta, Canada case study • MultiphaseCommander™</div>
                     <h1>From liquid-loaded wells to C$1.5M+ per year in recovered production.</h1>
                     <h2>Fluidstream restored two mature Alberta, Canada wells without adding separation infrastructure.</h2>
                     <p class="lead">An international oil and gas producer used a 200 HP gas-driven Fluidstream MC2270

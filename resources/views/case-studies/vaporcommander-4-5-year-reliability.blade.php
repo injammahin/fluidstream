@@ -834,7 +834,6 @@
         <section class="hero">
             <div class="hero-inner wrap py-12">
                 <div>
-                    <div class="eyebrow">Alberta, Canada case study • VaporCommander™</div>
                     <h1>More than 4.5 years of vapor recovery with only one seal change to date.</h1>
                     <h2>Fluidstream VaporCommander™ delivered 35 months to the first seal change, negligible maintenance,
                         and reliable operation through Alberta, Canada winters below -40°C.</h2>

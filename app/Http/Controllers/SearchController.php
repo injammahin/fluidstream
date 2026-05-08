@@ -62,7 +62,7 @@ class SearchController extends Controller
             [
                 'type' => 'Page',
                 'title' => 'Why Multiphase',
-                'url' => url('/multiphase-compression-technology'),
+                'url' => url('/why-multiphase'),
                 'description' => 'Why multiphase compression technology matters.',
                 'keywords' => 'why multiphase multiphase compression multiphase pump oil gas emissions',
                 'content' => 'Multiphase compression supports liquid and gas handling production optimization methane reduction and lower maintenance field operation.',

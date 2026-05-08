@@ -130,7 +130,7 @@
         }
 
 
-        
+
 
         */ h1 {
             font-size: clamp(26px, 5vw, 50px);
@@ -214,7 +214,7 @@
         }
 
         .quote {
-            font-size: 20px;
+            font-size: 18px;
             line-height: 1.32;
             letter-spacing: -.035em;
             font-weight: 500;
@@ -256,8 +256,8 @@
         }
 
         /* section {
-                                                                                                                                                                                                                                                                                                                                                padding: 78px 22px
-                                                                                                                                                                                                                                                                                                                                            } */
+                                                                                                                                                                                                                                                                                                                                                                                        padding: 78px 22px
+                                                                                                                                                                                                                                                                                                                                                                                    } */
 
         .container {
             /* max-width: var(--max); */
@@ -266,8 +266,8 @@
 
         .section-head {
             /* display: grid;
-                                                                                                                                                                                                                                                                    grid-template-columns: .72fr 1.28fr;
-                                                                                                                                                                                                                                                                    gap: 42px; */
+                                                                                                                                                                                                                                                                                                            grid-template-columns: .72fr 1.28fr;
+                                                                                                                                                                                                                                                                                                            gap: 42px; */
             max-width: 66ch;
             align-items: start;
             margin-bottom: 34px
@@ -410,8 +410,8 @@
         }
 
         /* .metric:hover .big {
-                                                                                                                                                                                                            color: #fff
-                                                                                                                                                                                                        } */
+                                                                                                                                                                                                                                                    color: #fff
+                                                                                                                                                                                                                                                } */
 
         .metric h3,
         .card h3 {
@@ -489,36 +489,36 @@
         }
 
         /* .card.swipe:after {
-                                                                                                                            content: "";
-                                                                                                                            position: absolute;
-                                                                                                                            left: -110%;
-                                                                                                                            top: 0;
-                                                                                                                            width: 100%;
-                                                                                                                            height: 100%;
-                                                                                                                            background: linear-gradient(105deg, transparent, rgba(21, 209, 255, .16), transparent);
-                                                                                                                            transition: .5s ease
-                                                                                                                        }
+                                                                                                                                                                    content: "";
+                                                                                                                                                                    position: absolute;
+                                                                                                                                                                    left: -110%;
+                                                                                                                                                                    top: 0;
+                                                                                                                                                                    width: 100%;
+                                                                                                                                                                    height: 100%;
+                                                                                                                                                                    background: linear-gradient(105deg, transparent, rgba(21, 209, 255, .16), transparent);
+                                                                                                                                                                    transition: .5s ease
+                                                                                                                                                                }
 
-                                                                                                                        .card.swipe:hover:after {
-                                                                                                                            left: 110%
-                                                                                                                        }
+                                                                                                                                                                .card.swipe:hover:after {
+                                                                                                                                                                    left: 110%
+                                                                                                                                                                }
 
-                                                                                                                        .card:hover {
-                                                                                                                            transform: translateY(-5px);
-                                                                                                                            border-color: rgba(0, 24, 220, .3);
-                                                                                                                            box-shadow: 0 26px 60px rgba(0, 24, 220, .12)
-                                                                                                                        }
+                                                                                                                                                                .card:hover {
+                                                                                                                                                                    transform: translateY(-5px);
+                                                                                                                                                                    border-color: rgba(0, 24, 220, .3);
+                                                                                                                                                                    box-shadow: 0 26px 60px rgba(0, 24, 220, .12)
+                                                                                                                                                                }
 
-                                                                                                                        .card.fill:hover {
-                                                                                                                            background: var(--blue);
-                                                                                                                            color: #fff;
-                                                                                                                            border-color: var(--blue)
-                                                                                                                        }
+                                                                                                                                                                .card.fill:hover {
+                                                                                                                                                                    background: var(--blue);
+                                                                                                                                                                    color: #fff;
+                                                                                                                                                                    border-color: var(--blue)
+                                                                                                                                                                }
 
-                                                                                                                        .card.fill:hover p,
-                                                                                                                        .card.fill:hover .tag {
-                                                                                                                            color: rgba(255, 255, 255, .78)
-                                                                                                                        } */
+                                                                                                                                                                .card.fill:hover p,
+                                                                                                                                                                .card.fill:hover .tag {
+                                                                                                                                                                    color: rgba(255, 255, 255, .78)
+                                                                                                                                                                } */
 
         .number {
             width: 42px;
@@ -533,9 +533,9 @@
         }
 
         /* .card.fill:hover .number {
-                                                                                                                        background: rgba(255, 255, 255, .14);
-                                                                                                                        color: #fff
-                                                                                                                    } */
+                                                                                                                                                                background: rgba(255, 255, 255, .14);
+                                                                                                                                                                color: #fff
+                                                                                                                                                            } */
 
         .blue-section {
             background: var(--blue);
@@ -580,9 +580,9 @@
         }
 
         /* .step strong {
-                                                                                                                                                        font-size: 24px;
-                                                                                                                                                        color: black
-                                                                                                                                                    } */
+                                                                                                                                                                                                font-size: 24px;
+                                                                                                                                                                                                color: black
+                                                                                                                                                                                            } */
 
         .step h3 {
             margin: 0 0 8px;
@@ -823,6 +823,59 @@
             text-transform: uppercase;
             color: aliceblue;
         }
+
+        .quote-source-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+            margin-bottom: 22px;
+        }
+
+        .quote-source-row .quote-source {
+            flex: 1;
+            margin: 0;
+            color: #061126;
+            font-size: 14px;
+            font-weight: 800;
+            line-height: 1.45;
+        }
+
+        .quote-logo-box {
+            flex: 0 0 150px;
+            width: 150px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .quote-logo-box img {
+            display: block;
+            max-width: 100%;
+            max-height: 80px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+        }
+
+        @media (max-width: 760px) {
+            .quote-source-row {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .quote-logo-box {
+                width: 150px;
+                height: auto;
+                flex-basis: auto;
+            }
+
+            .quote-logo-box img {
+                max-height: 48px;
+            }
+        }
     </style>
 
 
@@ -830,7 +883,6 @@
         <section class="hero">
             <div class="hero-inner wrap py-12">
                 <div>
-                    <div class="eyebrow">Allied Energy II case study • VaporCommander™</div>
                     <h1>100% uptime vapor recovery through wet gas, winter conditions, and variable gas flow.</h1>
                     <h2>Fluidstream VaporCommander™ eliminated gas venting from oil storage tanks without relying on a
                         conventional scrubber-based VRU design.</h2>
@@ -845,13 +897,22 @@
                     </div>
                 </div>
                 <aside class="hero-card">
-                    <p class="quote">“Since installing Fluidstream’s VaporCommander™, the unit has operated consistently and
-                        eliminated gas venting from our tanks. As of the case-study date, the system has been running for
-                        over 16 months with 100% uptime and has not required any maintenance or service to date.”</p>
-                    <div class="quote-source">Richard Grenville, VP Production • Allied Energy II Corp.</div>
+                    <p class="quote">“Since installation, Fluidstream’s VaporCommander™ has maintained 100% uptime for over
+                        17 months while eliminating gas venting from our tanks, without requiring maintenance or service
+                        intervention. From an operations perspective, it has proven to be a highly reliable and low-touch
+                        solution under real field conditions.”</p>
+                    <div class="quote-source-row">
+                        <div class="quote-source">
+                            VP Production, Allied Energy II Corp.
+                        </div>
+
+                        <div class="quote-logo-box">
+                            <img src="{{ asset('img/Allied Energy.png') }}" alt="Allied Energy II Corp. logo">
+                        </div>
+                    </div>
                     <div class="mini-metrics">
                         <div class="mini"><strong>100%</strong><span>uptime since installation</span></div>
-                        <div class="mini"><strong>16+</strong><span>months operating at case-study date</span></div>
+                        <div class="mini"><strong>17+</strong><span>months operating at case-study date</span></div>
                         <div class="mini"><strong>0</strong><span>maintenance or service required</span></div>
                         <div class="mini"><strong>-40°C</strong><span>winter exposure survived</span></div>
                     </div>
@@ -866,7 +927,7 @@
                         <div class="label">Performance snapshot</div>
                         <h2>Reliable recovery where the previous VRU struggled.</h2>
                     </div>
-                    <p>As of the case-study date, VaporCommander™ had operated for over 16 months with 100% uptime, zero
+                    <p>As of the case-study date, VaporCommander™ had operated for over 17 months with 100% uptime, zero
                         maintenance, no service requirements, and no filter changes. The unit eliminated gas venting from
                         the oil storage tanks while operating through wet gas exposure, variable gas flow, hot summers, and
                         two winters where temperatures dropped below -40°C.</p>
@@ -881,9 +942,9 @@
                     </article>
                     <article class="metric">
                         <div class="tag">Operating period</div>
-                        <div class="big">16+</div>
+                        <div class="big">17+</div>
                         <h3>months in service</h3>
-                        <p class="muted">The unit had operated for more than 16 months at the time of this case study and
+                        <p class="muted">The unit had operated for more than 17 months at the time of this case study and
                             continued operation depends on field conditions and operating requirements.</p>
                     </article>
                     <article class="metric">
@@ -1010,7 +1071,7 @@
                     <h3>Venting eliminated with no maintenance required to date.</h3>
                     <p>Since installation, the unit has captured tank vapors that would otherwise have been vented. As of
                         the case-study date, Allied had not required maintenance, service, or filter changes, and the system
-                        had maintained 100% uptime for more than 16 months.</p>
+                        had maintained 100% uptime for more than 17 months.</p>
                     <p>This outcome is especially relevant because the operating period included harsh Alberta, Canada
                         winter conditions below -40°C, where conventional scrubber-based VRU systems can experience
                         freezing-related instability.</p>
@@ -1067,8 +1128,8 @@
                 <div class="result-band">
                     <div>
                         <div class="label">Field results</div>
-                        <h2>Over 16 months of 100% uptime at the time of reporting.</h2>
-                        <p>As of the case-study date, VaporCommander™ had operated for over 16 months with 100% uptime, zero
+                        <h2>Over 17 months of 100% uptime at the time of reporting.</h2>
+                        <p>As of the case-study date, VaporCommander™ had operated for over 17 months with 100% uptime, zero
                             maintenance, no service events, and no filter changes. This observed performance reflects
                             continuous operation to date; future performance will depend on ongoing field conditions and
                             operation.</p>
@@ -1097,7 +1158,7 @@
                         <div class="label">Why no maintenance was required</div>
                         <h2>The reliability result is tied to system architecture.</h2>
                     </div>
-                    <p>The absence of maintenance over more than 16 months reflects a system architecture that avoids
+                    <p>The absence of maintenance over more than 17 months reflects a system architecture that avoids
                         several major failure mechanisms common to conventional VRU systems in wet and cold service.</p>
                 </div>
                 <div class="cards">

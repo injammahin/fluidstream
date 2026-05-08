@@ -644,18 +644,18 @@
 
 
         /* .solutions,
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            .leadership,
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            .tech,
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            .caseband,
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            .cta {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                padding: 72px 0
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            } */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            .leadership,
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            .tech,
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            .caseband,
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            .cta {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                padding: 72px 0
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            } */
 
         .section-head {
             /* display: flex;
-                                                                                                                                                                                                                                                                                                                                    justify-content: space-between;
-                                                                                                                                                                                                                                                                                                                                    align-items: flex-start;
-                                                                                                                                                                                                                                                                                                                                    gap: 28px; */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    justify-content: space-between;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    align-items: flex-start;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    gap: 28px; */
             margin-bottom: 28px;
         }
 
@@ -1479,14 +1479,14 @@
         }
 
         /* .kicker {
-                                                                                                                                                                                                                                                                                                                                                                    display: block;
-                                                                                                                                                                                                                                                                                                                                                                    margin: 0 0 14px;
-                                                                                                                                                                                                                                                                                                                                                                    font-size: 13px !important;
-                                                                                                                                                                                                                                                                                                                                                                    font-weight: 700 !important;
-                                                                                                                                                                                                                                                                                                                                                                    letter-spacing: .16em;
-                                                                                                                                                                                                                                                                                                                                                                    text-transform: uppercase;
-                                                                                                                                                                                                                                                                                                                                                                    color: var(--accent-dark) !important;
-                                                                                                                                                                                                                                                                                                                                                                } */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    display: block;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    margin: 0 0 14px;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    font-size: 13px !important;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    font-weight: 700 !important;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    letter-spacing: .16em;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    text-transform: uppercase;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    color: var(--accent-dark) !important;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                } */
 
         .hero-dot.active {
             background: #38bdf8;
@@ -1826,8 +1826,8 @@
             border-radius: 7px;
             /* border: 1px solid rgba(255, 255, 255, .22); */
             /* background:
-                                                                                                                                                                                                        radial-gradient(circle at 88% 18%, rgba(21, 209, 255, .12), transparent 28%),
-                                                                                                                                                                                                        linear-gradient(145deg, rgba(255, 255, 255, .13), rgba(255, 255, 255, .07)); */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        radial-gradient(circle at 88% 18%, rgba(21, 209, 255, .12), transparent 28%),
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        linear-gradient(145deg, rgba(255, 255, 255, .13), rgba(255, 255, 255, .07)); */
             /* box-shadow: 0 26px 70px rgba(0, 0, 0, .25); */
             /* backdrop-filter: blur(16px); */
             -webkit-backdrop-filter: blur(16px);
@@ -1969,7 +1969,7 @@
                         Explore Multiphase Compression
                     </a>
 
-                    <a href="{{ url('/contact') }}" class="fs-home-hero-btn fs-home-hero-btn-secondary">
+                    <a href="{{ url('/technical-review') }}" class="fs-home-hero-btn fs-home-hero-btn-secondary">
                         Request Technical Review
                     </a>
                 </div>
@@ -1997,39 +1997,81 @@
 
                 <div class="fs-home-quote-stage">
                     <article class="fs-home-quote-slide active">
-                        <span class="fs-home-quote-metric">Revenue Impact</span>
+                        <div class="fs-home-quote-content">
+                            <span class="fs-home-quote-mark">“</span>
 
-                        <p class="fs-home-quote-text">
-                            “C$1.5M+ annual incremental revenue from restored production.”
-                        </p>
+                            {{-- <p class="fs-home-quote-text">
+                                Since installation, Fluidstream’s VaporCommander™ has maintained 100% uptime for over 17
+                                months
+                                while eliminating gas venting from our tanks, without requiring maintenance or service
+                                intervention.
+                                From an operations perspective, it has proven to be a highly reliable and low-touch solution
+                                under
+                                real field conditions.
+                            </p> --}}
+                            <p class="fs-home-quote-text">
+                                Since installation, Fluidstream’s VaporCommander™ has maintained 100% uptime for over 17
+                                months while eliminating gas venting from our tanks, without requiring maintenance or
+                                service intervention.” From an operations perspective, it has proven to be a highly reliable
+                                and low-touch solution under real field conditions.
+                            </p>
+                        </div>
 
-                        <span class="fs-home-quote-source">
-                            — Alberta Production Recovery Operator
-                        </span>
+                        <div class="fs-home-quote-footer">
+                            <span class="fs-home-quote-source">
+                                VP Production, Allied Energy II Corp.
+                            </span>
+
+                            <div class="fs-home-quote-logo-box">
+                                <img src="{{ asset('img/Allied Energy.png') }}" alt="Allied Energy II Corp. logo"
+                                    class="fs-home-quote-logo">
+                            </div>
+                        </div>
                     </article>
 
                     <article class="fs-home-quote-slide">
-                        <span class="fs-home-quote-metric">Reliability</span>
+                        <div class="fs-home-quote-content">
+                            <span class="fs-home-quote-mark">“</span>
 
-                        <p class="fs-home-quote-text">
-                            “100% uptime with no maintenance since installation.”
-                        </p>
+                            <p class="fs-home-quote-text">
+                                We went from zero production to over C$1.5 million per year in incremental revenue, without
+                                adding any separation equipment or infrastructure. This is the first solution we’ve seen
+                                that delivers both simplicity and reliable performance.
+                            </p>
+                        </div>
 
-                        <span class="fs-home-quote-source">
-                            — Allied Energy II
-                        </span>
+                        <div class="fs-home-quote-footer">
+                            <span class="fs-home-quote-source">
+                                Production Engineer, Vermilion Energy Inc.
+                            </span>
+
+                            <div class="fs-home-quote-logo-box">
+                                <img src="{{ asset('img/Vermilion Energy.png') }}" alt="Vermilion Energy Inc. logo"
+                                    class="fs-home-quote-logo">
+                            </div>
+                        </div>
                     </article>
 
                     <article class="fs-home-quote-slide">
-                        <span class="fs-home-quote-metric">Mechanical Longevity</span>
+                        <div class="fs-home-quote-content">
+                            <span class="fs-home-quote-mark">“</span>
 
-                        <p class="fs-home-quote-text">
-                            “35 months before first seal change.”
-                        </p>
+                            <p class="fs-home-quote-text">
+                                In the field, the units have run continuously with no downtime, no winter-related issues,
+                                and no need for intervention. Maintenance has been minimal, with only a quick filter change.
+                            </p>
+                        </div>
 
-                        <span class="fs-home-quote-source">
-                            — Long-Term Vapor Recovery Customer
-                        </span>
+                        <div class="fs-home-quote-footer">
+                            <span class="fs-home-quote-source">
+                                Facilities Team Lead, East & West SK, Whitecap Resources Inc.
+                            </span>
+
+                            <div class="fs-home-quote-logo-box">
+                                <img src="{{ asset('img/Whitecap.png') }}" alt="Whitecap Resources Inc. logo"
+                                    class="fs-home-quote-logo">
+                            </div>
+                        </div>
                     </article>
                 </div>
 
@@ -2047,14 +2089,17 @@
                     max-width: 580px;
                     min-height: 500px;
                     justify-self: end;
-                    padding: 34px 34px 32px;
-                    border-radius: 7px;
-                    /* border: 1px solid rgba(255, 255, 255, .22); */
-                    /* box-shadow: 0 26px 70px rgba(0, 0, 0, .25); */
-                    /* backdrop-filter: blur(16px); */
-                    -webkit-backdrop-filter: blur(16px);
+                    padding: 34px;
+                    border-radius: 12px;
                     overflow: hidden;
                     isolation: isolate;
+                    /* background: linear-gradient(145deg,
+                                                                                                                                                                                                                                                                                                                    rgba(255, 255, 255, .14),
+                                                                                                                                                                                                                                                                                                                    rgba(255, 255, 255, .07));
+                                                                                                                                                                                                                                                                                                            border: 1px solid rgba(255, 255, 255, .22);
+                                                                                                                                                                                                                                                                                                            box-shadow: 0 26px 70px rgba(0, 0, 0, .25);
+                                                                                                                                                                                                                                                                                                            backdrop-filter: blur(16px);
+                                                                                                                                                                                                                                                                                                            -webkit-backdrop-filter: blur(16px); */
                 }
 
                 .fs-home-quote-card::before {
@@ -2063,11 +2108,25 @@
                     inset: 0;
                     z-index: 0;
                     pointer-events: none;
-                    background:
-                        linear-gradient(rgba(255, 255, 255, .045) 1px, transparent 1px),
-                        linear-gradient(90deg, rgba(255, 255, 255, .04) 1px, transparent 1px);
-                    background-size: 42px 42px;
-                    mask-image: linear-gradient(180deg, rgba(0, 0, 0, .62), transparent 78%);
+                    /* background:
+                                                                                                                                                                                                                                                                                                            linear-gradient(rgba(255, 255, 255, .045) 1px, transparent 1px),
+                                                                                                                                                                                                                                                                                                            linear-gradient(90deg, rgba(255, 255, 255, .04) 1px, transparent 1px);
+                                                                                                                                                                                                                                                                                                        background-size: 42px 42px;
+                                                                                                                                                                                                                                                                                                        mask-image: linear-gradient(180deg, rgba(0, 0, 0, .72), transparent 82%);
+                                                                                                                                                                                                                                                                                                        -webkit-mask-image: linear-gradient(180deg, rgba(0, 0, 0, .72), transparent 82%); */
+                }
+
+                .fs-home-quote-card-glow {
+                    position: absolute;
+                    top: -90px;
+                    right: -90px;
+                    width: 240px;
+                    height: 240px;
+                    border-radius: 999px;
+                    /* background: radial-gradient(circle, rgba(21, 209, 255, .28), transparent 70%); */
+                    /* filter: blur(8px); */
+                    z-index: 0;
+                    pointer-events: none;
                 }
 
                 .fs-home-quote-card>* {
@@ -2075,228 +2134,160 @@
                     z-index: 1;
                 }
 
-                .fs-home-quote-header {
-                    display: flex;
-                    align-items: flex-start;
-                    justify-content: space-between;
-                    gap: 18px;
-                    margin-bottom: 24px;
-                }
-
-                .fs-home-quote-kicker {
-                    color: #38bdf8;
-                    font-size: 13px;
-                    font-weight: 900;
-                    letter-spacing: .15em;
-                    text-transform: uppercase;
-                    margin-bottom: 10px;
-                }
-
-                .fs-home-quote-title {
-                    margin: 0;
-                    color: #ffffff;
-                    font-size: clamp(24px, 2.2vw, 34px);
-                    line-height: 1.12;
-                    letter-spacing: -.045em;
-                    font-weight: 900;
-                    max-width: 360px;
-                }
-
-                .fs-home-quote-mark {
-                    flex: 0 0 auto;
-                    width: 64px;
-                    height: 64px;
-                    display: inline-flex;
-                    align-items: center;
-                    justify-content: center;
-                    border-radius: 7px;
-                    /* background: #0018dc; */
-                    color: #ffffff;
-                    font-size: 48px;
-                    line-height: 1;
-                    font-weight: 950;
-                    /* box-shadow: 0 18px 34px rgba(0, 24, 220, .28); */
-                }
-
                 .fs-home-quote-stage {
                     position: relative;
-                    min-height: 260px;
+                    min-height: 470px;
                     border-radius: 7px;
                     border: 1px solid rgba(255, 255, 255, .18);
-                    background: rgba(255, 255, 255, .08);
+                    background: rgba(255, 255, 255, .09);
                     overflow: hidden;
                 }
 
                 .fs-home-quote-slide {
                     position: absolute;
                     inset: 0;
-                    display: grid;
-                    align-content: center;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    /* gap: 26px; */
                     padding: 30px;
                     opacity: 0;
-                    transform: translateX(22px);
-                    animation: fsHomeQuoteCycle 15s infinite;
+                    visibility: hidden;
+                    transform: translateX(18px);
+                    transition:
+                        opacity .45s ease,
+                        visibility .45s ease,
+                        transform .45s ease;
                 }
 
-                .fs-home-quote-slide:nth-child(1) {
-                    animation-delay: 0s;
+                .fs-home-quote-slide.active {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateX(0);
                 }
 
-                .fs-home-quote-slide:nth-child(2) {
-                    animation-delay: 5s;
+                .fs-home-quote-content {
+                    position: relative;
+                    padding-top: 10px;
                 }
 
-                .fs-home-quote-slide:nth-child(3) {
-                    animation-delay: 10s;
-                }
-
-                .fs-home-quote-metric {
-                    display: block;
-                    margin-bottom: 18px;
-                    color: #ffffff;
-                    font-size: clamp(22px, 2.2vw, 26px);
-                    line-height: .95;
-                    letter-spacing: -.06em;
-                    font-weight: 950;
+                .fs-home-quote-mark {
+                    position: absolute;
+                    top: -28px;
+                    left: -4px;
+                    color: rgba(255, 255, 255, .16);
+                    font-size: 92px;
+                    line-height: 1;
+                    font-weight: 900;
+                    pointer-events: none;
                 }
 
                 .fs-home-quote-text {
+                    position: relative;
                     margin: 0;
                     color: #ffffff;
-                    font-size: clamp(18px, 1.4vw, 26px);
-                    line-height: 1.42;
-                    letter-spacing: -.025em;
-                    font-weight: 850;
+                    font-size: 20px;
+                    line-height: 1.58;
+                    letter-spacing: -.02em;
+                    font-weight: 650;
+                }
+
+                .fs-home-quote-footer {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 18px;
+                    padding-top: 18px;
+                    /* border-top: 1px solid rgba(255, 255, 255, .16); */
                 }
 
                 .fs-home-quote-source {
                     display: block;
-                    margin-top: 22px;
-                    color: rgba(226, 232, 240, .88);
-                    font-size: 15px;
+                    color: rgba(226, 232, 240, .9);
+                    font-size: 21px;
                     line-height: 1.45;
-                    font-weight: 850;
+                    font-weight: 800;
+                }
+
+                .fs-home-quote-source::before {
+                    content: "— ";
+                }
+
+                .fs-home-quote-logo-box {
+                    flex: 0 0 150px;
+                    width: 150px;
+                    height: 120px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 10px 14px;
+                }
+
+                .fs-home-quote-logo {
+                    display: block;
+                    max-width: 100%;
+                    max-height: 100px;
+                    width: auto;
+                    height: auto;
+                    object-fit: contain;
+                }
+
+                /* Fallback if image is directly inside slide */
+                .fs-home-quote-slide>img {
+                    display: block;
+                    max-width: 150px;
+                    max-height: 42px;
+                    width: auto;
+                    height: auto;
+                    object-fit: contain;
+                    margin-top: 18px;
+                    padding: 10px 14px;
+                    border-radius: 10px;
+                    background: rgba(255, 255, 255, .96);
+                    box-shadow: 0 14px 32px rgba(0, 0, 0, .14);
                 }
 
                 .fs-home-quote-nav {
-                    display: grid;
-                    grid-template-columns: repeat(3, 1fr);
-                    gap: 12px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 9px;
                     margin-top: 24px;
                 }
 
                 .fs-home-quote-dot {
-                    height: 4px;
+                    width: 10px;
+                    height: 10px;
+                    min-width: 10px;
+                    min-height: 10px;
+                    padding: 0;
+                    border: 1px solid rgba(255, 255, 255, .55);
                     border-radius: 999px;
-                    background: rgba(255, 255, 255, .22);
-                    overflow: hidden;
+                    background: rgba(255, 255, 255, .28);
+                    cursor: pointer;
+                    overflow: visible;
+                    transition:
+                        background .25s ease,
+                        border-color .25s ease,
+                        transform .25s ease,
+                        box-shadow .25s ease;
                 }
 
                 .fs-home-quote-dot::before {
-                    content: "";
-                    display: block;
-                    width: 100%;
-                    height: 100%;
-                    transform: translateX(-100%);
-                    background: linear-gradient(90deg, #15d1ff, #ffffff);
-                    animation: fsHomeDotCycle 15s infinite;
+                    display: none;
+                    content: none;
                 }
 
-                .fs-home-quote-dot:nth-child(1)::before {
-                    animation-delay: 0s;
+                .fs-home-quote-dot.active {
+                    background: #ffffff;
+                    border-color: #ffffff;
+                    transform: scale(1.25);
+                    box-shadow: 0 0 0 5px rgba(255, 255, 255, .12);
                 }
 
-                .fs-home-quote-dot:nth-child(2)::before {
-                    animation-delay: 5s;
-                }
-
-                .fs-home-quote-dot:nth-child(3)::before {
-                    animation-delay: 10s;
-                }
-
-                .fs-home-quote-note {
-                    margin: 22px 0 0;
-                    color: rgba(226, 232, 240, .88);
-                    font-size: 16px;
-                    line-height: 1.6;
-                    font-weight: 750;
-                }
-
-                .fs-home-quote-note strong {
-                    color: #ffffff;
-                    font-weight: 950;
-                }
-
-                .fs-home-quote-card:hover .fs-home-quote-slide,
-                .fs-home-quote-card:hover .fs-home-quote-dot::before {
-                    animation-play-state: paused;
-                }
-
-                @keyframes fsHomeQuoteCycle {
-                    0% {
-                        opacity: 0;
-                        transform: translateX(22px);
-                    }
-
-                    6% {
-                        opacity: 1;
-                        transform: translateX(0);
-                    }
-
-                    28% {
-                        opacity: 1;
-                        transform: translateX(0);
-                    }
-
-                    34% {
-                        opacity: 0;
-                        transform: translateX(-22px);
-                    }
-
-                    100% {
-                        opacity: 0;
-                        transform: translateX(-22px);
-                    }
-                }
-
-                @keyframes fsHomeDotCycle {
-                    0% {
-                        transform: translateX(-100%);
-                    }
-
-                    6% {
-                        transform: translateX(-100%);
-                    }
-
-                    28% {
-                        transform: translateX(0);
-                    }
-
-                    34% {
-                        transform: translateX(100%);
-                    }
-
-                    100% {
-                        transform: translateX(100%);
-                    }
-                }
-
-                @media (prefers-reduced-motion: reduce) {
-
-                    .fs-home-quote-slide,
-                    .fs-home-quote-dot::before {
-                        animation: none;
-                    }
-
-                    .fs-home-quote-slide {
-                        position: relative;
-                        opacity: 1;
-                        transform: none;
-                    }
-
-                    .fs-home-quote-slide+.fs-home-quote-slide {
-                        display: none;
-                    }
+                .fs-home-quote-dot:hover {
+                    background: rgba(255, 255, 255, .7);
+                    border-color: rgba(255, 255, 255, .9);
                 }
 
                 @media (max-width: 1180px) {
@@ -2308,151 +2299,71 @@
 
                 @media (max-width: 760px) {
                     .fs-home-quote-card {
-                        min-height: 450px;
-                        padding: 26px 22px;
-                    }
-
-                    .fs-home-quote-header {
-                        margin-bottom: 18px;
-                    }
-
-                    .fs-home-quote-mark {
-                        width: 52px;
-                        height: 52px;
-                        font-size: 38px;
+                        min-height: auto;
+                        padding: 24px 20px;
+                        border-radius: 16px;
                     }
 
                     .fs-home-quote-stage {
-                        min-height: 250px;
+                        min-height: 410px;
                     }
 
                     .fs-home-quote-slide {
                         padding: 24px;
                     }
 
-                    .fs-home-quote-metric {
-                        font-size: 42px;
+                    .fs-home-quote-mark {
+                        top: -22px;
+                        font-size: 72px;
                     }
 
                     .fs-home-quote-text {
-                        font-size: 20px;
+                        font-size: 16px;
+                        line-height: 1.55;
+                    }
+
+                    .fs-home-quote-footer {
+                        align-items: flex-start;
+                        flex-direction: column;
+                        gap: 14px;
+                    }
+
+                    .fs-home-quote-logo-box {
+                        width: 160px;
+                        flex-basis: auto;
+                    }
+
+                    .fs-home-quote-slide>img {
+                        max-width: 160px;
                     }
                 }
 
                 @media (max-width: 520px) {
                     .fs-home-quote-card {
-                        min-height: 480px;
-                    }
-
-                    .fs-home-quote-header {
-                        gap: 12px;
-                    }
-
-                    .fs-home-quote-title {
-                        font-size: 24px;
+                        padding: 22px 18px;
                     }
 
                     .fs-home-quote-stage {
-                        min-height: 280px;
+                        min-height: 480px;
                     }
-                }
 
-                /* Make quote navigation lines into close circle dots */
-                .fs-home-quote-nav {
-                    display: flex !important;
-                    grid-template-columns: none !important;
-                    align-items: center !important;
-                    justify-content: center !important;
-                    gap: 9px !important;
-                    margin-top: 24px !important;
-                }
+                    .fs-home-quote-slide {
+                        padding: 22px;
+                    }
 
-                .fs-home-quote-dot {
-                    width: 10px !important;
-                    height: 10px !important;
-                    min-width: 10px !important;
-                    min-height: 10px !important;
-                    padding: 0 !important;
-                    border: 1px solid rgba(255, 255, 255, .55) !important;
-                    border-radius: 999px !important;
-                    background: rgba(255, 255, 255, .30) !important;
-                    overflow: visible !important;
-                    cursor: pointer !important;
-                    transition: background .25s ease, border-color .25s ease, transform .25s ease, box-shadow .25s ease !important;
-                }
+                    .fs-home-quote-logo-box {
+                        width: 150px;
+                        height: 54px;
+                    }
 
-                /* Remove old animated line fill */
-                .fs-home-quote-dot::before {
-                    display: none !important;
-                    content: none !important;
-                    animation: none !important;
-                }
+                    .fs-home-quote-logo {
+                        max-height: 34px;
+                    }
 
-                /* Active dot */
-                .fs-home-quote-dot.active {
-                    background: #ffffff !important;
-                    border-color: #ffffff !important;
-                    transform: scale(1.25) !important;
-                    box-shadow: 0 0 0 5px rgba(255, 255, 255, .12) !important;
-                }
-            </style>
-            <style>
-                /* JS controlled quote slider */
-                .fs-home-quote-slide {
-                    animation: none !important;
-                    opacity: 0 !important;
-                    visibility: hidden !important;
-                    transform: translateX(18px) !important;
-                    transition:
-                        opacity .45s ease,
-                        visibility .45s ease,
-                        transform .45s ease !important;
-                }
-
-                .fs-home-quote-slide.active {
-                    opacity: 1 !important;
-                    visibility: visible !important;
-                    transform: translateX(0) !important;
-                }
-
-                .fs-home-quote-nav {
-                    display: flex !important;
-                    grid-template-columns: none !important;
-                    align-items: center !important;
-                    justify-content: center !important;
-                    gap: 9px !important;
-                    margin-top: 24px !important;
-                }
-
-                .fs-home-quote-dot {
-                    width: 10px !important;
-                    height: 10px !important;
-                    min-width: 10px !important;
-                    min-height: 10px !important;
-                    padding: 0 !important;
-                    border: 1px solid rgba(255, 255, 255, .55) !important;
-                    border-radius: 999px !important;
-                    background: rgba(255, 255, 255, .30) !important;
-                    overflow: visible !important;
-                    cursor: pointer !important;
-                    transition:
-                        background .25s ease,
-                        border-color .25s ease,
-                        transform .25s ease,
-                        box-shadow .25s ease !important;
-                }
-
-                .fs-home-quote-dot::before {
-                    display: none !important;
-                    content: none !important;
-                    animation: none !important;
-                }
-
-                .fs-home-quote-dot.active {
-                    background: #ffffff !important;
-                    border-color: #ffffff !important;
-                    transform: scale(1.25) !important;
-                    box-shadow: 0 0 0 5px rgba(255, 255, 255, .12) !important;
+                    .fs-home-quote-slide>img {
+                        max-width: 150px;
+                        max-height: 38px;
+                    }
                 }
             </style>
 
@@ -2577,12 +2488,12 @@
             }
 
             /* .proof .proof-card:hover .proof-view-link,
-                                                                                                        .proof .proof-card:hover .proof-view-link *,
-                                                                                                        .proof .proof-card:hover .proof-view-link span,
-                                                                                                        .proof .proof-card:hover .proof-view-link svg {
-                                                                                                            color: #0018dc !important;
-                                                                                                            stroke: #0018dc !important;
-                                                                                                        } */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                        .proof .proof-card:hover .proof-view-link *,
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                        .proof .proof-card:hover .proof-view-link span,
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                        .proof .proof-card:hover .proof-view-link svg {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                            color: #0018dc !important;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                            stroke: #0018dc !important;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                        } */
 
             @media (max-width: 640px) {
                 .proof .proof-card {
@@ -2596,6 +2507,63 @@
                     min-height: 44px;
                     font-size: 16px;
                 }
+            }
+
+            .proof-card {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                min-height: 520px;
+                padding: 24px 24px 96px;
+            }
+
+            .proof-logo {
+                position: absolute;
+                left: 24px;
+                bottom: 24px;
+
+                width: 120px;
+                height: 54px;
+
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+            }
+
+            .proof-logo img {
+                display: block;
+                max-width: 100%;
+                max-height: 68px;
+                width: auto;
+                height: auto;
+                object-fit: contain;
+            }
+
+            .proof-view-link {
+                position: absolute;
+                right: 24px;
+                bottom: 30px;
+
+                display: inline-flex;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 14px;
+
+                color: #0018dc;
+                font-size: 20px;
+                line-height: 1;
+                font-weight: 900;
+                text-decoration: none;
+                white-space: nowrap;
+            }
+
+            .proof-view-link svg,
+            .proof-view-link span {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 28px;
+                line-height: 1;
             }
         </style>
 
@@ -2629,14 +2597,12 @@
                         17+ months • 0 maintenance • continuous operation below -40°C • gas venting eliminated
                     </div>
 
-                    <a class="proof-view-link " href="/case-studies/allied-energy-vaporcommander-vru"
-                        aria-label="View Allied Energy II case study">
-                        <span>View</span>
-                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round"
-                            stroke-linejoin="round" aria-hidden="true">
-                            <path d="M5 12h14"></path>
-                            <path d="m13 6 6 6-6 6"></path>
-                        </svg>
+                    <div class="proof-logo">
+                        <img src="{{ asset('img/Allied Energy.png') }}" alt="Allied Energy II logo">
+                    </div>
+
+                    <a href="{{ url('case-studies/allied-energy-vaporcommander-vru') }}" class="proof-view-link">
+                        View <span>→</span>
                     </a>
                 </article>
 
@@ -2657,7 +2623,7 @@
                         performance
                     </div>
 
-                    <a class="proof-view-link" href="/case-studies/vaporcommander-4-5-year-reliability"
+                    {{-- <a class="proof-view-link" href="/case-studies/vaporcommander-4-5-year-reliability"
                         aria-label="View Vapor Recovery case study">
                         <span>View</span>
                         <svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round"
@@ -2665,11 +2631,18 @@
                             <path d="M5 12h14"></path>
                             <path d="m13 6 6 6-6 6"></path>
                         </svg>
+                    </a> --}}
+                    <div class="proof-logo">
+                        <img src="{{ asset('img/Whitecap.png') }}" alt="Whitecap Resources logo">
+                    </div>
+
+                    <a href="{{ url('/case-studies/vaporcommander-4-5-year-reliability') }}" class="proof-view-link">
+                        View <span>→</span>
                     </a>
                 </article>
 
                 <article class="proof-card">
-                    <div class="proof-tag">Multiphase Production</div>
+                    <div class="proof-tag">VERMILION ENERGY</div>
 
                     <h3>From virtually no production to more than C$1.5M/year in incremental revenue.</h3>
 
@@ -2684,7 +2657,7 @@
                         10e3 m³/d gas restored • 5 m³/d condensate • no added separation equipment
                     </div>
 
-                    <a class="proof-view-link" href="/case-studies/multiphasecommander-production-recovery"
+                    {{-- <a class="proof-view-link" href="/case-studies/multiphasecommander-production-recovery"
                         aria-label="View Multiphase Production case study">
                         <span>View</span>
                         <svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round"
@@ -2692,6 +2665,13 @@
                             <path d="M5 12h14"></path>
                             <path d="m13 6 6 6-6 6"></path>
                         </svg>
+                    </a> --}}
+                    <div class="proof-logo">
+                        <img src="{{ asset('img/Vermilion Energy.png') }}" alt="Vermilion Energy logo">
+                    </div>
+
+                    <a href="{{ url('/case-studies/multiphasecommander-production-recovery') }}" class="proof-view-link">
+                        View <span>→</span>
                     </a>
                 </article>
             </div>
@@ -2814,76 +2794,455 @@
             </div>
         </div>
     </section>
+    <section class="section fs-platform-capability-section" aria-labelledby="platform-capability-title">
+        <style>
+            .fs-platform-capability-section {
+                position: relative;
+                overflow: hidden;
+                background: linear-gradient(180deg, #f7f9fc 0%, #ffffff 100%);
+                border-top: 1px solid rgba(16, 42, 67, .06);
+                border-bottom: 1px solid rgba(16, 42, 67, .06);
+            }
 
-    {{-- <section class="section tech">
-        <div class="inner container">
-            <div class="tech-panel">
-                <div class="section-head" style="margin-bottom:18px">
-                    <div>
-                        <p class="kicker">Technology advantage</p>
-                        <h2>Patented technology that sells on outcomes, not just mechanism.</h2>
-                    </div>
-                    <p>
-                        Fluidstream’s patented technology is built to improve control, efficiency, and reliability in field
-                        applications where liquids, slugs, and unstable operating conditions limit conventional compression
-                        systems.
+            .fs-platform-capability-wrap {
+                width: min(var(--max, 1240px), calc(100% - 40px));
+                margin: 0 auto;
+                padding: 74px 0 82px;
+            }
+
+            .fs-platform-capability-head {
+                display: grid;
+                grid-template-columns: minmax(0, 1fr) minmax(340px, 560px);
+                gap: 40px;
+                align-items: end;
+                margin-bottom: 42px;
+            }
+
+            .fs-platform-kicker {
+                display: block;
+                margin: 0 0 18px;
+                color: var(--accent-dark, #0018dc);
+                font-size: 13px;
+                font-weight: 900;
+                letter-spacing: .22em;
+                text-transform: uppercase;
+            }
+
+            .fs-platform-title {
+                margin: 0;
+                max-width: 980px;
+                color: var(--text, #102a43);
+                font-size: clamp(48px, 6.2vw, 92px);
+                line-height: .98;
+                letter-spacing: -.075em;
+                font-weight: 500;
+            }
+
+
+
+            .fs-platform-chip-row {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 12px;
+                padding-bottom: 10px;
+            }
+
+            .fs-platform-chip {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 46px;
+                padding: 0 22px;
+                border-radius: 999px;
+                border: 1px solid rgba(0, 24, 220, .18);
+                background: rgba(255, 255, 255, .88);
+                color: #111827;
+                font-size: 15px;
+                line-height: 1;
+                font-weight: 850;
+                white-space: nowrap;
+                /* box-shadow: 0 12px 26px rgba(0, 24, 80, .045); */
+            }
+
+            .fs-platform-layout {
+                display: grid;
+                grid-template-columns: minmax(310px, .86fr) minmax(0, 1.34fr);
+                gap: 28px;
+                align-items: stretch;
+            }
+
+            .fs-platform-feature-panel {
+                position: relative;
+                min-height: 100%;
+                padding: 30px;
+                border-radius: 7px;
+                overflow: hidden;
+                isolation: isolate;
+                color: #ffffff;
+                background:
+                    radial-gradient(circle at 88% 12%, rgba(21, 209, 255, .22), transparent 28%),
+                    linear-gradient(145deg, #0018dc 0%, #0018dc 100%);
+                box-shadow: 0 22px 50px rgba(0, 24, 220, .14);
+            }
+
+            .fs-platform-feature-panel::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                z-index: -1;
+                background:
+                    linear-gradient(rgba(255, 255, 255, .055) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255, 255, 255, .045) 1px, transparent 1px);
+                background-size: 38px 38px;
+                opacity: .48;
+            }
+
+            .fs-platform-feature-badge {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 13px;
+                border-radius: 999px;
+                border: 1px solid rgba(255, 255, 255, .24);
+                background: rgba(255, 255, 255, .10);
+                color: rgba(255, 255, 255, .9);
+                font-size: 12px;
+                font-weight: 900;
+                letter-spacing: .12em;
+                text-transform: uppercase;
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+            }
+
+            .fs-platform-flow {
+                display: grid;
+                gap: 14px;
+                margin: 34px 0;
+            }
+
+            .fs-platform-flow-card {
+                position: relative;
+                min-height: 118px;
+                display: flex;
+                align-items: flex-end;
+                padding: 18px;
+                border-radius: 7px;
+                border: 1px solid rgba(255, 255, 255, .18);
+                background: rgba(255, 255, 255, .10);
+                overflow: hidden;
+            }
+
+            .fs-platform-flow-card::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(90deg, rgba(255, 255, 255, .16), transparent);
+                opacity: .62;
+            }
+
+            .fs-platform-flow-card span {
+                position: relative;
+                z-index: 1;
+                color: rgba(255, 255, 255, .88);
+                font-size: 13px;
+                line-height: 1.35;
+                font-weight: 900;
+                letter-spacing: .10em;
+                text-transform: uppercase;
+            }
+
+            .fs-platform-feature-panel h3 {
+                margin: 0 0 12px;
+                color: #ffffff;
+                font-size: clamp(26px, 2.5vw, 36px);
+                line-height: 1.05;
+                letter-spacing: -.045em;
+                font-weight: 800;
+            }
+
+            .fs-platform-feature-panel p {
+                margin: 0;
+                max-width: 440px;
+                color: rgba(255, 255, 255, .82);
+                font-size: 16px;
+                line-height: 1.62;
+                font-weight: 500;
+            }
+
+            .fs-platform-grid {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 16px;
+            }
+
+            .fs-platform-card {
+                position: relative;
+                min-height: 215px;
+                padding: 26px;
+                border-radius: 0;
+                border: 1px solid var(--line, #d9e2ec);
+                background: #ffffff;
+                box-shadow: var(--shadow, 0 18px 45px rgba(16, 42, 67, .08));
+                overflow: hidden;
+                isolation: isolate;
+                transition:
+                    transform .28s ease,
+                    box-shadow .28s ease,
+                    border-color .28s ease,
+                    background .28s ease;
+            }
+
+            .fs-platform-card::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 4px;
+                background: var(--accent-dark, #0018dc);
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: transform .28s ease;
+                z-index: 2;
+            }
+
+            .fs-platform-card:hover {
+                transform: translateY(-4px);
+                border-color: var(--accent-dark, #0018dc);
+                background: #ffffff;
+                box-shadow: 0 26px 54px rgba(16, 42, 67, .12);
+            }
+
+            .fs-platform-card:hover::before {
+                transform: scaleX(1);
+            }
+
+            .fs-platform-card-kicker {
+                margin-bottom: 16px;
+                color: var(--accent-dark, #0018dc);
+                font-size: 13px;
+                font-weight: 900;
+                letter-spacing: .16em;
+                text-transform: uppercase;
+            }
+
+            .fs-platform-card h3 {
+                margin: 0 0 16px;
+                color: var(--text);
+                font-size: 1.18rem;
+                line-height: 1.08;
+                letter-spacing: -.055em;
+                font-weight: 400;
+            }
+
+            .fs-platform-card h3:hover {
+                margin: 0 0 16px;
+                color: var(--accent-dark, #0018dc);
+            }
+
+
+
+            .fs-platform-card p {
+                margin: 0;
+                color: var(--muted, #52667a);
+                font-size: .95rem;
+                line-height: 1.45;
+                font-weight: 400;
+            }
+
+            @media (max-width: 1180px) {
+                .fs-platform-capability-head {
+                    grid-template-columns: 1fr;
+                }
+
+                .fs-platform-chip-row {
+                    justify-content: flex-start;
+                    padding-bottom: 0;
+                }
+
+                .fs-platform-layout {
+                    grid-template-columns: 1fr;
+                }
+
+                .fs-platform-feature-panel {
+                    min-height: 430px;
+                }
+            }
+
+            @media (max-width: 760px) {
+                .fs-platform-capability-wrap {
+                    width: min(100%, calc(100% - 28px));
+                    padding: 58px 0 66px;
+                }
+
+                .fs-platform-title {
+                    font-size: clamp(42px, 12vw, 60px);
+                }
+
+                .fs-platform-lead {
+                    font-size: 18px;
+                }
+
+                .fs-platform-chip-row {
+                    gap: 9px;
+                }
+
+                .fs-platform-chip {
+                    min-height: 40px;
+                    padding: 0 16px;
+                    font-size: 13px;
+                }
+
+                .fs-platform-grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .fs-platform-feature-panel {
+                    min-height: auto;
+                    padding: 26px 22px;
+                }
+
+                .fs-platform-card {
+                    min-height: auto;
+                    padding: 24px;
+                }
+
+                .fs-platform-card h3 {
+                    font-size: 28px;
+                }
+
+                .fs-platform-card p {
+                    font-size: 18px;
+                    line-height: 1.5;
+                }
+            }
+        </style>
+
+        <div class="fs-platform-capability-wrap">
+            <div class="fs-platform-capability-head section-head">
+                <div>
+                    <p class="kicker">Platform Capability</p>
+
+                    <h2 id="platform-capability-title">
+                        Built to simplify real-world multiphase production.
+                    </h2>
+
+                    <p class="fs-platform-lead">
+                        Fluidstream combines broad multiphase operating capability with engineering refinements that reduce
+                        infrastructure, operator intervention, and field reliability risk.
                     </p>
                 </div>
 
-                <div class="tech-grid-equal">
-                    <div class="stack">
-                        <div class="item">
-                            <h4>Liquid handling inside compression</h4>
-                            <p>Fluidstream’s technology is designed to safely and efficiently manage incompressible liquids
-                                within the
-                                compression chamber, reducing dependence on upstream separation and expanding the range of
-                                viable field
-                                applications.</p>
-                        </div>
-                        <div class="item">
-                            <h4>Sealed gland protection with wear awareness</h4>
-                            <p>Advanced gland sealing and electronic seal wear detection support safer, more controlled
-                                operation in
-                                hazardous, mixed-phase duty while helping reduce reactive maintenance exposure.</p>
-                        </div>
-                        <div class="item">
-                            <h4>Piston tracking and smarter system response</h4>
-                            <p>Piston-location awareness supports response against slugs, solids buildup, and changing
-                                conditions,
-                                strengthening system protection and reliability in unstable field service.</p>
-                        </div>
-                    </div>
-
-                    <div class="stack">
-                        <div class="item">
-                            <h4>Power efficiency through cycle control</h4>
-                            <p>A patented cycle-control approach slows the final stage of compression and redistributes
-                                speed earlier
-                                in the stroke where power demand is lower, helping improve operating efficiency.</p>
-                        </div>
-                        <div class="item">
-                            <h4>Autonomous protection in upset conditions</h4>
-                            <p>Autonomous logic is designed to keep operating through multiphase and gas-only upset
-                                conditions with
-                                reduced operator intervention and stronger protection against avoidable downtime.</p>
-                        </div>
-                        <div class="item">
-                            <h4>Field-ready configurations</h4>
-                            <p>Electric and gas-drive options, H₂S handling, cold-weather startup, and remote control
-                                broaden
-                                deployment flexibility for operators evaluating real-world field fit.</p>
-                        </div>
-                    </div>
+                <div class="fs-platform-chip-row" aria-label="Platform capability highlights">
+                    <span class="fs-platform-chip">Full operating spectrum</span>
+                    <span class="fs-platform-chip">No VFD complexity</span>
+                    <span class="fs-platform-chip">No separator dependency</span>
+                    <span class="fs-platform-chip">Contained operation</span>
                 </div>
+            </div>
 
-                <div style="margin-top:22px;display:flex;gap:12px;flex-wrap:wrap">
-                    <a class="btn btn-primary" href="/technology">Explore Technology</a>
-                    <a class="btn btn-secondary" href="/multiphase-compression-technology">View
-                        Key Features</a>
+            <div class="fs-platform-layout">
+                <aside class="fs-platform-feature-panel">
+                    <div class="fs-platform-feature-badge">Facility Simplification</div>
+
+                    <div class="fs-platform-flow">
+                        <div class="fs-platform-flow-card">
+                            <span>Before: separator-heavy facility complexity</span>
+                        </div>
+
+                        <div class="fs-platform-flow-card">
+                            <span>After: compact direct multiphase compression</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3>Less equipment. More operating flexibility.</h3>
+
+                        <p>
+                            Fluidstream is designed to reduce facility complexity by handling multiphase production directly
+                            through a compact compression platform.
+                        </p>
+                    </div>
+                </aside>
+
+                <div class="fs-platform-grid">
+                    <article class="fs-platform-card">
+                        <div class="fs-platform-card-kicker">Phase Range</div>
+                        <h3>Handles the Full Operating Spectrum</h3>
+                        <p>
+                            Engineered for operation from 100% liquid to 100% gas across liquid-dominant, gas-dominant,
+                            and fully multiphase conditions.
+                        </p>
+                    </article>
+
+                    <article class="fs-platform-card">
+                        <div class="fs-platform-card-kicker">Turndown</div>
+                        <h3>Full-Range Output Modulation</h3>
+                        <p>
+                            Modulates across the operating range without VFD complexity or conventional electrical overhead.
+                        </p>
+                    </article>
+
+                    <article class="fs-platform-card">
+                        <div class="fs-platform-card-kicker">System Simplicity</div>
+                        <h3>Separator-Free Operation</h3>
+                        <p>
+                            Compresses multiphase streams directly, reducing reliance on upstream separation and
+                            scrubber-heavy facility layouts.
+                        </p>
+                    </article>
+
+                    <article class="fs-platform-card">
+                        <div class="fs-platform-card-kicker">Controls</div>
+                        <h3>Autonomous Target-Pressure Control</h3>
+                        <p>
+                            Automatically maintains operator-defined pressure targets as field conditions, flow rates,
+                            and phase behavior change.
+                        </p>
+                    </article>
+
+                    <article class="fs-platform-card">
+                        <div class="fs-platform-card-kicker">Liquid Response</div>
+                        <h3>Intelligent Incompressible-Liquid Handling</h3>
+                        <p>
+                            Operating methodology designed for liquid events and unstable multiphase conditions inside
+                            the compression chamber.
+                        </p>
+                    </article>
+
+                    <article class="fs-platform-card">
+                        <div class="fs-platform-card-kicker">Sealing</div>
+                        <h3>Patent-Pending Contained Gland Sealing</h3>
+                        <p>
+                            Engineered for contained operation with reduced routine process-fluid leakage and reduced
+                            operator intervention.
+                        </p>
+                    </article>
+
+                    <article class="fs-platform-card">
+                        <div class="fs-platform-card-kicker">Condition Visibility</div>
+                        <h3>Electronic Seal Condition Detection</h3>
+                        <p>
+                            Seal-wear detection supports proactive maintenance visibility before seal condition becomes
+                            a field reliability issue.
+                        </p>
+                    </article>
+
+                    <article class="fs-platform-card">
+                        <div class="fs-platform-card-kicker">Field Ruggedness</div>
+                        <h3>Built for Harsh Field Conditions</h3>
+                        <p>
+                            Designed for freeze-prone, unstable, solids-laden production environments where conventional
+                            gas-only systems struggle.
+                        </p>
+                    </article>
                 </div>
             </div>
         </div>
-    </section> --}}
+    </section>
+
     <style>
         .patent-section {
             position: relative;
@@ -2903,25 +3262,25 @@
         }
 
         /* .patent-copy .kicker {
-                                                                                                                                                                                                                                                                                                            margin-bottom: 18px;
-                                                                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            margin-bottom: 18px;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        }
 
-                                                                                                                                                                                                                                                                                                        .patent-copy h2 {
-                                                                                                                                                                                                                                                                                                            margin: 0;
-                                                                                                                                                                                                                                                                                                            font-size: clamp(1.9rem, 3vw, 3rem);
-                                                                                                                                                                                                                                                                                                            line-height: 1.05;
-                                                                                                                                                                                                                                                                                                            letter-spacing: -.04em;
-                                                                                                                                                                                                                                                                                                            max-width: 21ch;
-                                                                                                                                                                                                                                                                                                            color: var(--text);
-                                                                                                                                                                                                                                                                                                        } */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        .patent-copy h2 {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            margin: 0;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            font-size: clamp(1.9rem, 3vw, 3rem);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            line-height: 1.05;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            letter-spacing: -.04em;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            max-width: 21ch;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            color: var(--text);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        } */
         /* 
-                                                                                                                                                                                                                                                                .patent-copy p {
-                                                                                                                                                                                                                                                                    margin: 0 0 18px;
-                                                                                                                                                                                                                                                                    max-width: 760px;
-                                                                                                                                                                                                                                                                    font-size: 1.18rem;
-                                                                                                                                                                                                                                                                    line-height: 1.7;
-                                                                                                                                                                                                                                                                    color: #5b6d86;
-                                                                                                                                                                                                                                                                } */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                .patent-copy p {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    margin: 0 0 18px;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    max-width: 760px;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    font-size: 1.18rem;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    line-height: 1.7;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    color: #5b6d86;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                } */
 
         .patent-copy .patent-highlight {
             margin-top: 6px;
@@ -3142,11 +3501,11 @@
         }
 
         /* .patent-card p {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                margin: 0;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                font-size: 1.04rem;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                line-height: 1.72;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                color: #61738b;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            } */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                margin: 0;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                font-size: 1.04rem;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                line-height: 1.72;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                color: #61738b;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            } */
 
         .patent-callout {
             position: relative;
@@ -3469,8 +3828,8 @@
                     </p>
                 </div>
                 <div style="display:flex;gap:12px;flex-wrap:wrap">
-                    <a class="btn btn-primary" href="/contact">Request Technical Review</a>
-                    <a class="btn btn-secondary" href="/multiphase-compression-technology">Understand Multiphase
+                    <a class="btn btn-primary" href="/technical-review">Request Technical Review</a>
+                    <a class="btn btn-secondary" href="/why-multiphase">Understand Multiphase
                         Compression</a>
                 </div>
             </div>

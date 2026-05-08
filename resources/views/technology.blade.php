@@ -24,12 +24,12 @@
     }
 
     /* body {
-                                                              margin: 0;
-                                                              font-family: Inter, Arial, Helvetica, sans-serif;
-                                                              background: #ffffff;
-                                                              color: var(--text);
-                                                              line-height: 1.55;
-                                                            } */
+                                                                                                                                    margin: 0;
+                                                                                                                                    font-family: Inter, Arial, Helvetica, sans-serif;
+                                                                                                                                    background: #ffffff;
+                                                                                                                                    color: var(--text);
+                                                                                                                                    line-height: 1.55;
+                                                                                                                                  } */
 
     img {
       display: block;
@@ -47,8 +47,8 @@
     }
 
     /* .section {
-                                                                                                                                                                                                                                                            padding: 84px 0;
-                                                                                                                                                                                                                                                          } */
+                                                                                                                                                                                                                                                                                                                                  padding: 84px 0;
+                                                                                                                                                                                                                                                                                                                                } */
 
     .section-surface-white {
       background: #ffffff;
@@ -80,19 +80,19 @@
     }
 
     /* .hero-tech::before {
-                                                                                                                                                                                                                                                                                                    content: "";
-                                                                                                                                                                                                                                                                                                    position: absolute;
-                                                                                                                                                                                                                                                                                                    inset: 0;
-                                                                                                                                                                                                                                                                                                    background:
-                                                                                                                                                                                                                                                                                                      linear-gradient(90deg, rgba(0, 24, 220, 0.90) 0%, rgba(0, 24, 220, 0.78) 45%, rgba(0, 24, 220, 0.68) 100%),
-                                                                                                                                                                                                                                                                                                      url('{{ asset("/img/hero/hero.avif") }}');
-                                                                                                                                                                                                                                                                                                    background-size: cover;
-                                                                                                                                                                                                                                                                                                    background-position: center;
-                                                                                                                                                                                                                                                                                                    background-repeat: no-repeat;
-                                                                                                                                                                                                                                                                                                    transform: scale(1.02);
-                                                                                                                                                                                                                                                                                                    z-index: -2;
-                                                                                                                                                                                                                                                                                                  }
-                                                                                                                                                                                                                                                                                                   */
+                                                                                                                                                                                                                                                                                                                                                                          content: "";
+                                                                                                                                                                                                                                                                                                                                                                          position: absolute;
+                                                                                                                                                                                                                                                                                                                                                                          inset: 0;
+                                                                                                                                                                                                                                                                                                                                                                          background:
+                                                                                                                                                                                                                                                                                                                                                                            linear-gradient(90deg, rgba(0, 24, 220, 0.90) 0%, rgba(0, 24, 220, 0.78) 45%, rgba(0, 24, 220, 0.68) 100%),
+                                                                                                                                                                                                                                                                                                                                                                            url('{{ asset("/img/hero/hero.avif") }}');
+                                                                                                                                                                                                                                                                                                                                                                          background-size: cover;
+                                                                                                                                                                                                                                                                                                                                                                          background-position: center;
+                                                                                                                                                                                                                                                                                                                                                                          background-repeat: no-repeat;
+                                                                                                                                                                                                                                                                                                                                                                          transform: scale(1.02);
+                                                                                                                                                                                                                                                                                                                                                                          z-index: -2;
+                                                                                                                                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                                                                                                                                         */
     .hero-tech::before {
       content: "";
       position: absolute;
@@ -621,7 +621,7 @@
       height: 24px;
       border-radius: 8px;
       /* border: 1px solid #dbe5ff;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  background-color: #ffffff; */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        background-color: #ffffff; */
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%230018dc' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h12'/%3E%3Cpath d='M13 5l7 7-7 7'/%3E%3C/svg%3E");
       background-repeat: no-repeat;
       background-position: center;
@@ -630,7 +630,7 @@
     }
 
     .section-title {
-      font-size: clamp(32px, 4vw, 56px);
+      font-size: clamp(32px, 4vw, 50px);
       line-height: 1;
       letter-spacing: -.04em;
       margin: 0 0 14px;
@@ -797,7 +797,7 @@
     }
 
     .diff-card h3 {
-      font-size: 29px;
+      font-size: 25px;
       line-height: 1.08;
       letter-spacing: -.03em;
       margin: 0 0 14px;
@@ -1253,8 +1253,8 @@
 
     #overview .section-head {
       /* display: grid;
-                                                                                                                                                                                                                                          grid-template-columns: minmax(0, 1.05fr) minmax(340px, .95fr);
-                                                                                                                                                                                                                                          gap: 44px; */
+                                                                                                                                                                                                                                                                                                                grid-template-columns: minmax(0, 1.05fr) minmax(340px, .95fr);
+                                                                                                                                                                                                                                                                                                                gap: 44px; */
       align-items: baseline;
       margin-bottom: 42px;
     }
@@ -1290,29 +1290,29 @@
 
     #overview .overview {
       /* display: grid;
-                                                                                                                                                                                                                                            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-                                                                                                                                                                                                                                            gap: 28px; */
+                                                                                                                                                                                                                                                                                                                  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+                                                                                                                                                                                                                                                                                                                  gap: 28px; */
       align-items: stretch;
     }
 
     /* #overview .panel {
-                                                                                                                                                                                                                            padding: 34px 34px 36px;
-                                                                                                                                                                                                                            border: 1px solid #e3ebf5;
-                                                                                                                                                                                                                            border-radius: 7px;
-                                                                                                                                                                                                                            background: #ffffff;
-                                                                                                                                                                                                                            box-shadow: 0 14px 36px rgba(10, 28, 77, .05);
-                                                                                                                                                                                                                            height: 100%;
-                                                                                                                                                                                                                            display: flex;
-                                                                                                                                                                                                                            flex-direction: column;
-                                                                                                                                                                                                                          }
+                                                                                                                                                                                                                                                                                                  padding: 34px 34px 36px;
+                                                                                                                                                                                                                                                                                                  border: 1px solid #e3ebf5;
+                                                                                                                                                                                                                                                                                                  border-radius: 7px;
+                                                                                                                                                                                                                                                                                                  background: #ffffff;
+                                                                                                                                                                                                                                                                                                  box-shadow: 0 14px 36px rgba(10, 28, 77, .05);
+                                                                                                                                                                                                                                                                                                  height: 100%;
+                                                                                                                                                                                                                                                                                                  display: flex;
+                                                                                                                                                                                                                                                                                                  flex-direction: column;
+                                                                                                                                                                                                                                                                                                }
 
-                                                                                                                                                                                                                          #overview .panel {
-                                                                                                                                                                                                                            padding: 34px 34px 36px;
-                                                                                                                                                                                                                            border: 1px solid #e3ebf5;
-                                                                                                                                                                                                                            border-radius: 7px;
-                                                                                                                                                                                                                            background: #ffffff;
-                                                                                                                                                                                                                            box-shadow: 0 14px 36px rgba(10, 28, 77, .05);
-                                                                                                                                                                                                                          } */
+                                                                                                                                                                                                                                                                                                #overview .panel {
+                                                                                                                                                                                                                                                                                                  padding: 34px 34px 36px;
+                                                                                                                                                                                                                                                                                                  border: 1px solid #e3ebf5;
+                                                                                                                                                                                                                                                                                                  border-radius: 7px;
+                                                                                                                                                                                                                                                                                                  background: #ffffff;
+                                                                                                                                                                                                                                                                                                  box-shadow: 0 14px 36px rgba(10, 28, 77, .05);
+                                                                                                                                                                                                                                                                                                } */
 
     #overview .panel h3 {
       margin: 0 0 18px;
@@ -1324,11 +1324,11 @@
     }
 
     /* #overview .panel>p {
-                                                                                                                                                                                                                                  margin: 0;
-                                                                                                                                                                                                                                  font-size: 18px;
-                                                                                                                                                                                                                                  line-height: 1.72;
-                                                                                                                                                                                                                                  color: #52667a;
-                                                                                                                                                                                                                                } */
+                                                                                                                                                                                                                                                                                                        margin: 0;
+                                                                                                                                                                                                                                                                                                        font-size: 18px;
+                                                                                                                                                                                                                                                                                                        line-height: 1.72;
+                                                                                                                                                                                                                                                                                                        color: #52667a;
+                                                                                                                                                                                                                                                                                                      } */
 
     #overview .stack {
       display: flex;
@@ -1399,7 +1399,7 @@
     #overview .stack .item strong {
       display: block;
       margin: 0 0 10px;
-      font-size: 18px;
+      font-size: 17px;
       line-height: 1.22;
       letter-spacing: -.02em;
       color: #0a1c4d;
@@ -1482,7 +1482,7 @@
     @media (max-width: 980px) {
       #overview .section-head {
         /* grid-template-columns: 1fr;
-                                                                                                                                                                                                                                            gap: 22px; */
+                                                                                                                                                                                                                                                                                                                  gap: 22px; */
         align-items: start;
       }
 
@@ -1817,8 +1817,8 @@
     }
 
     /* ================================
-                                                                                                                   TECHNOLOGY CTA SECTION
-                                                                                                                ================================ */
+                                                                                                                                                                                         TECHNOLOGY CTA SECTION
+                                                                                                                                                                                      ================================ */
 
     .fs-technology-cta {
       background: #f6f8fc;
@@ -1956,7 +1956,7 @@
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 114px;
+      scroll-padding-top: 0;
     }
 
     #overview,
@@ -1970,154 +1970,411 @@
     #different-approach,
     #differentiation,
     #overview-stage {
-      scroll-margin-top: 114px;
-    }
-
-    @media (max-width: 1100px) {
-      html {
-        scroll-padding-top: 74px;
-      }
-
-      #overview,
-      #features,
-      #liquid-method,
-      #gland-section,
-      #alignment-section,
-      #tracking-section,
-      #drives-section,
-      #sand-section,
-      #different-approach,
-      #differentiation,
-      #overview-stage {
-        scroll-margin-top: 74px;
-      }
-    }
-
-    @media (max-width: 640px) {
-      html {
-        scroll-padding-top: 68px;
-      }
-
-      #overview,
-      #features,
-      #liquid-method,
-      #gland-section,
-      #alignment-section,
-      #tracking-section,
-      #drives-section,
-      #sand-section,
-      #different-approach,
-      #differentiation,
-      #overview-stage {
-        scroll-margin-top: 68px;
-      }
+      scroll-margin-top: 0;
     }
   </style>
 
-  <section class="hero-tech ">
-    <div class="container max-w-7xl py-12 ">
-      <div class="hero-copy">
-        <h2
-          class="mt-6 max-w-2xl text-4xl font-semibold leading-[1.02] tracking-[-0.045em] text-white sm:text-5xl lg:text-[58px]">
-          Engineered for True Multiphase Performance
-        </h2>
-        <p class="mt-8 max-w-2xl text-lg leading-8 text-white/85 sm:text-[22px] sm:leading-9">
-          Fluidstream technology is built from the ground up to reliably handle gas, liquids, and solids without the
-          complexity, maintenance burden, or limitations of conventional systems.
+  <section class="hero-tech fs-tech-hero-refined">
+    <style>
+      .fs-tech-hero-refined {
+        position: relative;
+        overflow: hidden;
+        isolation: isolate;
+        min-height: 680px;
+        display: flex;
+        align-items: center;
+        background: #0018dc;
+        color: #ffffff;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .fs-tech-hero-refined::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(90deg,
+            rgba(0, 8, 30, 0.88) 0%,
+            rgba(0, 12, 48, 0.76) 42%,
+            rgba(0, 16, 60, 0.40) 72%,
+            rgba(0, 16, 60, 0.18) 100%),
+          url('/img/hero/technology-hero-pic.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transform: scale(1.03);
+        z-index: -2;
+      }
+
+      .fs-tech-hero-refined::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(circle at 82% 16%, rgba(21, 209, 255, .18), transparent 30%),
+          linear-gradient(180deg, rgba(2, 6, 23, .10) 0%, rgba(2, 6, 23, .40) 100%);
+        z-index: -1;
+        pointer-events: none;
+      }
+
+      .fs-tech-hero-refined .fs-tech-hero-wrap {
+        width: min(calc(100% - 40px), 1200px);
+        margin: 0 auto;
+        padding: 92px 0 78px;
+        display: grid;
+        grid-template-columns: minmax(0, 760px) minmax(320px, 390px);
+        gap: 52px;
+        align-items: end;
+        position: relative;
+        z-index: 1;
+      }
+
+      .fs-tech-hero-breadcrumb {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 24px;
+        color: rgba(255, 255, 255, .68);
+        font-size: 13px;
+        line-height: 1.4;
+      }
+
+      .fs-tech-hero-breadcrumb a {
+        color: rgba(255, 255, 255, .80);
+        text-decoration: none;
+        transition: color .22s ease;
+      }
+
+      .fs-tech-hero-breadcrumb a:hover {
+        color: #ffffff;
+      }
+
+      .fs-tech-hero-kicker {
+        margin: 0 0 16px;
+        color: #15d1ff;
+        font-size: 13px;
+        line-height: 1.2;
+        font-weight: 900;
+        letter-spacing: .14em;
+        text-transform: uppercase;
+      }
+
+      .fs-tech-hero-title {
+        margin: 0;
+        max-width: 780px;
+        color: #ffffff;
+        font-size: clamp(42px, 5.1vw, 76px);
+        line-height: .96;
+        letter-spacing: -.06em;
+        font-weight: 650;
+      }
+
+      .fs-tech-hero-lead {
+        margin: 24px 0 0;
+        max-width: 680px;
+        color: rgba(255, 255, 255, .84);
+        font-size: clamp(18px, 1.55vw, 22px);
+        line-height: 1.48;
+        font-weight: 450;
+      }
+
+      .fs-tech-hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 30px;
+      }
+
+      .fs-tech-hero-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 52px;
+        padding: 0 22px;
+        border-radius: 999px;
+        font-size: 15px;
+        line-height: 1;
+        font-weight: 900;
+        text-decoration: none;
+        transition:
+          transform .22s ease,
+          box-shadow .22s ease,
+          background .22s ease,
+          color .22s ease,
+          border-color .22s ease;
+        white-space: nowrap;
+      }
+
+      .fs-tech-hero-btn-primary {
+        color: #0018dc;
+        background: #ffffff;
+        border: 1px solid #ffffff;
+        box-shadow: 0 18px 38px rgba(0, 0, 0, .20);
+      }
+
+      .fs-tech-hero-btn-primary:hover {
+        color: #0018dc;
+        transform: translateY(-2px);
+        box-shadow: 0 22px 44px rgba(0, 0, 0, .26);
+      }
+
+      .fs-tech-hero-btn-secondary {
+        color: #ffffff;
+        background: rgba(255, 255, 255, .08);
+        border: 1px solid rgba(255, 255, 255, .26);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      }
+
+      .fs-tech-hero-btn-secondary:hover {
+        color: #ffffff;
+        background: rgba(255, 255, 255, .14);
+        border-color: rgba(255, 255, 255, .42);
+        transform: translateY(-2px);
+      }
+
+      .fs-tech-hero-chip-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 28px;
+        max-width: 790px;
+      }
+
+      .fs-tech-hero-chip {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 38px;
+        padding: 0 14px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, .20);
+        background: rgba(255, 255, 255, .08);
+        color: rgba(255, 255, 255, .88);
+        font-size: 12px;
+        line-height: 1.2;
+        font-weight: 800;
+        text-decoration: none;
+        white-space: nowrap;
+        backdrop-filter: blur(9px);
+        -webkit-backdrop-filter: blur(9px);
+        transition:
+          transform .22s ease,
+          border-color .22s ease,
+          background .22s ease,
+          color .22s ease;
+      }
+
+      .fs-tech-hero-chip:hover {
+        color: #ffffff;
+        transform: translateY(-2px);
+        border-color: rgba(21, 209, 255, .58);
+        background: rgba(255, 255, 255, .13);
+      }
+
+      .fs-tech-hero-proof-card {
+        position: relative;
+        overflow: hidden;
+        isolation: isolate;
+        padding: 26px;
+        border-radius: 7px;
+        /* background: rgba(255, 255, 255, .10); */
+        border: 1px solid rgba(255, 255, 255, .18);
+        box-shadow: 0 26px 70px rgba(0, 0, 0, .24);
+        /* backdrop-filter: blur(15px); */
+        -webkit-backdrop-filter: blur(15px);
+        transition:
+          transform .28s ease,
+          box-shadow .28s ease,
+          border-color .28s ease;
+      }
+
+      .fs-tech-hero-proof-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+        /* background:
+            linear-gradient(135deg,
+              rgba(255, 255, 255, .17) 0%,
+              rgba(255, 255, 255, .06) 48%,
+              rgba(255, 255, 255, .025) 100%); */
+      }
+
+      .fs-tech-hero-proof-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(255, 255, 255, .35);
+        box-shadow: 0 30px 78px rgba(0, 0, 0, .30);
+      }
+
+      .fs-tech-hero-proof-card:hover::after {
+        transform: scaleX(1);
+      }
+
+      .fs-tech-hero-proof-card>* {
+        position: relative;
+        z-index: 1;
+      }
+
+      .fs-tech-hero-proof-card h3 {
+        margin: 0 0 14px;
+        color: #ffffff;
+        font-size: 25px;
+        line-height: 1.08;
+        letter-spacing: -.035em;
+        font-weight: 750;
+      }
+
+      .fs-tech-hero-proof-card p {
+        margin: 0 0 22px;
+        color: rgba(255, 255, 255, .78);
+        font-size: 15.5px;
+        line-height: 1.6;
+        font-weight: 450;
+      }
+
+      .fs-tech-hero-proof-list {
+        display: grid;
+        gap: 14px;
+      }
+
+      .fs-tech-hero-proof-item {
+        display: grid;
+        grid-template-columns: 10px minmax(0, 1fr);
+        gap: 12px;
+        align-items: start;
+        padding-top: 14px;
+        border-top: 1px solid rgba(255, 255, 255, .12);
+        color: rgba(255, 255, 255, .88);
+        font-size: 14px;
+        line-height: 1.48;
+        font-weight: 750;
+        text-decoration: none;
+        transition: color .22s ease;
+      }
+
+      .fs-tech-hero-proof-item:first-child {
+        padding-top: 0;
+        border-top: 0;
+      }
+
+      .fs-tech-hero-proof-item:hover {
+        color: #ffffff;
+      }
+
+      .fs-tech-hero-proof-dot {
+        width: 7px;
+        height: 7px;
+        margin-top: 7px;
+        border-radius: 999px;
+        background: #15d1ff;
+        box-shadow: 0 0 0 7px rgba(21, 209, 255, .10);
+      }
+
+      @media (max-width: 1080px) {
+        .fs-tech-hero-refined {
+          min-height: auto;
+        }
+
+        .fs-tech-hero-refined .fs-tech-hero-wrap {
+          grid-template-columns: 1fr;
+          gap: 34px;
+          align-items: start;
+          padding: 82px 0 64px;
+        }
+
+        .fs-tech-hero-proof-card {
+          max-width: 640px;
+        }
+      }
+
+      @media (max-width: 760px) {
+        .fs-tech-hero-refined .fs-tech-hero-wrap {
+          width: min(100%, calc(100% - 28px));
+          padding: 68px 0 54px;
+        }
+
+        .fs-tech-hero-title {
+          font-size: 42px;
+        }
+
+        .fs-tech-hero-lead {
+          font-size: 17px;
+        }
+
+        .fs-tech-hero-actions {
+          flex-direction: column;
+        }
+
+        .fs-tech-hero-btn {
+          width: 100%;
+        }
+
+        .fs-tech-hero-chip {
+          white-space: normal;
+        }
+
+        .fs-tech-hero-proof-card {
+          padding: 22px;
+        }
+      }
+    </style>
+
+    <div class="fs-tech-hero-wrap">
+      <div class="fs-tech-hero-copy">
+        <h1 class="fs-tech-hero-title">
+          Engineered for real multiphase conditions.
+        </h1>
+
+        <p class="fs-tech-hero-lead">
+          Fluidstream’s multiphase platform is engineered for the variable, unstable, and liquid-rich conditions
+          encountered in real-world multiphase service.
         </p>
-        <div class="hero-patent-callout max-w-2xl">
-          <p class="hero-patent-callout-text max-w-2xl">
-            <strong>Supported by patented operating methods.</strong>
-            Fluidstream’s liquid-influenced compression response is supported by patented operating methods, including
-            <a href="/patented-technology#us11098709b2" class="hero-patent-link">US11098709B2</a>.
-            For the full patent overview, see the <a href="/patented-technology" class="hero-patent-link">Patented
-              Technology page</a>.
-          </p>
+
+        <div class="fs-tech-hero-actions">
+          <a class="fs-tech-hero-btn fs-tech-hero-btn-primary" href="#overview-stage">
+            Explore Technology
+          </a>
+
+          <a class="fs-tech-hero-btn fs-tech-hero-btn-secondary" href="/patented-technology">
+            View Patents
+          </a>
         </div>
 
-        <div class="hero-actions mt-4">
-          <a class="btn primary" href="#overview">Explore Technology</a>
-          <a class="btn secondary" href="#features">View Key Features</a>
-        </div>
-
-        <div class="hero-highlights hero-highlights--feature-cards">
-          <a href="#liquid-method" class="hero-feature-card">
-            <div class="hero-feature-card__topline"></div>
-            <div class="hero-feature-card__label">Multiphase Capability</div>
-            <h3 class="hero-feature-card__title">Compresses mixed flow without forcing separation first</h3>
-            <p class="hero-feature-card__text">
-              Designed to handle gas and liquids inside compression, reducing dependence on separators, scrubbers, and
-              extra process equipment.
-            </p>
-            {{-- <div class="hero-feature-card__mini">
-              <div class="hero-feature-card__mini-label">Why it matters</div>
-              <p>Fewer process steps can mean lower footprint, lower complexity, and broader fit across real multiphase
-                service.</p>
-            </div> --}}
-            <div class="hero-feature-card__cta">
-              <span>See how the liquid-handling methodology works</span>
-              <span class="hero-feature-card__arrow">→</span>
-            </div>
-          </a>
-
-          <a href="#gland-section" class="hero-feature-card">
-            <div class="hero-feature-card__topline"></div>
-            <div class="hero-feature-card__label">Advanced Gland Sealing</div>
-            <h3 class="hero-feature-card__title">Wear visibility supports more planned maintenance</h3>
-            <p class="hero-feature-card__text">
-              Patent-pending gland sealing with electronic wear detection gives earlier warning before sealing degradation
-              becomes a leak, outage, or emergency callout.
-            </p>
-            {{-- <div class="hero-feature-card__mini">
-              <div class="hero-feature-card__mini-label">Why it matters</div>
-              <p>Better awareness of seal condition helps protect uptime, reduce leak exposure, and shift maintenance away
-                from reactive troubleshooting.</p>
-            </div> --}}
-            <div class="hero-feature-card__cta">
-              <span>Read more on sealing integrity and wear control</span>
-              <span class="hero-feature-card__arrow">→</span>
-            </div>
-          </a>
-
-          <a href="#tracking-section" class="hero-feature-card">
-            <div class="hero-feature-card__topline"></div>
-            <div class="hero-feature-card__label">Adaptive Protection</div>
-            <h3 class="hero-feature-card__title">Piston tracking helps the system respond to upset conditions</h3>
-            <p class="hero-feature-card__text">
-              Full piston tracking gives the controls better operating context so the unit can react to slugs, solids
-              buildup, and changing machine behavior.
-            </p>
-            {{-- <div class="hero-feature-card__mini">
-              <div class="hero-feature-card__mini-label">Why it matters</div>
-              <p>More responsive control can reduce trips, limit damage risk, and improve autonomous performance when
-                field conditions move outside the ideal design point.</p>
-            </div> --}}
-            <div class="hero-feature-card__cta">
-              <span>Explore the control and upset-response strategy</span>
-              <span class="hero-feature-card__arrow">→</span>
-            </div>
-          </a>
-
-          <a href="#sand-section" class="hero-feature-card">
-            <div class="hero-feature-card__topline"></div>
-            <div class="hero-feature-card__label">Harsh-Service Durability</div>
-            <h3 class="hero-feature-card__title">Built for abrasive, unstable, and remote field conditions</h3>
-            <p class="hero-feature-card__text">
-              Sand-ready sealing, hazardous-fluid containment, and integrated drive controls make the architecture more
-              credible in harsh service.
-            </p>
-            {{-- <div class="hero-feature-card__mini">
-              <div class="hero-feature-card__mini-label">Why it matters</div>
-              <p>When service is dirty, corrosive, or difficult to access, survivability becomes an economic advantage,
-                not just a technical claim.</p>
-            </div> --}}
-            <div class="hero-feature-card__cta">
-              <span>Learn how the design improves field survivability</span>
-              <span class="hero-feature-card__arrow">→</span>
-            </div>
-          </a>
+        <div class="fs-tech-hero-chip-row" aria-label="Fluidstream technology capabilities">
+          <a class="fs-tech-hero-chip" href="#liquid-response-method">Liquid-response methodology</a>
+          <a class="fs-tech-hero-chip" href="#gland-sealing-section">Contained gland sealing</a>
+          <a class="fs-tech-hero-chip" href="#Autonomous-drives-section">Autonomous pressure control</a>
+          <a class="fs-tech-hero-chip" href="#seal-condition-visibility">Seal-condition visibility</a>
         </div>
       </div>
+
+      <aside class="fs-tech-hero-proof-card">
+        <h3>Patent-backed operating logic.</h3>
+
+        <p>
+          Fluidstream’s liquid-influenced compression response is supported by patented operating methods, with
+          US11098709B2 serving as a key example patent anchor.
+        </p>
+
+        <div class="fs-tech-hero-proof-list">
+          <a class="fs-tech-hero-proof-item" href="#liquid-response-method">
+            <span class="fs-tech-hero-proof-dot"></span>
+            <span>Liquid-response methodology for multiphase chamber behavior.</span>
+          </a>
+
+          <a class="fs-tech-hero-proof-item" href="#sand-section">
+            <span class="fs-tech-hero-proof-dot"></span>
+            <span>Built for variable, unstable, and harsh field conditions.</span>
+          </a>
+
+          <a class="fs-tech-hero-proof-item" href="#gland-sealing-section">
+            <span class="fs-tech-hero-proof-dot"></span>
+            <span>Focused on control, containment, and reduced intervention.</span>
+          </a>
+        </div>
+      </aside>
     </div>
   </section>
   <section id="overview" class="section overview-why-section">
@@ -2652,7 +2909,559 @@
       </div>
     </div>
   </section>
+  <section class="section fs-tech-platform-section" id="technology-platform">
+    <style>
+      .fs-tech-platform-section {
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(180deg, #f5f7fb 0%, #ffffff 100%);
+        border-top: 1px solid #e5edf8;
+        border-bottom: 1px solid #e5edf8;
+      }
 
+      .fs-tech-platform-wrap {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 78px 0 84px;
+      }
+
+      .fs-tech-platform-head {
+        display: grid;
+        grid-template-columns: minmax(0, .86fr) minmax(360px, 1.14fr);
+        gap: 42px;
+        align-items: start;
+        margin-bottom: 34px;
+      }
+
+      .fs-tech-platform-kicker {
+        display: inline-flex;
+        align-items: center;
+        margin: 0 0 16px;
+        color: #0018dc;
+        font-size: 13px;
+        line-height: 1.2;
+        font-weight: 900;
+        letter-spacing: .18em;
+        text-transform: uppercase;
+      }
+
+      .fs-tech-platform-title {
+        margin: 0;
+        max-width: 780px;
+        color: #1f1f21;
+        font-size: clamp(34px, 4vw, 50px);
+        line-height: .98;
+        letter-spacing: -.055em;
+        font-weight: 500;
+      }
+
+      .fs-tech-platform-lead {
+        margin: 22px 0 0;
+        max-width: 760px;
+        color: #52667a;
+        font-size: 18px;
+        line-height: 1.72;
+        font-weight: 450;
+      }
+
+      .fs-tech-platform-summary {
+        position: relative;
+        overflow: hidden;
+        padding: 28px;
+        border-radius: 5px;
+        border: 1px solid #dce6ff;
+        background: #ffffff;
+        /* box-shadow: 0 18px 45px rgba(16, 42, 67, .08); */
+      }
+
+      .fs-tech-platform-summary::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 3px;
+        background: #0018dc;
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+
+      .fs-tech-platform-summary h3 {
+        margin: 0 0 12px;
+        color: #0a1c4d;
+        font-size: 26px;
+        line-height: 1.08;
+        letter-spacing: -.035em;
+        font-weight: 700;
+      }
+
+      .fs-tech-platform-summary p {
+        margin: 0 0 20px;
+        color: #52667a;
+        font-size: 16px;
+        line-height: 1.65;
+      }
+
+      .fs-tech-platform-pill-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px;
+        margin-bottom: 24px;
+      }
+
+      .fs-tech-platform-pill {
+        display: inline-flex;
+        align-items: center;
+        min-height: 34px;
+        padding: 0 12px;
+        border-radius: 999px;
+        border: 1px solid rgba(0, 24, 220, .16);
+        background: #f0f1f5;
+        color: #102a43;
+        font-size: 12px;
+        font-weight: 800;
+        white-space: nowrap;
+      }
+
+      .fs-tech-platform-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 4px;
+      }
+
+      .fs-tech-platform-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        padding: 0 19px;
+        border-radius: 999px;
+        font-size: 14px;
+        line-height: 1;
+        font-weight: 900;
+        text-decoration: none;
+        transition: transform .22s ease, box-shadow .22s ease, background .22s ease, color .22s ease, border-color .22s ease;
+      }
+
+      .fs-tech-platform-btn-primary {
+        color: #ffffff;
+        background: #0018dc;
+        border: 1px solid #0018dc;
+        box-shadow: 0 16px 32px rgba(0, 24, 220, .18);
+      }
+
+      .fs-tech-platform-btn-primary:hover {
+        color: #ffffff;
+        background: #001096;
+        border-color: #001096;
+        transform: translateY(-2px);
+        box-shadow: 0 20px 40px rgba(0, 24, 220, .24);
+      }
+
+      .fs-tech-platform-btn-secondary {
+        color: #0018dc;
+        background: #ffffff;
+        border: 1px solid rgba(0, 24, 220, .22);
+      }
+
+      .fs-tech-platform-btn-secondary:hover {
+        color: #0018dc;
+        border-color: #0018dc;
+        transform: translateY(-2px);
+        box-shadow: 0 16px 34px rgba(16, 42, 67, .10);
+      }
+
+      .fs-tech-platform-grid {
+        display: grid;
+        gap: 16px;
+      }
+
+      .fs-tech-platform-card {
+        position: relative;
+        display: grid;
+        grid-template-columns: 245px minmax(0, 1fr);
+        gap: 26px;
+        align-items: start;
+        overflow: hidden;
+        padding: 26px 28px 26px 30px;
+        border: 1px solid #dce6ff;
+        border-radius: 5px;
+        background: #ffffff;
+        /* box-shadow: 0 18px 45px rgba(16, 42, 67, .06); */
+        transition:
+          transform .25s ease,
+          box-shadow .25s ease,
+          border-color .25s ease,
+          background .25s ease;
+      }
+
+      .fs-tech-platform-card::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 3px;
+        background: #0018dc;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform .25s cubic-bezier(.22, .61, .36, 1);
+      }
+
+      .fs-tech-platform-card:hover {
+        transform: translateY(-4px);
+        border-color: #0018dc;
+        background: #ffffff;
+        box-shadow: 0 22px 46px rgba(16, 42, 67, .10);
+      }
+
+      .fs-tech-platform-card:hover::before {
+        transform: scaleX(1);
+      }
+
+      .fs-tech-platform-card-label {
+        margin: 0 0 12px;
+        color: #0018dc;
+        font-size: 12px;
+        line-height: 1.35;
+        font-weight: 900;
+        letter-spacing: .13em;
+        text-transform: uppercase;
+      }
+
+      .fs-tech-platform-card h3 {
+        margin: 0;
+        color: #0a1c4d;
+        font-size: 24px;
+        line-height: 1.08;
+        letter-spacing: -.035em;
+        font-weight: 600;
+        transition: color .25s ease;
+      }
+
+      .fs-tech-platform-card:hover h3 {
+        color: #0018dc;
+      }
+
+      .fs-tech-platform-card p {
+        margin: 0 0 14px;
+        color: #52667a;
+        font-size: 16px;
+        line-height: 1.7;
+      }
+
+      .fs-tech-platform-proof {
+        position: relative;
+        margin-top: 14px;
+        padding-top: 14px;
+        padding-left: 18px;
+        border-top: 1px solid rgba(16, 42, 67, .10);
+        color: #2e3b52;
+        font-size: 15px;
+        line-height: 1.55;
+        font-weight: 650;
+      }
+
+      .fs-tech-platform-proof::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 22px;
+        width: 7px;
+        height: 7px;
+        border-radius: 999px;
+        background: #0018dc;
+      }
+
+      .fs-tech-platform-mini-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        margin-top: 16px;
+      }
+
+      .fs-tech-platform-mini {
+        position: relative;
+        overflow: hidden;
+        padding: 14px;
+        border: 1px solid #dce6ff;
+        border-radius: 5px;
+        background: #ffffff;
+        color: #52667a;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      .fs-tech-platform-mini strong {
+        display: block;
+        margin-bottom: 4px;
+        color: #0a1c4d;
+        font-size: 15px;
+        line-height: 1.2;
+        font-weight: 800;
+      }
+
+      @media (max-width: 1080px) {
+        .fs-tech-platform-head {
+          grid-template-columns: 1fr;
+        }
+
+        .fs-tech-platform-card {
+          grid-template-columns: 1fr;
+          gap: 16px;
+        }
+      }
+
+      @media (max-width: 760px) {
+        .fs-tech-platform-wrap {
+          width: min(100%, calc(100% - 28px));
+          padding: 58px 0 66px;
+        }
+
+        .fs-tech-platform-title {
+          font-size: 38px;
+        }
+
+        .fs-tech-platform-lead {
+          font-size: 16px;
+        }
+
+        .fs-tech-platform-summary {
+          padding: 22px;
+        }
+
+        .fs-tech-platform-card {
+          padding: 22px;
+          border-radius: 12px;
+        }
+
+        .fs-tech-platform-card h3 {
+          font-size: 22px;
+        }
+
+        .fs-tech-platform-mini-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .fs-tech-platform-actions,
+        .fs-tech-platform-btn {
+          width: 100%;
+        }
+      }
+    </style>
+
+    <div class="container fs-tech-platform-wrap">
+      <div class="fs-tech-platform-head">
+        <div>
+          <p class="fs-tech-platform-kicker">Technology Platform</p>
+
+          <h2 class="fs-tech-platform-title">
+            The engineering basis behind Fluidstream’s multiphase capability.
+          </h2>
+
+          <p class="fs-tech-platform-lead">
+            Fluidstream’s platform is built around the operating realities of multiphase service:
+            liquids, slugs, changing flow, seal wear, solids, and pressure instability.
+          </p>
+        </div>
+
+        <aside class="fs-tech-platform-summary">
+          <h3>From capability to method.</h3>
+
+          <p>
+            The platform combines liquid-response methodology, autonomous pressure control, contained sealing,
+            condition visibility, and mechanical alignment to support reliable operation in demanding field
+            conditions.
+          </p>
+
+          <div class="fs-tech-platform-pill-list">
+            <span class="fs-tech-platform-pill">Incompressible liquids</span>
+            <span class="fs-tech-platform-pill">Setpoint control</span>
+            <span class="fs-tech-platform-pill">Hydraulic modulation</span>
+            <span class="fs-tech-platform-pill">Contained sealing</span>
+            <span class="fs-tech-platform-pill">Seal detection</span>
+            <span class="fs-tech-platform-pill">Alignment</span>
+            <span class="fs-tech-platform-pill">Sand tolerance</span>
+            <span class="fs-tech-platform-pill">No separator dependency</span>
+          </div>
+
+          <div class="fs-tech-platform-actions">
+            <a class="fs-tech-platform-btn fs-tech-platform-btn-primary" href="{{ url('/technical-review') }}">
+              Request Technical Review
+            </a>
+
+            <a class="fs-tech-platform-btn fs-tech-platform-btn-secondary" href="{{ url('/patented-technology') }}">
+              View Patents
+            </a>
+          </div>
+        </aside>
+      </div>
+
+      <div class="fs-tech-platform-grid">
+        <article id="liquid-response-method" class="fs-tech-platform-card">
+          <div>
+            <div class="fs-tech-platform-card-label">01 / Core Differentiator</div>
+            <h3>Incompressible-liquid response methodology</h3>
+          </div>
+
+          <div>
+            <p>
+              A key challenge in multiphase compression is not simply the presence of liquids.
+              It is how the system responds when incompressible liquid enters the compression chamber.
+            </p>
+
+            <p>
+              Fluidstream’s operating methodology is designed to manage liquid-influenced chamber behavior
+              instead of relying on conventional gas-only assumptions.
+            </p>
+
+            <div class="fs-tech-platform-proof">
+              Supports reliable operation in liquid-rich, slugging, and unstable multiphase applications.
+            </div>
+          </div>
+        </article>
+
+        <article class="fs-tech-platform-card">
+          <div>
+            <div class="fs-tech-platform-card-label">02 / Phase Handling</div>
+            <h3>Direct multiphase chamber handling</h3>
+          </div>
+
+          <div>
+            <p>
+              Field production does not remain in one clean gas-only condition. Liquid-dominant,
+              gas-dominant, and mixed-phase operation can be handled inside the compression process rather
+              than treated as an upstream separation problem.
+            </p>
+
+            <div class="fs-tech-platform-proof">
+              Supports operation across the full operating spectrum from 100% liquid to 100% gas.
+            </div>
+          </div>
+        </article>
+
+        <article class="fs-tech-platform-card">
+          <div>
+            <div class="fs-tech-platform-card-label">03 / Modulation</div>
+            <h3>Hydraulic output control without VFD dependency</h3>
+          </div>
+
+          <div>
+            <p>
+              Full-range output modulation is achieved through the hydraulic operating architecture,
+              allowing the system to respond across changing operating conditions without relying on
+              variable frequency drive complexity.
+            </p>
+
+            <div class="fs-tech-platform-proof">
+              Supports broad operating flexibility with simplified electrical requirements.
+            </div>
+          </div>
+        </article>
+
+        <article id="Autonomous-drives-section" class="fs-tech-platform-card">
+          <div>
+            <div class="fs-tech-platform-card-label">04 / Automation</div>
+            <h3>Autonomous setpoint-based pressure control</h3>
+          </div>
+
+          <div>
+            <p>
+              Operators define a target pressure and the control system automatically modulates operation
+              to maintain that target as flow, liquid content, slugs, and pressure conditions change.
+            </p>
+
+            <div class="fs-tech-platform-proof">
+              Supports low-touch operation across variable field conditions.
+            </div>
+          </div>
+        </article>
+
+        <article id="gland-sealing-section" class="fs-tech-platform-card">
+          <div>
+            <div class="fs-tech-platform-card-label">05 / Sealing</div>
+            <h3>Patent-pending contained gland sealing</h3>
+          </div>
+
+          <div>
+            <p>
+              Fluidstream’s gland sealing is part of a broader mechanical integrity system built around
+              contained operation, strong alignment, reduced routine process-fluid leakage, and reduced
+              operator exposure in multiphase service.
+            </p>
+
+            <div class="fs-tech-platform-proof">
+              Designed to reduce operator intervention and seal-maintenance burden.
+            </div>
+          </div>
+        </article>
+
+        <article id="seal-condition-visibility" class="fs-tech-platform-card">
+          <div>
+            <div class="fs-tech-platform-card-label">06 / Monitoring</div>
+            <h3>Electronic seal-condition detection</h3>
+          </div>
+
+          <div>
+            <p>
+              Seal-wear detection adds condition awareness to the mechanical sealing system and supports
+              proactive maintenance planning before seal condition becomes a field reliability issue.
+            </p>
+
+            <div class="fs-tech-platform-proof">
+              Supports planned service visibility for remote and unmanned applications.
+            </div>
+          </div>
+        </article>
+
+        <article class="fs-tech-platform-card">
+          <div>
+            <div class="fs-tech-platform-card-label">07 / Field Conditions</div>
+            <h3>Designed for solids, sand, and harsh environments</h3>
+          </div>
+
+          <div>
+            <p>
+              Real production streams can include sand, solids, liquids, freeze-prone conditions, and
+              unstable flow. Fluidstream is designed for field realities that conventional gas-only systems
+              often struggle to tolerate.
+            </p>
+
+            <div class="fs-tech-platform-proof">
+              Supports operation in harsh, unstable, and solids-laden production environments.
+            </div>
+          </div>
+        </article>
+
+        <article class="fs-tech-platform-card">
+          <div>
+            <div class="fs-tech-platform-card-label">08 / System Scaling</div>
+            <h3>Parallel and series configuration logic</h3>
+          </div>
+
+          <div>
+            <p>
+              Units can be configured in parallel to increase flow capacity or in series to increase pressure
+              capability, allowing the same platform logic to cover a broader operating envelope.
+            </p>
+
+            <div class="fs-tech-platform-mini-grid">
+              <div class="fs-tech-platform-mini">
+                <strong>Parallel</strong>
+                Broaden flow capacity.
+              </div>
+
+              <div class="fs-tech-platform-mini">
+                <strong>Series</strong>
+                Increase pressure capability.
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
   <section class="section section-surface-white py-12" id="differentiation">
     <div class="container">
       <div class="kicker mb-2 py-4">Technology Differentiation</div>
@@ -2701,11 +3510,11 @@
       </div>
 
       <div class="fs-technology-cta__actions" aria-label="Technology review actions">
-        <a class="fs-btn fs-btn--primary" href="{{ url('/contact') }}">
+        <a class="fs-btn fs-btn--primary" href="{{ url('/technical-review') }}">
           Request Technical Review
         </a>
 
-        <a class="fs-btn fs-btn--secondary" href="{{ url('/multiphase-compression-technology') }}">
+        <a class="fs-btn fs-btn--secondary" href="{{ url('/why-multiphase') }}">
           View Multiphase Technology
         </a>
       </div>
@@ -2731,25 +3540,19 @@
       const overviewStage = document.getElementById("overview-stage");
       const scrollToStageBtn = document.getElementById("scrollToStageBtn");
 
-      function getHeaderOffset() {
-        const header = document.querySelector(".fs-header");
-
-        if (!header) {
-          if (window.innerWidth <= 640) return 68;
-          if (window.innerWidth <= 1100) return 74;
-          return 114;
-        }
-
-        return header.offsetHeight;
+      function getScrollY() {
+        return window.pageYOffset || document.documentElement.scrollTop || 0;
       }
 
-      function showHeader() {
+      function hideHeader() {
         const header = document.querySelector(".fs-header");
 
-        if (!header) return;
+        if (header) {
+          header.classList.remove("fs-header-visible");
+          header.classList.add("fs-header-hidden");
+        }
 
-        header.classList.remove("fs-header-hidden");
-        header.classList.add("fs-header-visible");
+        window.dispatchEvent(new CustomEvent("fs-hide-header"));
       }
 
       function scrollToTarget(targetId, updateHash = true) {
@@ -2757,9 +3560,9 @@
 
         if (!target) return;
 
-        showHeader();
+        hideHeader();
 
-        const top = target.getBoundingClientRect().top + window.pageYOffset - getHeaderOffset();
+        const top = target.getBoundingClientRect().top + getScrollY();
 
         window.scrollTo({
           top: top,
@@ -2769,6 +3572,14 @@
         if (updateHash) {
           history.pushState(null, "", "#" + targetId);
         }
+
+        /*
+          Keep header hidden after smooth scroll finishes.
+          Header will return only when user scrolls up.
+        */
+        setTimeout(hideHeader, 80);
+        setTimeout(hideHeader, 350);
+        setTimeout(hideHeader, 700);
       }
 
       document.querySelectorAll('a[href^="#"]').forEach(function (link) {

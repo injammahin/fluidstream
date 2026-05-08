@@ -61,7 +61,7 @@
                 'type' => 'product',
             ],
 
-            'multiphase-compression-technology' => [
+            'why-multiphase' => [
                 'title' => 'Multiphase Compression Technology',
                 'description' => 'Explore Fluidstream multiphase compression technology designed for mixed gas, liquids, solids, upset conditions, autonomous control, and field reliability.',
                 'keywords' => 'multiphase compression technology, liquid handling compression, autonomous compression control, field compression technology',
@@ -290,26 +290,26 @@
             |--------------------------------------------------------------------------
             */
 
-            'insights/rethinking-production-systems' => [
-                'title' => 'Rethinking Production Systems',
-                'description' => 'Explore how simplified production systems can reduce complexity, improve recovery, and support emissions reduction in oil and gas operations.',
-                'keywords' => 'production systems, simplified infrastructure, oil and gas production optimization, emissions reduction',
-                'type' => 'article',
-            ],
+            // 'insights/rethinking-production-systems' => [
+            //     'title' => 'Rethinking Production Systems',
+            //     'description' => 'Explore how simplified production systems can reduce complexity, improve recovery, and support emissions reduction in oil and gas operations.',
+            //     'keywords' => 'production systems, simplified infrastructure, oil and gas production optimization, emissions reduction',
+            //     'type' => 'article',
+            // ],
 
-            'insights/lower-cost-broader-deployment' => [
-                'title' => 'Lower-Cost Broader Deployment',
-                'description' => 'Learn how lower-complexity compression infrastructure can improve the commercial fit of emissions reduction and production recovery projects.',
-                'keywords' => 'lower cost compression deployment, production recovery economics, emissions reduction economics',
-                'type' => 'article',
-            ],
+            // 'insights/lower-cost-broader-deployment' => [
+            //     'title' => 'Lower-Cost Broader Deployment',
+            //     'description' => 'Learn how lower-complexity compression infrastructure can improve the commercial fit of emissions reduction and production recovery projects.',
+            //     'keywords' => 'lower cost compression deployment, production recovery economics, emissions reduction economics',
+            //     'type' => 'article',
+            // ],
 
-            'insights/emissions-reduction' => [
-                'title' => 'Emissions Reduction with Multiphase Compression',
-                'description' => 'Learn how multiphase compression can support methane emissions reduction, vapor recovery, and better field gas capture outcomes.',
-                'keywords' => 'emissions reduction, methane emissions reduction, vapor recovery, multiphase compression',
-                'type' => 'article',
-            ],
+            // 'insights/emissions-reduction' => [
+            //     'title' => 'Emissions Reduction with Multiphase Compression',
+            //     'description' => 'Learn how multiphase compression can support methane emissions reduction, vapor recovery, and better field gas capture outcomes.',
+            //     'keywords' => 'emissions reduction, methane emissions reduction, vapor recovery, multiphase compression',
+            //     'type' => 'article',
+            // ],
 
             'perspectives' => [
                 'title' => 'Fluidstream Perspectives',
@@ -604,8 +604,8 @@
     {{-- Optional FAQ Schema --}}
     @if ($faqSchema)
         <script type="application/ld+json">
-                                {!! json_encode($faqSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
-                            </script>
+                                        {!! json_encode($faqSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+                                    </script>
     @endif
 
     {{-- Extra page-specific schema if needed --}}

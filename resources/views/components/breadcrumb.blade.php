@@ -16,7 +16,7 @@
         'about-us' => 'About Us',
         'contact' => 'Contact',
         'multiphase-compression' => 'Multiphase Compression',
-        'multiphase-compression-technology' => 'Multiphase Compression',
+        'why-multiphase' => 'Multiphase Compression',
         'vapor-recovery' => 'Vapor Recovery',
         'casing-gas-compression' => 'Casing Gas Compression',
     ];

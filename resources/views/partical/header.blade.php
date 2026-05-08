@@ -8,7 +8,7 @@
         request()->is('case-studies') ||
         request()->is('insights');
 
-    $multiphaseTechnologyActive = request()->is('multiphase-compression-technology');
+    $multiphaseTechnologyActive = request()->is('why-multiphase');
     $technologyActive = request()->is('technology');
     $patentedTechnologyActive = request()->is('patented-technology');
     $aboutActive = request()->is('about-us') || request()->is('about');
@@ -29,7 +29,7 @@
         ],
         [
             'title' => 'Why Multiphase',
-            'url' => url('/multiphase-compression-technology'),
+            'url' => url('/why-multiphase'),
             'description' => 'Why multiphase compression technology matters',
             'keywords' => 'why multiphase multiphase compression multiphase pump oil gas emissions',
             'content' => 'Multiphase compression supports liquid and gas handling, production optimization, methane reduction and lower maintenance field operation.',
@@ -116,10 +116,72 @@
             searchPages: @json($searchPages),
 
             setupScroll() {
-                this.lastScrollY = window.pageYOffset || document.documentElement.scrollTop;
+                const getScrollY = () => window.pageYOffset || document.documentElement.scrollTop || 0;
+
+                const hideHeaderForAnchor = () => {
+                    const currentY = getScrollY();
+
+                    if (window.location.hash && currentY > 80) {
+                        this.headerHidden = true;
+                        this.activeDesktopMenu = null;
+                        this.searchOpen = false;
+                        this.lastScrollY = currentY;
+                    }
+                };
+
+                this.lastScrollY = getScrollY();
+
+                /*
+                  If page opens directly like:
+                  /technology#drives-section
+                  hide the header after browser completes the anchor jump.
+                */
+                hideHeaderForAnchor();
+
+                setTimeout(() => {
+                    hideHeaderForAnchor();
+                }, 80);
+
+                setTimeout(() => {
+                    hideHeaderForAnchor();
+                }, 350);
+
+                /*
+                  If user clicks an anchor link on the same page,
+                  hide the header immediately. Header will return only when user scrolls up.
+                */
+                document.addEventListener('click', (event) => {
+                    const link = event.target.closest('a[href*="#"]');
+
+                    if (!link) return;
+
+                    const url = new URL(link.href, window.location.href);
+
+                    if (url.pathname !== window.location.pathname) return;
+                    if (!url.hash) return;
+
+                    const target = document.querySelector(url.hash);
+
+                    if (!target) return;
+
+                    this.headerHidden = true;
+                    this.activeDesktopMenu = null;
+                    this.searchOpen = false;
+
+                    setTimeout(() => {
+                        this.headerHidden = true;
+                        this.lastScrollY = getScrollY();
+                    }, 350);
+                });
+
+                window.addEventListener('hashchange', () => {
+                    setTimeout(() => {
+                        hideHeaderForAnchor();
+                    }, 100);
+                });
 
                 window.addEventListener('scroll', () => {
-                    const currentY = window.pageYOffset || document.documentElement.scrollTop;
+                    const currentY = getScrollY();
                     const diff = currentY - this.lastScrollY;
 
                     if (this.mobileMenuOpen || this.activeDesktopMenu || this.searchOpen) {
@@ -131,17 +193,22 @@
                     if (currentY < 40) {
                         this.headerHidden = false;
                     } else if (diff > 8 && currentY > 120) {
+                        /*
+                          Scrolling down = hide header
+                        */
                         this.headerHidden = true;
                         this.activeDesktopMenu = null;
                         this.searchOpen = false;
                     } else if (diff < -8) {
+                        /*
+                          Scrolling up = show header
+                        */
                         this.headerHidden = false;
                     }
 
                     this.lastScrollY = Math.max(currentY, 0);
                 }, { passive: true });
             },
-
             normalizeText(value) {
                 return (value || '')
                     .toString()
@@ -263,7 +330,12 @@
 
 <header x-data="fsHeaderNavigation()" x-init="setupScroll()"
     :class="headerHidden ? 'fs-header-hidden' : 'fs-header-visible'" @keydown.escape.window="closeAllMenus()"
-    class="fs-header">
+    @fs-hide-header.window="
+        headerHidden = true;
+        activeDesktopMenu = null;
+        searchOpen = false;
+        lastScrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
+    " class="fs-header">
     <div class="fs-header-inner">
         <div class="fs-header-grid">
 
@@ -338,7 +410,7 @@
             {{-- Main Navigation --}}
             <div class="fs-mainnav-panel">
                 <nav class="fs-desktop-nav-grid" aria-label="Main navigation">
-                    <a href="{{ url('/multiphase-compression-technology') }}"
+                    <a href="{{ url('/why-multiphase') }}"
                         class="fs-nav-link fs-nav-1 {{ $multiphaseTechnologyActive ? 'fs-nav-link-active' : '' }}">
                         Why Multiphase
                     </a>
@@ -562,7 +634,7 @@
                         class="fs-mobile-search-message"></p>
                 </div>
 
-                <a href="{{ url('/multiphase-compression-technology') }}"
+                <a href="{{ url('/why-multiphase') }}"
                     class="fs-mobile-link {{ $multiphaseTechnologyActive ? 'fs-mobile-link-active' : '' }}">
                     Why Multiphase
                 </a>
