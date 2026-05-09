@@ -290,13 +290,13 @@
     }
 
     /* .swipe-left:hover:before,
-                                                                                                                                                                                                  .swipe-left:hover:before,
-                                                                                                                                                                                                  .model-card:hover:before,
-                                                                                                                                                                                                  .spec-mobile-card:hover:before,
-                                                                                                                                                                                                  .comparison .box:hover:before,
-                                                                                                                                                                                                  .reality-item:hover:before {
-                                                                                                                                                                                                    opacity: 1;
-                                                                                                                                                                                                  } */
+                                                                                                                                                                                                                            .swipe-left:hover:before,
+                                                                                                                                                                                                                            .model-card:hover:before,
+                                                                                                                                                                                                                            .spec-mobile-card:hover:before,
+                                                                                                                                                                                                                            .comparison .box:hover:before,
+                                                                                                                                                                                                                            .reality-item:hover:before {
+                                                                                                                                                                                                                              opacity: 1;
+                                                                                                                                                                                                                            } */
 
     .swipe-left:hover:after,
     .model-card:hover:after,
@@ -307,8 +307,8 @@
     }
 
     /* .swipe-left:hover:after {
-                                                                                                                                                                                                right: 155%;
-                                                                                                                                                                                              } */
+                                                                                                                                                                                                                          right: 155%;
+                                                                                                                                                                                                                        } */
 
     .hero-card:hover {
       box-shadow: 0 26px 56px rgba(0, 24, 220, .18);
@@ -316,14 +316,14 @@
     }
 
     /* .swipe-left:hover,
-                                                                                                                                                                                            .swipe-left:hover,
-                                                                                                                                                                                            .model-card:hover,
-                                                                                                                                                                                            .spec-mobile-card:hover,
-                                                                                                                                                                                            .comparison .box:hover,
-                                                                                                                                                                                            .reality-item:hover {
-                                                                                                                                                                                              box-shadow: 0 24px 52px rgba(13, 32, 84, .12);
-                                                                                                                                                                                              border-color: #b9d0ff;
-                                                                                                                                                                                            } */
+                                                                                                                                                                                                                      .swipe-left:hover,
+                                                                                                                                                                                                                      .model-card:hover,
+                                                                                                                                                                                                                      .spec-mobile-card:hover,
+                                                                                                                                                                                                                      .comparison .box:hover,
+                                                                                                                                                                                                                      .reality-item:hover {
+                                                                                                                                                                                                                        box-shadow: 0 24px 52px rgba(13, 32, 84, .12);
+                                                                                                                                                                                                                        border-color: #b9d0ff;
+                                                                                                                                                                                                                      } */
 
     .blue-fill:before {
       content: "";
@@ -374,9 +374,9 @@
     }
 
     /* 
-                                                                                                                                                                            .highlight-box:hover a {
-                                                                                                                                                                              color: #fff !important
-                                                                                                                                                                            } */
+                                                                                                                                                                                                      .highlight-box:hover a {
+                                                                                                                                                                                                        color: #fff !important
+                                                                                                                                                                                                      } */
 
     .cta-panel:hover {
       /* box-shadow: 0 24px 52px rgba(0, 24, 220, .18); */
@@ -606,13 +606,13 @@
     }
 
     /* .kicker mb-2 {
-                                                                                                                              font-size: 12px;
-                                                                                                                              letter-spacing: .11em;
-                                                                                                                              text-transform: uppercase;
-                                                                                                                              color: var(--blue);
-                                                                                                                              font-weight: 700;
-                                                                                                                              margin-bottom: 10px
-                                                                                                                            } */
+                                                                                                                                                        font-size: 12px;
+                                                                                                                                                        letter-spacing: .11em;
+                                                                                                                                                        text-transform: uppercase;
+                                                                                                                                                        color: var(--blue);
+                                                                                                                                                        font-weight: 700;
+                                                                                                                                                        margin-bottom: 10px
+                                                                                                                                                      } */
 
     h2 {
       margin: 0 0 16px;
@@ -877,7 +877,7 @@
     .stat {
       background: rgba(255, 255, 255, .1);
       border: 1px solid rgba(255, 255, 255, .14);
-      border-radius: 22px;
+      border-radius: 7px;
       padding: 22px 20px
     }
 
@@ -891,7 +891,7 @@
     }
 
     .stat .value {
-      font-size: 34px;
+      font-size: 30px;
       line-height: 1.02;
       font-weight: 800;
       margin-bottom: 8px
@@ -1051,57 +1051,464 @@
   </style>
 
 
-  <header class="hero">
-    <div class="wrap py-12">
-      {{-- <div class="eyebrow">CompressionCommander™ • Casing gas compression systems</div> --}}
-      <h1>Recover casing gas reliably in the wet, variable field conditions conventional packages struggle to handle.</h1>
-      <div class="subhead">Capture low-pressure casing gas, reduce flaring, and support production optimization without
-        forcing variable, liquid-prone service through gas-only compressor assumptions.</div>
-      <p class="hero-copy">
-        CompressionCommander™ systems are designed for real casing gas conditions: variable gas quality, liquid carryover,
-        intermittent slugging, corrosive or H₂S-bearing service, remote operation, and the high-uptime, low-maintenance
-        expectations operators actually face in the field. Instead of depending on scrubbers and separators as the only
-        line of defense, CompressionCommander™ combines multiphase-ready design logic with autonomous control to create a
-        more robust casing gas solution.
-      </p>
-      <div class="patent-note">
-        Supported by patented operating methods for liquid-influenced compression behavior, including
-        <a href="/patented-technology#us11098709b2">US11098709B2</a>.
-      </div>
-      <div class="btn-row mt-5">
-        <a class="btn btn-primary" href="#specifications">View specifications</a>
-        <a class="btn btn-secondary" href="#application-review">Request application review</a>
+  <header class="hero fs-casing-hero">
+    <style>
+      /* ================================
+                                     UPDATED CASING GAS HERO
+                                  ================================ */
+
+      header.hero.fs-casing-hero {
+        position: relative !important;
+        isolation: isolate;
+        overflow: hidden;
+        min-height: calc(100vh - 108px);
+        display: flex;
+        align-items: stretch;
+        padding: 0 !important;
+        background: #07111f !important;
+        color: #ffffff;
+      }
+
+      header.hero.fs-casing-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -3;
+        background-image: url("/img/hero/pump-jack.jpg");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        transform: none !important;
+      }
+
+      header.hero.fs-casing-hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -2;
+        pointer-events: none;
+        background:
+          linear-gradient(90deg,
+            rgba(0, 8, 30, .88) 0%,
+            rgba(0, 12, 48, .76) 42%,
+            rgba(0, 16, 60, .32) 72%,
+            rgba(0, 16, 60, .10) 100%),
+          radial-gradient(circle at 82% 16%, rgba(21, 209, 255, .20), transparent 28%);
+      }
+
+      header.hero.fs-casing-hero .fs-casing-hero-wrap {
+        position: relative;
+        z-index: 2;
+        width: min(calc(100% - 40px), 1200px);
+        max-width: 1200px;
+        min-height: calc(100vh - 108px);
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: minmax(0, 760px) minmax(280px, 380px);
+        gap: 52px;
+        align-items: end;
+        padding: 110px 0 82px !important;
+      }
+
+      .fs-casing-hero-copy {
+        max-width: 760px;
+      }
+
+      .fs-casing-hero-eyebrow {
+        margin: 0 0 16px;
+        color: #15d1ff;
+        font-size: 13px;
+        line-height: 1.2;
+        font-weight: 900;
+        letter-spacing: .13em;
+        text-transform: uppercase;
+      }
+
+      header.hero.fs-casing-hero .fs-casing-hero-title {
+        margin: 0 0 22px;
+        max-width: 820px;
+        color: #ffffff !important;
+        font-size: clamp(44px, 5vw, 78px);
+        line-height: .95;
+        letter-spacing: -.06em;
+        font-weight: 900;
+      }
+
+      header.hero.fs-casing-hero .fs-casing-hero-lead {
+        margin: 0 0 30px;
+        max-width: 700px;
+        color: rgba(255, 255, 255, .84) !important;
+        font-size: clamp(18px, 1.55vw, 22px);
+        line-height: 1.42;
+        font-weight: 500;
+      }
+
+      .fs-casing-hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 30px;
+      }
+
+      .fs-casing-hero-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 50px;
+        padding: 0 22px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 1;
+        font-weight: 900;
+        transition:
+          transform .22s ease,
+          box-shadow .22s ease,
+          border-color .22s ease,
+          background .22s ease,
+          color .22s ease;
+      }
+
+      .fs-casing-hero-btn:hover {
+        transform: translateY(-2px);
+      }
+
+      .fs-casing-hero-btn-primary {
+        background: #ffffff;
+        color: #0018dc;
+        border: 1px solid #ffffff;
+        box-shadow: 0 14px 34px rgba(0, 0, 0, .20);
+      }
+
+      .fs-casing-hero-btn-primary:hover {
+        background: #0018dc;
+        border-color: #0018dc;
+        color: #ffffff;
+      }
+
+      .fs-casing-hero-btn-secondary {
+        color: #ffffff;
+        border: 1px solid rgba(255, 255, 255, .28);
+        background: rgba(255, 255, 255, 0);
+        /* backdrop-filter: blur(8px);
+                      -webkit-backdrop-filter: blur(8px); */
+      }
+
+      .fs-casing-hero-btn-secondary:hover {
+        background: rgba(255, 255, 255, .14);
+        border-color: rgba(255, 255, 255, .42);
+        color: #ffffff;
+      }
+
+      .fs-casing-hero-benefits {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 10px;
+        max-width: 860px;
+      }
+
+      .fs-casing-hero-benefit {
+        position: relative;
+        overflow: hidden;
+        min-height: 98px;
+        padding: 14px;
+        border: 1px solid rgba(255, 255, 255, .18);
+        border-radius: 7px;
+        background: rgba(255, 255, 255, 0);
+        /* backdrop-filter: blur(8px);
+                        -webkit-backdrop-filter: blur(8px); */
+        transition:
+          transform .25s ease,
+          border-color .25s ease,
+          background .25s ease;
+      }
+
+      /* .fs-casing-hero-benefit::after {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            top: 0;
+                            height: 4px;
+                            background: #15d1ff;
+                            transform: scaleX(0);
+                            transform-origin: left;
+                            transition: transform .25s ease;
+                          }
+
+                          .fs-casing-hero-benefit:hover {
+                            transform: translateY(-4px);
+                            border-color: rgba(21, 209, 255, .45);
+                            background: rgba(255, 255, 255, .12);
+                          } */
+
+      .fs-casing-hero-benefit:hover::after {
+        transform: scaleX(1);
+      }
+
+      .fs-casing-hero-benefit strong {
+        display: block;
+        margin-bottom: 6px;
+        color: #ffffff;
+        font-size: 14px;
+        line-height: 1.2;
+        font-weight: 900;
+      }
+
+      .fs-casing-hero-benefit span {
+        display: block;
+        color: rgba(255, 255, 255, .76);
+        font-size: 12.5px;
+        line-height: 1.35;
+        font-weight: 600;
+      }
+
+      .fs-casing-proof-card {
+        position: relative;
+        overflow: hidden;
+        isolation: isolate;
+        padding: 26px;
+        border-radius: 7px;
+        background: rgba(255, 255, 255, 0);
+        border: 1px solid rgba(255, 255, 255, .16);
+        /* box-shadow: 0 24px 70px rgba(0, 0, 0, .22);
+                            backdrop-filter: blur(12px);
+                            -webkit-backdrop-filter: blur(12px); */
+        transition:
+          transform .28s ease,
+          box-shadow .28s ease,
+          border-color .28s ease,
+          background .28s ease;
+      }
+
+      /* .fs-casing-proof-card::after {
+                              content: "";
+                              position: absolute;
+                              left: 0;
+                              right: 0;
+                              top: 0;
+                              height: 4px;
+                              background: #15d1ff;
+                              transform: scaleX(0);
+                              transform-origin: left;
+                              transition: transform .28s ease;
+                              z-index: 2;
+                            } */
+
+      /* .fs-casing-proof-card:hover {
+                              transform: translateY(-4px);
+                              border-color: rgba(21, 209, 255, .42);
+                              background: rgba(255, 255, 255, .12);
+                              box-shadow: 0 30px 78px rgba(0, 0, 0, .28);
+                            } */
+
+      .fs-casing-proof-card:hover::after {
+        transform: scaleX(1);
+      }
+
+      .fs-casing-proof-card h2 {
+        margin: 0 0 12px;
+        color: #ffffff;
+        font-size: 24px;
+        line-height: 1.1;
+        letter-spacing: -.035em;
+        font-weight: 850;
+      }
+
+      .fs-casing-proof-card p {
+        margin: 0 0 20px;
+        color: rgba(255, 255, 255, .76);
+        font-size: 15px;
+        line-height: 1.6;
+        font-weight: 500;
+      }
+
+      .fs-casing-proof-list {
+        display: grid;
+        gap: 12px;
+      }
+
+      .fs-casing-proof-item {
+        display: grid;
+        grid-template-columns: 10px minmax(0, 1fr);
+        gap: 10px;
+        align-items: start;
+        padding-top: 12px;
+        border-top: 1px solid rgba(255, 255, 255, .10);
+        color: rgba(255, 255, 255, .86);
+        font-size: 14px;
+        line-height: 1.48;
+        font-weight: 750;
+        text-decoration: none;
+        transition: color .22s ease;
+      }
+
+      .fs-casing-proof-item:first-child {
+        padding-top: 0;
+        border-top: 0;
+      }
+
+      .fs-casing-proof-item:hover {
+        color: #ffffff;
+      }
+
+      .fs-casing-proof-dot {
+        width: 7px;
+        height: 7px;
+        margin-top: 7px;
+        border-radius: 999px;
+        background: #ffffff;
+        box-shadow: 0 0 0 7px rgba(151, 151, 151, 0.1);
+      }
+
+      @media (max-width: 1080px) {
+        header.hero.fs-casing-hero {
+          min-height: auto;
+        }
+
+        header.hero.fs-casing-hero .fs-casing-hero-wrap {
+          min-height: auto;
+          grid-template-columns: 1fr;
+          gap: 34px;
+          align-items: start;
+          padding: 86px 0 68px !important;
+        }
+
+        .fs-casing-proof-card {
+          max-width: 640px;
+        }
+
+        .fs-casing-hero-benefits {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 700px) {
+        header.hero.fs-casing-hero::before {
+          background-position: center center;
+        }
+
+        header.hero.fs-casing-hero::after {
+          background:
+            linear-gradient(180deg,
+              rgba(2, 6, 23, 0.94) 0%,
+              rgba(2, 6, 23, 0.84) 54%,
+              rgba(2, 6, 23, 0.62) 100%);
+        }
+
+        header.hero.fs-casing-hero .fs-casing-hero-wrap {
+          width: min(calc(100% - 30px), 1200px);
+          padding: 68px 0 56px !important;
+        }
+
+        header.hero.fs-casing-hero .fs-casing-hero-title {
+          font-size: 40px;
+          line-height: 1.03;
+        }
+
+        header.hero.fs-casing-hero .fs-casing-hero-lead {
+          font-size: 17px;
+          line-height: 1.45;
+        }
+
+        .fs-casing-hero-actions {
+          flex-direction: column;
+        }
+
+        .fs-casing-hero-btn {
+          width: 100%;
+        }
+
+        .fs-casing-hero-benefits {
+          grid-template-columns: 1fr;
+        }
+
+        .fs-casing-hero-benefit {
+          min-height: auto;
+        }
+
+        .fs-casing-proof-card {
+          padding: 22px;
+        }
+      }
+    </style>
+
+    <div class="fs-casing-hero-wrap">
+      <div class="fs-casing-hero-copy">
+        <h1 class="fs-casing-hero-title">
+          Built for wet and liquid-rich casing gas streams.
+        </h1>
+
+        <p class="fs-casing-hero-lead">
+          CompressionCommander™ operates reliably in casing gas applications with liquids present, providing
+          autonomous control and minimal maintenance.
+        </p>
+
+        <div class="fs-casing-hero-actions">
+          <a class="fs-casing-hero-btn fs-casing-hero-btn-primary" href="#specifications">
+            View Specifications
+          </a>
+
+          <a class="fs-casing-hero-btn fs-casing-hero-btn-secondary" href="#casing-gas-comparison">
+            See Technology Benefits
+          </a>
+        </div>
+
+        <div class="fs-casing-hero-benefits" aria-label="CompressionCommander benefits">
+          <div class="fs-casing-hero-benefit">
+            <strong>Handles 0–100% liquids</strong>
+            <span>Reliable performance across all multiphase conditions.</span>
+          </div>
+
+          <div class="fs-casing-hero-benefit">
+            <strong>Autonomous control</strong>
+            <span>Maintains target pressure with minimal intervention.</span>
+          </div>
+
+          <div class="fs-casing-hero-benefit">
+            <strong>Low maintenance</strong>
+            <span>Designed for uptime and reduced operator tasks.</span>
+          </div>
+
+          <div class="fs-casing-hero-benefit">
+            <strong>Field-ready</strong>
+            <span>Robust for harsh or variable conditions.</span>
+          </div>
+        </div>
       </div>
 
-      <div class="hero-grid">
-        <div class="hero-card interactive-card">
-          <h3>Built for multiphase reality</h3>
-          <p>Designed for casing gas service where liquids, upsets, and variable flow are part of the operating envelope,
-            not just abnormal events.</p>
+      <aside class="fs-casing-proof-card">
+        <h2>Patent-backed multiphase logic.</h2>
+
+        <p>
+          Supported by patented operating methods for liquid-influenced compression behavior, including
+          US11098709B2.
+        </p>
+
+        <div class="fs-casing-proof-list">
+          <a class="fs-casing-proof-item" href="#casing-gas-comparison">
+            <span class="fs-casing-proof-dot"></span>
+            <span>Designed for wet and liquid-influenced casing gas streams.</span>
+          </a>
+
+          <a class="fs-casing-proof-item" href="#application-review">
+            <span class="fs-casing-proof-dot"></span>
+            <span>Field-ready uptime in casing gas service.</span>
+          </a>
+
+          <a class="fs-casing-proof-item" href="#specifications">
+            <span class="fs-casing-proof-dot"></span>
+            <span>Models available for application review.</span>
+          </a>
         </div>
-        <div class="hero-card interactive-card">
-          <h3>Lower intervention</h3>
-          <p>Autonomous controls help detect harmful operating conditions and respond automatically to reduce trips,
-            downtime, and damage risk.</p>
-        </div>
-        <div class="hero-card interactive-card">
-          <h3>Field-ready durability</h3>
-          <p>Supports H₂S handling, cold-weather startup, remote control, and harder-duty service across the listed
-            CompressionCommander™ configurations.</p>
-        </div>
-        <div class="hero-card interactive-card">
-          <h3>Lower-maintenance performance</h3>
-          <p>Designed to reduce the recurring maintenance burden created when conventional gas-only casing gas packages
-            are pushed into liquid-prone service.</p>
-        </div>
-      </div>
+      </aside>
     </div>
   </header>
 
   <section>
     <div class="wrap py-12">
       <div class="kicker mb-2">Why multiphase matters</div>
-      <h2>Casing gas is inherently imperfect field service.</h2>
+      <h2>Casing gas rarely behaves like clean, dry gas service.</h2>
       <p class="lead">
         Casing gas is often specified and sold like a clean gas application, but field conditions rarely stay that clean.
         Condensate, produced water, intermittent liquid carryover, pressure swings, contaminants, slug events, and
@@ -1125,8 +1532,8 @@
         <div class="card interactive-card swipe-left">
           <div class="num">03</div>
           <h3>Conventional systems become maintenance burdens</h3>
-          <p>If the package is built around gas-only assumptions, operators often end up buying more intervention, more
-            downtime, and more equipment to manage.</p>
+          <p>Gas-only packages often create more intervention, more downtime, and more supporting equipment when exposed
+            to liquid-prone casing gas service.</p>
         </div>
       </div>
 
@@ -1404,24 +1811,24 @@
       }
 
       /* .fs-cg-diff-head h2 {
-                                                                margin: 0;
-                                                                max-width: 760px;
-                                                                font-size: clamp(1.9rem, 3vw, 3rem);
-                                                                line-height: 1.05;
-                                                                letter-spacing: -.04em;
-                                                                color: #1f1f21;
-                                                              } */
+                                                                                          margin: 0;
+                                                                                          max-width: 760px;
+                                                                                          font-size: clamp(1.9rem, 3vw, 3rem);
+                                                                                          line-height: 1.05;
+                                                                                          letter-spacing: -.04em;
+                                                                                          color: #1f1f21;
+                                                                                        } */
 
       /* .fs-cg-diff-head h2 span {
-                                                                color: var(--cg-blue);
-                                                              }
+                                                                                          color: var(--cg-blue);
+                                                                                        }
 
-                                                              .fs-cg-diff-head p {
-                                                                margin: 0;
-                                                                color: var(--cg-muted);
-                                                                font-size: 16px;
-                                                                line-height: 1.75;
-                                                              } */
+                                                                                        .fs-cg-diff-head p {
+                                                                                          margin: 0;
+                                                                                          color: var(--cg-muted);
+                                                                                          font-size: 16px;
+                                                                                          line-height: 1.75;
+                                                                                        } */
 
       .fs-cg-diff-summary {
         display: grid;
@@ -1586,17 +1993,17 @@
       }
 
       /* 
-        .fs-cg-diff-bottom::after {
-          content: "";
-          position: absolute;
-          width: 230px;
-          height: 230px;
-          right: -90px;
-          top: -120px;
-          border-radius: 999px;
-          background: rgba(21, 209, 255, .18);
-          pointer-events: none;
-        } */
+                                  .fs-cg-diff-bottom::after {
+                                    content: "";
+                                    position: absolute;
+                                    width: 230px;
+                                    height: 230px;
+                                    right: -90px;
+                                    top: -120px;
+                                    border-radius: 999px;
+                                    background: rgba(21, 209, 255, .18);
+                                    pointer-events: none;
+                                  } */
 
       .fs-cg-diff-bottom-content {
         position: relative;
@@ -1868,20 +2275,20 @@
       }
 
       /* .fs-ms-section-head h2 {
-                                                                                    font-size: clamp(30px, 3.2vw, 46px);
-                                                                                    line-height: 1.02;
-                                                                                    margin: 0 0 14px;
-                                                                                    letter-spacing: -.035em;
-                                                                                    color: var(--ink);
-                                                                                  } */
+                                                                                                              font-size: clamp(30px, 3.2vw, 46px);
+                                                                                                              line-height: 1.02;
+                                                                                                              margin: 0 0 14px;
+                                                                                                              letter-spacing: -.035em;
+                                                                                                              color: var(--ink);
+                                                                                                            } */
       /* 
-                                                                                .fs-ms-lead {
-                                                                                  font-size: 17px;
-                                                                                  color: #56647a;
-                                                                                  max-width: 860px;
-                                                                                  margin: 0;
-                                                                                  line-height: 1.65;
-                                                                                } */
+                                                                                                          .fs-ms-lead {
+                                                                                                            font-size: 17px;
+                                                                                                            color: #56647a;
+                                                                                                            max-width: 860px;
+                                                                                                            margin: 0;
+                                                                                                            line-height: 1.65;
+                                                                                                          } */
 
       .fs-ms-spec-note {
         margin: 14px 0 0;
@@ -2764,9 +3171,9 @@
       <div class="case-study">
         <div class="eyebrow2">Field proof</div>
         <h2>Proven in severe multiphase service that is harder than typical casing gas carryover.</h2>
-        <p>The current Fluidstream case study remains powerful proof for casing gas buyers because continuous liquid-heavy
-          multiphase service is a tougher duty than the intermittent liquid carryover most casing gas systems see. If the
-          technology performs in severe multiphase conditions, it supports a strong argument for casing gas reliability.
+        <p>Fluidstream’s severe multiphase production recovery case study provides relevant proof for casing gas
+          applications because it demonstrates stable operation under liquid-heavy conditions more demanding than typical
+          casing gas carryover.
         </p>
 
         <div class="stat-grid">
@@ -2807,7 +3214,6 @@
     <div class="wrap py-12">
       <div class="cta-box">
         <div>
-          <div class="kicker mb-2">Customized Technical CTA</div>
           <h2>Submit your casing gas conditions for a CompressionCommander™ application review.</h2>
           <p>
             If your current system is vulnerable to liquid carryover, scrubber breakthrough, slug-related trips, corrosive

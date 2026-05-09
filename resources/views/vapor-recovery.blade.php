@@ -494,14 +494,14 @@
     }
 
     /* 
-                                                                                                                                                                            .kicker {
-                                                                                                                                                                              font-size: 12px;
-                                                                                                                                                                              letter-spacing: .11em;
-                                                                                                                                                                              text-transform: uppercase;
-                                                                                                                                                                              color: var(--blue);
-                                                                                                                                                                              font-weight: 700;
-                                                                                                                                                                              margin-bottom: 10px
-                                                                                                                                                                            } */
+                                                                                                                                                                                                      .kicker {
+                                                                                                                                                                                                        font-size: 12px;
+                                                                                                                                                                                                        letter-spacing: .11em;
+                                                                                                                                                                                                        text-transform: uppercase;
+                                                                                                                                                                                                        color: var(--blue);
+                                                                                                                                                                                                        font-weight: 700;
+                                                                                                                                                                                                        margin-bottom: 10px
+                                                                                                                                                                                                      } */
 
     h2 {
       margin: 0 0 16px;
@@ -744,29 +744,29 @@
     }
 
     /* .cta {
-                                                                                                                                                                                                      background: linear-gradient(120deg, #061760, #0018dc 56%, #0c79cf);
-                                                                                                                                                                                                      color: #fff;
-                                                                                                                                                                                                      padding: 72px 0
-                                                                                                                                                                                                    } */
+                                                                                                                                                                                                                                background: linear-gradient(120deg, #061760, #0018dc 56%, #0c79cf);
+                                                                                                                                                                                                                                color: #fff;
+                                                                                                                                                                                                                                padding: 72px 0
+                                                                                                                                                                                                                              } */
 
     .cta-box {
       display: grid;
       grid-template-columns: 1.1fr .9fr;
       gap: 24px;
-      align-items: center
+      align-items: self-start;
     }
 
     /* .cta h2 {
-                                                                                                                                                                                                        color: #fff;
-                                                                                                                                                                                                        margin-bottom: 14px
-                                                                                                                                                                                                      }
+                                                                                                                                                                                                                                  color: #fff;
+                                                                                                                                                                                                                                  margin-bottom: 14px
+                                                                                                                                                                                                                                }
 
-                                                                                                                                                                                                      .cta p {
-                                                                                                                                                                                                        margin: 0;
-                                                                                                                                                                                                        color: #e3ecff;
-                                                                                                                                                                                                        font-size: 18px;
-                                                                                                                                                                                                        max-width: 780px
-                                                                                                                                                                                                      } */
+                                                                                                                                                                                                                                .cta p {
+                                                                                                                                                                                                                                  margin: 0;
+                                                                                                                                                                                                                                  color: #e3ecff;
+                                                                                                                                                                                                                                  font-size: 18px;
+                                                                                                                                                                                                                                  max-width: 780px
+                                                                                                                                                                                                                                } */
 
     .cta-panel {
       background: rgba(255, 255, 255, .1);
@@ -862,8 +862,8 @@
     }
 
     /* ================================
-                                                             VAPOR HERO LEFT TEXT + RIGHT CARDS
-                                                          ================================ */
+                                                                                       VAPOR HERO LEFT TEXT + RIGHT CARDS
+                                                                                    ================================ */
 
     header.hero.fs-vapor-hero {
       position: relative !important;
@@ -902,15 +902,15 @@
       pointer-events: none;
 
       /* background:
-                                                    linear-gradient(90deg,
-                                                      rgba(2, 6, 23, 0.92) 0%,
-                                                      rgba(2, 6, 23, 0.82) 34%,
-                                                      rgba(2, 6, 23, 0.42) 62%,
-                                                      rgba(2, 6, 23, 0.10) 100%),
-                                                    linear-gradient(180deg,
-                                                      rgba(2, 6, 23, 0.10) 0%,
-                                                      rgba(2, 6, 23, 0.16) 68%,
-                                                      rgba(2, 6, 23, 0.04) 100%); */
+                                                                              linear-gradient(90deg,
+                                                                                rgba(2, 6, 23, 0.92) 0%,
+                                                                                rgba(2, 6, 23, 0.82) 34%,
+                                                                                rgba(2, 6, 23, 0.42) 62%,
+                                                                                rgba(2, 6, 23, 0.10) 100%),
+                                                                              linear-gradient(180deg,
+                                                                                rgba(2, 6, 23, 0.10) 0%,
+                                                                                rgba(2, 6, 23, 0.16) 68%,
+                                                                                rgba(2, 6, 23, 0.04) 100%); */
     }
 
     /* Main hero wrapper */
@@ -1126,10 +1126,10 @@
 
       header.hero.fs-vapor-hero::after {
         /* background:
-                                                      linear-gradient(90deg,
-                                                        rgba(2, 6, 23, 0.92) 0%,
-                                                        rgba(2, 6, 23, 0.78) 58%,
-                                                        rgba(2, 6, 23, 0.52) 100%); */
+                                                                                linear-gradient(90deg,
+                                                                                  rgba(2, 6, 23, 0.92) 0%,
+                                                                                  rgba(2, 6, 23, 0.78) 58%,
+                                                                                  rgba(2, 6, 23, 0.52) 100%); */
       }
     }
 
@@ -1181,67 +1181,458 @@
   </style>
 
 
-  <header class="hero fs-vapor-hero">
-    <div class="wrap fs-vapor-hero-wrap">
-      <div class="fs-vapor-hero-layout">
+  <header class="hero fs-vapor-hero fs-vapor-hero-updated">
+    <style>
+      /* ================================
+                                     UPDATED VAPOR HERO
+                                  ================================ */
 
-        {{-- Left Text --}}
-        <div class="fs-vapor-hero-copy">
+      header.hero.fs-vapor-hero-updated {
+        position: relative !important;
+        isolation: isolate;
+        overflow: hidden;
+        min-height: calc(100vh - 108px);
+        display: flex;
+        align-items: stretch;
+        padding: 0 !important;
+        background: #07111f !important;
+        color: #ffffff;
+      }
 
-          <h1>Recover valuable vapor where conventional VRUs lose fit.</h1>
+      header.hero.fs-vapor-hero-updated::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -3;
+        background-image: url("/img/vapor recovery winter.jpg");
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+        transform: none !important;
+      }
 
-          <div class="subhead">
-            Capture vapor in wet, unstable, hard-service conditions without forcing the stream through gas-only
-            assumptions.
-          </div>
+      header.hero.fs-vapor-hero-updated::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -2;
+        pointer-events: none;
+        background:
+          linear-gradient(90deg,
+            rgba(0, 8, 30, .88) 0%,
+            rgba(0, 12, 48, .76) 42%,
+            rgba(0, 16, 60, .32) 72%,
+            rgba(0, 16, 60, .10) 100%),
+          radial-gradient(circle at 82% 16%, rgba(21, 209, 255, .20), transparent 28%);
+      }
 
-          <p class="hero-copy">
-            VaporCommander™ is built for field vapor streams that do not stay clean, dry, and predictable. It combines
-            multiphase compression, sealed hazardous-service design, and autonomous controls to recover gas where liquids,
-            slugs, upset conditions, and changing gas quality make conventional VRUs difficult to justify, maintain, or
-            keep
-            online.
-          </p>
+      header.hero.fs-vapor-hero-updated .fs-vapor-hero-wrap {
+        position: relative;
+        z-index: 2;
+        width: min(calc(100% - 40px), 1200px);
+        max-width: 1200px;
+        min-height: calc(100vh - 108px);
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: minmax(0, 760px) minmax(280px, 380px);
+        gap: 52px;
+        align-items: end;
+        padding: 110px 0 82px !important;
+      }
 
-          <div class="patent-note">
-            Supported by patented operating methods for liquid-influenced compression behavior, including
-            <a href="/patented-technology#us11098709b2">US11098709B2</a>.
-          </div>
+      .fs-vapor-hero-main-copy {
+        max-width: 760px;
+      }
 
-          <div class="btn-row mt-5">
-            <a class="btn btn-primary" href="#specifications">View specifications</a>
-            <a class="btn btn-secondary" href="#comparison">See the difference</a>
-          </div>
+      .fs-vapor-hero-eyebrow {
+        margin: 0 0 16px;
+        color: #15d1ff;
+        font-size: 13px;
+        line-height: 1.2;
+        font-weight: 900;
+        letter-spacing: .13em;
+        text-transform: uppercase;
+      }
+
+      header.hero.fs-vapor-hero-updated .fs-vapor-hero-title {
+        margin: 0 0 22px;
+        max-width: 850px;
+        color: #ffffff !important;
+        font-size: clamp(42px, 5.1vw, 76px);
+        line-height: .96;
+        letter-spacing: -.06em;
+        font-weight: 900;
+      }
+
+      header.hero.fs-vapor-hero-updated .fs-vapor-hero-lead {
+        margin: 0 0 30px;
+        max-width: 700px;
+        color: rgba(255, 255, 255, .84) !important;
+        font-size: clamp(18px, 1.55vw, 22px);
+        line-height: 1.42;
+        font-weight: 500;
+      }
+
+      .fs-vapor-hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 30px;
+      }
+
+      .fs-vapor-hero-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 50px;
+        padding: 0 22px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 1;
+        font-weight: 900;
+        transition:
+          transform .22s ease,
+          box-shadow .22s ease,
+          border-color .22s ease,
+          background .22s ease,
+          color .22s ease;
+      }
+
+      .fs-vapor-hero-btn:hover {
+        transform: translateY(-2px);
+      }
+
+      .fs-vapor-hero-btn-primary {
+        background: #ffffff;
+        color: #0018dc;
+        border: 1px solid #ffffff;
+        box-shadow: 0 14px 34px rgba(0, 0, 0, .20);
+      }
+
+      .fs-vapor-hero-btn-primary:hover {
+        background: #0018dc;
+        border-color: #0018dc;
+        color: #ffffff;
+      }
+
+      .fs-vapor-hero-btn-secondary {
+        color: #ffffff;
+        border: 1px solid rgba(255, 255, 255, .28);
+        background: rgba(255, 255, 255, 0);
+        /* backdrop-filter: blur(8px); */
+        /* -webkit-backdrop-filter: blur(8px); */
+      }
+
+      .fs-vapor-hero-btn-secondary:hover {
+        background: rgba(255, 255, 255, .14);
+        border-color: rgba(255, 255, 255, .42);
+        color: #ffffff;
+      }
+
+      .fs-vapor-hero-benefits {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 10px;
+        max-width: 860px;
+      }
+
+      .fs-vapor-hero-benefit {
+        position: relative;
+        overflow: hidden;
+        min-height: 98px;
+        padding: 14px;
+        border: 1px solid rgba(255, 255, 255, .18);
+        border-radius: 7px;
+        background: rgba(255, 255, 255, 0);
+        /* backdrop-filter: blur(8px); */
+        /* -webkit-backdrop-filter: blur(8px); */
+        transition:
+          transform .25s ease,
+          border-color .25s ease,
+          background .25s ease;
+      }
+
+      /* .fs-vapor-hero-benefit::after {
+                                content: "";
+                                position: absolute;
+                                left: 0;
+                                right: 0;
+                                top: 0;
+                                height: 4px;
+                                background: #15d1ff;
+                                transform: scaleX(0);
+                                transform-origin: left;
+                                transition: transform .25s ease;
+                              } */
+
+      /* .fs-vapor-hero-benefit:hover {
+                                transform: translateY(-4px);
+                                border-color: rgba(21, 209, 255, .45);
+                                background: rgba(255, 255, 255, .12);
+                              } */
+
+      .fs-vapor-hero-benefit:hover::after {
+        transform: scaleX(1);
+      }
+
+      .fs-vapor-hero-benefit strong {
+        display: block;
+        margin-bottom: 6px;
+        color: #ffffff;
+        font-size: 14px;
+        line-height: 1.2;
+        font-weight: 900;
+      }
+
+      .fs-vapor-hero-benefit span {
+        display: block;
+        color: rgba(255, 255, 255, .76);
+        font-size: 12.5px;
+        line-height: 1.35;
+        font-weight: 600;
+      }
+
+      .fs-vapor-proof-card {
+        position: relative;
+        overflow: hidden;
+        isolation: isolate;
+        padding: 26px;
+        border-radius: 7px;
+        background: rgba(255, 255, 255, 0);
+        border: 1px solid rgba(255, 255, 255, .16);
+        /* box-shadow: 0 24px 70px rgba(0, 0, 0, .22); */
+        /* backdrop-filter: blur(12px); */
+        -webkit-backdrop-filter: blur(12px);
+        transition:
+          transform .28s ease,
+          box-shadow .28s ease,
+          border-color .28s ease,
+          background .28s ease;
+      }
+
+      /* .fs-vapor-proof-card::after {
+                                content: "";
+                                position: absolute;
+                                left: 0;
+                                right: 0;
+                                top: 0;
+                                height: 4px;
+                                background: #15d1ff;
+                                transform: scaleX(0);
+                                transform-origin: left;
+                                transition: transform .28s ease;
+                                z-index: 2;
+                              } */
+
+      /* .fs-vapor-proof-card:hover {
+                          transform: translateY(-4px);
+                          border-color: rgba(21, 209, 255, .42);
+                          background: rgba(255, 255, 255, .12);
+                          box-shadow: 0 30px 78px rgba(0, 0, 0, .28);
+                        } */
+
+      .fs-vapor-proof-card:hover::after {
+        transform: scaleX(1);
+      }
+
+      .fs-vapor-proof-card h2 {
+        margin: 0 0 12px;
+        color: #ffffff;
+        font-size: 24px;
+        line-height: 1.1;
+        letter-spacing: -.035em;
+        font-weight: 850;
+      }
+
+      .fs-vapor-proof-card p {
+        margin: 0 0 20px;
+        color: rgba(255, 255, 255, .76);
+        font-size: 15px;
+        line-height: 1.6;
+        font-weight: 500;
+      }
+
+      .fs-vapor-proof-list {
+        display: grid;
+        gap: 12px;
+      }
+
+      .fs-vapor-proof-item {
+        display: grid;
+        grid-template-columns: 10px minmax(0, 1fr);
+        gap: 10px;
+        align-items: start;
+        padding-top: 12px;
+        border-top: 1px solid rgba(255, 255, 255, .10);
+        color: rgba(255, 255, 255, .86);
+        font-size: 14px;
+        line-height: 1.48;
+        font-weight: 750;
+        text-decoration: none;
+        transition: color .22s ease;
+      }
+
+      .fs-vapor-proof-item:first-child {
+        padding-top: 0;
+        border-top: 0;
+      }
+
+      .fs-vapor-proof-item:hover {
+        color: #ffffff;
+      }
+
+      .fs-vapor-proof-dot {
+        width: 7px;
+        height: 7px;
+        margin-top: 7px;
+        border-radius: 999px;
+        background: #ffffff;
+        box-shadow: 0 0 0 7px rgba(147, 147, 147, 0.1);
+      }
+
+      @media (max-width: 1080px) {
+        header.hero.fs-vapor-hero-updated {
+          min-height: auto;
+        }
+
+        header.hero.fs-vapor-hero-updated .fs-vapor-hero-wrap {
+          min-height: auto;
+          grid-template-columns: 1fr;
+          gap: 34px;
+          align-items: start;
+          padding: 86px 0 68px !important;
+        }
+
+        .fs-vapor-proof-card {
+          max-width: 640px;
+        }
+
+        .fs-vapor-hero-benefits {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 700px) {
+        header.hero.fs-vapor-hero-updated::before {
+          background-position: center bottom;
+        }
+
+        header.hero.fs-vapor-hero-updated::after {
+          background:
+            linear-gradient(180deg,
+              rgba(2, 6, 23, 0.94) 0%,
+              rgba(2, 6, 23, 0.84) 54%,
+              rgba(2, 6, 23, 0.62) 100%);
+        }
+
+        header.hero.fs-vapor-hero-updated .fs-vapor-hero-wrap {
+          width: min(calc(100% - 30px), 1200px);
+          padding: 68px 0 56px !important;
+        }
+
+        header.hero.fs-vapor-hero-updated .fs-vapor-hero-title {
+          font-size: 40px;
+          line-height: 1.03;
+        }
+
+        header.hero.fs-vapor-hero-updated .fs-vapor-hero-lead {
+          font-size: 17px;
+          line-height: 1.45;
+        }
+
+        .fs-vapor-hero-actions {
+          flex-direction: column;
+        }
+
+        .fs-vapor-hero-btn {
+          width: 100%;
+        }
+
+        .fs-vapor-hero-benefits {
+          grid-template-columns: 1fr;
+        }
+
+        .fs-vapor-hero-benefit {
+          min-height: auto;
+        }
+
+        .fs-vapor-proof-card {
+          padding: 22px;
+        }
+      }
+    </style>
+
+    <div class="fs-vapor-hero-wrap">
+      <div class="fs-vapor-hero-main-copy">
+
+        <h1 class="fs-vapor-hero-title">
+          Built for vapor streams conventional VRUs were not designed to handle.
+        </h1>
+
+        <p class="fs-vapor-hero-lead">
+          VaporCommander™ is engineered for wet, unstable, and liquid-influenced vapor streams where conventional
+          gas-only VRUs struggle with reliability, maintenance, and uptime.
+        </p>
+
+        <div class="fs-vapor-hero-actions">
+          <a class="fs-vapor-hero-btn fs-vapor-hero-btn-primary" href="#specifications">
+            View Specifications
+          </a>
+
+          <a class="fs-vapor-hero-btn fs-vapor-hero-btn-secondary" href="#vapor-technology-benefits">
+            See Technology Benefits
+          </a>
         </div>
 
-        {{-- Right Cards --}}
-        <div class="fs-vapor-hero-cards">
-          <div class="hero-card interactive-card">
-            <h3>Broader site applicability</h3>
-            <p>
-              Recover vapor in field conditions that are too wet, unstable, or maintenance-intensive for conventional
-              gas-only vapor recovery approaches.
-            </p>
+        <div class="fs-vapor-hero-benefits" aria-label="VaporCommander benefits">
+          <div class="fs-vapor-hero-benefit">
+            <strong>Wet vapor service</strong>
+            <span>Built for liquids and unstable vapor flow.</span>
           </div>
 
-          <div class="hero-card interactive-card">
-            <h3>Lower maintenance operation</h3>
-            <p>
-              Autonomous controls, wear-aware sealing, and multiphase handling reduce intervention and support longer-life
-              field performance.
-            </p>
+          <div class="fs-vapor-hero-benefit">
+            <strong>Reduced venting</strong>
+            <span>Capture tank vapors and reduce emissions.</span>
           </div>
 
-          <div class="hero-card interactive-card">
-            <h3>Emissions and gas monetization</h3>
-            <p>
-              Capture valuable vapor, reduce venting, and turn harder vapor recovery sites into practical operating
-              opportunities.
-            </p>
+          <div class="fs-vapor-hero-benefit">
+            <strong>Cold-weather fit</strong>
+            <span>Reduce separator and scrubber freeze risks.</span>
+          </div>
+
+          <div class="fs-vapor-hero-benefit">
+            <strong>Low-touch operation</strong>
+            <span>Designed for reliability and reduced intervention.</span>
           </div>
         </div>
-
       </div>
+
+      <aside class="fs-vapor-proof-card">
+        <h2>Patent-backed liquid response.</h2>
+
+        <p>
+          Supported by patented operating methods for liquid-influenced compression behavior, including
+          US11098709B2.
+        </p>
+
+        <div class="fs-vapor-proof-list">
+          <a class="fs-vapor-proof-item" href="#vapor-technology-benefits">
+            <span class="fs-vapor-proof-dot"></span>
+            <span>Designed for wet and liquid-influenced vapor streams.</span>
+          </a>
+
+          <a class="fs-vapor-proof-item" href="#case-study">
+            <span class="fs-vapor-proof-dot"></span>
+            <span>Field-proven uptime in vapor recovery service.</span>
+          </a>
+
+          <a class="fs-vapor-proof-item" href="#specifications">
+            <span class="fs-vapor-proof-dot"></span>
+            <span>VRU models available for application review.</span>
+          </a>
+        </div>
+      </aside>
     </div>
   </header>
 
@@ -1327,9 +1718,9 @@
         <div class="vapor-benefit-card">
           <h3>Designed for incompressible liquid handling</h3>
           <p>
-            Fluidstream is built around a patented methodology for safely, efficiently, and reliably handling
-            incompressible liquids within the compression chamber, critical in real vapor recovery streams where liquids
-            are often present.
+            Fluidstream’s multiphase platform is built around a patented methodology for safely, efficiently, and reliably
+            handling incompressible liquids within the compression chamber, critical in real vapor recovery streams where
+            liquids are often present.
           </p>
         </div>
 
@@ -1429,9 +1820,9 @@
   </section>
   <style>
     /* ================================
-                                                                                       VAPOR BENEFITS SECTION
-                                                                                       2 COLUMNS x 3 ROWS + BIG CARD
-                                                                                    ================================ */
+                                                                                                                 VAPOR BENEFITS SECTION
+                                                                                                                 2 COLUMNS x 3 ROWS + BIG CARD
+                                                                                                              ================================ */
 
     .vapor-benefits-section {
       background: #ffffff;
@@ -1506,9 +1897,9 @@
       position: absolute;
       inset: 0;
       /* background: linear-gradient(135deg,
-                                                                                        rgba(0, 24, 220, .045) 0%,
-                                                                                        rgba(21, 209, 255, .10) 48%,
-                                                                                        rgba(255, 255, 255, 0) 100%); */
+                                                                                                                  rgba(0, 24, 220, .045) 0%,
+                                                                                                                  rgba(21, 209, 255, .10) 48%,
+                                                                                                                  rgba(255, 255, 255, 0) 100%); */
       opacity: 0;
       pointer-events: none;
       transition: opacity .25s ease;
@@ -1768,24 +2159,24 @@
       }
 
       /* .fs-vru-diff-head h2 {
-                                                                                                                            margin: 0;
-                                                                                                                            max-width: 760px;
-                                                                                                                            font-size: clamp(1.9rem, 3vw, 3rem);
-                                                                                                                            line-height: 1.05;
-                                                                                                                            letter-spacing: -.04em;
-                                                                                                                            color: #1f1f21;
-                                                                                                                          } */
+                                                                                                                                                      margin: 0;
+                                                                                                                                                      max-width: 760px;
+                                                                                                                                                      font-size: clamp(1.9rem, 3vw, 3rem);
+                                                                                                                                                      line-height: 1.05;
+                                                                                                                                                      letter-spacing: -.04em;
+                                                                                                                                                      color: #1f1f21;
+                                                                                                                                                    } */
 
       .fs-vru-diff-head h2 span {
         color: var(--vru-blue);
       }
 
       /* .fs-vru-diff-head p {
-                                                                                                                          margin: 0;
-                                                                                                                          color: var(--vru-muted);
-                                                                                                                          font-size: 16px;
-                                                                                                                          line-height: 1.75;
-                                                                                                                        } */
+                                                                                                                                                    margin: 0;
+                                                                                                                                                    color: var(--vru-muted);
+                                                                                                                                                    font-size: 16px;
+                                                                                                                                                    line-height: 1.75;
+                                                                                                                                                  } */
 
       .fs-vru-diff-summary {
         display: grid;
@@ -1948,16 +2339,16 @@
       }
 
       /* .fs-vru-diff-bottom::after {
-              content: "";
-              position: absolute;
-              width: 230px;
-              height: 230px;
-              right: -90px;
-              top: -120px;
-              border-radius: 999px;
-              background: rgba(21, 209, 255, .18);
-              pointer-events: none;
-            } */
+                                        content: "";
+                                        position: absolute;
+                                        width: 230px;
+                                        height: 230px;
+                                        right: -90px;
+                                        top: -120px;
+                                        border-radius: 999px;
+                                        background: rgba(21, 209, 255, .18);
+                                        pointer-events: none;
+                                      } */
 
       .fs-vru-diff-bottom-content {
         position: relative;
@@ -2064,8 +2455,8 @@
       }
 
       /* ================================
-                                                                                             VAPOR RECOVERY HERO FULL IMAGE FIX
-                                                                                          ================================ */
+                                                                                                                       VAPOR RECOVERY HERO FULL IMAGE FIX
+                                                                                                                    ================================ */
 
       header.hero {
         position: relative;
@@ -2321,8 +2712,8 @@
       }
 
       /* ================================
-                                                                                             RESPONSIVE HERO
-                                                                                          ================================ */
+                                                                                                                       RESPONSIVE HERO
+                                                                                                                    ================================ */
 
       @media (max-width: 1080px) {
         header.hero {
@@ -2540,12 +2931,12 @@
       }
 
       /* .fs-vc-spec-head h2 {
-                                                                                                                                              font-size: clamp(30px, 3.2vw, 46px);
-                                                                                                                                              line-height: 1.02;
-                                                                                                                                              margin: 0 0 14px;
-                                                                                                                                              letter-spacing: -.035em;
-                                                                                                                                              color: var(--vc-ink);
-                                                                                                                                            } */
+                                                                                                                                                                        font-size: clamp(30px, 3.2vw, 46px);
+                                                                                                                                                                        line-height: 1.02;
+                                                                                                                                                                        margin: 0 0 14px;
+                                                                                                                                                                        letter-spacing: -.035em;
+                                                                                                                                                                        color: var(--vc-ink);
+                                                                                                                                                                      } */
 
       .fs-vc-spec-lead {
         font-size: 17px;
@@ -2850,8 +3241,8 @@
 
       @media(max-width:720px) {
         /* .fs-vc-spec-section {
-                                                                                                                  padding: 46px 0;
-                                                                                                                } */
+                                                                                                                                            padding: 46px 0;
+                                                                                                                                          } */
 
         .fs-vc-spec-wrap {
           width: min(100% - 30px, 1200px);
@@ -3169,7 +3560,6 @@
     <div class="wrap py-12">
       <div class="cta-box">
         <div>
-          <div class="kicker">Customized Technical CTA</div>
           <h2>Submit your vapor stream conditions for a VaporCommander™ application review.</h2>
           <p>
             If your vapor recovery application includes liquids, slugs, unstable flow, H₂S service, remote operation

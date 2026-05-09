@@ -24,12 +24,12 @@
     }
 
     /* body {
-                                                                                                                                    margin: 0;
-                                                                                                                                    font-family: Inter, Arial, Helvetica, sans-serif;
-                                                                                                                                    background: #ffffff;
-                                                                                                                                    color: var(--text);
-                                                                                                                                    line-height: 1.55;
-                                                                                                                                  } */
+                                                                                                                                          margin: 0;
+                                                                                                                                          font-family: Inter, Arial, Helvetica, sans-serif;
+                                                                                                                                          background: #ffffff;
+                                                                                                                                          color: var(--text);
+                                                                                                                                          line-height: 1.55;
+                                                                                                                                        } */
 
     img {
       display: block;
@@ -47,8 +47,8 @@
     }
 
     /* .section {
-                                                                                                                                                                                                                                                                                                                                  padding: 84px 0;
-                                                                                                                                                                                                                                                                                                                                } */
+                                                                                                                                                                                                                                                                                                                                        padding: 84px 0;
+                                                                                                                                                                                                                                                                                                                                      } */
 
     .section-surface-white {
       background: #ffffff;
@@ -80,19 +80,19 @@
     }
 
     /* .hero-tech::before {
-                                                                                                                                                                                                                                                                                                                                                                          content: "";
-                                                                                                                                                                                                                                                                                                                                                                          position: absolute;
-                                                                                                                                                                                                                                                                                                                                                                          inset: 0;
-                                                                                                                                                                                                                                                                                                                                                                          background:
-                                                                                                                                                                                                                                                                                                                                                                            linear-gradient(90deg, rgba(0, 24, 220, 0.90) 0%, rgba(0, 24, 220, 0.78) 45%, rgba(0, 24, 220, 0.68) 100%),
-                                                                                                                                                                                                                                                                                                                                                                            url('{{ asset("/img/hero/hero.avif") }}');
-                                                                                                                                                                                                                                                                                                                                                                          background-size: cover;
-                                                                                                                                                                                                                                                                                                                                                                          background-position: center;
-                                                                                                                                                                                                                                                                                                                                                                          background-repeat: no-repeat;
-                                                                                                                                                                                                                                                                                                                                                                          transform: scale(1.02);
-                                                                                                                                                                                                                                                                                                                                                                          z-index: -2;
-                                                                                                                                                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                                                                                                                                                         */
+                                                                                                                                                                                                                                                                                                                                                                                content: "";
+                                                                                                                                                                                                                                                                                                                                                                                position: absolute;
+                                                                                                                                                                                                                                                                                                                                                                                inset: 0;
+                                                                                                                                                                                                                                                                                                                                                                                background:
+                                                                                                                                                                                                                                                                                                                                                                                  linear-gradient(90deg, rgba(0, 24, 220, 0.90) 0%, rgba(0, 24, 220, 0.78) 45%, rgba(0, 24, 220, 0.68) 100%),
+                                                                                                                                                                                                                                                                                                                                                                                  url('{{ asset("/img/hero/hero.avif") }}');
+                                                                                                                                                                                                                                                                                                                                                                                background-size: cover;
+                                                                                                                                                                                                                                                                                                                                                                                background-position: center;
+                                                                                                                                                                                                                                                                                                                                                                                background-repeat: no-repeat;
+                                                                                                                                                                                                                                                                                                                                                                                transform: scale(1.02);
+                                                                                                                                                                                                                                                                                                                                                                                z-index: -2;
+                                                                                                                                                                                                                                                                                                                                                                              }
+                                                                                                                                                                                                                                                                                                                                                                               */
     .hero-tech::before {
       content: "";
       position: absolute;
@@ -621,7 +621,7 @@
       height: 24px;
       border-radius: 8px;
       /* border: 1px solid #dbe5ff;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        background-color: #ffffff; */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              background-color: #ffffff; */
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%230018dc' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h12'/%3E%3Cpath d='M13 5l7 7-7 7'/%3E%3C/svg%3E");
       background-repeat: no-repeat;
       background-position: center;
@@ -1253,8 +1253,8 @@
 
     #overview .section-head {
       /* display: grid;
-                                                                                                                                                                                                                                                                                                                grid-template-columns: minmax(0, 1.05fr) minmax(340px, .95fr);
-                                                                                                                                                                                                                                                                                                                gap: 44px; */
+                                                                                                                                                                                                                                                                                                                      grid-template-columns: minmax(0, 1.05fr) minmax(340px, .95fr);
+                                                                                                                                                                                                                                                                                                                      gap: 44px; */
       align-items: baseline;
       margin-bottom: 42px;
     }
@@ -1290,29 +1290,29 @@
 
     #overview .overview {
       /* display: grid;
-                                                                                                                                                                                                                                                                                                                  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-                                                                                                                                                                                                                                                                                                                  gap: 28px; */
+                                                                                                                                                                                                                                                                                                                        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+                                                                                                                                                                                                                                                                                                                        gap: 28px; */
       align-items: stretch;
     }
 
     /* #overview .panel {
-                                                                                                                                                                                                                                                                                                  padding: 34px 34px 36px;
-                                                                                                                                                                                                                                                                                                  border: 1px solid #e3ebf5;
-                                                                                                                                                                                                                                                                                                  border-radius: 7px;
-                                                                                                                                                                                                                                                                                                  background: #ffffff;
-                                                                                                                                                                                                                                                                                                  box-shadow: 0 14px 36px rgba(10, 28, 77, .05);
-                                                                                                                                                                                                                                                                                                  height: 100%;
-                                                                                                                                                                                                                                                                                                  display: flex;
-                                                                                                                                                                                                                                                                                                  flex-direction: column;
-                                                                                                                                                                                                                                                                                                }
+                                                                                                                                                                                                                                                                                                        padding: 34px 34px 36px;
+                                                                                                                                                                                                                                                                                                        border: 1px solid #e3ebf5;
+                                                                                                                                                                                                                                                                                                        border-radius: 7px;
+                                                                                                                                                                                                                                                                                                        background: #ffffff;
+                                                                                                                                                                                                                                                                                                        box-shadow: 0 14px 36px rgba(10, 28, 77, .05);
+                                                                                                                                                                                                                                                                                                        height: 100%;
+                                                                                                                                                                                                                                                                                                        display: flex;
+                                                                                                                                                                                                                                                                                                        flex-direction: column;
+                                                                                                                                                                                                                                                                                                      }
 
-                                                                                                                                                                                                                                                                                                #overview .panel {
-                                                                                                                                                                                                                                                                                                  padding: 34px 34px 36px;
-                                                                                                                                                                                                                                                                                                  border: 1px solid #e3ebf5;
-                                                                                                                                                                                                                                                                                                  border-radius: 7px;
-                                                                                                                                                                                                                                                                                                  background: #ffffff;
-                                                                                                                                                                                                                                                                                                  box-shadow: 0 14px 36px rgba(10, 28, 77, .05);
-                                                                                                                                                                                                                                                                                                } */
+                                                                                                                                                                                                                                                                                                      #overview .panel {
+                                                                                                                                                                                                                                                                                                        padding: 34px 34px 36px;
+                                                                                                                                                                                                                                                                                                        border: 1px solid #e3ebf5;
+                                                                                                                                                                                                                                                                                                        border-radius: 7px;
+                                                                                                                                                                                                                                                                                                        background: #ffffff;
+                                                                                                                                                                                                                                                                                                        box-shadow: 0 14px 36px rgba(10, 28, 77, .05);
+                                                                                                                                                                                                                                                                                                      } */
 
     #overview .panel h3 {
       margin: 0 0 18px;
@@ -1324,11 +1324,11 @@
     }
 
     /* #overview .panel>p {
-                                                                                                                                                                                                                                                                                                        margin: 0;
-                                                                                                                                                                                                                                                                                                        font-size: 18px;
-                                                                                                                                                                                                                                                                                                        line-height: 1.72;
-                                                                                                                                                                                                                                                                                                        color: #52667a;
-                                                                                                                                                                                                                                                                                                      } */
+                                                                                                                                                                                                                                                                                                              margin: 0;
+                                                                                                                                                                                                                                                                                                              font-size: 18px;
+                                                                                                                                                                                                                                                                                                              line-height: 1.72;
+                                                                                                                                                                                                                                                                                                              color: #52667a;
+                                                                                                                                                                                                                                                                                                            } */
 
     #overview .stack {
       display: flex;
@@ -1482,7 +1482,7 @@
     @media (max-width: 980px) {
       #overview .section-head {
         /* grid-template-columns: 1fr;
-                                                                                                                                                                                                                                                                                                                  gap: 22px; */
+                                                                                                                                                                                                                                                                                                                        gap: 22px; */
         align-items: start;
       }
 
@@ -1817,8 +1817,8 @@
     }
 
     /* ================================
-                                                                                                                                                                                         TECHNOLOGY CTA SECTION
-                                                                                                                                                                                      ================================ */
+                                                                                                                                                                                               TECHNOLOGY CTA SECTION
+                                                                                                                                                                                            ================================ */
 
     .fs-technology-cta {
       background: #f6f8fc;
@@ -2196,10 +2196,10 @@
         z-index: 0;
         pointer-events: none;
         /* background:
-            linear-gradient(135deg,
-              rgba(255, 255, 255, .17) 0%,
-              rgba(255, 255, 255, .06) 48%,
-              rgba(255, 255, 255, .025) 100%); */
+                  linear-gradient(135deg,
+                    rgba(255, 255, 255, .17) 0%,
+                    rgba(255, 255, 255, .06) 48%,
+                    rgba(255, 255, 255, .025) 100%); */
       }
 
       .fs-tech-hero-proof-card:hover {
@@ -2268,8 +2268,8 @@
         height: 7px;
         margin-top: 7px;
         border-radius: 999px;
-        background: #15d1ff;
-        box-shadow: 0 0 0 7px rgba(21, 209, 255, .10);
+        background: #ffffff;
+        box-shadow: 0 0 0 7px rgba(174, 174, 174, 0.1);
       }
 
       @media (max-width: 1080px) {

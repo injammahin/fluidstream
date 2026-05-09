@@ -814,8 +814,8 @@
     }
 
     /* =========================================
-                                                         HERO SECTION FIXED STYLE
-                                                      ========================================= */
+                                                               HERO SECTION FIXED STYLE
+                                                            ========================================= */
 
     header.hero {
       position: relative !important;
@@ -1452,8 +1452,8 @@
         height: 7px;
         margin-top: 7px;
         border-radius: 999px;
-        background: #15d1ff;
-        box-shadow: 0 0 0 7px rgba(21, 209, 255, .10);
+        background: #ffffff;
+        box-shadow: 0 0 0 7px rgba(150, 150, 150, 0.1);
       }
 
       @media (max-width: 1080px) {
@@ -1752,9 +1752,9 @@
         <div class="technology-benefit-card">
           <h3>Liquid handling inside compression</h3>
           <p>
-            Fluidstream technology is built to safely manage incompressible liquids within the compression chamber,
-            which is fundamental to true multiphase service and directly supports applications where gas has liquids
-            present.
+            Fluidstream’s multiphase platform is designed to manage incompressible-liquid events within the compression
+            chamber, which is fundamental to true multiphase service and directly supports applications where gas has
+            liquids present.
           </p>
 
           {{-- <div class="technology-benefit-note">
@@ -1854,8 +1854,8 @@
   </section>
   <style>
     /* ================================
-                                                                                   TECHNOLOGY BENEFITS 3x2 LAYOUT
-                                                                                ================================ */
+                                                                                         TECHNOLOGY BENEFITS 3x2 LAYOUT
+                                                                                      ================================ */
 
     .technology-benefits-section {
       background: #ffffff;
@@ -2121,8 +2121,8 @@
       <div class="kicker mb-2">Applications</div>
       <h2>Applications for MultiphaseCommander™.</h2>
       <p class="lead">
-        MultiphaseCommander™ is suited to field problems where gas definitely has liquids present and where lower
-        backpressure, untreated-flow transfer, and simpler surface architecture can improve operations.
+        MultiphaseCommander™ is suited to field problems where gas and liquids are part of normal operating conditionsand
+        where lower backpressure, untreated-flow transfer, and simpler surface architecture can improve operations.
       </p>
       <div class="grid-3">
         <div class="card interactive-card swipe-left">
@@ -2243,12 +2243,12 @@
       }
 
       /* .fs-mpc-section-head h2 {
-                                                                                                              font-size: clamp(30px, 3.2vw, 46px);
-                                                                                                              line-height: 1.02;
-                                                                                                              margin: 0 0 14px;
-                                                                                                              letter-spacing: -.035em;
-                                                                                                              color: var(--mpc-ink);
-                                                                                                            } */
+                                                                                                                    font-size: clamp(30px, 3.2vw, 46px);
+                                                                                                                    line-height: 1.02;
+                                                                                                                    margin: 0 0 14px;
+                                                                                                                    letter-spacing: -.035em;
+                                                                                                                    color: var(--mpc-ink);
+                                                                                                                  } */
 
       .fs-mpc-lead {
         font-size: 17px;
@@ -3054,7 +3054,6 @@
 
       <div class="cta-box flex items-start">
         <div>
-          {{-- <div class="kicker mb-2" style="color:#0018dc;">Customized Technical CTA</div> --}}
           <h2>Submit your fluid conditions for a MultiphaseCommander™ application review.</h2>
           <p>
             If your system is constrained by liquid-loaded gas flow, unstable operating conditions, rising system

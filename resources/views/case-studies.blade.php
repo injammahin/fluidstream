@@ -1033,8 +1033,8 @@
         }
 
         /* ================================
-                                                                                       CASE STUDY INTRO SECTION
-                                                                                    ================================ */
+                                                                                                                   CASE STUDY INTRO SECTION
+                                                                                                                ================================ */
 
         .case-study-intro {
             max-width: 1180px;
@@ -1091,6 +1091,48 @@
                 line-height: 1.5;
             }
         }
+
+        .case-actions-with-logo {
+            display: grid;
+            grid-template-columns: minmax(150px, 1fr) minmax(130px, auto) auto;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .case-client-logo {
+            width: 145px;
+            height: 54px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .case-client-logo img {
+            display: block;
+            max-width: 100%;
+            max-height: 70px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+        }
+
+        @media (max-width: 640px) {
+            .case-actions-with-logo {
+                grid-template-columns: 1fr;
+                align-items: flex-start;
+                gap: 14px;
+            }
+
+            .case-client-logo {
+                justify-content: flex-start;
+                width: 140px;
+                height: auto;
+            }
+
+            .case-client-logo img {
+                max-height: 44px;
+            }
+        }
     </style>
 
 
@@ -1132,9 +1174,16 @@
                             variable
                             multiphase
                             flow, and production recovery without a larger facility build.</div>
-                        <div class="case-actions">
+                        <div class="case-actions case-actions-with-logo">
                             <span class="case-tagline">Production recovery</span>
-                            <a class="read-more" href="/case-studies/multiphasecommander-production-recovery">Read more</a>
+
+                            <div class="case-client-logo">
+                                <img src="{{ asset('img/Vermilion Energy.png') }}" alt="Vermilion Energy logo">
+                            </div>
+
+                            <a class="read-more" href="/case-studies/multiphasecommander-production-recovery">
+                                Read more
+                            </a>
                         </div>
                     </article>
 
@@ -1204,9 +1253,16 @@
                         <div class="case-hook">A concise proof point for operators needing emissions compliance, wet-gas
                             tolerance,
                             low-touch operation, and winter reliability.</div>
-                        <div class="case-actions">
+                        <div class="case-actions case-actions-with-logo">
                             <span class="case-tagline">Uptime and emissions</span>
-                            <a class="read-more" href="/case-studies/allied-energy-vaporcommander-vru">Read more</a>
+
+                            <div class="case-client-logo">
+                                <img src="{{ asset('img/Allied Energy.png') }}" alt="Allied Energy II logo">
+                            </div>
+
+                            <a class="read-more" href="/case-studies/allied-energy-vaporcommander-vru">
+                                Read more
+                            </a>
                         </div>
                     </article>
                     <article class="case-card">
@@ -1228,9 +1284,16 @@
                         <div class="case-hook">A strong fit for readers evaluating VRUs in cold climates, liquid-prone vapor
                             streams, remote facilities, and applications where conventional dry-gas VRUs create winter
                             maintenance risk.</div>
-                        <div class="case-actions">
+                        <div class="case-actions case-actions-with-logo">
                             <span class="case-tagline">Winter VRU reliability</span>
-                            <a class="read-more" href="/case-studies/whitecap-vaporcommander-vru">Read more</a>
+
+                            <div class="case-client-logo">
+                                <img src="{{ asset('img/Whitecap.png') }}" alt="Whitecap Resources logo">
+                            </div>
+
+                            <a class="read-more" href="/case-studies/whitecap-vaporcommander-vru">
+                                Read more
+                            </a>
                         </div>
                     </article>
 

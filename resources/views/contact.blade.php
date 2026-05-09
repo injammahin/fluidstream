@@ -41,22 +41,6 @@
             padding-right: 24px;
         }
 
-        .fs-contact-topbar {
-            background: var(--dark);
-            color: #dfe9ff;
-            font-size: 13px;
-        }
-
-        .fs-contact-topbar-inner {
-            max-width: 1220px;
-            margin: 0 auto;
-            padding: 10px 24px;
-            display: flex;
-            justify-content: space-between;
-            gap: 16px;
-            flex-wrap: wrap;
-        }
-
         .fs-contact-hero {
             position: relative;
             overflow: hidden;
@@ -75,18 +59,6 @@
 
         .fs-contact-hero-content {
             max-width: 900px;
-        }
-
-        .fs-contact-eyebrow {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            text-transform: uppercase;
-            letter-spacing: .12em;
-            font-size: 12px;
-            font-weight: 900;
-            color: var(--cyan);
-            margin-bottom: 18px;
         }
 
         .fs-contact-hero h1 {
@@ -125,8 +97,8 @@
         }
 
         .fs-contact-btn-primary {
-            background: var(--cyan);
-            color: #00102a;
+            background: #ffffff;
+            color: #0018dc !important;
         }
 
         .fs-contact-btn-primary:hover {
@@ -143,10 +115,6 @@
         .fs-contact-btn-secondary:hover {
             transform: translateY(-2px);
             background: rgba(255, 255, 255, .08);
-        }
-
-        .fs-contact-section-grey {
-            background: var(--soft);
         }
 
         .fs-contact-section-head {
@@ -215,7 +183,6 @@
 
         .fs-contact-info-card,
         .fs-contact-form-card,
-        .fs-contact-route-card,
         .fs-contact-tech-card {
             position: relative;
             overflow: hidden;
@@ -231,10 +198,8 @@
                 background 0.25s ease;
         }
 
-        /* Deep blue top hover line */
         .fs-contact-info-card::after,
         .fs-contact-form-card::after,
-        .fs-contact-route-card::after,
         .fs-contact-tech-card::after {
             content: "";
             position: absolute;
@@ -249,17 +214,8 @@
             z-index: 2;
         }
 
-        /* .fs-contact-info-card>*,
-                        .fs-contact-form-card>*,
-                        .fs-contact-route-card>*,
-                        .fs-contact-tech-card>* {
-                            position: relative;
-                            z-index: 3;
-                        } */
-
         .fs-contact-info-card:hover,
         .fs-contact-form-card:hover,
-        .fs-contact-route-card:hover,
         .fs-contact-tech-card:hover {
             transform: translateY(-3px);
             border-color: #0018dc !important;
@@ -269,7 +225,6 @@
 
         .fs-contact-info-card:hover::after,
         .fs-contact-form-card:hover::after,
-        .fs-contact-route-card:hover::after,
         .fs-contact-tech-card:hover::after {
             transform: scaleX(1);
         }
@@ -403,6 +358,56 @@
             font-weight: 700;
         }
 
+        .fs-contact-disclaimer-box {
+            grid-column: 1 / -1;
+            margin-top: 6px;
+            border: 1px solid #ffffff;
+            background: linear-gradient(135deg, #f8f8f8 0%, #f0f0f0 100%);
+            border-radius: 18px;
+            padding: 18px 20px;
+            transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+        }
+
+        .fs-contact-disclaimer-box:hover {
+            border-color: var(--blue);
+            box-shadow: 0 12px 28px rgba(0, 24, 220, .08);
+        }
+
+        .fs-contact-disclaimer-box.is-invalid {
+            border-color: #dc2626;
+            background: #fff7f7;
+        }
+
+        .fs-contact-disclaimer-label {
+            display: grid;
+            grid-template-columns: 22px 1fr;
+            gap: 14px;
+            align-items: start;
+            cursor: pointer;
+        }
+
+        .fs-contact-disclaimer-label input {
+            width: 20px;
+            height: 20px;
+            margin-top: 4px;
+            accent-color: var(--blue);
+            cursor: pointer;
+        }
+
+        .fs-contact-disclaimer-text {
+            color: #162238;
+            font-size: 15px;
+            line-height: 1.7;
+            font-weight: 800;
+        }
+
+        .fs-contact-disclaimer-text a {
+            color: var(--blue);
+            font-weight: 950;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
         .fs-contact-submit {
             margin-top: 22px;
             width: 100%;
@@ -438,63 +443,6 @@
             width: 1px;
             height: 1px;
             overflow: hidden;
-        }
-
-        .fs-contact-routes {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 16px;
-        }
-
-        .fs-contact-route-card {
-            padding: 22px;
-            min-height: 190px;
-        }
-
-        /* Moving shine effect only for route cards */
-        /* .fs-contact-route-card::after {
-                            content: "";
-                            position: absolute;
-                            left: -70%;
-                            top: 0;
-                            width: 55%;
-                            height: 100%;
-                            background: linear-gradient(90deg, transparent, rgba(21, 209, 255, .35), transparent);
-                            transform: skewX(-18deg);
-                            transition: left .55s ease;
-                            z-index: 1;
-                        } */
-        /* 
-                        .fs-contact-route-card:hover::after {
-                            left: 120%;
-                        } */
-
-        .fs-contact-route-card small {
-            display: inline-flex;
-            background: #edf3ff;
-            color: var(--blue);
-            font-size: 11px;
-            font-weight: 950;
-            border-radius: 999px;
-            padding: 7px 10px;
-            margin-bottom: 14px;
-            text-transform: uppercase;
-            letter-spacing: .08em;
-        }
-
-        .fs-contact-route-card h3 {
-            margin: 0 0 8px;
-            font-size: 21px;
-            line-height: 1.15;
-            letter-spacing: -.04em;
-            color: var(--ink);
-        }
-
-        .fs-contact-route-card p {
-            margin: 0;
-            color: var(--muted);
-            font-size: 14px;
-            line-height: 1.6;
         }
 
         .fs-contact-tech-card {
@@ -540,10 +488,6 @@
                 position: relative;
                 top: auto;
             }
-
-            .fs-contact-routes {
-                grid-template-columns: 1fr 1fr;
-            }
         }
 
         @media(max-width: 620px) {
@@ -552,8 +496,7 @@
                 padding-right: 18px;
             }
 
-            .fs-contact-form-grid,
-            .fs-contact-routes {
+            .fs-contact-form-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -564,14 +507,22 @@
             .fs-contact-hero h1 {
                 font-size: 42px;
             }
+
+            .fs-contact-disclaimer-label {
+                grid-template-columns: 20px 1fr;
+                gap: 12px;
+            }
+
+            .fs-contact-disclaimer-text {
+                font-size: 14px;
+            }
         }
     </style>
 
     <div class="fs-contact-page">
         <section class="fs-contact-hero py-12">
-            <div class="fs-contact-hero-inner">
+            <div class="fs-contact-hero-inner fs-contact-wrap">
                 <div class="fs-contact-hero-content">
-                    {{-- <div class="fs-contact-eyebrow">Contact Fluidstream</div> --}}
                     <h1>Let’s connect the right conversation to the right team.</h1>
                     <p>
                         Contact Fluidstream for general inquiries, sales discussions, partnerships, service support,
@@ -633,7 +584,6 @@
                             <div class="fs-contact-info-item">
                                 <small>General Inquiries</small>
                                 <strong>Use the inquiry form on this page.</strong>
-                                <span>Send your question, business inquiry, or application context.</span>
                             </div>
 
                             <div class="fs-contact-info-item">
@@ -724,15 +674,23 @@
                                 <select id="inquiry_type" name="inquiry_type">
                                     <option value="">Select inquiry type</option>
                                     <option value="General Inquiry" @selected(old('inquiry_type') === 'General Inquiry')>
-                                        General Inquiry</option>
-                                    <option value="Sales" @selected(old('inquiry_type') === 'Sales')>Sales</option>
-                                    <option value="Partnership" @selected(old('inquiry_type') === 'Partnership')>Partnership
+                                        General Inquiry
+                                    </option>
+                                    <option value="Sales" @selected(old('inquiry_type') === 'Sales')>
+                                        Sales
+                                    </option>
+                                    <option value="Partnership" @selected(old('inquiry_type') === 'Partnership')>
+                                        Partnership
                                     </option>
                                     <option value="Service / Support" @selected(old('inquiry_type') === 'Service / Support')>
-                                        Service / Support</option>
+                                        Service / Support
+                                    </option>
                                     <option value="Media / Corporate" @selected(old('inquiry_type') === 'Media / Corporate')>
-                                        Media / Corporate</option>
-                                    <option value="Technical Review Request" @selected(old('inquiry_type') === 'Technical Review Request')>Technical Review Request</option>
+                                        Media / Corporate
+                                    </option>
+                                    <option value="Technical Review Request" @selected(old('inquiry_type') === 'Technical Review Request')>
+                                        Technical Review Request
+                                    </option>
                                 </select>
                                 @error('inquiry_type')
                                     <div class="fs-contact-field-error">{{ $message }}</div>
@@ -745,6 +703,32 @@
                                     placeholder="Tell us how we can help.">{{ old('message') }}</textarea>
                                 @error('message')
                                     <div class="fs-contact-field-error">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            <div
+                                class="fs-contact-disclaimer-box fs-contact-full @error('terms_acknowledgement') is-invalid @enderror">
+                                <label class="fs-contact-disclaimer-label" for="terms_acknowledgement">
+                                    <input id="terms_acknowledgement" name="terms_acknowledgement" type="checkbox" value="1"
+                                        @checked(old('terms_acknowledgement')) required>
+
+                                    <span class="fs-contact-disclaimer-text">
+                                        I acknowledge and agree to Fluidstream’s
+                                        <a href="{{ url('/terms') }}" target="_blank" rel="noopener">Terms of Use</a>
+                                        and
+                                        <a href="{{ url('/privacy-policy') }}" target="_blank" rel="noopener">Privacy
+                                            Policy</a>.
+                                        I understand that any analysis, recommendation, or information provided by
+                                        Fluidstream is for informational purposes only and does not constitute professional
+                                        engineering certification, field validation, site-specific design approval,
+                                        operational instruction, or regulatory compliance advice.
+                                    </span>
+                                </label>
+
+                                @error('terms_acknowledgement')
+                                    <div class="fs-contact-field-error" style="margin-top:10px;">
+                                        {{ $message }}
+                                    </div>
                                 @enderror
                             </div>
                         </div>

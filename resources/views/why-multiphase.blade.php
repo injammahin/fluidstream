@@ -186,9 +186,9 @@
 
     .hero-proof-panel {
       position: sticky;
-      backdrop-filter: blur(5px);
+      backdrop-filter: blur(1px);
       top: 120px;
-      background: #ffffff24;
+      background: #ffffff00;
       border: 1px solid rgba(255, 255, 255, .18);
       border-radius: 7px;
       padding: 26px;
@@ -261,7 +261,7 @@
 
     .hero-proof-stat:hover {
       transform: translateY(-2px);
-      border-color: #0018dc;
+      /* border-color: #0018dc; */
       box-shadow: 0 18px 34px rgba(13, 32, 84, .12);
     }
 
@@ -904,7 +904,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 22px;
-      margin-top: 18px;
+      /* margin-top: 18px; */
     }
 
     .hero-proof-source-row .hero-proof-author {
@@ -1559,8 +1559,8 @@
   </section> --}}
   <style>
     /* ================================
-                                     PROOF CARD FINAL ALIGNMENT FIX
-                                  ================================ */
+                                                   PROOF CARD FINAL ALIGNMENT FIX
+                                                ================================ */
 
     .proof-grid {
       display: grid;
@@ -1837,7 +1837,7 @@
     </div>
   </section>
 
-  <section>
+  {{-- <section>
     <div class="wrap py-12">
       <div class="kicker mb-2">Technology advantage</div>
       <h2>Built for mixed-stream compression, not gas-only assumptions.</h2>
@@ -1874,7 +1874,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> --}}
 
   <section class="band">
     <div class="wrap py-12">
@@ -1987,11 +1987,11 @@
     }
 
     /* .fit-card p {
-                                                                                                                                                                                                  margin: 0;
-                                                                                                                                                                                                  font-size: 22px;
-                                                                                                                                                                                                  line-height: 1.42;
-                                                                                                                                                                                                  color: #53647c;
-                                                                                                                                                                                                } */
+                                                                                                                                                                                                                margin: 0;
+                                                                                                                                                                                                                font-size: 22px;
+                                                                                                                                                                                                                line-height: 1.42;
+                                                                                                                                                                                                                color: #53647c;
+                                                                                                                                                                                                              } */
 
     @media (max-width: 991px) {
       .fit-grid {

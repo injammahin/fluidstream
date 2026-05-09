@@ -10,108 +10,106 @@
         :root {
             --blue: #0018dc;
             --blue-2: #1029ea;
-                --cyan: #15d1ff;
-                --ink: #07111f;
-                --muted: #5f6b7a;
-                --line: #dfe5ef;
-                --soft: #f4f6f9;
-                --soft-blue: #eef3ff;
-                --dark: #071327;
-                --white: #ffffff;
-                --shadow: 0 18px 45px rgba(7, 17, 31, .12);
-                --soft-shadow: 0 10px 30px rgba(7, 17, 31, .06);
-                --radius: 22px;
-            }
+            --cyan: #15d1ff;
+            --ink: #07111f;
+            --muted: #5f6b7a;
+            --line: #dfe5ef;
+            --soft: #f4f6f9;
+            --soft-blue: #eef3ff;
+            --dark: #071327;
+            --white: #ffffff;
+            --shadow: 0 18px 45px rgba(7, 17, 31, .12);
+            --soft-shadow: 0 10px 30px rgba(7, 17, 31, .06);
+            --radius: 22px;
+        }
 
-            .technical-review-page,
-            .technical-review-page * {
-                box-sizing: border-box;
-            }
+        .technical-review-page,
+        .technical-review-page * {
+            box-sizing: border-box;
+        }
 
-            .technical-review-page {
-                color: var(--ink);
-                background: #ffffff;
-                line-height: 1.55;
-                overflow: hidden;
-            }
+        .technical-review-page {
+            color: var(--ink);
+            background: #ffffff;
+            line-height: 1.55;
+            overflow: hidden;
+        }
 
-            .technical-review-page a {
-                color: inherit;
-                text-decoration: none;
-            }
+        .technical-review-page a {
+            color: inherit;
+            text-decoration: none;
+        }
 
-            .tr-hero {
-                position: relative;
-                overflow: hidden;
-                background: #0018dc;
-                color: #ffffff;
+        .tr-hero {
+            position: relative;
+            overflow: hidden;
+            background: #0018dc;
+            color: #ffffff;
+        min-height: 480px;
+                display: flex;
+                align-items: center;
             }
 
             .tr-hero::after {
-                content: "";
-                position: absolute;
-                right: -160px;
-                bottom: -180px;
-                width: 460px;
-                height: 460px;
-                border-radius: 999px;
-                border: 1px solid rgba(255, 255, 255, .18);
-                background: rgba(255, 255, 255, .05);
+                display: none;
             }
 
             .tr-hero-inner {
                 position: relative;
                 z-index: 2;
-                width: min(1200px, calc(100% - 40px));
-                margin: 0 auto;
-                padding: 92px 0 78px;
-                text-align: center;
+                width: min(1200px, calc(100% - 80px)) !important;
+                max-width: 1200px;
+                margin: 0 auto !important;
+                padding: 86px 0 82px !important;
+                text-align: left !important;
             }
 
             .tr-eyebrow {
                 display: inline-flex;
                 align-items: center;
-                justify-content: center;
-                gap: 10px;
-                margin-bottom: 18px;
-                color: var(--cyan);
-                font-size: 12px;
+                justify-content: flex-start;
+                gap: 0;
+                margin: 0 0 24px !important;
+                color: #15d1ff;
+                font-size: 13px;
+                line-height: 1.2;
                 font-weight: 900;
                 text-transform: uppercase;
-                letter-spacing: .14em;
+                letter-spacing: .16em;
             }
 
             .tr-eyebrow::before,
             .tr-eyebrow::after {
-                content: "";
-                width: 34px;
-                height: 2px;
-                border-radius: 999px;
-                background: var(--cyan);
+                display: none !important;
+                content: none !important;
             }
 
             .tr-hero h1 {
-                max-width: 900px;
-                margin: 0 auto 20px;
+                max-width: 920px !important;
+                margin: 0 0 26px !important;
                 color: #ffffff;
-                font-size: clamp(38px, 6vw, 72px);
-                line-height: .96;
-                letter-spacing: -.065em;
-                font-weight: 700;
+                font-size: clamp(46px, 5.2vw, 76px);
+                line-height: .98;
+                letter-spacing: -.07em;
+                font-weight: 800;
+                text-align: left !important;
             }
 
             .tr-hero p {
-                max-width: 760px;
-                margin: 0 auto 30px;
-                color: rgba(255, 255, 255, .88);
-                font-size: 19px;
-                line-height: 1.7;
+                max-width: 780px !important;
+                margin: 0 0 34px !important;
+                color: rgba(255, 255, 255, .82);
+                font-size: clamp(19px, 1.6vw, 25px);
+                line-height: 1.55;
+                font-weight: 400;
+                text-align: left !important;
             }
 
             .tr-hero-actions {
                 display: flex;
-                justify-content: center;
-                gap: 14px;
+                justify-content: flex-start !important;
+                align-items: center;
+                gap: 16px;
                 flex-wrap: wrap;
             }
 
@@ -119,10 +117,10 @@
                 display: inline-flex;
                 align-items: center;
                 justify-content: center;
-                min-height: 50px;
-                padding: 0 22px;
+                min-height: 58px;
+                padding: 0 28px;
                 border-radius: 999px;
-                font-size: 15px;
+                font-size: 16px;
                 font-weight: 900;
                 border: 1px solid transparent;
                 transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
@@ -130,8 +128,9 @@
             }
 
             .tr-btn-primary {
-                background: var(--cyan);
-                color: #00102a;
+                background: #ffffff;
+                color: #0018dc !important;
+                border-color: #15d1ff;
             }
 
             .tr-btn-primary:hover {
@@ -141,8 +140,8 @@
 
             .tr-btn-secondary {
                 color: #ffffff;
-                border-color: rgba(255, 255, 255, .34);
-                background: rgba(255, 255, 255, .06);
+                border-color: rgba(255, 255, 255, .36);
+                background: rgba(255, 255, 255, .04);
             }
 
             .tr-btn-secondary:hover {
@@ -151,9 +150,7 @@
             }
 
             .tr-section {
-                background:
-                    linear-gradient(180deg, #ffffff 0%, #f7f9fc 100%);
-                /* padding: 72px 0; */
+                background: linear-gradient(180deg, #ffffff 0%, #f7f9fc 100%);
             }
 
             .tr-wrap {
@@ -240,17 +237,6 @@
                 border-radius: 7px;
                 box-shadow: var(--shadow);
             }
-
-            /* .form-card::before {
-                content: "";
-                position: absolute;
-                inset: 0;
-                z-index: 0;
-                pointer-events: none;
-                background:
-                    radial-gradient(circle at 0% 0%, rgba(0, 24, 220, .06), transparent 28%),
-                    radial-gradient(circle at 100% 0%, rgba(21, 209, 255, .10), transparent 24%);
-            } */
 
             .form-card::after {
                 content: "";
@@ -395,6 +381,56 @@
                 color: #dc2626;
                 font-size: 13px;
                 font-weight: 700;
+            }
+
+            .tr-disclaimer-box {
+                grid-column: 1 / -1;
+                margin-top: 6px;
+                border: 1px solid #cbd7ff;
+                background: linear-gradient(135deg, #f1f1f1 0%, #f3f3f3 100%);
+                border-radius: 18px;
+                padding: 18px 20px;
+                transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+            }
+
+            .tr-disclaimer-box:hover {
+                border-color: var(--blue);
+                box-shadow: 0 12px 28px rgba(0, 24, 220, .08);
+            }
+
+            .tr-disclaimer-box.is-invalid {
+                border-color: #dc2626;
+                background: #fff7f7;
+            }
+
+            .tr-disclaimer-label {
+                display: grid;
+                grid-template-columns: 22px 1fr;
+                gap: 14px;
+                align-items: start;
+                cursor: pointer;
+            }
+
+            .tr-disclaimer-label input {
+                width: 20px;
+                height: 20px;
+                margin-top: 4px;
+                accent-color: var(--blue);
+                cursor: pointer;
+            }
+
+            .tr-disclaimer-text {
+                color: #162238;
+                font-size: 15px;
+                line-height: 1.7;
+                font-weight: 800;
+            }
+
+            .tr-disclaimer-text a {
+                color: var(--blue);
+                font-weight: 950;
+                text-decoration: underline;
+                text-underline-offset: 3px;
             }
 
             .form-note {
@@ -555,19 +591,42 @@
                 }
             }
 
+            @media(max-width: 760px) {
+                .tr-hero {
+                    min-height: auto;
+                }
+
+                .tr-hero-inner {
+                    width: min(100% - 32px, 1200px) !important;
+                    padding: 64px 0 66px !important;
+                }
+
+                .tr-hero h1 {
+                    font-size: clamp(40px, 13vw, 56px);
+                    line-height: 1;
+                }
+
+                .tr-hero p {
+                    font-size: 18px;
+                    line-height: 1.55;
+                }
+
+                .tr-hero-actions {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    width: 100%;
+                }
+
+                .tr-btn {
+                    width: 100%;
+                }
+            }
+
             @media(max-width: 620px) {
                 .tr-hero-inner,
                 .tr-wrap,
                 .review-cards {
                     width: min(100%, calc(100% - 28px));
-                }
-
-                .tr-hero-inner {
-                    padding: 68px 0 60px;
-                }
-
-                .tr-hero h1 {
-                    font-size: 42px;
                 }
 
                 .tr-section {
@@ -587,141 +646,21 @@
                 .review-cards {
                     grid-template-columns: 1fr;
                 }
+
+                .tr-disclaimer-label {
+                    grid-template-columns: 20px 1fr;
+                    gap: 12px;
+                }
+
+                .tr-disclaimer-text {
+                    font-size: 14px;
+                }
             }
-            /* =========================================
-   CONTACT / TECHNICAL REVIEW HERO ALIGN FIX
-   Left text inside centered container
-========================================= */
-
-.tr-hero {
-    position: relative;
-    overflow: hidden;
-    background: #0018dc;
-    color: #ffffff;
-    min-height: 480px;
-    display: flex;
-    align-items: center;
-}
-
-.tr-hero::after {
-    display: none;
-}
-
-.tr-hero-inner {
-    width: min(1200px, calc(100% - 80px)) !important;
-    max-width: 1200px;
-    margin: 0 auto !important;
-    padding: 86px 0 82px !important;
-    text-align: left !important;
-}
-
-.tr-eyebrow {
-    display: inline-flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 0;
-    margin: 0 0 24px !important;
-    color: #15d1ff;
-    font-size: 13px;
-    line-height: 1.2;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: .16em;
-}
-
-.tr-eyebrow::before,
-.tr-eyebrow::after {
-    display: none !important;
-    content: none !important;
-}
-
-.tr-hero h1 {
-    max-width: 920px !important;
-    margin: 0 0 26px !important;
-    color: #ffffff;
-    font-size: clamp(46px, 5.2vw, 76px);
-    line-height: .98;
-    letter-spacing: -.07em;
-    font-weight: 800;
-    text-align: left !important;
-}
-
-.tr-hero p {
-    max-width: 780px !important;
-    margin: 0 0 34px !important;
-    color: rgba(255, 255, 255, .82);
-    font-size: clamp(19px, 1.6vw, 25px);
-    line-height: 1.55;
-    font-weight: 400;
-    text-align: left !important;
-}
-
-.tr-hero-actions {
-    display: flex;
-    justify-content: flex-start !important;
-    align-items: center;
-    gap: 16px;
-    flex-wrap: wrap;
-}
-
-.tr-btn {
-    min-height: 58px;
-    padding: 0 28px;
-    border-radius: 999px;
-    font-size: 16px;
-    font-weight: 900;
-}
-
-.tr-btn-primary {
-    background: #15d1ff;
-    color: #ffffff;
-    border-color: #15d1ff;
-}
-
-.tr-btn-secondary {
-    color: #ffffff;
-    border-color: rgba(255, 255, 255, .36);
-    background: rgba(255, 255, 255, .04);
-}
-
-/* Mobile */
-@media (max-width: 760px) {
-    .tr-hero {
-        min-height: auto;
-    }
-
-    .tr-hero-inner {
-        width: min(100% - 32px, 1200px) !important;
-        padding: 64px 0 66px !important;
-    }
-
-    .tr-hero h1 {
-        font-size: clamp(40px, 13vw, 56px);
-        line-height: 1;
-    }
-
-    .tr-hero p {
-        font-size: 18px;
-        line-height: 1.55;
-    }
-
-    .tr-hero-actions {
-        display: grid;
-        grid-template-columns: 1fr;
-        width: 100%;
-    }
-
-    .tr-btn {
-        width: 100%;
-    }
-}
         </style>
 
         <main class="technical-review-page">
             <section class="tr-hero">
                 <div class="tr-hero-inner">
-                    {{-- <div class="tr-eyebrow">Application Review</div> --}}
-
                     <h1>Submit your compression challenge for technical review.</h1>
 
                     <p>
@@ -962,6 +901,30 @@
                                     <textarea id="notes" name="notes"
                                         placeholder="Describe liquids, slugging, pressure constraints, flaring/venting, production decline, separator issues, freezing, downtime, or current compressor limitations.">{{ old('notes') }}</textarea>
                                 </div>
+
+                                <div class="tr-disclaimer-box full @error('terms_acknowledgement') is-invalid @enderror">
+                                    <label class="tr-disclaimer-label" for="terms_acknowledgement">
+                                        <input id="terms_acknowledgement" name="terms_acknowledgement" type="checkbox"
+                                            value="1" @checked(old('terms_acknowledgement')) required>
+
+                                        <span class="tr-disclaimer-text">
+                                            I acknowledge and agree to Fluidstream’s
+                                            <a href="{{ url('/terms') }}" target="_blank" rel="noopener">Terms of Use</a>
+                                            and
+                                            <a href="{{ url('/privacy-policy') }}" target="_blank" rel="noopener">Privacy Policy</a>.
+                                            I understand that any analysis, recommendation, or information provided by
+                                            Fluidstream is for informational purposes only and does not constitute professional
+                                            engineering certification, field validation, site-specific design approval,
+                                            operational instruction, or regulatory compliance advice.
+                                        </span>
+                                    </label>
+
+                                    @error('terms_acknowledgement')
+                                        <div class="field-error" style="margin-top:10px;">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
+                                </div>
                             </div>
 
                             <div class="hp-field" aria-hidden="true">
@@ -1107,6 +1070,7 @@
                             "Sand or Solids Present: " + checkedValue("solidsPresent") + "\n" +
                             "Operating Temperature / Winter Conditions: " + fieldValue("temperature") + "\n" +
                             "Existing Equipment: " + fieldValue("equipment") + "\n\n" +
+                            "Acknowledgement: Accepted Terms of Use, Privacy Policy, and technical disclaimer.\n\n" +
                             "Application / Problem:\n" + fieldValue("notes");
                     }
                 });

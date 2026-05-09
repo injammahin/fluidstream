@@ -1,1259 +1,1080 @@
 @extends('layouts.app')
 
-@section('title', 'About Fluidstream | GHG Reduction and Production Optimization Solutions')
-
 @section('content')
     <style>
         :root {
-            --fs-blue: #0018dc;
-            --fs-blue-dark: #0012b9;
-            --fs-light-blue: #15d1ff;
-            --fs-ink: #07111f;
-            --fs-muted: #5b6677;
-            --fs-soft: #f5f7fb;
-            --fs-soft-2: #eef3fb;
-            --fs-line: #dce3ee;
-            --fs-dark: #061226;
-            --fs-dark-2: #0e1930;
-            --fs-white: #ffffff;
+            --blue: #0018dc;
+            --cyan: #15d1ff;
+            --ink: #07111f;
+            --muted: #52667a;
+            --line: #d9e6ff;
+            --soft: #f5f7fb;
+            --white: #ffffff;
+            --shadow: 0 18px 44px rgba(13, 32, 84, .06);
+            --shadow-hover: 0 24px 54px rgba(0, 24, 220, .12);
+            --max: 1200px;
         }
 
-
-
-        a {
-            color: inherit;
+        .fs-about-page,
+        .fs-about-page * {
+            box-sizing: border-box;
         }
 
-
-
-        .fs-chevron {
-            width: 7px;
-            height: 7px;
-            border-right: 2px solid currentColor;
-            border-bottom: 2px solid currentColor;
-            transform: rotate(45deg) translateY(-2px);
-        }
-
-        .fs-actions {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-
-        .fs-search {
-            width: 38px;
-            height: 38px;
-            position: relative;
-            display: block;
-        }
-
-        .fs-search::before {
-            content: "";
-            position: absolute;
-            width: 16px;
-            height: 16px;
-            border: 2px solid var(--fs-blue);
-            border-radius: 50%;
-            left: 8px;
-            top: 7px;
-        }
-
-        .fs-search::after {
-            content: "";
-            position: absolute;
-            width: 8px;
-            height: 2px;
-            background: var(--fs-blue);
-            transform: rotate(45deg);
-            right: 7px;
-            bottom: 10px;
-        }
-
-        .fs-contact {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-            color: var(--fs-ink);
-            font-size: .9rem;
-            font-weight: 900;
-        }
-
-        .fs-contact::after {
-            content: "→";
-            width: 38px;
-            height: 38px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--fs-blue);
-            color: #fff;
-            transition: transform .22s ease, background .22s ease;
-        }
-
-        .fs-contact:hover {
-            color: var(--fs-blue);
-        }
-
-        .fs-contact:hover::after {
-            transform: translateX(3px);
-            background: var(--fs-blue-dark);
-        }
-
-        .fs-mobile-toggle {
-            display: none;
-            width: 44px;
-            height: 44px;
-            border: 1px solid rgba(220, 227, 238, .96);
-            background: #fff;
-            color: var(--fs-blue);
-            cursor: pointer;
-        }
-
-        .fs-mobile-toggle span {
-            width: 20px;
-            height: 2px;
-            display: block;
-            margin: 5px auto;
-            border-radius: 999px;
-            background: currentColor;
-        }
-
-        .fs-hero {
-            position: relative;
+        .fs-about-page {
+            color: var(--ink);
+            background: #ffffff;
             overflow: hidden;
-            background: #0018dc;
-            color: #fff;
         }
 
-        .fs-hero::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background-image:
-                linear-gradient(rgba(255, 255, 255, .055) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, .055) 1px, transparent 1px);
-            background-size: 54px 54px;
-            mask-image: linear-gradient(90deg, rgba(0, 0, 0, .75), transparent 86%);
-            pointer-events: none;
-        }
-
-        .fs-hero::after {
-            content: "";
-            position: absolute;
-            right: -160px;
-            top: 50%;
-            width: min(54vw, 660px);
-            height: min(54vw, 660px);
-            transform: translateY(-50%);
-            border-radius: 999px;
-            background:
-                radial-gradient(circle, rgba(21, 209, 255, .22) 0 1px, transparent 2px),
-                conic-gradient(from 210deg, rgba(21, 209, 255, .32), rgba(255, 255, 255, .05), rgba(0, 24, 220, .42), rgba(21, 209, 255, .32));
-            background-size: 24px 24px, auto;
-            opacity: .72;
-            mask-image: radial-gradient(circle, rgba(0, 0, 0, .95), transparent 68%);
-            pointer-events: none;
-        }
-
-        .fs-wrap {
-            position: relative;
-            z-index: 1;
-            max-width: 1200px;
+        .fs-about-wrap {
+            width: min(var(--max), calc(100% - 40px));
             margin: 0 auto;
         }
 
-        .fs-hero-grid {
-            display: grid;
-            grid-template-columns: minmax(0, .95fr) minmax(330px, .52fr);
-            gap: clamp(32px, 5vw, 76px);
-            align-items: center;
+        .gray {
+            background: #f4f6f8 !important;
         }
 
-        .fs-eyebrow {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 20px;
-            color: #ffff;
-            font-size: .78rem;
-            font-weight: 850;
-            letter-spacing: .15em;
-            text-transform: uppercase;
-        }
-
-        .fs-hero h1 {
-            margin: 0;
-            max-width: 820px;
-            font-size: 54px;
-            line-height: .92;
-            letter-spacing: -.07em;
-            font-weight: 880;
-        }
-
-        /* .fs-hero h1 span {
-                                                                                                                                                                                                                                                                                                                                                                                    color: var(--fs-light-blue);
-                                                                                                                                                                                                                                                                                                                                                                                } */
-
-        .fs-hero-copy {
-            max-width: 720px;
-            margin-top: 24px;
-            color: rgba(255, 255, 255, 0.992);
-            font-size: 19px;
-            line-height: 1.62;
-        }
-
-        .fs-hero-actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 14px;
-            margin-top: 34px;
-        }
-
-        .fs-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 50px;
-            padding: 0 22px;
-            text-decoration: none;
-            font-size: .92rem;
-            font-weight: 880;
-            transition: transform .22s ease, box-shadow .22s ease, background .22s ease;
-        }
-
-        .fs-btn-primary {
-            color: var(--fs-blue);
-            background: #fff;
-            box-shadow: 0 18px 40px rgba(0, 0, 0, .22);
-            border-radius: 35px;
-        }
-
-        .fs-btn-primary-1 {
-            color: var(--fs-blue);
-            background: #fff;
-            border: 1px solid #000000;
-            border-radius: 35px;
-        }
-
-        .fs-btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 24px 54px rgba(0, 0, 0, .28);
-        }
-
-        .fs-btn-secondary {
-            color: #fff;
-            border: 1px solid rgba(255, 255, 255, .30);
-            background: rgba(255, 255, 255, .07);
-            backdrop-filter: blur(8px);
-            border-radius: 35px;
-        }
-
-        .fs-btn-secondary-1 {
-            color: rgb(2 6 23 / 0.7);
-            border: 1px solid rgb(2 6 23 / 0.7);
-            background: rgba(255, 255, 255, .07);
-            backdrop-filter: blur(8px);
-            border-radius: 35px;
-        }
-
-        .fs-btn-secondary:hover {
-            transform: translateY(-2px);
-            background: rgba(255, 255, 255, .12);
-        }
-
-        .fs-hero-card {
-            position: relative;
-            padding: 26px;
-            background: rgba(255, 255, 255, .10);
-            border: 1px solid rgba(255, 255, 255, .20);
-            box-shadow: 0 28px 80px rgba(0, 0, 0, .24);
-            backdrop-filter: blur(14px);
-        }
-
-        .fs-hero-card h2 {
-            margin: 0;
-            font-size: 1.25rem;
-            line-height: 1.2;
-            letter-spacing: -.025em;
-        }
-
-        .fs-hero-card p {
-            margin: 12px 0 0;
-            color: rgb(255, 255, 255);
-            line-height: 1.55;
-            font-size: .95rem;
-        }
-
-        .fs-meta-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 12px;
-            margin-top: 22px;
-        }
-
-        .fs-meta-card {
-            padding: 14px;
-            background: rgba(255, 255, 255, .10);
-            border: 1px solid rgba(255, 255, 255, .12);
-        }
-
-        .fs-meta-card strong {
+        .fs-about-kicker {
             display: block;
-            color: #fff;
-            font-size: .98rem;
-            margin-bottom: 4px;
-        }
-
-        .fs-meta-card span {
-            color: rgb(255, 255, 255);
-            font-size: .84rem;
-            line-height: 1.4;
-        }
-
-
-
-        .fs-section.is-soft {
-            background: #f4f6f8;
-        }
-
-        .fs-section.is-dark {
-            background:
-                radial-gradient(circle at 86% 12%, rgba(21, 209, 255, .18), transparent 30%),
-                linear-gradient(135deg, var(--fs-dark), #091a44 70%, #0018dc 145%);
-            color: #fff;
-        }
-
-        .fs-split {
-            display: grid;
-            grid-template-columns: minmax(0, .85fr) minmax(360px, .65fr);
-            gap: clamp(34px, 5vw, 76px);
-            align-items: start;
-        }
-
-        .fs-section-label {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 18px;
-            color: var(--fs-blue);
-            font-size: .78rem;
-            font-weight: 850;
-            letter-spacing: .15em;
+            margin: 0 0 10px;
+            color: var(--blue);
+            font-size: 13px;
+            line-height: 1.2;
+            font-weight: 900;
+            letter-spacing: .18em;
             text-transform: uppercase;
         }
 
-        .fs-section.is-dark .fs-section-label {
-            color: var(--fs-light-blue);
-        }
-
-        .fs-section-label::before {
-            content: "";
-            width: 34px;
-            height: 2px;
-            background: currentColor;
-        }
-
-        .fs-section h2 {
-            margin: 0 0 16px;
+        .fs-about-page h2 {
+            margin: 0;
             font-size: clamp(1.9rem, 3vw, 3rem);
             line-height: 1.05;
             letter-spacing: -.04em;
-            max-width: 23ch;
-            color: #1f1f21;
+            max-width: 24ch;
+            color: var(--text);
         }
 
-        .fs-section h2 span {
-            color: var(--fs-blue);
+        .fs-about-page .lead {
+            padding: 4px;
+            text-align: justify;
+            max-width: 59ch;
+            margin: 6px 0 0;
+            /* color: var(--muted); */
+            /* font-size: 1.20rem; */
+            line-height: 1.65;
+            /* font-weight: 500; */
+            opacity: 1;
         }
 
-        .fs-section.is-dark h2 span {
-            color: var(--fs-light-blue);
+        .fs-about-section-head {
+            width: min(50%, 660px);
+            margin-bottom: 34px;
         }
 
-        .fs-section p {
-            /* margin: 0 0 30px !important; */
-            max-width: 59ch !important;
-            font-size: 16px !important;
-            color: var(--muted);
+        .fs-about-section-head .lead {
+            max-width: 100%;
         }
 
-        .fs-section.is-dark p {
-            color: rgba(255, 255, 255, .74);
-        }
-
-        .fs-lead {
-            margin-top: 22px;
-            max-width: 780px;
-            font-size: 1.08rem !important;
-        }
-
-        .fs-card-grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 18px;
-        }
-
-        .fs-card-grid.three {
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-        }
-
-        .fs-card {
-            padding: 26px;
-            background: #fff;
-            border: 1px solid rgba(220, 227, 238, .96);
-            box-shadow: 0 18px 44px rgba(7, 17, 31, .06);
-            min-height: 230px;
-            transition: transform .24s ease, box-shadow .24s ease, border-color .24s ease;
-        }
-
-        .fs-card:hover {
-            transform: translateY(-4px);
-            border-color: rgba(0, 24, 220, .28);
-            box-shadow: 0 24px 56px rgba(7, 17, 31, .10);
-        }
-
-        .fs-card-number {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 42px;
-            height: 42px;
-            margin-bottom: 18px;
-            background: rgba(0, 24, 220, .08);
-            color: var(--fs-blue);
-            font-weight: 950;
-        }
-
-        .fs-card h3 {
-            margin: 0 0 12px;
-            font-size: 1.28rem;
-            line-height: 1.14;
-            letter-spacing: -.035em;
-        }
-
-        .fs-card p {
-            margin: 0;
-            font-size: .95rem;
-            line-height: 1.58;
-        }
-
-        .fs-outcome-card {
-            position: relative;
-            overflow: hidden;
-            /* min-height: 310px; */
-            padding: 34px;
-            background: #fff;
-            border: 1px solid rgba(220, 227, 238, .96);
-            box-shadow: 0 22px 60px rgba(7, 17, 31, .08);
-        }
-
-        .fs-tech::after,
-        .fs-about-exact-proof::after,
-        .fs-outcome-card::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background-color: #0018dc;
-            transform: scaleX(0);
-            /* Start with a scaleX of 0 (hidden) */
-            transform-origin: left;
-            /* Make the scale start from the left */
-            transition: transform 0.3s ease;
-            /* Smooth transition */
-            z-index: 1;
-        }
-
-        .fs-about-exact-proof:hover:after,
-        .fs-tech:hover::after,
-        .fs-outcome-card:hover:after {
-            transform: scaleX(1);
-
-        }
-
-        .fs-about-exact-proof:hover,
-        .fs-tech:hover,
-        .fs-outcome-card:hover {
-            transform: translateY(-3px);
-            border-color: #0018dc !important;
-            /* box-shadow: 0 18px 36px rgba(16, 42, 67, .08); */
-            background: #ffffff;
-
-        }
-
-        .fs-outcome-card h3 {
-            margin: 0 0 14px;
-            font-size: clamp(1.55rem, 2.1vw, 2.15rem);
-            line-height: 1.03;
-            letter-spacing: -.055em;
-        }
-
-        .fs-proof-band {
-            margin-top: 42px;
-            padding: 28px;
-            background: #0018dc;
-            color: #fff;
-            display: grid;
-            grid-template-columns: minmax(0, .9fr) auto;
-            gap: 28px;
-            align-items: center;
-        }
-
-        .fs-proof-band strong {
-            display: block;
-            margin-bottom: 8px;
-            font-size: 1.18rem;
-            letter-spacing: -.025em;
-        }
-
-        .fs-proof-band p {
-            margin: 0;
-            color: rgba(255, 255, 255, .72);
-            max-width: 780px;
-        }
-
-        .fs-proof-band a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 48px;
-            padding: 0 20px;
-            background: #fff;
-            color: var(--fs-blue);
-            text-decoration: none;
-            font-weight: 900;
-            white-space: nowrap;
-        }
-
-        .fs-tech-panel {
-            padding: 34px;
-            background: rgba(255, 255, 255, .08);
-            border: 1px solid rgba(19, 18, 18, 0.16);
-        }
-
-        .fs-tech-list {
-            display: grid;
-            gap: 14px;
-            margin-top: 22px;
-        }
-
-        .fs-tech-item {
-            display: grid;
-            grid-template-columns: 11px 1fr;
-            gap: 12px;
-            align-items: start;
-            padding: 16px;
-            background: #ffffffc2;
-            border: 1px solid rgba(30, 29, 29, 0.12);
-            color: rgba(0, 0, 0, 0.76);
-            line-height: 1.5;
-            font-weight: 650;
-        }
-
-        .fs-tech-item::before {
-            content: "";
-            width: 8px;
-            height: 8px;
-            margin-top: 7px;
-            border-radius: 999px;
-            background: var(--fs-light-blue);
-            box-shadow: 0 0 0 5px rgba(21, 209, 255, .15);
-        }
-
-        .fs-tech-item strong {
-            color: #000000;
-        }
-
-        .fs-cta {
-            position: relative;
-            overflow: hidden;
-            background: #f5f6f8;
-            color: rgb(2 6 23 / 0.7);
-            text-align: center;
-        }
-
-        .fs-cta::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background-image:
-                linear-gradient(rgba(255, 255, 255, .045) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, .045) 1px, transparent 1px);
-            background-size: 52px 52px;
-            pointer-events: none;
-        }
-
-        .fs-cta .fs-wrap {
-            max-width: 900px;
-        }
-
-        .fs-cta h2 {
-            margin: 0;
-            font-size: clamp(1.5rem, 3.5vw, 3.65rem);
-            line-height: .98;
-            letter-spacing: -.06em;
-        }
-
-        .fs-cta p {
-            margin: 22px auto 0;
-            max-width: 740px;
-            color: rgb(2 6 23 / 0.7);
-            font-size: 1.05rem;
-            line-height: 1.62;
-        }
-
-        .fs-cta-actions {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 14px;
-            margin-top: 32px;
-        }
-
-        .fs-footer {
-            background: #050b18;
-            color: #fff;
-            padding: 52px 24px 34px;
-        }
-
-        .fs-footer-grid {
-            max-width: 1180px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: minmax(260px, .8fr) repeat(3, minmax(140px, .32fr));
-            gap: 38px;
-        }
-
-        .fs-footer img {
-            width: 230px;
-            height: auto;
-            display: block;
-            filter: brightness(0) invert(1);
-            opacity: .95;
-        }
-
-        .fs-footer p {
-            max-width: 360px;
-            color: rgba(255, 255, 255, .62);
-            line-height: 1.58;
-            margin-top: 18px;
-            font-size: .95rem;
-        }
-
-        .fs-footer h3 {
-            margin: 0 0 14px;
-            font-size: .78rem;
-            letter-spacing: .14em;
-            text-transform: uppercase;
-            color: var(--fs-light-blue);
-        }
-
-        .fs-footer a {
-            display: block;
-            color: rgba(255, 255, 255, .72);
-            text-decoration: none;
-            margin: 9px 0;
-            font-size: .92rem;
-            transition: color .2s ease;
-        }
-
-        .fs-footer a:hover {
-            color: #fff;
-        }
-
-        .fs-footer-bottom {
-            max-width: 1180px;
-            margin: 38px auto 0;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, .12);
-            color: rgba(255, 255, 255, .48);
-            font-size: .85rem;
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        @media (max-width: 1120px) {
-
-            .fs-nav,
-            .fs-search,
-            .fs-contact {
-                display: none;
-            }
-
-            .fs-main-inner {
-                grid-template-columns: auto auto;
-            }
-
-            .fs-mobile-toggle {
-                display: block;
-            }
-
-            .fs-top-inner {
-                justify-content: center;
-                gap: 18px;
-            }
-        }
-
-        @media (max-width: 920px) {
-
-            .fs-hero-grid,
-            .fs-split {
-                grid-template-columns: 1fr;
-            }
-
-            .fs-card-grid,
-            .fs-card-grid.three {
-                grid-template-columns: 1fr;
-            }
-
-            .fs-proof-band {
-                grid-template-columns: 1fr;
-            }
-
-            .fs-footer-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        @media (max-width: 640px) {
-            .fs-top-inner {
-                min-height: 42px;
-                justify-content: flex-start;
-                overflow-x: auto;
-                padding: 0 16px;
-            }
-
-            .fs-main-inner {
-                min-height: 70px;
-                padding: 0 16px;
-            }
-
-            .fs-logo {
-                min-width: 188px;
-            }
-
-            .fs-logo img {
-                width: 188px;
-            }
-
-            .fs-hero {
-                padding: 70px 18px 64px;
-            }
-
-            .fs-hero h1 {
-                font-size: clamp(2.65rem, 14vw, 4.25rem);
-            }
-
-            .fs-footer-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .fs-footer-bottom {
-                display: block;
-            }
-        }
-
-        .wrap {
-            position: static;
-            z-index: 1;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        /* =========================================
-                                                                                           ABOUT PAGE PREMIUM HERO EXACT STYLE
-                                                                                        ========================================= */
-
-        .fs-about-exact-hero {
-            --fluid-blue: #0018dc;
-            --fluid-cyan: #15d1ff;
-            --ink: #07111f;
-
-            min-height: 760px;
-            /* margin: 32px; */
-            /* border-radius: 30px; */
-            overflow: hidden;
-            position: relative;
-            /* box-shadow: 0 28px 80px rgba(8, 22, 48, .16); */
-            /* background:
-                                                                                    radial-gradient(circle at 82% 18%, rgba(21, 209, 255, .13), transparent 27%),
-                                                                                    radial-gradient(circle at 18% 84%, rgba(0, 24, 220, .11), transparent 34%),
-                                                                                    linear-gradient(135deg, #ffffff 0%, #f7f9fd 44%, #edf2fa 100%); */
-        }
-
-        .fs-about-exact-hero::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background-image:
-                linear-gradient(rgba(0, 24, 220, .055) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 24, 220, .055) 1px, transparent 1px);
-            background-size: 46px 46px;
-            mask-image: linear-gradient(90deg, transparent, #000 18%, #000 72%, transparent);
-            pointer-events: none;
-        }
-
-        .fs-about-exact-inner {
-            position: relative;
-            z-index: 2;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 84px 2px 58px;
-        }
-
-        .fs-about-exact-eyebrow {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 10px 17px;
-            border-radius: 999px;
-            font-size: 13px;
-            font-weight: 850;
-            letter-spacing: .075em;
-            text-transform: uppercase;
-            background: #ffffff;
-            border: 1px solid #dfe6f1;
-            color: #20304a;
-        }
-
-        .fs-about-exact-dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: var(--fluid-cyan);
-            box-shadow: 0 0 20px rgba(21, 209, 255, .65);
-        }
-
-        .fs-about-exact-hero h1 {
-            margin: 24px 0 18px;
-            max-width: 850px;
-            color: var(--ink);
-            font-size: clamp(52px, 6.4vw, 96px);
-            line-height: .94;
-            letter-spacing: -.07em;
-            font-weight: 900;
-        }
-
-        .fs-about-exact-lead {
-            max-width: 760px;
-            margin: 0 0 28px;
-            font-size: clamp(20px, 1.65vw, 26px);
-            line-height: 1.34;
-            font-weight: 520;
-            color: #47546a;
-        }
-
-        .fs-about-exact-actions {
+        .fs-about-btn-row {
             display: flex;
             flex-wrap: wrap;
             gap: 14px;
-            margin: 0 0 38px;
+            margin-top: 30px;
         }
 
-        .fs-about-exact-btn {
-            min-height: 54px;
+        .fs-about-btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 0 25px;
+            min-height: 52px;
+            padding: 0 23px;
             border-radius: 999px;
-            text-decoration: none;
-            font-weight: 850;
+            font-size: 15px;
             line-height: 1;
+            font-weight: 900;
+            text-decoration: none;
             transition:
                 transform .22s ease,
                 box-shadow .22s ease,
                 background .22s ease,
+                color .22s ease,
                 border-color .22s ease;
         }
 
-        .fs-about-exact-btn:hover {
+        .fs-about-btn-primary {
+            color: var(--blue);
+            background: #ffffff;
+            border: 1px solid #ffffff;
+            box-shadow: 0 18px 38px rgba(0, 0, 0, .20);
+        }
+
+        .fs-about-btn-primary:hover {
+            color: #ffffff;
+            background: var(--blue);
+            border-color: var(--blue);
             transform: translateY(-2px);
         }
 
-        .fs-about-exact-btn.primary {
-            background: var(--fluid-blue);
+        .fs-about-btn-secondary {
+            color: #282828;
+            background: rgba(255, 255, 255, .08);
+            border: 1px solid rgba(42, 42, 42, 0.3);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .fs-about-btn-secondary-1 {
             color: #ffffff;
-            box-shadow: 0 18px 36px rgba(0, 24, 220, .16);
+            background: rgba(255, 255, 255, .08);
+            border: 1px solid rgba(217, 217, 217, 0.3);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
         }
 
-        .fs-about-exact-btn.primary:hover {
-            background: #0012b9;
-            box-shadow: 0 22px 46px rgba(0, 24, 220, .22);
+        .fs-about-btn-secondary-1 {
+            color: #f6f6f6;
+            background: rgba(255, 255, 255, .08);
+            border: 1px solid rgba(188, 188, 188, 0.3);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
         }
 
-        .fs-about-exact-btn.secondary {
+        .fs-about-btn-secondary:hover {
+            color: #282828;
+            background: rgba(255, 255, 255, .08);
+            border: 1px solid rgba(42, 42, 42, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .fs-about-btn-blue {
+            color: #ffffff;
+            background: var(--blue);
+            border: 1px solid var(--blue);
+            box-shadow: 0 16px 32px rgba(0, 24, 220, .18);
+        }
+
+        .fs-about-btn-blue:hover {
+            color: #ffffff;
+            background: #00108f;
+            border-color: #00108f;
+            transform: translateY(-2px);
+            box-shadow: 0 20px 40px rgba(0, 24, 220, .24);
+        }
+
+        .fs-about-btn-outline {
+            color: var(--blue);
             background: #ffffff;
-            color: var(--ink);
-            border: 1px solid #d9e1ee;
+            border: 1px solid rgba(0, 24, 220, .24);
         }
 
-        .fs-about-exact-btn.secondary:hover {
-            color: var(--fluid-blue);
-            border-color: var(--fluid-blue);
+        .fs-about-btn-outline:hover {
+            color: var(--blue);
+            border-color: var(--blue);
+            transform: translateY(-2px);
+            box-shadow: 0 16px 34px rgba(16, 42, 67, .10);
         }
 
-        .fs-about-exact-proof-grid {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 14px;
-            max-width: 980px;
-        }
+        /* ================================
+                                                                                                                                       COMMON CARD HOVER STYLE
+                                                                                                                                    ================================ */
 
-        .fs-about-exact-proof {
-            border-radius: 4px;
-            padding: 21px 22px 20px;
+        .fs-about-hover-card {
+            position: relative;
+            overflow: hidden;
+            isolation: isolate;
+            border: 1px solid var(--line);
             background: #ffffff;
-            border: 1px solid #dfe6f1;
-            box-shadow: 0 18px 42px rgba(10, 28, 60, .08);
+            border-radius: 7px;
+            box-shadow: var(--shadow);
             transition:
-                transform .24s ease,
-                border-color .24s ease,
-                box-shadow .24s ease;
+                transform .28s ease,
+                border-color .28s ease,
+                box-shadow .28s ease,
+                background .28s ease;
         }
 
-        .fs-about-exact-proof:hover {
-            transform: translateY(-3px);
-            border-color: rgba(0, 24, 220, .28);
-            box-shadow: 0 24px 52px rgba(10, 28, 60, .11);
+        .fs-about-hover-card::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            height: 4px;
+            background: var(--blue);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform .28s ease;
+            z-index: 2;
         }
 
-        .fs-about-exact-proof strong {
+        .fs-about-hover-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--blue);
+            background: #ffffff;
+            box-shadow: var(--shadow-hover);
+        }
+
+        .fs-about-hover-card:hover::after {
+            transform: scaleX(1);
+        }
+
+        .fs-about-hover-card>* {
+            position: relative;
+            z-index: 1;
+        }
+
+        .fs-about-card {
+            padding: 28px;
+        }
+
+        .fs-about-card h3,
+        .fs-about-solution-card h3,
+        .fs-about-quote h3 {
+            margin: 0 0 14px;
+            color: #232325;
+            font-size: 25px;
+            line-height: 1.12;
+            letter-spacing: -.035em;
+            font-weight: 600;
+        }
+
+        .fs-about-card p,
+        .fs-about-solution-card p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 16px;
+            line-height: 1.72;
+        }
+
+        .fs-about-card ul {
+            margin: 20px 0 0;
+            padding: 0;
+            list-style: none;
+            display: grid;
+            gap: 12px;
+        }
+
+        .fs-about-card li {
+            position: relative;
+            padding-left: 24px;
+            color: #334155;
+            font-size: 15.5px;
+            line-height: 1.58;
+            font-weight: 600;
+        }
+
+        .fs-about-card li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 9px;
+            width: 8px;
+            height: 8px;
+            border-radius: 999px;
+            background: var(--blue);
+            box-shadow: 0 0 0 5px rgba(0, 24, 220, .08);
+        }
+
+        /* ================================
+                                                                                                                                       HERO
+                                                                                                                                    ================================ */
+
+        .fs-about-hero {
+            position: relative;
+            isolation: isolate;
+            overflow: hidden;
+            min-height: 680px;
+            display: flex;
+            align-items: center;
+            color: #ffffff;
+            background: #07111f;
+        }
+
+        .fs-about-hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -3;
+            background:
+                linear-gradient(90deg,
+                    rgba(0, 8, 30, .92) 0%,
+                    rgba(0, 12, 48, .78) 43%,
+                    rgba(0, 16, 60, .38) 76%,
+                    rgba(0, 16, 60, .14) 100%),
+                radial-gradient(circle at 82% 16%, rgba(21, 209, 255, .20), transparent 28%),
+                linear-gradient(135deg, #061226 0%, #0018dc 100%);
+        }
+
+        .fs-about-hero::after {
+            content: "";
+            position: absolute;
+            inset: auto 0 0;
+            height: 160px;
+            z-index: -2;
+            pointer-events: none;
+            background: linear-gradient(180deg, transparent 0%, rgba(6, 18, 38, .78) 100%);
+        }
+
+        .fs-about-hero-grid {
+            width: min(var(--max), calc(100% - 40px));
+            margin: 0 auto;
+            padding: 108px 0 86px;
+            display: grid;
+            grid-template-columns: minmax(0, 760px) minmax(300px, 390px);
+            gap: 54px;
+            align-items: end;
+            position: relative;
+            z-index: 1;
+        }
+
+        .fs-about-hero-kicker {
+            margin: 0 0 16px;
+            color: var(--cyan);
+            font-size: 13px;
+            line-height: 1.2;
+            font-weight: 900;
+            letter-spacing: .13em;
+            text-transform: uppercase;
+        }
+
+        .fs-about-hero-title {
+            margin: 0;
+            max-width: 840px;
+            color: #ffffff;
+            font-size: clamp(46px, 5.4vw, 82px);
+            line-height: .94;
+            letter-spacing: -.075em;
+            font-weight: 850;
+        }
+
+        .fs-about-hero-lead {
+            margin: 24px 0 0;
+            max-width: 760px;
+            color: rgba(255, 255, 255, .84);
+            font-size: clamp(18px, 1.65vw, 23px);
+            line-height: 1.48;
+            font-weight: 450;
+        }
+
+        .fs-about-hero-card {
+            position: relative;
+            overflow: hidden;
+            isolation: isolate;
+            padding: 26px;
+            border-radius: 7px;
+            background: rgba(255, 255, 255, .10);
+            border: 1px solid rgba(255, 255, 255, .18);
+            box-shadow: 0 26px 70px rgba(0, 0, 0, .24);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            transition:
+                transform .28s ease,
+                border-color .28s ease,
+                box-shadow .28s ease,
+                background .28s ease;
+        }
+
+
+        .fs-about-hero-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(21, 209, 255, .42);
+            background: rgba(255, 255, 255, .13);
+            box-shadow: 0 30px 78px rgba(0, 0, 0, .30);
+        }
+
+        .fs-about-hero-card:hover::after {
+            transform: scaleX(1);
+        }
+
+        .fs-about-hero-card h3 {
+            margin: 0 0 18px;
+            color: #ffffff;
+            font-size: 25px;
+            line-height: 1.08;
+            letter-spacing: -.035em;
+            font-weight: 850;
+        }
+
+        .fs-about-proof-grid {
+            display: grid;
+            gap: 12px;
+        }
+
+        .fs-about-proof-item {
+            padding: 15px;
+            border-radius: 7px;
+            border: 1px solid rgba(255, 255, 255, .14);
+            background: rgba(255, 255, 255, .10);
+        }
+
+        .fs-about-proof-item strong {
             display: block;
+            margin-bottom: 5px;
+            color: #ffffff;
             font-size: 18px;
             line-height: 1.15;
             letter-spacing: -.02em;
-            margin-bottom: 8px;
-            color: var(--ink);
+            font-weight: 900;
         }
 
-        .fs-about-exact-proof span {
+        .fs-about-proof-item span {
             display: block;
-            font-size: 14px;
-            line-height: 1.42;
-            color: #5d6878;
+            color: rgba(255, 255, 255, .76);
+            font-size: 13px;
+            line-height: 1.45;
+            font-weight: 650;
         }
 
-        .fs-about-exact-score {
-            position: absolute;
-            right: 58px;
-            top: 58px;
-            width: 210px;
-            border-radius: 9px;
-            padding: 22px;
-            background: #07111f;
-            color: #ffffff;
-            box-shadow: 0 22px 60px rgba(0, 0, 0, .18);
-            z-index: 3;
+        /* ================================
+                                                                                                                                       LAYOUTS
+                                                                                                                                    ================================ */
+
+        .fs-about-two-col {
+            display: grid;
+            grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+            gap: 34px;
+            align-items: start;
         }
 
-        .fs-about-exact-score small {
-            display: block;
-            color: rgba(255, 255, 255, .62);
-            font-weight: 750;
-            text-transform: uppercase;
-            letter-spacing: .08em;
+        .fs-about-grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+            align-items: stretch;
         }
 
-        .fs-about-exact-score b {
-            display: block;
-            font-size: 42px;
-            letter-spacing: -.06em;
-            margin: 8px 0 6px;
+        .fs-about-solution-card {
+            min-height: 270px;
+            display: flex;
+            flex-direction: column;
+            padding: 26px;
+            text-decoration: none;
+        }
+
+        .fs-about-tag {
+            display: inline-flex;
+            align-items: center;
+            align-self: flex-start;
+            min-height: 34px;
+            padding: 0 13px;
+            margin-bottom: 20px;
+            border-radius: 999px;
+            border: 1px solid rgba(0, 24, 220, .14);
+            background: #edf3ff;
+            color: var(--blue);
+            font-size: 12px;
             line-height: 1;
+            font-weight: 900;
+            letter-spacing: .09em;
+            text-transform: uppercase;
         }
 
-        .fs-about-exact-score span {
+        .fs-about-card-link {
+            margin-top: auto;
+            padding-top: 22px;
+            color: var(--blue);
+            font-size: 15px;
+            line-height: 1;
+            font-weight: 900;
+            text-decoration: none;
+        }
+
+        /* ================================
+                                                                                                                                       TECHNOLOGY PLATFORM
+                                                                                                                                    ================================ */
+
+        .fs-about-platform {
+            position: relative;
+            overflow: hidden;
+            isolation: isolate;
+            display: grid;
+            grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
+            gap: 34px;
+            align-items: center;
+            padding: 44px;
+            border-radius: 7px;
+            background: linear-gradient(135deg, #061126 0%, #0018dc 100%);
+            color: #ffffff;
+            box-shadow: 0 28px 80px rgba(0, 24, 220, .20);
+        }
+
+        /* .fs-about-platform::after {
+                                                                                                        content: "";
+                                                                                                        position: absolute;
+                                                                                                        right: -120px;
+                                                                                                        top: -150px;
+                                                                                                        width: 320px;
+                                                                                                        height: 320px;
+                                                                                                        border-radius: 999px;
+                                                                                                        background: rgba(21, 209, 255, .16);
+                                                                                                        pointer-events: none;
+                                                                                                    } */
+
+        .fs-about-platform h2 {
+            color: #ffffff;
+        }
+
+        .fs-about-platform .lead {
+            color: rgba(255, 255, 255, .80);
+        }
+
+        .fs-about-platform-links {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            gap: 14px;
+        }
+
+        .fs-about-platform-link {
+            position: relative;
+            overflow: hidden;
+            display: block;
+            padding: 19px;
+            border-radius: 7px;
+            border: 1px solid rgba(255, 255, 255, .16);
+            background: rgba(255, 255, 255, .08);
+            text-decoration: none;
+            transition:
+                transform .25s ease,
+                border-color .25s ease,
+                background .25s ease;
+        }
+
+        /* 
+                                                                                                        .fs-about-platform-link::after {
+                                                                                                            content: "";
+                                                                                                            position: absolute;
+                                                                                                            left: 0;
+                                                                                                            right: 0;
+                                                                                                            top: 0;
+                                                                                                            height: 4px;
+                                                                                                            background: var(--cyan);
+                                                                                                            transform: scaleX(0);
+                                                                                                            transform-origin: left;
+                                                                                                            transition: transform .25s ease;
+                                                                                                        } */
+
+        .fs-about-platform-link:hover {
+            transform: translateY(-3px);
+            border-color: rgba(21, 209, 255, .46);
+            background: rgba(255, 255, 255, .13);
+        }
+
+        .fs-about-platform-link:hover::after {
+            transform: scaleX(1);
+        }
+
+        .fs-about-platform-link strong {
+            display: block;
+            margin-bottom: 5px;
+            color: #ffffff;
+            font-size: 17px;
+            line-height: 1.25;
+            font-weight: 900;
+        }
+
+        .fs-about-platform-link span {
+            display: block;
+            color: rgba(255, 255, 255, .75);
             font-size: 14px;
-            color: rgba(255, 255, 255, .72);
+            line-height: 1.5;
+            font-weight: 600;
+        }
+
+        /* ================================
+                                                                                                                                       PROOF STRIP
+                                                                                                                                    ================================ */
+
+        .fs-about-proof-strip {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+            align-items: stretch;
+        }
+
+        .fs-about-quote {
+            min-height: 230px;
+            padding: 26px;
+        }
+
+        .fs-about-quote p {
+            margin: 0 0 18px;
+            color: #1b263a;
+            font-size: 18px;
+            line-height: 1.48;
+            letter-spacing: -.02em;
+            font-weight: 500;
+        }
+
+        .fs-about-quote small {
+            display: block;
+            color: var(--muted);
+            font-size: 13px;
             line-height: 1.4;
+            font-weight: 900;
         }
 
-        @media (max-width: 1050px) {
-            .fs-about-exact-hero {
-                margin: 18px;
+        /* ================================
+                                                                                                                                       CTA
+                                                                                                                                    ================================ */
+
+        .fs-about-cta {
+            position: relative;
+            overflow: hidden;
+            isolation: isolate;
+            display: grid;
+            grid-template-columns: minmax(0, 1.1fr) auto;
+            gap: 26px;
+            align-items: center;
+            padding: 0px 0px;
+            border-radius: 7px;
+            background: white;
+            color: #ffffff;
+        }
+
+        /* .fs-about-cta::after {
+                                                                                                    content: "";
+                                                                                                    position: absolute;
+                                                                                                    right: -90px;
+                                                                                                    top: -110px;
+                                                                                                    width: 260px;
+                                                                                                    height: 260px;
+                                                                                                    border-radius: 999px;
+                                                                                                    background: rgba(21, 209, 255, .16);
+                                                                                                    pointer-events: none;
+                                                                                                } */
+
+        .fs-about-cta h2 {
+            max-width: 600px !important;
+            color: #0f0f0f;
+        }
+
+        .fs-about-cta .lead {
+            max-width: 500px !important;
+            color: rgba(12, 12, 12, 0.78);
+            max-width: 760px;
+        }
+
+        .fs-about-cta .fs-about-btn-row {
+            position: relative;
+            z-index: 1;
+            justify-content: flex-end;
+            margin-top: 0;
+        }
+
+        @media (max-width: 1080px) {
+            .fs-about-section-head {
+                width: 100%;
+            }
+
+            .fs-about-hero-grid,
+            .fs-about-two-col,
+            .fs-about-platform,
+            .fs-about-cta {
+                grid-template-columns: 1fr;
+            }
+
+            .fs-about-hero {
                 min-height: auto;
-                border-radius: 24px;
             }
 
-            .fs-about-exact-inner {
-                padding: 42px 28px;
+            .fs-about-hero-grid {
+                padding: 86px 0 68px;
             }
 
-            .fs-about-exact-proof-grid {
+            .fs-about-hero-card {
+                max-width: 650px;
+            }
+
+            .fs-about-grid-3,
+            .fs-about-proof-strip {
                 grid-template-columns: 1fr;
             }
 
-            .fs-about-exact-score {
-                display: none;
+            .fs-about-cta .fs-about-btn-row {
+                justify-content: flex-start;
+                margin-top: 22px;
             }
         }
 
-        @media (max-width: 640px) {
-            .fs-about-exact-hero {
-                margin: 12px;
-                border-radius: 20px;
+        @media (max-width: 700px) {
+
+            .fs-about-wrap,
+            .fs-about-hero-grid {
+                width: min(100%, calc(100% - 28px));
             }
 
-            .fs-about-exact-inner {
-                padding: 34px 20px;
+            .fs-about-section {
+                padding: 58px 0;
             }
 
-            .fs-about-exact-hero h1 {
-                font-size: clamp(42px, 14vw, 62px);
+            .fs-about-hero-grid {
+                padding: 70px 0 56px;
             }
 
-            .fs-about-exact-actions {
-                display: grid;
-                grid-template-columns: 1fr;
+            .fs-about-hero-title {
+                font-size: 42px;
+                line-height: .98;
             }
 
-            .fs-about-exact-btn {
+            .fs-about-hero-lead,
+            .fs-about-page .lead {
+                font-size: 16px;
+            }
+
+            .fs-about-page h2 {
+                font-size: 38px;
+            }
+
+            .fs-about-platform,
+            .fs-about-cta {
+                padding: 28px 22px;
+            }
+
+            .fs-about-btn-row,
+            .fs-about-cta .fs-about-btn-row {
+                flex-direction: column;
+            }
+
+            .fs-about-btn {
                 width: 100%;
             }
         }
     </style>
 
+    <main class="fs-about-page">
 
-    <main>
-        <section class="fs-about-exact-hero">
-            <div class="fs-about-exact-score">
-                <small>Recommended</small>
-                <b>9.5/10</b>
-                <span>Best balance of premium, readable, engineering-forward, and credible.</span>
-            </div>
+        {{-- HERO --}}
+        <section class="fs-about-hero">
+            <div class="fs-about-hero-grid">
+                <div>
 
-            <div class="fs-about-exact-inner">
-                <div class="fs-about-exact-copy-area">
-                    <h1>More production. Fewer emissions. From the same field.</h1>
+                    <h1 class="fs-about-hero-title">
+                        Engineering compression systems for real-world oilfield conditions.
+                    </h1>
 
-                    <p class="fs-about-exact-lead">
-                        Fluidstream helps upstream producers reduce emissions and improve production economics with field
-                        solutions built for wet gas, liquids, unstable flow, and remote operation.
+                    <p class="fs-about-hero-lead">
+                        Fluidstream helps upstream producers reduce methane emissions, improve production performance,
+                        and recover valuable gas with patented multiphase compression systems built for wet gas, liquids,
+                        unstable flow, remote sites, and harsh field environments.
                     </p>
 
-                    <div class="fs-about-exact-actions">
-                        <a class="fs-about-exact-btn primary" href="{{ url('/technical-review') }}">
+                    <div class="fs-about-btn-row">
+                        <a class="fs-about-btn fs-about-btn-primary" href="{{ url('/case-studies') }}">
+                            Explore Field Results
+                        </a>
+
+                        <a class="fs-about-btn fs-about-btn-secondary-1" href="{{ url('/technical-review') }}">
                             Request Technical Review
                         </a>
-
-                        <a class="fs-about-exact-btn secondary" href="{{ url('/case-studies') }}">
-                            Explore Case Studies
-                        </a>
-                    </div>
-
-                    <div class="fs-about-exact-proof-grid">
-                        <div class="fs-about-exact-proof">
-                            <strong>Calgary, Alberta, Canada</strong>
-                            <span>Built for Western Canadian field conditions and broader upstream applications.</span>
-                        </div>
-
-                        <div class="fs-about-exact-proof">
-                            <strong>Founded 2010</strong>
-                            <span>Focused on practical emissions reduction and production optimization solutions.</span>
-                        </div>
-
-                        <div class="fs-about-exact-proof">
-                            <strong>Patented multiphase platform</strong>
-                            <span>Core IP includes U.S. Patent US11098709B2 and Canadian Patent CA2843321C.</span>
-                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <section class="fs-section py-12">
-            <div class="fs-wrap fs-split">
-                <div>
-                    <div class="kicker mb-2">Why Fluidstream Exists</div>
-                    <h2>Conventional compression was not built for <span>real field conditions.</span></h2>
-                </div>
-                <div>
-                    <p>
-                        Many upstream emissions reduction and production optimization opportunities remain undeveloped
-                        because
-                        conventional compression was not designed for the conditions producers actually face.
-                    </p>
-                    <p>
-                        Wet gas, liquid slugs, unstable flow, extreme cold, remote unattended operation, and tight project
-                        economics
-                        can make conventional solutions difficult to justify or sustain.
-                    </p>
-                    <p>
-                        Fluidstream exists to close that gap. By handling the full process fluid stream within the
-                        compression chamber
-                        itself, Fluidstream reduces or eliminates separation infrastructure that can prevent projects from
-                        moving
-                        forward.
-                    </p>
-                </div>
-            </div>
-        </section>
+                <aside class="fs-about-hero-card">
+                    <h3>Built around operating outcomes</h3>
 
-        <section class="fs-section is-soft py-12">
-            <div class="fs-wrap">
-                <div class="kicker mb-2">Producer Outcomes</div>
-                <h2>What we help producers <span>achieve.</span></h2>
-                <p class="fs-lead">
-                    Fluidstream is focused on field solutions that connect environmental performance with economic value.
-                </p>
-
-                <div class="fs-card-grid" style="margin-top:34px;">
-                    <article class="fs-outcome-card">
-                        <h3>GHG Emissions Reduction</h3>
-                        <p>
-                            Enable economically viable vapor recovery and gas capture projects where conventional systems
-                            struggle with
-                            reliability, capital cost, or field conditions.
-                        </p>
-                    </article>
-
-                    <article class="fs-outcome-card">
-                        <h3>Production Optimization</h3>
-                        <p>
-                            Reduce backpressure, restore production, and improve asset performance in wells and facilities
-                            constrained
-                            by conventional compression limitations.
-                        </p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="fs-section py-12">
-            <div class="fs-wrap">
-                <div class="kicker mb-2">Engineering Philosophy</div>
-                <h2>Designed around the field, not the <span>catalogue.</span></h2>
-                <p class="fs-lead">
-                    Fluidstream designs around the belief that real field conditions—not ideal process assumptions—should
-                    govern
-                    equipment design.
-                </p>
-                <ul class="fs-philosophy-list" style="margin-top:34px;padding:0;list-style:none;display:grid;gap:16px;">
-                    <li style="padding:18px 24px;background:var(--fs-soft);border-left:4px solid var(--fs-blue);">
-                        <strong style="display:block;font-size:1rem;margin-bottom:6px;color:var(--fs-ink);">GHG reduction
-                            should be
-                            economically viable.</strong>
-                        <span style="font-size:.95rem;color:var(--fs-muted);line-height:1.6;">Emissions reduction projects
-                            should make
-                            sense at the field level, not only under ideal assumptions. The right technology can improve the
-                            economic
-                            threshold.</span>
-                    </li>
-                    <li style="padding:18px 24px;background:var(--fs-soft);border-left:4px solid var(--fs-blue);">
-                        <strong style="display:block;font-size:1rem;margin-bottom:6px;color:var(--fs-ink);">Maintenance
-                            burden
-                            reflects design limitations, not operational reality.</strong>
-                        <span style="font-size:.95rem;color:var(--fs-muted);line-height:1.6;">Recurring maintenance,
-                            operator visits,
-                            and unplanned shutdowns often indicate that a system was not designed for its operating
-                            environment.</span>
-                    </li>
-                    <li style="padding:18px 24px;background:var(--fs-soft);border-left:4px solid var(--fs-blue);">
-                        <strong style="display:block;font-size:1rem;margin-bottom:6px;color:var(--fs-ink);">Remote
-                            installations
-                            require autonomous operation.</strong>
-                        <span style="font-size:.95rem;color:var(--fs-muted);line-height:1.6;">Remote and unattended
-                            installations need
-                            systems that can respond to changing inlet conditions and upset events without constant operator
-                            intervention.</span>
-                    </li>
-                    <li style="padding:18px 24px;background:var(--fs-soft);border-left:4px solid var(--fs-blue);">
-                        <strong style="display:block;font-size:1rem;margin-bottom:6px;color:var(--fs-ink);">The best
-                            solution fits the
-                            actual field.</strong>
-                        <span style="font-size:.95rem;color:var(--fs-muted);line-height:1.6;">Inlet composition, flow
-                            variability,
-                            ambient temperature, access constraints, and economics should define the solution—not a product
-                            catalogue.</span>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="fs-section is-soft py-12">
-            <div class="wrap fs-split">
-                <div>
-                    <div class="kicker mb-2">How We Deliver</div>
-                    <h2>Patented technology that changes the <span>economic threshold.</span></h2>
-                    <p class="fs-lead">
-                        Fluidstream’s solutions are enabled by a patented multiphase compression platform that handles gas,
-                        liquids,
-                        and mixed-phase flow within the compression chamber itself.
-                    </p>
-                </div>
-
-                <aside class="fs-tech-panel">
-                    <div class="fs-tech-list">
-                        <div class="fs-tech-item fs-tech ">
-                            <span><strong>Reduced separation dependence</strong> in wet gas and multiphase applications
-                                where
-                                conventional systems require upstream conditioning.</span>
+                    <div class="fs-about-proof-grid">
+                        <div class="fs-about-proof-item">
+                            <strong>Vapor recovery</strong>
+                            <span>Capture tank vapors and reduce routine venting.</span>
                         </div>
-                        <div class="fs-tech-item fs-tech">
-                            <span><strong>Sealed gland design</strong> with integrated electronic seal-wear
-                                detection.</span>
+
+                        <div class="fs-about-proof-item">
+                            <strong>Casing gas compression</strong>
+                            <span>Reduce backpressure and support oil production.</span>
                         </div>
-                        <div class="fs-tech-item fs-tech">
-                            <span><strong>Autonomous upset response</strong> for changing inlet conditions, variable flow,
-                                and
-                                cold-weather operation.</span>
-                        </div>
-                        <div class="fs-tech-item fs-tech">
-                            <span><strong>Core IP</strong> includes U.S. Patent US11098709B2 and Canadian Patent
-                                CA2843321C.</span>
+
+                        <div class="fs-about-proof-item">
+                            <strong>Multiphase production</strong>
+                            <span>Handle gas and liquids together without separator dependency.</span>
                         </div>
                     </div>
                 </aside>
             </div>
         </section>
 
-        <section class="fs-section py-12">
-            <div class="fs-wrap">
-                <div class="kicker mb-2">Field-Proven Performance</div>
-                <h2>Documented deployments across <span>real operating conditions.</span></h2>
-                <p class="fs-lead">
-                    Fluidstream has documented field deployments across Western Canadian vapor recovery, casing gas
-                    compression, and
-                    production optimization applications.
-                </p>
+        {{-- WHY FLUIDSTREAM EXISTS --}}
+        <section class="fs-about-section py-12">
+            <div class="fs-about-wrap fs-about-two-col">
+                <div>
+                    <p class="fs-about-kicker">Why Fluidstream Exists</p>
 
-                <div class="fs-proof-band">
-                    <div>
-                        <strong>Field-proven applications are documented.</strong>
+                    <h2>
+                        Conventional gas-only compression is often limited by the conditions producers actually face.
+                    </h2>
+
+                    <p class="lead">
+                        Many emissions reduction and production optimization projects are constrained by wet gas,
+                        liquid slugs, unstable inlet flow, freezing separation equipment, remote unattended sites,
+                        and tight field economics.
+                    </p>
+                </div>
+
+                <article class="fs-about-card fs-about-hover-card">
+                    <h3>A different approach to compression</h3>
+
+                    <p>
+                        Fluidstream is focused on compression systems that tolerate real process-fluid behavior instead
+                        of relying on ideal gas-only assumptions. By handling gas, liquids, and mixed-phase flow within
+                        the compression process, Fluidstream reduces separator dependency and helps make more field
+                        projects technically and economically practical.
+                    </p>
+
+                    <ul>
+                        <li>Designed for liquid-influenced and unstable operating conditions.</li>
+                        <li>Built for remote sites where reliability and autonomous operation matter.</li>
+                        <li>Applied across emissions reduction and production improvement projects.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        {{-- PRODUCER OUTCOMES --}}
+        <section class="fs-about-section fs-about-section-soft py-12 gray">
+            <div class="fs-about-wrap">
+                <div class="fs-about-section-head">
+                    <p class="fs-about-kicker">Producer Outcomes</p>
+
+                    <h2>
+                        Field solutions where environmental performance and production economics work together.
+                    </h2>
+
+                    <p class="lead">
+                        Fluidstream technology is applied where operators need more than conventional compression:
+                        lower emissions, lower backpressure, improved uptime, and practical operation in wet or
+                        variable conditions.
+                    </p>
+                </div>
+
+                <div class="fs-about-grid-3">
+                    <a class="fs-about-solution-card fs-about-hover-card" href="{{ url('/vapor-recovery') }}">
+                        <span class="fs-about-tag">Vapor Recovery</span>
+                        <h3>Capture valuable gas instead of venting it.</h3>
                         <p>
-                            Review case studies for practical examples of where Fluidstream has been applied in real
-                            operating
-                            conditions.
+                            VaporCommander™ supports tank vapor recovery and emissions reduction where wet gas and
+                            cold-weather reliability can limit conventional VRUs.
+                        </p>
+                        <span class="fs-about-card-link">View VaporCommander™ →</span>
+                    </a>
+
+                    <a class="fs-about-solution-card fs-about-hover-card" href="{{ url('/casing-gas-compression') }}">
+                        <span class="fs-about-tag">Casing Gas</span>
+                        <h3>Reduce casing pressure and support production.</h3>
+                        <p>
+                            CompressionCommander™ is designed to recover low-pressure casing gas and help reduce
+                            backpressure on wells where compression economics matter.
+                        </p>
+                        <span class="fs-about-card-link">View CompressionCommander™ →</span>
+                    </a>
+
+                    <a class="fs-about-solution-card fs-about-hover-card" href="{{ url('/multiphase-compression') }}">
+                        <span class="fs-about-tag">Multiphase</span>
+                        <h3>Move gas and liquids together.</h3>
+                        <p>
+                            MultiphaseCommander™ supports production recovery and flow assurance in liquid-loaded,
+                            mixed-phase, and unstable well or facility applications.
+                        </p>
+                        <span class="fs-about-card-link">View MultiphaseCommander™ →</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        {{-- TECHNOLOGY PLATFORM --}}
+        <section class="fs-about-section py-12">
+            <div class="fs-about-wrap">
+                <div class="fs-about-platform">
+                    <div style="position: relative; z-index: 1;">
+                        <p class="fs-about-kicker" style="color: #15d1ff;">Technology Platform</p>
+
+                        <h2>
+                            One multiphase compression platform. Multiple upstream applications.
+                        </h2>
+
+                        <p class="lead">
+                            Fluidstream’s product family is built around a patented compression approach that handles
+                            the full process stream rather than depending on perfect upstream separation. That platform
+                            logic gives operators a practical path across vapor recovery, casing gas compression,
+                            and multiphase production applications.
+                        </p>
+
+                        <div class="fs-about-btn-row">
+                            <a class="fs-about-btn fs-about-btn-primary" href="{{ url('/technology') }}">
+                                View Technology
+                            </a>
+
+                            <a class="fs-about-btn fs-about-btn-secondary-1 text-white"
+                                href="{{ url('/patented-technology') }}">
+                                Review Patents
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="fs-about-platform-links">
+                        <a class="fs-about-platform-link" href="{{ url('/patented-technology#us11098709b2') }}">
+                            <strong>Liquid-aware compression response</strong>
+                            <span>Supported by patented operating methods, including US11098709B2.</span>
+                        </a>
+
+                        <a class="fs-about-platform-link" href="{{ url('/technology') }}">
+                            <strong>Autonomous field operation</strong>
+                            <span>Designed to respond to changing inlet conditions, upset events, and variable production
+                                behavior.</span>
+                        </a>
+
+                        <a class="fs-about-platform-link" href="{{ url('/case-studies') }}">
+                            <strong>Documented field applications</strong>
+                            <span>Case studies show practical outcomes in vapor recovery and production-focused
+                                deployments.</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {{-- ENGINEERING PHILOSOPHY --}}
+        <section class="fs-about-section fs-about-section-soft py-12 gray">
+            <div class="fs-about-wrap">
+                <div class="fs-about-section-head">
+                    <p class="fs-about-kicker">Engineering Philosophy</p>
+
+                    <h2>
+                        Designed around the field, not the catalogue.
+                    </h2>
+
+                    <p class="lead">
+                        Fluidstream is built on the belief that equipment should be selected around actual inlet behavior,
+                        site constraints, operating risk, and project economics.
+                    </p>
+                </div>
+
+                <div class="fs-about-two-col">
+                    <article class="fs-about-card fs-about-hover-card">
+                        <h3>Reliability has economic value</h3>
+                        <p>
+                            Repeated shutdowns, winter failures, operator visits, and maintenance-heavy operation can
+                            erase the value of otherwise attractive emissions or production projects. Fluidstream
+                            focuses on low-maintenance operation where uptime matters.
+                        </p>
+                    </article>
+
+                    <article class="fs-about-card fs-about-hover-card">
+                        <h3>Compression should fit the site</h3>
+                        <p>
+                            Remote locations, wet gas, liquids, solids, variable flow, and limited infrastructure are
+                            normal field realities. Fluidstream systems are configured around the application instead
+                            of forcing the application to fit a gas-only compressor.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        {{-- FIELD-PROVEN PERFORMANCE --}}
+        <section class="fs-about-section py-12">
+            <div class="fs-about-wrap">
+                <div class="fs-about-section-head">
+                    <p class="fs-about-kicker">Field-Proven Performance</p>
+
+                    <h2>
+                        Proof that matters to operators, engineers, and project decision-makers.
+                    </h2>
+
+                    <p class="lead">
+                        Fluidstream’s value is measured in practical field outcomes: recovered gas, reduced venting,
+                        production improvement, uptime, and reduced maintenance burden.
+                    </p>
+                </div>
+
+                <div class="fs-about-proof-strip">
+                    <article class="fs-about-quote fs-about-hover-card">
+                        <p>
+                            100% uptime and no maintenance since installation in documented vapor recovery service.
+                        </p>
+                        <small>VaporCommander™ field application</small>
+                    </article>
+
+                    <article class="fs-about-quote fs-about-hover-card">
+                        <p>
+                            Production recovery from wells constrained by liquid loading, backpressure, and remote
+                            operating conditions.
+                        </p>
+                        <small>MultiphaseCommander™ field application</small>
+                    </article>
+
+                    <article class="fs-about-quote fs-about-hover-card">
+                        <p>
+                            Designed for severe cold, wet gas, unstable flow, and remote unmanned operating environments.
+                        </p>
+                        <small>Fluidstream technology platform</small>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        {{-- STRATEGIC RELEVANCE --}}
+        <section class="fs-about-section fs-about-section-soft py-12 gray">
+            <div class="fs-about-wrap fs-about-two-col">
+                <div>
+                    <p class="fs-about-kicker">Strategic Relevance</p>
+
+                    <h2>
+                        A focused technology platform for established oil and gas problems.
+                    </h2>
+
+                    <p class="lead">
+                        Fluidstream serves common upstream markets where conventional solutions can struggle under real
+                        conditions: vapor recovery, casing gas compression, and multiphase production optimization.
+                    </p>
+                </div>
+
+                <article class="fs-about-card fs-about-hover-card">
+                    <h3>Built for market pull, not technology for its own sake</h3>
+
+                    <p>
+                        Operators need practical ways to reduce methane emissions, recover gas, improve production,
+                        lower maintenance burden, and avoid unnecessary infrastructure. Fluidstream’s platform is
+                        designed to address those needs through compact, field-ready systems with application-specific
+                        configurations.
+                    </p>
+
+                    <ul>
+                        <li>Established markets with direct operational and economic drivers.</li>
+                        <li>Patent-backed differentiation in liquid-influenced compression.</li>
+                        <li>Scalable product family across emissions and production applications.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        {{-- CTA --}}
+        <section class="fs-about-section py-12">
+            <div class="fs-about-wrap">
+                <div class="fs-about-cta">
+                    <div style="position: relative; z-index: 1;">
+                        <h2>
+                            Have a wet gas, casing gas, vapor recovery, or multiphase production challenge?
+                        </h2>
+
+                        <p class="lead">
+                            Submit your application for technical review. Fluidstream will help determine whether the
+                            operating conditions, economics, and field objectives are a fit for its compression platform.
                         </p>
                     </div>
-                    <a href="/case-studies">View Case Studies</a>
+
+                    <div class="fs-about-btn-row">
+                        <a class="fs-about-btn fs-about-btn-primary" href="{{ url('/technical-review') }}">
+                            Request Technical Review
+                        </a>
+
+                        <a class="fs-about-btn fs-about-btn-secondary" href="{{ url('/case-studies') }}">
+                            Explore Case Studies
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="py-12 fs-cta is-soft">
-            <div class="fs-wrap">
-                <h2>Have an emissions reduction or production optimization opportunity?</h2>
-                <p>
-                    Submit your application for technical review to determine whether Fluidstream is a fit for your
-                    operating
-                    conditions, economics, and field objectives.
-                </p>
-                <div class="fs-cta-actions">
-                    <a class="fs-btn fs-btn-primary-1" href="/technical-review">Request Technical Review</a>
-                    <a class="fs-btn fs-btn-secondary-1" href="/contact">Contact Us</a>
-                </div>
-            </div>
-        </section>
     </main>
-
-
-
-
 @endsection

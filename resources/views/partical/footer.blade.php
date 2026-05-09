@@ -286,6 +286,79 @@
             align-items: flex-start;
         }
     }
+
+    /* ================================
+   FOOTER SOCIAL / FOLLOW US
+================================ */
+
+    .fsf-footer-social {
+        margin-top: 54px;
+    }
+
+    .fsf-footer-social-title {
+        margin: 0 0 16px;
+        color: #ffffff;
+        font-size: 15px;
+        line-height: 1.2;
+        font-weight: 700;
+    }
+
+    .fsf-footer-social-list {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .fsf-footer-social-link {
+        width: 44px;
+        height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 8px;
+
+        transition:
+            transform 0.25s ease,
+            background 0.25s ease,
+            opacity 0.25s ease;
+    }
+
+    .fsf-footer-social-link:hover {
+        transform: translateY(-3px);
+        background: rgba(255, 255, 255, 0.10);
+    }
+
+    .fsf-footer-social-link svg {
+        width: 34px;
+        height: 34px;
+        display: block;
+        fill: currentColor;
+    }
+
+    @media (max-width: 991px) {
+        .fsf-footer-social {
+            margin-top: 30px;
+        }
+    }
+
+    @media (max-width: 575px) {
+        .fsf-footer-social-title {
+            font-size: 18px;
+        }
+
+        .fsf-footer-social-link {
+            width: 40px;
+            height: 40px;
+        }
+
+        .fsf-footer-social-link svg {
+            width: 30px;
+            height: 30px;
+        }
+    }
 </style>
 
 <footer class="fsf-footer-wrap">
@@ -382,10 +455,25 @@
                 {{-- CONTACT --}}
                 <div class="fsf-footer-contact-col">
                     <h3 class="fsf-footer-contact-title">Talk to Fluidstream</h3>
+
                     <div class="fsf-footer-contact-box">
                         <a href="/contact" class="fsf-footer-link">Contact Us</a><br>
                         <a href="/contact" class="fsf-footer-link">Request Technical Review</a><br>
                         <a href="/multiphase-compression" class="fsf-footer-link">Review Specifications</a>
+                    </div>
+
+                    <div class="fsf-footer-social" aria-label="Follow Fluidstream">
+                        <h3 class="fsf-footer-social-title">Follow us</h3>
+
+                        <div class="fsf-footer-social-list">
+                            <a href="https://ca.linkedin.com/company/fluidstream" class="fsf-footer-social-link"
+                                target="_blank" rel="noopener noreferrer" aria-label="Follow Fluidstream on LinkedIn">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path
+                                        d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.35 8h4.3v14H.35V8zm7.3 0h4.12v1.92h.06c.57-1.08 1.98-2.22 4.08-2.22 4.36 0 5.17 2.87 5.17 6.6V22h-4.3v-6.84c0-1.63-.03-3.73-2.27-3.73-2.28 0-2.63 1.78-2.63 3.61V22H7.65V8z" />
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
