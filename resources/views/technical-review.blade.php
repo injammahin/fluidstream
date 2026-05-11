@@ -159,9 +159,9 @@
             }
 
             .tr-section-head {
-                max-width: 820px;
-                margin: 0 auto 34px;
-                text-align: center;
+                max-width: 620px;
+                margin-bottom: 22px;
+                text-align: start;
             }
 
             .tr-kicker {
@@ -179,10 +179,10 @@
             .tr-section-head h2 {
                 margin: 0;
                 color: var(--ink);
-                font-size: clamp(32px, 4vw, 52px);
-                line-height: 1.03;
+                font-size: clamp(30px, 4vw, 40px);
+                line-height: 1.02;
                 letter-spacing: -.055em;
-                font-weight: 600;
+                /* font-weight: 600; */
             }
 
             .tr-section-head p {
@@ -230,7 +230,7 @@
                 position: relative;
                 overflow: hidden;
                 isolation: isolate;
-                width: min(100%, 940px);
+                max-width: 1200px;
                 padding: 30px;
                 background: #ffffff;
                 border: 1px solid var(--line);
@@ -423,7 +423,7 @@
                 color: #162238;
                 font-size: 15px;
                 line-height: 1.7;
-                font-weight: 800;
+                font-weight: 600;
             }
 
             .tr-disclaimer-text a {
@@ -695,7 +695,6 @@
                     @endif
 
                     <div class="tr-section-head">
-                        <div class="tr-kicker">Technical Intake</div>
                         <h2>Give us the operating data that determines fit.</h2>
                         <p>
                             This form is structured around the information that matters in vapor recovery, casing gas
@@ -715,7 +714,7 @@
                                         the issue in the application notes.
                                     </p>
                                 </div>
-                                <span class="form-badge">Engineering Review</span>
+                                {{-- <span class="form-badge">Engineering Review</span> --}}
                             </div>
 
                             <input type="hidden" name="inquiry_type" value="Technical Review Request">

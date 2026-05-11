@@ -10,7 +10,7 @@
             --ink: #08111f;
             --muted: #5c6677;
             --line: #dce4ef;
-            --soft: #f3f7fb;
+            --soft: #f4f6f8;
             --white: #ffffff;
             --card: #ffffff;
             --shadow: 0 22px 60px rgba(0, 24, 220, .12);
@@ -208,7 +208,7 @@
 
         .hero-card {
             background: rgb(255, 255, 255);
-            border: 1px solid rgba(255, 255, 255, .22);
+            border: 1px solid rgba(105, 105, 105, 0.22);
             border-radius: 7px;
             padding: 28px;
             box-shadow: 0 26px 70px rgba(0, 0, 0, .22)
@@ -257,8 +257,8 @@
         }
 
         /* section {
-                                                                                                                                                                                                                                                                                                                                padding: 78px 22px
-                                                                                                                                                                                                                                                                                                                            } */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                padding: 78px 22px
+                                                                                                                                                                                                                                                                                                                                                                                                                                            } */
 
         .container {
             /* max-width: var(--max); */
@@ -267,21 +267,21 @@
 
         .section-head {
             /* display: grid;
-                                                                                                                                                                                                                                                    grid-template-columns: .72fr 1.28fr;
-                                                                                                                                                                                                                                                    gap: 42px; */
+                                                                                                                                                                                                                                                                                                                                                                    grid-template-columns: .72fr 1.28fr;
+                                                                                                                                                                                                                                                                                                                                                                    gap: 42px; */
             max-width: 66ch;
             align-items: start;
             margin-bottom: 34px
         }
 
-        .kicker mb-2 {
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: .18em;
-            color: var(--blue);
-            font-weight: 950;
-            margin-bottom: 12px
-        }
+        /* .kicker mb-2 {
+                                                        font-size: 12px;
+                                                        text-transform: uppercase;
+                                                        letter-spacing: .18em;
+                                                        color: var(--blue);
+                                                        font-weight: 950;
+                                                        margin-bottom: 12px
+                                                    } */
 
         h2 {
             margin: 0 0 16px;
@@ -345,6 +345,36 @@
             transform: scaleX(1);
         }
 
+
+
+        .step:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: #0018dc;
+            transform: scaleX(0);
+            /* Start with a scaleX of 0 (hidden) */
+            transform-origin: left;
+            /* Make the scale start from the left */
+            transition: transform 0.3s ease;
+            /* Smooth transition */
+            z-index: 1;
+        }
+
+        .step:hover {
+            transform: translateY(-3px);
+            border-color: #0018dc !important;
+            /* box-shadow: 0 18px 36px rgba(16, 42, 67, .08); */
+            background: #ffffff;
+        }
+
+        .step:hover::after {
+            transform: scaleX(1);
+        }
+
         .mini:after {
             content: "";
             position: absolute;
@@ -401,6 +431,34 @@
             transform: scaleX(1);
         }
 
+        .hero-card:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: #0018dc;
+            transform: scaleX(0);
+            /* Start with a scaleX of 0 (hidden) */
+            transform-origin: left;
+            /* Make the scale start from the left */
+            transition: transform 0.3s ease;
+            /* Smooth transition */
+            z-index: 1;
+        }
+
+        .hero-card:hover {
+            transform: translateY(-3px);
+            border-color: #0018dc !important;
+            /* box-shadow: 0 18px 36px rgba(16, 42, 67, .08); */
+            background: #ffffff;
+        }
+
+        .hero-card:hover::after {
+            transform: scaleX(1);
+        }
+
         .big {
             font-size: 30px;
             line-height: .95;
@@ -411,8 +469,8 @@
         }
 
         /* .metric:hover .big {
-                                                                                                                                                                                            color: #fff
-                                                                                                                                                                                        } */
+                                                                                                                                                                                                                                                                                                            color: #fff
+                                                                                                                                                                                                                                                                                                        } */
 
         .metric h3,
         .card h3 {
@@ -450,19 +508,19 @@
             border-radius: 7px;
             padding: 36px;
             background: var(--soft);
-            border: 1px solid var(--line)
+            border: 1px solid #a5a7ab9f !important;
         }
 
         .panel.dark {
-            background: #0018dc;
-            color: #fff;
+            /* background: #0018dc;
+                                                                                            color: #fff; */
             border: 0;
             /* box-shadow: 0 28px 80px rgba(0, 24, 220, .22) */
         }
 
-        .panel.dark p {
-            color: rgba(255, 255, 255, .80)
-        }
+        /* .panel.dark p {
+                                                                                        color: rgba(255, 255, 255, .80)
+                                                                                    } */
 
         .panel h3 {
             font-size: 32px;
@@ -490,36 +548,36 @@
         }
 
         /* .card.swipe:after {
-                                                                                                            content: "";
-                                                                                                            position: absolute;
-                                                                                                            left: -110%;
-                                                                                                            top: 0;
-                                                                                                            width: 100%;
-                                                                                                            height: 100%;
-                                                                                                            background: linear-gradient(105deg, transparent, rgba(21, 209, 255, .16), transparent);
-                                                                                                            transition: .5s ease
-                                                                                                        }
+                                                                                                                                                                                                                            content: "";
+                                                                                                                                                                                                                            position: absolute;
+                                                                                                                                                                                                                            left: -110%;
+                                                                                                                                                                                                                            top: 0;
+                                                                                                                                                                                                                            width: 100%;
+                                                                                                                                                                                                                            height: 100%;
+                                                                                                                                                                                                                            background: linear-gradient(105deg, transparent, rgba(21, 209, 255, .16), transparent);
+                                                                                                                                                                                                                            transition: .5s ease
+                                                                                                                                                                                                                        }
 
-                                                                                                        .card.swipe:hover:after {
-                                                                                                            left: 110%
-                                                                                                        }
+                                                                                                                                                                                                                        .card.swipe:hover:after {
+                                                                                                                                                                                                                            left: 110%
+                                                                                                                                                                                                                        }
 
-                                                                                                        .card:hover {
-                                                                                                            transform: translateY(-5px);
-                                                                                                            border-color: rgba(0, 24, 220, .3);
-                                                                                                            box-shadow: 0 26px 60px rgba(0, 24, 220, .12)
-                                                                                                        }
+                                                                                                                                                                                                                        .card:hover {
+                                                                                                                                                                                                                            transform: translateY(-5px);
+                                                                                                                                                                                                                            border-color: rgba(0, 24, 220, .3);
+                                                                                                                                                                                                                            box-shadow: 0 26px 60px rgba(0, 24, 220, .12)
+                                                                                                                                                                                                                        }
 
-                                                                                                        .card.fill:hover {
-                                                                                                            background: var(--blue);
-                                                                                                            color: #fff;
-                                                                                                            border-color: var(--blue)
-                                                                                                        }
+                                                                                                                                                                                                                        .card.fill:hover {
+                                                                                                                                                                                                                            background: var(--blue);
+                                                                                                                                                                                                                            color: #fff;
+                                                                                                                                                                                                                            border-color: var(--blue)
+                                                                                                                                                                                                                        }
 
-                                                                                                        .card.fill:hover p,
-                                                                                                        .card.fill:hover .tag {
-                                                                                                            color: rgba(255, 255, 255, .78)
-                                                                                                        } */
+                                                                                                                                                                                                                        .card.fill:hover p,
+                                                                                                                                                                                                                        .card.fill:hover .tag {
+                                                                                                                                                                                                                            color: rgba(255, 255, 255, .78)
+                                                                                                                                                                                                                        } */
 
         .number {
             width: 42px;
@@ -533,28 +591,78 @@
             margin-bottom: 18px
         }
 
+
+        .step {
+            position: relative;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 70px 1fr;
+            gap: 18px;
+            align-items: start;
+            background: #fff;
+            border: 1px solid #cbd1ff;
+            padding: 22px;
+            border-radius: 7px;
+            transition: transform 0.24s ease, border-color 0.24s ease, background 0.24s ease;
+        }
+
+        .step::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: #0018dc;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+            z-index: 1;
+        }
+
+        .color {
+            color: #424f5d;
+        }
+
+        h1 {
+            line-height: .94;
+            letter-spacing: -.075em;
+            margin: 0 0 24px;
+            max-width: 920px;
+        }
+
+        .step:hover {
+            transform: translateY(-3px);
+            border-color: #0018dc !important;
+            background: #ffffff;
+        }
+
+        .step:hover::after {
+            transform: scaleX(1);
+        }
+
         /* .card.fill:hover .number {
-                                                                                                        background: rgba(255, 255, 255, .14);
-                                                                                                        color: #fff
-                                                                                                    } */
+                                                                                                                                                                                                                        background: rgba(255, 255, 255, .14);
+                                                                                                                                                                                                                        color: #fff
+                                                                                                                                                                                                                    } */
 
         .blue-section {
-            background: var(--blue);
+            background: #f4f6f8;
             color: #fff;
             position: relative;
             overflow: hidden
         }
 
-        .blue-section h2 {
-            color: #fff
-        }
+        /* .blue-section h2 {
+                                                                                                                        color: #fff
+                                                                                                                    } */
 
-        .blue-section .kicker mb-2 {
-            color: var(--cyan)
-        }
+        /* .blue-section .kicker mb-2 {
+                                                        color: var(--cyan)
+                                                    } */
 
         .blue-section p {
-            color: rgba(255, 255, 255, .80)
+            color: #5c6677;
         }
 
         .blue-grid {
@@ -575,15 +683,15 @@
             gap: 18px;
             align-items: start;
             background: rgb(255, 255, 255);
-            border: 1px solid rgba(255, 255, 255, .18);
+            border: 1px solid #5d607438;
             padding: 22px;
             border-radius: 7px
         }
 
         /* .step strong {
-                                                                                                                                        font-size: 24px;
-                                                                                                                                        color: black
-                                                                                                                                    } */
+                                                                                                                                                                                                                                                        font-size: 24px;
+                                                                                                                                                                                                                                                        color: black
+                                                                                                                                                                                                                                                    } */
 
         .step h3 {
             margin: 0 0 8px;
@@ -600,8 +708,8 @@
         }
 
         .result-band {
-            background: #0018dc;
-            color: #fff;
+            /* background: #0018dc;
+                                    color: #fff; */
             padding: 42px;
             display: grid;
             grid-template-columns: 1.05fr .95fr;
@@ -610,11 +718,11 @@
         }
 
         .result-band h2 {
-            color: #fff
+            color: #1a1a1a
         }
 
         .result-band p {
-            color: rgba(255, 255, 255, .78)
+            color: #1a2843;
         }
 
         .result-band-1 p {
@@ -631,7 +739,7 @@
             display: flex;
             gap: 12px;
             align-items: flex-start;
-            color: rgba(255, 255, 255, .83)
+            color: #1a2843
         }
 
         .bullet:before {
@@ -815,15 +923,15 @@
             max-width: 62ch;
         }
 
-        .label {
-            display: inline-flex;
-            align-items: center;
-            font-size: 13px;
-            font-weight: 800;
-            letter-spacing: .18em;
-            text-transform: uppercase;
-            color: aliceblue;
-        }
+        /* .kicker {
+                                                    display: inline-flex;
+                                                    align-items: center;
+                                                    font-size: 13px;
+                                                    font-weight: 800;
+                                                    letter-spacing: .18em;
+                                                    text-transform: uppercase;
+                                                    color: aliceblue;
+                                                } */
     </style>
 
     <main>
@@ -843,7 +951,7 @@
                         maintenance issues.</p>
                     <div class="cta-row">
                         <a class="btn primary" href="/vapor-recovery">View VaporCommander™</a>
-                        <a class="btn secondary" href="/contact">Request Technical Review</a>
+                        <a class="btn secondary" href="/technical-review">Request Technical Review</a>
                     </div>
                 </div>
                 <aside class="hero-card">
@@ -865,7 +973,7 @@
             <div class="container wrap py-12">
                 <div class="section-head">
                     <div>
-                        <div class="label">Performance snapshot</div>
+                        <div class="kicker">Performance snapshot</div>
                         <h2>Combustion avoided. Gas captured. Reliability maintained.</h2>
                     </div>
                     <p>During the 12-month operating period, VaporCommander™ captured approximately 500,000 m³ of natural
@@ -912,7 +1020,7 @@
         <section class="blue-section">
             <div class="container blue-grid wrap py-12">
                 <div>
-                    <div class="label">Background and challenge</div>
+                    <div class="kicker">Background and challenge</div>
                     <h2>Vapor combustors control venting, but they also burn value.</h2>
                     <p>The operator had a growing number of oil storage tanks producing natural gas from stored oil. To
                         comply with
@@ -965,10 +1073,10 @@
         </section>
 
         <section>
-            <div class="container">
-                <div class="section-head wrap py-12">
+            <div class="container py-12">
+                <div class="section-head wrap ">
                     <div>
-                        <div class="label">Why VCUs are limited</div>
+                        <div class="kicker">Why VCUs are limited</div>
                         <h2>Combustors solve disposal, not recovery.</h2>
                     </div>
                     <p>Vapor combustor units can be cost-effective and simple, but their basic function is destruction
@@ -1005,7 +1113,7 @@
         <section style="background:var(--soft)">
             <div class="container split wrap py-12">
                 <div class="panel dark">
-                    <div class="label">Fluidstream solution</div>
+                    <div class="kicker">Fluidstream solution</div>
                     <h3>VaporCommander™ as a VCU replacement.</h3>
                     <p>Fluidstream’s patented VaporCommander™ was installed at an oil battery in Southern Alberta, Canada in
                         March
@@ -1019,7 +1127,7 @@
                         automatic restart based on user-defined time lag and motor-load ramp-up.</p>
                 </div>
                 <div class="panel">
-                    <div class="label">What changed</div>
+                    <div class="kicker">What changed</div>
                     <h3>Gas capture replaced gas destruction.</h3>
                     <p>During the 12-month operating period, VaporCommander™ captured approximately 500,000 m³ of natural
                         gas. Based
@@ -1038,7 +1146,7 @@
             <div class="container">
                 <div class="section-head wrap py-12">
                     <div>
-                        <div class="label">Autonomous operation</div>
+                        <div class="kicker">Autonomous operation</div>
                         <h2>Self-regulating pressure control across variable gas flow.</h2>
                     </div>
                     <p>The gas flow ranged from almost no flow to approximately 1,800 m³/day. VaporCommander™ used patented
@@ -1088,7 +1196,7 @@
             <div class="container wrap py-12">
                 <div class="result-band">
                     <div>
-                        <div class="label">Field results</div>
+                        <div class="kicker">Field results</div>
                         <h2>12 months with no failures or maintenance issues, except one minor external fix.</h2>
                         <p>During the 12-month operating period, VaporCommander™ operated without failures, maintenance
                             issues,
@@ -1126,7 +1234,7 @@
             <div class="container wrap py-12">
                 <div class="section-head">
                     <div>
-                        <div class="label">Winter reliability</div>
+                        <div class="kicker">Winter reliability</div>
                         <h2>Cold-weather failure risk is often built into separator-based systems.</h2>
                     </div>
                     <p>Conventional compressors and VRU systems can experience winter problems when they depend on upstream
@@ -1179,7 +1287,7 @@
             <div class="container wrap py-12">
                 <div class="section-head">
                     <div>
-                        <div class="label">Economic and emissions value</div>
+                        <div class="kicker">Economic and emissions value</div>
                         <h2>Recovered gas can create value that combustion cannot.</h2>
                     </div>
                     <p>Replacing a vapor combustor with VaporCommander™ changed the economics of the vapor stream. Instead
@@ -1224,7 +1332,7 @@
             <div class="container wrap py-12">
                 <div class="section-head">
                     <div>
-                        <div class="label">Patent-supported technology</div>
+                        <div class="kicker">Patent-supported technology</div>
                         <h2>Patented multiphase vapor recovery.</h2>
                     </div>
                     <p>Fluidstream’s patent portfolio supports the operating logic behind VaporCommander™: handling wet,
@@ -1268,7 +1376,7 @@
             <div class="container wrap py-12">
                 <div class="section-head">
                     <div>
-                        <div class="label">Technical fit summary</div>
+                        <div class="kicker">Technical fit summary</div>
                         <h2>Why VaporCommander™ replaced the combustor.</h2>
                     </div>
                     <p>The case demonstrates that vapor recovery can do more than eliminate venting. When the system can
@@ -1308,7 +1416,7 @@
         <section>
             <div class="container wrap py-12">
                 <div>
-                    <div class="label">Next step</div>
+                    <div class="kicker">Next step</div>
                     <h2>Evaluate VaporCommander™ as a vapor combustor replacement.</h2>
                     <p>Fluidstream can review tank vapor rate, discharge pressure, variable gas flow, wet gas composition,
                         condensate and water exposure, winter operating requirements, power availability, emissions
@@ -1317,7 +1425,7 @@
                 </div>
                 <div class="cta-row" style="justify-content:flex-start;margin:0">
                     <a class="btn-1 primary" href="/vapor-recovery">Review VaporCommander™</a>
-                    <a class="btn-1 secondary" href="/contact">Request Technical Fit Analysis</a>
+                    <a class="btn-1 secondary" href="/technical-review">Request Technical Fit Analysis</a>
                 </div>
             </div>
         </section>

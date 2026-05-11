@@ -398,7 +398,7 @@
             color: #162238;
             font-size: 15px;
             line-height: 1.7;
-            font-weight: 800;
+            font-weight: 600;
         }
 
         .fs-contact-disclaimer-text a {
@@ -533,7 +533,7 @@
                         <a class="fs-contact-btn fs-contact-btn-primary" href="#contact-form">
                             Send a Message
                         </a>
-                        <a class="fs-contact-btn fs-contact-btn-secondary" href="#technical-review">
+                        <a class="fs-contact-btn fs-contact-btn-secondary" href="/technical-review">
                             Request Technical Review
                         </a>
                     </div>
@@ -566,10 +566,7 @@
                         <div class="fs-contact-kicker">General Inquiry</div>
                         <h2>Send Fluidstream a message.</h2>
                     </div>
-                    <p class="fs-contact-lead">
-                        Use this form for general questions, sales conversations, partnership inquiries,
-                        service requests, and corporate communications.
-                    </p>
+
                 </div>
 
                 <div class="fs-contact-layout">
@@ -583,7 +580,7 @@
                         <div class="fs-contact-info-list">
                             <div class="fs-contact-info-item">
                                 <small>General Inquiries</small>
-                                <strong>Use the inquiry form on this page.</strong>
+                                <p class="fs-contact-lead" style="font-size:15px">Use the inquiry form on this page.</p>
                             </div>
 
                             <div class="fs-contact-info-item">

@@ -814,8 +814,8 @@
     }
 
     /* =========================================
-                                                               HERO SECTION FIXED STYLE
-                                                            ========================================= */
+                                                                                   HERO SECTION FIXED STYLE
+                                                                                ========================================= */
 
     header.hero {
       position: relative !important;
@@ -1854,8 +1854,8 @@
   </section>
   <style>
     /* ================================
-                                                                                         TECHNOLOGY BENEFITS 3x2 LAYOUT
-                                                                                      ================================ */
+                                                                                                             TECHNOLOGY BENEFITS 3x2 LAYOUT
+                                                                                                          ================================ */
 
     .technology-benefits-section {
       background: #ffffff;
@@ -2186,12 +2186,16 @@
         <blockquote>“Fluidstream’s MultiphaseCommander didn’t just improve performance—it transformed two shut-in wells
           into revenue-generating assets. We went from zero production to more than $1.5 million per year in incremental
           revenue, without adding separation equipment or extra surface infrastructure.”</blockquote>
-        <div class="quote-src">Production Engineer, Western Canadian Oil &amp; Gas Producer</div>
 
+
+        <div class="flex">
+          <div class="quote-src">Production Engineer, Vermilion Energy </div>
+          <img class="h-14" src="/img/Vermilion Energy.png" alt="">
+        </div>
         <p>Read the full case study for the operating challenge, deployment details, variable-flow performance, and the
           broader pad-level opportunity identified by the producer.</p>
         <div class="btn-row" style="margin-bottom:0;">
-          <a class="btn btn-primary" href="#">Read More</a>
+          <a class="btn btn-primary" href="/case-studies/multiphasecommander-production-recovery">Read More</a>
         </div>
       </div>
     </div>
@@ -2243,12 +2247,12 @@
       }
 
       /* .fs-mpc-section-head h2 {
-                                                                                                                    font-size: clamp(30px, 3.2vw, 46px);
-                                                                                                                    line-height: 1.02;
-                                                                                                                    margin: 0 0 14px;
-                                                                                                                    letter-spacing: -.035em;
-                                                                                                                    color: var(--mpc-ink);
-                                                                                                                  } */
+                                                                                                                                        font-size: clamp(30px, 3.2vw, 46px);
+                                                                                                                                        line-height: 1.02;
+                                                                                                                                        margin: 0 0 14px;
+                                                                                                                                        letter-spacing: -.035em;
+                                                                                                                                        color: var(--mpc-ink);
+                                                                                                                                      } */
 
       .fs-mpc-lead {
         font-size: 17px;
@@ -3114,7 +3118,7 @@
           </ul>
 
           <div class="btn-row" style="margin-bottom:0;">
-            <a class="btn btn-1 btn-primary" href="#">Request MultiphaseCommander™ Review</a>
+            <a class="btn btn-1 btn-primary" href="/technical-review">Request Technical Review</a>
             <a class="btn btn-1 btn-secondary-1" href="#specifications">Review Specifications</a>
           </div>
         </div>

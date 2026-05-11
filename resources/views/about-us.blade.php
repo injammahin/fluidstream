@@ -125,17 +125,17 @@
         }
 
         .fs-about-btn-secondary-1 {
-            color: #ffffff;
+            color: #434343;
             background: rgba(255, 255, 255, .08);
-            border: 1px solid rgba(217, 217, 217, 0.3);
+            border: 1px solid rgb(55 55 55 / 30%);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
         }
 
-        .fs-about-btn-secondary-1 {
-            color: #f6f6f6;
+        .fs-about-btn-secondary-1-1 {
+            color: #ffffff;
             background: rgba(255, 255, 255, .08);
-            border: 1px solid rgba(188, 188, 188, 0.3);
+            border: 1px solid rgb(209, 208, 208);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
         }
@@ -176,8 +176,8 @@
         }
 
         /* ================================
-                                                                                                                                       COMMON CARD HOVER STYLE
-                                                                                                                                    ================================ */
+                                                                                                                                                                                                       COMMON CARD HOVER STYLE
+                                                                                                                                                                                                    ================================ */
 
         .fs-about-hover-card {
             position: relative;
@@ -216,6 +216,86 @@
         }
 
         .fs-about-hover-card:hover::after {
+            transform: scaleX(1);
+        }
+
+        .fs-about-hover-card {
+            position: relative;
+            overflow: hidden;
+            isolation: isolate;
+            border: 1px solid var(--line);
+            background: #ffffff;
+            border-radius: 7px;
+            box-shadow: var(--shadow);
+            transition:
+                transform .28s ease,
+                border-color .28s ease,
+                box-shadow .28s ease,
+                background .28s ease;
+        }
+
+        .fs-about-hover-card::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            height: 4px;
+            background: var(--blue);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform .28s ease;
+            z-index: 2;
+        }
+
+        .fs-about-hover-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--blue);
+            background: #ffffff;
+            box-shadow: var(--shadow-hover);
+        }
+
+        .fs-about-hover-card:hover::after {
+            transform: scaleX(1);
+        }
+
+        .fs-about-platform-link {
+            position: relative;
+            overflow: hidden;
+            isolation: isolate;
+            border: 1px solid var(--line);
+            background: #ffffff;
+            border-radius: 7px;
+            box-shadow: var(--shadow);
+            transition:
+                transform .28s ease,
+                border-color .28s ease,
+                box-shadow .28s ease,
+                background .28s ease;
+        }
+
+        .fs-about-platform-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            height: 4px;
+            background: var(--blue);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform .28s ease;
+            z-index: 2;
+        }
+
+        .fs-about-platform-link:hover {
+            transform: translateY(-4px);
+            border-color: var(--blue);
+            background: #ffffff;
+            box-shadow: var(--shadow-hover);
+        }
+
+        .fs-about-platform-link:hover::after {
             transform: scaleX(1);
         }
 
@@ -277,8 +357,8 @@
         }
 
         /* ================================
-                                                                                                                                       HERO
-                                                                                                                                    ================================ */
+                                                                                                                                                                                                       HERO
+                                                                                                                                                                                                    ================================ */
 
         .fs-about-hero {
             position: relative;
@@ -296,14 +376,7 @@
             position: absolute;
             inset: 0;
             z-index: -3;
-            background:
-                linear-gradient(90deg,
-                    rgba(0, 8, 30, .92) 0%,
-                    rgba(0, 12, 48, .78) 43%,
-                    rgba(0, 16, 60, .38) 76%,
-                    rgba(0, 16, 60, .14) 100%),
-                radial-gradient(circle at 82% 16%, rgba(21, 209, 255, .20), transparent 28%),
-                linear-gradient(135deg, #061226 0%, #0018dc 100%);
+            background: #0018dc;
         }
 
         .fs-about-hero::after {
@@ -313,7 +386,7 @@
             height: 160px;
             z-index: -2;
             pointer-events: none;
-            background: linear-gradient(180deg, transparent 0%, rgba(6, 18, 38, .78) 100%);
+            /* background: linear-gradient(180deg, transparent 0%, rgba(6, 18, 38, .78) 100%); */
         }
 
         .fs-about-hero-grid {
@@ -427,8 +500,8 @@
         }
 
         /* ================================
-                                                                                                                                       LAYOUTS
-                                                                                                                                    ================================ */
+                                                                                                                                                                                                       LAYOUTS
+                                                                                                                                                                                                    ================================ */
 
         .fs-about-two-col {
             display: grid;
@@ -481,8 +554,8 @@
         }
 
         /* ================================
-                                                                                                                                       TECHNOLOGY PLATFORM
-                                                                                                                                    ================================ */
+                                                                                                                                                                                                       TECHNOLOGY PLATFORM
+                                                                                                                                                                                                    ================================ */
 
         .fs-about-platform {
             position: relative;
@@ -494,29 +567,29 @@
             align-items: center;
             padding: 44px;
             border-radius: 7px;
-            background: linear-gradient(135deg, #061126 0%, #0018dc 100%);
-            color: #ffffff;
-            box-shadow: 0 28px 80px rgba(0, 24, 220, .20);
+            /* background: linear-gradient(135deg, #0018dc 0%, #0018dc 100%);
+                                        color: #ffffff;
+                                        box-shadow: 0 28px 80px rgba(0, 24, 220, .20); */
         }
 
         /* .fs-about-platform::after {
-                                                                                                        content: "";
-                                                                                                        position: absolute;
-                                                                                                        right: -120px;
-                                                                                                        top: -150px;
-                                                                                                        width: 320px;
-                                                                                                        height: 320px;
-                                                                                                        border-radius: 999px;
-                                                                                                        background: rgba(21, 209, 255, .16);
-                                                                                                        pointer-events: none;
-                                                                                                    } */
+                                                                                                                                                                        content: "";
+                                                                                                                                                                        position: absolute;
+                                                                                                                                                                        right: -120px;
+                                                                                                                                                                        top: -150px;
+                                                                                                                                                                        width: 320px;
+                                                                                                                                                                        height: 320px;
+                                                                                                                                                                        border-radius: 999px;
+                                                                                                                                                                        background: rgba(21, 209, 255, .16);
+                                                                                                                                                                        pointer-events: none;
+                                                                                                                                                                    } */
 
         .fs-about-platform h2 {
-            color: #ffffff;
+            color: #232325;
         }
 
         .fs-about-platform .lead {
-            color: rgba(255, 255, 255, .80);
+            color: #52667a;
         }
 
         .fs-about-platform-links {
@@ -532,7 +605,7 @@
             display: block;
             padding: 19px;
             border-radius: 7px;
-            border: 1px solid rgba(255, 255, 255, .16);
+            border: 1px solid rgba(82, 82, 82, 0.16);
             background: rgba(255, 255, 255, .08);
             text-decoration: none;
             transition:
@@ -542,18 +615,18 @@
         }
 
         /* 
-                                                                                                        .fs-about-platform-link::after {
-                                                                                                            content: "";
-                                                                                                            position: absolute;
-                                                                                                            left: 0;
-                                                                                                            right: 0;
-                                                                                                            top: 0;
-                                                                                                            height: 4px;
-                                                                                                            background: var(--cyan);
-                                                                                                            transform: scaleX(0);
-                                                                                                            transform-origin: left;
-                                                                                                            transition: transform .25s ease;
-                                                                                                        } */
+                                                                                                                                                                        .fs-about-platform-link::after {
+                                                                                                                                                                            content: "";
+                                                                                                                                                                            position: absolute;
+                                                                                                                                                                            left: 0;
+                                                                                                                                                                            right: 0;
+                                                                                                                                                                            top: 0;
+                                                                                                                                                                            height: 4px;
+                                                                                                                                                                            background: var(--cyan);
+                                                                                                                                                                            transform: scaleX(0);
+                                                                                                                                                                            transform-origin: left;
+                                                                                                                                                                            transition: transform .25s ease;
+                                                                                                                                                                        } */
 
         .fs-about-platform-link:hover {
             transform: translateY(-3px);
@@ -568,7 +641,7 @@
         .fs-about-platform-link strong {
             display: block;
             margin-bottom: 5px;
-            color: #ffffff;
+            color: #242424;
             font-size: 17px;
             line-height: 1.25;
             font-weight: 900;
@@ -576,15 +649,15 @@
 
         .fs-about-platform-link span {
             display: block;
-            color: rgba(255, 255, 255, .75);
+            color: rgba(39, 39, 39, 0.75);
             font-size: 14px;
             line-height: 1.5;
             font-weight: 600;
         }
 
         /* ================================
-                                                                                                                                       PROOF STRIP
-                                                                                                                                    ================================ */
+                                                                                                                                                                                                       PROOF STRIP
+                                                                                                                                                                                                    ================================ */
 
         .fs-about-proof-strip {
             display: grid;
@@ -616,8 +689,8 @@
         }
 
         /* ================================
-                                                                                                                                       CTA
-                                                                                                                                    ================================ */
+                                                                                                                                                                                                       CTA
+                                                                                                                                                                                                    ================================ */
 
         .fs-about-cta {
             position: relative;
@@ -634,16 +707,16 @@
         }
 
         /* .fs-about-cta::after {
-                                                                                                    content: "";
-                                                                                                    position: absolute;
-                                                                                                    right: -90px;
-                                                                                                    top: -110px;
-                                                                                                    width: 260px;
-                                                                                                    height: 260px;
-                                                                                                    border-radius: 999px;
-                                                                                                    background: rgba(21, 209, 255, .16);
-                                                                                                    pointer-events: none;
-                                                                                                } */
+                                                                                                                                                                    content: "";
+                                                                                                                                                                    position: absolute;
+                                                                                                                                                                    right: -90px;
+                                                                                                                                                                    top: -110px;
+                                                                                                                                                                    width: 260px;
+                                                                                                                                                                    height: 260px;
+                                                                                                                                                                    border-radius: 999px;
+                                                                                                                                                                    background: rgba(21, 209, 255, .16);
+                                                                                                                                                                    pointer-events: none;
+                                                                                                                                                                } */
 
         .fs-about-cta h2 {
             max-width: 600px !important;
@@ -765,7 +838,7 @@
                             Explore Field Results
                         </a>
 
-                        <a class="fs-about-btn fs-about-btn-secondary-1" href="{{ url('/technical-review') }}">
+                        <a class="fs-about-btn fs-about-btn-secondary-1-1" href="{{ url('/technical-review') }}">
                             Request Technical Review
                         </a>
                     </div>
@@ -886,7 +959,7 @@
             <div class="fs-about-wrap">
                 <div class="fs-about-platform">
                     <div style="position: relative; z-index: 1;">
-                        <p class="fs-about-kicker" style="color: #15d1ff;">Technology Platform</p>
+                        <p class="fs-about-kicker">Technology Platform</p>
 
                         <h2>
                             One multiphase compression platform. Multiple upstream applications.

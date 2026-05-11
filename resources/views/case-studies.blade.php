@@ -1033,8 +1033,8 @@
         }
 
         /* ================================
-                                                                                                                   CASE STUDY INTRO SECTION
-                                                                                                                ================================ */
+                                                                                                                                       CASE STUDY INTRO SECTION
+                                                                                                                                    ================================ */
 
         .case-study-intro {
             max-width: 1180px;
@@ -1205,8 +1205,11 @@
                         <div class="case-hook">A strong reliability story for operators concerned about wet gas, seal life,
                             cold-weather
                             performance, and maintenance-heavy conventional VRUs.</div>
-                        <div class="case-actions">
+                        <div class="case-actions case-actions-with-logo">
                             <span class="case-tagline">Long-run reliability</span>
+                            <div class="case-client-logo">
+                                <img src="{{ asset('/img/Torxen logo.webp') }}" alt="Vermilion Energy logo">
+                            </div>
                             <a class="read-more" href="/case-studies/vaporcommander-4-5-year-reliability">Read more</a>
                         </div>
                     </article>
@@ -1231,6 +1234,9 @@
                             control, and recovered gas economics.</div>
                         <div class="case-actions">
                             <span class="case-tagline">VCU replacement</span>
+                            <div class="case-client-logo case-actions-with-logo">
+                                <img src="{{ asset('/img/Torxen logo.webp') }}" alt="Vermilion Energy logo">
+                            </div>
                             <a class="read-more" href="/case-studies/vaporcommander-vcu-replacement">Read more</a>
                         </div>
                     </article>

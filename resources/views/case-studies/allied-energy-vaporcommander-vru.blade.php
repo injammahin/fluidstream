@@ -213,6 +213,34 @@
             box-shadow: 0 26px 70px rgba(0, 0, 0, .22)
         }
 
+        .hero-card:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: #0018dc;
+            transform: scaleX(0);
+            /* Start with a scaleX of 0 (hidden) */
+            transform-origin: left;
+            /* Make the scale start from the left */
+            transition: transform 0.3s ease;
+            /* Smooth transition */
+            z-index: 1;
+        }
+
+        .hero-card:hover {
+            transform: translateY(-3px);
+            border-color: #0018dc !important;
+            /* box-shadow: 0 18px 36px rgba(16, 42, 67, .08); */
+            background: #ffffff;
+        }
+
+        .hero-card:hover::after {
+            transform: scaleX(1);
+        }
+
         .quote {
             font-size: 18px;
             line-height: 1.32;
@@ -256,8 +284,8 @@
         }
 
         /* section {
-                                                                                                                                                                                                                                                                                                                                                                                        padding: 78px 22px
-                                                                                                                                                                                                                                                                                                                                                                                    } */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                    padding: 78px 22px
+                                                                                                                                                                                                                                                                                                                                                                                                                                                } */
 
         .container {
             /* max-width: var(--max); */
@@ -266,8 +294,8 @@
 
         .section-head {
             /* display: grid;
-                                                                                                                                                                                                                                                                                                            grid-template-columns: .72fr 1.28fr;
-                                                                                                                                                                                                                                                                                                            gap: 42px; */
+                                                                                                                                                                                                                                                                                                                                                                        grid-template-columns: .72fr 1.28fr;
+                                                                                                                                                                                                                                                                                                                                                                        gap: 42px; */
             max-width: 66ch;
             align-items: start;
             margin-bottom: 34px
@@ -316,6 +344,55 @@
             transition: .24s ease;
         }
 
+        .step {
+            position: relative;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 70px 1fr;
+            gap: 18px;
+            align-items: start;
+            background: #fff;
+            border: 1px solid #cbd1ff;
+            padding: 22px;
+            border-radius: 7px;
+            transition: transform 0.24s ease, border-color 0.24s ease, background 0.24s ease;
+        }
+
+        .step::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: #0018dc;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+            z-index: 1;
+        }
+
+        .color {
+            color: #424f5d;
+        }
+
+        h1 {
+            line-height: .94;
+            letter-spacing: -.075em;
+            margin: 0 0 24px;
+            max-width: 920px;
+        }
+
+        .step:hover {
+            transform: translateY(-3px);
+            border-color: #0018dc !important;
+            background: #ffffff;
+        }
+
+        .step:hover::after {
+            transform: scaleX(1);
+        }
+
         .metric:after {
             content: "";
             position: absolute;
@@ -341,6 +418,34 @@
         }
 
         .metric:hover::after {
+            transform: scaleX(1);
+        }
+
+        .step:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: #0018dc;
+            transform: scaleX(0);
+            /* Start with a scaleX of 0 (hidden) */
+            transform-origin: left;
+            /* Make the scale start from the left */
+            transition: transform 0.3s ease;
+            /* Smooth transition */
+            z-index: 1;
+        }
+
+        .step:hover {
+            transform: translateY(-3px);
+            border-color: #0018dc !important;
+            /* box-shadow: 0 18px 36px rgba(16, 42, 67, .08); */
+            background: #ffffff;
+        }
+
+        .step:hover::after {
             transform: scaleX(1);
         }
 
@@ -410,8 +515,8 @@
         }
 
         /* .metric:hover .big {
-                                                                                                                                                                                                                                                    color: #fff
-                                                                                                                                                                                                                                                } */
+                                                                                                                                                                                                                                                                                                                color: #fff
+                                                                                                                                                                                                                                                                                                            } */
 
         .metric h3,
         .card h3 {
@@ -449,7 +554,7 @@
             border-radius: 7px;
             padding: 36px;
             background: var(--soft);
-            border: 1px solid var(--line)
+            border: 1px solid #a5a7ab9f !important;
         }
 
         .panel.dark {
@@ -489,36 +594,36 @@
         }
 
         /* .card.swipe:after {
-                                                                                                                                                                    content: "";
-                                                                                                                                                                    position: absolute;
-                                                                                                                                                                    left: -110%;
-                                                                                                                                                                    top: 0;
-                                                                                                                                                                    width: 100%;
-                                                                                                                                                                    height: 100%;
-                                                                                                                                                                    background: linear-gradient(105deg, transparent, rgba(21, 209, 255, .16), transparent);
-                                                                                                                                                                    transition: .5s ease
-                                                                                                                                                                }
+                                                                                                                                                                                                                                content: "";
+                                                                                                                                                                                                                                position: absolute;
+                                                                                                                                                                                                                                left: -110%;
+                                                                                                                                                                                                                                top: 0;
+                                                                                                                                                                                                                                width: 100%;
+                                                                                                                                                                                                                                height: 100%;
+                                                                                                                                                                                                                                background: linear-gradient(105deg, transparent, rgba(21, 209, 255, .16), transparent);
+                                                                                                                                                                                                                                transition: .5s ease
+                                                                                                                                                                                                                            }
 
-                                                                                                                                                                .card.swipe:hover:after {
-                                                                                                                                                                    left: 110%
-                                                                                                                                                                }
+                                                                                                                                                                                                                            .card.swipe:hover:after {
+                                                                                                                                                                                                                                left: 110%
+                                                                                                                                                                                                                            }
 
-                                                                                                                                                                .card:hover {
-                                                                                                                                                                    transform: translateY(-5px);
-                                                                                                                                                                    border-color: rgba(0, 24, 220, .3);
-                                                                                                                                                                    box-shadow: 0 26px 60px rgba(0, 24, 220, .12)
-                                                                                                                                                                }
+                                                                                                                                                                                                                            .card:hover {
+                                                                                                                                                                                                                                transform: translateY(-5px);
+                                                                                                                                                                                                                                border-color: rgba(0, 24, 220, .3);
+                                                                                                                                                                                                                                box-shadow: 0 26px 60px rgba(0, 24, 220, .12)
+                                                                                                                                                                                                                            }
 
-                                                                                                                                                                .card.fill:hover {
-                                                                                                                                                                    background: var(--blue);
-                                                                                                                                                                    color: #fff;
-                                                                                                                                                                    border-color: var(--blue)
-                                                                                                                                                                }
+                                                                                                                                                                                                                            .card.fill:hover {
+                                                                                                                                                                                                                                background: var(--blue);
+                                                                                                                                                                                                                                color: #fff;
+                                                                                                                                                                                                                                border-color: var(--blue)
+                                                                                                                                                                                                                            }
 
-                                                                                                                                                                .card.fill:hover p,
-                                                                                                                                                                .card.fill:hover .tag {
-                                                                                                                                                                    color: rgba(255, 255, 255, .78)
-                                                                                                                                                                } */
+                                                                                                                                                                                                                            .card.fill:hover p,
+                                                                                                                                                                                                                            .card.fill:hover .tag {
+                                                                                                                                                                                                                                color: rgba(255, 255, 255, .78)
+                                                                                                                                                                                                                            } */
 
         .number {
             width: 42px;
@@ -533,27 +638,28 @@
         }
 
         /* .card.fill:hover .number {
-                                                                                                                                                                background: rgba(255, 255, 255, .14);
-                                                                                                                                                                color: #fff
-                                                                                                                                                            } */
+                                                                                                                                                                                                                            background: rgba(255, 255, 255, .14);
+                                                                                                                                                                                                                            color: #fff
+                                                                                                                                                                                                                        } */
 
         .blue-section {
-            background: var(--blue);
+            background: #f3f7fd;
             color: #fff;
             position: relative;
             overflow: hidden
         }
 
-        .blue-section h2 {
-            color: #fff
-        }
+        /* 
+                                                        .blue-section h2 {
+                                                            color: #fff
+                                                        } */
 
         .blue-section .kicker mb-2 {
             color: var(--cyan)
         }
 
         .blue-section p {
-            color: rgba(255, 255, 255, .80)
+            color: #5c6677;
         }
 
         .blue-grid {
@@ -574,15 +680,15 @@
             gap: 18px;
             align-items: start;
             background: rgb(255, 255, 255);
-            border: 1px solid rgba(255, 255, 255, .18);
+            border: 1px solid #d9d9d9;
             padding: 22px;
             border-radius: 7px
         }
 
         /* .step strong {
-                                                                                                                                                                                                font-size: 24px;
-                                                                                                                                                                                                color: black
-                                                                                                                                                                                            } */
+                                                                                                                                                                                                                                                            font-size: 24px;
+                                                                                                                                                                                                                                                            color: black
+                                                                                                                                                                                                                                                        } */
 
         .step h3 {
             margin: 0 0 8px;
@@ -599,8 +705,8 @@
         }
 
         .result-band {
-            background: #0018dc;
-            color: #fff;
+            /* background: #0018dc;
+                            color: #fff; */
             padding: 42px;
             display: grid;
             grid-template-columns: 1.05fr .95fr;
@@ -609,15 +715,15 @@
         }
 
         .result-band h2 {
-            color: #fff
+            color: #2e2e2e
         }
 
         .result-band p {
-            color: rgba(255, 255, 255, .78)
+            color: #1a2843
         }
 
         .result-band-1 p {
-            color: rgba(0, 0, 0, 0.78)
+            color: #1a2843
         }
 
         .bullets {
@@ -630,7 +736,7 @@
             display: flex;
             gap: 12px;
             align-items: flex-start;
-            color: rgba(255, 255, 255, .83)
+            color: #1a2843
         }
 
         .bullet:before {
@@ -814,15 +920,15 @@
             max-width: 62ch;
         }
 
-        .label {
-            display: inline-flex;
-            align-items: center;
-            font-size: 13px;
-            font-weight: 800;
-            letter-spacing: .18em;
-            text-transform: uppercase;
-            color: aliceblue;
-        }
+        /* .kicker {
+                                                                display: inline-flex;
+                                                                align-items: center;
+                                                                font-size: 13px;
+                                                                font-weight: 800;
+                                                                letter-spacing: .18em;
+                                                                text-transform: uppercase;
+                                                                color: aliceblue;
+                                                            } */
 
         .quote-source-row {
             display: flex;
@@ -893,7 +999,7 @@
                         Canada.</p>
                     <div class="cta-row">
                         <a class="btn primary" href="/vapor-recovery">View VaporCommander™</a>
-                        <a class="btn secondary" href="/contact">Request Technical Review</a>
+                        <a class="btn secondary" href="/technical-review">Request Technical Review</a>
                     </div>
                 </div>
                 <aside class="hero-card">
@@ -924,7 +1030,7 @@
             <div class="container wrap py-12">
                 <div class="section-head ">
                     <div>
-                        <div class="label">Performance snapshot</div>
+                        <div class="kicker">Performance snapshot</div>
                         <h2>Reliable recovery where the previous VRU struggled.</h2>
                     </div>
                     <p>As of the case-study date, VaporCommander™ had operated for over 17 months with 100% uptime, zero
@@ -967,7 +1073,7 @@
         <section class="blue-section">
             <div class="container blue-grid wrap py-12">
                 <div>
-                    <div class="label">Background and challenge</div>
+                    <div class="kicker">Background and challenge</div>
                     <h2>The previous VRU did not match the reality of the fluid stream.</h2>
                     <p>Allied Energy II acquired assets that included an existing facility with a conventional vapor
                         recovery unit that could not operate consistently. The root issue was not simply that the prior
@@ -1019,7 +1125,7 @@
             <div class="container wrap py-12">
                 <div class="section-head">
                     <div>
-                        <div class="label">Why conventional VRUs struggle</div>
+                        <div class="kicker">Why conventional VRUs struggle</div>
                         <h2>Scrubber-dependent VRUs add maintenance risk.</h2>
                     </div>
                     <p>Conventional VRUs usually rely on upstream scrubbers to remove liquids before compression. That
@@ -1056,7 +1162,7 @@
         <section style="background:var(--soft)">
             <div class="container split wrap py-12">
                 <div class="panel dark">
-                    <div class="label">Fluidstream deployment</div>
+                    <div class="kicker">Fluidstream deployment</div>
                     <h3>VaporCommander™ installed December 2024</h3>
                     <p>Allied Energy II selected Fluidstream’s VaporCommander™ because it offered a different operating
                         methodology from a conventional scrubber-protected VRU. VaporCommander™ is designed to operate
@@ -1067,7 +1173,7 @@
                         conditions.</p>
                 </div>
                 <div class="panel">
-                    <div class="label">What changed</div>
+                    <div class="kicker">What changed</div>
                     <h3>Venting eliminated with no maintenance required to date.</h3>
                     <p>Since installation, the unit has captured tank vapors that would otherwise have been vented. As of
                         the case-study date, Allied had not required maintenance, service, or filter changes, and the system
@@ -1083,7 +1189,7 @@
             <div class="container wrap py-12">
                 <div class="section-head">
                     <div>
-                        <div class="label">Technology differentiation</div>
+                        <div class="kicker">Technology differentiation</div>
                         <h2>Patented wet-gas compression logic.</h2>
                     </div>
                     <p>VaporCommander™ is supported by Fluidstream’s patented multiphase compression approach. The system
@@ -1127,7 +1233,7 @@
             <div class="container wrap py-12">
                 <div class="result-band">
                     <div>
-                        <div class="label">Field results</div>
+                        <div class="kicker">Field results</div>
                         <h2>Over 17 months of 100% uptime at the time of reporting.</h2>
                         <p>As of the case-study date, VaporCommander™ had operated for over 17 months with 100% uptime, zero
                             maintenance, no service events, and no filter changes. This observed performance reflects
@@ -1155,7 +1261,7 @@
             <div class="container wrap py-12">
                 <div class="section-head">
                     <div>
-                        <div class="label">Why no maintenance was required</div>
+                        <div class="kicker">Why no maintenance was required</div>
                         <h2>The reliability result is tied to system architecture.</h2>
                     </div>
                     <p>The absence of maintenance over more than 17 months reflects a system architecture that avoids
@@ -1203,7 +1309,7 @@
             <div class="container wrap py-12">
                 <div class="section-head">
                     <div>
-                        <div class="label">Technical fit summary</div>
+                        <div class="kicker">Technical fit summary</div>
                         <h2>Why VaporCommander™ fit this VRU application.</h2>
                     </div>
                     <p>This case demonstrates that vapor recovery reliability is not only about compressor horsepower. It is
@@ -1238,7 +1344,7 @@
         <section>
             <div class="container wrap py-12">
                 <div>
-                    <div class="label">Next step</div>
+                    <div class="kicker">Next step</div>
                     <h2>Evaluate whether VaporCommander™ fits your tank vapor recovery application.</h2>
                     <p>Fluidstream can review tank configuration, vapor rate, wet gas composition, condensate and water
                         exposure, winter operation, regulatory requirements, power availability, H₂S exposure, and
@@ -1246,7 +1352,7 @@
                 </div>
                 <div class="cta-row" style="justify-content:flex-start;margin:0">
                     <a class="btn-1 primary" href="/vapor-recovery">Review VaporCommander™</a>
-                    <a class="btn-1 secondary" href="/contact">Request Technical Fit Analysis</a>
+                    <a class="btn-1 secondary" href="/technical-review">Request Technical Fit Analysis</a>
                 </div>
             </div>
         </section>

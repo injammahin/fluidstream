@@ -94,13 +94,13 @@
         }
 
         /* 
-                                                                                                                                                                                                                                                                        .section-label:before {
-                                                                                                                                                                                                                                                                            content: "";
-                                                                                                                                                                                                                                                                            width: 38px;
-                                                                                                                                                                                                                                                                            height: 2px;
-                                                                                                                                                                                                                                                                            background: var(--cyan);
-                                                                                                                                                                                                                                                                            display: inline-block;
-                                                                                                                                                                                                                                                                        } */
+                                                                                                                                                                                                                                                                                                                                                    .section-label:before {
+                                                                                                                                                                                                                                                                                                                                                        content: "";
+                                                                                                                                                                                                                                                                                                                                                        width: 38px;
+                                                                                                                                                                                                                                                                                                                                                        height: 2px;
+                                                                                                                                                                                                                                                                                                                                                        background: var(--cyan);
+                                                                                                                                                                                                                                                                                                                                                        display: inline-block;
+                                                                                                                                                                                                                                                                                                                                                    } */
 
         /* Header matches the clean Fluidstream homepage feel */
         .site-header {
@@ -265,14 +265,14 @@
         }
 
         /* .quote-card:before {
-                                                                                                                                                                                                                                                                                                            content: "";
-                                                                                                                                                                                                                                                                                                            position: absolute;
-                                                                                                                                                                                                                                                                                                            top: 0;
-                                                                                                                                                                                                                                                                                                            left: 0;
-                                                                                                                                                                                                                                                                                                            right: 0;
-                                                                                                                                                                                                                                                                                                            height: 4px;
-                                                                                                                                                                                                                                                                                                            background: linear-gradient(90deg, var(--cyan), rgba(255, 255, 255, 0));
-                                                                                                                                                                                                                                                                                                        } */
+                                                                                                                                                                                                                                                                                                                                                                                        content: "";
+                                                                                                                                                                                                                                                                                                                                                                                        position: absolute;
+                                                                                                                                                                                                                                                                                                                                                                                        top: 0;
+                                                                                                                                                                                                                                                                                                                                                                                        left: 0;
+                                                                                                                                                                                                                                                                                                                                                                                        right: 0;
+                                                                                                                                                                                                                                                                                                                                                                                        height: 4px;
+                                                                                                                                                                                                                                                                                                                                                                                        background: linear-gradient(90deg, var(--cyan), rgba(255, 255, 255, 0));
+                                                                                                                                                                                                                                                                                                                                                                                    } */
 
         .quote-card strong {
             color: #000000;
@@ -313,8 +313,8 @@
 
         /* Page sections */
         /* .section {
-                                                                                                                                                                                        padding: 78px 0;
-                                                                                                                                                                                    } */
+                                                                                                                                                                                                                                                                    padding: 78px 0;
+                                                                                                                                                                                                                                                                } */
 
         .section-soft {
             background: var(--soft);
@@ -383,7 +383,7 @@
 
         h3 {
             color: var(--ink);
-            font-size: 1.28rem;
+            font-size: 16px;
             line-height: 1.26;
             letter-spacing: -.028em;
             margin: 1.95rem 0 .62rem;
@@ -392,8 +392,6 @@
         .lead {
             font-size: 1.16rem;
             color: #303b50;
-            border-left: 4px solid #0018dc;
-            padding-left: 1.22rem;
             margin: 1.15rem 0 2rem;
         }
 
@@ -460,9 +458,9 @@
         }
 
         /* .fs-card:hover h3,
-                                                                                                                                                                                                                            .fs-card:hover p {
-                                                                                                                                                                                                                                color: #fff;
-                                                                                                                                                                                                                            } */
+                                                                                                                                                                                                                                                                                                        .fs-card:hover p {
+                                                                                                                                                                                                                                                                                                            color: #fff;
+                                                                                                                                                                                                                                                                                                        } */
 
         .line-card:before {
             content: "";
@@ -508,13 +506,13 @@
         }
 
         /* .fs-card,
-                                                                                                                                                                                                                                    .line-card,
-                                                                                                                                                                                                                                    .stat-card,
-                                                                                                                                                                                                                                    .callout {
-                                                                                                                                                                                                                                        position: relative;
-                                                                                                                                                                                                                                        overflow: hidden;
-                                                                                                                                                                                                                                        transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
-                                                                                                                                                                                                                                    } */
+                                                                                                                                                                                                                                                                                                                .line-card,
+                                                                                                                                                                                                                                                                                                                .stat-card,
+                                                                                                                                                                                                                                                                                                                .callout {
+                                                                                                                                                                                                                                                                                                                    position: relative;
+                                                                                                                                                                                                                                                                                                                    overflow: hidden;
+                                                                                                                                                                                                                                                                                                                    transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+                                                                                                                                                                                                                                                                                                                } */
         .cta-panel::after,
         .fs-card::after,
         .line-card::after,
@@ -813,12 +811,12 @@
             }
 
             /* .section {
-                                                                                                                                                                                            padding: 58px 0;
-                                                                                                                                                                                        } */
+                                                                                                                                                                                                                                                                        padding: 58px 0;
+                                                                                                                                                                                                                                                                    } */
 
             /* .hero {
-                                                                                                                                                                                        padding: 74px 0;
-                                                                                                                                                                                    } */
+                                                                                                                                                                                                                                                                    padding: 74px 0;
+                                                                                                                                                                                                                                                                } */
 
             article {
                 padding: 28px;
@@ -893,33 +891,33 @@
         }
 
         /* 
-                                        .compare-box ul li {
-                                            position: relative;
-                                            padding-left: 32px;
-                                            margin-bottom: 14px;
-                                            line-height: 1.6;
-                                        } */
+                                                                                                                    .compare-box ul li {
+                                                                                                                        position: relative;
+                                                                                                                        padding-left: 32px;
+                                                                                                                        margin-bottom: 14px;
+                                                                                                                        line-height: 1.6;
+                                                                                                                    } */
 
         /* .compare-box ul li::before {
-                                                    content: "";
-                                                    position: absolute;
-                                                    left: 0;
-                                                    top: 5px;
-                                                    width: 20px;
-                                                    height: 20px;
-                                                    background-repeat: no-repeat;
-                                                    background-position: center;
-                                                    background-size: 20px 20px;
-                                                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%230018dc' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h12'/%3E%3Cpath d='m13 6 6 6-6 6'/%3E%3C/svg%3E");
-                                                } */
+                                                                                                                                content: "";
+                                                                                                                                position: absolute;
+                                                                                                                                left: 0;
+                                                                                                                                top: 5px;
+                                                                                                                                width: 20px;
+                                                                                                                                height: 20px;
+                                                                                                                                background-repeat: no-repeat;
+                                                                                                                                background-position: center;
+                                                                                                                                background-size: 20px 20px;
+                                                                                                                                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%230018dc' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h12'/%3E%3Cpath d='m13 6 6 6-6 6'/%3E%3C/svg%3E");
+                                                                                                                            } */
 
         /* .compare-box.blue ul li::before {
-                                                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h12'/%3E%3Cpath d='m13 6 6 6-6 6'/%3E%3C/svg%3E");
-                                            }
+                                                                                                                            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h12'/%3E%3Cpath d='m13 6 6 6-6 6'/%3E%3C/svg%3E");
+                                                                                                                        }
 
-                                            .compare-box ul li:last-child {
-                                                margin-bottom: 0;
-                                            } */
+                                                                                                                        .compare-box ul li:last-child {
+                                                                                                                            margin-bottom: 0;
+                                                                                                                        } */
     </style>
     <style>
         /* Sidebar / Article Contents - line style */
@@ -1086,22 +1084,22 @@
     </script>
 
     <script type="application/ld+json">
-                                                                                                                                                                                                                                      {
-                                                                                                                                                                                                                                        "@context": "https://schema.org",
-                                                                                                                                                                                                                                        "@type": "Article",
-                                                                                                                                                                                                                                        "headline": "Vapor Recovery Units for Oil & Gas: Engineering Guide to VRU Systems, Failure Modes, and Modern Vapor Recovery Design",
-                                                                                                                                                                                                                                        "description": "A technical guide to vapor recovery units for oil and gas operations, including VRU operation, failure modes, wet vapor reliability, winter issues, economics, and Fluidstream VaporCommander applications.",
-                                                                                                                                                                                                                                        "author": { "@type": "Organization", "name": "Fluidstream" },
-                                                                                                                                                                                                                                        "publisher": { "@type": "Organization", "name": "Fluidstream" },
-                                                                                                                                                                                                                                        "mainEntityOfPage": "https://fluidstream.co/insights/vapor-recovery-units-oil-gas"
-                                                                                                                                                                                                                                      }
-                                                                                                                                                                                                                                      </script>
+                                                                                                                                                                                                                                                                                                                  {
+                                                                                                                                                                                                                                                                                                                    "@context": "https://schema.org",
+                                                                                                                                                                                                                                                                                                                    "@type": "Article",
+                                                                                                                                                                                                                                                                                                                    "headline": "Vapor Recovery Units for Oil & Gas: Engineering Guide to VRU Systems, Failure Modes, and Modern Vapor Recovery Design",
+                                                                                                                                                                                                                                                                                                                    "description": "A technical guide to vapor recovery units for oil and gas operations, including VRU operation, failure modes, wet vapor reliability, winter issues, economics, and Fluidstream VaporCommander applications.",
+                                                                                                                                                                                                                                                                                                                    "author": { "@type": "Organization", "name": "Fluidstream" },
+                                                                                                                                                                                                                                                                                                                    "publisher": { "@type": "Organization", "name": "Fluidstream" },
+                                                                                                                                                                                                                                                                                                                    "mainEntityOfPage": "https://fluidstream.co/insights/vapor-recovery-units-oil-gas"
+                                                                                                                                                                                                                                                                                                                  }
+                                                                                                                                                                                                                                                                                                                  </script>
 
 
     <section class="hero">
         <div class="wrap hero-grid py-12">
             <div>
-                <div class="eyebrow">Technical Article / Vapor Recovery</div>
+                {{-- <div class="eyebrow">Technical Article / Vapor Recovery</div> --}}
                 <h1>Vapor Recovery Units for Oil & Gas</h1>
                 <p class="hero-lede">An engineering guide to VRU systems, failure modes, wet vapor reliability, winter
                     operation, and how multiphase-capable compression can improve vapor recovery performance in real field
@@ -1658,8 +1656,316 @@
                 </article>
             </div>
         </section>
+        <style>
+            .fs-related-section {
+                padding: 52px 0;
+                border-top: 1px solid #dce3ee;
+                border-bottom: 1px solid #dce3ee;
+            }
 
-        <section class="py-12" id="application-review">
+            .fs-related-wrap {
+                width: min(1180px, calc(100% - 40px));
+                margin: 0 auto;
+            }
+
+            .lead {
+                max-width: 620px;
+            }
+
+            .fs-related-head {
+
+                gap: 34px;
+                align-items: start;
+                margin-bottom: 26px;
+            }
+
+            .fs-related-kicker {
+                display: inline-flex;
+                margin-bottom: 8px;
+                color: #0018dc;
+                font-size: 11px;
+                font-weight: 900;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            /* 
+                                                                    .fs-related-head h2 {
+                                                                        margin: 0;
+                                                                        color: #061126;
+                                                                        font-size: clamp(30px, 3vw, 44px);
+                                                                        font-weight: 900;
+                                                                        line-height: 1.04;
+                                                                        letter-spacing: -0.055em;
+                                                                    } */
+            /* 
+                                                                .fs-related-head p {
+                                                                    margin: 0;
+                                                                    color: #637086;
+                                                                    font-size: 16px;
+                                                                    line-height: 1.62;
+                                                                    max-width: 720px;
+                                                                } */
+
+            .fs-related-grid {
+                display: grid;
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+                gap: 16px;
+                align-items: stretch;
+            }
+
+            .fs-related-card {
+                position: relative;
+                overflow: hidden;
+                height: 100%;
+                min-height: 245px;
+                padding: 22px;
+                border: 1px solid #dce3ee;
+                border-radius: 7px;
+                background: #ffffff;
+                box-shadow: 0 14px 34px rgba(6, 17, 38, .055);
+                display: flex;
+                flex-direction: column;
+                transition:
+                    transform .24s ease,
+                    box-shadow .24s ease,
+                    border-color .24s ease,
+                    background .24s ease;
+            }
+
+            .fs-related-card::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 4px;
+                background: #0018dc;
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: transform .3s ease;
+                z-index: 1;
+            }
+
+            .fs-related-card:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 22px 55px rgba(6, 17, 38, .10);
+                border-color: rgba(0, 24, 220, .35);
+                background: #ffffff;
+            }
+
+            .fs-related-card:hover::before {
+                transform: scaleX(1);
+            }
+
+            .fs-related-card h3 {
+                margin: 0 0 16px;
+                color: #061126;
+                font-size: 13px;
+                font-weight: 900;
+                line-height: 1.35;
+                letter-spacing: .13em;
+                text-transform: uppercase;
+            }
+
+            .fs-related-list {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            .fs-related-list li {
+                margin: 0;
+                border-top: 1px solid #edf1f7;
+            }
+
+            .fs-related-list li:first-child {
+                border-top: 0;
+            }
+
+            .fs-related-list a {
+                position: relative;
+                display: block;
+                padding: 10px 20px 10px 0;
+                color: #0018dc;
+                font-size: 14px;
+                font-weight: 900;
+                line-height: 1.38;
+                text-decoration: none;
+                transition:
+                    color .22s ease,
+                    padding-left .22s ease;
+            }
+
+            .fs-related-list a::after {
+                content: "→";
+                position: absolute;
+                right: 0;
+                top: 10px;
+                color: #0018dc;
+                opacity: 0;
+                transform: translateX(-5px);
+                transition:
+                    opacity .22s ease,
+                    transform .22s ease;
+            }
+
+            .fs-related-list a:hover {
+                color: #0012aa;
+                padding-left: 4px;
+                text-decoration: none;
+            }
+
+            .fs-related-list a:hover::after {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+            .fs-related-note {
+                margin-top: auto;
+                padding-top: 14px;
+                color: #637086;
+                font-size: 12px;
+                font-weight: 700;
+                line-height: 1.45;
+            }
+
+            @media (max-width: 1100px) {
+                .fs-related-grid {
+                    grid-template-columns: repeat(2, minmax(0, 1fr));
+                }
+
+                .fs-related-head {
+                    grid-template-columns: 1fr;
+                    gap: 12px;
+                }
+            }
+
+            .gray {
+                background: #edeef4;
+            }
+
+            @media (max-width: 640px) {
+                .fs-related-section {
+                    padding: 44px 0;
+                }
+
+                .fs-related-wrap {
+                    width: min(1180px, calc(100% - 28px));
+                }
+
+                .fs-related-grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .fs-related-card {
+                    min-height: auto;
+                    padding: 20px;
+                }
+
+                .fs-related-head p {
+                    font-size: 15px;
+                }
+            }
+        </style>
+
+        <section class="fs-related-section">
+            <div class="fs-related-wrap">
+                <div class="fs-related-head">
+                    <div>
+                        <h2>Related Resources</h2>
+                    </div>
+
+                    <p class="lead">
+                        Continue from this article into the most relevant product, technical insight,
+                        field deployment, and technology pages.
+                    </p>
+                </div>
+
+                <div class="fs-related-grid">
+                    <div class="fs-related-card">
+                        <h3>Related Products</h3>
+
+                        <ul class="fs-related-list">
+                            <li>
+                                <a href="{{ url('/vapor-recovery') }}">
+                                    VaporCommander™
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="fs-related-card">
+                        <h3>Related Technical Insights</h3>
+
+                        <ul class="fs-related-list">
+                            <li>
+                                <a href="{{ url('/insights/why-conventional-vrus-fail-wet-gas') }}">
+                                    Why Conventional VRUs Fail in Wet Gas
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="{{ url('/insights/fluidstream-vru-vs-flaring-complete') }}">
+                                    VRU vs. Flaring: Complete Comparison
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="{{ url('/insights/fluidstream-methane-reduction-story-white-sections') }}">
+                                    Methane Emissions Reduction Solutions for Oil & Gas
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="{{ url('/insights/how-to-select-right-compression-applications-final-fixed') }}">
+                                    How to Select a Vapor Recovery Unit for Wet Gas
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="fs-related-card">
+                        <h3>Related Field Deployments</h3>
+
+                        <ul class="fs-related-list">
+                            <li>
+                                <a href="{{ url('/case-studies/allied-energy-vaporcommander-vru') }}">
+                                    Allied Energy VaporCommander™ VRU Case Study
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="{{ url('/case-studies/vaporcommander-4-5-year-reliability') }}">
+                                    VaporCommander™ 4.5-Year Reliability Case Study
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <div class="fs-related-card">
+                        <h3>Related Technology</h3>
+
+                        <ul class="fs-related-list">
+                            <li>
+                                <a href="{{ url('/technology') }}">
+                                    Fluidstream Technology Overview
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="{{ url('/patented-technology') }}">
+                                    Patented Technology
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-12 gray" id="application-review">
             <div class="wrap cta-inner">
                 <div>
                     <div class="eyebrow">Talk to Fluidstream</div>

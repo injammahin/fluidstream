@@ -10,7 +10,7 @@
             --ink: #08111f;
             --muted: #5c6677;
             --line: #dce4ef;
-            --soft: #f3f7fb;
+            --soft: #f4f6f8;
             --white: #ffffff;
             --card: #ffffff;
             --shadow: 0 22px 60px rgba(0, 24, 220, .12);
@@ -131,12 +131,12 @@
         }
 
         /* 
-                                                                                                                                                                                                                    .eyebrow:before {
-                                                                                                                                                                                                                        content: "";
-                                                                                                                                                                                                                        width: 34px;
-                                                                                                                                                                                                                        height: 2px;
-                                                                                                                                                                                                                        background: var(--cyan)
-                                                                                                                                                                                                                    } */
+                                                                                                                                                                                                                                                                                                                                                            .eyebrow:before {
+                                                                                                                                                                                                                                                                                                                                                                content: "";
+                                                                                                                                                                                                                                                                                                                                                                width: 34px;
+                                                                                                                                                                                                                                                                                                                                                                height: 2px;
+                                                                                                                                                                                                                                                                                                                                                                background: var(--cyan)
+                                                                                                                                                                                                                                                                                                                                                            } */
         h1 {
             font-size: clamp(26px, 5vw, 50px);
             line-height: .94;
@@ -261,8 +261,8 @@
         }
 
         /* section {
-                                                                                                                                                                                                                                                                                                                    padding: 78px 22px
-                                                                                                                                                                                                                                                                                                                } */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                            padding: 78px 22px
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        } */
 
         .container {
             /* max-width: var(--max); */
@@ -271,8 +271,8 @@
 
         .section-head {
             /* display: grid;
-                                                                                                                                                                                                                                        grid-template-columns: .72fr 1.28fr;
-                                                                                                                                                                                                                                        gap: 42px; */
+                                                                                                                                                                                                                                                                                                                                                                                grid-template-columns: .72fr 1.28fr;
+                                                                                                                                                                                                                                                                                                                                                                                gap: 42px; */
             max-width: 66ch;
             align-items: start;
             margin-bottom: 34px
@@ -285,6 +285,34 @@
             color: var(--blue);
             font-weight: 950;
             margin-bottom: 12px
+        }
+
+        .hero-card:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: #0018dc;
+            transform: scaleX(0);
+            /* Start with a scaleX of 0 (hidden) */
+            transform-origin: left;
+            /* Make the scale start from the left */
+            transition: transform 0.3s ease;
+            /* Smooth transition */
+            z-index: 1;
+        }
+
+        .hero-card:hover {
+            transform: translateY(-3px);
+            border-color: #0018dc !important;
+            /* box-shadow: 0 18px 36px rgba(16, 42, 67, .08); */
+            background: #ffffff;
+        }
+
+        .hero-card:hover::after {
+            transform: scaleX(1);
         }
 
         h2 {
@@ -415,8 +443,8 @@
         }
 
         /* .metric:hover .big {
-                                                                                                                                                                                color: #fff
-                                                                                                                                                                            } */
+                                                                                                                                                                                                                                                                                                                        color: #fff
+                                                                                                                                                                                                                                                                                                                    } */
 
         .metric h3,
         .card h3 {
@@ -454,18 +482,18 @@
             border-radius: 7px;
             padding: 36px;
             background: var(--soft);
-            border: 1px solid var(--line)
+            border: 1px solid #a5a7ab9f !important;
         }
 
         .panel.dark {
-            background: #0018dc;
-            color: #fff;
+            /* background: #0018dc;
+                                                                                                                        color: #fff; */
             border: 0;
             /* box-shadow: 0 28px 80px rgba(0, 24, 220, .22) */
         }
 
         .panel.dark p {
-            color: rgba(255, 255, 255, .80)
+            /* color: rgba(255, 255, 255, .80) */
         }
 
         .panel h3 {
@@ -494,36 +522,36 @@
         }
 
         /* .card.swipe:after {
-                                                                                                content: "";
-                                                                                                position: absolute;
-                                                                                                left: -110%;
-                                                                                                top: 0;
-                                                                                                width: 100%;
-                                                                                                height: 100%;
-                                                                                                background: linear-gradient(105deg, transparent, rgba(21, 209, 255, .16), transparent);
-                                                                                                transition: .5s ease
-                                                                                            }
+                                                                                                                                                                                                                                        content: "";
+                                                                                                                                                                                                                                        position: absolute;
+                                                                                                                                                                                                                                        left: -110%;
+                                                                                                                                                                                                                                        top: 0;
+                                                                                                                                                                                                                                        width: 100%;
+                                                                                                                                                                                                                                        height: 100%;
+                                                                                                                                                                                                                                        background: linear-gradient(105deg, transparent, rgba(21, 209, 255, .16), transparent);
+                                                                                                                                                                                                                                        transition: .5s ease
+                                                                                                                                                                                                                                    }
 
-                                                                                            .card.swipe:hover:after {
-                                                                                                left: 110%
-                                                                                            }
+                                                                                                                                                                                                                                    .card.swipe:hover:after {
+                                                                                                                                                                                                                                        left: 110%
+                                                                                                                                                                                                                                    }
 
-                                                                                            .card:hover {
-                                                                                                transform: translateY(-5px);
-                                                                                                border-color: rgba(0, 24, 220, .3);
-                                                                                                box-shadow: 0 26px 60px rgba(0, 24, 220, .12)
-                                                                                            }
+                                                                                                                                                                                                                                    .card:hover {
+                                                                                                                                                                                                                                        transform: translateY(-5px);
+                                                                                                                                                                                                                                        border-color: rgba(0, 24, 220, .3);
+                                                                                                                                                                                                                                        box-shadow: 0 26px 60px rgba(0, 24, 220, .12)
+                                                                                                                                                                                                                                    }
 
-                                                                                            .card.fill:hover {
-                                                                                                background: var(--blue);
-                                                                                                color: #fff;
-                                                                                                border-color: var(--blue)
-                                                                                            }
+                                                                                                                                                                                                                                    .card.fill:hover {
+                                                                                                                                                                                                                                        background: var(--blue);
+                                                                                                                                                                                                                                        color: #fff;
+                                                                                                                                                                                                                                        border-color: var(--blue)
+                                                                                                                                                                                                                                    }
 
-                                                                                            .card.fill:hover p,
-                                                                                            .card.fill:hover .tag {
-                                                                                                color: rgba(255, 255, 255, .78)
-                                                                                            } */
+                                                                                                                                                                                                                                    .card.fill:hover p,
+                                                                                                                                                                                                                                    .card.fill:hover .tag {
+                                                                                                                                                                                                                                        color: rgba(255, 255, 255, .78)
+                                                                                                                                                                                                                                    } */
 
         .number {
             width: 42px;
@@ -538,34 +566,33 @@
         }
 
         /* .card.fill:hover .number {
-                                                                                            background: rgba(255, 255, 255, .14);
-                                                                                            color: #fff
-                                                                                        } */
+                                                                                                                                                                                                                                    background: rgba(255, 255, 255, .14);
+                                                                                                                                                                                                                                    color: #fff
+                                                                                                                                                                                                                                } */
 
         .blue-section {
-            background: var(--blue);
-            color: #fff;
+            background: #f3f7fd;
             position: relative;
             overflow: hidden
         }
 
-        .blue-section h2 {
-            color: #fff
-        }
+        /* .blue-section h2 {
+                                                                                                                                            color: #fff
+                                                                                                                                        } */
 
         .blue-section .kicker mb-2 {
             color: var(--cyan)
         }
 
-        .blue-section p {
-            color: rgba(255, 255, 255, .80)
-        }
+        /* .blue-section p {
+                                                                                                                                            color: rgba(255, 255, 255, .80)
+                                                                                                                                        } */
 
         .blue-grid {
             display: grid;
             grid-template-columns: 1.1fr .9fr;
             gap: 30px;
-            align-items: center
+            align-items: start;
         }
 
         .timeline {
@@ -579,15 +606,57 @@
             gap: 18px;
             align-items: start;
             background: rgb(255, 255, 255);
-            border: 1px solid rgba(255, 255, 255, .18);
+            border: 1px solid #959de0;
             padding: 22px;
             border-radius: 7px
         }
 
+        .step {
+            position: relative;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 70px 1fr;
+            gap: 18px;
+            align-items: start;
+            background: #fff;
+            border: 1px solid #cbd1ff;
+            padding: 22px;
+            border-radius: 7px;
+            transition: transform 0.24s ease, border-color 0.24s ease, background 0.24s ease;
+        }
+
+        .step::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: #0018dc;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+            z-index: 1;
+        }
+
+        .color {
+            color: #424f5d;
+        }
+
+        .step:hover {
+            transform: translateY(-3px);
+            border-color: #0018dc !important;
+            background: #ffffff;
+        }
+
+        .step:hover::after {
+            transform: scaleX(1);
+        }
+
         /* .step strong {
-                                                                                                                            font-size: 24px;
-                                                                                                                            color: black
-                                                                                                                        } */
+                                                                                                                                                                                                                                                                    font-size: 24px;
+                                                                                                                                                                                                                                                                    color: black
+                                                                                                                                                                                                                                                                } */
 
         .step h3 {
             margin: 0 0 8px;
@@ -604,8 +673,8 @@
         }
 
         .result-band {
-            background: #0018dc;
-            color: #fff;
+            /* background: #0018dc;
+                                                                                        color: #fff; */
             padding: 42px;
             display: grid;
             grid-template-columns: 1.05fr .95fr;
@@ -613,13 +682,6 @@
             align-items: center;
         }
 
-        .result-band h2 {
-            color: #fff
-        }
-
-        .result-band p {
-            color: rgba(255, 255, 255, .78)
-        }
 
         .result-band-1 p {
             color: rgba(0, 0, 0, 0.78)
@@ -635,17 +697,20 @@
             display: flex;
             gap: 12px;
             align-items: flex-start;
-            color: rgba(255, 255, 255, .83)
+            /* color: rgba(255, 255, 255, .83) */
         }
 
         .bullet:before {
             content: "";
-            width: 9px;
-            height: 9px;
-            border-radius: 50%;
-            background: var(--cyan);
-            margin-top: 8px;
-            flex: 0 0 auto
+            position: absolute;
+            left: 0;
+            top: 0.2rem;
+            width: 16px;
+            height: 12px;
+            background-repeat: no-repeat;
+            background-size: 16px 12px;
+            background-image: url(data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 12' fill='none'%3E%3Cpath d='M1 6h11' stroke='%230018dc' stroke-width='1.5' stroke-linecap='round'/%3E%3Cpath d='M8.5 1.75L13 6l-4.5 4.25' stroke='%230018dc' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E);
+            transition: transform .24s ease;
         }
 
         .seo-copy {
@@ -815,7 +880,22 @@
             }
         }
 
+        /* 
+                                                            .bullet li:before {
+                                                                content: "";
+                                                                position: absolute;
+                                                                left: 0;
+                                                                top: 0.2rem;
+                                                                width: 16px;
+                                                                height: 12px;
+                                                                background-repeat: no-repeat;
+                                                                background-size: 16px 12px;
+                                                                background-image: url(data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 12' fill='none'%3E%3Cpath d='M1 6h11' stroke='%230018dc' stroke-width='1.5' stroke-linecap='round'/%3E%3Cpath d='M8.5 1.75L13 6l-4.5 4.25' stroke='%230018dc' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E);
+                                                                transition: transform .24s ease;
+                                                            } */
+
         .pp {
+            color: #5c6677 !important;
             max-width: 62ch;
         }
 
@@ -826,7 +906,7 @@
             font-weight: 800;
             letter-spacing: .18em;
             text-transform: uppercase;
-            color: aliceblue;
+            /* color: aliceblue; */
         }
     </style>
 
@@ -844,7 +924,7 @@
                         not ideal dry-gas assumptions.</p>
                     <div class="cta-row">
                         <a class="btn primary" href="/vapor-recovery">View VaporCommander™</a>
-                        <a class="btn secondary" href="/contact">Request Technical Review</a>
+                        <a class="btn secondary" href="/technical-review">Request Technical Review</a>
                     </div>
                 </div>
                 <aside class="hero-card">
@@ -907,10 +987,10 @@
             </div>
         </section>
 
-        <section class="blue-section ">
+        <section class="blue-section " style="background:var(--soft)">
             <div class="container blue-grid wrap py-12">
                 <div>
-                    <div class="label mb-2">The challenge</div>
+                    <div class="kicker mb-2">The challenge</div>
                     <h2>Vapor recovery is difficult when the gas is wet, variable, and exposed to winter.</h2>
                     <p class="pp">Tank vapor recovery in upstream oil and gas is rarely a clean, steady dry-gas application.
                         Vapor
@@ -997,7 +1077,7 @@
         <section style="background:var(--soft)">
             <div class="container split wrap py-12">
                 <div class="panel dark">
-                    <div class="label mb-2">Fluidstream solution</div>
+                    <div class="kicker mb-2">Fluidstream solution</div>
                     <h3>VaporCommander™ operates directly on wet vapor streams.</h3>
                     <p>Fluidstream’s VaporCommander™ is a patented multiphase vapor recovery system designed to process gas
                         streams that contain liquids without requiring conventional upstream separation as the primary
@@ -1062,7 +1142,7 @@
             </div>
         </section>
 
-        <section class="blue-section">
+        <section class="" style="background:var(--soft)">
             <div class="container wrap py-12">
                 <div class="result-band">
                     <div>
@@ -1179,7 +1259,7 @@
                 </div>
                 <div class="cta-row" style="justify-content:flex-start;margin:0">
                     <a class="btn-1 primary" href="/vapor-recovery">Review VaporCommander™</a>
-                    <a class="btn-1 secondary" href="/contact">Request Technical Fit Analysis</a>
+                    <a class="btn-1 secondary" href="/technical-review">Request Technical Fit Analysis</a>
                 </div>
             </div>
         </section>

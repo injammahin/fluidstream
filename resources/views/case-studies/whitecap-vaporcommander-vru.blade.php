@@ -208,10 +208,17 @@
 
         .hero-card {
             background: rgb(255, 255, 255);
-            border: 1px solid rgba(255, 255, 255, .22);
+            border: 1px solid rgba(84, 84, 84, 0.22);
             border-radius: 7px;
             padding: 28px;
             box-shadow: 0 26px 70px rgba(0, 0, 0, .22)
+        }
+
+        h1 {
+            line-height: .94;
+            letter-spacing: -.075em;
+            margin: 0 0 24px;
+            max-width: 920px;
         }
 
         .quote {
@@ -257,8 +264,8 @@
         }
 
         /* section {
-                                                                                                                                                                                                                                                                                                                                                                                padding: 78px 22px
-                                                                                                                                                                                                                                                                                                                                                                            } */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                            padding: 78px 22px
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        } */
 
         .container {
             /* max-width: var(--max); */
@@ -267,8 +274,8 @@
 
         .section-head {
             /* display: grid;
-                                                                                                                                                                                                                                                                                                    grid-template-columns: .72fr 1.28fr;
-                                                                                                                                                                                                                                                                                                    gap: 42px; */
+                                                                                                                                                                                                                                                                                                                                                                                grid-template-columns: .72fr 1.28fr;
+                                                                                                                                                                                                                                                                                                                                                                                gap: 42px; */
             max-width: 66ch;
             align-items: start;
             margin-bottom: 34px
@@ -411,8 +418,8 @@
         }
 
         /* .metric:hover .big {
-                                                                                                                                                                                                                                            color: #fff
-                                                                                                                                                                                                                                        } */
+                                                                                                                                                                                                                                                                                                                        color: #fff
+                                                                                                                                                                                                                                                                                                                    } */
 
         .metric h3,
         .card h3 {
@@ -450,7 +457,7 @@
             border-radius: 7px;
             padding: 36px;
             background: var(--soft);
-            border: 1px solid var(--line)
+            border: 1px solid #a5a7ab9f !important;
         }
 
         .panel.dark {
@@ -490,36 +497,36 @@
         }
 
         /* .card.swipe:after {
-                                                                                                                                                            content: "";
-                                                                                                                                                            position: absolute;
-                                                                                                                                                            left: -110%;
-                                                                                                                                                            top: 0;
-                                                                                                                                                            width: 100%;
-                                                                                                                                                            height: 100%;
-                                                                                                                                                            background: linear-gradient(105deg, transparent, rgba(21, 209, 255, .16), transparent);
-                                                                                                                                                            transition: .5s ease
-                                                                                                                                                        }
+                                                                                                                                                                                                                                        content: "";
+                                                                                                                                                                                                                                        position: absolute;
+                                                                                                                                                                                                                                        left: -110%;
+                                                                                                                                                                                                                                        top: 0;
+                                                                                                                                                                                                                                        width: 100%;
+                                                                                                                                                                                                                                        height: 100%;
+                                                                                                                                                                                                                                        background: linear-gradient(105deg, transparent, rgba(21, 209, 255, .16), transparent);
+                                                                                                                                                                                                                                        transition: .5s ease
+                                                                                                                                                                                                                                    }
 
-                                                                                                                                                        .card.swipe:hover:after {
-                                                                                                                                                            left: 110%
-                                                                                                                                                        }
+                                                                                                                                                                                                                                    .card.swipe:hover:after {
+                                                                                                                                                                                                                                        left: 110%
+                                                                                                                                                                                                                                    }
 
-                                                                                                                                                        .card:hover {
-                                                                                                                                                            transform: translateY(-5px);
-                                                                                                                                                            border-color: rgba(0, 24, 220, .3);
-                                                                                                                                                            box-shadow: 0 26px 60px rgba(0, 24, 220, .12)
-                                                                                                                                                        }
+                                                                                                                                                                                                                                    .card:hover {
+                                                                                                                                                                                                                                        transform: translateY(-5px);
+                                                                                                                                                                                                                                        border-color: rgba(0, 24, 220, .3);
+                                                                                                                                                                                                                                        box-shadow: 0 26px 60px rgba(0, 24, 220, .12)
+                                                                                                                                                                                                                                    }
 
-                                                                                                                                                        .card.fill:hover {
-                                                                                                                                                            background: var(--blue);
-                                                                                                                                                            color: #fff;
-                                                                                                                                                            border-color: var(--blue)
-                                                                                                                                                        }
+                                                                                                                                                                                                                                    .card.fill:hover {
+                                                                                                                                                                                                                                        background: var(--blue);
+                                                                                                                                                                                                                                        color: #fff;
+                                                                                                                                                                                                                                        border-color: var(--blue)
+                                                                                                                                                                                                                                    }
 
-                                                                                                                                                        .card.fill:hover p,
-                                                                                                                                                        .card.fill:hover .tag {
-                                                                                                                                                            color: rgba(255, 255, 255, .78)
-                                                                                                                                                        } */
+                                                                                                                                                                                                                                    .card.fill:hover p,
+                                                                                                                                                                                                                                    .card.fill:hover .tag {
+                                                                                                                                                                                                                                        color: rgba(255, 255, 255, .78)
+                                                                                                                                                                                                                                    } */
 
         .number {
             width: 42px;
@@ -534,16 +541,59 @@
         }
 
         /* .card.fill:hover .number {
-                                                                                                                                                        background: rgba(255, 255, 255, .14);
-                                                                                                                                                        color: #fff
-                                                                                                                                                    } */
+                                                                                                                                                                                                                                    background: rgba(255, 255, 255, .14);
+                                                                                                                                                                                                                                    color: #fff
+                                                                                                                                                                                                                                } */
 
         .blue-section {
-            background: var(--blue);
+            background: #f3f7fd;
             color: #fff;
             position: relative;
             overflow: hidden
         }
+
+        .step {
+            position: relative;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 70px 1fr;
+            gap: 18px;
+            align-items: start;
+            background: #fff;
+            border: 1px solid #cbd1ff;
+            padding: 22px;
+            border-radius: 7px;
+            transition: transform 0.24s ease, border-color 0.24s ease, background 0.24s ease;
+        }
+
+        .step::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: #0018dc;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+            z-index: 1;
+        }
+
+        .color {
+            color: #424f5d;
+        }
+
+        .step:hover {
+            transform: translateY(-3px);
+            border-color: #0018dc !important;
+            background: #ffffff;
+        }
+
+        .step:hover::after {
+            transform: scaleX(1);
+        }
+
 
         .blue-section h2 {
             color: #fff
@@ -581,9 +631,9 @@
         }
 
         /* .step strong {
-                                                                                                                                                                                        font-size: 24px;
-                                                                                                                                                                                        color: black
-                                                                                                                                                                                    } */
+                                                                                                                                                                                                                                                                    font-size: 24px;
+                                                                                                                                                                                                                                                                    color: black
+                                                                                                                                                                                                                                                                } */
 
         .step h3 {
             margin: 0 0 8px;
@@ -599,9 +649,40 @@
             margin: 0
         }
 
+        .gray {
+            background: #f4f6f8;
+
+        }
+
+        .hero-card:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: #0018dc;
+            transform: scaleX(0);
+            /* Start with a scaleX of 0 (hidden) */
+            transform-origin: left;
+            /* Make the scale start from the left */
+            transition: transform 0.3s ease;
+            /* Smooth transition */
+            z-index: 1;
+        }
+
+        .hero-card:hover {
+            transform: translateY(-3px);
+            border-color: #0018dc !important;
+            /* box-shadow: 0 18px 36px rgba(16, 42, 67, .08); */
+            background: #ffffff;
+        }
+
+        .hero-card:hover::after {
+            transform: scaleX(1);
+        }
+
         .result-band {
-            background: #0018dc;
-            color: #fff;
             padding: 42px;
             display: grid;
             grid-template-columns: 1.05fr .95fr;
@@ -609,12 +690,12 @@
             align-items: center;
         }
 
-        .result-band h2 {
-            color: #fff
-        }
+        /* .result-band h2 {
+                                                                            color: #fff
+                                                                        } */
 
         .result-band p {
-            color: rgba(255, 255, 255, .78)
+            color: #1a2843;
         }
 
         .result-band-1 p {
@@ -631,7 +712,7 @@
             display: flex;
             gap: 12px;
             align-items: flex-start;
-            color: rgba(255, 255, 255, .83)
+            color: #1a2843;
         }
 
         .bullet:before {
@@ -890,7 +971,7 @@
                         and low operator intervention were key requirements.</p>
                     <div class="cta-row">
                         <a class="btn primary" href="/vapor-recovery">View VaporCommander™</a>
-                        <a class="btn secondary" href="/contact">Request Technical Review</a>
+                        <a class="btn secondary" href="/technical-review">Request Technical Review</a>
                     </div>
                 </div>
                 <aside class="hero-card">
@@ -919,7 +1000,7 @@
             <div class="container wrap py-12">
                 <div class="section-head">
                     <div>
-                        <div class="label">Performance snapshot</div>
+                        <div class="kicker">Performance snapshot</div>
                         <h2>Observed field performance in cold-weather VRU service.</h2>
                     </div>
                     <p>Whitecap installed its first VaporCommander™ unit near Kindersley, Saskatchewan, Canada in June 2025.
@@ -959,10 +1040,10 @@
             </div>
         </section>
 
-        <section>
+        <section class="gray">
             <div class="container split wrap py-12">
                 <div class="panel dark">
-                    <div class="label">Application context</div>
+                    <div class="kicker">Application context</div>
                     <h3>Vapor recovery in a real Saskatchewan operating window.</h3>
                     <p>Whitecap’s Saskatchewan facilities required vapor recovery equipment to capture low-pressure
                         hydrocarbon vapors from storage and process equipment. The system needed to support methane
@@ -971,7 +1052,7 @@
                         vapor generation, low suction pressure, and seasonal temperature extremes.</p>
                 </div>
                 <div class="panel">
-                    <div class="label">Application requirements</div>
+                    <div class="kicker">Application requirements</div>
                     <h3>Low-touch operation mattered as much as compression capability.</h3>
                     <p>The equipment needed to reduce operator intervention, avoid winter reliability problems, and handle
                         vapor streams that are not clean, dry, or steady.</p>
@@ -985,7 +1066,7 @@
             <div class="container wrap py-12">
                 <div class="section-head">
                     <div>
-                        <div class="label">Why conventional VRUs struggle</div>
+                        <div class="kicker">Why conventional VRUs struggle</div>
                         <h2>Conventional dry-gas assumptions do not always match field vapors.</h2>
                     </div>
                     <p>Many conventional VRU packages are built around compressors that prefer dry, stable inlet gas.
@@ -1015,11 +1096,11 @@
             </div>
         </section>
 
-        <section>
+        <section class="gray">
             <div class="container wrap py-12">
                 <div class="section-head">
                     <div>
-                        <div class="label">Fluidstream technical differentiation</div>
+                        <div class="kicker">Fluidstream technical differentiation</div>
                         <h2>Multiphase-tolerant vapor recovery for liquid-prone service.</h2>
                     </div>
                     <p>VaporCommander™ is designed around multiphase-tolerant compression. Instead of assuming the inlet
@@ -1052,7 +1133,7 @@
         <section>
             <div class="container split wrap py-12">
                 <div class="panel">
-                    <div class="label">Patent-supported engineering</div>
+                    <div class="kicker">Patent-supported engineering</div>
                     <h3>Liquid-aware compression response.</h3>
                     <p>Fluidstream’s multiphase compression platform is supported by core intellectual property, including
                         US11098709B2, CA2843321C, CA2883283C, and US10221664B2.</p>
@@ -1061,7 +1142,7 @@
                         variable conditions exist in oil and gas vapor recovery and compression applications.</p>
                 </div>
                 <div class="panel dark">
-                    <div class="label">What the field result showed</div>
+                    <div class="kicker">What the field result showed</div>
                     <h3>Reliability came from architecture, not babysitting.</h3>
                     <p>The Whitecap units operated without normal operating intervention, with no winter-related issues and
                         only a short routine filter change.</p>
@@ -1072,11 +1153,11 @@
             </div>
         </section>
 
-        <section>
+        <section class="gray">
             <div class="container wrap py-12">
                 <div class="result-band">
                     <div>
-                        <div class="label">Field results</div>
+                        <div class="kicker">Field results</div>
                         <h2>Continuous operation, minimal maintenance, and winter reliability.</h2>
                         <p>Across the Saskatchewan deployments, VaporCommander™ demonstrated the operating behavior
                             engineering and facilities teams look for in VRU service: stable runtime, low intervention, and
@@ -1105,7 +1186,7 @@
             <div class="container wrap py-12">
                 <div class="section-head">
                     <div>
-                        <div class="label">Operational benefits</div>
+                        <div class="kicker">Operational benefits</div>
                         <h2>Built for facilities teams that need reliable VRU operation, not constant troubleshooting.</h2>
                     </div>
                     <p>The strongest fit is where vapor streams are liquid-prone, cold-weather exposure is material, and
@@ -1137,11 +1218,11 @@
             </div>
         </section>
 
-        <section>
+        <section class="gray">
             <div class="container wrap py-12">
                 <div class="section-head">
                     <div>
-                        <div class="label">Application fit summary</div>
+                        <div class="kicker">Application fit summary</div>
                         <h2>Where VaporCommander™ fits best.</h2>
                     </div>
                     <p>This case is most relevant for operators evaluating VRU reliability in cold-weather or liquid-prone
@@ -1178,7 +1259,7 @@
         <section>
             <div class="container wrap py-12">
                 <div>
-                    <div class="label">Next step</div>
+                    <div class="kicker">Next step</div>
                     <h2>Evaluate VaporCommander™ for your vapor recovery application.</h2>
                     <p>Fluidstream can review tank configuration, vapor rate, suction and discharge conditions, liquids
                         exposure, winter operating requirements, emissions objectives, power availability, H₂S exposure, and
@@ -1186,7 +1267,7 @@
                 </div>
                 <div class="cta-row" style="justify-content:flex-start;margin:0">
                     <a class="btn-1 primary" href="/vapor-recovery">Review VaporCommander™</a>
-                    <a class="btn-1 secondary" href="/contact">Request Technical Fit Analysis</a>
+                    <a class="btn-1 secondary" href="/technical-review">Request Technical Fit Analysis</a>
                 </div>
             </div>
         </section>

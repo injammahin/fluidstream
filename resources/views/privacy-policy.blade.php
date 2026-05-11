@@ -679,6 +679,18 @@
                 font-size: 15px;
             }
         }
+
+        .privacy-link {
+            color: #1a33ff !important;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        .privacy-link:hover {
+            color: #0f24d9;
+            text-decoration: underline;
+        }
     </style>
 
     <script>
@@ -765,19 +777,19 @@
     </script>
 
     <script type="application/ld+json">
-                                                            {
-                                                                "@context": "https://schema.org",
-                                                                "@type": "WebPage",
-                                                                "name": "Privacy Policy",
-                                                                "headline": "Privacy Policy",
-                                                                "description": "How Fluidstream handles personal information and client technical data submitted through its website.",
-                                                                "url": "https://fluidstream.nexolioit.com/privacy-policy",
-                                                                "publisher": {
-                                                                    "@type": "Organization",
-                                                                    "name": "Fluidstream"
-                                                                }
-                                                            }
-                                                            </script>
+                                                                        {
+                                                                            "@context": "https://schema.org",
+                                                                            "@type": "WebPage",
+                                                                            "name": "Privacy Policy",
+                                                                            "headline": "Privacy Policy",
+                                                                            "description": "How Fluidstream handles personal information and client technical data submitted through its website.",
+                                                                            "url": "https://fluidstream.nexolioit.com/privacy-policy",
+                                                                            "publisher": {
+                                                                                "@type": "Organization",
+                                                                                "name": "Fluidstream"
+                                                                            }
+                                                                        }
+                                                                        </script>
 
     <div class="privacy-page">
         <section class="privacy-hero">
@@ -1191,7 +1203,8 @@
 
                         <p class="privacy-text">
                             For privacy questions, access requests, correction requests, consent withdrawals, or related
-                            concerns, please contact Fluidstream through the <a href="/contact">Contact Us</a> page.
+                            concerns, please contact Fluidstream through the
+                            <a href="/contact" class="privacy-link">Contact Us</a> page.
                         </p>
 
                         <p class="privacy-text">

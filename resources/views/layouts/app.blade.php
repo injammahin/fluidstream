@@ -604,8 +604,8 @@
     {{-- Optional FAQ Schema --}}
     @if ($faqSchema)
         <script type="application/ld+json">
-                                        {!! json_encode($faqSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
-                                    </script>
+                                            {!! json_encode($faqSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+                                        </script>
     @endif
 
     {{-- Extra page-specific schema if needed --}}
@@ -651,6 +651,8 @@
     </div>
 
     @include('partical.footer')
+    @stack('script')
+
 </body>
 
 </html>

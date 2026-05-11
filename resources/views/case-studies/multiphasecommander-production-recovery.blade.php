@@ -250,8 +250,8 @@
         }
 
         /* section {
-                                                                                                                                                                                                                                                                                                        padding: 78px 22px
-                                                                                                                                                                                                                                                                                                    } */
+                                                                                                                                                                                                                                                                                                                                                                                                                    padding: 78px 22px
+                                                                                                                                                                                                                                                                                                                                                                                                                } */
 
         .container {
             max-width: var(--max);
@@ -260,8 +260,8 @@
 
         .section-head {
             /* display: grid;
-                                                                                                                                                                                                grid-template-columns: .72fr 1.28fr;
-                                                                                                                                                                                                gap: 42px; */
+                                                                                                                                                                                                                                                                                                            grid-template-columns: .72fr 1.28fr;
+                                                                                                                                                                                                                                                                                                            gap: 42px; */
             align-items: start;
             margin-bottom: 34px
         }
@@ -316,6 +316,48 @@
             transition: transform 0.3s ease;
             /* Smooth transition */
             z-index: 1;
+        }
+
+        .step {
+            position: relative;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 70px 1fr;
+            gap: 18px;
+            align-items: start;
+            background: #fff;
+            border: 1px solid #cbd1ff;
+            padding: 22px;
+            border-radius: 7px;
+            transition: transform 0.24s ease, border-color 0.24s ease, background 0.24s ease;
+        }
+
+        .step::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: #0018dc;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+            z-index: 1;
+        }
+
+        .color {
+            color: #424f5d;
+        }
+
+        .step:hover {
+            transform: translateY(-3px);
+            border-color: #0018dc !important;
+            background: #ffffff;
+        }
+
+        .step:hover::after {
+            transform: scaleX(1);
         }
 
         .metric:hover {
@@ -429,20 +471,20 @@
         .panel {
             border-radius: 7px;
             padding: 36px;
-            background: var(--soft);
-            border: 1px solid var(--line)
+            /* background: var(--soft); */
+            border: 1px solid #a5a7ab9f !important;
         }
 
         .panel.dark {
-            background: #0018dc;
-            color: #fff;
+            /* background: #0018dc;
+                                                                            color: #fff; */
             border: 0;
-            box-shadow: 0 28px 80px rgba(0, 24, 220, .22);
+            /* box-shadow: 0 28px 80px rgba(0, 24, 220, .22); */
         }
 
-        .panel.dark p {
-            color: rgba(255, 255, 255, .80)
-        }
+        /* .panel.dark p {
+                                                                        color: rgba(255, 255, 255, .80)
+                                                                    } */
 
         .panel h3 {
             font-size: 32px;
@@ -470,36 +512,36 @@
         }
 
         /* .card.swipe:after {
-                                                                                                                        content: "";
-                                                                                                                        position: absolute;
-                                                                                                                        left: -110%;
-                                                                                                                        top: 0;
-                                                                                                                        width: 100%;
-                                                                                                                        height: 100%;
-                                                                                                                        background: linear-gradient(105deg, transparent, rgba(21, 209, 255, .16), transparent);
-                                                                                                                        transition: .5s ease
-                                                                                                                    } */
+                                                                                                                                                                                                                                    content: "";
+                                                                                                                                                                                                                                    position: absolute;
+                                                                                                                                                                                                                                    left: -110%;
+                                                                                                                                                                                                                                    top: 0;
+                                                                                                                                                                                                                                    width: 100%;
+                                                                                                                                                                                                                                    height: 100%;
+                                                                                                                                                                                                                                    background: linear-gradient(105deg, transparent, rgba(21, 209, 255, .16), transparent);
+                                                                                                                                                                                                                                    transition: .5s ease
+                                                                                                                                                                                                                                } */
 
         /* .card.swipe:hover:after {
-                                                                                                                        left: 110%
-                                                                                                                    } */
+                                                                                                                                                                                                                                    left: 110%
+                                                                                                                                                                                                                                } */
 
         /* .card:hover {
-                                                                                                                        transform: translateY(-5px);
-                                                                                                                        border-color: rgba(0, 24, 220, .3);
-                                                                                                                        box-shadow: 0 26px 60px rgba(0, 24, 220, .12)
-                                                                                                                    }
+                                                                                                                                                                                                                                    transform: translateY(-5px);
+                                                                                                                                                                                                                                    border-color: rgba(0, 24, 220, .3);
+                                                                                                                                                                                                                                    box-shadow: 0 26px 60px rgba(0, 24, 220, .12)
+                                                                                                                                                                                                                                }
 
-                                                                                                                    .card.fill:hover {
-                                                                                                                        background: var(--blue);
-                                                                                                                        color: #fff;
-                                                                                                                        border-color: var(--blue)
-                                                                                                                    } */
+                                                                                                                                                                                                                                .card.fill:hover {
+                                                                                                                                                                                                                                    background: var(--blue);
+                                                                                                                                                                                                                                    color: #fff;
+                                                                                                                                                                                                                                    border-color: var(--blue)
+                                                                                                                                                                                                                                } */
         /* 
-                                                                                                                .card.fill:hover p,
-                                                                                                                .card.fill:hover .tag {
-                                                                                                                    color: rgba(255, 255, 255, .78)
-                                                                                                                } */
+                                                                                                                                                                                                                            .card.fill:hover p,
+                                                                                                                                                                                                                            .card.fill:hover .tag {
+                                                                                                                                                                                                                                color: rgba(255, 255, 255, .78)
+                                                                                                                                                                                                                            } */
 
         .number {
             width: 42px;
@@ -514,25 +556,25 @@
         }
 
         /* .card.fill:hover .number {
-                                                                                                                background: rgba(255, 255, 255, .14);
-                                                                                                                color: #fff
-                                                                                                            } */
+                                                                                                                                                                                                                            background: rgba(255, 255, 255, .14);
+                                                                                                                                                                                                                            color: #fff
+                                                                                                                                                                                                                        } */
 
         .blue-section {
-            background: var(--blue);
-            color: #fff;
+            background: #f3f7fd;
+            /* color: #fff; */
             position: relative;
             overflow: hidden
         }
 
-        .blue-section h2 {
-            color: #fff
-        }
+        /* .blue-section h2 {
+                                                                                                                        color: #fff
+                                                                                                                    } */
 
 
-        .blue-section p {
-            color: rgba(255, 255, 255, .80)
-        }
+        /* .blue-section p {
+                                                                                                                    color: rgba(255, 255, 255, .80)
+                                                                                                                } */
 
         .blue-grid {
             display: grid;
@@ -552,7 +594,7 @@
             gap: 18px;
             align-items: start;
             background: #fff;
-            border: 1px solid rgba(255, 255, 255, .18);
+            border: 1px solid #cbd1ff;
             padding: 22px;
             border-radius: 7px;
         }
@@ -629,8 +671,8 @@
         }
 
         /* .seo-copy p {
-                                                                    margin-bottom: 20px
-                                                                } */
+                                                                                                                                                                                margin-bottom: 20px
+                                                                                                                                                                            } */
 
         .comparison {
             overflow: hidden;
@@ -761,8 +803,8 @@
             }
 
             /* section {
-                                                                                                                                                                                                                                                                                                            padding: 58px 18px
-                                                                                                                                                                                                                                                                                                        } */
+                                                                                                                                                                                                                                                                                                                                                                                                                        padding: 58px 18px
+                                                                                                                                                                                                                                                                                                                                                                                                                    } */
 
             .hero-inner {
                 padding-top: 62px
@@ -798,6 +840,11 @@
                 font-size: 22px
             }
         }
+
+        .gray {
+            background: #f4f6f8;
+
+        }
     </style>
 
     <main>
@@ -811,7 +858,7 @@
                         wells to
                         stable gas and condensate production.</p>
                     <div class="cta-row">
-                        <a class="btn primary" href="/contact">Discuss a Similar Application</a>
+                        <a class="btn primary" href="/technical-review">Discuss a Similar Application</a>
                         <a class="btn secondary" href="/technology">View Technology Advantage</a>
                     </div>
                 </div>
@@ -892,12 +939,13 @@
             </div>
         </section>
 
-        <section class="blue-section py-12">
+        <section class="blue-section py-12 gray">
             <div class="container blue-grid">
                 <div>
                     <div class="kicker mb-2">Root cause engineering</div>
                     <h2>The wells did not run out of hydrocarbons. The flow system could no longer clear liquids.</h2>
-                    <p>As reservoir pressure declined, gas velocity fell below the critical transport velocity required to
+                    <p class="color">As reservoir pressure declined, gas velocity fell below the critical transport velocity
+                        required to
                         continuously lift water and condensate to surface. Liquids accumulated in the tubing, added
                         hydrostatic head,
                         increased flowing bottomhole pressure, and reduced effective drawdown against the reservoir. The
@@ -907,7 +955,8 @@
                         become uneconomic because hydrocarbons disappeared; they became uneconomic because the flow system
                         could no
                         longer unload liquids against the available pressure differential.</p>
-                    <p>Pipeline pressure could rise to about 1200 kPa while the operator wanted the wells exposed to
+                    <p class="color">Pipeline pressure could rise to about 1200 kPa while the operator wanted the wells
+                        exposed to
                         approximately
                         250 kPa to produce effectively. Plunger lift remained useful, but the wells had moved beyond the
                         operating
@@ -1011,10 +1060,10 @@
             </div>
         </section>
 
-        <section class="py-12" style="background:var(--soft)">
+        <section class="py-12 gray">
             <div class="container split">
                 <div class="panel dark">
-                    <div class="kicker mb-2" style="color: #f7faff">Fluidstream deployment</div>
+                    <div class="kicker mb-2">Fluidstream deployment</div>
                     <h3>MC2270 • 200 HP gas drive • Alberta, Canada</h3>
                     <p>The location had no electrical power, the wells were deeper than 2400 m, and the producer wanted to
                         avoid new
@@ -1150,7 +1199,7 @@
             </div>
         </section> --}}
 
-        <section>
+        <section class="gray">
             <div class="container py-12">
                 <div class="section-head">
                     <div>
@@ -1203,7 +1252,7 @@
             </div>
         </section>
 
-        <section style="background:var(--soft)">
+        <section>
             <div class="container py-12">
                 <div class="section-head">
                     <div>
@@ -1245,7 +1294,7 @@
             </div>
         </section>
 
-        <section>
+        <section class="gray">
             <div class="container  py-12">
                 <div>
                     <div class="kicker mb-2">Next step</div>
@@ -1259,7 +1308,7 @@
                         the application.</p>
                 </div>
                 <div class="cta-row" style="justify-content:flex-start;margin:0">
-                    <a class="btn-1 primary" href="/contact">Request Technical Fit Analysis</a>
+                    <a class="btn-1 primary" href="/technical-review">Request Technical Fit Analysis</a>
                     <a class="btn-1 sbtn.secondary-1" href="/multiphase-compression">Review MultiphaseCommander™</a>
                 </div>
             </div>

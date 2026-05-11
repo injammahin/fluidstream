@@ -486,7 +486,6 @@
                         <a href="{{ url('/multiphase-compression') }}"
                             class="fs-mega-item {{ request()->is('multiphase-compression') ? 'fs-mega-item-active' : '' }}">
                             <h4 class="fs-mega-title">
-                                Multiphase Pump<br>
                                 Multiphase Compression
                             </h4>
 

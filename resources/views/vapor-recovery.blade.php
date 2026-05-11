@@ -494,14 +494,14 @@
     }
 
     /* 
-                                                                                                                                                                                                      .kicker {
-                                                                                                                                                                                                        font-size: 12px;
-                                                                                                                                                                                                        letter-spacing: .11em;
-                                                                                                                                                                                                        text-transform: uppercase;
-                                                                                                                                                                                                        color: var(--blue);
-                                                                                                                                                                                                        font-weight: 700;
-                                                                                                                                                                                                        margin-bottom: 10px
-                                                                                                                                                                                                      } */
+                                                                                                                                                                                                            .kicker {
+                                                                                                                                                                                                              font-size: 12px;
+                                                                                                                                                                                                              letter-spacing: .11em;
+                                                                                                                                                                                                              text-transform: uppercase;
+                                                                                                                                                                                                              color: var(--blue);
+                                                                                                                                                                                                              font-weight: 700;
+                                                                                                                                                                                                              margin-bottom: 10px
+                                                                                                                                                                                                            } */
 
     h2 {
       margin: 0 0 16px;
@@ -744,10 +744,10 @@
     }
 
     /* .cta {
-                                                                                                                                                                                                                                background: linear-gradient(120deg, #061760, #0018dc 56%, #0c79cf);
-                                                                                                                                                                                                                                color: #fff;
-                                                                                                                                                                                                                                padding: 72px 0
-                                                                                                                                                                                                                              } */
+                                                                                                                                                                                                                                      background: linear-gradient(120deg, #061760, #0018dc 56%, #0c79cf);
+                                                                                                                                                                                                                                      color: #fff;
+                                                                                                                                                                                                                                      padding: 72px 0
+                                                                                                                                                                                                                                    } */
 
     .cta-box {
       display: grid;
@@ -757,16 +757,16 @@
     }
 
     /* .cta h2 {
-                                                                                                                                                                                                                                  color: #fff;
-                                                                                                                                                                                                                                  margin-bottom: 14px
-                                                                                                                                                                                                                                }
+                                                                                                                                                                                                                                        color: #fff;
+                                                                                                                                                                                                                                        margin-bottom: 14px
+                                                                                                                                                                                                                                      }
 
-                                                                                                                                                                                                                                .cta p {
-                                                                                                                                                                                                                                  margin: 0;
-                                                                                                                                                                                                                                  color: #e3ecff;
-                                                                                                                                                                                                                                  font-size: 18px;
-                                                                                                                                                                                                                                  max-width: 780px
-                                                                                                                                                                                                                                } */
+                                                                                                                                                                                                                                      .cta p {
+                                                                                                                                                                                                                                        margin: 0;
+                                                                                                                                                                                                                                        color: #e3ecff;
+                                                                                                                                                                                                                                        font-size: 18px;
+                                                                                                                                                                                                                                        max-width: 780px
+                                                                                                                                                                                                                                      } */
 
     .cta-panel {
       background: rgba(255, 255, 255, .1);
@@ -862,8 +862,8 @@
     }
 
     /* ================================
-                                                                                       VAPOR HERO LEFT TEXT + RIGHT CARDS
-                                                                                    ================================ */
+                                                                                             VAPOR HERO LEFT TEXT + RIGHT CARDS
+                                                                                          ================================ */
 
     header.hero.fs-vapor-hero {
       position: relative !important;
@@ -902,15 +902,15 @@
       pointer-events: none;
 
       /* background:
-                                                                              linear-gradient(90deg,
-                                                                                rgba(2, 6, 23, 0.92) 0%,
-                                                                                rgba(2, 6, 23, 0.82) 34%,
-                                                                                rgba(2, 6, 23, 0.42) 62%,
-                                                                                rgba(2, 6, 23, 0.10) 100%),
-                                                                              linear-gradient(180deg,
-                                                                                rgba(2, 6, 23, 0.10) 0%,
-                                                                                rgba(2, 6, 23, 0.16) 68%,
-                                                                                rgba(2, 6, 23, 0.04) 100%); */
+                                                                                    linear-gradient(90deg,
+                                                                                      rgba(2, 6, 23, 0.92) 0%,
+                                                                                      rgba(2, 6, 23, 0.82) 34%,
+                                                                                      rgba(2, 6, 23, 0.42) 62%,
+                                                                                      rgba(2, 6, 23, 0.10) 100%),
+                                                                                    linear-gradient(180deg,
+                                                                                      rgba(2, 6, 23, 0.10) 0%,
+                                                                                      rgba(2, 6, 23, 0.16) 68%,
+                                                                                      rgba(2, 6, 23, 0.04) 100%); */
     }
 
     /* Main hero wrapper */
@@ -1126,10 +1126,10 @@
 
       header.hero.fs-vapor-hero::after {
         /* background:
-                                                                                linear-gradient(90deg,
-                                                                                  rgba(2, 6, 23, 0.92) 0%,
-                                                                                  rgba(2, 6, 23, 0.78) 58%,
-                                                                                  rgba(2, 6, 23, 0.52) 100%); */
+                                                                                      linear-gradient(90deg,
+                                                                                        rgba(2, 6, 23, 0.92) 0%,
+                                                                                        rgba(2, 6, 23, 0.78) 58%,
+                                                                                        rgba(2, 6, 23, 0.52) 100%); */
       }
     }
 
@@ -1184,8 +1184,8 @@
   <header class="hero fs-vapor-hero fs-vapor-hero-updated">
     <style>
       /* ================================
-                                     UPDATED VAPOR HERO
-                                  ================================ */
+                                           UPDATED VAPOR HERO
+                                        ================================ */
 
       header.hero.fs-vapor-hero-updated {
         position: relative !important;
@@ -1354,23 +1354,23 @@
       }
 
       /* .fs-vapor-hero-benefit::after {
-                                content: "";
-                                position: absolute;
-                                left: 0;
-                                right: 0;
-                                top: 0;
-                                height: 4px;
-                                background: #15d1ff;
-                                transform: scaleX(0);
-                                transform-origin: left;
-                                transition: transform .25s ease;
-                              } */
+                                      content: "";
+                                      position: absolute;
+                                      left: 0;
+                                      right: 0;
+                                      top: 0;
+                                      height: 4px;
+                                      background: #15d1ff;
+                                      transform: scaleX(0);
+                                      transform-origin: left;
+                                      transition: transform .25s ease;
+                                    } */
 
       /* .fs-vapor-hero-benefit:hover {
-                                transform: translateY(-4px);
-                                border-color: rgba(21, 209, 255, .45);
-                                background: rgba(255, 255, 255, .12);
-                              } */
+                                      transform: translateY(-4px);
+                                      border-color: rgba(21, 209, 255, .45);
+                                      background: rgba(255, 255, 255, .12);
+                                    } */
 
       .fs-vapor-hero-benefit:hover::after {
         transform: scaleX(1);
@@ -1412,25 +1412,25 @@
       }
 
       /* .fs-vapor-proof-card::after {
-                                content: "";
-                                position: absolute;
-                                left: 0;
-                                right: 0;
-                                top: 0;
-                                height: 4px;
-                                background: #15d1ff;
-                                transform: scaleX(0);
-                                transform-origin: left;
-                                transition: transform .28s ease;
-                                z-index: 2;
-                              } */
+                                      content: "";
+                                      position: absolute;
+                                      left: 0;
+                                      right: 0;
+                                      top: 0;
+                                      height: 4px;
+                                      background: #15d1ff;
+                                      transform: scaleX(0);
+                                      transform-origin: left;
+                                      transition: transform .28s ease;
+                                      z-index: 2;
+                                    } */
 
       /* .fs-vapor-proof-card:hover {
-                          transform: translateY(-4px);
-                          border-color: rgba(21, 209, 255, .42);
-                          background: rgba(255, 255, 255, .12);
-                          box-shadow: 0 30px 78px rgba(0, 0, 0, .28);
-                        } */
+                                transform: translateY(-4px);
+                                border-color: rgba(21, 209, 255, .42);
+                                background: rgba(255, 255, 255, .12);
+                                box-shadow: 0 30px 78px rgba(0, 0, 0, .28);
+                              } */
 
       .fs-vapor-proof-card:hover::after {
         transform: scaleX(1);
@@ -1820,9 +1820,9 @@
   </section>
   <style>
     /* ================================
-                                                                                                                 VAPOR BENEFITS SECTION
-                                                                                                                 2 COLUMNS x 3 ROWS + BIG CARD
-                                                                                                              ================================ */
+                                                                                                                       VAPOR BENEFITS SECTION
+                                                                                                                       2 COLUMNS x 3 ROWS + BIG CARD
+                                                                                                                    ================================ */
 
     .vapor-benefits-section {
       background: #ffffff;
@@ -1897,9 +1897,9 @@
       position: absolute;
       inset: 0;
       /* background: linear-gradient(135deg,
-                                                                                                                  rgba(0, 24, 220, .045) 0%,
-                                                                                                                  rgba(21, 209, 255, .10) 48%,
-                                                                                                                  rgba(255, 255, 255, 0) 100%); */
+                                                                                                                        rgba(0, 24, 220, .045) 0%,
+                                                                                                                        rgba(21, 209, 255, .10) 48%,
+                                                                                                                        rgba(255, 255, 255, 0) 100%); */
       opacity: 0;
       pointer-events: none;
       transition: opacity .25s ease;
@@ -2159,24 +2159,24 @@
       }
 
       /* .fs-vru-diff-head h2 {
-                                                                                                                                                      margin: 0;
-                                                                                                                                                      max-width: 760px;
-                                                                                                                                                      font-size: clamp(1.9rem, 3vw, 3rem);
-                                                                                                                                                      line-height: 1.05;
-                                                                                                                                                      letter-spacing: -.04em;
-                                                                                                                                                      color: #1f1f21;
-                                                                                                                                                    } */
+                                                                                                                                                            margin: 0;
+                                                                                                                                                            max-width: 760px;
+                                                                                                                                                            font-size: clamp(1.9rem, 3vw, 3rem);
+                                                                                                                                                            line-height: 1.05;
+                                                                                                                                                            letter-spacing: -.04em;
+                                                                                                                                                            color: #1f1f21;
+                                                                                                                                                          } */
 
       .fs-vru-diff-head h2 span {
         color: var(--vru-blue);
       }
 
       /* .fs-vru-diff-head p {
-                                                                                                                                                    margin: 0;
-                                                                                                                                                    color: var(--vru-muted);
-                                                                                                                                                    font-size: 16px;
-                                                                                                                                                    line-height: 1.75;
-                                                                                                                                                  } */
+                                                                                                                                                          margin: 0;
+                                                                                                                                                          color: var(--vru-muted);
+                                                                                                                                                          font-size: 16px;
+                                                                                                                                                          line-height: 1.75;
+                                                                                                                                                        } */
 
       .fs-vru-diff-summary {
         display: grid;
@@ -2339,16 +2339,16 @@
       }
 
       /* .fs-vru-diff-bottom::after {
-                                        content: "";
-                                        position: absolute;
-                                        width: 230px;
-                                        height: 230px;
-                                        right: -90px;
-                                        top: -120px;
-                                        border-radius: 999px;
-                                        background: rgba(21, 209, 255, .18);
-                                        pointer-events: none;
-                                      } */
+                                              content: "";
+                                              position: absolute;
+                                              width: 230px;
+                                              height: 230px;
+                                              right: -90px;
+                                              top: -120px;
+                                              border-radius: 999px;
+                                              background: rgba(21, 209, 255, .18);
+                                              pointer-events: none;
+                                            } */
 
       .fs-vru-diff-bottom-content {
         position: relative;
@@ -2455,8 +2455,8 @@
       }
 
       /* ================================
-                                                                                                                       VAPOR RECOVERY HERO FULL IMAGE FIX
-                                                                                                                    ================================ */
+                                                                                                                             VAPOR RECOVERY HERO FULL IMAGE FIX
+                                                                                                                          ================================ */
 
       header.hero {
         position: relative;
@@ -2712,8 +2712,8 @@
       }
 
       /* ================================
-                                                                                                                       RESPONSIVE HERO
-                                                                                                                    ================================ */
+                                                                                                                             RESPONSIVE HERO
+                                                                                                                          ================================ */
 
       @media (max-width: 1080px) {
         header.hero {
@@ -2931,12 +2931,12 @@
       }
 
       /* .fs-vc-spec-head h2 {
-                                                                                                                                                                        font-size: clamp(30px, 3.2vw, 46px);
-                                                                                                                                                                        line-height: 1.02;
-                                                                                                                                                                        margin: 0 0 14px;
-                                                                                                                                                                        letter-spacing: -.035em;
-                                                                                                                                                                        color: var(--vc-ink);
-                                                                                                                                                                      } */
+                                                                                                                                                                              font-size: clamp(30px, 3.2vw, 46px);
+                                                                                                                                                                              line-height: 1.02;
+                                                                                                                                                                              margin: 0 0 14px;
+                                                                                                                                                                              letter-spacing: -.035em;
+                                                                                                                                                                              color: var(--vc-ink);
+                                                                                                                                                                            } */
 
       .fs-vc-spec-lead {
         font-size: 17px;
@@ -3241,8 +3241,8 @@
 
       @media(max-width:720px) {
         /* .fs-vc-spec-section {
-                                                                                                                                            padding: 46px 0;
-                                                                                                                                          } */
+                                                                                                                                                  padding: 46px 0;
+                                                                                                                                                } */
 
         .fs-vc-spec-wrap {
           width: min(100% - 30px, 1200px);
@@ -3550,7 +3550,7 @@
 
         <p>Lower maintenance. Continuous operation. Reduced emissions.</p>
         <div class="btn-row" style="margin-bottom:0;">
-          <a class="btn btn-primary" href="#">Read full case study</a>
+          <a class="btn btn-primary" href="/case-studies/vaporcommander-4-5-year-reliability">Read full case study</a>
         </div>
       </div>
     </div>
@@ -3577,7 +3577,7 @@
             <li>Emissions reduction and gas monetization goals</li>
           </ul>
           <div class="btn-row" style="margin-bottom:0;">
-            <a class="btn-1 btn-primary" href="#">Request VaporCommander™ Review</a>
+            <a class="btn-1 btn-primary" href="/technical-review">Request Technical Review</a>
             <a class="btn-1 btn-secondary-1" href="#specifications">Review Specifications</a>
           </div>
         </div>
