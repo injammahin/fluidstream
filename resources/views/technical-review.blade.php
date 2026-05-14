@@ -939,10 +939,6 @@
                             <button class="submit" id="technicalSubmit" type="submit">
                                 Submit Application for Review
                             </button>
-
-                            <p class="submit-note">
-                                Fluidstream can review known values first. Missing values can be clarified during follow-up.
-                            </p>
                         </form>
                     </div>
                 </div>

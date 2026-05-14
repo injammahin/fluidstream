@@ -556,8 +556,8 @@
     <meta name="keywords" content="{{ $metaKeywords }}">
     <meta name="robots" content="{{ $robotsMeta }}">
     <link rel="canonical" href="{{ $canonicalUrl }}">
-
-    {{-- Open Graph --}}
+    <link rel="icon" type="image/png" href="{{ asset('img/favicon.png') }}?v=5">
+    <link rel="shortcut icon" type="image/png" href="{{ asset('img/favicon.png') }}?v=5">{{-- Open Graph --}}
     <meta property="og:site_name" content="{{ $siteName }}">
     <meta property="og:type" content="{{ $ogType }}">
     <meta property="og:title" content="{{ $metaTitle }}">
@@ -572,8 +572,6 @@
     <meta name="twitter:image" content="{{ $ogImage }}">
 
     {{-- Favicon --}}
-    <link rel="icon" type="image/png" href="{{ asset('img/favicon.png') }}">
-
     {{-- Fonts --}}
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -604,8 +602,8 @@
     {{-- Optional FAQ Schema --}}
     @if ($faqSchema)
         <script type="application/ld+json">
-                                            {!! json_encode($faqSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
-                                        </script>
+                                                                                                    {!! json_encode($faqSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+                                                                                                </script>
     @endif
 
     {{-- Extra page-specific schema if needed --}}

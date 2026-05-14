@@ -257,8 +257,8 @@
         }
 
         /* section {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                padding: 78px 22px
-                                                                                                                                                                                                                                                                                                                                                                                                                                            } */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                padding: 78px 22px
+                                                                                                                                                                                                                                                                                                                                                                                                                                                            } */
 
         .container {
             /* max-width: var(--max); */
@@ -267,21 +267,21 @@
 
         .section-head {
             /* display: grid;
-                                                                                                                                                                                                                                                                                                                                                                    grid-template-columns: .72fr 1.28fr;
-                                                                                                                                                                                                                                                                                                                                                                    gap: 42px; */
+                                                                                                                                                                                                                                                                                                                                                                                    grid-template-columns: .72fr 1.28fr;
+                                                                                                                                                                                                                                                                                                                                                                                    gap: 42px; */
             max-width: 66ch;
             align-items: start;
             margin-bottom: 34px
         }
 
         /* .kicker mb-2 {
-                                                        font-size: 12px;
-                                                        text-transform: uppercase;
-                                                        letter-spacing: .18em;
-                                                        color: var(--blue);
-                                                        font-weight: 950;
-                                                        margin-bottom: 12px
-                                                    } */
+                                                                        font-size: 12px;
+                                                                        text-transform: uppercase;
+                                                                        letter-spacing: .18em;
+                                                                        color: var(--blue);
+                                                                        font-weight: 950;
+                                                                        margin-bottom: 12px
+                                                                    } */
 
         h2 {
             margin: 0 0 16px;
@@ -469,8 +469,8 @@
         }
 
         /* .metric:hover .big {
-                                                                                                                                                                                                                                                                                                            color: #fff
-                                                                                                                                                                                                                                                                                                        } */
+                                                                                                                                                                                                                                                                                                                            color: #fff
+                                                                                                                                                                                                                                                                                                                        } */
 
         .metric h3,
         .card h3 {
@@ -513,14 +513,14 @@
 
         .panel.dark {
             /* background: #0018dc;
-                                                                                            color: #fff; */
+                                                                                                            color: #fff; */
             border: 0;
             /* box-shadow: 0 28px 80px rgba(0, 24, 220, .22) */
         }
 
         /* .panel.dark p {
-                                                                                        color: rgba(255, 255, 255, .80)
-                                                                                    } */
+                                                                                                        color: rgba(255, 255, 255, .80)
+                                                                                                    } */
 
         .panel h3 {
             font-size: 32px;
@@ -548,36 +548,36 @@
         }
 
         /* .card.swipe:after {
-                                                                                                                                                                                                                            content: "";
-                                                                                                                                                                                                                            position: absolute;
-                                                                                                                                                                                                                            left: -110%;
-                                                                                                                                                                                                                            top: 0;
-                                                                                                                                                                                                                            width: 100%;
-                                                                                                                                                                                                                            height: 100%;
-                                                                                                                                                                                                                            background: linear-gradient(105deg, transparent, rgba(21, 209, 255, .16), transparent);
-                                                                                                                                                                                                                            transition: .5s ease
-                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                            content: "";
+                                                                                                                                                                                                                                            position: absolute;
+                                                                                                                                                                                                                                            left: -110%;
+                                                                                                                                                                                                                                            top: 0;
+                                                                                                                                                                                                                                            width: 100%;
+                                                                                                                                                                                                                                            height: 100%;
+                                                                                                                                                                                                                                            background: linear-gradient(105deg, transparent, rgba(21, 209, 255, .16), transparent);
+                                                                                                                                                                                                                                            transition: .5s ease
+                                                                                                                                                                                                                                        }
 
-                                                                                                                                                                                                                        .card.swipe:hover:after {
-                                                                                                                                                                                                                            left: 110%
-                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                        .card.swipe:hover:after {
+                                                                                                                                                                                                                                            left: 110%
+                                                                                                                                                                                                                                        }
 
-                                                                                                                                                                                                                        .card:hover {
-                                                                                                                                                                                                                            transform: translateY(-5px);
-                                                                                                                                                                                                                            border-color: rgba(0, 24, 220, .3);
-                                                                                                                                                                                                                            box-shadow: 0 26px 60px rgba(0, 24, 220, .12)
-                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                        .card:hover {
+                                                                                                                                                                                                                                            transform: translateY(-5px);
+                                                                                                                                                                                                                                            border-color: rgba(0, 24, 220, .3);
+                                                                                                                                                                                                                                            box-shadow: 0 26px 60px rgba(0, 24, 220, .12)
+                                                                                                                                                                                                                                        }
 
-                                                                                                                                                                                                                        .card.fill:hover {
-                                                                                                                                                                                                                            background: var(--blue);
-                                                                                                                                                                                                                            color: #fff;
-                                                                                                                                                                                                                            border-color: var(--blue)
-                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                        .card.fill:hover {
+                                                                                                                                                                                                                                            background: var(--blue);
+                                                                                                                                                                                                                                            color: #fff;
+                                                                                                                                                                                                                                            border-color: var(--blue)
+                                                                                                                                                                                                                                        }
 
-                                                                                                                                                                                                                        .card.fill:hover p,
-                                                                                                                                                                                                                        .card.fill:hover .tag {
-                                                                                                                                                                                                                            color: rgba(255, 255, 255, .78)
-                                                                                                                                                                                                                        } */
+                                                                                                                                                                                                                                        .card.fill:hover p,
+                                                                                                                                                                                                                                        .card.fill:hover .tag {
+                                                                                                                                                                                                                                            color: rgba(255, 255, 255, .78)
+                                                                                                                                                                                                                                        } */
 
         .number {
             width: 42px;
@@ -642,9 +642,9 @@
         }
 
         /* .card.fill:hover .number {
-                                                                                                                                                                                                                        background: rgba(255, 255, 255, .14);
-                                                                                                                                                                                                                        color: #fff
-                                                                                                                                                                                                                    } */
+                                                                                                                                                                                                                                        background: rgba(255, 255, 255, .14);
+                                                                                                                                                                                                                                        color: #fff
+                                                                                                                                                                                                                                    } */
 
         .blue-section {
             background: #f4f6f8;
@@ -654,12 +654,12 @@
         }
 
         /* .blue-section h2 {
-                                                                                                                        color: #fff
-                                                                                                                    } */
+                                                                                                                                        color: #fff
+                                                                                                                                    } */
 
         /* .blue-section .kicker mb-2 {
-                                                        color: var(--cyan)
-                                                    } */
+                                                                        color: var(--cyan)
+                                                                    } */
 
         .blue-section p {
             color: #5c6677;
@@ -689,9 +689,9 @@
         }
 
         /* .step strong {
-                                                                                                                                                                                                                                                        font-size: 24px;
-                                                                                                                                                                                                                                                        color: black
-                                                                                                                                                                                                                                                    } */
+                                                                                                                                                                                                                                                                        font-size: 24px;
+                                                                                                                                                                                                                                                                        color: black
+                                                                                                                                                                                                                                                                    } */
 
         .step h3 {
             margin: 0 0 8px;
@@ -709,7 +709,7 @@
 
         .result-band {
             /* background: #0018dc;
-                                    color: #fff; */
+                                                    color: #fff; */
             padding: 42px;
             display: grid;
             grid-template-columns: 1.05fr .95fr;
@@ -924,14 +924,14 @@
         }
 
         /* .kicker {
-                                                    display: inline-flex;
-                                                    align-items: center;
-                                                    font-size: 13px;
-                                                    font-weight: 800;
-                                                    letter-spacing: .18em;
-                                                    text-transform: uppercase;
-                                                    color: aliceblue;
-                                                } */
+                                                                    display: inline-flex;
+                                                                    align-items: center;
+                                                                    font-size: 13px;
+                                                                    font-weight: 800;
+                                                                    letter-spacing: .18em;
+                                                                    text-transform: uppercase;
+                                                                    color: aliceblue;
+                                                                } */
     </style>
 
     <main>
@@ -954,11 +954,45 @@
                         <a class="btn secondary" href="/technical-review">Request Technical Review</a>
                     </div>
                 </div>
-                <aside class="hero-card">
+                <aside class="hero-card heroo">
                     <p class="quote">“Once you have it dialed in for various target setpoints and PID control, there is
                         little to no
                         intervention required.”</p>
-                    <div class="quote-source">Torxen Facilities Engineer • Southern Alberta vapor recovery application</div>
+                    <div class="quote-source-row">
+                        <div class="quote-source">
+                            Torxen, a producer with operations in Southern Alberta, Canada
+                        </div>
+                        <style>
+                            .quote-source-row {
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                gap: 18px;
+                                margin-bottom: 22px;
+                            }
+
+                            .quote-logo-box {
+                                flex: 0 0 150px;
+                                width: 150px;
+                                height: 80px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            }
+
+                            .quote-logo-box img {
+                                display: block;
+                                max-width: 100%;
+                                max-height: 80px;
+                                width: auto;
+                                height: auto;
+                                object-fit: contain;
+                            }
+                        </style>
+                        <div class="quote-logo-box">
+                            <img src="{{ asset('/img/Torxen logo.webp') }}" alt="Allied Energy II Corp. logo">
+                        </div>
+                    </div>
                     <div class="mini-metrics">
                         <div class="mini"><strong>12</strong><span>months operating period</span></div>
                         <div class="mini"><strong>C$46k+</strong><span>annual gas value</span></div>
@@ -1112,7 +1146,7 @@
 
         <section style="background:var(--soft)">
             <div class="container split wrap py-12">
-                <div class="panel dark">
+                <div class="panel">
                     <div class="kicker">Fluidstream solution</div>
                     <h3>VaporCommander™ as a VCU replacement.</h3>
                     <p>Fluidstream’s patented VaporCommander™ was installed at an oil battery in Southern Alberta, Canada in
@@ -1430,5 +1464,87 @@
             </div>
         </section>
     </main>
+    <style>
+        .hero {
+            position: relative;
+            overflow: hidden;
+            background: #f4f6f8 !important;
+            color: rgb(46 46 46) !important;
+        }
 
+        .hero:after {
+            background: rgba(21, 208, 255, 0) !important;
+        }
+
+        .hero-card {
+            border: 1px solid rgba(0, 0, 0, 0.22);
+            box-shadow: 0 26px 70px rgba(0, 0, 0, 0) !important;
+        }
+
+        .hero h2 {
+            color: rgb(2 6 23 / 0.7) !important;
+        }
+
+        .hero .lead {
+            color: rgb(2 6 23 / 0.7) !important;
+        }
+
+        .btn.secondary {
+            border-color: rgb(2 6 23 / 0.7) !important;
+            color: rgb(2 6 23 / 0.7) !important;
+        }
+
+        .panel,
+        .hero-card.heroo {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.22);
+            border-radius: 7px;
+            background: #ffffff;
+            box-shadow: none !important;
+            transition:
+                transform 0.24s ease,
+                border-color 0.24s ease,
+                background 0.24s ease;
+        }
+
+        .panel::after,
+        .hero-card.heroo::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: #0018dc;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .panel:hover,
+        .hero-card.heroo:hover {
+            transform: translateY(-3px);
+            border-color: #0018dc !important;
+            background: #ffffff;
+        }
+
+        .panel:hover::after,
+        .hero-card.heroo:hover::after {
+            transform: scaleX(1);
+        }
+
+        .btn {
+            border: 1px solid #000000a1 !important;
+        }
+
+        .panel {
+            border-radius: 7px;
+            padding: 36px;
+            background: #ffffff !important;
+            border: 1px solid #a5a7ab9f !important;
+        }
+    </style>
 @endsection

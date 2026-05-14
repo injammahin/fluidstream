@@ -93,13 +93,13 @@
         }
 
         /* 
-                                                                                                                                                                                                                                    .section-label:before {
-                                                                                                                                                                                                                                        content: "";
-                                                                                                                                                                                                                                        width: 38px;
-                                                                                                                                                                                                                                        height: 2px;
-                                                                                                                                                                                                                                        background: var(--cyan);
-                                                                                                                                                                                                                                        display: inline-block;
-                                                                                                                                                                                                                                    } */
+                                                                                                                                                                                                                                                                                                    .section-label:before {
+                                                                                                                                                                                                                                                                                                        content: "";
+                                                                                                                                                                                                                                                                                                        width: 38px;
+                                                                                                                                                                                                                                                                                                        height: 2px;
+                                                                                                                                                                                                                                                                                                        background: var(--cyan);
+                                                                                                                                                                                                                                                                                                        display: inline-block;
+                                                                                                                                                                                                                                                                                                    } */
 
         /* Header matches the clean Fluidstream homepage feel */
         .site-header {
@@ -157,8 +157,8 @@
 
         /* Hero */
         .hero {
-            color: #fff;
-            background: #0018dc;
+            /* color: #fff; */
+            /* background: #0018dc; */
             /* padding: 96px 0 90px; */
             overflow: hidden;
             position: relative;
@@ -196,7 +196,7 @@
 
         .hero-lede {
             font-size: clamp(14px, 16px, 18px);
-            color: rgba(255, 255, 255, .84);
+            color: #303b50;
             max-width: 760px;
         }
 
@@ -226,19 +226,19 @@
         .btn-primary {
             background: #fff;
             color: var(--blue);
-            /* box-shadow: 0 18px 38px rgba(0, 0, 0, .22); */
+            box-shadow: 0 4px 9px rgb(0 0 0 / 15%) !important;
+        }
+
+        .btn-outline {
+            /* color: #fff; */
+            border-color: #060f2096;
+            background: rgba(255, 255, 255, .08);
         }
 
         .btn-blue {
             background: var(--blue);
             color: #fff;
             box-shadow: 0 18px 38px rgba(0, 24, 220, .20);
-        }
-
-        .btn-outline {
-            color: #fff;
-            border-color: rgba(255, 255, 255, .34);
-            background: rgba(255, 255, 255, .08);
         }
 
         .btn-outline-dark {
@@ -253,25 +253,26 @@
         }
 
         .quote-card {
-            border: 1px solid rgba(255, 255, 255, .20);
+            border: 1px solid rgb(37 37 37 / 20%);
             background: #fff;
             backdrop-filter: blur(16px);
             border-radius: 7px;
             padding: 26px;
-            box-shadow: 0 24px 70px rgba(0, 0, 0, .22);
+            /* box-shadow: 0 24px 70px rgba(0, 0, 0, .22); */
             position: relative;
             overflow: hidden;
         }
 
+
         /* .quote-card:before {
-                                                                                                                                                                                                                                                                        content: "";
-                                                                                                                                                                                                                                                                        position: absolute;
-                                                                                                                                                                                                                                                                        top: 0;
-                                                                                                                                                                                                                                                                        left: 0;
-                                                                                                                                                                                                                                                                        right: 0;
-                                                                                                                                                                                                                                                                        height: 4px;
-                                                                                                                                                                                                                                                                        background: linear-gradient(90deg, var(--cyan), rgba(255, 255, 255, 0));
-                                                                                                                                                                                                                                                                    } */
+                                                                                                                                                                                                                                                                                                                                        content: "";
+                                                                                                                                                                                                                                                                                                                                        position: absolute;
+                                                                                                                                                                                                                                                                                                                                        top: 0;
+                                                                                                                                                                                                                                                                                                                                        left: 0;
+                                                                                                                                                                                                                                                                                                                                        right: 0;
+                                                                                                                                                                                                                                                                                                                                        height: 4px;
+                                                                                                                                                                                                                                                                                                                                        background: linear-gradient(90deg, var(--cyan), rgba(255, 255, 255, 0));
+                                                                                                                                                                                                                                                                                                                                    } */
 
         .quote-card strong {
             color: #000000;
@@ -293,10 +294,14 @@
         }
 
         .hero-mini {
-            border: 1px solid rgba(255, 255, 255, .18);
+            border: 1px solid rgb(45 45 45 / 20%);
             background: #fff;
+            backdrop-filter: blur(16px);
             border-radius: 7px;
-            padding: 18px;
+            padding: 26px;
+            /* box-shadow: 0 24px 70px rgba(0, 0, 0, .22); */
+            position: relative;
+            overflow: hidden;
         }
 
         .hero-mini b {
@@ -312,8 +317,8 @@
 
         /* Page sections */
         /* .section {
-                                                                                                                                                    padding: 78px 0;
-                                                                                                                                                } */
+                                                                                                                                                                                                                    padding: 78px 0;
+                                                                                                                                                                                                                } */
 
         .section-soft {
             background: var(--soft);
@@ -391,8 +396,8 @@
         .lead {
             font-size: 1.16rem;
             color: #303b50;
-            border-left: 4px solid #0018dc;
-            padding-left: 1.22rem;
+            /* border-left: 4px solid #0018dc;
+                        padding-left: 1.22rem; */
             margin: 1.15rem 0 2rem;
         }
 
@@ -459,9 +464,9 @@
         }
 
         /* .fs-card:hover h3,
-                                                                                                                                                                                        .fs-card:hover p {
-                                                                                                                                                                                            color: #fff;
-                                                                                                                                                                                        } */
+                                                                                                                                                                                                                                                        .fs-card:hover p {
+                                                                                                                                                                                                                                                            color: #fff;
+                                                                                                                                                                                                                                                        } */
 
         .line-card:before {
             content: "";
@@ -507,14 +512,16 @@
         }
 
         /* .fs-card,
-                                                                                                                                                                                                .line-card,
-                                                                                                                                                                                                .stat-card,
-                                                                                                                                                                                                .callout {
-                                                                                                                                                                                                    position: relative;
-                                                                                                                                                                                                    overflow: hidden;
-                                                                                                                                                                                                    transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
-                                                                                                                                                                                                } */
+                                                                                                                                                                                                                                                                .line-card,
+                                                                                                                                                                                                                                                                .stat-card,
+                                                                                                                                                                                                                                                                .callout {
+                                                                                                                                                                                                                                                                    position: relative;
+                                                                                                                                                                                                                                                                    overflow: hidden;
+                                                                                                                                                                                                                                                                    transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+                                                                                                                                                                                                                                                                } */
         .cta-panel::after,
+        .hero-mini::after,
+        .quote-card::after,
         .fs-card::after,
         .line-card::after,
         .stat-card::after,
@@ -534,6 +541,8 @@
 
         .fs-card:hover,
         .cta-panel:hover,
+        .hero-mini:hover,
+        .quote-card:hover,
         .line-card:hover,
         .stat-card:hover,
         .callout:hover {
@@ -544,6 +553,8 @@
 
         .fs-card:hover::after,
         .cta-panel:hover::after,
+        .hero-mini:hover::after,
+        .quote-card:hover::after,
         .line-card:hover::after,
         .stat-card:hover::after,
         .callout:hover::after {
@@ -812,12 +823,12 @@
             }
 
             /* .section {
-                                                                                                                                                        padding: 58px 0;
-                                                                                                                                                    } */
+                                                                                                                                                                                                                        padding: 58px 0;
+                                                                                                                                                                                                                    } */
 
             /* .hero {
-                                                                                                                                                    padding: 74px 0;
-                                                                                                                                                } */
+                                                                                                                                                                                                                    padding: 74px 0;
+                                                                                                                                                                                                                } */
 
             article {
                 padding: 28px;
@@ -995,7 +1006,7 @@
 
         /* Fix anchor scroll hiding under sticky header */
         html {
-            scroll-padding-top: 135px;
+            /* scroll-padding-top: 135px; */
         }
 
         .article-section {
@@ -1083,21 +1094,20 @@
         });
     </script>
     <script type="application/ld+json">
-                                      {
-                                        "@context": "https://schema.org",
-                                        "@type": "Article",
-                                        "headline": "Casing Gas Compression for Well Optimization: How Lowering Casing Pressure Increases Oil Production",
-                                        "description": "A technical guide to casing gas compression for oil well optimization, including casing pressure reduction, liquid loading, conventional compressor failure modes, and Fluidstream CompressionCommander applications.",
-                                        "author": { "@type": "Organization", "name": "Fluidstream" },
-                                        "publisher": { "@type": "Organization", "name": "Fluidstream" },
-                                        "mainEntityOfPage": "https://fluidstream.co/insights/casing-gas-compression-well-optimization"
-                                      }
-                                      </script>
+                                                                                                      {
+                                                                                                        "@context": "https://schema.org",
+                                                                                                        "@type": "Article",
+                                                                                                        "headline": "Casing Gas Compression for Well Optimization: How Lowering Casing Pressure Increases Oil Production",
+                                                                                                        "description": "A technical guide to casing gas compression for oil well optimization, including casing pressure reduction, liquid loading, conventional compressor failure modes, and Fluidstream CompressionCommander applications.",
+                                                                                                        "author": { "@type": "Organization", "name": "Fluidstream" },
+                                                                                                        "publisher": { "@type": "Organization", "name": "Fluidstream" },
+                                                                                                        "mainEntityOfPage": "https://fluidstream.co/insights/casing-gas-compression-well-optimization"
+                                                                                                      }
+                                                                                                      </script>
 
     <section class="hero">
         <div class="wrap hero-grid py-12">
             <div>
-                <div class="eyebrow">Technical Article / Casing Gas Compression</div>
                 <h1>Casing Gas Compression for Well Optimization</h1>
                 <p class="hero-lede">An engineering guide to lowering casing pressure, improving drawdown, supporting
                     artificial lift, and using multiphase-capable compression to make casing gas optimization more reliable
@@ -1485,8 +1495,321 @@
                 </article>
             </div>
         </section>
+        <style>
+            .fs-related-section {
+                padding: 52px 0;
+                border-top: 1px solid #dce3ee;
+                border-bottom: 1px solid #dce3ee;
+            }
 
-        <section class="py-12" id="application-review">
+            .fs-related-wrap {
+                width: min(1180px, calc(100% - 40px));
+                margin: 0 auto;
+            }
+
+            .lead {
+                max-width: 620px;
+            }
+
+            .fs-related-head {
+
+                gap: 34px;
+                align-items: start;
+                margin-bottom: 26px;
+            }
+
+            .fs-related-kicker {
+                display: inline-flex;
+                margin-bottom: 8px;
+                color: #0018dc;
+                font-size: 11px;
+                font-weight: 900;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            /* 
+                                                                                                                                                            .fs-related-head h2 {
+                                                                                                                                                                margin: 0;
+                                                                                                                                                                color: #061126;
+                                                                                                                                                                font-size: clamp(30px, 3vw, 44px);
+                                                                                                                                                                font-weight: 900;
+                                                                                                                                                                line-height: 1.04;
+                                                                                                                                                                letter-spacing: -0.055em;
+                                                                                                                                                            } */
+            /* 
+                                                                                                                                                        .fs-related-head p {
+                                                                                                                                                            margin: 0;
+                                                                                                                                                            color: #637086;
+                                                                                                                                                            font-size: 16px;
+                                                                                                                                                            line-height: 1.62;
+                                                                                                                                                            max-width: 720px;
+                                                                                                                                                        } */
+
+            .fs-related-grid {
+                display: grid;
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+                gap: 16px;
+                align-items: stretch;
+            }
+
+            .fs-related-card {
+                position: relative;
+                overflow: hidden;
+                height: 100%;
+                min-height: 245px;
+                padding: 22px;
+                border: 1px solid #dce3ee;
+                border-radius: 7px;
+                background: #ffffff;
+                box-shadow: 0 14px 34px rgba(6, 17, 38, .055);
+                display: flex;
+                flex-direction: column;
+                transition:
+                    transform .24s ease,
+                    box-shadow .24s ease,
+                    border-color .24s ease,
+                    background .24s ease;
+            }
+
+            .fs-related-card::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 4px;
+                background: #0018dc;
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: transform .3s ease;
+                z-index: 1;
+            }
+
+            .fs-related-card:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 22px 55px rgba(6, 17, 38, .10);
+                border-color: rgba(0, 24, 220, .35);
+                background: #ffffff;
+            }
+
+            .fs-related-card:hover::before {
+                transform: scaleX(1);
+            }
+
+            .fs-related-card h3 {
+                margin: 0 0 16px;
+                color: #061126;
+                font-size: 13px;
+                font-weight: 900;
+                line-height: 1.35;
+                letter-spacing: .13em;
+                text-transform: uppercase;
+            }
+
+            .fs-related-list {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            .cta-panel {
+                position: relative;
+                overflow: hidden;
+                border: 1px solid rgba(0, 0, 0, 0.22);
+                border-radius: 7px;
+                background: #ffffff;
+                box-shadow: none !important;
+                transition:
+                    transform 0.24s ease,
+                    border-color 0.24s ease,
+                    background 0.24s ease;
+            }
+
+            .fs-related-list li {
+                margin: 0;
+                border-top: 1px solid #edf1f7;
+            }
+
+            .fs-related-list li:first-child {
+                border-top: 0;
+            }
+
+            .fs-related-list a {
+                position: relative;
+                display: block;
+                padding: 10px 20px 10px 0;
+                color: #0018dc;
+                font-size: 14px;
+                font-weight: 900;
+                line-height: 1.38;
+                text-decoration: none;
+                transition:
+                    color .22s ease,
+                    padding-left .22s ease;
+            }
+
+            .fs-related-list a::after {
+                content: "→";
+                position: absolute;
+                right: 0;
+                top: 10px;
+                color: #0018dc;
+                opacity: 0;
+                transform: translateX(-5px);
+                transition:
+                    opacity .22s ease,
+                    transform .22s ease;
+            }
+
+            .fs-related-list a:hover {
+                color: #0012aa;
+                padding-left: 4px;
+                text-decoration: none;
+            }
+
+            .fs-related-list a:hover::after {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+            .fs-related-note {
+                margin-top: auto;
+                padding-top: 14px;
+                color: #637086;
+                font-size: 12px;
+                font-weight: 700;
+                line-height: 1.45;
+            }
+
+            @media (max-width: 1100px) {
+                .fs-related-grid {
+                    grid-template-columns: repeat(2, minmax(0, 1fr));
+                }
+
+                .fs-related-head {
+                    grid-template-columns: 1fr;
+                    gap: 12px;
+                }
+            }
+
+            .gray {
+                background: #edeef4;
+            }
+
+            @media (max-width: 640px) {
+                .fs-related-section {
+                    padding: 44px 0;
+                }
+
+                .fs-related-wrap {
+                    width: min(1180px, calc(100% - 28px));
+                }
+
+                .fs-related-grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .fs-related-card {
+                    min-height: auto;
+                    padding: 20px;
+                }
+
+                .fs-related-head p {
+                    font-size: 15px;
+                }
+            }
+        </style>
+        <section class="fs-related-section">
+            <div class="fs-related-wrap">
+                <div class="fs-related-head">
+                    <div>
+                        <h2>Related Resources</h2>
+                    </div>
+
+                    <p class="lead">
+                        Continue from this article into the most relevant product, technical insight,
+                        field deployment, and technology pages.
+                    </p>
+                </div>
+
+                <div class="fs-related-grid">
+                    <div class="fs-related-card">
+                        <h3>Related Products</h3>
+
+                        <ul class="fs-related-list">
+                            <li>
+                                <a href="{{ url('/casing-gas-compression') }}">
+                                    CompressionCommander™
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="fs-related-card">
+                        <h3>Related Technical Insights</h3>
+
+                        <ul class="fs-related-list">
+                            <li>
+                                <a href="{{ url('/insights/when-is-casing-gas-compressioncommander') }}">
+                                    When Is Casing Gas Compression Economically Viable?
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="{{ url('/insights/why-conventional-compression-fails-wet-unstable-wells') }}">
+                                    Why Conventional Casing Gas Compressors Fail in Wet Wells
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="{{ url('/insights/how-casing-gas-compression-increases-oil-production') }}">
+                                    How Casing Gas Compression Increases Oil Production
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="{{ url('/insights/how-to-select-right-compression-applications-final-fixed') }}">
+                                    How to Select a Vapor Recovery Unit for Wet Gas
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="fs-related-card">
+                        <h3>Related Field Deployments</h3>
+
+                        <ul class="fs-related-list">
+                            <li>
+                                <a href="{{ url('/case-studies/multiphasecommander-production-recovery') }}">
+                                    MultiphaseCommander™ Production Recovery Case Study
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="fs-related-card">
+                        <h3>Related Technology</h3>
+
+                        <ul class="fs-related-list">
+                            <li>
+                                <a href="{{ url('/technology') }}">
+                                    Fluidstream Technology Overview
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="{{ url('/patented-technology') }}">
+                                    Patented Technology
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-12 gray" id="application-review">
             <div class="wrap cta-inner">
                 <div>
                     <div class="eyebrow">Talk to Fluidstream</div>
@@ -1496,7 +1819,7 @@
                         and maintenance-sensitive field sites. Submit your operating conditions and Fluidstream can assess
                         the technical and economic fit.</p>
                     <div class="cta-actions">
-                        <a class="btn-1 btn-primary" href="/contact">Request Technical Review</a>
+                        <a class="btn-1 btn-primary" href="/technical-review">Request Technical Review</a>
                         <a class="btn-1 btn-outline" href="/multiphase-compression">Review CompressionCommander™
                             Specifications</a>
                     </div>

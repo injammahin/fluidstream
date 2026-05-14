@@ -1033,8 +1033,8 @@
         }
 
         /* ================================
-                                                                                                                                       CASE STUDY INTRO SECTION
-                                                                                                                                    ================================ */
+                                                                                                                                           CASE STUDY INTRO SECTION
+                                                                                                                                        ================================ */
 
         .case-study-intro {
             max-width: 1180px;
@@ -1232,7 +1232,7 @@
                         <div class="case-hook">Built for readers comparing VCUs, conventional VRUs, carbon exposure, active
                             pressure
                             control, and recovered gas economics.</div>
-                        <div class="case-actions">
+                        <div class="case-actions case-actions-with-logo">
                             <span class="case-tagline">VCU replacement</span>
                             <div class="case-client-logo case-actions-with-logo">
                                 <img src="{{ asset('/img/Torxen logo.webp') }}" alt="Vermilion Energy logo">

@@ -250,8 +250,8 @@
         }
 
         /* section {
-                                                                                                                                                                                                                                                                                                                                                                                                                    padding: 78px 22px
-                                                                                                                                                                                                                                                                                                                                                                                                                } */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    padding: 78px 22px
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                } */
 
         .container {
             max-width: var(--max);
@@ -260,8 +260,8 @@
 
         .section-head {
             /* display: grid;
-                                                                                                                                                                                                                                                                                                            grid-template-columns: .72fr 1.28fr;
-                                                                                                                                                                                                                                                                                                            gap: 42px; */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            grid-template-columns: .72fr 1.28fr;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            gap: 42px; */
             align-items: start;
             margin-bottom: 34px
         }
@@ -477,14 +477,14 @@
 
         .panel.dark {
             /* background: #0018dc;
-                                                                            color: #fff; */
+                                                                                                                                                                                                                                                                                                                            color: #fff; */
             border: 0;
             /* box-shadow: 0 28px 80px rgba(0, 24, 220, .22); */
         }
 
         /* .panel.dark p {
-                                                                        color: rgba(255, 255, 255, .80)
-                                                                    } */
+                                                                                                                                                                                                                                                                                                                        color: rgba(255, 255, 255, .80)
+                                                                                                                                                                                                                                                                                                                    } */
 
         .panel h3 {
             font-size: 32px;
@@ -512,36 +512,36 @@
         }
 
         /* .card.swipe:after {
-                                                                                                                                                                                                                                    content: "";
-                                                                                                                                                                                                                                    position: absolute;
-                                                                                                                                                                                                                                    left: -110%;
-                                                                                                                                                                                                                                    top: 0;
-                                                                                                                                                                                                                                    width: 100%;
-                                                                                                                                                                                                                                    height: 100%;
-                                                                                                                                                                                                                                    background: linear-gradient(105deg, transparent, rgba(21, 209, 255, .16), transparent);
-                                                                                                                                                                                                                                    transition: .5s ease
-                                                                                                                                                                                                                                } */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    content: "";
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    position: absolute;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    left: -110%;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    top: 0;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    width: 100%;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    height: 100%;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    background: linear-gradient(105deg, transparent, rgba(21, 209, 255, .16), transparent);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    transition: .5s ease
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                } */
 
         /* .card.swipe:hover:after {
-                                                                                                                                                                                                                                    left: 110%
-                                                                                                                                                                                                                                } */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    left: 110%
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                } */
 
         /* .card:hover {
-                                                                                                                                                                                                                                    transform: translateY(-5px);
-                                                                                                                                                                                                                                    border-color: rgba(0, 24, 220, .3);
-                                                                                                                                                                                                                                    box-shadow: 0 26px 60px rgba(0, 24, 220, .12)
-                                                                                                                                                                                                                                }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    transform: translateY(-5px);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    border-color: rgba(0, 24, 220, .3);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    box-shadow: 0 26px 60px rgba(0, 24, 220, .12)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                }
 
-                                                                                                                                                                                                                                .card.fill:hover {
-                                                                                                                                                                                                                                    background: var(--blue);
-                                                                                                                                                                                                                                    color: #fff;
-                                                                                                                                                                                                                                    border-color: var(--blue)
-                                                                                                                                                                                                                                } */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                .card.fill:hover {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    background: var(--blue);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    color: #fff;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    border-color: var(--blue)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                } */
         /* 
-                                                                                                                                                                                                                            .card.fill:hover p,
-                                                                                                                                                                                                                            .card.fill:hover .tag {
-                                                                                                                                                                                                                                color: rgba(255, 255, 255, .78)
-                                                                                                                                                                                                                            } */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                            .card.fill:hover p,
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                            .card.fill:hover .tag {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                color: rgba(255, 255, 255, .78)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                            } */
 
         .number {
             width: 42px;
@@ -556,25 +556,25 @@
         }
 
         /* .card.fill:hover .number {
-                                                                                                                                                                                                                            background: rgba(255, 255, 255, .14);
-                                                                                                                                                                                                                            color: #fff
-                                                                                                                                                                                                                        } */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                            background: rgba(255, 255, 255, .14);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                            color: #fff
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                        } */
 
         .blue-section {
-            background: #f3f7fd;
+            background: #f5f6f8;
             /* color: #fff; */
             position: relative;
             overflow: hidden
         }
 
         /* .blue-section h2 {
-                                                                                                                        color: #fff
-                                                                                                                    } */
+                                                                                                                                                                                                                                                                                                                                                                        color: #fff
+                                                                                                                                                                                                                                                                                                                                                                    } */
 
 
         /* .blue-section p {
-                                                                                                                    color: rgba(255, 255, 255, .80)
-                                                                                                                } */
+                                                                                                                                                                                                                                                                                                                                                                    color: rgba(255, 255, 255, .80)
+                                                                                                                                                                                                                                                                                                                                                                } */
 
         .blue-grid {
             display: grid;
@@ -671,8 +671,8 @@
         }
 
         /* .seo-copy p {
-                                                                                                                                                                                margin-bottom: 20px
-                                                                                                                                                                            } */
+                                                                                                                                                                                                                                                                                                                                                                                                                                margin-bottom: 20px
+                                                                                                                                                                                                                                                                                                                                                                                                                            } */
 
         .comparison {
             overflow: hidden;
@@ -803,8 +803,8 @@
             }
 
             /* section {
-                                                                                                                                                                                                                                                                                                                                                                                                                        padding: 58px 18px
-                                                                                                                                                                                                                                                                                                                                                                                                                    } */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        padding: 58px 18px
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    } */
 
             .hero-inner {
                 padding-top: 62px
@@ -862,7 +862,7 @@
                         <a class="btn secondary" href="/technology">View Technology Advantage</a>
                     </div>
                 </div>
-                <aside class="hero-card">
+                <aside class="hero-card heroo">
                     <p class="quote">“Fluidstream’s MultiphaseCommander didn’t just improve performance—it completely
                         transformed
                         two dead wells into revenue-generating assets. We went from zero production to over $1.5 million per
@@ -874,8 +874,40 @@
                         importantly, it just runs: zero seal leakage, no maintenance, and no operational headaches to date.
                         This is
                         the first solution we’ve seen that delivers both simplicity and reliable performance.”</p>
-                    <div class="quote-source">Production Engineer, international oil and gas producer • Alberta, Canada
-                        application
+                    <div class="quote-source-row">
+                        <div class="quote-source">
+                            Production Engineer,Vermilion Energy
+                        </div>
+                        <style>
+                            .quote-source-row {
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                gap: 18px;
+                                margin-bottom: 22px;
+                            }
+
+                            .quote-logo-box {
+                                flex: 0 0 150px;
+                                width: 150px;
+                                height: 80px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            }
+
+                            .quote-logo-box img {
+                                display: block;
+                                max-width: 100%;
+                                max-height: 80px;
+                                width: auto;
+                                height: auto;
+                                object-fit: contain;
+                            }
+                        </style>
+                        <div class="quote-logo-box">
+                            <img src="{{ asset('/img/Vermilion Energy.png') }}" alt="Allied Energy II Corp. logo">
+                        </div>
                     </div>
                     <div class="mini-metrics">
                         <div class="mini"><strong>10e3</strong><span>m³/day gas restored</span></div>
@@ -1062,7 +1094,7 @@
 
         <section class="py-12 gray">
             <div class="container split">
-                <div class="panel dark">
+                <div class="panel">
                     <div class="kicker mb-2">Fluidstream deployment</div>
                     <h3>MC2270 • 200 HP gas drive • Alberta, Canada</h3>
                     <p>The location had no electrical power, the wells were deeper than 2400 m, and the producer wanted to
@@ -1297,22 +1329,108 @@
         <section class="gray">
             <div class="container  py-12">
                 <div>
-                    <div class="kicker mb-2">Next step</div>
-                    <h2>Evaluate whether MultiphaseCommander™ can restore value in your field.</h2>
-                    <p>Fluidstream can review line pressure, wellhead conditions, stabilized and peak gas rates, liquid
-                        rates,
-                        plunger-lift behavior, slug frequency, expected low-flow/no-flow periods, power availability, H₂S
-                        exposure,
-                        sand risk, winterization requirements, and uptime requirements to determine whether
-                        MultiphaseCommander™ fits
-                        the application.</p>
+                    <div>
+                        <div class="kicker mb-2">Next step</div>
+                        <h2>Evaluate whether MultiphaseCommander™ can restore value in your field.</h2>
+                        <p>Fluidstream can review line pressure, wellhead conditions, stabilized and peak gas rates, liquid
+                            rates,
+                            plunger-lift behavior, slug frequency, expected low-flow/no-flow periods, power availability,
+                            H₂S
+                            exposure,
+                            sand risk, winterization requirements, and uptime requirements to determine whether
+                            MultiphaseCommander™ fits
+                            the application.</p>
+                    </div>
+                    <div class="cta-row" style="justify-content:flex-start;margin:0">
+                        <a class="btn-1 primary" href="/technical-review">Request Technical Fit Analysis</a>
+                        <a class="btn-1 sbtn.secondary-1" href="/multiphase-compression">Review MultiphaseCommander™</a>
+                    </div>
                 </div>
-                <div class="cta-row" style="justify-content:flex-start;margin:0">
-                    <a class="btn-1 primary" href="/technical-review">Request Technical Fit Analysis</a>
-                    <a class="btn-1 sbtn.secondary-1" href="/multiphase-compression">Review MultiphaseCommander™</a>
-                </div>
-            </div>
         </section>
     </main>
 
+
+    <style>
+        .hero {
+            position: relative;
+            overflow: hidden;
+            background: #f4f6f8 !important;
+            color: rgb(46 46 46) !important;
+        }
+
+        .hero:after {
+            background: rgba(21, 208, 255, 0) !important;
+        }
+
+        .hero-card {
+            border: 1px solid rgba(0, 0, 0, 0.22);
+            box-shadow: 0 26px 70px rgba(0, 0, 0, 0) !important;
+        }
+
+        .hero h2 {
+            color: rgb(2 6 23 / 0.7) !important;
+        }
+
+        .hero .lead {
+            color: rgb(2 6 23 / 0.7) !important;
+        }
+
+        .btn.secondary {
+            border-color: rgb(2 6 23 / 0.7) !important;
+            color: rgb(2 6 23 / 0.7) !important;
+        }
+
+        .panel,
+        .hero-card.heroo {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.22);
+            border-radius: 7px;
+            background: #ffffff;
+            box-shadow: none !important;
+            transition:
+                transform 0.24s ease,
+                border-color 0.24s ease,
+                background 0.24s ease;
+        }
+
+        .panel::after,
+        .hero-card.heroo::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: #0018dc;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .panel:hover,
+        .hero-card.heroo:hover {
+            transform: translateY(-3px);
+            border-color: #0018dc !important;
+            background: #ffffff;
+        }
+
+        .panel:hover::after,
+        .hero-card.heroo:hover::after {
+            transform: scaleX(1);
+        }
+
+        .btn {
+            border: 1px solid #000000a1 !important;
+        }
+
+        .panel {
+            border-radius: 7px;
+            padding: 36px;
+            background: #ffffff !important;
+            border: 1px solid #a5a7ab9f !important;
+        }
+    </style>
 @endsection

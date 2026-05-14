@@ -343,6 +343,10 @@
             <div class="fs-logo-panel">
                 <a href="{{ url('/') }}" class="fs-logo-link">
                     <img src="{{ asset('img/logo.png') }}" alt="Fluidstream Logo">
+
+                    <span class="fs-logo-since">
+                        Since 2010
+                    </span>
                 </a>
             </div>
 
@@ -777,13 +781,28 @@
 
     .fs-logo-link {
         display: inline-flex;
-        align-items: center;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        text-decoration: none;
+        line-height: 1;
     }
 
     .fs-logo-link img {
         height: 58px;
         width: auto;
         display: block;
+    }
+
+    .fs-logo-since {
+        display: block;
+        margin-top: -2px;
+        padding-left: 11px;
+        color: #697286;
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.16em;
+        line-height: 1;
     }
 
     .fs-topbar-panel {
@@ -795,6 +814,7 @@
     }
 
     .fs-topbar-grid {
+        background: #0018dc;
         position: relative;
         display: grid;
         grid-template-columns:
@@ -859,7 +879,7 @@
         justify-content: center;
         padding: 0 20px;
         border-left: 1px solid #e7edf6;
-        color: #334155;
+        color: #ffffff;
         font-size: 14px !important;
         line-height: 1;
         font-weight: 600 !important;
@@ -868,11 +888,11 @@
         transition: color .2s ease, background .2s ease;
     }
 
-    .fs-topbar-link:hover,
+    /* .fs-topbar-link:hover,
     .fs-topbar-link-active {
         color: #0018dc;
         background: #f8fbff;
-    }
+    } */
 
     .fs-topbar-contact {
         height: 32px;
@@ -1104,21 +1124,21 @@
         text-align: left;
     }
 
-    .fs-mega-left-accent {
+    /* .fs-mega-left-accent {
         display: inline-block;
         width: 48px;
         height: 3px;
         border-radius: 999px;
         background: linear-gradient(90deg, #0018dc 0%, #4f7cff 100%);
         margin-bottom: 18px;
-    }
+    } */
 
     .fs-mega-left-title {
         max-width: 310px;
         margin: 0;
-        font-size: 20px;
+        font-size: 21px;
         line-height: 1.22;
-        font-weight: 700;
+        font-weight: 500;
         letter-spacing: -0.025em;
         color: #0018dc;
         text-align: left;

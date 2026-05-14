@@ -34,7 +34,7 @@
         }
 
         .fip-page-head {
-            padding: 110px 0 46px;
+            padding: 86px 0 42px;
             border-bottom: 1px solid var(--fip-line);
         }
 
@@ -54,7 +54,7 @@
             line-height: 1.05;
             letter-spacing: -.04em;
             max-width: 24ch;
-            color: var(--text);
+            color: var(--text, #101322);
         }
 
         .fip-subtitle {
@@ -62,53 +62,67 @@
             text-align: justify;
             max-width: 59ch;
             margin: 6px 0 0;
-            /* color: var(--muted); */
-            /* font-size: 1.20rem; */
             line-height: 1.65;
-            /* font-weight: 500; */
-            opacity: 1;
+            color: var(--fip-muted);
         }
 
         .fip-main-section {
-            padding: 64px 0 84px;
+            padding: 52px 0 76px;
             background: #ffffff;
         }
 
         .fip-layout {
             display: grid;
-            grid-template-columns: 300px minmax(0, 1fr);
+            grid-template-columns: 280px minmax(0, 1fr);
             gap: 34px;
             align-items: start;
         }
 
         .fip-filter-column {
             position: sticky;
-            top: 110px;
+            top: 105px;
             align-self: start;
         }
 
         .fip-filter-panel {
             width: 100%;
             background: var(--fip-filter-bg);
-            padding: 34px 30px 34px;
+            padding: 28px 24px;
             border-radius: 0;
+            max-height: calc(100vh - 135px);
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #b9c4d3 transparent;
+        }
+
+        .fip-filter-panel::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .fip-filter-panel::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .fip-filter-panel::-webkit-scrollbar-thumb {
+            background: #b9c4d3;
+            border-radius: 999px;
         }
 
         .fip-filter-title {
-            margin: 0 0 24px;
+            margin: 0 0 22px;
             color: #161b27;
-            font-size: 22px;
+            font-size: 21px;
             font-weight: 850;
             line-height: 1.15;
         }
 
         .fip-filter-subtitle {
             display: block;
-            margin-bottom: 18px;
+            margin-bottom: 16px;
             color: var(--fip-muted);
-            font-size: 12px;
-            font-weight: 800;
-            letter-spacing: 0.12em;
+            font-size: 11px;
+            font-weight: 850;
+            letter-spacing: 0.14em;
             text-transform: uppercase;
         }
 
@@ -117,79 +131,97 @@
             border-bottom: 1px solid #d2d2d6;
         }
 
-        .fip-topic-filter {
+        .fip-checkbox-row {
             position: relative;
+            display: grid;
+            grid-template-columns: 20px minmax(0, 1fr);
+            align-items: center;
+            gap: 12px;
             width: 100%;
-            border: 0;
+            padding: 8px 0;
             border-bottom: 1px solid #d2d2d6;
-            background: transparent;
-            text-align: left;
             cursor: pointer;
-            color: #1b202b;
-            font-size: 14px;
-            font-weight: 700;
-            line-height: 1.35;
-            padding: 15px 26px 15px 18px;
+            user-select: none;
             transition:
-                color 0.2s ease,
-                background 0.2s ease,
-                padding-left 0.2s ease;
+                background 0.22s ease,
+                padding-left 0.22s ease;
         }
 
-        .fip-topic-filter:last-child {
+        .fip-checkbox-row:last-child {
             border-bottom: 0;
         }
 
-        .fip-topic-filter::before {
-            content: "";
+        .fip-topic-checkbox {
             position: absolute;
-            left: 2px;
-            top: 50%;
-            width: 6px;
-            height: 6px;
-            background: #1b202b;
-            border-radius: 50%;
-            transform: translateY(-50%);
-            transition: background 0.2s ease;
-        }
-
-        .fip-topic-filter::after {
-            content: "→";
-            position: absolute;
-            right: 2px;
-            top: 50%;
-            color: var(--fip-blue);
-            font-size: 15px;
-            font-weight: 700;
             opacity: 0;
-            transform: translateY(-50%) translateX(-4px);
+            pointer-events: none;
+        }
+
+        .fip-check-box {
+            width: 18px;
+            height: 18px;
+            border: 2px solid #8a99ad;
+            background: transparent;
+            border-radius: 3px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             transition:
-                opacity 0.2s ease,
-                transform 0.2s ease;
+                background 0.2s ease,
+                border-color 0.2s ease,
+                box-shadow 0.2s ease;
         }
 
-        .fip-topic-filter:hover,
-        .fip-topic-filter.is-active {
-            color: var(--fip-blue);
+        .fip-check-box::after {
+            content: "";
+            width: 8px;
+            height: 5px;
+            border-left: 2px solid #ffffff;
+            border-bottom: 2px solid #ffffff;
+            transform: rotate(-45deg) scale(0);
+            transition: transform 0.18s ease;
+            margin-top: -2px;
+        }
+
+        .fip-checkbox-text {
+            color: #1b202b;
+            font-size: 13.5px;
+            font-weight: 800;
+            line-height: 1.35;
+            transition: color 0.2s ease;
+        }
+
+        .fip-checkbox-row:hover {
+            padding-left: 4px;
             background: rgba(16, 40, 234, 0.04);
-            padding-left: 22px;
         }
 
-        .fip-topic-filter:hover::before,
-        .fip-topic-filter.is-active::before {
+        .fip-checkbox-row:hover .fip-checkbox-text {
+            color: var(--fip-blue);
+        }
+
+        .fip-checkbox-row:hover .fip-check-box {
+            border-color: var(--fip-blue);
+        }
+
+        .fip-topic-checkbox:checked+.fip-check-box {
             background: var(--fip-blue);
+            border-color: var(--fip-blue);
+            box-shadow: 0 0 0 4px rgba(16, 40, 234, 0.09);
         }
 
-        .fip-topic-filter:hover::after,
-        .fip-topic-filter.is-active::after {
-            opacity: 1;
-            transform: translateY(-50%) translateX(0);
+        .fip-topic-checkbox:checked+.fip-check-box::after {
+            transform: rotate(-45deg) scale(1);
+        }
+
+        .fip-checkbox-row.is-active .fip-checkbox-text {
+            color: var(--fip-blue);
         }
 
         .fip-filter-actions {
             display: flex;
             justify-content: flex-end;
-            margin-top: 34px;
+            margin-top: 28px;
         }
 
         .fip-clear-btn {
@@ -200,9 +232,9 @@
             border: 0;
             background: var(--fip-blue);
             color: #ffffff;
-            padding: 12px 17px;
-            font-size: 14px;
-            font-weight: 700;
+            padding: 11px 16px;
+            font-size: 13px;
+            font-weight: 800;
             cursor: pointer;
             border-radius: 0;
             transition:
@@ -212,7 +244,7 @@
         }
 
         .fip-clear-icon {
-            font-size: 22px;
+            font-size: 21px;
             line-height: 1;
             font-weight: 300;
         }
@@ -272,7 +304,12 @@
                 transform 0.22s ease,
                 box-shadow 0.22s ease,
                 border-color 0.22s ease,
-                background 0.22s ease;
+                background 0.22s ease,
+                opacity 0.22s ease;
+        }
+
+        .fip-article-card.is-hidden {
+            display: none;
         }
 
         .fip-article-card::before {
@@ -308,10 +345,17 @@
             z-index: 2;
         }
 
+        .fip-card-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            margin-bottom: 20px;
+        }
+
         .fip-tag {
             display: inline-flex;
             align-self: flex-start;
-            margin-bottom: 20px;
             padding: 9px 15px;
             border: 1px solid rgba(16, 40, 234, 0.20);
             border-radius: 999px;
@@ -322,6 +366,20 @@
             line-height: 1;
             letter-spacing: 0.10em;
             text-transform: uppercase;
+        }
+
+        .fip-card-number {
+            flex: 0 0 auto;
+            width: 36px;
+            height: 36px;
+            display: grid;
+            place-items: center;
+            border-radius: 999px;
+            background: rgba(16, 40, 234, 0.08);
+            color: var(--fip-blue);
+            font-size: 13px;
+            font-weight: 900;
+            border: 1px solid rgba(16, 40, 234, 0.16);
         }
 
         .fip-card-title {
@@ -384,15 +442,28 @@
             transform: translateX(4px);
         }
 
+        .fip-no-result {
+            display: none;
+            margin-top: 24px;
+            padding: 24px;
+            border: 1px dashed #cbd5e1;
+            border-radius: 7px;
+            background: #f8fafc;
+            color: var(--fip-muted);
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .fip-no-result.is-visible {
+            display: block;
+        }
+
         .fip-application-section {
             padding: 86px 0 92px;
             background: #ffffff;
         }
 
         .fip-application-head {
-
-            gap: 58px;
-            align-items: start;
             margin-bottom: 48px;
         }
 
@@ -402,7 +473,7 @@
             line-height: 1.05;
             letter-spacing: -.04em;
             max-width: 24ch;
-            color: var(--text);
+            color: var(--text, #101322);
         }
 
         .fip-application-text {
@@ -410,11 +481,8 @@
             text-align: justify;
             max-width: 59ch;
             margin: 6px 0 0;
-            /* color: var(--muted); */
-            /* font-size: 1.20rem; */
             line-height: 1.65;
-            /* font-weight: 500; */
-            opacity: 1;
+            color: var(--fip-muted);
         }
 
         .fip-product-grid {
@@ -427,7 +495,7 @@
             position: relative;
             overflow: hidden;
             min-height: 250px;
-            padding: 28px;
+            padding: 16px;
             border: 1px solid var(--fip-line);
             border-radius: 7px;
             background: #ffffff;
@@ -469,7 +537,7 @@
         .fip-product-card h3 {
             margin: 0 0 18px;
             color: var(--fip-dark);
-            font-size: 19px;
+            font-size: 17px;
             font-weight: 800;
             line-height: 1.16;
             letter-spacing: -0.04em;
@@ -511,6 +579,7 @@
 
             .fip-filter-panel {
                 max-width: 100%;
+                max-height: none;
             }
 
             .fip-insight-grid {
@@ -520,13 +589,15 @@
             .fip-product-grid {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
-
-
         }
 
         @media (max-width: 760px) {
             .fip-page-head {
-                padding-top: 86px;
+                padding-top: 76px;
+            }
+
+            .fip-main-section {
+                padding: 42px 0 62px;
             }
 
             .fip-list-top {
@@ -563,6 +634,7 @@
         $insights = [
             [
                 'id' => 'vapor-recovery',
+                'filter_label' => 'Vapor Recovery',
                 'label' => 'Vapor Recovery',
                 'title' => 'Fluidstream Vapor Recovery',
                 'description' => 'Technical overview of vapor recovery applications where wet gas, variable flow, cold weather, and maintenance burden affect VRU reliability.',
@@ -571,6 +643,7 @@
             ],
             [
                 'id' => 'casing-gas',
+                'filter_label' => 'Casing Gas Compression',
                 'label' => 'Casing Gas',
                 'title' => 'Fluidstream Casing Gas Compression',
                 'description' => 'Long-form technical guidance on casing gas compression, casing pressure reduction, drawdown support, and oil production optimization.',
@@ -579,6 +652,7 @@
             ],
             [
                 'id' => 'multiphase',
+                'filter_label' => 'Multiphase vs Conventional',
                 'label' => 'Multiphase',
                 'title' => 'Multiphase vs Conventional Compression',
                 'description' => 'Comparison of conventional gas-only compression and multiphase compression under wet, liquid-influenced, and unstable field conditions.',
@@ -587,6 +661,7 @@
             ],
             [
                 'id' => 'wet-gas',
+                'filter_label' => 'Wet Gas VRU Failure',
                 'label' => 'Wet Gas',
                 'title' => 'Why Conventional VRUs Fail in Wet Gas',
                 'description' => 'Why scrubber-dependent vapor recovery systems can become unstable when tank vapors contain liquids, condensate, water, or freeze-prone flow conditions.',
@@ -595,6 +670,7 @@
             ],
             [
                 'id' => 'production',
+                'filter_label' => 'Production Optimization',
                 'label' => 'Production Optimization',
                 'title' => 'Production Optimization with Multiphase Compression',
                 'description' => 'How multiphase compression can support production recovery where pressure constraints, liquids, and unstable wells limit flow performance.',
@@ -603,6 +679,7 @@
             ],
             [
                 'id' => 'methane',
+                'filter_label' => 'Methane Reduction',
                 'label' => 'Methane Reduction',
                 'title' => 'Fluidstream Methane Reduction Story',
                 'description' => 'How production equipment choices, vapor recovery, and compression reliability influence methane reduction strategies in oil and gas operations.',
@@ -611,6 +688,7 @@
             ],
             [
                 'id' => 'selection',
+                'filter_label' => 'Technology Selection',
                 'label' => 'Technology Selection',
                 'title' => 'How to Select the Right Compression Application',
                 'description' => 'A technical selection guide for vapor recovery, casing gas compression, wet gas applications, multiphase streams, and unstable wells.',
@@ -619,6 +697,7 @@
             ],
             [
                 'id' => 'liquid-loaded-wells',
+                'filter_label' => 'Liquid-Loaded Wells',
                 'label' => 'Liquid-Loaded Wells',
                 'title' => 'Multiphase Compression for Liquid-Loaded Gas Wells',
                 'description' => 'Engineering discussion of liquid loading mechanics, critical velocity uncertainty, backpressure effects, and multiphase compression fit.',
@@ -627,6 +706,7 @@
             ],
             [
                 'id' => 'vru-flaring',
+                'filter_label' => 'VRU vs Flaring',
                 'label' => 'Flaring & Emissions',
                 'title' => 'VRU vs Flaring',
                 'description' => 'Comparison of vapor recovery and flaring from the perspective of methane emissions reduction, gas conservation, and operational economics.',
@@ -635,6 +715,7 @@
             ],
             [
                 'id' => 'compressioncommander-needed',
+                'filter_label' => 'CompressionCommander Needed',
                 'label' => 'Casing Gas',
                 'title' => 'When Is CompressionCommander™ Needed?',
                 'description' => 'Application-focused guide to identifying casing gas compression opportunities where backpressure, gas interference, and production losses affect wells.',
@@ -643,6 +724,7 @@
             ],
             [
                 'id' => 'wet-unstable-wells',
+                'filter_label' => 'Wet & Unstable Wells',
                 'label' => 'Wet & Unstable Wells',
                 'title' => 'Why Conventional Compression Fails in Wet, Unstable Wells',
                 'description' => 'Why liquids, slugs, sand, freeze-prone separation, and variable operating conditions can challenge conventional compression systems.',
@@ -651,6 +733,7 @@
             ],
             [
                 'id' => 'oil-production',
+                'filter_label' => 'Oil Production',
                 'label' => 'Oil Production',
                 'title' => 'How Casing Gas Compression Increases Oil Production',
                 'description' => 'How casing gas compression can reduce casing pressure, improve drawdown, reduce gas interference, and support improved oil production.',
@@ -659,22 +742,13 @@
             ],
             [
                 'id' => 'production-recovery',
+                'filter_label' => 'Production Recovery',
                 'label' => 'Production Recovery',
                 'title' => 'How Multiphase Compression Supports Production Recovery',
                 'description' => 'How multiphase compression can support production recovery where conventional systems struggle with liquid loading, high backpressure, and variable flow.',
                 'url' => url('/insights/how-multiphase-compression-supports-production-recovery'),
                 'tags' => ['MultiphaseCommander™', 'Case Study Fit'],
             ],
-        ];
-
-        $filters = [
-            ['label' => 'Vapor Recovery', 'target' => 'vapor-recovery'],
-            ['label' => 'Casing Gas', 'target' => 'casing-gas'],
-            ['label' => 'Multiphase Compression', 'target' => 'multiphase'],
-            ['label' => 'Wet Gas & Liquids', 'target' => 'wet-gas'],
-            ['label' => 'Production Optimization', 'target' => 'production'],
-            ['label' => 'Methane Reduction', 'target' => 'methane'],
-            ['label' => 'Technology Selection', 'target' => 'selection'],
         ];
 
         $products = [
@@ -722,19 +796,23 @@
             </div>
         </section>
 
-        <section class="py-12">
+        <section class="fip-main-section">
             <div class="fip-container">
                 <div class="fip-layout">
                     <aside class="fip-filter-column">
                         <div class="fip-filter-panel" aria-label="Insight filters">
                             <h3 class="fip-filter-title">Filters</h3>
-                            <span class="fip-filter-subtitle">Explore by topic</span>
-
                             <div class="fip-topic-list">
-                                @foreach ($filters as $filter)
-                                    <button type="button" class="fip-topic-filter" data-target="{{ $filter['target'] }}">
-                                        {{ $filter['label'] }}
-                                    </button>
+                                @foreach ($insights as $insight)
+                                    <label class="fip-checkbox-row">
+                                        <input type="checkbox" class="fip-topic-checkbox" value="{{ $insight['id'] }}">
+
+                                        <span class="fip-check-box" aria-hidden="true"></span>
+
+                                        <span class="fip-checkbox-text">
+                                            {{ $insight['filter_label'] }}
+                                        </span>
+                                    </label>
                                 @endforeach
                             </div>
 
@@ -752,14 +830,25 @@
                             <h2 class="fip-list-title">Browse all insights</h2>
 
                             <div class="fip-result-count">
-                                {{ count($insights) }} insights shown
+                                <span id="fipVisibleCount">{{ count($insights) }}</span> insights shown
                             </div>
                         </div>
 
-                        <div class="fip-insight-grid">
+                        <div class="fip-insight-grid" id="fipInsightGrid">
                             @foreach ($insights as $insight)
-                                <a id="{{ $insight['id'] }}" href="{{ $insight['url'] }}" class="fip-article-card">
-                                    <span class="fip-tag">{{ $insight['label'] }}</span>
+                                @php
+                                    $articleNumber = count($insights) - $loop->index;
+                                @endphp
+
+                                <a id="{{ $insight['id'] }}" href="{{ $insight['url'] }}" class="fip-article-card"
+                                    data-topic="{{ $insight['id'] }}">
+                                    <div class="fip-card-top">
+                                        <span class="fip-tag">{{ $insight['label'] }}</span>
+
+                                        <span class="fip-card-number">
+                                            {{ str_pad($articleNumber, 2, '0', STR_PAD_LEFT) }}
+                                        </span>
+                                    </div>
 
                                     <h3 class="fip-card-title">{{ $insight['title'] }}</h3>
 
@@ -779,12 +868,16 @@
                                 </a>
                             @endforeach
                         </div>
+
+                        <div class="fip-no-result" id="fipNoResult">
+                            No insights matched the selected filters. Clear the filters and try again.
+                        </div>
                     </main>
                 </div>
             </div>
         </section>
 
-        <section class="py-12">
+        <section class="fip-application-section">
             <div class="fip-container">
                 <div class="fip-application-head">
                     <h2 class="fip-application-title">
@@ -814,72 +907,121 @@
             </div>
         </section>
     </div>
-@endsection
 
-
-@push('script')
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const filterButtons = Array.from(document.querySelectorAll('.fip-topic-filter'));
-            const articleCards = Array.from(document.querySelectorAll('.fip-article-card'));
+            const checkboxes = Array.from(document.querySelectorAll('.fip-topic-checkbox'));
+            const cards = Array.from(document.querySelectorAll('.fip-article-card'));
             const clearButton = document.getElementById('fipClearFilters');
+            const visibleCount = document.getElementById('fipVisibleCount');
+            const noResult = document.getElementById('fipNoResult');
             const articlesSection = document.getElementById('fipArticlesSection');
 
+            function getSelectedTopics() {
+                return checkboxes
+                    .filter(function (checkbox) {
+                        return checkbox.checked;
+                    })
+                    .map(function (checkbox) {
+                        return checkbox.value;
+                    });
+            }
+
             function clearFocusedCards() {
-                articleCards.forEach(function (card) {
+                cards.forEach(function (card) {
                     card.classList.remove('is-focused');
                 });
             }
 
-            function clearActiveFilters() {
-                filterButtons.forEach(function (button) {
-                    button.classList.remove('is-active');
+            function updateRowsState() {
+                checkboxes.forEach(function (checkbox) {
+                    const row = checkbox.closest('.fip-checkbox-row');
+
+                    if (row) {
+                        row.classList.toggle('is-active', checkbox.checked);
+                    }
                 });
             }
 
-            function scrollToTarget(targetId) {
-                const targetCard = document.getElementById(targetId);
-
-                clearFocusedCards();
-
-                if (!targetCard) {
+            function scrollToArticles() {
+                if (!articlesSection) {
                     return;
                 }
 
-                targetCard.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+                const headerOffset = 135;
+                const sectionPosition = articlesSection.getBoundingClientRect().top + window.pageYOffset;
+                const offsetPosition = sectionPosition - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+
+            function focusFirstVisibleCard() {
+                const firstVisibleCard = cards.find(function (card) {
+                    return !card.classList.contains('is-hidden');
                 });
 
-                targetCard.classList.add('is-focused');
+                clearFocusedCards();
+
+                if (!firstVisibleCard) {
+                    return;
+                }
+
+                firstVisibleCard.classList.add('is-focused');
 
                 setTimeout(function () {
-                    targetCard.classList.remove('is-focused');
+                    firstVisibleCard.classList.remove('is-focused');
                 }, 1800);
             }
 
-            filterButtons.forEach(function (button) {
-                button.addEventListener('click', function () {
-                    const targetId = this.dataset.target;
+            function applyFilters(shouldScroll) {
+                const selectedTopics = getSelectedTopics();
+                let shownCount = 0;
 
-                    clearActiveFilters();
-                    this.classList.add('is-active');
+                cards.forEach(function (card) {
+                    const topic = card.dataset.topic;
+                    const shouldShow = selectedTopics.length === 0 || selectedTopics.includes(topic);
 
-                    scrollToTarget(targetId);
+                    card.classList.toggle('is-hidden', !shouldShow);
+
+                    if (shouldShow) {
+                        shownCount++;
+                    }
+                });
+
+                visibleCount.textContent = shownCount;
+                noResult.classList.toggle('is-visible', shownCount === 0);
+
+                updateRowsState();
+
+                if (shouldScroll) {
+                    scrollToArticles();
+
+                    setTimeout(function () {
+                        focusFirstVisibleCard();
+                    }, 350);
+                }
+            }
+
+            checkboxes.forEach(function (checkbox) {
+                checkbox.addEventListener('change', function () {
+                    applyFilters(true);
                 });
             });
 
-            clearButton.addEventListener('click', function () {
-                clearActiveFilters();
-                clearFocusedCards();
-
-                if (articlesSection) {
-                    articlesSection.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
+            if (clearButton) {
+                clearButton.addEventListener('click', function () {
+                    checkboxes.forEach(function (checkbox) {
+                        checkbox.checked = false;
                     });
-                }
-            });
+
+                    applyFilters(true);
+                });
+            }
+
+            applyFilters(false);
         });
     </script>
-@endpush
+@endsection

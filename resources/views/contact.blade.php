@@ -579,11 +579,6 @@
 
                         <div class="fs-contact-info-list">
                             <div class="fs-contact-info-item">
-                                <small>General Inquiries</small>
-                                <p class="fs-contact-lead" style="font-size:15px">Use the inquiry form on this page.</p>
-                            </div>
-
-                            <div class="fs-contact-info-item">
                                 <small>Head Office</small>
                                 <strong>
                                     4416 5 St NE, Unit 1A<br>
@@ -738,10 +733,6 @@
                         <button class="fs-contact-submit" type="submit">
                             Send Message
                         </button>
-
-                        <p class="fs-contact-submit-note">
-                            We typically respond as soon as possible during business hours.
-                        </p>
                     </form>
                 </div>
             </div>

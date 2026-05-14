@@ -94,13 +94,13 @@
         }
 
         /* 
-                                                                                                                                                                                                                                                                                                                                                    .section-label:before {
-                                                                                                                                                                                                                                                                                                                                                        content: "";
-                                                                                                                                                                                                                                                                                                                                                        width: 38px;
-                                                                                                                                                                                                                                                                                                                                                        height: 2px;
-                                                                                                                                                                                                                                                                                                                                                        background: var(--cyan);
-                                                                                                                                                                                                                                                                                                                                                        display: inline-block;
-                                                                                                                                                                                                                                                                                                                                                    } */
+                                                                                                                                                                                                                                                                                                                                                                                                                            .section-label:before {
+                                                                                                                                                                                                                                                                                                                                                                                                                                content: "";
+                                                                                                                                                                                                                                                                                                                                                                                                                                width: 38px;
+                                                                                                                                                                                                                                                                                                                                                                                                                                height: 2px;
+                                                                                                                                                                                                                                                                                                                                                                                                                                background: var(--cyan);
+                                                                                                                                                                                                                                                                                                                                                                                                                                display: inline-block;
+                                                                                                                                                                                                                                                                                                                                                                                                                            } */
 
         /* Header matches the clean Fluidstream homepage feel */
         .site-header {
@@ -157,13 +157,7 @@
         }
 
         /* Hero */
-        .hero {
-            color: #fff;
-            background: #0018dc;
-            /* padding: 96px 0 90px; */
-            overflow: hidden;
-            position: relative;
-        }
+
 
         .hero:before {
             content: "";
@@ -195,11 +189,7 @@
         }
 
 
-        .hero-lede {
-            font-size: clamp(14px, 16px, 18px);
-            color: rgba(255, 255, 255, .84);
-            max-width: 760px;
-        }
+
 
         .hero-actions,
         .cta-actions {
@@ -224,11 +214,7 @@
             transform: translateY(-2px);
         }
 
-        .btn-primary {
-            background: #fff;
-            color: var(--blue);
-            /* box-shadow: 0 18px 38px rgba(0, 0, 0, .22); */
-        }
+
 
         .btn-blue {
             background: var(--blue);
@@ -236,10 +222,30 @@
             box-shadow: 0 18px 38px rgba(0, 24, 220, .20);
         }
 
+        .hero {
+            /* color: #fff; */
+            /* background: #0018dc; */
+            /* padding: 96px 0 90px; */
+            overflow: hidden;
+            position: relative;
+        }
+
+        .btn-primary {
+            background: #fff;
+            color: var(--blue);
+            box-shadow: 0 4px 9px rgb(0 0 0 / 15%) !important;
+        }
+
         .btn-outline {
-            color: #fff;
-            border-color: rgba(255, 255, 255, .34);
+            /* color: #fff; */
+            border-color: #060f2096;
             background: rgba(255, 255, 255, .08);
+        }
+
+        .hero-lede {
+            font-size: clamp(14px, 16px, 18px);
+            color: #303b50;
+            max-width: 760px;
         }
 
         .btn-outline-dark {
@@ -254,25 +260,67 @@
         }
 
         .quote-card {
-            border: 1px solid rgba(255, 255, 255, .20);
+            border: 1px solid rgb(37 37 37 / 20%);
             background: #fff;
             backdrop-filter: blur(16px);
             border-radius: 7px;
             padding: 26px;
-            box-shadow: 0 24px 70px rgba(0, 0, 0, .22);
+            /* box-shadow: 0 24px 70px rgba(0, 0, 0, .22); */
             position: relative;
             overflow: hidden;
         }
 
+        .cta-panel::after,
+        .hero-mini::after,
+        .quote-card::after,
+        .fs-card::after,
+        .line-card::after,
+        .stat-card::after,
+        .callout::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: #0018dc;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+            z-index: 1;
+        }
+
+        .fs-card:hover,
+        .hero-mini:hover,
+        .quote-card:hover,
+        .cta-panel:hover,
+        .line-card:hover,
+        .stat-card:hover,
+        .callout:hover {
+            transform: translateY(-3px);
+            border-color: #0018dc !important;
+            background: #ffffff;
+        }
+
+        .fs-card:hover::after,
+        .hero-mini:hover::after,
+        .quote-card:hover::after,
+        .cta-panel:hover::after,
+        .line-card:hover::after,
+        .stat-card:hover::after,
+        .callout:hover::after {
+            transform: scaleX(1);
+        }
+
         /* .quote-card:before {
-                                                                                                                                                                                                                                                                                                                                                                                        content: "";
-                                                                                                                                                                                                                                                                                                                                                                                        position: absolute;
-                                                                                                                                                                                                                                                                                                                                                                                        top: 0;
-                                                                                                                                                                                                                                                                                                                                                                                        left: 0;
-                                                                                                                                                                                                                                                                                                                                                                                        right: 0;
-                                                                                                                                                                                                                                                                                                                                                                                        height: 4px;
-                                                                                                                                                                                                                                                                                                                                                                                        background: linear-gradient(90deg, var(--cyan), rgba(255, 255, 255, 0));
-                                                                                                                                                                                                                                                                                                                                                                                    } */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                content: "";
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                position: absolute;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                top: 0;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                left: 0;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                right: 0;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                height: 4px;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                background: linear-gradient(90deg, var(--cyan), rgba(255, 255, 255, 0));
+                                                                                                                                                                                                                                                                                                                                                                                                                                                            } */
 
         .quote-card strong {
             color: #000000;
@@ -294,11 +342,16 @@
         }
 
         .hero-mini {
-            border: 1px solid rgba(255, 255, 255, .18);
+            border: 1px solid rgb(45 45 45 / 20%);
             background: #fff;
+            backdrop-filter: blur(16px);
             border-radius: 7px;
-            padding: 18px;
+            padding: 26px;
+            /* box-shadow: 0 24px 70px rgba(0, 0, 0, .22); */
+            position: relative;
+            overflow: hidden;
         }
+
 
         .hero-mini b {
             color: #0018dc;
@@ -313,8 +366,8 @@
 
         /* Page sections */
         /* .section {
-                                                                                                                                                                                                                                                                    padding: 78px 0;
-                                                                                                                                                                                                                                                                } */
+                                                                                                                                                                                                                                                                                                                                            padding: 78px 0;
+                                                                                                                                                                                                                                                                                                                                        } */
 
         .section-soft {
             background: var(--soft);
@@ -458,9 +511,9 @@
         }
 
         /* .fs-card:hover h3,
-                                                                                                                                                                                                                                                                                                        .fs-card:hover p {
-                                                                                                                                                                                                                                                                                                            color: #fff;
-                                                                                                                                                                                                                                                                                                        } */
+                                                                                                                                                                                                                                                                                                                                                                                .fs-card:hover p {
+                                                                                                                                                                                                                                                                                                                                                                                    color: #fff;
+                                                                                                                                                                                                                                                                                                                                                                                } */
 
         .line-card:before {
             content: "";
@@ -506,48 +559,14 @@
         }
 
         /* .fs-card,
-                                                                                                                                                                                                                                                                                                                .line-card,
-                                                                                                                                                                                                                                                                                                                .stat-card,
-                                                                                                                                                                                                                                                                                                                .callout {
-                                                                                                                                                                                                                                                                                                                    position: relative;
-                                                                                                                                                                                                                                                                                                                    overflow: hidden;
-                                                                                                                                                                                                                                                                                                                    transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
-                                                                                                                                                                                                                                                                                                                } */
-        .cta-panel::after,
-        .fs-card::after,
-        .line-card::after,
-        .stat-card::after,
-        .callout::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background-color: #0018dc;
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.3s ease;
-            z-index: 1;
-        }
+                                                                                                                                                                                                                                                                                                                                                                                        .line-card,
+                                                                                                                                                                                                                                                                                                                                                                                        .stat-card,
+                                                                                                                                                                                                                                                                                                                                                                                        .callout {
+                                                                                                                                                                                                                                                                                                                                                                                            position: relative;
+                                                                                                                                                                                                                                                                                                                                                                                            overflow: hidden;
+                                                                                                                                                                                                                                                                                                                                                                                            transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+                                                                                                                                                                                                                                                                                                                                                                                        } */
 
-        .fs-card:hover,
-        .cta-panel:hover,
-        .line-card:hover,
-        .stat-card:hover,
-        .callout:hover {
-            transform: translateY(-3px);
-            border-color: #0018dc !important;
-            background: #ffffff;
-        }
-
-        .fs-card:hover::after,
-        .cta-panel:hover::after,
-        .line-card:hover::after,
-        .stat-card:hover::after,
-        .callout:hover::after {
-            transform: scaleX(1);
-        }
 
         .callout-title {
             display: block;
@@ -811,12 +830,12 @@
             }
 
             /* .section {
-                                                                                                                                                                                                                                                                        padding: 58px 0;
-                                                                                                                                                                                                                                                                    } */
+                                                                                                                                                                                                                                                                                                                                                padding: 58px 0;
+                                                                                                                                                                                                                                                                                                                                            } */
 
             /* .hero {
-                                                                                                                                                                                                                                                                    padding: 74px 0;
-                                                                                                                                                                                                                                                                } */
+                                                                                                                                                                                                                                                                                                                                            padding: 74px 0;
+                                                                                                                                                                                                                                                                                                                                        } */
 
             article {
                 padding: 28px;
@@ -891,33 +910,33 @@
         }
 
         /* 
-                                                                                                                    .compare-box ul li {
-                                                                                                                        position: relative;
-                                                                                                                        padding-left: 32px;
-                                                                                                                        margin-bottom: 14px;
-                                                                                                                        line-height: 1.6;
-                                                                                                                    } */
+                                                                                                                                                                                            .compare-box ul li {
+                                                                                                                                                                                                position: relative;
+                                                                                                                                                                                                padding-left: 32px;
+                                                                                                                                                                                                margin-bottom: 14px;
+                                                                                                                                                                                                line-height: 1.6;
+                                                                                                                                                                                            } */
 
         /* .compare-box ul li::before {
-                                                                                                                                content: "";
-                                                                                                                                position: absolute;
-                                                                                                                                left: 0;
-                                                                                                                                top: 5px;
-                                                                                                                                width: 20px;
-                                                                                                                                height: 20px;
-                                                                                                                                background-repeat: no-repeat;
-                                                                                                                                background-position: center;
-                                                                                                                                background-size: 20px 20px;
-                                                                                                                                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%230018dc' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h12'/%3E%3Cpath d='m13 6 6 6-6 6'/%3E%3C/svg%3E");
-                                                                                                                            } */
+                                                                                                                                                                                                        content: "";
+                                                                                                                                                                                                        position: absolute;
+                                                                                                                                                                                                        left: 0;
+                                                                                                                                                                                                        top: 5px;
+                                                                                                                                                                                                        width: 20px;
+                                                                                                                                                                                                        height: 20px;
+                                                                                                                                                                                                        background-repeat: no-repeat;
+                                                                                                                                                                                                        background-position: center;
+                                                                                                                                                                                                        background-size: 20px 20px;
+                                                                                                                                                                                                        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%230018dc' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h12'/%3E%3Cpath d='m13 6 6 6-6 6'/%3E%3C/svg%3E");
+                                                                                                                                                                                                    } */
 
         /* .compare-box.blue ul li::before {
-                                                                                                                            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h12'/%3E%3Cpath d='m13 6 6 6-6 6'/%3E%3C/svg%3E");
-                                                                                                                        }
+                                                                                                                                                                                                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h12'/%3E%3Cpath d='m13 6 6 6-6 6'/%3E%3C/svg%3E");
+                                                                                                                                                                                                }
 
-                                                                                                                        .compare-box ul li:last-child {
-                                                                                                                            margin-bottom: 0;
-                                                                                                                        } */
+                                                                                                                                                                                                .compare-box ul li:last-child {
+                                                                                                                                                                                                    margin-bottom: 0;
+                                                                                                                                                                                                } */
     </style>
     <style>
         /* Sidebar / Article Contents - line style */
@@ -938,6 +957,19 @@
 
         .toc-title {
             display: none !important;
+        }
+
+        .cta-panel {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.22);
+            border-radius: 7px;
+            background: #ffffff;
+            box-shadow: none !important;
+            transition:
+                transform 0.24s ease,
+                border-color 0.24s ease,
+                background 0.24s ease;
         }
 
         .toc::before {
@@ -995,7 +1027,7 @@
 
         /* Fix anchor scroll hiding under sticky header */
         html {
-            scroll-padding-top: 135px;
+            /* scroll-padding-top: 135px; */
         }
 
         .article-section {
@@ -1084,16 +1116,16 @@
     </script>
 
     <script type="application/ld+json">
-                                                                                                                                                                                                                                                                                                                  {
-                                                                                                                                                                                                                                                                                                                    "@context": "https://schema.org",
-                                                                                                                                                                                                                                                                                                                    "@type": "Article",
-                                                                                                                                                                                                                                                                                                                    "headline": "Vapor Recovery Units for Oil & Gas: Engineering Guide to VRU Systems, Failure Modes, and Modern Vapor Recovery Design",
-                                                                                                                                                                                                                                                                                                                    "description": "A technical guide to vapor recovery units for oil and gas operations, including VRU operation, failure modes, wet vapor reliability, winter issues, economics, and Fluidstream VaporCommander applications.",
-                                                                                                                                                                                                                                                                                                                    "author": { "@type": "Organization", "name": "Fluidstream" },
-                                                                                                                                                                                                                                                                                                                    "publisher": { "@type": "Organization", "name": "Fluidstream" },
-                                                                                                                                                                                                                                                                                                                    "mainEntityOfPage": "https://fluidstream.co/insights/vapor-recovery-units-oil-gas"
-                                                                                                                                                                                                                                                                                                                  }
-                                                                                                                                                                                                                                                                                                                  </script>
+                                                                                                                                                                                                                                                                                                                                                                                          {
+                                                                                                                                                                                                                                                                                                                                                                                            "@context": "https://schema.org",
+                                                                                                                                                                                                                                                                                                                                                                                            "@type": "Article",
+                                                                                                                                                                                                                                                                                                                                                                                            "headline": "Vapor Recovery Units for Oil & Gas: Engineering Guide to VRU Systems, Failure Modes, and Modern Vapor Recovery Design",
+                                                                                                                                                                                                                                                                                                                                                                                            "description": "A technical guide to vapor recovery units for oil and gas operations, including VRU operation, failure modes, wet vapor reliability, winter issues, economics, and Fluidstream VaporCommander applications.",
+                                                                                                                                                                                                                                                                                                                                                                                            "author": { "@type": "Organization", "name": "Fluidstream" },
+                                                                                                                                                                                                                                                                                                                                                                                            "publisher": { "@type": "Organization", "name": "Fluidstream" },
+                                                                                                                                                                                                                                                                                                                                                                                            "mainEntityOfPage": "https://fluidstream.co/insights/vapor-recovery-units-oil-gas"
+                                                                                                                                                                                                                                                                                                                                                                                          }
+                                                                                                                                                                                                                                                                                                                                                                                          </script>
 
 
     <section class="hero">
@@ -1690,22 +1722,22 @@
             }
 
             /* 
-                                                                    .fs-related-head h2 {
-                                                                        margin: 0;
-                                                                        color: #061126;
-                                                                        font-size: clamp(30px, 3vw, 44px);
-                                                                        font-weight: 900;
-                                                                        line-height: 1.04;
-                                                                        letter-spacing: -0.055em;
-                                                                    } */
+                                                                                                                                            .fs-related-head h2 {
+                                                                                                                                                margin: 0;
+                                                                                                                                                color: #061126;
+                                                                                                                                                font-size: clamp(30px, 3vw, 44px);
+                                                                                                                                                font-weight: 900;
+                                                                                                                                                line-height: 1.04;
+                                                                                                                                                letter-spacing: -0.055em;
+                                                                                                                                            } */
             /* 
-                                                                .fs-related-head p {
-                                                                    margin: 0;
-                                                                    color: #637086;
-                                                                    font-size: 16px;
-                                                                    line-height: 1.62;
-                                                                    max-width: 720px;
-                                                                } */
+                                                                                                                                        .fs-related-head p {
+                                                                                                                                            margin: 0;
+                                                                                                                                            color: #637086;
+                                                                                                                                            font-size: 16px;
+                                                                                                                                            line-height: 1.62;
+                                                                                                                                            max-width: 720px;
+                                                                                                                                        } */
 
             .fs-related-grid {
                 display: grid;
@@ -1965,6 +1997,7 @@
             </div>
         </section>
 
+
         <section class="py-12 gray" id="application-review">
             <div class="wrap cta-inner">
                 <div>
@@ -1975,7 +2008,7 @@
                         operating
                         conditions and Fluidstream can assess the technical and economic fit.</p>
                     <div class="cta-actions">
-                        <a class="btn-1 btn-primary" href="/contact">Request Technical Review</a>
+                        <a class="btn-1 btn-primary" href="/technical-review">Request Technical Review</a>
                         <a class="btn-1 btn-outline" href="/vapor-recovery">Review VaporCommander™ Specifications</a>
                     </div>
                 </div>
