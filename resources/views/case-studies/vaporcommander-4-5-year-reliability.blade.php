@@ -131,12 +131,12 @@
         }
 
         /* 
-                                                                                                                                                                                                                                                                                                                                                                            .eyebrow:before {
-                                                                                                                                                                                                                                                                                                                                                                                content: "";
-                                                                                                                                                                                                                                                                                                                                                                                width: 34px;
-                                                                                                                                                                                                                                                                                                                                                                                height: 2px;
-                                                                                                                                                                                                                                                                                                                                                                                background: var(--cyan)
-                                                                                                                                                                                                                                                                                                                                                                            } */
+                                                                                                                                                                                                                                                                                                                                                                                    .eyebrow:before {
+                                                                                                                                                                                                                                                                                                                                                                                        content: "";
+                                                                                                                                                                                                                                                                                                                                                                                        width: 34px;
+                                                                                                                                                                                                                                                                                                                                                                                        height: 2px;
+                                                                                                                                                                                                                                                                                                                                                                                        background: var(--cyan)
+                                                                                                                                                                                                                                                                                                                                                                                    } */
         h1 {
             font-size: clamp(26px, 5vw, 50px);
             line-height: .94;
@@ -261,8 +261,8 @@
         }
 
         /* section {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                            padding: 78px 22px
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                        } */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    padding: 78px 22px
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                } */
 
         .container {
             /* max-width: var(--max); */
@@ -271,8 +271,8 @@
 
         .section-head {
             /* display: grid;
-                                                                                                                                                                                                                                                                                                                                                                                                grid-template-columns: .72fr 1.28fr;
-                                                                                                                                                                                                                                                                                                                                                                                                gap: 42px; */
+                                                                                                                                                                                                                                                                                                                                                                                                        grid-template-columns: .72fr 1.28fr;
+                                                                                                                                                                                                                                                                                                                                                                                                        gap: 42px; */
             max-width: 66ch;
             align-items: start;
             margin-bottom: 34px
@@ -443,8 +443,8 @@
         }
 
         /* .metric:hover .big {
-                                                                                                                                                                                                                                                                                                                                        color: #fff
-                                                                                                                                                                                                                                                                                                                                    } */
+                                                                                                                                                                                                                                                                                                                                                color: #fff
+                                                                                                                                                                                                                                                                                                                                            } */
 
         .metric h3,
         .card h3 {
@@ -487,7 +487,7 @@
 
         .panel.dark {
             /* background: #0018dc;
-                                                                                                                                        color: #fff; */
+                                                                                                                                                color: #fff; */
             border: 0;
             /* box-shadow: 0 28px 80px rgba(0, 24, 220, .22) */
         }
@@ -522,36 +522,36 @@
         }
 
         /* .card.swipe:after {
-                                                                                                                                                                                                                                                        content: "";
-                                                                                                                                                                                                                                                        position: absolute;
-                                                                                                                                                                                                                                                        left: -110%;
-                                                                                                                                                                                                                                                        top: 0;
-                                                                                                                                                                                                                                                        width: 100%;
-                                                                                                                                                                                                                                                        height: 100%;
-                                                                                                                                                                                                                                                        background: linear-gradient(105deg, transparent, rgba(21, 209, 255, .16), transparent);
-                                                                                                                                                                                                                                                        transition: .5s ease
-                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                content: "";
+                                                                                                                                                                                                                                                                position: absolute;
+                                                                                                                                                                                                                                                                left: -110%;
+                                                                                                                                                                                                                                                                top: 0;
+                                                                                                                                                                                                                                                                width: 100%;
+                                                                                                                                                                                                                                                                height: 100%;
+                                                                                                                                                                                                                                                                background: linear-gradient(105deg, transparent, rgba(21, 209, 255, .16), transparent);
+                                                                                                                                                                                                                                                                transition: .5s ease
+                                                                                                                                                                                                                                                            }
 
-                                                                                                                                                                                                                                                    .card.swipe:hover:after {
-                                                                                                                                                                                                                                                        left: 110%
-                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                            .card.swipe:hover:after {
+                                                                                                                                                                                                                                                                left: 110%
+                                                                                                                                                                                                                                                            }
 
-                                                                                                                                                                                                                                                    .card:hover {
-                                                                                                                                                                                                                                                        transform: translateY(-5px);
-                                                                                                                                                                                                                                                        border-color: rgba(0, 24, 220, .3);
-                                                                                                                                                                                                                                                        box-shadow: 0 26px 60px rgba(0, 24, 220, .12)
-                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                            .card:hover {
+                                                                                                                                                                                                                                                                transform: translateY(-5px);
+                                                                                                                                                                                                                                                                border-color: rgba(0, 24, 220, .3);
+                                                                                                                                                                                                                                                                box-shadow: 0 26px 60px rgba(0, 24, 220, .12)
+                                                                                                                                                                                                                                                            }
 
-                                                                                                                                                                                                                                                    .card.fill:hover {
-                                                                                                                                                                                                                                                        background: var(--blue);
-                                                                                                                                                                                                                                                        color: #fff;
-                                                                                                                                                                                                                                                        border-color: var(--blue)
-                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                            .card.fill:hover {
+                                                                                                                                                                                                                                                                background: var(--blue);
+                                                                                                                                                                                                                                                                color: #fff;
+                                                                                                                                                                                                                                                                border-color: var(--blue)
+                                                                                                                                                                                                                                                            }
 
-                                                                                                                                                                                                                                                    .card.fill:hover p,
-                                                                                                                                                                                                                                                    .card.fill:hover .tag {
-                                                                                                                                                                                                                                                        color: rgba(255, 255, 255, .78)
-                                                                                                                                                                                                                                                    } */
+                                                                                                                                                                                                                                                            .card.fill:hover p,
+                                                                                                                                                                                                                                                            .card.fill:hover .tag {
+                                                                                                                                                                                                                                                                color: rgba(255, 255, 255, .78)
+                                                                                                                                                                                                                                                            } */
 
         .number {
             width: 42px;
@@ -566,9 +566,9 @@
         }
 
         /* .card.fill:hover .number {
-                                                                                                                                                                                                                                                    background: rgba(255, 255, 255, .14);
-                                                                                                                                                                                                                                                    color: #fff
-                                                                                                                                                                                                                                                } */
+                                                                                                                                                                                                                                                            background: rgba(255, 255, 255, .14);
+                                                                                                                                                                                                                                                            color: #fff
+                                                                                                                                                                                                                                                        } */
 
         .blue-section {
             background: #f5f6f8;
@@ -577,16 +577,16 @@
         }
 
         /* .blue-section h2 {
-                                                                                                                                                            color: #fff
-                                                                                                                                                        } */
+                                                                                                                                                                    color: #fff
+                                                                                                                                                                } */
 
         .blue-section .kicker mb-2 {
             color: var(--cyan)
         }
 
         /* .blue-section p {
-                                                                                                                                                            color: rgba(255, 255, 255, .80)
-                                                                                                                                                        } */
+                                                                                                                                                                    color: rgba(255, 255, 255, .80)
+                                                                                                                                                                } */
 
         .blue-grid {
             display: grid;
@@ -654,9 +654,9 @@
         }
 
         /* .step strong {
-                                                                                                                                                                                                                                                                                    font-size: 24px;
-                                                                                                                                                                                                                                                                                    color: black
-                                                                                                                                                                                                                                                                                } */
+                                                                                                                                                                                                                                                                                            font-size: 24px;
+                                                                                                                                                                                                                                                                                            color: black
+                                                                                                                                                                                                                                                                                        } */
 
         .step h3 {
             margin: 0 0 8px;
@@ -674,8 +674,8 @@
 
         .result-band {
             /* background: #0018dc;
-                                                                                                        color: #fff; */
-            padding: 42px;
+                                                                                                                color: #fff; */
+            /* padding: 42px; */
             display: grid;
             grid-template-columns: 1.05fr .95fr;
             gap: 30px;
@@ -754,7 +754,7 @@
             /* background: linear-gradient(135deg, #061126, #0018dc); */
             color: #000000;
             /* border-radius: 36px; */
-            padding: 46px;
+            padding: 46px 0px;
             display: grid;
             grid-template-columns: 1.1fr .9fr;
             gap: 26px;
@@ -881,18 +881,18 @@
         }
 
         /* 
-                                                                            .bullet li:before {
-                                                                                content: "";
-                                                                                position: absolute;
-                                                                                left: 0;
-                                                                                top: 0.2rem;
-                                                                                width: 16px;
-                                                                                height: 12px;
-                                                                                background-repeat: no-repeat;
-                                                                                background-size: 16px 12px;
-                                                                                background-image: url(data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 12' fill='none'%3E%3Cpath d='M1 6h11' stroke='%230018dc' stroke-width='1.5' stroke-linecap='round'/%3E%3Cpath d='M8.5 1.75L13 6l-4.5 4.25' stroke='%230018dc' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E);
-                                                                                transition: transform .24s ease;
-                                                                            } */
+                                                                                    .bullet li:before {
+                                                                                        content: "";
+                                                                                        position: absolute;
+                                                                                        left: 0;
+                                                                                        top: 0.2rem;
+                                                                                        width: 16px;
+                                                                                        height: 12px;
+                                                                                        background-repeat: no-repeat;
+                                                                                        background-size: 16px 12px;
+                                                                                        background-image: url(data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 12' fill='none'%3E%3Cpath d='M1 6h11' stroke='%230018dc' stroke-width='1.5' stroke-linecap='round'/%3E%3Cpath d='M8.5 1.75L13 6l-4.5 4.25' stroke='%230018dc' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E);
+                                                                                        transition: transform .24s ease;
+                                                                                    } */
 
         .pp {
             color: #5c6677 !important;

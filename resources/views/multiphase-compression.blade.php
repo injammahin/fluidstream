@@ -537,7 +537,7 @@
 
     .lead {
       margin-bottom: 20px;
-      max-width: 59ch;
+      max-width: 59ch !important;
       font-size: 16px;
       line-height: 1.75;
       color: #424f5d;
@@ -814,8 +814,8 @@
     }
 
     /* =========================================
-                                                                                   HERO SECTION FIXED STYLE
-                                                                                ========================================= */
+                                                                                         HERO SECTION FIXED STYLE
+                                                                                      ========================================= */
 
     header.hero {
       position: relative !important;
@@ -1271,9 +1271,9 @@
       }
 
       .fs-mpc-hero-btn-primary {
-        color: #0018dc;
-        background: #ffffff;
-        border: 1px solid #ffffff;
+        color: #ffffff;
+        background: #0018dc;
+        border: 1px solid #0018dc;
         box-shadow: 0 18px 38px rgba(0, 0, 0, .22);
       }
 
@@ -1854,8 +1854,8 @@
   </section>
   <style>
     /* ================================
-                                                                                                             TECHNOLOGY BENEFITS 3x2 LAYOUT
-                                                                                                          ================================ */
+                                                                                                                   TECHNOLOGY BENEFITS 3x2 LAYOUT
+                                                                                                                ================================ */
 
     .technology-benefits-section {
       background: #ffffff;
@@ -2183,15 +2183,12 @@
           </div>
         </div>
 
-        <blockquote>“Fluidstream’s MultiphaseCommander didn’t just improve performance—it transformed two shut-in wells
+        <blockquote>Fluidstream’s MultiphaseCommander didn’t just improve performance—it transformed two shut-in wells
           into revenue-generating assets. We went from zero production to more than $1.5 million per year in incremental
-          revenue, without adding separation equipment or extra surface infrastructure.”</blockquote>
+          revenue, without adding separation equipment or extra surface infrastructure.</blockquote>
 
 
-        <div class="flex">
-          <div class="quote-src">Production Engineer, Vermilion Energy </div>
-          <img class="h-14" src="/img/Vermilion Energy.png" alt="">
-        </div>
+
         <p>Read the full case study for the operating challenge, deployment details, variable-flow performance, and the
           broader pad-level opportunity identified by the producer.</p>
         <div class="btn-row" style="margin-bottom:0;">
@@ -2247,12 +2244,12 @@
       }
 
       /* .fs-mpc-section-head h2 {
-                                                                                                                                        font-size: clamp(30px, 3.2vw, 46px);
-                                                                                                                                        line-height: 1.02;
-                                                                                                                                        margin: 0 0 14px;
-                                                                                                                                        letter-spacing: -.035em;
-                                                                                                                                        color: var(--mpc-ink);
-                                                                                                                                      } */
+                                                                                                                                              font-size: clamp(30px, 3.2vw, 46px);
+                                                                                                                                              line-height: 1.02;
+                                                                                                                                              margin: 0 0 14px;
+                                                                                                                                              letter-spacing: -.035em;
+                                                                                                                                              color: var(--mpc-ink);
+                                                                                                                                            } */
 
       .fs-mpc-lead {
         font-size: 17px;

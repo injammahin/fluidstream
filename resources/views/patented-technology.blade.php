@@ -57,8 +57,8 @@
         }
 
         /* ================================
-                                                                       HERO WITH BACKGROUND IMAGE
-                                                                    ================================ */
+                                                                                           HERO WITH BACKGROUND IMAGE
+                                                                                        ================================ */
 
         .patent-page .hero {
             position: relative;
@@ -193,9 +193,9 @@
         }
 
         .patent-page .btn-primary {
-            background: #ffffff;
-            color: var(--fs-blue);
-            border-color: #ffffff;
+            background: var(--fs-blue);
+            color: #fff;
+            border-color: var(--fs-blue);
             box-shadow: 0 20px 48px rgba(0, 0, 0, .20);
         }
 
@@ -236,22 +236,22 @@
             transition: transform .25s ease, border-color .25s ease, background .25s ease, box-shadow .25s ease;
         }
 
-        .patent-page .metric::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            height: 3px;
-            background: var(--fs-cyan);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform .25s cubic-bezier(.22, .61, .36, 1);
-        }
+        /* .patent-page .metric::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    height: 3px;
+                    background: var(--fs-cyan);
+                    transform: scaleX(0);
+                    transform-origin: left;
+                    transition: transform .25s cubic-bezier(.22, .61, .36, 1);
+                } */
 
         .patent-page .metric:hover {
             transform: translateY(-4px);
-            border-color: rgba(21, 209, 255, .44);
+            border-color: rgba(129, 129, 129, 0.44);
             background: rgba(255, 255, 255, .17);
             box-shadow: 0 26px 56px rgba(0, 24, 220, .20);
         }
@@ -318,7 +318,7 @@
             right: 0;
             top: 0;
             height: 3px;
-            background: #f1f8fa;
+            /* background: #f1f8fa; */
             transform: scaleX(0);
             transform-origin: left;
             transition: transform .25s cubic-bezier(.22, .61, .36, 1);
@@ -392,11 +392,11 @@
         }
 
         /* ================================
-                                                                       COMMON SECTION STYLES
-                                                                    ================================ */
+                                                                                           COMMON SECTION STYLES
+                                                                                        ================================ */
 
         .patent-page .section-head {
-            display: flex;
+            /* display: flex; */
             justify-content: space-between;
             align-items: flex-start;
             gap: 28px;
@@ -798,8 +798,8 @@
         }
 
         /* ================================
-                                                                       RESPONSIVE
-                                                                    ================================ */
+                                                                                           RESPONSIVE
+                                                                                        ================================ */
 
         @media (max-width: 1120px) {
             .patent-page .hero {

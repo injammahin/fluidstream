@@ -1177,9 +1177,6 @@
                         <div class="case-actions case-actions-with-logo">
                             <span class="case-tagline">Production recovery</span>
 
-                            <div class="case-client-logo">
-                                <img src="{{ asset('img/Vermilion Energy.png') }}" alt="Vermilion Energy logo">
-                            </div>
 
                             <a class="read-more" href="/case-studies/multiphasecommander-production-recovery">
                                 Read more

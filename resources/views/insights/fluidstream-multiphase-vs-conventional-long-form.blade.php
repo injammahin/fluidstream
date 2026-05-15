@@ -1,5 +1,153 @@
 @extends('layouts.app')
+@section('schema')
+    @php
+        $articleUrl = url('/insights/multiphase-vs-conventional-compression');
 
+        $techArticleSchema = [
+            '@context' => 'https://schema.org',
+            '@type' => 'TechArticle',
+            'headline' => 'Multiphase Compression vs Conventional Compression Systems',
+            'alternativeHeadline' => 'Why Real Field Conditions Demand a Different Compression Approach',
+            'description' => 'A technical guide comparing multiphase compression and conventional compression systems for wet gas, liquids, slugging, separator dependence, winter reliability, autonomous controls, and real oil and gas field conditions.',
+            'url' => $articleUrl,
+            'mainEntityOfPage' => [
+                '@type' => 'WebPage',
+                '@id' => $articleUrl,
+            ],
+            'datePublished' => '2026-05-15',
+            'dateModified' => now()->toDateString(),
+            'inLanguage' => 'en',
+            'author' => [
+                '@type' => 'Organization',
+                'name' => 'Fluidstream',
+                'url' => config('app.url'),
+            ],
+            'publisher' => [
+                '@type' => 'Organization',
+                'name' => 'Fluidstream',
+                'url' => config('app.url'),
+                'logo' => [
+                    '@type' => 'ImageObject',
+                    'url' => asset('img/logo.png'),
+                ],
+            ],
+            'image' => asset('img/logo.png'),
+            'articleSection' => 'Multiphase Compression',
+            'keywords' => [
+                'multiphase compression',
+                'conventional compression',
+                'wet gas compression',
+                'liquid handling compression',
+                'slug flow compression',
+                'separator dependence',
+                'Fluidstream technology',
+                'MultiphaseCommander',
+            ],
+            'about' => [
+                [
+                    '@type' => 'Thing',
+                    'name' => 'Multiphase compression',
+                ],
+                [
+                    '@type' => 'Thing',
+                    'name' => 'Conventional compression',
+                ],
+                [
+                    '@type' => 'Thing',
+                    'name' => 'Wet gas',
+                ],
+                [
+                    '@type' => 'Thing',
+                    'name' => 'Oil and gas production',
+                ],
+            ],
+        ];
+
+        $faqSchema = [
+            '@context' => 'https://schema.org',
+            '@type' => 'FAQPage',
+            'mainEntity' => [
+                [
+                    '@type' => 'Question',
+                    'name' => 'What is the main difference between multiphase and conventional compression?',
+                    'acceptedAnswer' => [
+                        '@type' => 'Answer',
+                        'text' => 'Conventional compression generally assumes dry gas reaches the compressor. Multiphase compression is designed around mixed gas and liquid flow where liquid carryover, slugging, and unstable production may occur.',
+                    ],
+                ],
+                [
+                    '@type' => 'Question',
+                    'name' => 'Why do conventional compressors struggle with liquids?',
+                    'acceptedAnswer' => [
+                        '@type' => 'Answer',
+                        'text' => 'Liquids are incompressible and can cause mechanical damage, shutdowns, lubricant contamination, or control instability when a gas-only compressor receives liquid carryover or slugs.',
+                    ],
+                ],
+                [
+                    '@type' => 'Question',
+                    'name' => 'How does Fluidstream manage liquid-influenced compression?',
+                    'acceptedAnswer' => [
+                        '@type' => 'Answer',
+                        'text' => 'Fluidstream uses liquid-aware compression methodology, autonomous controls, and machine-state feedback to adjust compression behavior when conditions indicate potential damage from incompressible liquids.',
+                    ],
+                ],
+                [
+                    '@type' => 'Question',
+                    'name' => 'Where is Fluidstream not the best fit?',
+                    'acceptedAnswer' => [
+                        '@type' => 'Answer',
+                        'text' => 'Very high dry-gas flow applications may be better suited to conventional compression, especially where gas is stable, clean, and separation is already reliable.',
+                    ],
+                ],
+                [
+                    '@type' => 'Question',
+                    'name' => 'Why is the patent reference important?',
+                    'acceptedAnswer' => [
+                        '@type' => 'Answer',
+                        'text' => 'US11098709B2 provides a credibility anchor for Fluidstream’s liquid-aware compression response. It should be viewed as support for the engineering logic, not as a substitute for application-specific review.',
+                    ],
+                ],
+            ],
+        ];
+
+        $breadcrumbSchema = [
+            '@context' => 'https://schema.org',
+            '@type' => 'BreadcrumbList',
+            'itemListElement' => [
+                [
+                    '@type' => 'ListItem',
+                    'position' => 1,
+                    'name' => 'Home',
+                    'item' => url('/'),
+                ],
+                [
+                    '@type' => 'ListItem',
+                    'position' => 2,
+                    'name' => 'Insights',
+                    'item' => url('/insights'),
+                ],
+                [
+                    '@type' => 'ListItem',
+                    'position' => 3,
+                    'name' => 'Multiphase Compression vs Conventional Compression Systems',
+                    'item' => $articleUrl,
+                ],
+            ],
+        ];
+    @endphp
+
+    <script type="application/ld+json">
+                {!! json_encode($techArticleSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+            </script>
+
+    <script type="application/ld+json">
+                {!! json_encode($faqSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+            </script>
+
+    <script type="application/ld+json">
+                {!! json_encode($breadcrumbSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+            </script>
+@endsection
 @section('content')
     <style>
         :root {
@@ -93,13 +241,13 @@
         }
 
         /* 
-                                                                                                                                                                                                                                                                                                        .section-label:before {
-                                                                                                                                                                                                                                                                                                            content: "";
-                                                                                                                                                                                                                                                                                                            width: 38px;
-                                                                                                                                                                                                                                                                                                            height: 2px;
-                                                                                                                                                                                                                                                                                                            background: var(--cyan);
-                                                                                                                                                                                                                                                                                                            display: inline-block;
-                                                                                                                                                                                                                                                                                                        } */
+                                                                                                                                                                                                                                                                                                                .section-label:before {
+                                                                                                                                                                                                                                                                                                                    content: "";
+                                                                                                                                                                                                                                                                                                                    width: 38px;
+                                                                                                                                                                                                                                                                                                                    height: 2px;
+                                                                                                                                                                                                                                                                                                                    background: var(--cyan);
+                                                                                                                                                                                                                                                                                                                    display: inline-block;
+                                                                                                                                                                                                                                                                                                                } */
 
         /* Header matches the clean Fluidstream homepage feel */
         .site-header {
@@ -265,14 +413,14 @@
 
 
         /* .quote-card:before {
-                                                                                                                                                                                                                                                                                                                                            content: "";
-                                                                                                                                                                                                                                                                                                                                            position: absolute;
-                                                                                                                                                                                                                                                                                                                                            top: 0;
-                                                                                                                                                                                                                                                                                                                                            left: 0;
-                                                                                                                                                                                                                                                                                                                                            right: 0;
-                                                                                                                                                                                                                                                                                                                                            height: 4px;
-                                                                                                                                                                                                                                                                                                                                            background: linear-gradient(90deg, var(--cyan), rgba(255, 255, 255, 0));
-                                                                                                                                                                                                                                                                                                                                        } */
+                                                                                                                                                                                                                                                                                                                                                    content: "";
+                                                                                                                                                                                                                                                                                                                                                    position: absolute;
+                                                                                                                                                                                                                                                                                                                                                    top: 0;
+                                                                                                                                                                                                                                                                                                                                                    left: 0;
+                                                                                                                                                                                                                                                                                                                                                    right: 0;
+                                                                                                                                                                                                                                                                                                                                                    height: 4px;
+                                                                                                                                                                                                                                                                                                                                                    background: linear-gradient(90deg, var(--cyan), rgba(255, 255, 255, 0));
+                                                                                                                                                                                                                                                                                                                                                } */
 
         .quote-card strong {
             color: #000000;
@@ -317,8 +465,8 @@
 
         /* Page sections */
         /* .section {
-                                                                                                                                                                                                                        padding: 78px 0;
-                                                                                                                                                                                                                    } */
+                                                                                                                                                                                                                                padding: 78px 0;
+                                                                                                                                                                                                                            } */
 
         .section-soft {
             background: var(--soft);
@@ -397,7 +545,7 @@
             font-size: 1.16rem;
             color: #303b50;
             /* border-left: 4px solid #0018dc;
-                        padding-left: 1.22rem; */
+                                padding-left: 1.22rem; */
             margin: 1.15rem 0 2rem;
         }
 
@@ -464,9 +612,9 @@
         }
 
         /* .fs-card:hover h3,
-                                                                                                                                                                                                                                                            .fs-card:hover p {
-                                                                                                                                                                                                                                                                color: #fff;
-                                                                                                                                                                                                                                                            } */
+                                                                                                                                                                                                                                                                    .fs-card:hover p {
+                                                                                                                                                                                                                                                                        color: #fff;
+                                                                                                                                                                                                                                                                    } */
 
         .line-card:before {
             content: "";
@@ -512,13 +660,13 @@
         }
 
         /* .fs-card,
-                                                                                                                                                                                                                                                                    .line-card,
-                                                                                                                                                                                                                                                                    .stat-card,
-                                                                                                                                                                                                                                                                    .callout {
-                                                                                                                                                                                                                                                                        position: relative;
-                                                                                                                                                                                                                                                                        overflow: hidden;
-                                                                                                                                                                                                                                                                        transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
-                                                                                                                                                                                                                                                                    } */
+                                                                                                                                                                                                                                                                            .line-card,
+                                                                                                                                                                                                                                                                            .stat-card,
+                                                                                                                                                                                                                                                                            .callout {
+                                                                                                                                                                                                                                                                                position: relative;
+                                                                                                                                                                                                                                                                                overflow: hidden;
+                                                                                                                                                                                                                                                                                transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+                                                                                                                                                                                                                                                                            } */
         .cta-panel::after,
         .hero-mini::after,
         .quote-card::after,
@@ -823,12 +971,12 @@
             }
 
             /* .section {
-                                                                                                                                                                                                                            padding: 58px 0;
-                                                                                                                                                                                                                        } */
+                                                                                                                                                                                                                                    padding: 58px 0;
+                                                                                                                                                                                                                                } */
 
             /* .hero {
-                                                                                                                                                                                                                        padding: 74px 0;
-                                                                                                                                                                                                                    } */
+                                                                                                                                                                                                                                padding: 74px 0;
+                                                                                                                                                                                                                            } */
 
             article {
                 padding: 28px;
@@ -979,18 +1127,19 @@
             transition: color 0.22s ease, text-shadow 0.22s ease;
         }
 
-                    .cta-panel {
-                position: relative;
-                overflow: hidden;
-                border: 1px solid rgba(0, 0, 0, 0.22);
-                border-radius: 7px;
-                background: #ffffff;
-                box-shadow: none !important;
-                transition:
-                    transform 0.24s ease,
-                    border-color 0.24s ease,
-                    background 0.24s ease;
-            }
+        .cta-panel {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.22);
+            border-radius: 7px;
+            background: #ffffff;
+            box-shadow: none !important;
+            transition:
+                transform 0.24s ease,
+                border-color 0.24s ease,
+                background 0.24s ease;
+        }
+
         .toc a::before {
             content: "";
             position: absolute;
@@ -1105,17 +1254,6 @@
             });
         });
     </script>
-    <script type="application/ld+json">
-                                                              {
-                                                                "@context": "https://schema.org",
-                                                                "@type": "Article",
-                                                                "headline": "Multiphase Compression vs Conventional Compression Systems: Why Real Field Conditions Demand a Different Compression Approach",
-                                                                "description": "A technical guide comparing multiphase compression and conventional compression systems for wet gas, liquids, slugging, separator dependence, winter reliability, and real field conditions.",
-                                                                "author": { "@type": "Organization", "name": "Fluidstream" },
-                                                                "publisher": { "@type": "Organization", "name": "Fluidstream" },
-                                                                "mainEntityOfPage": "https://fluidstream.co/insights/multiphase-compression-vs-conventional-compression"
-                                                              }
-                                                              </script>
 
     <section class="hero">
         <div class="wrap hero-grid py-12">
@@ -1626,22 +1764,22 @@
         }
 
         /* 
-                                                                                                                                                        .fs-related-head h2 {
-                                                                                                                                                            margin: 0;
-                                                                                                                                                            color: #061126;
-                                                                                                                                                            font-size: clamp(30px, 3vw, 44px);
-                                                                                                                                                            font-weight: 900;
-                                                                                                                                                            line-height: 1.04;
-                                                                                                                                                            letter-spacing: -0.055em;
-                                                                                                                                                        } */
+                                                                                                                                                                .fs-related-head h2 {
+                                                                                                                                                                    margin: 0;
+                                                                                                                                                                    color: #061126;
+                                                                                                                                                                    font-size: clamp(30px, 3vw, 44px);
+                                                                                                                                                                    font-weight: 900;
+                                                                                                                                                                    line-height: 1.04;
+                                                                                                                                                                    letter-spacing: -0.055em;
+                                                                                                                                                                } */
         /* 
-                                                                                                                                                    .fs-related-head p {
-                                                                                                                                                        margin: 0;
-                                                                                                                                                        color: #637086;
-                                                                                                                                                        font-size: 16px;
-                                                                                                                                                        line-height: 1.62;
-                                                                                                                                                        max-width: 720px;
-                                                                                                                                                    } */
+                                                                                                                                                            .fs-related-head p {
+                                                                                                                                                                margin: 0;
+                                                                                                                                                                color: #637086;
+                                                                                                                                                                font-size: 16px;
+                                                                                                                                                                line-height: 1.62;
+                                                                                                                                                                max-width: 720px;
+                                                                                                                                                            } */
 
         .fs-related-grid {
             display: grid;

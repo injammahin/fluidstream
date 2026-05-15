@@ -1,5 +1,104 @@
 @extends('layouts.app')
+@section('schema')
+    @php
+        $articleUrl = url('/insights/multiphase-compression-liquid-loaded-gas-wells');
 
+        $techArticleSchema = [
+            '@context' => 'https://schema.org',
+            '@type' => 'TechArticle',
+            'headline' => 'Multiphase Compression for Loaded Gas Wells',
+            'alternativeHeadline' => 'Engineering Guide to Liquid Loading, Deliquification Limits, and Wet Gas Compression Reliability',
+            'description' => 'A technical guide to loaded gas wells, liquid loading, deliquification limits, wet gas surface compression reliability, and Fluidstream MultiphaseCommander applications.',
+            'url' => $articleUrl,
+            'mainEntityOfPage' => [
+                '@type' => 'WebPage',
+                '@id' => $articleUrl,
+            ],
+            'datePublished' => '2026-05-15',
+            'dateModified' => now()->toDateString(),
+            'inLanguage' => 'en',
+            'author' => [
+                '@type' => 'Organization',
+                'name' => 'Fluidstream',
+                'url' => config('app.url'),
+            ],
+            'publisher' => [
+                '@type' => 'Organization',
+                'name' => 'Fluidstream',
+                'url' => config('app.url'),
+                'logo' => [
+                    '@type' => 'ImageObject',
+                    'url' => asset('img/logo.png'),
+                ],
+            ],
+            'image' => asset('img/logo.png'),
+            'articleSection' => 'Multiphase Compression',
+            'keywords' => [
+                'multiphase compression',
+                'loaded gas wells',
+                'liquid loaded gas wells',
+                'liquid loading',
+                'deliquification',
+                'wet gas compression',
+                'surface compression reliability',
+                'MultiphaseCommander',
+                'gas well recovery',
+                'separator dependence',
+            ],
+            'about' => [
+                [
+                    '@type' => 'Thing',
+                    'name' => 'Loaded gas wells',
+                ],
+                [
+                    '@type' => 'Thing',
+                    'name' => 'Liquid loading',
+                ],
+                [
+                    '@type' => 'Thing',
+                    'name' => 'Multiphase compression',
+                ],
+                [
+                    '@type' => 'Thing',
+                    'name' => 'Wet gas compression',
+                ],
+            ],
+        ];
+
+        $breadcrumbSchema = [
+            '@context' => 'https://schema.org',
+            '@type' => 'BreadcrumbList',
+            'itemListElement' => [
+                [
+                    '@type' => 'ListItem',
+                    'position' => 1,
+                    'name' => 'Home',
+                    'item' => url('/'),
+                ],
+                [
+                    '@type' => 'ListItem',
+                    'position' => 2,
+                    'name' => 'Insights',
+                    'item' => url('/insights'),
+                ],
+                [
+                    '@type' => 'ListItem',
+                    'position' => 3,
+                    'name' => 'Multiphase Compression for Loaded Gas Wells',
+                    'item' => $articleUrl,
+                ],
+            ],
+        ];
+    @endphp
+
+    <script type="application/ld+json">
+            {!! json_encode($techArticleSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+        </script>
+
+    <script type="application/ld+json">
+            {!! json_encode($breadcrumbSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+        </script>
+@endsection
 @section('content')
 
     <style>
@@ -94,13 +193,13 @@
         }
 
         /* 
-                                                                                                                                                                                                                                                                                                                                                            .section-label:before {
-                                                                                                                                                                                                                                                                                                                                                                content: "";
-                                                                                                                                                                                                                                                                                                                                                                width: 38px;
-                                                                                                                                                                                                                                                                                                                                                                height: 2px;
-                                                                                                                                                                                                                                                                                                                                                                background: var(--cyan);
-                                                                                                                                                                                                                                                                                                                                                                display: inline-block;
-                                                                                                                                                                                                                                                                                                                                                            } */
+                                                                                                                                                                                                                                                                                                                                                                    .section-label:before {
+                                                                                                                                                                                                                                                                                                                                                                        content: "";
+                                                                                                                                                                                                                                                                                                                                                                        width: 38px;
+                                                                                                                                                                                                                                                                                                                                                                        height: 2px;
+                                                                                                                                                                                                                                                                                                                                                                        background: var(--cyan);
+                                                                                                                                                                                                                                                                                                                                                                        display: inline-block;
+                                                                                                                                                                                                                                                                                                                                                                    } */
 
         /* Header matches the clean Fluidstream homepage feel */
         .site-header {
@@ -266,14 +365,14 @@
 
 
         /* .quote-card:before {
-                                                                                                                                                                                                                                                                                                                                                                                                content: "";
-                                                                                                                                                                                                                                                                                                                                                                                                position: absolute;
-                                                                                                                                                                                                                                                                                                                                                                                                top: 0;
-                                                                                                                                                                                                                                                                                                                                                                                                left: 0;
-                                                                                                                                                                                                                                                                                                                                                                                                right: 0;
-                                                                                                                                                                                                                                                                                                                                                                                                height: 4px;
-                                                                                                                                                                                                                                                                                                                                                                                                background: linear-gradient(90deg, var(--cyan), rgba(255, 255, 255, 0));
-                                                                                                                                                                                                                                                                                                                                                                                            } */
+                                                                                                                                                                                                                                                                                                                                                                                                        content: "";
+                                                                                                                                                                                                                                                                                                                                                                                                        position: absolute;
+                                                                                                                                                                                                                                                                                                                                                                                                        top: 0;
+                                                                                                                                                                                                                                                                                                                                                                                                        left: 0;
+                                                                                                                                                                                                                                                                                                                                                                                                        right: 0;
+                                                                                                                                                                                                                                                                                                                                                                                                        height: 4px;
+                                                                                                                                                                                                                                                                                                                                                                                                        background: linear-gradient(90deg, var(--cyan), rgba(255, 255, 255, 0));
+                                                                                                                                                                                                                                                                                                                                                                                                    } */
 
         .quote-card strong {
             color: #000000;
@@ -318,8 +417,8 @@
 
         /* Page sections */
         /* .section {
-                                                                                                                                                                                                                                                                            padding: 78px 0;
-                                                                                                                                                                                                                                                                        } */
+                                                                                                                                                                                                                                                                                    padding: 78px 0;
+                                                                                                                                                                                                                                                                                } */
 
         .section-soft {
             background: var(--soft);
@@ -398,7 +497,7 @@
             font-size: 1.16rem;
             color: #303b50;
             /* border-left: 4px solid #0018dc;
-                                    padding-left: 1.22rem; */
+                                            padding-left: 1.22rem; */
             margin: 1.15rem 0 2rem;
         }
 
@@ -465,9 +564,9 @@
         }
 
         /* .fs-card:hover h3,
-                                                                                                                                                                                                                                                                                                                .fs-card:hover p {
-                                                                                                                                                                                                                                                                                                                    color: #fff;
-                                                                                                                                                                                                                                                                                                                } */
+                                                                                                                                                                                                                                                                                                                        .fs-card:hover p {
+                                                                                                                                                                                                                                                                                                                            color: #fff;
+                                                                                                                                                                                                                                                                                                                        } */
 
         .line-card:before {
             content: "";
@@ -513,13 +612,13 @@
         }
 
         /* .fs-card,
-                                                                                                                                                                                                                                                                                                                        .line-card,
-                                                                                                                                                                                                                                                                                                                        .stat-card,
-                                                                                                                                                                                                                                                                                                                        .callout {
-                                                                                                                                                                                                                                                                                                                            position: relative;
-                                                                                                                                                                                                                                                                                                                            overflow: hidden;
-                                                                                                                                                                                                                                                                                                                            transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
-                                                                                                                                                                                                                                                                                                                        } */
+                                                                                                                                                                                                                                                                                                                                .line-card,
+                                                                                                                                                                                                                                                                                                                                .stat-card,
+                                                                                                                                                                                                                                                                                                                                .callout {
+                                                                                                                                                                                                                                                                                                                                    position: relative;
+                                                                                                                                                                                                                                                                                                                                    overflow: hidden;
+                                                                                                                                                                                                                                                                                                                                    transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+                                                                                                                                                                                                                                                                                                                                } */
         .cta-panel::after,
         .hero-mini::after,
         .quote-card::after,
@@ -824,12 +923,12 @@
             }
 
             /* .section {
-                                                                                                                                                                                                                                                                                padding: 58px 0;
-                                                                                                                                                                                                                                                                            } */
+                                                                                                                                                                                                                                                                                        padding: 58px 0;
+                                                                                                                                                                                                                                                                                    } */
 
             /* .hero {
-                                                                                                                                                                                                                                                                            padding: 74px 0;
-                                                                                                                                                                                                                                                                        } */
+                                                                                                                                                                                                                                                                                    padding: 74px 0;
+                                                                                                                                                                                                                                                                                } */
 
             article {
                 padding: 28px;
@@ -1107,17 +1206,7 @@
             });
         });
     </script>
-    <script type="application/ld+json">
-                                                                          {
-                                                                            "@context": "https://schema.org",
-                                                                            "@type": "Article",
-                                                                            "headline": "Multiphase Compression for Loaded Gas Wells",
-                                                                            "description": "A technical guide to loaded gas wells, liquid loading, deliquification, wet gas surface compression reliability, and Fluidstream MultiphaseCommander applications.",
-                                                                            "author": { "@type": "Organization", "name": "Fluidstream" },
-                                                                            "publisher": { "@type": "Organization", "name": "Fluidstream" },
-                                                                            "mainEntityOfPage": "https://fluidstream.co/insights/multiphase-compression-loaded-gas-wells"
-                                                                          }
-                                                                          </script>
+
 
     <section class="hero py-12">
         <div class="wrap hero-grid">
@@ -1437,22 +1526,22 @@
         }
 
         /* 
-                                                                                                                                                                                                        .fs-related-head h2 {
-                                                                                                                                                                                                            margin: 0;
-                                                                                                                                                                                                            color: #061126;
-                                                                                                                                                                                                            font-size: clamp(30px, 3vw, 44px);
-                                                                                                                                                                                                            font-weight: 900;
-                                                                                                                                                                                                            line-height: 1.04;
-                                                                                                                                                                                                            letter-spacing: -0.055em;
-                                                                                                                                                                                                        } */
+                                                                                                                                                                                                                .fs-related-head h2 {
+                                                                                                                                                                                                                    margin: 0;
+                                                                                                                                                                                                                    color: #061126;
+                                                                                                                                                                                                                    font-size: clamp(30px, 3vw, 44px);
+                                                                                                                                                                                                                    font-weight: 900;
+                                                                                                                                                                                                                    line-height: 1.04;
+                                                                                                                                                                                                                    letter-spacing: -0.055em;
+                                                                                                                                                                                                                } */
         /* 
-                                                                                                                                                                                                    .fs-related-head p {
-                                                                                                                                                                                                        margin: 0;
-                                                                                                                                                                                                        color: #637086;
-                                                                                                                                                                                                        font-size: 16px;
-                                                                                                                                                                                                        line-height: 1.62;
-                                                                                                                                                                                                        max-width: 720px;
-                                                                                                                                                                                                    } */
+                                                                                                                                                                                                            .fs-related-head p {
+                                                                                                                                                                                                                margin: 0;
+                                                                                                                                                                                                                color: #637086;
+                                                                                                                                                                                                                font-size: 16px;
+                                                                                                                                                                                                                line-height: 1.62;
+                                                                                                                                                                                                                max-width: 720px;
+                                                                                                                                                                                                            } */
 
         .fs-related-grid {
             display: grid;

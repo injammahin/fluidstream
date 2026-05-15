@@ -1,5 +1,146 @@
 @extends('layouts.app')
+@section('schema')
+    @php
+        $articleUrl = url('/insights/how-to-select-vapor-recovery-unit-wet-gas');
 
+        $techArticleSchema = [
+            '@context' => 'https://schema.org',
+            '@type' => 'TechArticle',
+            'headline' => 'How to Select the Right Vapor Recovery Unit for Wet Gas Applications',
+            'alternativeHeadline' => 'Engineering Guide for Selecting Vapor Recovery Equipment in Wet Gas Service',
+            'description' => 'A practical engineering guide for selecting vapor recovery units in wet gas applications, including liquid tolerance, freeze risk, pressure instability, lifecycle reliability, VaporCommander fit, patents, and field proof.',
+            'url' => $articleUrl,
+            'mainEntityOfPage' => [
+                '@type' => 'WebPage',
+                '@id' => $articleUrl,
+            ],
+            'datePublished' => '2026-05-15',
+            'dateModified' => now()->toDateString(),
+            'inLanguage' => 'en',
+            'author' => [
+                '@type' => 'Organization',
+                'name' => 'Fluidstream',
+                'url' => config('app.url'),
+            ],
+            'publisher' => [
+                '@type' => 'Organization',
+                'name' => 'Fluidstream',
+                'url' => config('app.url'),
+                'logo' => [
+                    '@type' => 'ImageObject',
+                    'url' => asset('img/logo.png'),
+                ],
+            ],
+            'image' => asset('img/logo.png'),
+            'articleSection' => 'Vapor Recovery',
+            'keywords' => [
+                'vapor recovery unit selection',
+                'wet gas vapor recovery',
+                'VRU selection',
+                'VaporCommander',
+                'liquid carryover',
+                'freeze risk',
+                'vapor recovery reliability',
+                'wet gas VRU',
+                'low-pressure gas capture',
+            ],
+            'about' => [
+                [
+                    '@type' => 'Thing',
+                    'name' => 'Vapor recovery unit selection',
+                ],
+                [
+                    '@type' => 'Thing',
+                    'name' => 'Wet gas vapor recovery',
+                ],
+                [
+                    '@type' => 'Thing',
+                    'name' => 'Liquid carryover',
+                ],
+                [
+                    '@type' => 'Thing',
+                    'name' => 'VaporCommander',
+                ],
+            ],
+        ];
+
+        $faqSchema = [
+            '@context' => 'https://schema.org',
+            '@type' => 'FAQPage',
+            'mainEntity' => [
+                [
+                    '@type' => 'Question',
+                    'name' => 'Why do vapor recovery units fail in wet gas applications?',
+                    'acceptedAnswer' => [
+                        '@type' => 'Answer',
+                        'text' => 'Many conventional VRUs assume dry-gas service and can struggle when exposed to condensate, slugging liquids, pressure swings, or freeze-prone separator systems.',
+                    ],
+                ],
+                [
+                    '@type' => 'Question',
+                    'name' => 'What is the most important factor when selecting a VRU?',
+                    'acceptedAnswer' => [
+                        '@type' => 'Answer',
+                        'text' => 'The most important factor is whether the system can reliably operate in the actual field conditions of the application, including wet gas, liquid carryover, variable vapor rates, and seasonal operating conditions.',
+                    ],
+                ],
+                [
+                    '@type' => 'Question',
+                    'name' => 'When is VaporCommander™ a strong fit?',
+                    'acceptedAnswer' => [
+                        '@type' => 'Answer',
+                        'text' => 'VaporCommander™ is strongest in vapor recovery applications where wet gas, unstable vapor conditions, or separator-dependent reliability issues make conventional systems difficult to operate.',
+                    ],
+                ],
+                [
+                    '@type' => 'Question',
+                    'name' => 'What should operators review before selecting a VRU?',
+                    'acceptedAnswer' => [
+                        '@type' => 'Answer',
+                        'text' => 'Operators should review vapor rate, liquid behavior, suction and discharge pressure, vapor composition, winter exposure, maintenance history, gas-use options, and total installed system complexity.',
+                    ],
+                ],
+            ],
+        ];
+
+        $breadcrumbSchema = [
+            '@context' => 'https://schema.org',
+            '@type' => 'BreadcrumbList',
+            'itemListElement' => [
+                [
+                    '@type' => 'ListItem',
+                    'position' => 1,
+                    'name' => 'Home',
+                    'item' => url('/'),
+                ],
+                [
+                    '@type' => 'ListItem',
+                    'position' => 2,
+                    'name' => 'Insights',
+                    'item' => url('/insights'),
+                ],
+                [
+                    '@type' => 'ListItem',
+                    'position' => 3,
+                    'name' => 'How to Select the Right Vapor Recovery Unit for Wet Gas Applications',
+                    'item' => $articleUrl,
+                ],
+            ],
+        ];
+    @endphp
+
+    <script type="application/ld+json">
+            {!! json_encode($techArticleSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+        </script>
+
+    <script type="application/ld+json">
+            {!! json_encode($faqSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+        </script>
+
+    <script type="application/ld+json">
+            {!! json_encode($breadcrumbSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+        </script>
+@endsection
 @section('content')
     <style>
         :root {
@@ -93,13 +234,13 @@
         }
 
         /* 
-                                                                                                                                                                                                                                                                                                                                                        .section-label:before {
-                                                                                                                                                                                                                                                                                                                                                            content: "";
-                                                                                                                                                                                                                                                                                                                                                            width: 38px;
-                                                                                                                                                                                                                                                                                                                                                            height: 2px;
-                                                                                                                                                                                                                                                                                                                                                            background: var(--cyan);
-                                                                                                                                                                                                                                                                                                                                                            display: inline-block;
-                                                                                                                                                                                                                                                                                                                                                        } */
+                                                                                                                                                                                                                                                                                                                                                            .section-label:before {
+                                                                                                                                                                                                                                                                                                                                                                content: "";
+                                                                                                                                                                                                                                                                                                                                                                width: 38px;
+                                                                                                                                                                                                                                                                                                                                                                height: 2px;
+                                                                                                                                                                                                                                                                                                                                                                background: var(--cyan);
+                                                                                                                                                                                                                                                                                                                                                                display: inline-block;
+                                                                                                                                                                                                                                                                                                                                                            } */
 
         /* Header matches the clean Fluidstream homepage feel */
         .site-header {
@@ -265,14 +406,14 @@
 
 
         /* .quote-card:before {
-                                                                                                                                                                                                                                                                                                                                                                                            content: "";
-                                                                                                                                                                                                                                                                                                                                                                                            position: absolute;
-                                                                                                                                                                                                                                                                                                                                                                                            top: 0;
-                                                                                                                                                                                                                                                                                                                                                                                            left: 0;
-                                                                                                                                                                                                                                                                                                                                                                                            right: 0;
-                                                                                                                                                                                                                                                                                                                                                                                            height: 4px;
-                                                                                                                                                                                                                                                                                                                                                                                            background: linear-gradient(90deg, var(--cyan), rgba(255, 255, 255, 0));
-                                                                                                                                                                                                                                                                                                                                                                                        } */
+                                                                                                                                                                                                                                                                                                                                                                                                content: "";
+                                                                                                                                                                                                                                                                                                                                                                                                position: absolute;
+                                                                                                                                                                                                                                                                                                                                                                                                top: 0;
+                                                                                                                                                                                                                                                                                                                                                                                                left: 0;
+                                                                                                                                                                                                                                                                                                                                                                                                right: 0;
+                                                                                                                                                                                                                                                                                                                                                                                                height: 4px;
+                                                                                                                                                                                                                                                                                                                                                                                                background: linear-gradient(90deg, var(--cyan), rgba(255, 255, 255, 0));
+                                                                                                                                                                                                                                                                                                                                                                                            } */
 
         .quote-card strong {
             color: #000000;
@@ -317,8 +458,8 @@
 
         /* Page sections */
         /* .section {
-                                                                                                                                                                                                                                                                        padding: 78px 0;
-                                                                                                                                                                                                                                                                    } */
+                                                                                                                                                                                                                                                                            padding: 78px 0;
+                                                                                                                                                                                                                                                                        } */
 
         .section-soft {
             background: var(--soft);
@@ -397,7 +538,7 @@
             font-size: 1.16rem;
             color: #303b50;
             /* border-left: 4px solid #0018dc;
-                                    padding-left: 1.22rem; */
+                                        padding-left: 1.22rem; */
             margin: 1.15rem 0 2rem;
         }
 
@@ -464,9 +605,9 @@
         }
 
         /* .fs-card:hover h3,
-                                                                                                                                                                                                                                                                                                            .fs-card:hover p {
-                                                                                                                                                                                                                                                                                                                color: #fff;
-                                                                                                                                                                                                                                                                                                            } */
+                                                                                                                                                                                                                                                                                                                .fs-card:hover p {
+                                                                                                                                                                                                                                                                                                                    color: #fff;
+                                                                                                                                                                                                                                                                                                                } */
 
         .line-card:before {
             content: "";
@@ -512,13 +653,13 @@
         }
 
         /* .fs-card,
-                                                                                                                                                                                                                                                                                                                    .line-card,
-                                                                                                                                                                                                                                                                                                                    .stat-card,
-                                                                                                                                                                                                                                                                                                                    .callout {
-                                                                                                                                                                                                                                                                                                                        position: relative;
-                                                                                                                                                                                                                                                                                                                        overflow: hidden;
-                                                                                                                                                                                                                                                                                                                        transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
-                                                                                                                                                                                                                                                                                                                    } */
+                                                                                                                                                                                                                                                                                                                        .line-card,
+                                                                                                                                                                                                                                                                                                                        .stat-card,
+                                                                                                                                                                                                                                                                                                                        .callout {
+                                                                                                                                                                                                                                                                                                                            position: relative;
+                                                                                                                                                                                                                                                                                                                            overflow: hidden;
+                                                                                                                                                                                                                                                                                                                            transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+                                                                                                                                                                                                                                                                                                                        } */
         .cta-panel::after,
         .hero-mini::after,
         .quote-card::after,
@@ -823,12 +964,12 @@
             }
 
             /* .section {
-                                                                                                                                                                                                                                                                            padding: 58px 0;
-                                                                                                                                                                                                                                                                        } */
+                                                                                                                                                                                                                                                                                padding: 58px 0;
+                                                                                                                                                                                                                                                                            } */
 
             /* .hero {
-                                                                                                                                                                                                                                                                        padding: 74px 0;
-                                                                                                                                                                                                                                                                    } */
+                                                                                                                                                                                                                                                                            padding: 74px 0;
+                                                                                                                                                                                                                                                                        } */
 
             article {
                 padding: 28px;
@@ -1441,22 +1582,22 @@
         }
 
         /* 
-                                                                                                                                                                                                    .fs-related-head h2 {
-                                                                                                                                                                                                        margin: 0;
-                                                                                                                                                                                                        color: #061126;
-                                                                                                                                                                                                        font-size: clamp(30px, 3vw, 44px);
-                                                                                                                                                                                                        font-weight: 900;
-                                                                                                                                                                                                        line-height: 1.04;
-                                                                                                                                                                                                        letter-spacing: -0.055em;
-                                                                                                                                                                                                    } */
+                                                                                                                                                                                                        .fs-related-head h2 {
+                                                                                                                                                                                                            margin: 0;
+                                                                                                                                                                                                            color: #061126;
+                                                                                                                                                                                                            font-size: clamp(30px, 3vw, 44px);
+                                                                                                                                                                                                            font-weight: 900;
+                                                                                                                                                                                                            line-height: 1.04;
+                                                                                                                                                                                                            letter-spacing: -0.055em;
+                                                                                                                                                                                                        } */
         /* 
-                                                                                                                                                                                                .fs-related-head p {
-                                                                                                                                                                                                    margin: 0;
-                                                                                                                                                                                                    color: #637086;
-                                                                                                                                                                                                    font-size: 16px;
-                                                                                                                                                                                                    line-height: 1.62;
-                                                                                                                                                                                                    max-width: 720px;
-                                                                                                                                                                                                } */
+                                                                                                                                                                                                    .fs-related-head p {
+                                                                                                                                                                                                        margin: 0;
+                                                                                                                                                                                                        color: #637086;
+                                                                                                                                                                                                        font-size: 16px;
+                                                                                                                                                                                                        line-height: 1.62;
+                                                                                                                                                                                                        max-width: 720px;
+                                                                                                                                                                                                    } */
 
         .fs-related-grid {
             display: grid;

@@ -103,9 +103,9 @@
         }
 
         .fs-about-btn-primary {
-            color: var(--blue);
-            background: #ffffff;
-            border: 1px solid #ffffff;
+            color: #ffffff;
+            background: var(--blue);
+            border: 1px solid var(--blue);
             box-shadow: 0 18px 38px rgba(0, 0, 0, .20);
         }
 
@@ -134,9 +134,9 @@
 
         .fs-about-btn-secondary-1-1 {
             color: #ffffff;
-            background: rgba(255, 255, 255, .08);
+            /* background: rgba(255, 255, 255, .08); */
             border: 1px solid rgb(209, 208, 208);
-            backdrop-filter: blur(10px);
+            /* backdrop-filter: blur(10px); */
             -webkit-backdrop-filter: blur(10px);
         }
 
@@ -176,8 +176,8 @@
         }
 
         /* ================================
-                                                                                                                                                                                                       COMMON CARD HOVER STYLE
-                                                                                                                                                                                                    ================================ */
+                                                                                                                                                                                                                                           COMMON CARD HOVER STYLE
+                                                                                                                                                                                                                                        ================================ */
 
         .fs-about-hover-card {
             position: relative;
@@ -357,8 +357,8 @@
         }
 
         /* ================================
-                                                                                                                                                                                                       HERO
-                                                                                                                                                                                                    ================================ */
+                                                                                                                                                                                                                                           HERO
+                                                                                                                                                                                                                                        ================================ */
 
         .fs-about-hero {
             position: relative;
@@ -368,25 +368,36 @@
             display: flex;
             align-items: center;
             color: #ffffff;
-            background: #07111f;
+            background:
+                linear-gradient(90deg, rgba(3, 10, 28, 0.041) 0%, rgba(19, 21, 37, 0) 45%, rgba(3, 10, 28, 0) 100%),
+                url("{{ asset('/img/hero/vru facility-with-pump-jack-truck.png') }}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
         .fs-about-hero::before {
             content: "";
             position: absolute;
             inset: 0;
-            z-index: -3;
-            background: #0018dc;
+            z-index: -2;
+            background:
+                linear-gradient(90deg, rgba(255, 255, 255, .055) 1px, transparent 1px),
+                linear-gradient(0deg, rgba(255, 255, 255, .045) 1px, transparent 1px);
+            background-size: 74px 74px;
+            opacity: .55;
+            pointer-events: none;
         }
 
         .fs-about-hero::after {
             content: "";
             position: absolute;
-            inset: auto 0 0;
-            height: 160px;
-            z-index: -2;
+            inset: 0;
+            z-index: -1;
             pointer-events: none;
-            /* background: linear-gradient(180deg, transparent 0%, rgba(6, 18, 38, .78) 100%); */
+            background:
+                radial-gradient(circle at 18% 22%, rgba(21, 209, 255, .22), transparent 30%),
+                linear-gradient(180deg, rgba(7, 17, 31, .10) 0%, rgba(7, 17, 31, .58) 100%);
         }
 
         .fs-about-hero-grid {
@@ -436,10 +447,10 @@
             isolation: isolate;
             padding: 26px;
             border-radius: 7px;
-            background: rgba(255, 255, 255, .10);
+            /* background: rgba(255, 255, 255, .10); */
             border: 1px solid rgba(255, 255, 255, .18);
             box-shadow: 0 26px 70px rgba(0, 0, 0, .24);
-            backdrop-filter: blur(15px);
+            /* backdrop-filter: blur(15px); */
             -webkit-backdrop-filter: blur(15px);
             transition:
                 transform .28s ease,
@@ -478,7 +489,7 @@
             padding: 15px;
             border-radius: 7px;
             border: 1px solid rgba(255, 255, 255, .14);
-            background: rgba(255, 255, 255, .10);
+            /* background: rgba(255, 255, 255, .10); */
         }
 
         .fs-about-proof-item strong {
@@ -500,8 +511,8 @@
         }
 
         /* ================================
-                                                                                                                                                                                                       LAYOUTS
-                                                                                                                                                                                                    ================================ */
+                                                                                                                                                                                                                                           LAYOUTS
+                                                                                                                                                                                                                                        ================================ */
 
         .fs-about-two-col {
             display: grid;
@@ -554,8 +565,8 @@
         }
 
         /* ================================
-                                                                                                                                                                                                       TECHNOLOGY PLATFORM
-                                                                                                                                                                                                    ================================ */
+                                                                                                                                                                                                                                           TECHNOLOGY PLATFORM
+                                                                                                                                                                                                                                        ================================ */
 
         .fs-about-platform {
             position: relative;
@@ -568,21 +579,21 @@
             padding: 44px;
             border-radius: 7px;
             /* background: linear-gradient(135deg, #0018dc 0%, #0018dc 100%);
-                                        color: #ffffff;
-                                        box-shadow: 0 28px 80px rgba(0, 24, 220, .20); */
+                                                                            color: #ffffff;
+                                                                            box-shadow: 0 28px 80px rgba(0, 24, 220, .20); */
         }
 
         /* .fs-about-platform::after {
-                                                                                                                                                                        content: "";
-                                                                                                                                                                        position: absolute;
-                                                                                                                                                                        right: -120px;
-                                                                                                                                                                        top: -150px;
-                                                                                                                                                                        width: 320px;
-                                                                                                                                                                        height: 320px;
-                                                                                                                                                                        border-radius: 999px;
-                                                                                                                                                                        background: rgba(21, 209, 255, .16);
-                                                                                                                                                                        pointer-events: none;
-                                                                                                                                                                    } */
+                                                                                                                                                                                                            content: "";
+                                                                                                                                                                                                            position: absolute;
+                                                                                                                                                                                                            right: -120px;
+                                                                                                                                                                                                            top: -150px;
+                                                                                                                                                                                                            width: 320px;
+                                                                                                                                                                                                            height: 320px;
+                                                                                                                                                                                                            border-radius: 999px;
+                                                                                                                                                                                                            background: rgba(21, 209, 255, .16);
+                                                                                                                                                                                                            pointer-events: none;
+                                                                                                                                                                                                        } */
 
         .fs-about-platform h2 {
             color: #232325;
@@ -615,18 +626,18 @@
         }
 
         /* 
-                                                                                                                                                                        .fs-about-platform-link::after {
-                                                                                                                                                                            content: "";
-                                                                                                                                                                            position: absolute;
-                                                                                                                                                                            left: 0;
-                                                                                                                                                                            right: 0;
-                                                                                                                                                                            top: 0;
-                                                                                                                                                                            height: 4px;
-                                                                                                                                                                            background: var(--cyan);
-                                                                                                                                                                            transform: scaleX(0);
-                                                                                                                                                                            transform-origin: left;
-                                                                                                                                                                            transition: transform .25s ease;
-                                                                                                                                                                        } */
+                                                                                                                                                                                                            .fs-about-platform-link::after {
+                                                                                                                                                                                                                content: "";
+                                                                                                                                                                                                                position: absolute;
+                                                                                                                                                                                                                left: 0;
+                                                                                                                                                                                                                right: 0;
+                                                                                                                                                                                                                top: 0;
+                                                                                                                                                                                                                height: 4px;
+                                                                                                                                                                                                                background: var(--cyan);
+                                                                                                                                                                                                                transform: scaleX(0);
+                                                                                                                                                                                                                transform-origin: left;
+                                                                                                                                                                                                                transition: transform .25s ease;
+                                                                                                                                                                                                            } */
 
         .fs-about-platform-link:hover {
             transform: translateY(-3px);
@@ -656,8 +667,8 @@
         }
 
         /* ================================
-                                                                                                                                                                                                       PROOF STRIP
-                                                                                                                                                                                                    ================================ */
+                                                                                                                                                                                                                                           PROOF STRIP
+                                                                                                                                                                                                                                        ================================ */
 
         .fs-about-proof-strip {
             display: grid;
@@ -689,8 +700,8 @@
         }
 
         /* ================================
-                                                                                                                                                                                                       CTA
-                                                                                                                                                                                                    ================================ */
+                                                                                                                                                                                                                                           CTA
+                                                                                                                                                                                                                                        ================================ */
 
         .fs-about-cta {
             position: relative;
@@ -707,16 +718,16 @@
         }
 
         /* .fs-about-cta::after {
-                                                                                                                                                                    content: "";
-                                                                                                                                                                    position: absolute;
-                                                                                                                                                                    right: -90px;
-                                                                                                                                                                    top: -110px;
-                                                                                                                                                                    width: 260px;
-                                                                                                                                                                    height: 260px;
-                                                                                                                                                                    border-radius: 999px;
-                                                                                                                                                                    background: rgba(21, 209, 255, .16);
-                                                                                                                                                                    pointer-events: none;
-                                                                                                                                                                } */
+                                                                                                                                                                                                        content: "";
+                                                                                                                                                                                                        position: absolute;
+                                                                                                                                                                                                        right: -90px;
+                                                                                                                                                                                                        top: -110px;
+                                                                                                                                                                                                        width: 260px;
+                                                                                                                                                                                                        height: 260px;
+                                                                                                                                                                                                        border-radius: 999px;
+                                                                                                                                                                                                        background: rgba(21, 209, 255, .16);
+                                                                                                                                                                                                        pointer-events: none;
+                                                                                                                                                                                                    } */
 
         .fs-about-cta h2 {
             max-width: 600px !important;

@@ -1,5 +1,151 @@
 @extends('layouts.app')
+@section('schema')
+    @php
+        $articleUrl = url('/insights/methane-emissions-reduction-oil-gas');
 
+        $techArticleSchema = [
+            '@context' => 'https://schema.org',
+            '@type' => 'TechArticle',
+            'headline' => 'Methane Emissions Reduction Solutions for Oil & Gas',
+            'description' => 'A technical guide to methane emissions reduction for oil and gas operators using vapor recovery, low-pressure gas capture, wet gas reliability, and Fluidstream VaporCommander applications.',
+            'url' => $articleUrl,
+            'mainEntityOfPage' => [
+                '@type' => 'WebPage',
+                '@id' => $articleUrl,
+            ],
+            'datePublished' => '2026-05-15',
+            'dateModified' => now()->toDateString(),
+            'inLanguage' => 'en',
+            'author' => [
+                '@type' => 'Organization',
+                'name' => 'Fluidstream',
+                'url' => config('app.url'),
+            ],
+            'publisher' => [
+                '@type' => 'Organization',
+                'name' => 'Fluidstream',
+                'url' => config('app.url'),
+                'logo' => [
+                    '@type' => 'ImageObject',
+                    'url' => asset('img/logo.png'),
+                ],
+            ],
+            'image' => asset('img/logo.png'),
+            'articleSection' => 'Methane Emissions Reduction',
+            'keywords' => [
+                'methane emissions reduction',
+                'oil and gas emissions reduction',
+                'vapor recovery',
+                'low-pressure gas capture',
+                'wet gas vapor recovery',
+                'VaporCommander',
+                'methane reduction oil gas',
+            ],
+            'about' => [
+                [
+                    '@type' => 'Thing',
+                    'name' => 'Methane emissions reduction',
+                ],
+                [
+                    '@type' => 'Thing',
+                    'name' => 'Vapor recovery',
+                ],
+                [
+                    '@type' => 'Thing',
+                    'name' => 'Low-pressure gas capture',
+                ],
+                [
+                    '@type' => 'Thing',
+                    'name' => 'Oil and gas operations',
+                ],
+            ],
+        ];
+
+        $faqSchema = [
+            '@context' => 'https://schema.org',
+            '@type' => 'FAQPage',
+            'mainEntity' => [
+                [
+                    '@type' => 'Question',
+                    'name' => 'Why is vapor recovery important for methane reduction?',
+                    'acceptedAnswer' => [
+                        '@type' => 'Answer',
+                        'text' => 'Vapor recovery can capture low-pressure gas that may otherwise be vented, flared, or combusted, reducing emissions exposure while preserving hydrocarbon value.',
+                    ],
+                ],
+                [
+                    '@type' => 'Question',
+                    'name' => 'Why do some methane reduction projects underperform?',
+                    'acceptedAnswer' => [
+                        '@type' => 'Answer',
+                        'text' => 'Projects often underperform when equipment is selected for ideal dry-gas conditions but the field application includes wet gas, condensate carryover, variable vapor rates, pressure swings, or freeze-prone equipment.',
+                    ],
+                ],
+                [
+                    '@type' => 'Question',
+                    'name' => 'Where does VaporCommander™ fit?',
+                    'acceptedAnswer' => [
+                        '@type' => 'Answer',
+                        'text' => 'VaporCommander™ fits vapor recovery and low-pressure gas capture applications where wet, unstable, or liquid-laden streams make conventional gas-only systems difficult to operate reliably.',
+                    ],
+                ],
+                [
+                    '@type' => 'Question',
+                    'name' => 'How should operators evaluate fit?',
+                    'acceptedAnswer' => [
+                        '@type' => 'Answer',
+                        'text' => 'Operators should review gas volume, liquid behavior, suction and discharge pressure, winter exposure, maintenance history, gas-use options, and the economics of recovered gas value versus installed and lifecycle cost.',
+                    ],
+                ],
+                [
+                    '@type' => 'Question',
+                    'name' => 'Why mention Fluidstream patents?',
+                    'acceptedAnswer' => [
+                        '@type' => 'Answer',
+                        'text' => 'Patent references provide conservative engineering credibility for Fluidstream’s liquid-aware compression approach. They should be viewed as technical support, not as broad legal or competitive claims.',
+                    ],
+                ],
+            ],
+        ];
+
+        $breadcrumbSchema = [
+            '@context' => 'https://schema.org',
+            '@type' => 'BreadcrumbList',
+            'itemListElement' => [
+                [
+                    '@type' => 'ListItem',
+                    'position' => 1,
+                    'name' => 'Home',
+                    'item' => url('/'),
+                ],
+                [
+                    '@type' => 'ListItem',
+                    'position' => 2,
+                    'name' => 'Insights',
+                    'item' => url('/insights'),
+                ],
+                [
+                    '@type' => 'ListItem',
+                    'position' => 3,
+                    'name' => 'Methane Emissions Reduction Solutions for Oil & Gas',
+                    'item' => $articleUrl,
+                ],
+            ],
+        ];
+    @endphp
+
+    <script type="application/ld+json">
+                        {!! json_encode($techArticleSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+                    </script>
+
+    <script type="application/ld+json">
+                        {!! json_encode($faqSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+                    </script>
+
+    <script type="application/ld+json">
+                        {!! json_encode($breadcrumbSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+                    </script>
+@endsection
 @section('content')
     <style>
         :root {
@@ -93,13 +239,13 @@
         }
 
         /* 
-                                                                                                                                                                                                                                                                                                                                    .section-label:before {
-                                                                                                                                                                                                                                                                                                                                        content: "";
-                                                                                                                                                                                                                                                                                                                                        width: 38px;
-                                                                                                                                                                                                                                                                                                                                        height: 2px;
-                                                                                                                                                                                                                                                                                                                                        background: var(--cyan);
-                                                                                                                                                                                                                                                                                                                                        display: inline-block;
-                                                                                                                                                                                                                                                                                                                                    } */
+                                                                                                                                                                                                                                                                                                                                                    .section-label:before {
+                                                                                                                                                                                                                                                                                                                                                        content: "";
+                                                                                                                                                                                                                                                                                                                                                        width: 38px;
+                                                                                                                                                                                                                                                                                                                                                        height: 2px;
+                                                                                                                                                                                                                                                                                                                                                        background: var(--cyan);
+                                                                                                                                                                                                                                                                                                                                                        display: inline-block;
+                                                                                                                                                                                                                                                                                                                                                    } */
 
         /* Header matches the clean Fluidstream homepage feel */
         .site-header {
@@ -265,14 +411,14 @@
 
 
         /* .quote-card:before {
-                                                                                                                                                                                                                                                                                                                                                                        content: "";
-                                                                                                                                                                                                                                                                                                                                                                        position: absolute;
-                                                                                                                                                                                                                                                                                                                                                                        top: 0;
-                                                                                                                                                                                                                                                                                                                                                                        left: 0;
-                                                                                                                                                                                                                                                                                                                                                                        right: 0;
-                                                                                                                                                                                                                                                                                                                                                                        height: 4px;
-                                                                                                                                                                                                                                                                                                                                                                        background: linear-gradient(90deg, var(--cyan), rgba(255, 255, 255, 0));
-                                                                                                                                                                                                                                                                                                                                                                    } */
+                                                                                                                                                                                                                                                                                                                                                                                        content: "";
+                                                                                                                                                                                                                                                                                                                                                                                        position: absolute;
+                                                                                                                                                                                                                                                                                                                                                                                        top: 0;
+                                                                                                                                                                                                                                                                                                                                                                                        left: 0;
+                                                                                                                                                                                                                                                                                                                                                                                        right: 0;
+                                                                                                                                                                                                                                                                                                                                                                                        height: 4px;
+                                                                                                                                                                                                                                                                                                                                                                                        background: linear-gradient(90deg, var(--cyan), rgba(255, 255, 255, 0));
+                                                                                                                                                                                                                                                                                                                                                                                    } */
 
         .quote-card strong {
             color: #000000;
@@ -317,8 +463,8 @@
 
         /* Page sections */
         /* .section {
-                                                                                                                                                                                                                                                    padding: 78px 0;
-                                                                                                                                                                                                                                                } */
+                                                                                                                                                                                                                                                                    padding: 78px 0;
+                                                                                                                                                                                                                                                                } */
 
         .section-soft {
             background: var(--soft);
@@ -397,7 +543,7 @@
             font-size: 1.16rem;
             color: #303b50;
             /* border-left: 4px solid #0018dc;
-                            padding-left: 1.22rem; */
+                                            padding-left: 1.22rem; */
             margin: 1.15rem 0 2rem;
         }
 
@@ -464,9 +610,9 @@
         }
 
         /* .fs-card:hover h3,
-                                                                                                                                                                                                                                                                                        .fs-card:hover p {
-                                                                                                                                                                                                                                                                                            color: #fff;
-                                                                                                                                                                                                                                                                                        } */
+                                                                                                                                                                                                                                                                                                        .fs-card:hover p {
+                                                                                                                                                                                                                                                                                                            color: #fff;
+                                                                                                                                                                                                                                                                                                        } */
 
         .line-card:before {
             content: "";
@@ -512,13 +658,13 @@
         }
 
         /* .fs-card,
-                                                                                                                                                                                                                                                                                                .line-card,
-                                                                                                                                                                                                                                                                                                .stat-card,
-                                                                                                                                                                                                                                                                                                .callout {
-                                                                                                                                                                                                                                                                                                    position: relative;
-                                                                                                                                                                                                                                                                                                    overflow: hidden;
-                                                                                                                                                                                                                                                                                                    transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
-                                                                                                                                                                                                                                                                                                } */
+                                                                                                                                                                                                                                                                                                                .line-card,
+                                                                                                                                                                                                                                                                                                                .stat-card,
+                                                                                                                                                                                                                                                                                                                .callout {
+                                                                                                                                                                                                                                                                                                                    position: relative;
+                                                                                                                                                                                                                                                                                                                    overflow: hidden;
+                                                                                                                                                                                                                                                                                                                    transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+                                                                                                                                                                                                                                                                                                                } */
         .cta-panel::after,
         .hero-mini::after,
         .quote-card::after,
@@ -823,12 +969,12 @@
             }
 
             /* .section {
-                                                                                                                                                                                                                                                        padding: 58px 0;
-                                                                                                                                                                                                                                                    } */
+                                                                                                                                                                                                                                                                        padding: 58px 0;
+                                                                                                                                                                                                                                                                    } */
 
             /* .hero {
-                                                                                                                                                                                                                                                    padding: 74px 0;
-                                                                                                                                                                                                                                                } */
+                                                                                                                                                                                                                                                                    padding: 74px 0;
+                                                                                                                                                                                                                                                                } */
 
             article {
                 padding: 28px;
@@ -1008,18 +1154,19 @@
         html {
             /* scroll-padding-top: 135px; */
         }
-                    .cta-panel {
-                position: relative;
-                overflow: hidden;
-                border: 1px solid rgba(0, 0, 0, 0.22);
-                border-radius: 7px;
-                background: #ffffff;
-                box-shadow: none !important;
-                transition:
-                    transform 0.24s ease,
-                    border-color 0.24s ease,
-                    background 0.24s ease;
-            }
+
+        .cta-panel {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.22);
+            border-radius: 7px;
+            background: #ffffff;
+            box-shadow: none !important;
+            transition:
+                transform 0.24s ease,
+                border-color 0.24s ease,
+                background 0.24s ease;
+        }
 
         .article-section {
             scroll-margin-top: 135px;
@@ -1506,22 +1653,22 @@
         }
 
         /* 
-                                                                                                                                                                                    .fs-related-head h2 {
-                                                                                                                                                                                        margin: 0;
-                                                                                                                                                                                        color: #061126;
-                                                                                                                                                                                        font-size: clamp(30px, 3vw, 44px);
-                                                                                                                                                                                        font-weight: 900;
-                                                                                                                                                                                        line-height: 1.04;
-                                                                                                                                                                                        letter-spacing: -0.055em;
-                                                                                                                                                                                    } */
+                                                                                                                                                                                                    .fs-related-head h2 {
+                                                                                                                                                                                                        margin: 0;
+                                                                                                                                                                                                        color: #061126;
+                                                                                                                                                                                                        font-size: clamp(30px, 3vw, 44px);
+                                                                                                                                                                                                        font-weight: 900;
+                                                                                                                                                                                                        line-height: 1.04;
+                                                                                                                                                                                                        letter-spacing: -0.055em;
+                                                                                                                                                                                                    } */
         /* 
-                                                                                                                                                                                .fs-related-head p {
-                                                                                                                                                                                    margin: 0;
-                                                                                                                                                                                    color: #637086;
-                                                                                                                                                                                    font-size: 16px;
-                                                                                                                                                                                    line-height: 1.62;
-                                                                                                                                                                                    max-width: 720px;
-                                                                                                                                                                                } */
+                                                                                                                                                                                                .fs-related-head p {
+                                                                                                                                                                                                    margin: 0;
+                                                                                                                                                                                                    color: #637086;
+                                                                                                                                                                                                    font-size: 16px;
+                                                                                                                                                                                                    line-height: 1.62;
+                                                                                                                                                                                                    max-width: 720px;
+                                                                                                                                                                                                } */
 
         .fs-related-grid {
             display: grid;
@@ -1715,7 +1862,7 @@
 
                     <ul class="fs-related-list">
                         <li>
-                            <a href="{{ url('/insights/fluidstream-multiphase-vs-conventional-long-form') }}">
+                            <a href="{{ url('/insights/multiphase-vs-conventional-compression') }}">
                                 Multiphase Compression vs Conventional Compression
                             </a>
                         </li>

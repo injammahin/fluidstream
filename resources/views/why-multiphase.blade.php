@@ -134,8 +134,8 @@
     }
 
     .btn-primary {
-      background: #fff;
-      color: var(--blue);
+      background: var(--blue);
+      color: #fff;
     }
 
     .btn-secondary {
@@ -978,9 +978,6 @@
               Production Engineer, Vermilion Energy
             </div>
 
-            <div class="hero-proof-logo-box">
-              <img src="{{ asset('img/Vermilion Energy.png') }}" alt="Vermilion Energy logo">
-            </div>
           </div>
 
           <div class="hero-proof-divider"></div>
@@ -1048,9 +1045,6 @@
           <div class="proof-card-top">
             <div class="tag">VERMILION ENERGY</div>
 
-            <div class="proof-card-logo">
-              <img src="{{ asset('img/Vermilion Energy.png') }}" alt="Vermilion Energy logo">
-            </div>
           </div>
 
           <div class="proof-card-body">
@@ -1559,8 +1553,8 @@
   </section> --}}
   <style>
     /* ================================
-                                                   PROOF CARD FINAL ALIGNMENT FIX
-                                                ================================ */
+                                                     PROOF CARD FINAL ALIGNMENT FIX
+                                                  ================================ */
 
     .proof-grid {
       display: grid;
@@ -1987,11 +1981,11 @@
     }
 
     /* .fit-card p {
-                                                                                                                                                                                                                margin: 0;
-                                                                                                                                                                                                                font-size: 22px;
-                                                                                                                                                                                                                line-height: 1.42;
-                                                                                                                                                                                                                color: #53647c;
-                                                                                                                                                                                                              } */
+                                                                                                                                                                                                                  margin: 0;
+                                                                                                                                                                                                                  font-size: 22px;
+                                                                                                                                                                                                                  line-height: 1.42;
+                                                                                                                                                                                                                  color: #53647c;
+                                                                                                                                                                                                                } */
 
     @media (max-width: 991px) {
       .fit-grid {
