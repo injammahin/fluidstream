@@ -869,7 +869,7 @@
         }
 
         .case-card h3 {
-            font-size: clamp(27px, 3.2vw, 40px);
+            font-size: clamp(27px, 3.2vw, 35px);
             line-height: 1;
             letter-spacing: -.06em;
             margin: 0 0 16px;
@@ -1033,8 +1033,8 @@
         }
 
         /* ================================
-                                                                                                                                           CASE STUDY INTRO SECTION
-                                                                                                                                        ================================ */
+                                                                                                                                                       CASE STUDY INTRO SECTION
+                                                                                                                                                    ================================ */
 
         .case-study-intro {
             max-width: 1180px;
@@ -1167,7 +1167,7 @@
                             two nearly dead wells without adding separation-first infrastructure.</p>
                         <div class="case-metrics">
                             <div class="case-metric"><strong>~10e3</strong><span>m³/day gas restored</span></div>
-                            <div class="case-metric"><strong>C$1.5M+</strong><span>incremental annual revenue</span></div>
+                            <div class="case-metric"><strong>C$1.5M+ </strong><span>incremental annual revenue</span></div>
                             <div class="case-metric"><strong>~95e3</strong><span>m³/day peak gas flow</span></div>
                         </div>
                         <div class="case-hook">Best for readers evaluating liquid-loaded wells, plunger-lift limits,

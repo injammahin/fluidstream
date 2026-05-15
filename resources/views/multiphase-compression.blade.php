@@ -814,8 +814,8 @@
     }
 
     /* =========================================
-                                                                                         HERO SECTION FIXED STYLE
-                                                                                      ========================================= */
+                                                                                                     HERO SECTION FIXED STYLE
+                                                                                                  ========================================= */
 
     header.hero {
       position: relative !important;
@@ -1854,8 +1854,8 @@
   </section>
   <style>
     /* ================================
-                                                                                                                   TECHNOLOGY BENEFITS 3x2 LAYOUT
-                                                                                                                ================================ */
+                                                                                                                               TECHNOLOGY BENEFITS 3x2 LAYOUT
+                                                                                                                            ================================ */
 
     .technology-benefits-section {
       background: #ffffff;
@@ -2199,6 +2199,238 @@
   </section>
 
 
+
+
+
+  <section class="fs-before-after-section band">
+    <style>
+      .fs-before-after-section {
+        padding: 72px 0;
+        background: #f6f7fb;
+        border-top: 1px solid #dfe9ff;
+        border-bottom: 1px solid #dfe9ff;
+      }
+
+      .fs-before-after-head {
+        margin-bottom: 34px;
+      }
+
+
+
+      .fs-before-after-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+        align-items: stretch;
+      }
+
+      .fs-before-after-card {
+        position: relative;
+        overflow: hidden;
+        border: 1px solid #d9e6ff;
+        border-radius: 7px;
+        background: #ffffff;
+        box-shadow: 0 18px 44px rgba(13, 32, 84, .06);
+        transition:
+          transform .25s ease,
+          border-color .25s ease,
+          box-shadow .25s ease,
+          background .25s ease;
+      }
+
+      .fs-before-after-card::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: #0018dc;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform .3s ease;
+        z-index: 2;
+      }
+
+      .fs-before-after-card:hover {
+        transform: translateY(-4px);
+        border-color: #0018dc;
+        background: #ffffff;
+        /* box-shadow: 0 24px 54px rgba(0, 24, 220, .12); */
+      }
+
+      .fs-before-after-card:hover::after {
+        transform: scaleX(1);
+      }
+
+      .fs-before-after-image {
+        position: relative;
+        min-height: 360px;
+        background: #07111f;
+        overflow: hidden;
+      }
+
+      .fs-before-after-image img {
+        width: 100%;
+        height: 100%;
+        min-height: 360px;
+        display: block;
+        object-fit: cover;
+        transition: transform .35s ease;
+      }
+
+      .fs-before-after-card:hover .fs-before-after-image img {
+        transform: scale(1.035);
+      }
+
+      .fs-before-after-label {
+        position: absolute;
+        left: 18px;
+        top: 18px;
+        z-index: 2;
+        display: inline-flex;
+        align-items: center;
+        min-height: 34px;
+        padding: 0 14px;
+        border-radius: 999px;
+        color: #ffffff;
+        background: #0018dc;
+        font-size: 12px;
+        font-weight: 900;
+        letter-spacing: .12em;
+        text-transform: uppercase;
+        box-shadow: 0 12px 26px rgba(0, 0, 0, .22);
+      }
+
+      .fs-before-after-content {
+        padding: 24px;
+      }
+
+      .fs-before-after-content h3 {
+        margin: 0 0 10px;
+        color: #232325;
+        font-size: 26px;
+        line-height: 1.08;
+        letter-spacing: -.035em;
+        font-weight: 800;
+      }
+
+      .fs-before-after-content p {
+        margin: 0;
+        color: #4a5568;
+        font-size: 16px;
+        line-height: 1.65;
+      }
+
+      .fs-before-after-note {
+        margin-top: 24px;
+        padding: 18px 20px;
+        border: 1px solid #d9e6ff;
+        border-radius: 7px;
+        background: #ffffff;
+        color: #4a5568;
+        font-size: 15px;
+        line-height: 1.65;
+        box-shadow: 0 14px 34px rgba(13, 32, 84, .045);
+      }
+
+      .fs-before-after-note strong {
+        color: #0018dc;
+        font-weight: 900;
+      }
+
+      @media (max-width: 900px) {
+        .fs-before-after-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .fs-before-after-image,
+        .fs-before-after-image img {
+          min-height: 300px;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .fs-before-after-section {
+          padding: 52px 0;
+        }
+
+        .fs-before-after-image,
+        .fs-before-after-image img {
+          min-height: 240px;
+        }
+
+        .fs-before-after-content {
+          padding: 20px;
+        }
+
+        .fs-before-after-content h3 {
+          font-size: 23px;
+        }
+      }
+    </style>
+
+    <div class="wrap">
+      <div class="fs-before-after-head">
+        <div class="kicker mb-2">Before and after</div>
+
+        <h2>See the field difference when mixed-phase flow is handled correctly.</h2>
+
+        <p class="lead">
+          MultiphaseCommander™ is designed to reduce surface complexity, lower backpressure, and support more reliable
+          movement of gas and liquids together in real field conditions.
+        </p>
+      </div>
+
+      <div class="fs-before-after-grid">
+        <article class="fs-before-after-card">
+          <div class="fs-before-after-image">
+            <span class="fs-before-after-label">Before</span>
+
+            <img src="{{ asset('img/before.png') }}" alt="Before MultiphaseCommander installation">
+          </div>
+
+          <div class="fs-before-after-content">
+            <h3>Higher backpressure and more surface complexity.</h3>
+
+            <p>
+              Before multiphase boosting, production can be restricted by liquid loading, unstable flow, separator
+              dependency, added support equipment, and rising gathering-system pressure.
+            </p>
+          </div>
+        </article>
+
+        <article class="fs-before-after-card">
+          <div class="fs-before-after-image">
+            <span class="fs-before-after-label">After</span>
+
+            <img src="{{ asset('img/after.png') }}" alt="After MultiphaseCommander installation">
+          </div>
+
+          <div class="fs-before-after-content">
+            <h3>Lower pressure and better mixed-flow movement.</h3>
+
+            <p>
+              After applying MultiphaseCommander™, gas, oil, water, and condensate can move together more effectively,
+              helping support production recovery and simpler field architecture.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <div class="fs-before-after-note">
+        <strong>Application note:</strong>
+        Actual results depend on inlet pressure, discharge pressure, gas rate, liquid rate, fluid composition, site
+        layout, and operating conditions.
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
   <section id="specifications" class="fs-mpc-spec-section">
     <style>
       .fs-mpc-spec-section {
@@ -2244,12 +2476,12 @@
       }
 
       /* .fs-mpc-section-head h2 {
-                                                                                                                                              font-size: clamp(30px, 3.2vw, 46px);
-                                                                                                                                              line-height: 1.02;
-                                                                                                                                              margin: 0 0 14px;
-                                                                                                                                              letter-spacing: -.035em;
-                                                                                                                                              color: var(--mpc-ink);
-                                                                                                                                            } */
+                                                                                                                                                          font-size: clamp(30px, 3.2vw, 46px);
+                                                                                                                                                          line-height: 1.02;
+                                                                                                                                                          margin: 0 0 14px;
+                                                                                                                                                          letter-spacing: -.035em;
+                                                                                                                                                          color: var(--mpc-ink);
+                                                                                                                                                        } */
 
       .fs-mpc-lead {
         font-size: 17px;
