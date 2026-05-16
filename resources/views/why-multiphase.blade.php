@@ -151,7 +151,7 @@
     .patent-note {
       margin: 16px 0 26px;
       padding: 14px 16px;
-      border-left: 4px solid var(--cyan);
+      border-left: 4px solid #0018dc;
       background: linear-gradient(180deg, rgba(255, 255, 255, .14), rgba(255, 255, 255, .08));
       color: #eef6ff;
       border-radius: 0 7px 7px 0;
@@ -1303,7 +1303,7 @@
       .fs-tech-advantage-card h3 {
         margin: 0 0 14px;
         color: #232325;
-        font-size: 24px;
+        font-size: 23px;
         line-height: 1.12;
         letter-spacing: -.035em;
         font-weight: 400;
@@ -1444,118 +1444,16 @@
         <article class="fs-tech-advantage-card">
           <div class="fs-tech-advantage-card-kicker">Reliability</div>
           <h3>Seal-condition visibility</h3>
-          <p>
-            Electronic seal-condition detection supports proactive maintenance visibility before seal wear
-            becomes an unplanned field reliability issue.
+          <p style="margin-top: 42px">
+            Electronic seal-condition monitoring provides operators real-time insight into seal wear, enabling proactive
+            maintenance and preventing unplanned downtime or reliability issues.
           </p>
         </article>
       </div>
-
-      <div class="fs-tech-advantage-proof">
-        <div class="fs-tech-advantage-proof-label">Application Fit</div>
-
-        <p>
-          These advantages support direct multiphase compression where liquids, slugs, unstable flow, and
-          separator-heavy facility layouts create production, reliability, and maintenance challenges.
-        </p>
-
-        <a class="btn btn-primary" href="/technical-review">Request Technical Review</a>
-      </div>
     </div>
   </section>
-  {{-- <section>
-    <div class="wrap py-12">
-      <div class="kicker mb-2">Multiphase compression technology</div>
-      <h2>Multiphase compression technology built around the stream you actually have.</h2>
-      <p class="lead">
-        Multiphase compression allows gas and liquids to be compressed simultaneously without prior separation. In
-        traditional systems, gas must be isolated and conditioned before entering a compressor because liquid carryover
-        creates risk, inefficiency, and reliability problems. Fluidstream is designed to operate directly on mixed-phase
-        flow, including gas, oil, water, high liquid content streams, slugging conditions, and solids entrainment.
-      </p>
 
-      <div class="split">
-        <div class="feature interactive-card swipe-left">
-          <h3>Why conventional compression fails here</h3>
-          <p>
-            Conventional compressors are built around gas-only assumptions. Once liquids, slugs, unstable suction
-            conditions, or solids become part of the operating envelope, separation equipment becomes a defensive
-            requirement, complexity rises, and reliability falls. In other words, the system is no longer solving the
-            field problem directly. It is spending more of its time trying to protect the compressor from the field.
-          </p>
-        </div>
-
-
-        <div class=" highlight-box interactive-card swipe-left">
-          <h3>
-            Why Fluidstream is different
-          </h3>
-
-          <p class="mt-6 max-w-[980px] text-[16px] leading-[1.5] font-[400]">
-            Fluidstream is built around the real compression behavior of mixed streams. That matters because the
-            commercial value comes from moving production sooner, with fewer process steps, in operating
-            conditions where conventional systems are either unstable or too expensive to justify.
-          </p>
-
-          <div class="mt-6 space-y-8">
-
-            <!-- Item 1 -->
-            <div class="flex items-start gap-4">
-              <span class="mt-1 shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#1432ff]" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor" stroke-width="2.4">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h12" />
-                  <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
-                </svg>
-              </span>
-              <p class="text-[16px] md:text-[16px] leading-[1.45] text-[#2e3547]">
-                <span class="font-[700] text-[#222938]">Engineering basis:</span>
-                designed around liquid-influenced compression behavior inside the compression process, not only
-                around external separation.
-              </p>
-            </div>
-
-            <!-- Item 2 -->
-            <div class="flex items-start gap-4">
-              <span class="mt-1 shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#1432ff]" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor" stroke-width="2.4">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h12" />
-                  <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
-                </svg>
-              </span>
-              <p class="text-[16px] md:text-[16px] leading-[1.45] text-[#2e3547]">
-                <span class="font-[700] text-[#222938]">Commercial effect:</span>
-                less infrastructure, lower lifecycle burden, and broader applicability across hard-duty field
-                conditions.
-              </p>
-            </div>
-
-            <!-- Item 3 -->
-            <div class="flex items-start gap-4">
-              <span class="mt-1 shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#1432ff]" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor" stroke-width="2.4">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h12" />
-                  <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
-                </svg>
-              </span>
-              <p class="text-[16px] md:text-[16px] leading-[1.45] text-[#2e3547]">
-                <span class="font-[700] text-[#222938]">Patent anchor:</span>
-                US11098709B2 supports this liquid-aware operating approach inside the compression chamber.
-              </p>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> --}}
   <style>
-    /* ================================
-                                                     PROOF CARD FINAL ALIGNMENT FIX
-                                                  ================================ */
-
     .proof-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1798,77 +1696,231 @@
     </div>
   </section>
 
-  <section class="band">
-    <div class="wrap py-12">
-      <div class="kicker mb-2">A simpler production path</div>
-      <h2>Simplifying the production system.</h2>
-      <p class="lead">
-        Fluidstream supports a facility-design shift toward less separation-first infrastructure, fewer major equipment
-        items, and a clearer flow-through production approach where the technology can create value earlier in the
-        process. The comparison is not cosmetic. It changes how many pieces of equipment have to work correctly before
-        production moves.
-      </p>
+  <section class="fs-before-after-section band">
+    <style>
+      .fs-before-after-section {
+        padding: 72px 0;
+        background: #f6f7fb;
+        border-top: 1px solid #dfe9ff;
+        border-bottom: 1px solid #dfe9ff;
+      }
 
-      <div class="comparison">
-        <div class="box interactive-card swipe-left">
-          <h3>Conventional system</h3>
-          <span class="flow-line">Wellstream → Separator → Tank → Scrubber → Compressor → Pipeline</span>
-          <small>
-            High equipment count, larger footprint, more interconnections, more potential failure points, and more
-            dependence on keeping the inlet stream clean enough for the compressor.
-          </small>
-        </div>
+      .fs-before-after-head {
+        margin-bottom: 34px;
+      }
 
-        <div class="box interactive-card swipe-right">
-          <h3>Fluidstream system</h3>
-          <span class="flow-line">Wellstream → Fluidstream Multiphase Compressor → Pipeline</span>
-          <small>
-            Reduced infrastructure, simplified operation, lower cost structure, earlier production movement, and broader
-            applicability across challenging field conditions.
-          </small>
-        </div>
+
+
+      .fs-before-after-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+        align-items: stretch;
+      }
+
+      .fs-before-after-card {
+        position: relative;
+        overflow: hidden;
+        border: 1px solid #d9e6ff;
+        border-radius: 7px;
+        background: #ffffff;
+        box-shadow: 0 18px 44px rgba(13, 32, 84, .06);
+        transition:
+          transform .25s ease,
+          border-color .25s ease,
+          box-shadow .25s ease,
+          background .25s ease;
+      }
+
+      .fs-before-after-card::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: #0018dc;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform .3s ease;
+        z-index: 2;
+      }
+
+      .fs-before-after-card:hover {
+        transform: translateY(-4px);
+        border-color: #0018dc;
+        background: #ffffff;
+        /* box-shadow: 0 24px 54px rgba(0, 24, 220, .12); */
+      }
+
+      .fs-before-after-card:hover::after {
+        transform: scaleX(1);
+      }
+
+      .fs-before-after-image {
+        position: relative;
+        min-height: 360px;
+        background: #07111f;
+        overflow: hidden;
+      }
+
+      .fs-before-after-image img {
+        width: 100%;
+        height: 100%;
+        min-height: 360px;
+        display: block;
+        object-fit: cover;
+        transition: transform .35s ease;
+      }
+
+      .fs-before-after-card:hover .fs-before-after-image img {
+        transform: scale(1.035);
+      }
+
+      .fs-before-after-label {
+        position: absolute;
+        left: 18px;
+        top: 18px;
+        z-index: 2;
+        display: inline-flex;
+        align-items: center;
+        min-height: 34px;
+        padding: 0 14px;
+        border-radius: 999px;
+        color: #ffffff;
+        background: #0018dc;
+        font-size: 12px;
+        font-weight: 900;
+        letter-spacing: .12em;
+        text-transform: uppercase;
+        box-shadow: 0 12px 26px rgba(0, 0, 0, .22);
+      }
+
+      .fs-before-after-content {
+        padding: 24px;
+      }
+
+      .fs-before-after-content h3 {
+        margin: 0 0 10px;
+        color: #232325;
+        font-size: 26px;
+        line-height: 1.08;
+        letter-spacing: -.035em;
+        font-weight: 800;
+      }
+
+      .fs-before-after-content p {
+        margin: 0;
+        color: #4a5568;
+        font-size: 16px;
+        line-height: 1.65;
+      }
+
+      .fs-before-after-note {
+        margin-top: 24px;
+        padding: 18px 20px;
+        border: 1px solid #d9e6ff;
+        border-radius: 7px;
+        background: #ffffff;
+        color: #4a5568;
+        font-size: 15px;
+        line-height: 1.65;
+        box-shadow: 0 14px 34px rgba(13, 32, 84, .045);
+      }
+
+      .fs-before-after-note strong {
+        color: #0018dc;
+        font-weight: 900;
+      }
+
+      @media (max-width: 900px) {
+        .fs-before-after-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .fs-before-after-image,
+        .fs-before-after-image img {
+          min-height: 300px;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .fs-before-after-section {
+          padding: 52px 0;
+        }
+
+        .fs-before-after-image,
+        .fs-before-after-image img {
+          min-height: 240px;
+        }
+
+        .fs-before-after-content {
+          padding: 20px;
+        }
+
+        .fs-before-after-content h3 {
+          font-size: 23px;
+        }
+      }
+    </style>
+
+    <div class="wrap">
+      <div class="fs-before-after-head">
+        <div class="kicker mb-2">Before and after</div>
+
+        <h2>See the field difference when mixed-phase flow is handled correctly.</h2>
+
+        <p class="lead">
+          MultiphaseCommander™ is designed to reduce surface complexity, lower backpressure, and support more reliable
+          movement of gas and liquids together in real field conditions.
+        </p>
       </div>
-    </div>
+
+      <div class="fs-before-after-grid">
+        <article class="fs-before-after-card">
+          <div class="fs-before-after-image">
+            <span class="fs-before-after-label">Before</span>
+
+            <img src="{{ asset('img/before.png') }}" alt="Before MultiphaseCommander installation">
+          </div>
+
+          <div class="fs-before-after-content">
+            <h3>Higher backpressure and more surface complexity.</h3>
+
+            <p>
+              Before multiphase boosting, production can be restricted by liquid loading, unstable flow, separator
+              dependency, added support equipment, and rising gathering-system pressure.
+            </p>
+          </div>
+        </article>
+
+        <article class="fs-before-after-card">
+          <div class="fs-before-after-image">
+            <span class="fs-before-after-label">After</span>
+
+            <img src="{{ asset('img/after.png') }}" alt="After MultiphaseCommander installation">
+          </div>
+
+          <div class="fs-before-after-content">
+            <h3>Lower pressure and better mixed-flow movement.</h3>
+
+            <p>
+              After applying MultiphaseCommander™, gas, oil, water, and condensate can move together more effectively,
+              helping support production recovery and simpler field architecture.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      {{-- <div class="fs-before-after-note">
+        <strong>Application note:</strong>
+        Actual results depend on inlet pressure, discharge pressure, gas rate, liquid rate, fluid composition, site
+        layout, and operating conditions.
+      </div>
+    </div> --}}
   </section>
 
-  {{-- <section>
-    <div class="wrap py-12">
-      <div class="kicker mb-2">Technology advantage</div>
-      <h2>Built for mixed-stream compression, not gas-only assumptions.</h2>
-      <p class="lead">
-        The core technical distinction is not just that Fluidstream can tolerate harder streams. It is that the
-        compression approach itself is aligned with mixed-stream behavior, allowing useful work to happen earlier and with
-        fewer handoffs between equipment packages. That is a stronger position than simply adding more protection around a
-        gas-only compressor.
-      </p>
 
-      <div class="split">
-        <div class="feature interactive-card swipe-left">
-          <h3>Compression logic matched to mixed streams</h3>
-          <p>
-            Instead of relying on dry-gas conditioning as a prerequisite for compression, Fluidstream is built for streams
-            where liquids materially influence what the machine must handle and how it must respond. This is where
-            conventional designs become reactive and maintenance-heavy.
-          </p>
-        </div>
-
-        <div class="highlight-box interactive-card swipe-left">
-          <h3>Patented operating methods that support mixed-stream compression</h3>
-          <p>
-            Fluidstream’s operating approach is supported by patented methods tied to liquid-influenced compression
-            behavior. This matters in field service because liquids can materially change what the machine must handle
-            inside the compression process, while conventional compressors are typically designed around gas-only
-            assumptions.
-          </p>
-
-          <div class="patent-note light" style="margin-top:16px;">
-            Supported by patented operating methods for liquid-influenced compression behavior, including
-            <a href="/patented-technology#us11098709b2">US11098709B2</a>.
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> --}}
 
   <section class="band">
     <div class="wrap py-12">
@@ -1981,11 +2033,11 @@
     }
 
     /* .fit-card p {
-                                                                                                                                                                                                                  margin: 0;
-                                                                                                                                                                                                                  font-size: 22px;
-                                                                                                                                                                                                                  line-height: 1.42;
-                                                                                                                                                                                                                  color: #53647c;
-                                                                                                                                                                                                                } */
+                                                                                                                                                                                                                                        margin: 0;
+                                                                                                                                                                                                                                        font-size: 22px;
+                                                                                                                                                                                                                                        line-height: 1.42;
+                                                                                                                                                                                                                                        color: #53647c;
+                                                                                                                                                                                                                                      } */
 
     @media (max-width: 991px) {
       .fit-grid {

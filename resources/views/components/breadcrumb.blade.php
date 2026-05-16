@@ -19,6 +19,7 @@
         'why-multiphase' => 'Multiphase Compression',
         'vapor-recovery' => 'Vapor Recovery',
         'casing-gas-compression' => 'Casing Gas Compression',
+        'patented-technology' => 'Patents',
     ];
 
     $items = [];

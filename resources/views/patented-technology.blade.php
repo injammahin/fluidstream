@@ -57,8 +57,8 @@
         }
 
         /* ================================
-                                                                                           HERO WITH BACKGROUND IMAGE
-                                                                                        ================================ */
+                                                                                                               HERO WITH BACKGROUND IMAGE
+                                                                                                            ================================ */
 
         .patent-page .hero {
             position: relative;
@@ -237,17 +237,17 @@
         }
 
         /* .patent-page .metric::after {
-                    content: "";
-                    position: absolute;
-                    left: 0;
-                    right: 0;
-                    top: 0;
-                    height: 3px;
-                    background: var(--fs-cyan);
-                    transform: scaleX(0);
-                    transform-origin: left;
-                    transition: transform .25s cubic-bezier(.22, .61, .36, 1);
-                } */
+                                        content: "";
+                                        position: absolute;
+                                        left: 0;
+                                        right: 0;
+                                        top: 0;
+                                        height: 3px;
+                                        background: var(--fs-cyan);
+                                        transform: scaleX(0);
+                                        transform-origin: left;
+                                        transition: transform .25s cubic-bezier(.22, .61, .36, 1);
+                                    } */
 
         .patent-page .metric:hover {
             transform: translateY(-4px);
@@ -267,6 +267,16 @@
             font-size: 1.24rem;
             line-height: 1.16;
             letter-spacing: -.03em;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 0;
         }
 
         .patent-page .metric span {
@@ -392,8 +402,8 @@
         }
 
         /* ================================
-                                                                                           COMMON SECTION STYLES
-                                                                                        ================================ */
+                                                                                                               COMMON SECTION STYLES
+                                                                                                            ================================ */
 
         .patent-page .section-head {
             /* display: flex; */
@@ -789,17 +799,22 @@
             overflow-wrap: anywhere;
         }
 
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 0 !important;
+        }
+
         #why-patents-matter,
         #us11098709b2,
         #field-value,
         #supporting-patents,
         #products {
-            scroll-margin-top: 120px;
+            scroll-margin-top: 0 !important;
         }
 
         /* ================================
-                                                                                           RESPONSIVE
-                                                                                        ================================ */
+                                                                                                               RESPONSIVE
+                                                                                                            ================================ */
 
         @media (max-width: 1120px) {
             .patent-page .hero {
@@ -1357,4 +1372,29 @@
         </section>
 
     </main>
+    <script>
+        document.querySelectorAll('.patent-page a[href^="#"]').forEach(function (link) {
+            link.addEventListener('click', function (e) {
+                const targetId = this.getAttribute('href').replace('#', '');
+                const target = document.getElementById(targetId);
+
+                if (!target) return;
+
+                e.preventDefault();
+
+                if (typeof hideHeader === 'function') {
+                    hideHeader();
+                }
+
+                const top = target.getBoundingClientRect().top + window.pageYOffset;
+
+                window.scrollTo({
+                    top: top,
+                    behavior: 'smooth'
+                });
+
+                history.pushState(null, '', '#' + targetId);
+            });
+        });
+    </script>
 @endsection

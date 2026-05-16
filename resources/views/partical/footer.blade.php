@@ -458,8 +458,7 @@
 
                     <div class="fsf-footer-contact-box">
                         <a href="/contact" class="fsf-footer-link">Contact Us</a><br>
-                        <a href="/contact" class="fsf-footer-link">Request Technical Review</a><br>
-                        <a href="/multiphase-compression" class="fsf-footer-link">Review Specifications</a>
+                        <a href="/technical-review" class="fsf-footer-link">Request Technical Review</a><br>
                     </div>
 
                     <div class="fsf-footer-social" aria-label="Follow Fluidstream">
