@@ -15,186 +15,217 @@
                 'keywords' => 'Fluidstream, multiphase compression, vapor recovery, casing gas compression, methane emissions reduction, production optimization',
                 'type' => 'website',
             ],
+
             'about-us' => [
                 'title' => 'About Fluidstream',
                 'description' => 'Learn how Fluidstream helps upstream producers reduce emissions, improve production economics, and simplify field infrastructure with multiphase compression technology.',
                 'keywords' => 'about Fluidstream, Fluidstream Calgary, multiphase compression company, emissions reduction, production optimization',
                 'type' => 'webpage',
             ],
+
             'about' => [
                 'title' => 'About Fluidstream',
                 'description' => 'Learn how Fluidstream helps upstream producers reduce emissions, improve production economics, and simplify field infrastructure with multiphase compression technology.',
                 'keywords' => 'about Fluidstream, Fluidstream Calgary, multiphase compression company, emissions reduction, production optimization',
                 'type' => 'webpage',
             ],
+
             'multiphase-compression' => [
                 'title' => 'Multiphase Compression for Mixed Gas and Liquid Streams',
                 'description' => 'Fluidstream MultiphaseCommander systems help move gas, liquids, and solids together to improve production, reduce backpressure, and simplify surface infrastructure.',
                 'keywords' => 'multiphase compression, MultiphaseCommander, mixed phase compression, production recovery, liquid loaded wells',
                 'type' => 'product',
             ],
+
             'vapor-recovery' => [
                 'title' => 'Vapor Recovery Systems for Wet and Variable Gas Streams',
                 'description' => 'Fluidstream VaporCommander systems support vapor recovery in wet, unstable, and liquid-prone field conditions while reducing downtime and maintenance exposure.',
                 'keywords' => 'vapor recovery, VaporCommander, VRU, vapor recovery unit, wet gas, methane emissions reduction',
                 'type' => 'product',
             ],
+
             'casing-gas-compression' => [
                 'title' => 'Casing Gas Compression for Liquid-Prone Field Conditions',
                 'description' => 'Fluidstream CompressionCommander systems support casing gas recovery where streams may be wet, unstable, slugging, or difficult for conventional gas-only compressors.',
                 'keywords' => 'casing gas compression, CompressionCommander, casing gas recovery, wet gas compression, gas recovery',
                 'type' => 'product',
             ],
+
             'why-multiphase' => [
                 'title' => 'Multiphase Compression Technology',
                 'description' => 'Explore Fluidstream multiphase compression technology designed for mixed gas, liquids, solids, upset conditions, autonomous control, and field reliability.',
                 'keywords' => 'multiphase compression technology, liquid handling compression, autonomous compression control, field compression technology',
                 'type' => 'webpage',
             ],
+
             'technology' => [
                 'title' => 'Fluidstream Technology Overview',
                 'description' => 'Learn how Fluidstream technology handles gas, liquids, slugs, sand, changing flow, and harsh field conditions through multiphase-aware compression design.',
                 'keywords' => 'Fluidstream technology, multiphase technology, vapor recovery technology, casing gas compression technology',
                 'type' => 'webpage',
             ],
+
             'patented-technology' => [
                 'title' => 'Patented Multiphase Compression Technology',
                 'description' => 'Review Fluidstream patented technology supporting liquid-aware compression behavior, multiphase operation, vapor recovery, and casing gas applications.',
                 'keywords' => 'patented compression technology, Fluidstream patents, US11098709B2, multiphase compression patent',
                 'type' => 'webpage',
             ],
+
             'case-studies' => [
                 'title' => 'Fluidstream Case Studies',
                 'description' => 'Explore Fluidstream case studies showing vapor recovery, multiphase compression, casing gas recovery, uptime, emissions reduction, and field performance results.',
                 'keywords' => 'Fluidstream case studies, vapor recovery case study, multiphase compression case study, casing gas case study',
                 'type' => 'webpage',
             ],
+
             'case-studies/multiphasecommander-production-recovery' => [
                 'title' => 'MultiphaseCommander Production Recovery Case Study',
                 'description' => 'A Fluidstream case study showing how MultiphaseCommander helped restore production from liquid-loaded wells without added separation infrastructure.',
                 'keywords' => 'MultiphaseCommander case study, production recovery, liquid loaded wells, multiphase compression field result',
                 'type' => 'article',
             ],
+
             'case-studies/vaporcommander-4-5-year-reliability' => [
                 'title' => 'VaporCommander 4.5-Year Reliability Case Study',
                 'description' => 'A Fluidstream case study demonstrating VaporCommander reliability, vapor recovery performance, and long-term field operation.',
                 'keywords' => 'VaporCommander reliability, vapor recovery reliability, VRU case study, Fluidstream case study',
                 'type' => 'article',
             ],
+
             'case-studies/vaporcommander-vcu-replacement' => [
                 'title' => 'VaporCommander VCU Replacement Case Study',
                 'description' => 'A Fluidstream case study showing how VaporCommander can replace or reduce dependence on vapor combustion and improve vapor recovery outcomes.',
                 'keywords' => 'VaporCommander VCU replacement, vapor recovery, emissions reduction, VRU case study',
                 'type' => 'article',
             ],
+
             'case-studies/allied-energy-vaporcommander-vru' => [
                 'title' => 'Allied Energy VaporCommander VRU Case Study',
                 'description' => 'A case study showing VaporCommander VRU performance for Allied Energy with uptime, emissions reduction, and field reliability.',
                 'keywords' => 'Allied Energy VaporCommander, VRU case study, vapor recovery, methane emissions reduction',
                 'type' => 'article',
             ],
+
             'case-studies/whitecap-vaporcommander-vru' => [
                 'title' => 'Whitecap VaporCommander VRU Case Study',
                 'description' => 'A case study showing VaporCommander vapor recovery performance in Saskatchewan winter conditions with minimal maintenance and no reported downtime.',
                 'keywords' => 'Whitecap VaporCommander, VRU Saskatchewan, cold weather vapor recovery, VaporCommander case study',
                 'type' => 'article',
             ],
+
             'insights' => [
                 'title' => 'Fluidstream Insights',
                 'description' => 'Read Fluidstream insights on multiphase compression, vapor recovery, casing gas compression, emissions reduction, and production optimization.',
                 'keywords' => 'Fluidstream insights, multiphase compression insights, vapor recovery insights, production optimization',
                 'type' => 'webpage',
             ],
+
             'insights/vapor-recovery-units-oil-gas' => [
                 'title' => 'Vapor Recovery Units for Oil & Gas',
                 'description' => 'Learn how Fluidstream vapor recovery units improve wet-gas reliability, reduce emissions, and support field-ready VRU performance.',
                 'keywords' => 'vapor recovery unit, VRU oil gas, wet gas vapor recovery, VaporCommander',
                 'type' => 'article',
             ],
+
             'insights/casing-gas-compression-well-optimization' => [
                 'title' => 'Casing Gas Compression for Well Optimization',
                 'description' => 'See how casing gas compression reduces backpressure, supports oil uplift, and improves well performance in wet or unstable field conditions.',
                 'keywords' => 'casing gas compression, casing gas compressor, casing gas recovery, well optimization',
                 'type' => 'article',
             ],
+
             'insights/multiphase-vs-conventional-compression' => [
                 'title' => 'Multiphase Compression vs Conventional Compression',
                 'description' => 'Compare multiphase compression with conventional compression and learn why mixed-stream handling matters in real oil and gas field conditions.',
                 'keywords' => 'multiphase compression vs conventional compression, mixed stream compression, separation first compression',
                 'type' => 'article',
             ],
+
             'insights/why-conventional-vrus-fail-wet-gas' => [
                 'title' => 'Why Conventional VRUs Fail in Wet Gas Applications',
                 'description' => 'Learn why conventional VRUs struggle with wet gas, liquid carryover, unstable flow, and real vapor recovery field conditions.',
                 'keywords' => 'conventional VRU failure wet gas, wet gas vapor recovery, VRU failure, vapor recovery unit failure',
                 'type' => 'article',
             ],
+
             'insights/production-optimization-multiphase-compression' => [
                 'title' => 'Production Optimization with Multiphase Compression',
                 'description' => 'Learn how multiphase compression can reduce backpressure, restore production, and simplify field infrastructure for production optimization.',
                 'keywords' => 'production optimization, multiphase compression, production recovery, backpressure reduction',
                 'type' => 'article',
             ],
+
             'insights/multiphase-compression-liquid-loaded-gas-wells' => [
                 'title' => 'Multiphase Compression for Liquid-Loaded Gas Wells',
                 'description' => 'See how multiphase compression supports liquid-loaded gas wells, production recovery, and field performance without added separation complexity.',
                 'keywords' => 'multiphase compression liquid loaded gas wells, liquid loaded gas well recovery, gas well recovery',
                 'type' => 'article',
             ],
+
             'insights/vapor-recovery-vs-flaring' => [
                 'title' => 'Vapor Recovery Unit vs Flaring',
                 'description' => 'Compare vapor recovery units and flaring to understand emissions reduction, gas capture value, and VRU economics in oil and gas operations.',
                 'keywords' => 'vapor recovery unit vs flaring, VRU vs flare, vapor recovery economics, gas capture',
                 'type' => 'article',
             ],
+
             'insights/methane-emissions-reduction-oil-gas' => [
                 'title' => 'Methane Emissions Reduction Solutions for Oil & Gas',
                 'description' => 'Explore methane emissions reduction solutions for oil and gas using vapor recovery, gas capture, and field-ready compression technology.',
                 'keywords' => 'methane emissions reduction oil gas, methane reduction vapor recovery, gas capture, emissions reduction',
                 'type' => 'article',
             ],
+
             'insights/how-to-select-vapor-recovery-unit-wet-gas' => [
                 'title' => 'How to Select a Vapor Recovery Unit for Wet Gas',
                 'description' => 'Learn how to select a vapor recovery unit for wet gas applications by evaluating liquids, turndown, reliability, and lifecycle economics.',
                 'keywords' => 'how to select vapor recovery unit, VRU selection wet gas, wet gas VRU, vapor recovery selection',
                 'type' => 'article',
             ],
+
             'insights/casing-gas-compression-economics' => [
                 'title' => 'When Is Casing Gas Compression Economically Viable?',
                 'description' => 'Review casing gas compression economics, ROI drivers, screening criteria, and when compression can improve oil production value.',
                 'keywords' => 'casing gas compression economics, casing gas compression ROI, casing gas compressor economics',
                 'type' => 'article',
             ],
+
             'insights/why-conventional-compression-fails-wet-unstable-wells' => [
                 'title' => 'Why Conventional Casing Gas Compressors Fail in Wet Wells',
                 'description' => 'Learn why conventional casing gas compressors fail in wet or unstable wells and how liquid-prone conditions affect reliability.',
                 'keywords' => 'casing gas compressor failure wet gas, conventional compression wet wells, unstable wells compression',
                 'type' => 'article',
             ],
+
             'insights/how-casing-gas-compression-increases-oil-production' => [
                 'title' => 'How Casing Gas Compression Increases Oil Production',
                 'description' => 'See how casing gas compression can lower casing pressure, improve drawdown, support oil uplift, and improve well performance.',
                 'keywords' => 'casing gas compression oil production, casing pressure oil uplift, casing gas compression increase oil production',
                 'type' => 'article',
             ],
+
             'insights/how-multiphase-compression-supports-production-recovery' => [
                 'title' => 'How Multiphase Compression Supports Production Recovery',
                 'description' => 'Learn how multiphase compression supports loaded gas wells, production recovery, flow stability, and mixed-stream field performance.',
                 'keywords' => 'multiphase compression loaded gas wells, liquid loaded gas well recovery, production recovery compression',
                 'type' => 'article',
             ],
+
             'perspectives' => [
                 'title' => 'Fluidstream Perspectives',
                 'description' => 'Explore Fluidstream perspectives on field compression, vapor recovery, emissions reduction, production optimization, and lower-complexity infrastructure.',
                 'keywords' => 'Fluidstream perspectives, compression perspective, vapor recovery perspective, emissions reduction',
                 'type' => 'webpage',
             ],
+
             'contact' => [
                 'title' => 'Contact Fluidstream',
                 'description' => 'Contact Fluidstream to discuss multiphase compression, vapor recovery, casing gas compression, application review, and technical fit analysis.',
                 'keywords' => 'contact Fluidstream, request technical review, multiphase compression review, vapor recovery review',
                 'type' => 'webpage',
             ],
+
             'privacy-policy' => [
                 'title' => 'Privacy Policy',
                 'description' => 'Read the Fluidstream privacy policy and learn how information is handled on the Fluidstream website.',
@@ -202,6 +233,7 @@
                 'type' => 'webpage',
                 'robots' => 'index, follow',
             ],
+
             'terms' => [
                 'title' => 'Terms of Use',
                 'description' => 'Read the Fluidstream website terms of use.',
@@ -209,6 +241,7 @@
                 'type' => 'webpage',
                 'robots' => 'index, follow',
             ],
+
             'technical-review' => [
                 'title' => 'Technical Review Request',
                 'description' => 'Request a Fluidstream technical review for multiphase compression, vapor recovery, casing gas compression, and production optimization applications.',
@@ -234,27 +267,27 @@
 
         $seo = array_merge($defaultSeo, $seoPages[$currentPath] ?? []);
 
-        if (!empty($seoTitle ?? null)) {
+        if (isset($seoTitle) && $seoTitle) {
             $seo['title'] = $seoTitle;
         }
 
-        if (!empty($seoDescription ?? null)) {
+        if (isset($seoDescription) && $seoDescription) {
             $seo['description'] = $seoDescription;
         }
 
-        if (!empty($seoKeywords ?? null)) {
+        if (isset($seoKeywords) && $seoKeywords) {
             $seo['keywords'] = $seoKeywords;
         }
 
-        if (!empty($seoType ?? null)) {
+        if (isset($seoType) && $seoType) {
             $seo['type'] = $seoType;
         }
 
-        if (!empty($seoRobots ?? null)) {
+        if (isset($seoRobots) && $seoRobots) {
             $seo['robots'] = $seoRobots;
         }
 
-        if (!empty($seoImage ?? null)) {
+        if (isset($seoImage) && $seoImage) {
             $seo['og_image'] = $seoImage;
         }
 
@@ -264,7 +297,10 @@
         $metaKeywords = trim($seo['keywords']);
         $robotsMeta = $seo['robots'] ?? 'index, follow';
 
-        $canonicalUrl = $currentPath === '/' ? url('/') : url('/' . $currentPath);
+        $canonicalUrl = $currentPath === '/'
+            ? url('/')
+            : url('/' . $currentPath);
+
         $ogType = ($seo['type'] ?? 'webpage') === 'article' ? 'article' : 'website';
         $ogImage = $seo['og_image'] ?? asset('img/og/fluidstream-og.jpg');
 
@@ -288,7 +324,9 @@
                 $breadcrumbItems[] = [
                     '@type' => 'ListItem',
                     'position' => $index + 2,
-                    'name' => $isLast ? $pageTitle : ucwords(str_replace(['-', '_'], ' ', $part)),
+                    'name' => $isLast
+                        ? $pageTitle
+                        : ucwords(str_replace(['-', '_'], ' ', $part)),
                     'item' => url($runningPath),
                 ];
             }
@@ -364,7 +402,7 @@
 
         $faqSchema = null;
 
-        if (!empty($seoFaqs ?? null) && is_array($seoFaqs)) {
+        if (isset($seoFaqs) && is_array($seoFaqs) && count($seoFaqs)) {
             $faqSchema = [
                 '@context' => 'https://schema.org',
                 '@type' => 'FAQPage',
@@ -391,84 +429,71 @@
     <meta name="keywords" content="{{ $metaKeywords }}">
     <meta name="robots" content="{{ $robotsMeta }}">
     <link rel="canonical" href="{{ $canonicalUrl }}">
-
+    <link rel="icon" type="image/png" href="{{ asset('img/favicon.jpeg') }}?v=5">
+    <link rel="shortcut icon" type="image/png" href="{{ asset('img/favicon.jpeg') }}?v=5">
     <meta property="og:site_name" content="{{ $siteName }}">
     <meta property="og:type" content="{{ $ogType }}">
     <meta property="og:title" content="{{ $metaTitle }}">
     <meta property="og:description" content="{{ $metaDescription }}">
     <meta property="og:url" content="{{ $canonicalUrl }}">
     <meta property="og:image" content="{{ $ogImage }}">
-
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ $metaTitle }}">
     <meta name="twitter:description" content="{{ $metaDescription }}">
     <meta name="twitter:image" content="{{ $ogImage }}">
-
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('img/favicon.jpeg') }}?v=6">
-    <link rel="shortcut icon" type="image/png" href="{{ asset('img/favicon.jpeg') }}?v=6">
-    <link rel="apple-touch-icon" href="{{ asset('img/apple-touch-icon.png') }}?v=6">
-
-    @stack('preload')
-    @stack('head')
-
-    <link rel="preconnect" href="https://fonts.bunny.net" crossorigin>
-    <link rel="dns-prefetch" href="//fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css2?family=Manrope:wght@400;500;600;700;800&display=swap&subset=latin"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <script type="application/ld+json">
-        {!! json_encode($organizationSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
+        {!! json_encode($organizationSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
     </script>
 
     <script type="application/ld+json">
-        {!! json_encode($websiteSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
+        {!! json_encode($websiteSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
     </script>
 
     @if (!$hasCustomSchema)
         <script type="application/ld+json">
-                        {!! json_encode($breadcrumbSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
-                    </script>
+                                                    {!! json_encode($breadcrumbSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+                                                </script>
 
         <script type="application/ld+json">
-                        {!! json_encode($pageSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
-                    </script>
+                                                    {!! json_encode($pageSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+                                                </script>
 
         @if ($faqSchema)
             <script type="application/ld+json">
-                                        {!! json_encode($faqSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
-                                    </script>
+                                                                                                {!! json_encode($faqSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+                                                                                            </script>
         @endif
     @endif
 
     @yield('schema')
+    @stack('head')
     @stack('style')
 
     <style>
-        html {
-            scroll-behavior: smooth;
-            text-rendering: optimizeLegibility;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        body {
-            margin: 0;
-            font-family: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: #ffffff;
-            color: #0f172a;
+        /* img,
+        video,
+        canvas,
+        svg {
+            -webkit-user-drag: none;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
         }
 
         img,
-        svg,
-        video,
-        canvas {
-            max-width: 100%;
-        }
+        video {
+            pointer-events: auto;
+        } */
 
-        img {
-            height: auto;
+
+        body {
+            font-family: 'Manrope', sans-serif;
         }
 
         .kicker {
@@ -508,38 +533,70 @@
 
     @include('partical.footer')
 
+    {{--
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            document.querySelectorAll('img').forEach(function (img) {
-                if (!img.hasAttribute('decoding')) {
-                    img.setAttribute('decoding', 'async');
-                }
+        (function () {
+            document.addEventListener('contextmenu', function (event) {
+                event.preventDefault();
+            });
 
-                if (!img.hasAttribute('loading')) {
-                    const rect = img.getBoundingClientRect();
-                    const isAboveFold = rect.top < window.innerHeight + 200;
-
-                    if (!isAboveFold) {
-                        img.setAttribute('loading', 'lazy');
-                    }
+            document.addEventListener('dragstart', function (event) {
+                if (
+                    event.target.tagName === 'IMG' ||
+                    event.target.tagName === 'VIDEO' ||
+                    event.target.tagName === 'A'
+                ) {
+                    event.preventDefault();
                 }
             });
 
-            document.querySelectorAll('iframe').forEach(function (iframe) {
-                if (!iframe.hasAttribute('loading')) {
-                    iframe.setAttribute('loading', 'lazy');
+            document.addEventListener('selectstart', function (event) {
+                if (
+                    event.target.tagName === 'IMG' ||
+                    event.target.tagName === 'VIDEO'
+                ) {
+                    event.preventDefault();
                 }
+            });
+
+            document.addEventListener('copy', function (event) {
+                event.preventDefault();
+            });
+
+            document.addEventListener('keydown', function (event) {
+                const key = event.key.toLowerCase();
+
+                if (
+                    event.key === 'F12' ||
+                    (event.ctrlKey && event.shiftKey && ['i', 'j', 'c'].includes(key)) ||
+                    (event.metaKey && event.altKey && ['i', 'j', 'c'].includes(key)) ||
+                    (event.ctrlKey && key === 'u') ||
+                    (event.metaKey && key === 'u') ||
+                    (event.ctrlKey && key === 's') ||
+                    (event.metaKey && key === 's') ||
+                    (event.ctrlKey && key === 'p') ||
+                    (event.metaKey && key === 'p')
+                ) {
+                    event.preventDefault();
+                    return false;
+                }
+            });
+
+            document.querySelectorAll('img').forEach(function (img) {
+                img.setAttribute('draggable', 'false');
+                img.setAttribute('loading', img.getAttribute('loading') || 'lazy');
             });
 
             document.querySelectorAll('video').forEach(function (video) {
-                if (!video.hasAttribute('preload')) {
-                    video.setAttribute('preload', 'metadata');
-                }
-
-                video.setAttribute('playsinline', '');
+                video.setAttribute('controlsList', 'nodownload noplaybackrate noremoteplayback');
+                video.setAttribute('disablePictureInPicture', '');
+                video.setAttribute('draggable', 'false');
+                video.oncontextmenu = function () {
+                    return false;
+                };
             });
-        });
-    </script>
+        })();
+    </script> --}}
 
     @stack('script')
 </body>
