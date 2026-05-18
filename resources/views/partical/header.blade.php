@@ -732,21 +732,25 @@
         transform: rotate(180deg);
     }
 
-    .fs-header {
-        --fs-logo-col: clamp(330px, 23vw, 430px);
-        --fs-top-row: 44px;
-        --fs-main-row: 70px;
-        --fs-header-height: 114px;
+.fs-header {
+    --fs-logo-col: clamp(330px, 23vw, 430px);
+    --fs-top-row: 60px;
+    --fs-main-row: 60px;
+    --fs-header-height: 120px;
 
-        position: fixed;
-        inset: 0 0 auto 0;
-        z-index: 9999;
-        background: #ffffff;
-        box-shadow: 0 10px 28px rgba(15, 23, 42, 0.035);
-        transform: translateY(0);
-        transition: transform .34s ease, box-shadow .25s ease;
-        will-change: transform;
-    }
+    position: fixed;
+    inset: 0 0 auto 0;
+    z-index: 9999;
+    background: #ffffff;
+    box-shadow: 0 10px 28px rgba(15, 23, 42, 0.035);
+    transform: translateY(0);
+    transition: transform .34s ease, box-shadow .25s ease;
+    will-change: transform;
+}
+
+.fs-header-spacer {
+    height: 120px;
+}
 
     .fs-header-hidden {
         transform: translateY(-100%);
@@ -1086,7 +1090,7 @@
         content: "";
         position: absolute;
         left: 0;
-        bottom: -14px;
+        bottom: -7px;
         width: 0;
         height: 3px;
         border-radius: 999px;

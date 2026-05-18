@@ -33,39 +33,6 @@
             padding-right: 16px;
         }
 
-        .fip-page-head {
-            padding: 86px 0 42px;
-            border-bottom: 1px solid var(--fip-line);
-        }
-
-        .fip-eyebrow {
-            display: inline-flex;
-            margin-bottom: 12px;
-            color: var(--fip-blue);
-            font-size: 12px;
-            font-weight: 800;
-            letter-spacing: 0.16em;
-            text-transform: uppercase;
-        }
-
-        .fip-title {
-            margin: 0;
-            font-size: clamp(1.9rem, 3vw, 3rem);
-            line-height: 1.05;
-            letter-spacing: -.04em;
-            max-width: 24ch;
-            color: var(--text, #101322);
-        }
-
-        .fip-subtitle {
-            padding: 4px;
-            text-align: justify;
-            max-width: 59ch;
-            margin: 6px 0 0;
-            line-height: 1.65;
-            color: var(--fip-muted);
-        }
-
         .fip-main-section {
             padding: 52px 0 76px;
             background: #ffffff;
@@ -116,16 +83,6 @@
             line-height: 1.15;
         }
 
-        .fip-filter-subtitle {
-            display: block;
-            margin-bottom: 16px;
-            color: var(--fip-muted);
-            font-size: 11px;
-            font-weight: 850;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-        }
-
         .fip-topic-list {
             border-top: 1px solid #d2d2d6;
             border-bottom: 1px solid #d2d2d6;
@@ -142,9 +99,7 @@
             border-bottom: 1px solid #d2d2d6;
             cursor: pointer;
             user-select: none;
-            transition:
-                background 0.22s ease,
-                padding-left 0.22s ease;
+            transition: background 0.22s ease, padding-left 0.22s ease;
         }
 
         .fip-checkbox-row:last-child {
@@ -166,10 +121,7 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            transition:
-                background 0.2s ease,
-                border-color 0.2s ease,
-                box-shadow 0.2s ease;
+            transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
         }
 
         .fip-check-box::after {
@@ -204,13 +156,13 @@
             border-color: var(--fip-blue);
         }
 
-        .fip-topic-checkbox:checked+.fip-check-box {
+        .fip-topic-checkbox:checked + .fip-check-box {
             background: var(--fip-blue);
             border-color: var(--fip-blue);
             box-shadow: 0 0 0 4px rgba(16, 40, 234, 0.09);
         }
 
-        .fip-topic-checkbox:checked+.fip-check-box::after {
+        .fip-topic-checkbox:checked + .fip-check-box::after {
             transform: rotate(-45deg) scale(1);
         }
 
@@ -237,10 +189,7 @@
             font-weight: 800;
             cursor: pointer;
             border-radius: 0;
-            transition:
-                background 0.2s ease,
-                transform 0.2s ease,
-                box-shadow 0.2s ease;
+            transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
         }
 
         .fip-clear-icon {
@@ -300,12 +249,7 @@
             color: inherit;
             box-shadow: 0 10px 28px rgba(8, 22, 54, 0.04);
             scroll-margin-top: 145px;
-            transition:
-                transform 0.22s ease,
-                box-shadow 0.22s ease,
-                border-color 0.22s ease,
-                background 0.22s ease,
-                opacity 0.22s ease;
+            transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease, background 0.22s ease, opacity 0.22s ease;
         }
 
         .fip-article-card.is-hidden {
@@ -340,7 +284,7 @@
             transform: scaleX(1);
         }
 
-        .fip-article-card>* {
+        .fip-article-card > * {
             position: relative;
             z-index: 2;
         }
@@ -504,10 +448,7 @@
             color: inherit;
             display: flex;
             flex-direction: column;
-            transition:
-                transform 0.22s ease,
-                box-shadow 0.22s ease,
-                border-color 0.22s ease;
+            transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
         }
 
         .fip-product-card::before {
@@ -567,6 +508,156 @@
             transform: translateX(4px);
         }
 
+        .fip-insights-hero {
+            position: relative;
+            isolation: isolate;
+            overflow: hidden;
+            min-height: 620px;
+            color: #ffffff;
+            background: linear-gradient(100deg, rgb(10 20 103 / 45%) 0%, rgb(1 2 8 / 37%) 38%, rgb(0 24 220 / 10%) 68%, rgb(0 24 220 / 3%) 100%), url("{{ asset('/img/insights/Piping.png') }}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-bottom: 1px solid #dfe9ff;
+        }
+
+        .fip-insights-hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -2;
+            background-size: auto, 76px 76px, 76px 76px;
+            pointer-events: none;
+        }
+
+        .fip-insights-hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background: linear-gradient(180deg, rgba(2, 8, 35, .08) 0%, rgba(2, 8, 35, .46) 100%);
+            pointer-events: none;
+        }
+
+        .fip-insights-hero-wrap {
+            width: min(1180px, calc(100% - 44px));
+            min-height: 620px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: minmax(0, 1.05fr) minmax(360px, .78fr);
+            gap: 46px;
+            align-items: flex-start;
+            padding: 92px 0;
+        }
+
+        .fip-insights-hero h1 {
+            max-width: 830px;
+            margin: 0 0 24px;
+            color: #ffffff;
+            font-size: clamp(46px, 6.7vw, 78px);
+            line-height: .94;
+            letter-spacing: -.075em;
+            font-weight: 500;
+        }
+
+        .fip-insights-hero-lead {
+            max-width: 760px;
+            margin: 0;
+            color: rgba(255, 255, 255, .84);
+            font-size: 18px;
+            line-height: 1.65;
+            font-weight: 500;
+        }
+
+        .fip-insights-hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-top: 30px;
+        }
+
+        .fip-insights-hero-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 48px;
+            padding: 0 22px;
+            border-radius: 999px;
+            font-size: 15px;
+            line-height: 1;
+            font-weight: 950;
+            transition: transform .24s ease, box-shadow .24s ease, border-color .24s ease, background .24s ease, color .24s ease;
+        }
+
+        .fip-insights-hero-btn-primary {
+            background: #0018dc;
+            color: #ffffff;
+            border: 1px solid #0018dc;
+        }
+
+        .fip-insights-hero-btn-secondary {
+            background: rgba(255, 255, 255, .08);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, .36);
+        }
+
+        .fip-insights-hero-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 16px 36px rgba(0, 0, 0, .18);
+            text-decoration: none;
+        }
+
+        .fip-insights-hero-box {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, .22);
+            border-radius: 7px;
+            box-shadow: 0 26px 70px rgba(0, 0, 0, .22);
+            padding: 26px;
+            transition: transform .24s ease, border-color .24s ease, box-shadow .24s ease;
+        }
+
+        .fip-insights-hero-box:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, .26);
+        }
+
+        .fip-insights-hero-list {
+            display: grid;
+            gap: 12px;
+        }
+
+        .fip-insights-hero-item {
+            position: relative;
+            overflow: hidden;
+            padding: 18px 18px 18px 22px;
+            border: 1px solid rgba(255, 255, 255, .16);
+            border-radius: 7px;
+            background: rgba(255, 255, 255, .09);
+        }
+
+        .fip-insights-hero-item strong {
+            display: block;
+            margin-bottom: 8px;
+            color: #ffffff;
+            font-size: 23px;
+            line-height: 1.05;
+            letter-spacing: -.045em;
+            font-weight: 950;
+        }
+
+        .fip-insights-hero-item span {
+            display: block;
+            color: rgba(255, 255, 255, .74);
+            font-size: 13px;
+            line-height: 1.45;
+            font-weight: 650;
+        }
+
+        #fipArticlesSection {
+            scroll-margin-top: 0px;
+        }
+
         @media (max-width: 1100px) {
             .fip-layout {
                 grid-template-columns: 1fr;
@@ -591,11 +682,24 @@
             }
         }
 
-        @media (max-width: 760px) {
-            .fip-page-head {
-                padding-top: 76px;
+        @media (max-width: 980px) {
+            .fip-insights-hero,
+            .fip-insights-hero-wrap {
+                min-height: auto;
             }
 
+            .fip-insights-hero-wrap {
+                grid-template-columns: 1fr;
+                gap: 34px;
+                padding: 76px 0 64px;
+            }
+
+            .fip-insights-hero-box {
+                max-width: 620px;
+            }
+        }
+
+        @media (max-width: 760px) {
             .fip-main-section {
                 padding: 42px 0 62px;
             }
@@ -628,126 +732,184 @@
                 font-size: 18px;
             }
         }
+
+        @media (max-width: 640px) {
+            .fip-insights-hero-wrap {
+                width: min(100% - 32px, 1180px);
+                padding: 64px 0 52px;
+            }
+
+            .fip-insights-hero h1 {
+                font-size: 42px;
+            }
+
+            .fip-insights-hero-lead {
+                font-size: 17px;
+            }
+
+            .fip-insights-hero-actions {
+                flex-direction: column;
+            }
+
+            .fip-insights-hero-btn {
+                width: 100%;
+            }
+
+            .fip-insights-hero-box {
+                padding: 18px;
+            }
+        }
     </style>
 
     @php
-        $insights = [
+        $filters = [
             [
                 'id' => 'vapor-recovery',
-                'filter_label' => 'Vapor Recovery',
+                'label' => 'Vapor Recovery',
+            ],
+            [
+                'id' => 'casing-gas-compression',
+                'label' => 'Casing Gas Compression',
+            ],
+            [
+                'id' => 'multiphase-production',
+                'label' => 'Multiphase Production',
+            ],
+            [
+                'id' => 'wet-unstable-wells',
+                'label' => 'Wet & Unstable Wells',
+            ],
+            [
+                'id' => 'production-optimization',
+                'label' => 'Production Optimization',
+            ],
+            [
+                'id' => 'equipment-failures',
+                'label' => 'Equipment Failures',
+            ],
+            [
+                'id' => 'compression-selection',
+                'label' => 'Compression Selection',
+            ],
+        ];
+
+        $insights = [
+            [
+                'id' => 'article-vapor-recovery',
                 'label' => 'Vapor Recovery',
                 'title' => 'Fluidstream Vapor Recovery',
                 'description' => 'Technical overview of vapor recovery applications where wet gas, variable flow, cold weather, and maintenance burden affect VRU reliability.',
                 'url' => url('/insights/fluidstream-vapor-recovery-fluidstream-style'),
-                'tags' => ['VaporCommander™', 'Methane Reduction'],
+                'filters' => ['vapor-recovery', 'equipment-failures', 'production-optimization'],
+                'tags' => ['Vapor Recovery', 'Equipment Failures', 'Production Optimization'],
             ],
             [
-                'id' => 'casing-gas',
-                'filter_label' => 'Casing Gas Compression',
-                'label' => 'Casing Gas',
+                'id' => 'article-casing-gas-compression',
+                'label' => 'Casing Gas Compression',
                 'title' => 'Fluidstream Casing Gas Compression',
                 'description' => 'Long-form technical guidance on casing gas compression, casing pressure reduction, drawdown support, and oil production optimization.',
                 'url' => url('/insights/fluidstream-casing-gas-compression-long-form'),
-                'tags' => ['CompressionCommander™', 'Production'],
+                'filters' => ['casing-gas-compression', 'production-optimization'],
+                'tags' => ['Casing Gas Compression', 'Production Optimization'],
             ],
             [
-                'id' => 'multiphase',
-                'filter_label' => 'Multiphase vs Conventional',
-                'label' => 'Multiphase',
+                'id' => 'article-multiphase-vs-conventional',
+                'label' => 'Multiphase Production',
                 'title' => 'Multiphase vs Conventional Compression',
                 'description' => 'Comparison of conventional gas-only compression and multiphase compression under wet, liquid-influenced, and unstable field conditions.',
                 'url' => url('/insights/fluidstream-multiphase-vs-conventional-long-form'),
-                'tags' => ['MultiphaseCommander™', 'Technology'],
+                'filters' => ['multiphase-production', 'equipment-failures'],
+                'tags' => ['Multiphase Production', 'Equipment Failures'],
             ],
             [
-                'id' => 'wet-gas',
-                'filter_label' => 'Wet Gas VRU Failure',
-                'label' => 'Wet Gas',
+                'id' => 'article-why-conventional-vrus-fail',
+                'label' => 'Equipment Failures',
                 'title' => 'Why Conventional VRUs Fail in Wet Gas',
                 'description' => 'Why scrubber-dependent vapor recovery systems can become unstable when tank vapors contain liquids, condensate, water, or freeze-prone flow conditions.',
                 'url' => url('/insights/why-conventional-vrus-fail-wet-gas'),
-                'tags' => ['VaporCommander™', 'US11098709B2'],
+                'filters' => ['vapor-recovery', 'equipment-failures', 'wet-unstable-wells'],
+                'tags' => ['Vapor Recovery', 'Equipment Failures', 'Wet & Unstable Wells'],
             ],
             [
-                'id' => 'production',
-                'filter_label' => 'Production Optimization',
+                'id' => 'article-production-optimization',
                 'label' => 'Production Optimization',
-                'title' => 'Production Optimization with Multiphase Compression',
+                'title' => 'Production Optimization Using Multiphase Compression',
                 'description' => 'How multiphase compression can support production recovery where pressure constraints, liquids, and unstable wells limit flow performance.',
                 'url' => url('/insights/production-optimization-multiphase-compression'),
-                'tags' => ['MultiphaseCommander™', 'Recovery'],
+                'filters' => ['multiphase-production', 'production-optimization'],
+                'tags' => ['Multiphase Production', 'Production Optimization'],
             ],
             [
-                'id' => 'methane',
-                'filter_label' => 'Methane Reduction',
-                'label' => 'Methane Reduction',
+                'id' => 'article-methane-reduction',
+                'label' => 'Vapor Recovery',
                 'title' => 'Fluidstream Methane Reduction Story',
                 'description' => 'How production equipment choices, vapor recovery, and compression reliability influence methane reduction strategies in oil and gas operations.',
                 'url' => url('/insights/fluidstream-methane-reduction-story-white-sections'),
-                'tags' => ['Vapor Recovery', 'Technology'],
+                'filters' => ['vapor-recovery', 'production-optimization'],
+                'tags' => ['Vapor Recovery', 'Production Optimization'],
             ],
             [
-                'id' => 'selection',
-                'filter_label' => 'Technology Selection',
-                'label' => 'Technology Selection',
-                'title' => 'How to Select the Right Compression Application',
+                'id' => 'article-compression-selection',
+                'label' => 'Compression Selection',
+                'title' => 'How to Select the Right Compression Applications',
                 'description' => 'A technical selection guide for vapor recovery, casing gas compression, wet gas applications, multiphase streams, and unstable wells.',
                 'url' => url('/insights/how-to-select-right-compression-applications-final-fixed'),
-                'tags' => ['Product Fit', 'Application Review'],
+                'filters' => ['compression-selection', 'equipment-failures'],
+                'tags' => ['Compression Selection', 'Equipment Failures'],
             ],
             [
-                'id' => 'liquid-loaded-wells',
-                'filter_label' => 'Liquid-Loaded Wells',
-                'label' => 'Liquid-Loaded Wells',
+                'id' => 'article-liquid-loaded-wells',
+                'label' => 'Wet & Unstable Wells',
                 'title' => 'Multiphase Compression for Liquid-Loaded Gas Wells',
                 'description' => 'Engineering discussion of liquid loading mechanics, critical velocity uncertainty, backpressure effects, and multiphase compression fit.',
                 'url' => url('/insights/multiphase-compression-liquid-loaded-gas-wells'),
-                'tags' => ['MultiphaseCommander™', 'Wet Wells'],
+                'filters' => ['wet-unstable-wells', 'multiphase-production'],
+                'tags' => ['Wet & Unstable Wells', 'Multiphase Production'],
             ],
             [
-                'id' => 'vru-flaring',
-                'filter_label' => 'VRU vs Flaring',
-                'label' => 'Flaring & Emissions',
-                'title' => 'VRU vs Flaring',
+                'id' => 'article-vru-vs-flaring',
+                'label' => 'Vapor Recovery',
+                'title' => 'VRU vs Flaring: Complete Comparison',
                 'description' => 'Comparison of vapor recovery and flaring from the perspective of methane emissions reduction, gas conservation, and operational economics.',
                 'url' => url('/insights/fluidstream-vru-vs-flaring-complete'),
-                'tags' => ['VaporCommander™', 'Emissions'],
+                'filters' => ['vapor-recovery', 'production-optimization'],
+                'tags' => ['Vapor Recovery', 'Production Optimization'],
             ],
             [
-                'id' => 'compressioncommander-needed',
-                'filter_label' => 'CompressionCommander Needed',
-                'label' => 'Casing Gas',
+                'id' => 'article-compressioncommander-needed',
+                'label' => 'Compression Selection',
                 'title' => 'When Is CompressionCommander™ Needed?',
                 'description' => 'Application-focused guide to identifying casing gas compression opportunities where backpressure, gas interference, and production losses affect wells.',
                 'url' => url('/insights/when-is-casing-gas-compressioncommander'),
-                'tags' => ['CompressionCommander™', 'Casing Pressure'],
+                'filters' => ['casing-gas-compression', 'compression-selection'],
+                'tags' => ['Casing Gas Compression', 'Compression Selection'],
             ],
             [
-                'id' => 'wet-unstable-wells',
-                'filter_label' => 'Wet & Unstable Wells',
+                'id' => 'article-wet-unstable-wells',
                 'label' => 'Wet & Unstable Wells',
                 'title' => 'Why Conventional Compression Fails in Wet, Unstable Wells',
                 'description' => 'Why liquids, slugs, sand, freeze-prone separation, and variable operating conditions can challenge conventional compression systems.',
                 'url' => url('/insights/why-conventional-compression-fails-wet-unstable-wells'),
-                'tags' => ['MultiphaseCommander™', 'Field Conditions'],
+                'filters' => ['wet-unstable-wells', 'equipment-failures'],
+                'tags' => ['Wet & Unstable Wells', 'Equipment Failures'],
             ],
             [
-                'id' => 'oil-production',
-                'filter_label' => 'Oil Production',
-                'label' => 'Oil Production',
+                'id' => 'article-oil-production',
+                'label' => 'Casing Gas Compression',
                 'title' => 'How Casing Gas Compression Increases Oil Production',
                 'description' => 'How casing gas compression can reduce casing pressure, improve drawdown, reduce gas interference, and support improved oil production.',
                 'url' => url('/insights/how-casing-gas-compression-increases-oil-production'),
-                'tags' => ['CompressionCommander™', 'Production'],
+                'filters' => ['casing-gas-compression', 'production-optimization'],
+                'tags' => ['Casing Gas Compression', 'Production Optimization'],
             ],
             [
-                'id' => 'production-recovery',
-                'filter_label' => 'Production Recovery',
-                'label' => 'Production Recovery',
+                'id' => 'article-production-recovery',
+                'label' => 'Multiphase Production',
                 'title' => 'How Multiphase Compression Supports Production Recovery',
                 'description' => 'How multiphase compression can support production recovery where conventional systems struggle with liquid loading, high backpressure, and variable flow.',
                 'url' => url('/insights/how-multiphase-compression-supports-production-recovery'),
-                'tags' => ['MultiphaseCommander™', 'Case Study Fit'],
+                'filters' => ['multiphase-production', 'production-optimization', 'wet-unstable-wells'],
+                'tags' => ['Multiphase Production', 'Production Optimization', 'Wet & Unstable Wells'],
             ],
         ];
 
@@ -780,19 +942,45 @@
     @endphp
 
     <div class="fip-insights-page">
-        <section class="fip-page-head">
-            <div class="fip-container">
-                <span class="fip-eyebrow">Fluidstream Insights</span>
+        <section class="fip-insights-hero">
+            <div class="fip-insights-hero-wrap">
+                <div class="fip-insights-hero-copy">
+                    <h1>Technical insights for real-world oilfield compression challenges.</h1>
 
-                <h2 class="fip-title">
-                    Technical insights for real-world oilfield compression challenges.
-                </h2>
+                    <p class="fip-insights-hero-lead">
+                        Explore engineering-focused articles on multiphase compression, vapor recovery, casing gas compression,
+                        liquid-loaded wells, wet gas reliability, methane reduction, and production optimization.
+                    </p>
 
-                <p class="fip-subtitle">
-                    Explore engineering-focused articles on multiphase compression, vapor recovery,
-                    casing gas compression, liquid-loaded wells, wet gas reliability, methane reduction,
-                    and production optimization.
-                </p>
+                    <div class="fip-insights-hero-actions">
+                        <a class="fip-insights-hero-btn fip-insights-hero-btn-primary" href="#fipArticlesSection">
+                            Browse Insights →
+                        </a>
+
+                        <a class="fip-insights-hero-btn fip-insights-hero-btn-secondary" href="{{ url('/case-studies') }}">
+                            View case studies
+                        </a>
+                    </div>
+                </div>
+
+                <aside class="fip-insights-hero-box" aria-label="Insight topic highlights">
+                    <div class="fip-insights-hero-list">
+                        <div class="fip-insights-hero-item">
+                            <strong>Selection guidance</strong>
+                            <span>Connect compression problems to the right field application and product fit.</span>
+                        </div>
+
+                        <div class="fip-insights-hero-item">
+                            <strong>Failure mechanics</strong>
+                            <span>Understand why gas-only systems struggle with wet, unstable, liquid-influenced service.</span>
+                        </div>
+
+                        <div class="fip-insights-hero-item">
+                            <strong>Field application</strong>
+                            <span>Translate technical issues into production recovery, emissions reduction, and reliability outcomes.</span>
+                        </div>
+                    </div>
+                </aside>
             </div>
         </section>
 
@@ -802,15 +990,16 @@
                     <aside class="fip-filter-column">
                         <div class="fip-filter-panel" aria-label="Insight filters">
                             <h3 class="fip-filter-title">Filters</h3>
+
                             <div class="fip-topic-list">
-                                @foreach ($insights as $insight)
+                                @foreach ($filters as $filter)
                                     <label class="fip-checkbox-row">
-                                        <input type="checkbox" class="fip-topic-checkbox" value="{{ $insight['id'] }}">
+                                        <input type="checkbox" class="fip-topic-checkbox" value="{{ $filter['id'] }}">
 
                                         <span class="fip-check-box" aria-hidden="true"></span>
 
                                         <span class="fip-checkbox-text">
-                                            {{ $insight['filter_label'] }}
+                                            {{ $filter['label'] }}
                                         </span>
                                     </label>
                                 @endforeach
@@ -827,7 +1016,7 @@
 
                     <main>
                         <div class="fip-list-top" id="fipArticlesSection">
-                            <h2 class="fip-list-title">Browse all insights</h2>
+                            <h2 class="fip-list-title">Browse all Insights</h2>
 
                             <div class="fip-result-count">
                                 <span id="fipVisibleCount">{{ count($insights) }}</span> insights shown
@@ -840,8 +1029,10 @@
                                     $articleNumber = count($insights) - $loop->index;
                                 @endphp
 
-                                <a id="{{ $insight['id'] }}" href="{{ $insight['url'] }}" class="fip-article-card"
-                                    data-topic="{{ $insight['id'] }}">
+                                <a id="{{ $insight['id'] }}"
+                                   href="{{ $insight['url'] }}"
+                                   class="fip-article-card"
+                                   data-topics="{{ implode(' ', $insight['filters']) }}">
                                     <div class="fip-card-top">
                                         <span class="fip-tag">{{ $insight['label'] }}</span>
 
@@ -981,8 +1172,10 @@
                 let shownCount = 0;
 
                 cards.forEach(function (card) {
-                    const topic = card.dataset.topic;
-                    const shouldShow = selectedTopics.length === 0 || selectedTopics.includes(topic);
+                    const cardTopics = String(card.dataset.topics || '').split(' ').filter(Boolean);
+                    const shouldShow = selectedTopics.length === 0 || selectedTopics.some(function (topic) {
+                        return cardTopics.includes(topic);
+                    });
 
                     card.classList.toggle('is-hidden', !shouldShow);
 

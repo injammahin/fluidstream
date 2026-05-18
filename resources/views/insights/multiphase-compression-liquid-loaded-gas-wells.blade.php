@@ -1208,38 +1208,259 @@
     </script>
 
 
-    <section class="hero py-12">
-        <div class="wrap hero-grid">
-            <div>
-                <h1>Multiphase Compression for Loaded Gas Wells</h1>
-                <p class="hero-lede">An engineering guide to liquid loading, deliquification limits, surface compression
-                    reliability, and why multiphase-capable compression can improve loaded gas well recovery in wet,
-                    unstable field conditions.</p>
-                <div class="hero-actions">
-                    <a class="btn btn-primary" href="/multiphase-compression">Explore MultiphaseCommander™</a>
-                    <a class="btn btn-outline" href="#article">Read the Technical Guide</a>
-                </div>
+  <section class="fs-article-image-hero">
+    <style>
+        .fs-article-image-hero {
+            position: relative;
+            isolation: isolate;
+            overflow: hidden;
+            min-height: 620px;
+            color: #ffffff;
+            background:
+                linear-gradient(100deg, rgba(2, 8, 35, .36) 0%, rgba(2, 8, 35, .28) 42%, rgba(6, 9, 31, 0.132) 72%, rgba(0, 24, 220, 0) 100%),
+                url("{{ asset('/img/insights/Winter instrument.png') }}");
+            background-size: cover;
+            background-position: center 45%;
+            background-repeat: no-repeat;
+            border-bottom: 1px solid #dfe9ff;
+        }
+
+        .fs-article-image-hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background: linear-gradient(180deg, rgba(2, 8, 35, .06) 0%, rgba(2, 8, 35, .42) 100%);
+            pointer-events: none;
+        }
+
+        .fs-article-image-hero .fs-article-hero-wrap {
+            width: min(var(--max), calc(100% - 40px));
+            min-height: 620px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.18fr .82fr;
+            gap: 58px;
+            align-items: flex-start;
+            padding: 96px 0 72px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .fs-article-image-hero h1 {
+            max-width: 920px;
+            margin: 0 0 24px;
+            color: #ffffff;
+            font-size: clamp(38px, 5vw, 66px);
+            line-height: .94;
+            letter-spacing: -.075em;
+            font-weight: 500;
+        }
+
+        .fs-article-image-hero .fs-article-hero-lede {
+            max-width: 760px;
+            margin: 0;
+            color: rgba(255, 255, 255, .84);
+            font-size: clamp(16px, 1.35vw, 19px);
+            line-height: 1.68;
+            font-weight: 500;
+        }
+
+        .fs-article-image-hero .fs-article-hero-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .fs-article-image-hero .fs-article-hero-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 999px;
+            padding: .95rem 1.28rem;
+            font-weight: 900;
+            border: 1px solid transparent;
+            transition: transform .22s ease, box-shadow .22s ease, background .22s ease, color .22s ease, border-color .22s ease;
+        }
+
+        .fs-article-image-hero .fs-article-hero-btn:hover {
+            transform: translateY(-2px);
+            text-decoration: none;
+        }
+
+        .fs-article-image-hero .fs-article-hero-btn-primary {
+            background: #0018dc;
+            color: #ffffff;
+            border-color: #0018dc;
+            box-shadow: 0 16px 36px rgba(0, 0, 0, .18);
+        }
+
+        .fs-article-image-hero .fs-article-hero-btn-outline {
+            color: #ffffff;
+            border-color: rgba(255, 255, 255, .42);
+            background: rgba(255, 255, 255, .08);
+        }
+
+        .fs-article-image-hero .fs-article-hero-btn-outline:hover {
+            background: rgba(255, 255, 255, .14);
+            border-color: rgba(255, 255, 255, .68);
+        }
+
+        .fs-article-image-hero .fs-article-hero-card-stack {
+            display: grid;
+            gap: 18px;
+        }
+
+        .fs-article-image-hero .fs-article-quote-card,
+        .fs-article-image-hero .fs-article-mini-card {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, .22);
+            border-radius: 7px;
+            background: rgba(255, 255, 255, .10);
+            box-shadow: 0 26px 70px rgba(0, 0, 0, .18);
+        }
+
+        .fs-article-image-hero .fs-article-quote-card {
+            padding: 26px;
+        }
+
+        .fs-article-image-hero .fs-article-quote-card strong {
+            display: block;
+            margin-bottom: .7rem;
+            color: #ffffff;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            font-weight: 900;
+        }
+
+        .fs-article-image-hero .fs-article-quote-card p {
+            margin-bottom: 0;
+            color: rgba(255, 255, 255, .78);
+        }
+
+        .fs-article-image-hero .fs-article-mini-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+        }
+
+        .fs-article-image-hero .fs-article-mini-card {
+            padding: 22px;
+        }
+
+        .fs-article-image-hero .fs-article-mini-card b {
+            display: block;
+            margin-bottom: 6px;
+            color: #ffffff;
+            font-size: 1.05rem;
+            line-height: 1.2;
+            font-weight: 900;
+        }
+
+        .fs-article-image-hero .fs-article-mini-card span {
+            color: rgba(255, 255, 255, .78);
+            font-size: .9rem;
+            line-height: 1.45;
+        }
+
+        @media (max-width: 1020px) {
+            .fs-article-image-hero,
+            .fs-article-image-hero .fs-article-hero-wrap {
+                min-height: auto;
+            }
+
+            .fs-article-image-hero .fs-article-hero-wrap {
+                grid-template-columns: 1fr;
+                gap: 34px;
+                padding: 76px 0 64px;
+            }
+
+            .fs-article-image-hero .fs-article-hero-card-stack {
+                max-width: 720px;
+            }
+        }
+
+        @media (max-width: 620px) {
+            .fs-article-image-hero {
+                background-position: center 62%;
+            }
+
+            .fs-article-image-hero .fs-article-hero-wrap {
+                width: min(var(--max), calc(100% - 28px));
+                padding: 62px 0 52px;
+            }
+
+            .fs-article-image-hero h1 {
+                font-size: 42px;
+            }
+
+            .fs-article-image-hero .fs-article-mini-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .fs-article-image-hero .fs-article-quote-card,
+            .fs-article-image-hero .fs-article-mini-card {
+                padding: 22px;
+            }
+        }
+    </style>
+
+    <div class="fs-article-hero-wrap">
+        <div>
+            <h1>How Casing Gas Compression Increases Oil Production</h1>
+
+            <p class="fs-article-hero-lede">
+                An engineering-focused guide to annulus pressure reduction, reservoir drawdown, fluid loading relief, artificial lift support, and why reliable multiphase-capable compression matters in real casing gas applications.
+            </p>
+
+            <div class="fs-article-hero-actions">
+                <a class="fs-article-hero-btn fs-article-hero-btn-primary" href="/casing-gas-compression">
+                    Explore CompressionCommander™
+                </a>
+
+                <a class="fs-article-hero-btn fs-article-hero-btn-outline" href="#article">
+                    Read the Technical Guide
+                </a>
+            </div>
+        </div>
+
+        <div class="fs-article-hero-card-stack">
+            <div class="fs-article-quote-card">
+                <strong>
+                    Lower casing pressure can improve production, but only when the compressor can operate reliably in the well’s real conditions.
+                </strong>
+
+                <p>
+                    Casing gas streams can be wet, unstable, low-pressure, and tied to liquid loading, artificial lift behavior, and winter field conditions.
+                </p>
             </div>
 
-            <div class="hero-card-stack">
-                <div class="quote-card">
-                    <strong>Loaded gas wells are not only a wellbore problem. They become a surface compression reliability
-                        problem.</strong>
-                    <p>Once liquid loading begins, produced gas can arrive wet, slugging, unstable, and difficult for
-                        conventional gas-only compressors to manage reliably.</p>
+            <div class="fs-article-mini-grid">
+                <div class="fs-article-mini-card">
+                    <b>Drawdown</b>
+                    <span>Reduce backpressure and improve inflow</span>
                 </div>
-                <div class="hero-mini-grid">
-                    <div class="hero-mini"><b>Liquid loading</b><span>Reduce production loss from wellbore fluid
-                            buildup</span></div>
-                    <div class="hero-mini"><b>Wet gas</b><span>Designed around gas and liquids arriving together</span>
-                    </div>
-                    <div class="hero-mini"><b>Reliability</b><span>Reduce separator-dependent failure points</span></div>
-                    <div class="hero-mini"><b>Application fit</b><span>Review loaded-well conditions before
-                            deployment</span></div>
+
+                <div class="fs-article-mini-card">
+                    <b>Fluid loading</b>
+                    <span>Support better wellbore unloading</span>
+                </div>
+
+                <div class="fs-article-mini-card">
+                    <b>Artificial lift</b>
+                    <span>Improve operating conditions for lift systems</span>
+                </div>
+
+                <div class="fs-article-mini-card">
+                    <b>Proof</b>
+                    <span>Gas and condensate restored in field service</span>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <main>
         <section class="section section-soft py-12 gray" id="article">

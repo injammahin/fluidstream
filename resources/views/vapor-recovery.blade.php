@@ -2886,637 +2886,799 @@
     </div>
   </section>
 
-  <section class="fs-vc-spec-section py-12" id="specifications">
+<section class="fs-vc-spec-section py-12" id="specifications">
     <style>
-      .fs-vc-spec-section {
-        --vc-blue: #0018dc;
-        --vc-cyan: #15d1ff;
-        --vc-ink: #071126;
-        --vc-text: #19243a;
-        --vc-muted: #647086;
-        --vc-line: #dfe6f1;
-        --vc-soft: #f5f7fb;
-        --vc-white: #ffffff;
-        background: var(--vc-soft);
-        /* padding: 66px 0; */
-        color: var(--vc-text);
-      }
+        .fs-vc-spec-section {
+            --vc-blue: #0018dc;
+            --vc-cyan: #15d1ff;
+            --vc-ink: #071126;
+            --vc-text: #19243a;
+            --vc-muted: #647086;
+            --vc-line: #dfe6f1;
+            --vc-soft: #f5f7fb;
+            --vc-white: #ffffff;
+            background: var(--vc-soft);
+            color: var(--vc-text);
+        }
 
-      .fs-vc-spec-section,
-      .fs-vc-spec-section * {
-        box-sizing: border-box;
-      }
+        .fs-vc-spec-section,
+        .fs-vc-spec-section * {
+            box-sizing: border-box;
+        }
 
-      .fs-vc-spec-wrap {
-        width: min(1200px, calc(100% - 44px));
-        margin: 0 auto;
-      }
-
-      .fs-vc-spec-head {
-        /* display: grid; */
-        grid-template-columns: 260px 1fr;
-        gap: 44px;
-        align-items: start;
-        margin-bottom: 28px;
-      }
-
-      .fs-vc-spec-rail {
-        /* border-top: 3px solid var(--vc-blue); */
-        /* padding-top: 14px; */
-        color: var(--vc-blue);
-        font-size: 13px;
-        font-weight: 950;
-        letter-spacing: .1em;
-        text-transform: uppercase;
-      }
-
-      /* .fs-vc-spec-head h2 {
-                                                                                                                                                                                                  font-size: clamp(30px, 3.2vw, 46px);
-                                                                                                                                                                                                  line-height: 1.02;
-                                                                                                                                                                                                  margin: 0 0 14px;
-                                                                                                                                                                                                  letter-spacing: -.035em;
-                                                                                                                                                                                                  color: var(--vc-ink);
-                                                                                                                                                                                                } */
-
-      .fs-vc-spec-lead {
-        font-size: 17px;
-        color: #56647a;
-        max-width: 860px;
-        margin: 0;
-        line-height: 1.65;
-      }
-
-      .fs-vc-spec-note {
-        margin: 14px 0 0;
-        font-size: 14px;
-        color: var(--vc-muted);
-        font-weight: 700;
-        line-height: 1.6;
-      }
-
-      .fs-vc-model-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 16px;
-      }
-
-      .fs-vc-model-card {
-        position: relative;
-        isolation: isolate;
-        overflow: hidden;
-        background: #ffffff;
-        border: 1px solid var(--vc-line);
-        border-radius: 7px;
-        /* box-shadow: 0 14px 36px rgba(7, 17, 38, .065); */
-        transition:
-          transform .24s ease,
-          border-color .24s ease,
-          box-shadow .24s ease,
-          background .24s ease;
-      }
-
-      .fs-vc-model-card::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 5;
-        height: 4px;
-        background: var(--vc-blue);
-        transform: scaleX(0);
-        transform-origin: left;
-        transition: transform .3s ease;
-      }
-
-      .fs-vc-model-card:hover {
-        transform: translateY(-3px);
-        border-color: var(--vc-blue);
-        /* box-shadow: 0 22px 46px rgba(16, 42, 67, .10); */
-        background: #ffffff;
-      }
-
-      .fs-vc-model-card:hover::before {
-        transform: scaleX(1);
-      }
-
-      .fs-vc-card-top {
-        padding: 24px 22px 18px;
-        border-bottom: 1px solid rgba(223, 230, 241, .9);
-        background: linear-gradient(180deg, #ffffff, #f9fbff);
-      }
-
-      .fs-vc-family {
-        display: inline-flex;
-        color: var(--vc-blue);
-        font-size: 10px;
-        font-weight: 950;
-        letter-spacing: .1em;
-        text-transform: uppercase;
-      }
-
-      .fs-vc-model-line {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        gap: 12px;
-        margin-top: 8px;
-      }
-
-      .fs-vc-model-line h3 {
-        font-size: 24px;
-        line-height: 1.08;
-        margin: 0;
-        color: var(--vc-ink);
-        letter-spacing: -.02em;
-        font-weight: 900;
-      }
-
-      .fs-vc-hp-badge {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        white-space: nowrap;
-        padding: 7px 11px;
-        border-radius: 999px;
-        background: #f2f6ff;
-        color: var(--vc-blue);
-        border: 1px solid #dce6fb;
-        font-weight: 900;
-        font-size: 12px;
-        letter-spacing: .04em;
-      }
-
-      .fs-vc-pressure-control {
-        padding: 16px 18px 0;
-      }
-
-      .fs-vc-pressure-row {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 10px;
-        margin-bottom: 8px;
-      }
-
-      .fs-vc-pressure-control label,
-      .fs-vc-reading-label,
-      .fs-vc-card-specs b {
-        display: block;
-        color: #647086;
-        font-size: 11px;
-        text-transform: uppercase;
-        letter-spacing: .075em;
-        font-weight: 900;
-      }
-
-      .fs-vc-static-pressure-value {
-        display: inline-flex;
-        width: 100%;
-        align-items: center;
-        border: 1px solid #dce6fb;
-        border-radius: 999px;
-        background: #f7f9fd;
-        color: var(--vc-ink);
-        font-size: 14px;
-        font-weight: 900;
-        padding: 10px 15px;
-      }
-
-      .fs-vc-primary-reading {
-        margin: 14px 18px 16px;
-        background: #0018dc;
-        color: #ffffff;
-        border-radius: 7px;
-        padding: 17px 18px;
-        box-shadow: none;
-      }
-
-      .fs-vc-reading-label {
-        color: #98edff !important;
-        background: transparent !important;
-        box-shadow: none !important;
-        border: none !important;
-        padding: 0 !important;
-        margin-bottom: 8px;
-      }
-
-      .fs-vc-reading-value {
-        display: grid;
-        gap: 4px;
-        font-size: 20px;
-        font-weight: 950;
-      }
-
-      .fs-vc-reading-value .metric,
-      .fs-vc-reading-value .imperial {
-        font-size: 20px;
-        line-height: 1.2;
-        font-weight: 950;
-        color: #ffffff;
-        white-space: nowrap;
-      }
-
-      .fs-vc-reading-value small {
-        font-size: 12px;
-        color: #dcecff;
-        font-weight: 800;
-      }
-
-      .fs-vc-card-specs {
-        padding: 0 18px 18px;
-        display: grid;
-        gap: 10px;
-      }
-
-      .fs-vc-card-specs>div {
-        position: relative;
-        background: #f7f9fd;
-        border: 1px solid #e7edf6;
-        border-radius: 7px;
-        padding: 13px 14px 13px 42px;
-        box-shadow: none;
-      }
-
-      .fs-vc-card-specs>div::before {
-        content: "";
-        position: absolute;
-        left: 13px;
-        top: 15px;
-        width: 17px;
-        height: 17px;
-        border-radius: 5px;
-        background: var(--vc-blue);
-        opacity: .9;
-      }
-
-      .fs-vc-card-specs span {
-        display: flex;
-        gap: 8px;
-        flex-wrap: wrap;
-        align-items: baseline;
-        font-size: 16px;
-        font-weight: 950;
-        color: var(--vc-ink);
-      }
-
-      .fs-vc-card-specs small {
-        font-size: 12px;
-        color: #647086;
-        font-weight: 850;
-      }
-
-      .fs-vc-feature-list {
-        margin: 0 18px 18px;
-        display: grid;
-        gap: 8px;
-        padding: 14px 16px;
-        border: 1px solid #e7edf6;
-        border-radius: 7px;
-        background: #ffffff;
-      }
-
-      .fs-vc-feature-list span {
-        position: relative;
-        display: block;
-        padding-left: 22px;
-        color: #56647a;
-        font-size: 13px;
-        font-weight: 750;
-        line-height: 1.45;
-      }
-
-      .fs-vc-feature-list span::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 5px;
-        width: 14px;
-        height: 10px;
-        background-repeat: no-repeat;
-        background-size: 14px 10px;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 12' fill='none'%3E%3Cpath d='M1 6h11' stroke='%230018dc' stroke-width='1.7' stroke-linecap='round'/%3E%3Cpath d='M8.5 1.75L13 6l-4.5 4.25' stroke='%230018dc' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-      }
-
-      .fs-vc-sizing-notes {
-        margin-top: 22px;
-        background: #fbfcff;
-        border: 1px solid var(--vc-line);
-        border-radius: 7px;
-        padding: 18px 20px;
-        color: #647086;
-        font-size: 13px;
-        box-shadow: 0 10px 28px rgba(7, 17, 38, .045);
-        line-height: 1.65;
-      }
-
-      .fs-vc-sizing-notes strong {
-        display: block;
-        color: var(--vc-ink);
-        font-size: 14px;
-        margin-bottom: 8px;
-      }
-
-      .fs-vc-sizing-notes ol {
-        margin: 0;
-        padding-left: 18px;
-        display: grid;
-        gap: 7px;
-      }
-
-      .fs-vc-sizing-notes li {
-        padding-left: 4px;
-      }
-
-      @media(max-width:1120px) {
-        .fs-vc-model-grid {
-          grid-template-columns: repeat(2, 1fr);
+        .fs-vc-spec-wrap {
+            width: min(1200px, calc(100% - 44px));
+            margin: 0 auto;
         }
 
         .fs-vc-spec-head {
-          grid-template-columns: 1fr;
-          gap: 12px;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto;
+            gap: 28px;
+            align-items: end;
+            margin-bottom: 28px;
         }
-      }
 
-      @media(max-width:720px) {
-        /* .fs-vc-spec-section {
-                                                                                                                                                                      padding: 46px 0;
-                                                                                                                                                                    } */
+        .fs-vc-spec-rail {
+            margin-bottom: 10px;
+            color: var(--vc-blue);
+            font-size: 13px;
+            font-weight: 950;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+        }
 
-        .fs-vc-spec-wrap {
-          width: min(100% - 30px, 1200px);
+        /* .fs-vc-spec-head h2 {
+            margin: 0 0 14px;
+            max-width: 680px;
+            color: #1f1f21;
+            font-size: clamp(1.9rem, 3vw, 3rem);
+            line-height: 1.05;
+            letter-spacing: -.04em;
+            font-weight: 500;
+        }
+
+        .fs-vc-spec-lead {
+            max-width: 780px;
+            margin: 0;
+            color: #56647a;
+            font-size: 17px;
+            line-height: 1.65;
+        } */
+
+        .fs-vc-spec-note {
+            margin: 12px 0 0;
+            color: var(--vc-muted);
+            font-size: 14px;
+            line-height: 1.6;
+            font-weight: 700;
+        }
+
+        .fs-vc-global-control {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            width: fit-content;
+            max-width: 100%;
+            padding: 10px 12px 10px 18px;
+            border: 1px solid rgba(223, 230, 241, .95);
+            border-radius: 999px;
+            background: #ffffff;
+            box-shadow: 0 14px 34px rgba(13, 32, 84, .06);
+        }
+
+        .fs-vc-global-control strong {
+            color: var(--vc-ink);
+            font-size: 15px;
+            line-height: 1;
+            font-weight: 950;
+            white-space: nowrap;
+        }
+
+        .fs-vc-global-control select,
+        .fs-vc-pressure-select {
+            appearance: none;
+            -webkit-appearance: none;
+            border: 1px solid #cfd8ea;
+            border-radius: 999px;
+            background:
+                #ffffff
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%230018dc' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E")
+                no-repeat right 14px center;
+            color: var(--vc-ink);
+            font-size: 14px;
+            font-weight: 900;
+            line-height: 1;
+            cursor: pointer;
+        }
+
+        .fs-vc-global-control select {
+            min-width: 220px;
+            padding: 10px 44px 10px 15px;
+        }
+
+        .fs-vc-pressure-select {
+            width: min(230px, 100%);
+            padding: 11px 44px 11px 15px;
         }
 
         .fs-vc-model-grid {
-          grid-template-columns: 1fr;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .fs-vc-model-card {
+            position: relative;
+            isolation: isolate;
+            overflow: hidden;
+            border: 1px solid var(--vc-line);
+            border-radius: 7px;
+            background: #ffffff;
+            box-shadow: 0 18px 44px rgba(13, 32, 84, .06);
+            transition:
+                transform .24s ease,
+                border-color .24s ease,
+                box-shadow .24s ease,
+                background .24s ease;
+        }
+
+        .fs-vc-model-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 5;
+            height: 4px;
+            background: var(--vc-blue);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform .3s ease;
+        }
+
+        .fs-vc-model-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--vc-blue);
+            background: #ffffff;
+        }
+
+        .fs-vc-model-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .fs-vc-card-top {
+            padding: 24px 22px 18px;
+            border-bottom: 1px solid rgba(223, 230, 241, .9);
+            background: linear-gradient(180deg, #ffffff, #f9fbff);
+        }
+
+        .fs-vc-family {
+            display: inline-flex;
+            color: var(--vc-blue);
+            font-size: 10px;
+            font-weight: 950;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+        }
+
+        .fs-vc-model-line {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 12px;
+            margin-top: 8px;
         }
 
         .fs-vc-model-line h3 {
-          font-size: 22px;
+            margin: 0;
+            color: var(--vc-ink);
+            font-size: 24px;
+            line-height: 1.08;
+            letter-spacing: -.02em;
+            font-weight: 900;
         }
-      }
+
+        .fs-vc-hp-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            white-space: nowrap;
+            padding: 7px 11px;
+            border: 1px solid #dce6fb;
+            border-radius: 999px;
+            background: #f2f6ff;
+            color: var(--vc-blue);
+            font-size: 12px;
+            letter-spacing: .04em;
+            font-weight: 900;
+        }
+
+        .fs-vc-pressure-control {
+            padding: 16px 18px 0;
+        }
+
+        .fs-vc-pressure-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
+
+        .fs-vc-pressure-control label,
+        .fs-vc-reading-label,
+        .fs-vc-card-specs b {
+            display: block;
+            color: #647086;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: .075em;
+            font-weight: 900;
+        }
+
+        .fs-vc-primary-reading {
+            margin: 14px 18px 16px;
+            padding: 17px 18px;
+            border-radius: 7px;
+            background: #0018dc;
+            color: #ffffff;
+        }
+
+        .fs-vc-reading-label {
+            margin-bottom: 8px;
+            color: #98edff !important;
+        }
+
+        .fs-vc-reading-value {
+            display: grid;
+            gap: 4px;
+            font-size: 20px;
+            font-weight: 950;
+        }
+
+        .fs-vc-reading-value .metric,
+        .fs-vc-reading-value .imperial {
+            color: #ffffff;
+            font-size: 20px;
+            line-height: 1.2;
+            font-weight: 950;
+            white-space: nowrap;
+        }
+
+        .fs-vc-reading-value small {
+            color: #dcecff;
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+        .fs-vc-card-specs {
+            display: grid;
+            gap: 10px;
+            padding: 0 18px 18px;
+        }
+
+        .fs-vc-card-specs > div {
+            position: relative;
+            padding: 13px 14px 13px 42px;
+            border: 1px solid #e7edf6;
+            border-radius: 7px;
+            background: #f7f9fd;
+        }
+
+        .fs-vc-card-specs > div::before {
+            content: "";
+            position: absolute;
+            left: 13px;
+            top: 15px;
+            width: 17px;
+            height: 17px;
+            border-radius: 5px;
+            background: var(--vc-blue);
+            opacity: .9;
+        }
+
+        .fs-vc-card-specs span {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: 8px;
+            color: var(--vc-ink);
+            font-size: 16px;
+            font-weight: 950;
+        }
+
+        .fs-vc-card-specs small {
+            color: #647086;
+            font-size: 12px;
+            font-weight: 850;
+        }
+
+        .fs-vc-sizing-notes {
+            margin-top: 22px;
+            padding: 18px 20px;
+            border: 1px solid var(--vc-line);
+            border-radius: 7px;
+            background: #fbfcff;
+            color: #647086;
+            font-size: 13px;
+            line-height: 1.65;
+            box-shadow: 0 10px 28px rgba(7, 17, 38, .045);
+        }
+
+        .fs-vc-sizing-notes strong {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--vc-ink);
+            font-size: 14px;
+        }
+
+        .fs-vc-sizing-notes ol {
+            display: grid;
+            gap: 7px;
+            margin: 0;
+            padding-left: 22px;
+            list-style-type: decimal !important;
+        }
+
+        .fs-vc-sizing-notes li {
+            padding-left: 4px;
+        }
+
+        .fs-vc-sizing-notes li::before {
+            content: none !important;
+        }
+
+        @media (max-width: 1120px) {
+            .fs-vc-spec-head {
+                grid-template-columns: 1fr;
+                align-items: start;
+            }
+
+            .fs-vc-global-control {
+                justify-self: start;
+            }
+
+            .fs-vc-model-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 720px) {
+            .fs-vc-spec-wrap {
+                width: min(100% - 30px, 1200px);
+            }
+
+            .fs-vc-global-control {
+                width: 100%;
+                align-items: stretch;
+                flex-direction: column;
+                border-radius: 7px;
+                padding: 14px;
+            }
+
+            .fs-vc-global-control strong {
+                font-size: 14px;
+            }
+
+            .fs-vc-global-control select,
+            .fs-vc-pressure-select {
+                width: 100%;
+                min-width: 0;
+            }
+
+            .fs-vc-model-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .fs-vc-model-line h3 {
+                font-size: 22px;
+            }
+        }
     </style>
 
     <div class="fs-vc-spec-wrap">
       <div class="fs-vc-spec-head">
-        <div class="fs-vc-spec-rail">Specifications</div>
-        <div>
-          <h2>Compare VaporCommander™ models.</h2>
-          <p class="lead">
-            Gas capacity is shown at the typical 0 psig inlet condition used for vapor recovery applications.
-          </p>
-          <p class="lead">
-            Additional model sizes and configurations are available for applications outside the standard range shown.
-          </p>
+          <div>
+              <div class="fs-vc-spec-rail">Specifications</div>
+
+              <h2>Compare VaporCommander™ models.</h2>
+
+              <p class="lead">
+                  Gas capacity is shown at the typical 0 psig inlet condition used for vapor recovery applications.
+              </p>
+
+              <p class="lead">
+                  Additional model sizes and configurations are available for applications outside the standard range shown.
+              </p>
+          </div>
+
+          <div class="fs-vc-global-control">
+              <strong>Compare all models at</strong>
+
+              <select id="globalPressure" aria-label="Compare all VaporCommander models by inlet pressure">
+                  <option value="0">0 psi | 0 kPa</option>
+                  <option value="1">5 psi | 34 kPa</option>
+                  <option value="2">10 psi | 69 kPa</option>
+                  <option value="3">15 psi | 103 kPa</option>
+                  <option value="4" selected>20 psi | 138 kPa</option>
+              </select>
+          </div>
+      </div>
+
+        <div class="fs-vc-model-grid">
+            <article class="fs-vc-model-card" data-card-index="0">
+                <div class="fs-vc-card-top">
+                    <span class="fs-vc-family">VaporCommander™</span>
+
+                    <div class="fs-vc-model-line">
+                        <h3>VC1235 (050035)</h3>
+                        <span class="fs-vc-hp-badge">15 HP</span>
+                    </div>
+                </div>
+
+                <div class="fs-vc-pressure-control">
+                    <div class="fs-vc-pressure-row">
+                        <label for="pressure-0">Inlet pressure</label>
+                    </div>
+
+                    <select id="pressure-0" class="fs-vc-pressure-select" data-card="0">
+                        <option value="0">0 psi | 0 kPa</option>
+                        <option value="1">5 psi | 34 kPa</option>
+                        <option value="2">10 psi | 69 kPa</option>
+                        <option value="3">15 psi | 103 kPa</option>
+                        <option value="4" selected>20 psi | 138 kPa</option>
+                    </select>
+                </div>
+
+                <div class="fs-vc-primary-reading">
+                    <span class="fs-vc-reading-label">Gas Capacity</span>
+
+                    <div class="fs-vc-reading-value" id="gas-reading-0">
+                        <span class="metric">5.3 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span>
+                        <span class="imperial">187 <small>MCF/day</small></span>
+                    </div>
+                </div>
+
+                <div class="fs-vc-card-specs">
+                    <div>
+                        <b>Max ΔP</b>
+                        <span>
+                            <span class="metric">1207 <small>kPag</small></span>
+                            <span class="imperial">175 <small>psig</small></span>
+                        </span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="fs-vc-model-card" data-card-index="1">
+                <div class="fs-vc-card-top">
+                    <span class="fs-vc-family">VaporCommander™</span>
+
+                    <div class="fs-vc-model-line">
+                        <h3>VC1245 (050035)</h3>
+                        <span class="fs-vc-hp-badge">15 HP</span>
+                    </div>
+                </div>
+
+                <div class="fs-vc-pressure-control">
+                    <div class="fs-vc-pressure-row">
+                        <label for="pressure-1">Inlet pressure</label>
+                    </div>
+
+                    <select id="pressure-1" class="fs-vc-pressure-select" data-card="1">
+                        <option value="0">0 psi | 0 kPa</option>
+                        <option value="1">5 psi | 34 kPa</option>
+                        <option value="2">10 psi | 69 kPa</option>
+                        <option value="3">15 psi | 103 kPa</option>
+                        <option value="4" selected>20 psi | 138 kPa</option>
+                    </select>
+                </div>
+
+                <div class="fs-vc-primary-reading">
+                    <span class="fs-vc-reading-label">Gas Capacity</span>
+
+                    <div class="fs-vc-reading-value" id="gas-reading-1">
+                        <span class="metric">3.1 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span>
+                        <span class="imperial">109 <small>MCF/day</small></span>
+                    </div>
+                </div>
+
+                <div class="fs-vc-card-specs">
+                    <div>
+                        <b>Max ΔP</b>
+                        <span>
+                            <span class="metric">2586 <small>kPag</small></span>
+                            <span class="imperial">375 <small>psig</small></span>
+                        </span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="fs-vc-model-card" data-card-index="2">
+                <div class="fs-vc-card-top">
+                    <span class="fs-vc-family">VaporCommander™</span>
+
+                    <div class="fs-vc-model-line">
+                        <h3>VC1245 (100060)</h3>
+                        <span class="fs-vc-hp-badge">50 HP</span>
+                    </div>
+                </div>
+
+                <div class="fs-vc-pressure-control">
+                    <div class="fs-vc-pressure-row">
+                        <label for="pressure-2">Inlet pressure</label>
+                    </div>
+
+                    <select id="pressure-2" class="fs-vc-pressure-select" data-card="2">
+                        <option value="0">0 psi | 0 kPa</option>
+                        <option value="1">5 psi | 34 kPa</option>
+                        <option value="2">10 psi | 69 kPa</option>
+                        <option value="3">15 psi | 103 kPa</option>
+                        <option value="4" selected>20 psi | 138 kPa</option>
+                    </select>
+                </div>
+
+                <div class="fs-vc-primary-reading">
+                    <span class="fs-vc-reading-label">Gas Capacity</span>
+
+                    <div class="fs-vc-reading-value" id="gas-reading-2">
+                        <span class="metric">5.5 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span>
+                        <span class="imperial">194 <small>MCF/day</small></span>
+                    </div>
+                </div>
+
+                <div class="fs-vc-card-specs">
+                    <div>
+                        <b>Max ΔP</b>
+                        <span>
+                            <span class="metric">1724 <small>kPag</small></span>
+                            <span class="imperial">250 <small>psig</small></span>
+                        </span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="fs-vc-model-card" data-card-index="3">
+                <div class="fs-vc-card-top">
+                    <span class="fs-vc-family">VaporCommander™</span>
+
+                    <div class="fs-vc-model-line">
+                        <h3>VC1645 (100060)</h3>
+                        <span class="fs-vc-hp-badge">50 HP</span>
+                    </div>
+                </div>
+
+                <div class="fs-vc-pressure-control">
+                    <div class="fs-vc-pressure-row">
+                        <label for="pressure-3">Inlet pressure</label>
+                    </div>
+
+                    <select id="pressure-3" class="fs-vc-pressure-select" data-card="3">
+                        <option value="0">0 psi | 0 kPa</option>
+                        <option value="1">5 psi | 34 kPa</option>
+                        <option value="2">10 psi | 69 kPa</option>
+                        <option value="3">15 psi | 103 kPa</option>
+                        <option value="4" selected>20 psi | 138 kPa</option>
+                    </select>
+                </div>
+
+                <div class="fs-vc-primary-reading">
+                    <span class="fs-vc-reading-label">Gas Capacity</span>
+
+                    <div class="fs-vc-reading-value" id="gas-reading-3">
+                        <span class="metric">9.9 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span>
+                        <span class="imperial">350 <small>MCF/day</small></span>
+                    </div>
+                </div>
+
+                <div class="fs-vc-card-specs">
+                    <div>
+                        <b>Max ΔP</b>
+                        <span>
+                            <span class="metric">1034 <small>kPag</small></span>
+                            <span class="imperial">150 <small>psig</small></span>
+                        </span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="fs-vc-model-card" data-card-index="4">
+                <div class="fs-vc-card-top">
+                    <span class="fs-vc-family">VaporCommander™</span>
+
+                    <div class="fs-vc-model-line">
+                        <h3>VC2270 (100128)</h3>
+                        <span class="fs-vc-hp-badge">50 HP</span>
+                    </div>
+                </div>
+
+                <div class="fs-vc-pressure-control">
+                    <div class="fs-vc-pressure-row">
+                        <label for="pressure-4">Inlet pressure</label>
+                    </div>
+
+                    <select id="pressure-4" class="fs-vc-pressure-select" data-card="4">
+                        <option value="0">0 psi | 0 kPa</option>
+                        <option value="1">5 psi | 34 kPa</option>
+                        <option value="2">10 psi | 69 kPa</option>
+                        <option value="3">15 psi | 103 kPa</option>
+                        <option value="4" selected>20 psi | 138 kPa</option>
+                    </select>
+                </div>
+
+                <div class="fs-vc-primary-reading">
+                    <span class="fs-vc-reading-label">Gas Capacity</span>
+
+                    <div class="fs-vc-reading-value" id="gas-reading-4">
+                        <span class="metric">15.6 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span>
+                        <span class="imperial">551 <small>MCF/day</small></span>
+                    </div>
+                </div>
+
+                <div class="fs-vc-card-specs">
+                    <div>
+                        <b>Max ΔP</b>
+                        <span>
+                            <span class="metric">1896 <small>kPag</small></span>
+                            <span class="imperial">275 <small>psig</small></span>
+                        </span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="fs-vc-model-card" data-card-index="5">
+                <div class="fs-vc-card-top">
+                    <span class="fs-vc-family">VaporCommander™</span>
+
+                    <div class="fs-vc-model-line">
+                        <h3>VC2270 (150128)</h3>
+                        <span class="fs-vc-hp-badge">100 HP</span>
+                    </div>
+                </div>
+
+                <div class="fs-vc-pressure-control">
+                    <div class="fs-vc-pressure-row">
+                        <label for="pressure-5">Inlet pressure</label>
+                    </div>
+
+                    <select id="pressure-5" class="fs-vc-pressure-select" data-card="5">
+                        <option value="0">0 psi | 0 kPa</option>
+                        <option value="1">5 psi | 34 kPa</option>
+                        <option value="2">10 psi | 69 kPa</option>
+                        <option value="3">15 psi | 103 kPa</option>
+                        <option value="4" selected>20 psi | 138 kPa</option>
+                    </select>
+                </div>
+
+                <div class="fs-vc-primary-reading">
+                    <span class="fs-vc-reading-label">Gas Capacity</span>
+
+                    <div class="fs-vc-reading-value" id="gas-reading-5">
+                        <span class="metric">15.6 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span>
+                        <span class="imperial">551 <small>MCF/day</small></span>
+                    </div>
+                </div>
+
+                <div class="fs-vc-card-specs">
+                    <div>
+                        <b>Max ΔP</b>
+                        <span>
+                            <span class="metric">1896 <small>kPag</small></span>
+                            <span class="imperial">275 <small>psig</small></span>
+                        </span>
+                    </div>
+                </div>
+            </article>
         </div>
-      </div>
 
-      <div class="fs-vc-model-grid">
-        <article class="fs-vc-model-card">
-          <div class="fs-vc-card-top">
-            <span class="fs-vc-family">VaporCommander™</span>
-            <div class="fs-vc-model-line">
-              <h3>VC1235 (050035)</h3>
-              <span class="fs-vc-hp-badge">50 HP</span>
-            </div>
-          </div>
+        <div class="fs-vc-sizing-notes">
+            <strong>Engineering notes</strong>
 
-          <div class="fs-vc-pressure-control">
-            <div class="fs-vc-pressure-row">
-              <label>Typical VRU inlet pressure</label>
-            </div>
-            <div class="fs-vc-static-pressure-value">0 psi | 0 kPa</div>
-          </div>
+            <ol>
+                <li>
+                    Flow conditions calculated at 15℃ [59℉] inlet pressure and with various components operating at
+                    100% efficiency. Flow rates may vary based on inlet pressures, gas content, and other factors.
+                    Max gas rates will be reduced by amount of liquids in total fluid. Contact Fluidstream for gas
+                    capacity review based on specific liquid rates and operating conditions.
+                </li>
 
-          <div class="fs-vc-primary-reading">
-            <span class="fs-vc-reading-label">Gas Capacity</span>
-            <div class="fs-vc-reading-value">
-              <span class="metric">2.2 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span>
-              <span class="imperial">78 <small>MCF/day</small></span>
-            </div>
-          </div>
+                <li>
+                    Max gas rates and max pressure differentials can be increased by configuring additional unit(s)
+                    in parallel or in series.
+                </li>
 
-          <div class="fs-vc-card-specs">
-            <div>
-              <b>Max ΔP</b>
-              <span>
-                <span class="metric">1034 <small>kPag</small></span>
-                <span class="imperial">150 <small>psig</small></span>
-              </span>
-            </div>
-          </div>
-        </article>
-
-        <article class="fs-vc-model-card">
-          <div class="fs-vc-card-top">
-            <span class="fs-vc-family">VaporCommander™</span>
-            <div class="fs-vc-model-line">
-              <h3>VC1245 (050035)</h3>
-              <span class="fs-vc-hp-badge">50 HP</span>
-            </div>
-          </div>
-
-          <div class="fs-vc-pressure-control">
-            <div class="fs-vc-pressure-row">
-              <label>Typical VRU inlet pressure</label>
-            </div>
-            <div class="fs-vc-static-pressure-value">0 psi | 0 kPa</div>
-          </div>
-
-          <div class="fs-vc-primary-reading">
-            <span class="fs-vc-reading-label">Gas Capacity</span>
-            <div class="fs-vc-reading-value">
-              <span class="metric">1.3 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span>
-              <span class="imperial">46 <small>MCF/day</small></span>
-            </div>
-          </div>
-
-          <div class="fs-vc-card-specs">
-            <div>
-              <b>Max ΔP</b>
-              <span>
-                <span class="metric">1897 <small>kPag</small></span>
-                <span class="imperial">275 <small>psig</small></span>
-              </span>
-            </div>
-          </div>
-        </article>
-
-        <article class="fs-vc-model-card">
-          <div class="fs-vc-card-top">
-            <span class="fs-vc-family">VaporCommander™</span>
-            <div class="fs-vc-model-line">
-              <h3>VC1245 (100060)</h3>
-              <span class="fs-vc-hp-badge">100 HP</span>
-            </div>
-          </div>
-
-          <div class="fs-vc-pressure-control">
-            <div class="fs-vc-pressure-row">
-              <label>Typical VRU inlet pressure</label>
-            </div>
-            <div class="fs-vc-static-pressure-value">0 psi | 0 kPa</div>
-          </div>
-
-          <div class="fs-vc-primary-reading">
-            <span class="fs-vc-reading-label">Gas Capacity</span>
-            <div class="fs-vc-reading-value">
-              <span class="metric">2.4 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span>
-              <span class="imperial">85 <small>MCF/day</small></span>
-            </div>
-          </div>
-
-          <div class="fs-vc-card-specs">
-            <div>
-              <b>Max ΔP</b>
-              <span>
-                <span class="metric">1138 <small>kPag</small></span>
-                <span class="imperial">275 <small>psig</small></span>
-              </span>
-            </div>
-          </div>
-        </article>
-
-        <article class="fs-vc-model-card">
-          <div class="fs-vc-card-top">
-            <span class="fs-vc-family">VaporCommander™</span>
-            <div class="fs-vc-model-line">
-              <h3>VC1645 (100060)</h3>
-              <span class="fs-vc-hp-badge">100 HP</span>
-            </div>
-          </div>
-
-          <div class="fs-vc-pressure-control">
-            <div class="fs-vc-pressure-row">
-              <label>Typical VRU inlet pressure</label>
-            </div>
-            <div class="fs-vc-static-pressure-value">0 psi | 0 kPa</div>
-          </div>
-
-          <div class="fs-vc-primary-reading">
-            <span class="fs-vc-reading-label">Gas Capacity</span>
-            <div class="fs-vc-reading-value">
-              <span class="metric">4.2 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span>
-              <span class="imperial">148 <small>MCF/day</small></span>
-            </div>
-          </div>
-
-          <div class="fs-vc-card-specs">
-            <div>
-              <b>Max ΔP</b>
-              <span>
-                <span class="metric">1034 <small>kPag</small></span>
-                <span class="imperial">150 <small>psig</small></span>
-              </span>
-            </div>
-          </div>
-        </article>
-
-        <article class="fs-vc-model-card">
-          <div class="fs-vc-card-top">
-            <span class="fs-vc-family">VaporCommander™</span>
-            <div class="fs-vc-model-line">
-              <h3>VC2270 (100128)</h3>
-              <span class="fs-vc-hp-badge">100 HP</span>
-            </div>
-          </div>
-
-          <div class="fs-vc-pressure-control">
-            <div class="fs-vc-pressure-row">
-              <label>Typical VRU inlet pressure</label>
-            </div>
-            <div class="fs-vc-static-pressure-value">0 psi | 0 kPa</div>
-          </div>
-
-          <div class="fs-vc-primary-reading">
-            <span class="fs-vc-reading-label">Gas Capacity</span>
-            <div class="fs-vc-reading-value">
-              <span class="metric">6.6 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span>
-              <span class="imperial">233 <small>MCF/day</small></span>
-            </div>
-          </div>
-
-          <div class="fs-vc-card-specs">
-            <div>
-              <b>Max ΔP</b>
-              <span>
-                <span class="metric">1551 <small>kPag</small></span>
-                <span class="imperial">225 <small>psig</small></span>
-              </span>
-            </div>
-          </div>
-        </article>
-
-        <article class="fs-vc-model-card">
-          <div class="fs-vc-card-top">
-            <span class="fs-vc-family">VaporCommander™</span>
-            <div class="fs-vc-model-line">
-              <h3>VC2270 (150128)</h3>
-              <span class="fs-vc-hp-badge">150 HP</span>
-            </div>
-          </div>
-
-          <div class="fs-vc-pressure-control">
-            <div class="fs-vc-pressure-row">
-              <label>Typical VRU inlet pressure</label>
-            </div>
-            <div class="fs-vc-static-pressure-value">0 psi | 0 kPa</div>
-          </div>
-
-          <div class="fs-vc-primary-reading">
-            <span class="fs-vc-reading-label">Gas Capacity</span>
-            <div class="fs-vc-reading-value">
-              <span class="metric">6.6 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span>
-              <span class="imperial">233 <small>MCF/day</small></span>
-            </div>
-          </div>
-
-          <div class="fs-vc-card-specs">
-            <div>
-              <b>Max ΔP</b>
-              <span>
-                <span class="metric">1551 <small>kPag</small></span>
-                <span class="imperial">225 <small>psig</small></span>
-              </span>
-            </div>
-          </div>
-        </article>
-      </div>
-
-      <style>
-        .fs-vc-sizing-notes ol {
-          list-style-type: decimal !important;
-          padding-left: 24px;
-        }
-
-        .fs-vc-sizing-notes ol li::before {
-          content: none !important;
-        }
-      </style>
-
-      <div class="fs-vc-sizing-notes">
-        <strong>Engineering notes</strong>
-        <ol>
-          <li>
-            Flow conditions calculated at 15℃ [59℉] inlet pressure and with various components operating at
-            100% efficiency. Flow rates may vary based on inlet pressures, gas content, and other factors.
-            Max gas rates will be reduced by amount of liquids in total fluid. Contact Fluidstream for gas
-            capacity review based on specific liquid rates and operating conditions.
-          </li>
-          <li>
-            Max gas rates and max pressure differentials can be increased by configuring additional unit(s)
-            in parallel or in series.
-          </li>
-          <li>
-            Higher horsepower units will yield much higher fluid flow rates at various pressure differentials.
-            Please request pump curves to see flow rates at various pressure differentials.
-          </li>
-        </ol>
-      </div>
+                <li>
+                    Higher horsepower units will yield much higher fluid flow rates at various pressure differentials.
+                    Please request pump curves to see flow rates at various pressure differentials.
+                </li>
+            </ol>
+        </div>
     </div>
-  </section>
 
+    <script>
+        const vaporCommanderGasData = [
+            [
+                '<span class="metric">2.2 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">78 <small>MCF/day</small></span>',
+                '<span class="metric">3.0 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">105 <small>MCF/day</small></span>',
+                '<span class="metric">3.8 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">134 <small>MCF/day</small></span>',
+                '<span class="metric">4.5 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">159 <small>MCF/day</small></span>',
+                '<span class="metric">5.3 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">187 <small>MCF/day</small></span>'
+            ],
+            [
+                '<span class="metric">1.3 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">46 <small>MCF/day</small></span>',
+                '<span class="metric">1.8 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">64 <small>MCF/day</small></span>',
+                '<span class="metric">2.2 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">78 <small>MCF/day</small></span>',
+                '<span class="metric">2.7 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">95 <small>MCF/day</small></span>',
+                '<span class="metric">3.1 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">109 <small>MCF/day</small></span>'
+            ],
+            [
+                '<span class="metric">2.4 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">85 <small>MCF/day</small></span>',
+                '<span class="metric">3.1 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">109 <small>MCF/day</small></span>',
+                '<span class="metric">3.9 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">138 <small>MCF/day</small></span>',
+                '<span class="metric">4.7 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">166 <small>MCF/day</small></span>',
+                '<span class="metric">5.5 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">194 <small>MCF/day</small></span>'
+            ],
+            [
+                '<span class="metric">4.2 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">148 <small>MCF/day</small></span>',
+                '<span class="metric">5.7 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">201 <small>MCF/day</small></span>',
+                '<span class="metric">7.1 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">251 <small>MCF/day</small></span>',
+                '<span class="metric">8.5 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">300 <small>MCF/day</small></span>',
+                '<span class="metric">9.9 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">350 <small>MCF/day</small></span>'
+            ],
+            [
+                '<span class="metric">6.6 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">233 <small>MCF/day</small></span>',
+                '<span class="metric">8.9 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">314 <small>MCF/day</small></span>',
+                '<span class="metric">11.1 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">392 <small>MCF/day</small></span>',
+                '<span class="metric">13.4 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">473 <small>MCF/day</small></span>',
+                '<span class="metric">15.6 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">551 <small>MCF/day</small></span>'
+            ],
+            [
+                '<span class="metric">6.6 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">233 <small>MCF/day</small></span>',
+                '<span class="metric">8.9 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">314 <small>MCF/day</small></span>',
+                '<span class="metric">11.1 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">392 <small>MCF/day</small></span>',
+                '<span class="metric">13.4 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">473 <small>MCF/day</small></span>',
+                '<span class="metric">15.6 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">551 <small>MCF/day</small></span>'
+            ]
+        ];
+
+        function updateVaporCommanderCard(index, pressureIndex) {
+            const value = vaporCommanderGasData[index]?.[pressureIndex] || '<span class="metric">—</span>';
+            const el = document.getElementById('gas-reading-' + index);
+
+            if (el) {
+                el.innerHTML = value;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const globalPressure = document.getElementById('globalPressure');
+            const pressureSelects = document.querySelectorAll('.fs-vc-pressure-select');
+
+            pressureSelects.forEach(function (select) {
+                const cardIndex = Number(select.dataset.card);
+                const defaultPressure = Number(select.value);
+
+                updateVaporCommanderCard(cardIndex, defaultPressure);
+
+                select.addEventListener('change', function (event) {
+                    updateVaporCommanderCard(cardIndex, Number(event.target.value));
+                });
+            });
+
+            if (globalPressure) {
+                globalPressure.addEventListener('change', function (event) {
+                    const pressureIndex = Number(event.target.value);
+
+                    pressureSelects.forEach(function (select) {
+                        select.value = String(pressureIndex);
+                        updateVaporCommanderCard(Number(select.dataset.card), pressureIndex);
+                    });
+                });
+            }
+        });
+    </script>
+</section>
 
   <section>
     <div class="wrap py-12">

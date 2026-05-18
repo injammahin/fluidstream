@@ -2098,7 +2098,7 @@
                 <div class="fs-home-hero-line"></div>
 
                 <p class="fs-home-hero-lead">
-                    Compression systems designed for real oilfield conditions, handling 100% liquid to 100% gas.
+                    Compression systems designed for real oilfield conditions, handling 100% liquid, 100% gas, or any liquid–gas mixture.
                 </p>
 
                 <p class="fs-home-hero-support">
