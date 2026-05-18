@@ -1805,14 +1805,14 @@
         justify-content: center;
         min-height: 20px;
         padding: 4px 10px;
-        background: rgba(255, 255, 255, .94);
-        color: #111827;
-        border: 1px solid rgba(15, 23, 42, .12);
+        /* background: #0018dc; */
+        color: #ffffff;
+        /* border: 1px solid rgba(15, 23, 42, .12); */
         border-radius: 4px;
-        font-size: 11px;
+        font-size: 8px;
         line-height: 1;
         font-weight: 700;
-        box-shadow: 0 8px 18px rgba(15, 23, 42, .16);
+        /* box-shadow: 0 8px 18px rgba(15, 23, 42, .16); */
         pointer-events: none;
         white-space: nowrap;
       }
@@ -1821,35 +1821,44 @@
         content: "";
         position: absolute;
         inset: -4px;
-        border: 1px solid rgba(0, 24, 220, .18);
+        /* border: 1px solid rgba(0, 24, 220, .18); */
         border-radius: 6px;
         opacity: .7;
       }
 
       .fs-label-separator {
-        left: 20%;
+        left: 28%;
         top: 48%;
       }
 
+
+
       .fs-label-flare {
-        left: 57%;
-        top: 25%;
+        left: 56%;
+        top: 31%;
       }
 
       .fs-label-gas-compressor {
-        left: 65%;
+        left: 62%;
+        top: 46%;
+      }
+
+      .fs-label-multiphase {
+        left: 33%;
         top: 48%;
       }
 
       .fs-label-oil-tank {
-        left: 41%;
+        left: 42%;
         top: 64%;
       }
 
       .fs-label-oil-pump {
-        left: 64%;
-        top: 70%;
+        left: 62%;
+        top: 67%;
       }
+
+
 
 
 
@@ -1970,6 +1979,8 @@
 
           <div class="fs-production-path-image-box">
             <img src="{{ asset('img/after.png') }}" alt="After Fluidstream production system">
+            <span class="fs-path-label fs-label-multiphase">MultiphaseCommander™</span>
+
           </div>
 
           <p>
@@ -2094,11 +2105,11 @@
     }
 
     /* .fit-card p {
-                                                                                                                                                                                                                                                                                          margin: 0;
-                                                                                                                                                                                                                                                                                          font-size: 22px;
-                                                                                                                                                                                                                                                                                          line-height: 1.42;
-                                                                                                                                                                                                                                                                                          color: #53647c;
-                                                                                                                                                                                                                                                                                        } */
+                                                                                                                                                                                                                                                                                                                                                                                  margin: 0;
+                                                                                                                                                                                                                                                                                                                                                                                  font-size: 22px;
+                                                                                                                                                                                                                                                                                                                                                                                  line-height: 1.42;
+                                                                                                                                                                                                                                                                                                                                                                                  color: #53647c;
+                                                                                                                                                                                                                                                                                                                                                                                } */
 
     @media (max-width: 991px) {
       .fit-grid {
