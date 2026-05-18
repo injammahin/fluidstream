@@ -176,8 +176,8 @@
         }
 
         /* ================================
-                                                                                                                                                                                                                                                                                                   COMMON CARD HOVER STYLE
-                                                                                                                                                                                                                                                                                                ================================ */
+                                                                                                                                                                                                                                                                                                                   COMMON CARD HOVER STYLE
+                                                                                                                                                                                                                                                                                                                ================================ */
 
         .fs-about-hover-card {
             position: relative;
@@ -357,13 +357,13 @@
         }
 
         /* ================================
-                                                                                                                                                                                                                                                                                                   HERO
-                                                                                                                                                                                                                                                                                                ================================ */
+                                                                                                                                                                                                                                                                                                                   HERO
+                                                                                                                                                                                                                                                                                                                ================================ */
         .fs-about-hero {
             position: relative;
             isolation: isolate;
             overflow: hidden;
-            min-height: 680px;
+            /* min-height: 680px; */
             display: flex;
             align-items: center;
             color: #ffffff;
@@ -381,8 +381,8 @@
             inset: 0;
             z-index: -2;
             /* background:
-                            linear-gradient(90deg, rgba(255, 255, 255, .055) 1px, transparent 1px),
-                            linear-gradient(0deg, rgba(255, 255, 255, .045) 1px, transparent 1px); */
+                                            linear-gradient(90deg, rgba(255, 255, 255, .055) 1px, transparent 1px),
+                                            linear-gradient(0deg, rgba(255, 255, 255, .045) 1px, transparent 1px); */
             background-size: 74px 74px;
             opacity: .55;
             pointer-events: none;
@@ -402,11 +402,11 @@
         .fs-about-hero-grid {
             width: min(var(--max), calc(100% - 40px));
             margin: 0 auto;
-            padding: 108px 0 86px;
+            padding: 96px 0 72px !important;
             display: grid;
             grid-template-columns: minmax(0, 760px) minmax(300px, 390px);
             gap: 54px;
-            align-items: end;
+            align-items: flex-start;
             position: relative;
             z-index: 1;
         }
@@ -435,7 +435,7 @@
             margin: 24px 0 0;
             max-width: 760px;
             color: rgba(255, 255, 255, .84);
-            font-size: clamp(18px, 1.65vw, 23px);
+            font-size: clamp(18px, 1.65vw, 20px);
             line-height: 1.48;
             font-weight: 450;
         }
@@ -510,8 +510,8 @@
         }
 
         /* ================================
-                                                                                                                                                                                                                                                                                                   LAYOUTS
-                                                                                                                                                                                                                                                                                                ================================ */
+                                                                                                                                                                                                                                                                                                                   LAYOUTS
+                                                                                                                                                                                                                                                                                                                ================================ */
 
         .fs-about-two-col {
             display: grid;
@@ -564,8 +564,8 @@
         }
 
         /* ================================
-                                                                                                                                                                                                                                                                                                   TECHNOLOGY PLATFORM
-                                                                                                                                                                                                                                                                                                ================================ */
+                                                                                                                                                                                                                                                                                                                   TECHNOLOGY PLATFORM
+                                                                                                                                                                                                                                                                                                                ================================ */
 
         .fs-about-platform {
             position: relative;
@@ -578,21 +578,21 @@
             padding: 44px;
             border-radius: 7px;
             /* background: linear-gradient(135deg, #0018dc 0%, #0018dc 100%);
-                                                                                                                                    color: #ffffff;
-                                                                                                                                    box-shadow: 0 28px 80px rgba(0, 24, 220, .20); */
+                                                                                                                                                    color: #ffffff;
+                                                                                                                                                    box-shadow: 0 28px 80px rgba(0, 24, 220, .20); */
         }
 
         /* .fs-about-platform::after {
-                                                                                                                                                                                                                                                                    content: "";
-                                                                                                                                                                                                                                                                    position: absolute;
-                                                                                                                                                                                                                                                                    right: -120px;
-                                                                                                                                                                                                                                                                    top: -150px;
-                                                                                                                                                                                                                                                                    width: 320px;
-                                                                                                                                                                                                                                                                    height: 320px;
-                                                                                                                                                                                                                                                                    border-radius: 999px;
-                                                                                                                                                                                                                                                                    background: rgba(21, 209, 255, .16);
-                                                                                                                                                                                                                                                                    pointer-events: none;
-                                                                                                                                                                                                                                                                } */
+                                                                                                                                                                                                                                                                                    content: "";
+                                                                                                                                                                                                                                                                                    position: absolute;
+                                                                                                                                                                                                                                                                                    right: -120px;
+                                                                                                                                                                                                                                                                                    top: -150px;
+                                                                                                                                                                                                                                                                                    width: 320px;
+                                                                                                                                                                                                                                                                                    height: 320px;
+                                                                                                                                                                                                                                                                                    border-radius: 999px;
+                                                                                                                                                                                                                                                                                    background: rgba(21, 209, 255, .16);
+                                                                                                                                                                                                                                                                                    pointer-events: none;
+                                                                                                                                                                                                                                                                                } */
 
         .fs-about-platform h2 {
             color: #232325;
@@ -625,18 +625,18 @@
         }
 
         /* 
-                                                                                                                                                                                                                                                                    .fs-about-platform-link::after {
-                                                                                                                                                                                                                                                                        content: "";
-                                                                                                                                                                                                                                                                        position: absolute;
-                                                                                                                                                                                                                                                                        left: 0;
-                                                                                                                                                                                                                                                                        right: 0;
-                                                                                                                                                                                                                                                                        top: 0;
-                                                                                                                                                                                                                                                                        height: 4px;
-                                                                                                                                                                                                                                                                        background: var(--cyan);
-                                                                                                                                                                                                                                                                        transform: scaleX(0);
-                                                                                                                                                                                                                                                                        transform-origin: left;
-                                                                                                                                                                                                                                                                        transition: transform .25s ease;
-                                                                                                                                                                                                                                                                    } */
+                                                                                                                                                                                                                                                                                    .fs-about-platform-link::after {
+                                                                                                                                                                                                                                                                                        content: "";
+                                                                                                                                                                                                                                                                                        position: absolute;
+                                                                                                                                                                                                                                                                                        left: 0;
+                                                                                                                                                                                                                                                                                        right: 0;
+                                                                                                                                                                                                                                                                                        top: 0;
+                                                                                                                                                                                                                                                                                        height: 4px;
+                                                                                                                                                                                                                                                                                        background: var(--cyan);
+                                                                                                                                                                                                                                                                                        transform: scaleX(0);
+                                                                                                                                                                                                                                                                                        transform-origin: left;
+                                                                                                                                                                                                                                                                                        transition: transform .25s ease;
+                                                                                                                                                                                                                                                                                    } */
 
         .fs-about-platform-link:hover {
             transform: translateY(-3px);
@@ -666,8 +666,8 @@
         }
 
         /* ================================
-                                                                                                                                                                                                                                                                                                   PROOF STRIP
-                                                                                                                                                                                                                                                                                                ================================ */
+                                                                                                                                                                                                                                                                                                                   PROOF STRIP
+                                                                                                                                                                                                                                                                                                                ================================ */
 
         .fs-about-proof-strip {
             display: grid;
@@ -699,8 +699,8 @@
         }
 
         /* ================================
-                                                                                                                                                                                                                                                                                                   CTA
-                                                                                                                                                                                                                                                                                                ================================ */
+                                                                                                                                                                                                                                                                                                                   CTA
+                                                                                                                                                                                                                                                                                                                ================================ */
 
         .fs-about-cta {
             position: relative;
@@ -717,16 +717,16 @@
         }
 
         /* .fs-about-cta::after {
-                                                                                                                                                                                                                                                                content: "";
-                                                                                                                                                                                                                                                                position: absolute;
-                                                                                                                                                                                                                                                                right: -90px;
-                                                                                                                                                                                                                                                                top: -110px;
-                                                                                                                                                                                                                                                                width: 260px;
-                                                                                                                                                                                                                                                                height: 260px;
-                                                                                                                                                                                                                                                                border-radius: 999px;
-                                                                                                                                                                                                                                                                background: rgba(21, 209, 255, .16);
-                                                                                                                                                                                                                                                                pointer-events: none;
-                                                                                                                                                                                                                                                            } */
+                                                                                                                                                                                                                                                                                content: "";
+                                                                                                                                                                                                                                                                                position: absolute;
+                                                                                                                                                                                                                                                                                right: -90px;
+                                                                                                                                                                                                                                                                                top: -110px;
+                                                                                                                                                                                                                                                                                width: 260px;
+                                                                                                                                                                                                                                                                                height: 260px;
+                                                                                                                                                                                                                                                                                border-radius: 999px;
+                                                                                                                                                                                                                                                                                background: rgba(21, 209, 255, .16);
+                                                                                                                                                                                                                                                                                pointer-events: none;
+                                                                                                                                                                                                                                                                            } */
 
         .fs-about-cta h2 {
             max-width: 600px !important;

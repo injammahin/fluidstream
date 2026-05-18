@@ -16,7 +16,7 @@
         'about-us' => 'About Us',
         'contact' => 'Contact',
         'multiphase-compression' => 'MultiphaseCommander™',
-        'why-multiphase' => 'Multiphase Compression',
+        'why-multiphase' => 'Why Multiphase',
         'vapor-recovery' => 'Vapor Recovery',
         'casing-gas-compression' => 'Casing Gas Compression',
         'patented-technology' => 'Patents',

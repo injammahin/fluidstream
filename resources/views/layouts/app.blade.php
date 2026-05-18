@@ -429,8 +429,8 @@
     <meta name="keywords" content="{{ $metaKeywords }}">
     <meta name="robots" content="{{ $robotsMeta }}">
     <link rel="canonical" href="{{ $canonicalUrl }}">
-    <link rel="icon" type="image/png" href="{{ asset('img/favicon.png') }}?v=5">
-    <link rel="shortcut icon" type="image/png" href="{{ asset('img/favicon.png') }}?v=5">
+    <link rel="icon" type="image/png" href="{{ asset('img/favicon.jpeg') }}?v=5">
+    <link rel="shortcut icon" type="image/png" href="{{ asset('img/favicon.jpeg') }}?v=5">
     <meta property="og:site_name" content="{{ $siteName }}">
     <meta property="og:type" content="{{ $ogType }}">
     <meta property="og:title" content="{{ $metaTitle }}">
@@ -456,17 +456,17 @@
 
     @if (!$hasCustomSchema)
         <script type="application/ld+json">
-                                {!! json_encode($breadcrumbSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
-                            </script>
+                                                    {!! json_encode($breadcrumbSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+                                                </script>
 
         <script type="application/ld+json">
-                                {!! json_encode($pageSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
-                            </script>
+                                                    {!! json_encode($pageSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+                                                </script>
 
         @if ($faqSchema)
             <script type="application/ld+json">
-                                                        {!! json_encode($faqSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
-                                                    </script>
+                                                                                                {!! json_encode($faqSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+                                                                                            </script>
         @endif
     @endif
 
@@ -491,6 +491,7 @@
             pointer-events: auto;
         } */
 
+
         body {
             font-family: 'Manrope', sans-serif;
         }
@@ -508,6 +509,13 @@
         h1 {
             font-weight: 700 !important;
             font-size: 54px !important;
+        }
+
+        @media (max-width: 760px) {
+            h1 {
+                font-weight: 700 !important;
+                font-size: 32px !important;
+            }
         }
     </style>
 </head>

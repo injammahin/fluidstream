@@ -57,8 +57,8 @@
         }
 
         /* ================================
-                                                                                                               HERO WITH BACKGROUND IMAGE
-                                                                                                            ================================ */
+                                                                                                                   HERO WITH BACKGROUND IMAGE
+                                                                                                                ================================ */
 
         .patent-page .hero {
             position: relative;
@@ -101,8 +101,8 @@
             min-height: calc(100vh - 108px);
             display: flex;
             align-items: center;
-            padding-top: 76px;
-            padding-bottom: 76px;
+            padding: 96px 0 72px !important;
+
         }
 
         .patent-page .hero-grid {
@@ -237,17 +237,17 @@
         }
 
         /* .patent-page .metric::after {
-                                        content: "";
-                                        position: absolute;
-                                        left: 0;
-                                        right: 0;
-                                        top: 0;
-                                        height: 3px;
-                                        background: var(--fs-cyan);
-                                        transform: scaleX(0);
-                                        transform-origin: left;
-                                        transition: transform .25s cubic-bezier(.22, .61, .36, 1);
-                                    } */
+                                            content: "";
+                                            position: absolute;
+                                            left: 0;
+                                            right: 0;
+                                            top: 0;
+                                            height: 3px;
+                                            background: var(--fs-cyan);
+                                            transform: scaleX(0);
+                                            transform-origin: left;
+                                            transition: transform .25s cubic-bezier(.22, .61, .36, 1);
+                                        } */
 
         .patent-page .metric:hover {
             transform: translateY(-4px);
@@ -402,8 +402,8 @@
         }
 
         /* ================================
-                                                                                                               COMMON SECTION STYLES
-                                                                                                            ================================ */
+                                                                                                                   COMMON SECTION STYLES
+                                                                                                                ================================ */
 
         .patent-page .section-head {
             /* display: flex; */
@@ -813,8 +813,8 @@
         }
 
         /* ================================
-                                                                                                               RESPONSIVE
-                                                                                                            ================================ */
+                                                                                                                   RESPONSIVE
+                                                                                                                ================================ */
 
         @media (max-width: 1120px) {
             .patent-page .hero {

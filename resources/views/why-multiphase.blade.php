@@ -58,6 +58,14 @@
     header.hero .wrap {
       position: relative;
       z-index: 1;
+      padding: 96px 0 72px;
+
+    }
+
+    @media (max-width: 760px) {
+      header.hero .wrap {
+        padding: 72px 0 54px;
+      }
     }
 
     @media (max-width: 760px) {
@@ -765,7 +773,7 @@
     }
 
     .cta-panel {
-      background: rgba(255, 255, 255, .1);
+      background: rgb(255, 255, 255);
       border: 1px solid rgb(226 220 220);
       border-radius: 8px;
       padding: 24px;
@@ -854,9 +862,7 @@
         padding: 0 18px;
       }
 
-      header.hero {
-        padding: 58px 0 44px;
-      }
+
 
       h1 {
         font-size: 39px;
@@ -940,7 +946,7 @@
   </style>
 
   <header class="hero">
-    <div class="wrap py-8 sm:py-10 lg:py-20">
+    <div class="wrap">
       <div class="hero-layout">
 
         <div class="hero-left">
@@ -1696,43 +1702,44 @@
     </div>
   </section>
 
-  <section class="fs-before-after-section band">
+  <section class="fs-production-path-section band">
     <style>
-      .fs-before-after-section {
+      .fs-production-path-section {
         padding: 72px 0;
         background: #f6f7fb;
         border-top: 1px solid #dfe9ff;
         border-bottom: 1px solid #dfe9ff;
       }
 
-      .fs-before-after-head {
+      .fs-production-path-wrap {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .fs-production-path-head {
         margin-bottom: 34px;
       }
 
-
-
-      .fs-before-after-grid {
+      .fs-production-path-grid {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 22px;
+        gap: 20px;
         align-items: stretch;
       }
 
-      .fs-before-after-card {
+      .fs-production-path-card {
         position: relative;
         overflow: hidden;
-        border: 1px solid #d9e6ff;
-        border-radius: 7px;
+        border: 1px solid #cfe0ff;
+        border-radius: 4px;
         background: #ffffff;
-        box-shadow: 0 18px 44px rgba(13, 32, 84, .06);
-        transition:
-          transform .25s ease,
-          border-color .25s ease,
-          box-shadow .25s ease,
-          background .25s ease;
+        padding: 14px;
+        display: flex;
+        flex-direction: column;
+        transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease, background .25s ease;
       }
 
-      .fs-before-after-card::after {
+      .fs-production-path-card::after {
         content: "";
         position: absolute;
         top: 0;
@@ -1743,186 +1750,240 @@
         transform: scaleX(0);
         transform-origin: left;
         transition: transform .3s ease;
-        z-index: 2;
+        z-index: 4;
       }
 
-      .fs-before-after-card:hover {
-        transform: translateY(-4px);
+      .fs-production-path-card:hover {
+        transform: translateY(-3px);
         border-color: #0018dc;
         background: #ffffff;
-        /* box-shadow: 0 24px 54px rgba(0, 24, 220, .12); */
+        box-shadow: 0 18px 36px rgba(16, 42, 67, .08);
       }
 
-      .fs-before-after-card:hover::after {
+      .fs-production-path-card:hover::after {
         transform: scaleX(1);
       }
 
-      .fs-before-after-image {
-        position: relative;
-        min-height: 360px;
-        background: #07111f;
-        overflow: hidden;
+      .fs-production-path-title {
+        margin: 0 0 12px;
+        color: #1f2937;
+        font-size: 16px;
+        line-height: 1.3;
+        font-weight: 400;
       }
 
-      .fs-before-after-image img {
+      .fs-production-path-image-box {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 300px;
+        border: 1px solid #dfeaff;
+        border-radius: 0;
+        background: #f7fbff;
+        flex: 0 0 auto;
+      }
+
+      .fs-production-path-image-box img {
         width: 100%;
         height: 100%;
-        min-height: 360px;
         display: block;
         object-fit: cover;
+        object-position: center;
+        border-radius: 0;
         transition: transform .35s ease;
       }
 
-      .fs-before-after-card:hover .fs-before-after-image img {
-        transform: scale(1.035);
+      .fs-production-path-card:hover .fs-production-path-image-box img {
+        transform: scale(1.025);
       }
 
-      .fs-before-after-label {
+      .fs-path-label {
         position: absolute;
-        left: 18px;
-        top: 18px;
-        z-index: 2;
+        z-index: 5;
         display: inline-flex;
         align-items: center;
-        min-height: 34px;
-        padding: 0 14px;
-        border-radius: 999px;
-        color: #ffffff;
-        background: #0018dc;
-        font-size: 12px;
-        font-weight: 900;
-        letter-spacing: .12em;
-        text-transform: uppercase;
-        box-shadow: 0 12px 26px rgba(0, 0, 0, .22);
+        justify-content: center;
+        min-height: 20px;
+        padding: 4px 10px;
+        background: rgba(255, 255, 255, .94);
+        color: #111827;
+        border: 1px solid rgba(15, 23, 42, .12);
+        border-radius: 4px;
+        font-size: 11px;
+        line-height: 1;
+        font-weight: 700;
+        box-shadow: 0 8px 18px rgba(15, 23, 42, .16);
+        pointer-events: none;
+        white-space: nowrap;
       }
 
-      .fs-before-after-content {
-        padding: 24px;
+      .fs-path-label::before {
+        content: "";
+        position: absolute;
+        inset: -4px;
+        border: 1px solid rgba(0, 24, 220, .18);
+        border-radius: 6px;
+        opacity: .7;
       }
 
-      .fs-before-after-content h3 {
-        margin: 0 0 10px;
-        color: #232325;
-        font-size: 26px;
-        line-height: 1.08;
-        letter-spacing: -.035em;
-        font-weight: 800;
+      .fs-label-separator {
+        left: 20%;
+        top: 48%;
       }
 
-      .fs-before-after-content p {
-        margin: 0;
-        color: #4a5568;
-        font-size: 16px;
-        line-height: 1.65;
+      .fs-label-flare {
+        left: 57%;
+        top: 25%;
       }
 
-      .fs-before-after-note {
-        margin-top: 24px;
-        padding: 18px 20px;
-        border: 1px solid #d9e6ff;
-        border-radius: 7px;
-        background: #ffffff;
-        color: #4a5568;
-        font-size: 15px;
-        line-height: 1.65;
-        box-shadow: 0 14px 34px rgba(13, 32, 84, .045);
+      .fs-label-gas-compressor {
+        left: 65%;
+        top: 48%;
       }
 
-      .fs-before-after-note strong {
-        color: #0018dc;
-        font-weight: 900;
+      .fs-label-oil-tank {
+        left: 41%;
+        top: 64%;
+      }
+
+      .fs-label-oil-pump {
+        left: 64%;
+        top: 70%;
+      }
+
+
+
+      .fs-production-path-card p {
+        margin: 12px 0 0;
+        min-height: 64px;
+        color: #64748b;
+        font-size: 14px;
+        line-height: 1.45;
       }
 
       @media (max-width: 900px) {
-        .fs-before-after-grid {
+        .fs-production-path-grid {
           grid-template-columns: 1fr;
         }
 
-        .fs-before-after-image,
-        .fs-before-after-image img {
-          min-height: 300px;
+        .fs-production-path-image-box {
+          height: 360px;
+        }
+
+        .fs-production-path-card p {
+          min-height: auto;
+        }
+
+        .fs-path-label {
+          font-size: 13px;
+          min-height: 26px;
+          padding: 4px 9px;
         }
       }
 
       @media (max-width: 640px) {
-        .fs-before-after-section {
+        .fs-production-path-section {
           padding: 52px 0;
         }
 
-        .fs-before-after-image,
-        .fs-before-after-image img {
-          min-height: 240px;
+        .fs-production-path-wrap {
+          padding: 0 18px;
         }
 
-        .fs-before-after-content {
-          padding: 20px;
+        .fs-production-path-head h2 {
+          font-size: 40px;
         }
 
-        .fs-before-after-content h3 {
-          font-size: 23px;
+        .fs-production-path-image-box {
+          height: 240px;
+        }
+
+        .fs-path-label {
+          font-size: 11px;
+          min-height: 22px;
+          padding: 3px 7px;
+        }
+
+        .fs-label-separator {
+          left: 5%;
+          top: 58%;
+        }
+
+        .fs-label-flare {
+          left: 54%;
+          top: 34%;
+        }
+
+        .fs-label-gas-compressor {
+          left: 58%;
+          top: 56%;
+        }
+
+        .fs-label-oil-tank {
+          left: 34%;
+          top: 74%;
+        }
+
+        .fs-label-oil-pump {
+          left: 59%;
+          top: 81%;
         }
       }
     </style>
 
-    <div class="wrap">
-      <div class="fs-before-after-head">
-        <div class="kicker mb-2">Before and after</div>
+    <div class="fs-production-path-wrap">
+      <div class="fs-production-path-head">
+        <div class="kicker mb-2">A simpler production path</div>
 
-        <h2>See the field difference when mixed-phase flow is handled correctly.</h2>
+        <h2>Simplifying the production system.</h2>
 
         <p class="lead">
-          MultiphaseCommander™ is designed to reduce surface complexity, lower backpressure, and support more reliable
-          movement of gas and liquids together in real field conditions.
+          Fluidstream supports a facility-design shift toward less separation-first infrastructure, fewer major
+          equipment items, and a clearer flow-through production approach where the technology can create value
+          earlier in the process. The comparison is not cosmetic. It changes how many pieces of equipment have to
+          work correctly before production moves.
         </p>
       </div>
 
-      <div class="fs-before-after-grid">
-        <article class="fs-before-after-card">
-          <div class="fs-before-after-image">
-            <span class="fs-before-after-label">Before</span>
+      <div class="fs-production-path-grid">
+        <article class="fs-production-path-card">
+          <h3 class="fs-production-path-title">Conventional system</h3>
 
-            <img src="{{ asset('img/before.png') }}" alt="Before MultiphaseCommander installation">
+          <div class="fs-production-path-image-box">
+            <img src="{{ asset('img/before.png') }}" alt="Before conventional production system">
+
+            <span class="fs-path-label fs-label-separator">separator</span>
+            <span class="fs-path-label fs-label-flare">flare</span>
+            <span class="fs-path-label fs-label-gas-compressor">gas compressor</span>
+            <span class="fs-path-label fs-label-oil-tank">oil tank</span>
+            <span class="fs-path-label fs-label-oil-pump">oil pump</span>
           </div>
 
-          <div class="fs-before-after-content">
-            <h3>Higher backpressure and more surface complexity.</h3>
-
-            <p>
-              Before multiphase boosting, production can be restricted by liquid loading, unstable flow, separator
-              dependency, added support equipment, and rising gathering-system pressure.
-            </p>
-          </div>
+          <p>
+            High equipment count, larger footprint, more interconnections, more potential failure points, and
+            more dependence on keeping the inlet stream clean enough for the compressor.
+          </p>
         </article>
 
-        <article class="fs-before-after-card">
-          <div class="fs-before-after-image">
-            <span class="fs-before-after-label">After</span>
+        <article class="fs-production-path-card">
+          <h3 class="fs-production-path-title">Fluidstream system</h3>
 
-            <img src="{{ asset('img/after.png') }}" alt="After MultiphaseCommander installation">
+          <div class="fs-production-path-image-box">
+            <img src="{{ asset('img/after.png') }}" alt="After Fluidstream production system">
           </div>
 
-          <div class="fs-before-after-content">
-            <h3>Lower pressure and better mixed-flow movement.</h3>
-
-            <p>
-              After applying MultiphaseCommander™, gas, oil, water, and condensate can move together more effectively,
-              helping support production recovery and simpler field architecture.
-            </p>
-          </div>
+          <p>
+            Reduced infrastructure, simplified operation, lower cost structure, earlier production movement, and
+            broader applicability across challenging field conditions.
+          </p>
         </article>
       </div>
-
-      {{-- <div class="fs-before-after-note">
-        <strong>Application note:</strong>
-        Actual results depend on inlet pressure, discharge pressure, gas rate, liquid rate, fluid composition, site
-        layout, and operating conditions.
-      </div>
-    </div> --}}
+    </div>
   </section>
 
 
 
-  <section class="band">
+  <section>
     <div class="wrap py-12">
       <div class="kicker mb-2">Commercial advantage</div>
       <h2>Lower cost. Broader deployment. Better fit for hard-duty service.</h2>
@@ -1961,7 +2022,7 @@
     </div>
   </section>
 
-  <section>
+  <section class="band">
     <div class="wrap py-12">
       <div class="kicker mb-2">Best-fit applications</div>
       <h2>Not every site needs multiphase compression. The right sites need it badly.</h2>
@@ -2033,11 +2094,11 @@
     }
 
     /* .fit-card p {
-                                                                                                                                                                                                                                        margin: 0;
-                                                                                                                                                                                                                                        font-size: 22px;
-                                                                                                                                                                                                                                        line-height: 1.42;
-                                                                                                                                                                                                                                        color: #53647c;
-                                                                                                                                                                                                                                      } */
+                                                                                                                                                                                                                                                                                          margin: 0;
+                                                                                                                                                                                                                                                                                          font-size: 22px;
+                                                                                                                                                                                                                                                                                          line-height: 1.42;
+                                                                                                                                                                                                                                                                                          color: #53647c;
+                                                                                                                                                                                                                                                                                        } */
 
     @media (max-width: 991px) {
       .fit-grid {
@@ -2050,7 +2111,7 @@
     }
   </style>
 
-  <section id="applications" class="band">
+  <section id="applications">
     <div class="wrap py-12">
       <div class="kicker mb-2">Applications</div>
       <h2>Where it creates value.</h2>
@@ -2288,7 +2349,7 @@
     </div>
   </section>
 
-  <section class="cta">
+  <section class="cta band">
     <div class="wrap py-12">
       <div class="cta-box">
         <div>
