@@ -758,7 +758,7 @@
                     <div class="fip-cta-links">
                         <a href="{{ url('/contact') }}">Request technical application review →</a>
                         <a href="{{ url('/case-studies') }}">Review case studies →</a>
-                        <a href="{{ url('/multiphase-compression-technology') }}">Explore technology →</a>
+                        <a href="{{ url('/multiphase-compression') }}">Explore technology →</a>
                     </div>
                 </div>
             </div>

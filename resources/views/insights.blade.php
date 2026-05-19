@@ -939,6 +939,8 @@
                 'url' => url('/patented-technology'),
             ],
         ];
+                $displayInsights = array_reverse($insights);
+
     @endphp
 
     <div class="fip-insights-page">
@@ -1024,15 +1026,15 @@
                         </div>
 
                         <div class="fip-insight-grid" id="fipInsightGrid">
-                            @foreach ($insights as $insight)
+                            @foreach ($displayInsights as $insight)
                                 @php
-                                    $articleNumber = count($insights) - $loop->index;
+                                    $articleNumber = count($displayInsights) - $loop->index;
                                 @endphp
 
                                 <a id="{{ $insight['id'] }}"
-                                   href="{{ $insight['url'] }}"
-                                   class="fip-article-card"
-                                   data-topics="{{ implode(' ', $insight['filters']) }}">
+                                href="{{ $insight['url'] }}"
+                                class="fip-article-card"
+                                data-topics="{{ implode(' ', $insight['filters']) }}">
                                     <div class="fip-card-top">
                                         <span class="fip-tag">{{ $insight['label'] }}</span>
 

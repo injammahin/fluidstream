@@ -2125,7 +2125,7 @@
 
                     <ul class="fs-related-list">
                         <li>
-                            <a href="{{ url('/multiphase-compression-technology') }}">
+                            <a href="{{ url('/multiphase-compression') }}">
                                 Multiphase Compression Technology
                             </a>
                         </li>

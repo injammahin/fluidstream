@@ -1986,7 +1986,7 @@
 
                     <ul class="fs-related-list">
                         <li>
-                            <a href="{{ url('/case-studies/multiphase-compression-production-recovery') }}">
+                            <a href="{{ url('/case-studies/multiphasecommander-production-recovery') }}">
                                 MultiphaseCommander™ Production Recovery Case Study
                             </a>
                         </li>
@@ -1998,7 +1998,7 @@
 
                     <ul class="fs-related-list">
                         <li>
-                            <a href="{{ url('/multiphase-compression-technology') }}">
+                            <a href="{{ url('/multiphase-compression') }}">
                                 Multiphase Compression Technology
                             </a>
                         </li>

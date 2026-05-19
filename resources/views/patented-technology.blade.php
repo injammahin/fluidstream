@@ -110,7 +110,7 @@
             display: grid;
             grid-template-columns: minmax(0, 1.05fr) minmax(420px, .95fr);
             gap: 32px;
-            align-items: center;
+            align-items: flex-start;
         }
 
         .patent-page .eyebrow {
@@ -300,7 +300,7 @@
                 "main main";
             gap: 16px;
             align-content: start;
-            padding: 24px;
+            padding: 16px;
             /* border: 1px solid rgba(255, 255, 255, .16); */
             /* background: rgba(255, 255, 255, .10); */
             /* backdrop-filter: blur(16px); */

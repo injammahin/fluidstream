@@ -1251,9 +1251,9 @@
                 color: #ffffff;
                 background:
                     linear-gradient(100deg, rgba(2, 8, 35, .36) 0%, rgba(2, 8, 35, .28) 42%, rgba(6, 10, 37, 0.2) 72%, rgba(0, 24, 220, 0) 100%),
-                    url("{{ asset('/img/insights/facility.png') }}");
+                    url("{{ asset('/img/insights/VRU-tank.png') }}");
                 background-size: cover;
-                background-position: center 45%;
+                background-position: center 75%;
                 background-repeat: no-repeat;
                 border-bottom: 1px solid #dfe9ff;
             }

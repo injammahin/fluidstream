@@ -2092,18 +2092,17 @@
         <div class="fs-home-hero-inner">
             <div class="fs-home-hero-copy">
                 <h1 id="home-hero-title" class="fs-home-hero-title">
-                    Multiphase Compression for Improved Production, Emissions Reduction
+                    Increase production. Eliminate venting.
                 </h1>
 
                 <div class="fs-home-hero-line"></div>
 
                 <p class="fs-home-hero-lead">
-                    Compression systems designed for real oilfield conditions, handling 100% liquid, 100% gas, or any liquid–gas mixture.
+                    Multiphase compression systems designed for real oilfield conditions, handling 100% liquid, 100% gas, or any liquid–gas mixture.
                 </p>
 
                 <p class="fs-home-hero-support">
-                    Fluidstream helps operators keep production running, avoid maintenance, and manage liquids, slugs,
-                    freezing, and unstable flow in situations where conventional compression struggles.
+                    Built for wet gas, liquids, slugs, freezing, and unstable flow—conditions where conventional compression struggles.
                 </p>
 
                 <div class="fs-home-hero-actions">
@@ -2211,7 +2210,7 @@
             </aside>
             <style>
                 .fs-home-quote-card {
-                    top: -204px;
+                    top: -260px;
                     position: relative;
                     width: 100%;
                     max-width: 580px;
@@ -3059,7 +3058,7 @@
         </style>
 
         <div class="fs-video-showcase-wrap">
-            <div class="fs-video-showcase-head section-head">
+            {{-- <div class="fs-video-showcase-head section-head">
                 <div class="kicker mb-2">Field operation video</div>
 
                 <h2>Less equipment. More operating flexibility.</h2>
@@ -3068,7 +3067,7 @@
                     Fluidstream is designed to reduce facility complexity by handling multiphase production directly
                     through a compact compression platform.
                 </p>
-            </div>
+            </div> --}}
 
             <div class="fs-video-showcase-card">
                 <div class="fs-video-showcase-media">
