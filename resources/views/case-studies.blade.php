@@ -529,6 +529,28 @@
             margin-top: 6px;
         }
 
+        .case-card-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding-top: 16px;
+            margin: 2px 0 16px;
+            border-top: 1px solid var(--line);
+        }
+
+        .case-meta-pill {
+            display: inline-flex;
+            align-items: center;
+            border-radius: 999px;
+            background: #f4f7fc;
+            color: #4b5667;
+            padding: 8px 11px;
+            font-size: 11.5px;
+            font-weight: 800;
+            line-height: 1;
+            white-space: nowrap;
+        }
+
         .case-hook {
             padding: 13px 15px;
             border-left: 4px solid var(--blue);
@@ -854,6 +876,8 @@
                 'logo_alt' => 'Whitecap Resources logo',
             ],
         ];
+
+        $caseFilterLabels = array_column($caseFilters, 'label', 'id');
     @endphp
 
     <div class="case-page">
@@ -970,10 +994,18 @@
                                             </div>
                                         @endforeach
                                     </div>
-
                                     <div class="case-hook">
                                         {{ $caseStudy['hook'] }}
                                     </div>
+
+                                    <div class="case-card-meta">
+                                        @foreach ($caseStudy['filters'] as $filterId)
+                                            <span class="case-meta-pill">
+                                                {{ $caseFilterLabels[$filterId] ?? ucwords(str_replace('-', ' ', $filterId)) }}
+                                            </span>
+                                        @endforeach
+                                    </div>
+
 
                                     <div class="case-actions case-actions-with-logo">
                                         <span class="case-tagline">{{ $caseStudy['tagline'] }}</span>
