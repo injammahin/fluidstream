@@ -428,17 +428,17 @@
 
     @if (!$hasCustomSchema)
         <script type="application/ld+json">
-                                        {!! json_encode($breadcrumbSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
-                                    </script>
+                                            {!! json_encode($breadcrumbSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
+                                        </script>
 
         <script type="application/ld+json">
-                                        {!! json_encode($pageSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
-                                    </script>
+                                            {!! json_encode($pageSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
+                                        </script>
 
         @if ($faqSchema)
             <script type="application/ld+json">
-                                                                        {!! json_encode($faqSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
-                                                                    </script>
+                                                                                {!! json_encode($faqSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
+                                                                            </script>
         @endif
     @endif
 
@@ -493,7 +493,7 @@
             }
         }
 
-        img,
+        /* img,
         video,
         canvas,
         svg {
@@ -507,7 +507,7 @@
         img,
         video {
             pointer-events: auto;
-        }
+        } */
     </style>
 </head>
 
@@ -557,6 +557,7 @@
         });
     </script>
 
+    {{--
     <script>
         (function () {
             document.addEventListener('contextmenu', function (event) {
@@ -619,7 +620,7 @@
                 };
             });
         })();
-    </script>
+    </script> --}}
 
     @stack('script')
 </body>

@@ -762,7 +762,7 @@
     }
 
     .fs-header-inner {
-        width: min(calc(100% - 56px), 1680px);
+        width: 100%;
         margin: 0 auto;
     }
 
@@ -778,9 +778,9 @@
         grid-row: 1 / 3;
         display: flex;
         align-items: center;
-        justify-content: flex-start;
-        padding-right: 34px;
+        justify-content: center;
         border-right: 1px solid #e7edf6;
+        min-height: var(--fs-header-height);
     }
 
     .fs-logo-link {
@@ -793,7 +793,7 @@
     }
 
     .fs-logo-link img {
-        height: 58px;
+        height: 68px;
         width: auto;
         display: block;
     }
@@ -1401,7 +1401,7 @@
         }
 
         .fs-header-inner {
-            width: min(calc(100% - 48px), 1440px);
+            width: 100%;
         }
 
         .fs-topbar-grid {
@@ -1411,7 +1411,7 @@
 
         .fs-desktop-nav-grid {
             grid-template-columns:
-                minmax(220px, 1fr) minmax(130px, 180px) minmax(160px, 205px) minmax(130px, 180px) minmax(200px, 1fr);
+                minmax(220px, 1fr) minmax(130px, 220px) minmax(160px, 220px) minmax(130px, 180px) minmax(200px, 1fr);
         }
 
         .fs-mega-right-3 {

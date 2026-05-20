@@ -792,7 +792,7 @@
                 'title' => 'MultiphaseCommander™ Production Optimization',
                 'description' => 'A gas-driven MultiphaseCommander™ reduced backpressure, handled slugs and wide variable flow, and restored two nearly dead wells without adding separation-first infrastructure.',
                 'url' => url('/case-studies/multiphasecommander-production-recovery'),
-                'filters' => ['multiphase-production', 'production-gain', 'equipment-reliability'],
+                'filters' => ['casing-gas-compression', 'multiphase-production', 'production-gain', 'equipment-reliability'],
                 'metrics' => [
                     ['value' => '~10e3', 'label' => 'm³/day gas restored'],
                     ['value' => 'C$1.5M+', 'label' => 'incremental annual revenue'],
