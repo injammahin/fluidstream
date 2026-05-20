@@ -931,10 +931,10 @@
                                 <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
                             </div>
 
-                            <div class="form-note">
+                            {{-- <div class="form-note">
                                 This technical form sends a structured message through the same contact route. The submitted
                                 message will include all operating values and notes.
-                            </div>
+                            </div> --}}
 
                             <button class="submit" id="technicalSubmit" type="submit">
                                 Submit Application for Review

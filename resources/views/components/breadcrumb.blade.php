@@ -15,7 +15,7 @@
         'sustainability' => 'Sustainability',
         'about-us' => 'About Us',
         'contact' => 'Contact',
-        'multiphase-compression' => 'MultiphaseCommander™',
+        'multiphase-compression' => 'Multiphase Compression',
         'why-multiphase' => 'Why Multiphase',
         'vapor-recovery' => 'Vapor Recovery',
         'casing-gas-compression' => 'Casing Gas Compression',
@@ -32,7 +32,7 @@
     if ($path === 'multiphase-compression') {
         $items = [
             ['label' => 'Solutions', 'url' => url('/solutions')],
-            ['label' => 'MultiphaseCommander™', 'url' => null],
+            ['label' => 'Multiphase Compression', 'url' => null],
         ];
     } elseif ($path === 'vapor-recovery') {
         $items = [

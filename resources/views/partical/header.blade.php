@@ -801,7 +801,7 @@
     .fs-logo-since {
         display: block;
         margin-top: -2px;
-        padding-left: 11px;
+        padding-left: 14px;
         color: #697286;
         font-size: 13px;
         font-weight: 500;
@@ -1124,7 +1124,7 @@
 
     .fs-mega-left {
         display: block;
-        padding: 28px 32px 28px 0;
+        padding: 28px 32px 28px 13px;
         border-right: 1px solid #e7edf6;
         text-align: left;
     }
