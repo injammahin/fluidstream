@@ -156,13 +156,13 @@
             border-color: var(--fip-blue);
         }
 
-        .fip-topic-checkbox:checked + .fip-check-box {
+        .fip-topic-checkbox:checked+.fip-check-box {
             background: var(--fip-blue);
             border-color: var(--fip-blue);
             box-shadow: 0 0 0 4px rgba(16, 40, 234, 0.09);
         }
 
-        .fip-topic-checkbox:checked + .fip-check-box::after {
+        .fip-topic-checkbox:checked+.fip-check-box::after {
             transform: rotate(-45deg) scale(1);
         }
 
@@ -284,7 +284,7 @@
             transform: scaleX(1);
         }
 
-        .fip-article-card > * {
+        .fip-article-card>* {
             position: relative;
             z-index: 2;
         }
@@ -535,7 +535,7 @@
             position: absolute;
             inset: 0;
             z-index: -1;
-            background: linear-gradient(180deg, rgba(2, 8, 35, .08) 0%, rgba(2, 8, 35, .46) 100%);
+            background: linear-gradient(180deg, rgb(2 8 35 / 35%) 0%, rgba(2, 8, 35, .46) 100%);
             pointer-events: none;
         }
 
@@ -608,6 +608,8 @@
         }
 
         .fip-insights-hero-box {
+            background: rgb(2 6 23 / 0%);
+            backdrop-filter: blur(3px);
             position: relative;
             overflow: hidden;
             border: 1px solid rgba(255, 255, 255, .22);
@@ -683,6 +685,7 @@
         }
 
         @media (max-width: 980px) {
+
             .fip-insights-hero,
             .fip-insights-hero-wrap {
                 min-height: auto;
@@ -880,7 +883,7 @@
                 'label' => 'Compression Selection',
                 'title' => 'When Is CompressionCommander™ Needed?',
                 'description' => 'Application-focused guide to identifying casing gas compression opportunities where backpressure, gas interference, and production losses affect wells.',
-                'url' => url('/insights/when-is-casing-gas-compressioncommander'),
+                'url' => url('/insights/casing-gas-compression-economics'),
                 'filters' => ['casing-gas-compression', 'compression-selection'],
                 'tags' => ['Casing Gas Compression', 'Compression Selection'],
             ],
@@ -939,7 +942,7 @@
                 'url' => url('/patented-technology'),
             ],
         ];
-                $displayInsights = array_reverse($insights);
+        $displayInsights = array_reverse($insights);
 
     @endphp
 
@@ -950,7 +953,8 @@
                     <h1>Technical insights for real-world oilfield compression challenges.</h1>
 
                     <p class="fip-insights-hero-lead">
-                        Explore engineering-focused articles on multiphase compression, vapor recovery, casing gas compression,
+                        Explore engineering-focused articles on multiphase compression, vapor recovery, casing gas
+                        compression,
                         liquid-loaded wells, wet gas reliability, methane reduction, and production optimization.
                     </p>
 
@@ -974,12 +978,14 @@
 
                         <div class="fip-insights-hero-item">
                             <strong>Failure mechanics</strong>
-                            <span>Understand why gas-only systems struggle with wet, unstable, liquid-influenced service.</span>
+                            <span>Understand why gas-only systems struggle with wet, unstable, liquid-influenced
+                                service.</span>
                         </div>
 
                         <div class="fip-insights-hero-item">
                             <strong>Field application</strong>
-                            <span>Translate technical issues into production recovery, emissions reduction, and reliability outcomes.</span>
+                            <span>Translate technical issues into production recovery, emissions reduction, and reliability
+                                outcomes.</span>
                         </div>
                     </div>
                 </aside>
@@ -1031,10 +1037,8 @@
                                     $articleNumber = count($displayInsights) - $loop->index;
                                 @endphp
 
-                                <a id="{{ $insight['id'] }}"
-                                href="{{ $insight['url'] }}"
-                                class="fip-article-card"
-                                data-topics="{{ implode(' ', $insight['filters']) }}">
+                                <a id="{{ $insight['id'] }}" href="{{ $insight['url'] }}" class="fip-article-card"
+                                    data-topics="{{ implode(' ', $insight['filters']) }}">
                                     <div class="fip-card-top">
                                         <span class="fip-tag">{{ $insight['label'] }}</span>
 

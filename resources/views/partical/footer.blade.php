@@ -371,8 +371,8 @@
                     <h3 class="fsf-footer-brand-title">Fluidstream</h3>
                     <p class="fsf-footer-brand-text">
                         Fluidstream delivers advanced multiphase compression systems that eliminate separation, handle
-                        liquids and gas together, reduce downtime, lower emissions, and improve production across vapor
-                        recovery, casing gas, and multiphase operations.
+                        liquids and gas together, reduce downtime, enable low-maintenance operation, and improve
+                        production across vapor recovery, casing gas, and multiphase operations.
                     </p>
 
                     <div class="fsf-footer-address">

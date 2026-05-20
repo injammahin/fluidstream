@@ -147,8 +147,10 @@
             overflow: hidden;
             border: 1px solid rgba(255, 255, 255, .22);
             border-radius: 7px;
+            background: rgb(2 6 23 / 6%);
             box-shadow: 0 26px 70px rgba(0, 0, 0, .22);
             padding: 26px;
+            backdrop-filter: blur(2px);
             transition: transform .24s ease, border-color .24s ease, box-shadow .24s ease;
         }
 
@@ -333,13 +335,13 @@
             border-color: var(--blue);
         }
 
-        .case-topic-checkbox:checked + .case-check-box {
+        .case-topic-checkbox:checked+.case-check-box {
             background: var(--blue);
             border-color: var(--blue);
             box-shadow: 0 0 0 4px rgba(0, 24, 220, .09);
         }
 
-        .case-topic-checkbox:checked + .case-check-box::after {
+        .case-topic-checkbox:checked+.case-check-box::after {
             transform: rotate(-45deg) scale(1);
         }
 
@@ -630,6 +632,7 @@
         }
 
         @media (max-width: 980px) {
+
             .fs-case-study-hero,
             .fs-case-study-hero-wrap {
                 min-height: auto;
@@ -721,7 +724,8 @@
                 max-height: 44px;
             }
         }
-          #case-studies {
+
+        #case-studies {
             scroll-margin-top: 0px;
         }
     </style>
@@ -869,7 +873,8 @@
                             Explore Case Studies →
                         </a>
 
-                        <a class="fs-case-study-hero-btn fs-case-study-hero-btn-secondary" href="{{ url('/technical-review') }}">
+                        <a class="fs-case-study-hero-btn fs-case-study-hero-btn-secondary"
+                            href="{{ url('/technical-review') }}">
                             Request Technical Review
                         </a>
                     </div>
@@ -888,7 +893,8 @@
 
                         <div class="fs-case-study-proof-metric">
                             <strong>100%</strong>
-                            <span>uptime reported in active VaporCommander™ service with no maintenance at report date.</span>
+                            <span>uptime reported in active VaporCommander™ service with no maintenance at report
+                                date.</span>
                         </div>
 
                         <div class="fs-case-study-proof-metric">
@@ -945,9 +951,7 @@
 
                         <div class="case-grid" id="caseStudyGrid">
                             @foreach ($caseStudies as $caseStudy)
-                                <article
-                                    id="{{ $caseStudy['id'] }}"
-                                    class="case-card"
+                                <article id="{{ $caseStudy['id'] }}" class="case-card"
                                     data-filters="{{ implode(' ', $caseStudy['filters']) }}">
                                     <div class="case-top">
                                         <div class="case-product">{{ $caseStudy['product'] }}</div>

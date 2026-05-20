@@ -814,8 +814,8 @@
     }
 
     /* =========================================
-                                                                                                               HERO SECTION FIXED STYLE
-                                                                                                            ========================================= */
+                                                                                                                                                           HERO SECTION FIXED STYLE
+                                                                                                                                                        ========================================= */
 
     header.hero {
       position: relative !important;
@@ -1854,8 +1854,8 @@
   </section>
   <style>
     /* ================================
-                                                                                                                                         TECHNOLOGY BENEFITS 3x2 LAYOUT
-                                                                                                                                      ================================ */
+                                                                                                                                                                                     TECHNOLOGY BENEFITS 3x2 LAYOUT
+                                                                                                                                                                                  ================================ */
 
     .technology-benefits-section {
       background: #ffffff;
@@ -2244,12 +2244,12 @@
       }
 
       /* .fs-mpc-section-head h2 {
-                                                                                                                                                                    font-size: clamp(30px, 3.2vw, 46px);
-                                                                                                                                                                    line-height: 1.02;
-                                                                                                                                                                    margin: 0 0 14px;
-                                                                                                                                                                    letter-spacing: -.035em;
-                                                                                                                                                                    color: var(--mpc-ink);
-                                                                                                                                                                  } */
+                                                                                                                                                                                                                font-size: clamp(30px, 3.2vw, 46px);
+                                                                                                                                                                                                                line-height: 1.02;
+                                                                                                                                                                                                                margin: 0 0 14px;
+                                                                                                                                                                                                                letter-spacing: -.035em;
+                                                                                                                                                                                                                color: var(--mpc-ink);
+                                                                                                                                                                                                              } */
 
       .fs-mpc-lead {
         font-size: 17px;
@@ -2615,30 +2615,61 @@
 
         <div>
           <h2>Engineering validation for the MultiphaseCommander™ family.</h2>
-
-          <p class="lead">
-            Compare the model range visually, then review the detailed specifications for sizing, horsepower,
-            gas-rate performance, and site requirements.
-          </p>
-
           <p class="lead">
             Select an inlet pressure to review gas capacity across the MultiphaseCommander™ model range.
           </p>
         </div>
       </div>
 
-      <div class="fs-mpc-global-control">
-        <div>
-          <strong>Compare all models at</strong>
-        </div>
 
-        <select id="fsMpcGlobalPressure">
-          <option value="0">5 psi | 34 kPa</option>
-          <option value="1">50 psi | 345 kPa</option>
-          <option value="2">100 psi | 690 kPa</option>
-          <option value="3">150 psi | 1034 kPa</option>
-          <option value="4" selected>200 psi | 1379 kPa</option>
-        </select>
+      <div class="flex ">
+        <p class="blue-bg">
+          Additional models and configurations are available.
+          <a href="{{ url('/contact') }}" class="blue-bg-link">Contact Us</a>
+          for application-specific sizing.
+        </p>
+
+        <style>
+          .blue-bg {
+            margin: 5px 3px 18px 2px;
+            max-width: 75ch !important;
+            /* margin: 18px 0; */
+            padding: 14px 18px;
+            border-radius: 7px;
+            background: #0018dc;
+            color: #ffffff;
+            font-size: 16px;
+            line-height: 1.6;
+            font-weight: 500;
+          }
+
+          .blue-bg-link {
+            color: #ffffff;
+            font-weight: 900;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            transition: opacity 0.2s ease;
+          }
+
+          .blue-bg-link:hover {
+            color: #ffffff;
+            opacity: 0.82;
+            text-decoration: underline;
+          }
+        </style>
+        <div class="fs-mpc-global-control">
+          <div>
+            <strong>Compare all models at</strong>
+          </div>
+
+          <select id="fsMpcGlobalPressure">
+            <option value="0">5 psi | 34 kPa</option>
+            <option value="1">50 psi | 345 kPa</option>
+            <option value="2">100 psi | 690 kPa</option>
+            <option value="3">150 psi | 1034 kPa</option>
+            <option value="4" selected>200 psi | 1379 kPa</option>
+          </select>
+        </div>
       </div>
 
       <div class="fs-mpc-cards">

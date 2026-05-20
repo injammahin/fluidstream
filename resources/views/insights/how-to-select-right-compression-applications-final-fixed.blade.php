@@ -130,16 +130,16 @@
     @endphp
 
     <script type="application/ld+json">
-            {!! json_encode($techArticleSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
-        </script>
+                {!! json_encode($techArticleSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+            </script>
 
     <script type="application/ld+json">
-            {!! json_encode($faqSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
-        </script>
+                {!! json_encode($faqSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+            </script>
 
     <script type="application/ld+json">
-            {!! json_encode($breadcrumbSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
-        </script>
+                {!! json_encode($breadcrumbSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+            </script>
 @endsection
 @section('content')
     <style>
@@ -234,13 +234,13 @@
         }
 
         /* 
-                                                                                                                                                                                                                                                                                                                                                            .section-label:before {
-                                                                                                                                                                                                                                                                                                                                                                content: "";
-                                                                                                                                                                                                                                                                                                                                                                width: 38px;
-                                                                                                                                                                                                                                                                                                                                                                height: 2px;
-                                                                                                                                                                                                                                                                                                                                                                background: var(--cyan);
-                                                                                                                                                                                                                                                                                                                                                                display: inline-block;
-                                                                                                                                                                                                                                                                                                                                                            } */
+                                                                                                                                                                                                                                                                                                                                                                .section-label:before {
+                                                                                                                                                                                                                                                                                                                                                                    content: "";
+                                                                                                                                                                                                                                                                                                                                                                    width: 38px;
+                                                                                                                                                                                                                                                                                                                                                                    height: 2px;
+                                                                                                                                                                                                                                                                                                                                                                    background: var(--cyan);
+                                                                                                                                                                                                                                                                                                                                                                    display: inline-block;
+                                                                                                                                                                                                                                                                                                                                                                } */
 
         /* Header matches the clean Fluidstream homepage feel */
         .site-header {
@@ -406,14 +406,14 @@
 
 
         /* .quote-card:before {
-                                                                                                                                                                                                                                                                                                                                                                                                content: "";
-                                                                                                                                                                                                                                                                                                                                                                                                position: absolute;
-                                                                                                                                                                                                                                                                                                                                                                                                top: 0;
-                                                                                                                                                                                                                                                                                                                                                                                                left: 0;
-                                                                                                                                                                                                                                                                                                                                                                                                right: 0;
-                                                                                                                                                                                                                                                                                                                                                                                                height: 4px;
-                                                                                                                                                                                                                                                                                                                                                                                                background: linear-gradient(90deg, var(--cyan), rgba(255, 255, 255, 0));
-                                                                                                                                                                                                                                                                                                                                                                                            } */
+                                                                                                                                                                                                                                                                                                                                                                                                    content: "";
+                                                                                                                                                                                                                                                                                                                                                                                                    position: absolute;
+                                                                                                                                                                                                                                                                                                                                                                                                    top: 0;
+                                                                                                                                                                                                                                                                                                                                                                                                    left: 0;
+                                                                                                                                                                                                                                                                                                                                                                                                    right: 0;
+                                                                                                                                                                                                                                                                                                                                                                                                    height: 4px;
+                                                                                                                                                                                                                                                                                                                                                                                                    background: linear-gradient(90deg, var(--cyan), rgba(255, 255, 255, 0));
+                                                                                                                                                                                                                                                                                                                                                                                                } */
 
         .quote-card strong {
             color: #000000;
@@ -458,8 +458,8 @@
 
         /* Page sections */
         /* .section {
-                                                                                                                                                                                                                                                                            padding: 78px 0;
-                                                                                                                                                                                                                                                                        } */
+                                                                                                                                                                                                                                                                                padding: 78px 0;
+                                                                                                                                                                                                                                                                            } */
 
         .section-soft {
             background: var(--soft);
@@ -538,7 +538,7 @@
             font-size: 1.16rem;
             color: #303b50;
             /* border-left: 4px solid #0018dc;
-                                        padding-left: 1.22rem; */
+                                            padding-left: 1.22rem; */
             margin: 1.15rem 0 2rem;
         }
 
@@ -605,9 +605,9 @@
         }
 
         /* .fs-card:hover h3,
-                                                                                                                                                                                                                                                                                                                .fs-card:hover p {
-                                                                                                                                                                                                                                                                                                                    color: #fff;
-                                                                                                                                                                                                                                                                                                                } */
+                                                                                                                                                                                                                                                                                                                    .fs-card:hover p {
+                                                                                                                                                                                                                                                                                                                        color: #fff;
+                                                                                                                                                                                                                                                                                                                    } */
 
         .line-card:before {
             content: "";
@@ -653,13 +653,13 @@
         }
 
         /* .fs-card,
-                                                                                                                                                                                                                                                                                                                        .line-card,
-                                                                                                                                                                                                                                                                                                                        .stat-card,
-                                                                                                                                                                                                                                                                                                                        .callout {
-                                                                                                                                                                                                                                                                                                                            position: relative;
-                                                                                                                                                                                                                                                                                                                            overflow: hidden;
-                                                                                                                                                                                                                                                                                                                            transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
-                                                                                                                                                                                                                                                                                                                        } */
+                                                                                                                                                                                                                                                                                                                            .line-card,
+                                                                                                                                                                                                                                                                                                                            .stat-card,
+                                                                                                                                                                                                                                                                                                                            .callout {
+                                                                                                                                                                                                                                                                                                                                position: relative;
+                                                                                                                                                                                                                                                                                                                                overflow: hidden;
+                                                                                                                                                                                                                                                                                                                                transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+                                                                                                                                                                                                                                                                                                                            } */
         .cta-panel::after,
         .hero-mini::after,
         .quote-card::after,
@@ -964,12 +964,12 @@
             }
 
             /* .section {
-                                                                                                                                                                                                                                                                                padding: 58px 0;
-                                                                                                                                                                                                                                                                            } */
+                                                                                                                                                                                                                                                                                    padding: 58px 0;
+                                                                                                                                                                                                                                                                                } */
 
             /* .hero {
-                                                                                                                                                                                                                                                                            padding: 74px 0;
-                                                                                                                                                                                                                                                                        } */
+                                                                                                                                                                                                                                                                                padding: 74px 0;
+                                                                                                                                                                                                                                                                            } */
 
             article {
                 padding: 28px;
@@ -1251,259 +1251,264 @@
         type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to Select the Right Vapor Recovery Unit for Wet Gas Applications","description":"A Fluidstream technical guide for selecting vapor recovery units in wet gas applications, including liquid tolerance, freeze risk, pressure instability, lifecycle reliability, VaporCommander fit, patents, and field proof.","author":{"@type":"Organization","name":"Fluidstream"},"publisher":{"@type":"Organization","name":"Fluidstream"},"mainEntityOfPage":"https://fluidstream.co/insights/how-to-select-vapor-recovery-unit-wet-gas"}</script>
 
 
-<section class="fs-article-image-hero">
-    <style>
-        .fs-article-image-hero {
-            position: relative;
-            isolation: isolate;
-            overflow: hidden;
-            min-height: 620px;
-            color: #ffffff;
-            background:
-                linear-gradient(100deg, rgba(2, 8, 35, .36) 0%, rgba(2, 8, 35, .28) 42%, rgba(0, 24, 220, .20) 72%, rgba(0, 24, 220, 0) 100%),
-                url("{{ asset('/img/insights/facility.png') }}");
-            background-size: cover;
-            background-position: center 45%;
-            background-repeat: no-repeat;
-            border-bottom: 1px solid #dfe9ff;
-        }
-
-        .fs-article-image-hero::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            z-index: -1;
-            background: linear-gradient(180deg, rgba(2, 8, 35, .06) 0%, rgba(2, 8, 35, .42) 100%);
-            pointer-events: none;
-        }
-
-        .fs-article-image-hero .fs-article-hero-wrap {
-            width: min(var(--max), calc(100% - 40px));
-            min-height: 620px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1.18fr .82fr;
-            gap: 58px;
-            align-items: flex-start;
-            padding: 96px 0 72px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .fs-article-image-hero h1 {
-            max-width: 920px;
-            margin: 0 0 24px;
-            color: #ffffff;
-            font-size: clamp(38px, 5vw, 66px);
-            line-height: .94;
-            letter-spacing: -.075em;
-            font-weight: 500;
-        }
-
-        .fs-article-image-hero .fs-article-hero-lede {
-            max-width: 760px;
-            margin: 0;
-            color: rgba(255, 255, 255, .84);
-            font-size: clamp(16px, 1.35vw, 19px);
-            line-height: 1.68;
-            font-weight: 500;
-        }
-
-        .fs-article-image-hero .fs-article-hero-actions {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            margin-top: 2rem;
-        }
-
-        .fs-article-image-hero .fs-article-hero-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 999px;
-            padding: .95rem 1.28rem;
-            font-weight: 900;
-            border: 1px solid transparent;
-            transition: transform .22s ease, box-shadow .22s ease, background .22s ease, color .22s ease, border-color .22s ease;
-        }
-
-        .fs-article-image-hero .fs-article-hero-btn:hover {
-            transform: translateY(-2px);
-            text-decoration: none;
-        }
-
-        .fs-article-image-hero .fs-article-hero-btn-primary {
-            background: #0018dc;
-            color: #ffffff;
-            border-color: #0018dc;
-            box-shadow: 0 16px 36px rgba(0, 0, 0, .18);
-        }
-
-        .fs-article-image-hero .fs-article-hero-btn-outline {
-            color: #ffffff;
-            border-color: rgba(255, 255, 255, .42);
-            background: rgba(255, 255, 255, .08);
-        }
-
-        .fs-article-image-hero .fs-article-hero-btn-outline:hover {
-            background: rgba(255, 255, 255, .14);
-            border-color: rgba(255, 255, 255, .68);
-        }
-
-        .fs-article-image-hero .fs-article-hero-card-stack {
-            display: grid;
-            gap: 18px;
-        }
-
-        .fs-article-image-hero .fs-article-quote-card,
-        .fs-article-image-hero .fs-article-mini-card {
-            position: relative;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, .22);
-            border-radius: 7px;
-            background: rgba(255, 255, 255, .10);
-            box-shadow: 0 26px 70px rgba(0, 0, 0, .18);
-        }
-
-        .fs-article-image-hero .fs-article-quote-card {
-            padding: 26px;
-        }
-
-        .fs-article-image-hero .fs-article-quote-card strong {
-            display: block;
-            margin-bottom: .7rem;
-            color: #ffffff;
-            font-size: 1.18rem;
-            line-height: 1.25;
-            font-weight: 900;
-        }
-
-        .fs-article-image-hero .fs-article-quote-card p {
-            margin-bottom: 0;
-            color: rgba(255, 255, 255, .78);
-        }
-
-        .fs-article-image-hero .fs-article-mini-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 14px;
-        }
-
-        .fs-article-image-hero .fs-article-mini-card {
-            padding: 22px;
-        }
-
-        .fs-article-image-hero .fs-article-mini-card b {
-            display: block;
-            margin-bottom: 6px;
-            color: #ffffff;
-            font-size: 1.05rem;
-            line-height: 1.2;
-            font-weight: 900;
-        }
-
-        .fs-article-image-hero .fs-article-mini-card span {
-            color: rgba(255, 255, 255, .78);
-            font-size: .9rem;
-            line-height: 1.45;
-        }
-
-        @media (max-width: 1020px) {
-            .fs-article-image-hero,
-            .fs-article-image-hero .fs-article-hero-wrap {
-                min-height: auto;
-            }
-
-            .fs-article-image-hero .fs-article-hero-wrap {
-                grid-template-columns: 1fr;
-                gap: 34px;
-                padding: 76px 0 64px;
-            }
-
-            .fs-article-image-hero .fs-article-hero-card-stack {
-                max-width: 720px;
-            }
-        }
-
-        @media (max-width: 620px) {
+    <section class="fs-article-image-hero">
+        <style>
             .fs-article-image-hero {
-                background-position: center 62%;
+                position: relative;
+                isolation: isolate;
+                overflow: hidden;
+                min-height: 620px;
+                color: #ffffff;
+                background:
+                    linear-gradient(100deg, rgba(2, 8, 35, .36) 0%, rgba(2, 8, 35, .28) 42%, rgba(0, 24, 220, .20) 72%, rgba(0, 24, 220, 0) 100%),
+                    url("{{ asset('/img/insights/facility.png') }}");
+                background-size: cover;
+                background-position: center 45%;
+                background-repeat: no-repeat;
+                border-bottom: 1px solid #dfe9ff;
+            }
+
+            .fs-article-image-hero::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                z-index: -1;
+                background: linear-gradient(180deg, rgba(2, 8, 35, .06) 0%, rgba(2, 8, 35, .42) 100%);
+                pointer-events: none;
             }
 
             .fs-article-image-hero .fs-article-hero-wrap {
-                width: min(var(--max), calc(100% - 28px));
-                padding: 62px 0 52px;
+                width: min(var(--max), calc(100% - 40px));
+                min-height: 620px;
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns: 1.18fr .82fr;
+                gap: 58px;
+                align-items: flex-start;
+                padding: 96px 0 72px;
+                position: relative;
+                z-index: 2;
             }
 
             .fs-article-image-hero h1 {
-                font-size: 42px;
+                max-width: 920px;
+                margin: 0 0 24px;
+                color: #ffffff;
+                font-size: clamp(38px, 5vw, 66px);
+                line-height: .94;
+                letter-spacing: -.075em;
+                font-weight: 500;
             }
 
-            .fs-article-image-hero .fs-article-mini-grid {
-                grid-template-columns: 1fr;
+            .fs-article-image-hero .fs-article-hero-lede {
+                max-width: 760px;
+                margin: 0;
+                color: rgba(255, 255, 255, .84);
+                font-size: clamp(16px, 1.35vw, 19px);
+                line-height: 1.68;
+                font-weight: 500;
+            }
+
+            .fs-article-image-hero .fs-article-hero-actions {
+                display: flex;
+                gap: 1rem;
+                flex-wrap: wrap;
+                margin-top: 2rem;
+            }
+
+            .fs-article-image-hero .fs-article-hero-btn {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 999px;
+                padding: .95rem 1.28rem;
+                font-weight: 900;
+                border: 1px solid transparent;
+                transition: transform .22s ease, box-shadow .22s ease, background .22s ease, color .22s ease, border-color .22s ease;
+            }
+
+            .fs-article-image-hero .fs-article-hero-btn:hover {
+                transform: translateY(-2px);
+                text-decoration: none;
+            }
+
+            .fs-article-image-hero .fs-article-hero-btn-primary {
+                background: #0018dc;
+                color: #ffffff;
+                border-color: #0018dc;
+                box-shadow: 0 16px 36px rgba(0, 0, 0, .18);
+            }
+
+            .fs-article-image-hero .fs-article-hero-btn-outline {
+                color: #ffffff;
+                border-color: rgba(255, 255, 255, .42);
+                background: rgba(255, 255, 255, .08);
+            }
+
+            .fs-article-image-hero .fs-article-hero-btn-outline:hover {
+                background: rgba(255, 255, 255, .14);
+                border-color: rgba(255, 255, 255, .68);
+            }
+
+            .fs-article-image-hero .fs-article-hero-card-stack {
+                display: grid;
+                gap: 18px;
             }
 
             .fs-article-image-hero .fs-article-quote-card,
             .fs-article-image-hero .fs-article-mini-card {
+                position: relative;
+                overflow: hidden;
+                border: 1px solid rgba(255, 255, 255, .22);
+                border-radius: 7px;
+                background: rgb(0 0 0 / 0%);
+                backdrop-filter: blur(6px);
+                box-shadow: 0 26px 70px rgba(0, 0, 0, .18);
+            }
+
+            .fs-article-image-hero .fs-article-quote-card {
+                padding: 26px;
+            }
+
+            .fs-article-image-hero .fs-article-quote-card strong {
+                display: block;
+                margin-bottom: .7rem;
+                color: #ffffff;
+                font-size: 1.18rem;
+                line-height: 1.25;
+                font-weight: 900;
+            }
+
+            .fs-article-image-hero .fs-article-quote-card p {
+                margin-bottom: 0;
+                color: rgba(255, 255, 255, .78);
+            }
+
+            .fs-article-image-hero .fs-article-mini-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 14px;
+            }
+
+            .fs-article-image-hero .fs-article-mini-card {
                 padding: 22px;
             }
-        }
-    </style>
 
-    <div class="fs-article-hero-wrap">
-        <div>
-            <h1>How to Select the Right Vapor Recovery Unit for Wet Gas Applications</h1>
+            .fs-article-image-hero .fs-article-mini-card b {
+                display: block;
+                margin-bottom: 6px;
+                color: #ffffff;
+                font-size: 1.05rem;
+                line-height: 1.2;
+                font-weight: 900;
+            }
 
-            <p class="fs-article-hero-lede">
-                A practical engineering guide for selecting vapor recovery equipment in wet gas service, including liquid tolerance, freeze risk, pressure instability, lifecycle reliability, VaporCommander™ fit, patents, and field proof.
-            </p>
+            .fs-article-image-hero .fs-article-mini-card span {
+                color: rgba(255, 255, 255, .78);
+                font-size: .9rem;
+                line-height: 1.45;
+            }
 
-            <div class="fs-article-hero-actions">
-                <a class="fs-article-hero-btn fs-article-hero-btn-primary" href="/vapor-recovery">
-                    Explore VaporCommander™
-                </a>
+            @media (max-width: 1020px) {
 
-                <a class="fs-article-hero-btn fs-article-hero-btn-outline" href="#article">
-                    Read the Technical Guide
-                </a>
-            </div>
-        </div>
+                .fs-article-image-hero,
+                .fs-article-image-hero .fs-article-hero-wrap {
+                    min-height: auto;
+                }
 
-        <div class="fs-article-hero-card-stack">
-            <div class="fs-article-quote-card">
-                <strong>
-                    The right VRU is not selected by nameplate capacity alone. It must match the real vapor stream.
-                </strong>
+                .fs-article-image-hero .fs-article-hero-wrap {
+                    grid-template-columns: 1fr;
+                    gap: 34px;
+                    padding: 76px 0 64px;
+                }
 
-                <p>
-                    Wet gas, liquid carryover, unstable vapor rates, low suction pressure, winter exposure, and maintenance access should drive the selection process.
+                .fs-article-image-hero .fs-article-hero-card-stack {
+                    max-width: 720px;
+                }
+            }
+
+            @media (max-width: 620px) {
+                .fs-article-image-hero {
+                    background-position: center 62%;
+                }
+
+                .fs-article-image-hero .fs-article-hero-wrap {
+                    width: min(var(--max), calc(100% - 28px));
+                    padding: 62px 0 52px;
+                }
+
+                .fs-article-image-hero h1 {
+                    font-size: 42px;
+                }
+
+                .fs-article-image-hero .fs-article-mini-grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .fs-article-image-hero .fs-article-quote-card,
+                .fs-article-image-hero .fs-article-mini-card {
+                    padding: 22px;
+                }
+            }
+        </style>
+
+        <div class="fs-article-hero-wrap">
+            <div>
+                <h1>How to Select the Right Vapor Recovery Unit for Wet Gas Applications</h1>
+
+                <p class="fs-article-hero-lede">
+                    A practical engineering guide for selecting vapor recovery equipment in wet gas service, including
+                    liquid tolerance, freeze risk, pressure instability, lifecycle reliability, VaporCommander™ fit,
+                    patents, and field proof.
                 </p>
+
+                <div class="fs-article-hero-actions">
+                    <a class="fs-article-hero-btn fs-article-hero-btn-primary" href="/vapor-recovery">
+                        Explore VaporCommander™
+                    </a>
+
+                    <a class="fs-article-hero-btn fs-article-hero-btn-outline" href="#article">
+                        Read the Technical Guide
+                    </a>
+                </div>
             </div>
 
-            <div class="fs-article-mini-grid">
-                <div class="fs-article-mini-card">
-                    <b>Wet gas fit</b>
-                    <span>Review condensate, water, foam, and liquid carryover risk.</span>
+            <div class="fs-article-hero-card-stack">
+                <div class="fs-article-quote-card">
+                    <strong>
+                        The right VRU is not selected by nameplate capacity alone. It must match the real vapor stream.
+                    </strong>
+
+                    <p>
+                        Wet gas, liquid carryover, unstable vapor rates, low suction pressure, winter exposure, and
+                        maintenance access should drive the selection process.
+                    </p>
                 </div>
 
-                <div class="fs-article-mini-card">
-                    <b>Freeze risk</b>
-                    <span>Assess scrubbers, drains, and winter reliability exposure.</span>
-                </div>
+                <div class="fs-article-mini-grid">
+                    <div class="fs-article-mini-card">
+                        <b>Wet gas fit</b>
+                        <span>Review condensate, water, foam, and liquid carryover risk.</span>
+                    </div>
 
-                <div class="fs-article-mini-card">
-                    <b>Lifecycle cost</b>
-                    <span>Compare uptime, maintenance, callouts, and installed complexity.</span>
-                </div>
+                    <div class="fs-article-mini-card">
+                        <b>Freeze risk</b>
+                        <span>Assess scrubbers, drains, and winter reliability exposure.</span>
+                    </div>
 
-                <div class="fs-article-mini-card">
-                    <b>Field proof</b>
-                    <span>Validate the technology against real vapor recovery conditions.</span>
+                    <div class="fs-article-mini-card">
+                        <b>Lifecycle cost</b>
+                        <span>Compare uptime, maintenance, callouts, and installed complexity.</span>
+                    </div>
+
+                    <div class="fs-article-mini-card">
+                        <b>Field proof</b>
+                        <span>Validate the technology against real vapor recovery conditions.</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <main id="article" class="article-area gray">
         <div class="wrap article-shell py-12">
@@ -1804,22 +1809,22 @@
         }
 
         /* 
-                                                                                                                                                                                                        .fs-related-head h2 {
-                                                                                                                                                                                                            margin: 0;
-                                                                                                                                                                                                            color: #061126;
-                                                                                                                                                                                                            font-size: clamp(30px, 3vw, 44px);
-                                                                                                                                                                                                            font-weight: 900;
-                                                                                                                                                                                                            line-height: 1.04;
-                                                                                                                                                                                                            letter-spacing: -0.055em;
-                                                                                                                                                                                                        } */
+                                                                                                                                                                                                            .fs-related-head h2 {
+                                                                                                                                                                                                                margin: 0;
+                                                                                                                                                                                                                color: #061126;
+                                                                                                                                                                                                                font-size: clamp(30px, 3vw, 44px);
+                                                                                                                                                                                                                font-weight: 900;
+                                                                                                                                                                                                                line-height: 1.04;
+                                                                                                                                                                                                                letter-spacing: -0.055em;
+                                                                                                                                                                                                            } */
         /* 
-                                                                                                                                                                                                    .fs-related-head p {
-                                                                                                                                                                                                        margin: 0;
-                                                                                                                                                                                                        color: #637086;
-                                                                                                                                                                                                        font-size: 16px;
-                                                                                                                                                                                                        line-height: 1.62;
-                                                                                                                                                                                                        max-width: 720px;
-                                                                                                                                                                                                    } */
+                                                                                                                                                                                                        .fs-related-head p {
+                                                                                                                                                                                                            margin: 0;
+                                                                                                                                                                                                            color: #637086;
+                                                                                                                                                                                                            font-size: 16px;
+                                                                                                                                                                                                            line-height: 1.62;
+                                                                                                                                                                                                            max-width: 720px;
+                                                                                                                                                                                                        } */
 
         .fs-related-grid {
             display: grid;

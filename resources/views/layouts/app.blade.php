@@ -428,17 +428,17 @@
 
     @if (!$hasCustomSchema)
         <script type="application/ld+json">
-                        {!! json_encode($breadcrumbSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
-                    </script>
+                                        {!! json_encode($breadcrumbSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
+                                    </script>
 
         <script type="application/ld+json">
-                        {!! json_encode($pageSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
-                    </script>
+                                        {!! json_encode($pageSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
+                                    </script>
 
         @if ($faqSchema)
             <script type="application/ld+json">
-                                        {!! json_encode($faqSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
-                                    </script>
+                                                                        {!! json_encode($faqSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
+                                                                    </script>
         @endif
     @endif
 
@@ -492,6 +492,22 @@
                 font-size: 32px !important;
             }
         }
+
+        img,
+        video,
+        canvas,
+        svg {
+            -webkit-user-drag: none;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        img,
+        video {
+            pointer-events: auto;
+        }
     </style>
 </head>
 
@@ -539,6 +555,70 @@
                 video.setAttribute('playsinline', '');
             });
         });
+    </script>
+
+    <script>
+        (function () {
+            document.addEventListener('contextmenu', function (event) {
+                event.preventDefault();
+            });
+
+            document.addEventListener('dragstart', function (event) {
+                if (
+                    event.target.tagName === 'IMG' ||
+                    event.target.tagName === 'VIDEO' ||
+                    event.target.tagName === 'A'
+                ) {
+                    event.preventDefault();
+                }
+            });
+
+            document.addEventListener('selectstart', function (event) {
+                if (
+                    event.target.tagName === 'IMG' ||
+                    event.target.tagName === 'VIDEO'
+                ) {
+                    event.preventDefault();
+                }
+            });
+
+            document.addEventListener('copy', function (event) {
+                event.preventDefault();
+            });
+
+            document.addEventListener('keydown', function (event) {
+                const key = event.key.toLowerCase();
+
+                if (
+                    event.key === 'F12' ||
+                    (event.ctrlKey && event.shiftKey && ['i', 'j', 'c'].includes(key)) ||
+                    (event.metaKey && event.altKey && ['i', 'j', 'c'].includes(key)) ||
+                    (event.ctrlKey && key === 'u') ||
+                    (event.metaKey && key === 'u') ||
+                    (event.ctrlKey && key === 's') ||
+                    (event.metaKey && key === 's') ||
+                    (event.ctrlKey && key === 'p') ||
+                    (event.metaKey && key === 'p')
+                ) {
+                    event.preventDefault();
+                    return false;
+                }
+            });
+
+            document.querySelectorAll('img').forEach(function (img) {
+                img.setAttribute('draggable', 'false');
+                img.setAttribute('loading', img.getAttribute('loading') || 'lazy');
+            });
+
+            document.querySelectorAll('video').forEach(function (video) {
+                video.setAttribute('controlsList', 'nodownload noplaybackrate noremoteplayback');
+                video.setAttribute('disablePictureInPicture', '');
+                video.setAttribute('draggable', 'false');
+                video.oncontextmenu = function () {
+                    return false;
+                };
+            });
+        })();
     </script>
 
     @stack('script')

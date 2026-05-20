@@ -138,16 +138,16 @@
     @endphp
 
     <script type="application/ld+json">
-            {!! json_encode($techArticleSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
-        </script>
+                    {!! json_encode($techArticleSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+                </script>
 
     <script type="application/ld+json">
-            {!! json_encode($faqSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
-        </script>
+                    {!! json_encode($faqSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+                </script>
 
     <script type="application/ld+json">
-            {!! json_encode($breadcrumbSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
-        </script>
+                    {!! json_encode($breadcrumbSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+                </script>
 @endsection
 @section('content')
     <style>
@@ -242,13 +242,13 @@
         }
 
         /* 
-                                                                                                                                                                                                                                                                                                                                                                                            .section-label:before {
-                                                                                                                                                                                                                                                                                                                                                                                                content: "";
-                                                                                                                                                                                                                                                                                                                                                                                                width: 38px;
-                                                                                                                                                                                                                                                                                                                                                                                                height: 2px;
-                                                                                                                                                                                                                                                                                                                                                                                                background: var(--cyan);
-                                                                                                                                                                                                                                                                                                                                                                                                display: inline-block;
-                                                                                                                                                                                                                                                                                                                                                                                            } */
+                                                                                                                                                                                                                                                                                                                                                                                                    .section-label:before {
+                                                                                                                                                                                                                                                                                                                                                                                                        content: "";
+                                                                                                                                                                                                                                                                                                                                                                                                        width: 38px;
+                                                                                                                                                                                                                                                                                                                                                                                                        height: 2px;
+                                                                                                                                                                                                                                                                                                                                                                                                        background: var(--cyan);
+                                                                                                                                                                                                                                                                                                                                                                                                        display: inline-block;
+                                                                                                                                                                                                                                                                                                                                                                                                    } */
 
         /* Header matches the clean Fluidstream homepage feel */
         .site-header {
@@ -414,14 +414,14 @@
 
 
         /* .quote-card:before {
-                                                                                                                                                                                                                                                                                                                                                                                                                                content: "";
-                                                                                                                                                                                                                                                                                                                                                                                                                                position: absolute;
-                                                                                                                                                                                                                                                                                                                                                                                                                                top: 0;
-                                                                                                                                                                                                                                                                                                                                                                                                                                left: 0;
-                                                                                                                                                                                                                                                                                                                                                                                                                                right: 0;
-                                                                                                                                                                                                                                                                                                                                                                                                                                height: 4px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                background: linear-gradient(90deg, var(--cyan), rgba(255, 255, 255, 0));
-                                                                                                                                                                                                                                                                                                                                                                                                                            } */
+                                                                                                                                                                                                                                                                                                                                                                                                                                        content: "";
+                                                                                                                                                                                                                                                                                                                                                                                                                                        position: absolute;
+                                                                                                                                                                                                                                                                                                                                                                                                                                        top: 0;
+                                                                                                                                                                                                                                                                                                                                                                                                                                        left: 0;
+                                                                                                                                                                                                                                                                                                                                                                                                                                        right: 0;
+                                                                                                                                                                                                                                                                                                                                                                                                                                        height: 4px;
+                                                                                                                                                                                                                                                                                                                                                                                                                                        background: linear-gradient(90deg, var(--cyan), rgba(255, 255, 255, 0));
+                                                                                                                                                                                                                                                                                                                                                                                                                                    } */
 
         .quote-card strong {
             color: #000000;
@@ -466,8 +466,8 @@
 
         /* Page sections */
         /* .section {
-                                                                                                                                                                                                                                                                                                            padding: 78px 0;
-                                                                                                                                                                                                                                                                                                        } */
+                                                                                                                                                                                                                                                                                                                    padding: 78px 0;
+                                                                                                                                                                                                                                                                                                                } */
 
         .section-soft {
             background: var(--soft);
@@ -546,7 +546,7 @@
             font-size: 1.16rem;
             color: #303b50;
             /* border-left: 4px solid #0018dc;
-                            padding-left: 1.22rem; */
+                                    padding-left: 1.22rem; */
             margin: 1.15rem 0 2rem;
         }
 
@@ -613,9 +613,9 @@
         }
 
         /* .fs-card:hover h3,
-                                                                                                                                                                                                                                                                                                                                                .fs-card:hover p {
-                                                                                                                                                                                                                                                                                                                                                    color: #fff;
-                                                                                                                                                                                                                                                                                                                                                } */
+                                                                                                                                                                                                                                                                                                                                                        .fs-card:hover p {
+                                                                                                                                                                                                                                                                                                                                                            color: #fff;
+                                                                                                                                                                                                                                                                                                                                                        } */
 
         .line-card:before {
             content: "";
@@ -661,13 +661,13 @@
         }
 
         /* .fs-card,
-                                                                                                                                                                                                                                                                                                                                                        .line-card,
-                                                                                                                                                                                                                                                                                                                                                        .stat-card,
-                                                                                                                                                                                                                                                                                                                                                        .callout {
-                                                                                                                                                                                                                                                                                                                                                            position: relative;
-                                                                                                                                                                                                                                                                                                                                                            overflow: hidden;
-                                                                                                                                                                                                                                                                                                                                                            transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
-                                                                                                                                                                                                                                                                                                                                                        } */
+                                                                                                                                                                                                                                                                                                                                                                .line-card,
+                                                                                                                                                                                                                                                                                                                                                                .stat-card,
+                                                                                                                                                                                                                                                                                                                                                                .callout {
+                                                                                                                                                                                                                                                                                                                                                                    position: relative;
+                                                                                                                                                                                                                                                                                                                                                                    overflow: hidden;
+                                                                                                                                                                                                                                                                                                                                                                    transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+                                                                                                                                                                                                                                                                                                                                                                } */
         .cta-panel::after,
         .hero-mini::after,
         .quote-card::after,
@@ -972,12 +972,12 @@
             }
 
             /* .section {
-                                                                                                                                                                                                                                                                                                                padding: 58px 0;
-                                                                                                                                                                                                                                                                                                            } */
+                                                                                                                                                                                                                                                                                                                        padding: 58px 0;
+                                                                                                                                                                                                                                                                                                                    } */
 
             /* .hero {
-                                                                                                                                                                                                                                                                                                            padding: 74px 0;
-                                                                                                                                                                                                                                                                                                        } */
+                                                                                                                                                                                                                                                                                                                    padding: 74px 0;
+                                                                                                                                                                                                                                                                                                                } */
 
             article {
                 padding: 28px;
@@ -1367,7 +1367,8 @@
                 overflow: hidden;
                 border: 1px solid rgba(255, 255, 255, .22);
                 border-radius: 7px;
-                background: rgba(255, 255, 255, .10);
+                background: rgb(0 0 0 / 0%);
+                backdrop-filter: blur(6px);
                 box-shadow: 0 26px 70px rgba(0, 0, 0, .18);
             }
 
@@ -1415,6 +1416,7 @@
             }
 
             @media (max-width: 1020px) {
+
                 .fs-article-image-hero,
                 .fs-article-image-hero .fs-article-hero-wrap {
                     min-height: auto;
@@ -1484,7 +1486,8 @@
                     </strong>
 
                     <p>
-                        Fluidstream multiphase compression supports pressure reduction and production recovery while reducing
+                        Fluidstream multiphase compression supports pressure reduction and production recovery while
+                        reducing
                         dependence on perfect upstream separation.
                     </p>
                 </div>
@@ -1979,22 +1982,22 @@
         }
 
         /* 
-                                                                                                                                                                                                                            .fs-related-head h2 {
-                                                                                                                                                                                                                                margin: 0;
-                                                                                                                                                                                                                                color: #061126;
-                                                                                                                                                                                                                                font-size: clamp(30px, 3vw, 44px);
-                                                                                                                                                                                                                                font-weight: 900;
-                                                                                                                                                                                                                                line-height: 1.04;
-                                                                                                                                                                                                                                letter-spacing: -0.055em;
-                                                                                                                                                                                                                            } */
+                                                                                                                                                                                                                                    .fs-related-head h2 {
+                                                                                                                                                                                                                                        margin: 0;
+                                                                                                                                                                                                                                        color: #061126;
+                                                                                                                                                                                                                                        font-size: clamp(30px, 3vw, 44px);
+                                                                                                                                                                                                                                        font-weight: 900;
+                                                                                                                                                                                                                                        line-height: 1.04;
+                                                                                                                                                                                                                                        letter-spacing: -0.055em;
+                                                                                                                                                                                                                                    } */
         /* 
-                                                                                                                                                                                                                        .fs-related-head p {
-                                                                                                                                                                                                                            margin: 0;
-                                                                                                                                                                                                                            color: #637086;
-                                                                                                                                                                                                                            font-size: 16px;
-                                                                                                                                                                                                                            line-height: 1.62;
-                                                                                                                                                                                                                            max-width: 720px;
-                                                                                                                                                                                                                        } */
+                                                                                                                                                                                                                                .fs-related-head p {
+                                                                                                                                                                                                                                    margin: 0;
+                                                                                                                                                                                                                                    color: #637086;
+                                                                                                                                                                                                                                    font-size: 16px;
+                                                                                                                                                                                                                                    line-height: 1.62;
+                                                                                                                                                                                                                                    max-width: 720px;
+                                                                                                                                                                                                                                } */
 
         .fs-related-grid {
             display: grid;
