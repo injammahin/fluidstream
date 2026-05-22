@@ -1183,7 +1183,7 @@
   </style>
 
 
-  <header class="hero fs-vapor-hero fs-vapor-hero-updated">
+  <header class="hero fs-vapor-hero fs-vapor-hero-updated fs-protected-bg">
     <style>
       /* ================================
                                                                                UPDATED VAPOR HERO

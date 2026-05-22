@@ -659,7 +659,7 @@
         </style>
 
         <main class="technical-review-page">
-            <section class="tr-hero">
+            <section class="tr-hero fs-protected-bg">
                 <div class="tr-hero-inner">
                     <h1>Submit your compression challenge for technical review.</h1>
 

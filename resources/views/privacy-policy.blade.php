@@ -792,7 +792,7 @@
                                                                         </script>
 
     <div class="privacy-page">
-        <section class="privacy-hero">
+        <section class="privacy-hero fs-protected-bg">
             <div class="privacy-wrap privacy-hero-grid">
                 <div>
 

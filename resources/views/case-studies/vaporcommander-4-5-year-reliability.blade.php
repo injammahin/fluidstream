@@ -895,7 +895,7 @@
     </style>
 
     <main>
-        <section class="fs-seal-life-image-hero">
+        <section class="fs-seal-life-image-hero fs-protected-bg">
             <style>
                 .fs-seal-life-image-hero {
                     position: relative;

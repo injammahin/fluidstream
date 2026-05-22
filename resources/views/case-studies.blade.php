@@ -877,7 +877,7 @@
     @endphp
 
     <div class="case-page">
-        <section class="fs-case-study-hero">
+        <section class="fs-case-study-hero fs-protected-bg">
             <div class="fs-case-study-hero-wrap">
                 <div class="fs-case-study-hero-copy">
                     <h1>Documented results from real operating environments.</h1>

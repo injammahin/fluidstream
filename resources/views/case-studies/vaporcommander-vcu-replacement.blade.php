@@ -905,7 +905,7 @@
     </style>
 
     <main>
-        <section class="fs-vcu-replacement-image-hero">
+        <section class="fs-vcu-replacement-image-hero fs-protected-bg">
             <style>
                 .fs-vcu-replacement-image-hero {
                     position: relative;

@@ -1051,7 +1051,7 @@
   </style>
 
 
-  <header class="hero fs-casing-hero">
+  <header class="hero fs-casing-hero fs-protected-bg">
     <style>
       /* ================================
                                                                    UPDATED CASING GAS HERO

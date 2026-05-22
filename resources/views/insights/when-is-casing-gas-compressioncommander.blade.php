@@ -1109,7 +1109,7 @@
 
 
 
-    <section class="fs-article-image-hero">
+    <section class="fs-article-image-hero fs-protected-bg">
         <style>
             .fs-article-image-hero {
                 position: relative;

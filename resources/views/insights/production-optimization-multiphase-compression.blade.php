@@ -1001,7 +1001,7 @@
         });
     </script>
 
-    <section class="fs-article-image-hero">
+    <section class="fs-article-image-hero fs-protected-bg">
         <div class="fs-article-hero-wrap">
             <div>
                 <h1>Production Optimization Using Multiphase Compression</h1>

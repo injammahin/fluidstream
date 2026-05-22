@@ -829,7 +829,7 @@
     <main class="fs-about-page">
 
         {{-- HERO --}}
-        <section class="fs-about-hero">
+        <section class="fs-about-hero fs-protected-bg">
             <div class="fs-about-hero-grid">
                 <div>
 

@@ -1251,7 +1251,7 @@
         type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to Select the Right Vapor Recovery Unit for Wet Gas Applications","description":"A Fluidstream technical guide for selecting vapor recovery units in wet gas applications, including liquid tolerance, freeze risk, pressure instability, lifecycle reliability, VaporCommander fit, patents, and field proof.","author":{"@type":"Organization","name":"Fluidstream"},"publisher":{"@type":"Organization","name":"Fluidstream"},"mainEntityOfPage":"https://fluidstream.co/insights/how-to-select-vapor-recovery-unit-wet-gas"}</script>
 
 
-    <section class="fs-article-image-hero">
+    <section class="fs-article-image-hero fs-protected-bg">
         <style>
             .fs-article-image-hero {
                 position: relative;

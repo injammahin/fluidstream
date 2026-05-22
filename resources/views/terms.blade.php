@@ -760,7 +760,7 @@
                 </script>
 
     <div class="terms-page">
-        <section class="terms-hero">
+        <section class="terms-hero fs-protected-bg">
             <div class="terms-wrap terms-hero-grid">
                 <div>
 

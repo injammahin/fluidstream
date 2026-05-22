@@ -428,17 +428,17 @@
 
     @if (!$hasCustomSchema)
         <script type="application/ld+json">
-                                            {!! json_encode($breadcrumbSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
-                                        </script>
+                                                                {!! json_encode($breadcrumbSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
+                                                            </script>
 
         <script type="application/ld+json">
-                                            {!! json_encode($pageSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
-                                        </script>
+                                                                {!! json_encode($pageSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
+                                                            </script>
 
         @if ($faqSchema)
             <script type="application/ld+json">
-                                                                                {!! json_encode($faqSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
-                                                                            </script>
+                                                                                                                        {!! json_encode($faqSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
+                                                                                                                    </script>
         @endif
     @endif
 
@@ -493,21 +493,34 @@
             }
         }
 
-        /* img,
+        /* Global media protection - only media and marked background sections */
+        img,
         video,
         canvas,
-        svg {
-            -webkit-user-drag: none;
-            user-select: none;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
+        svg,
+        picture,
+        .fs-protected-media,
+        .fs-protected-bg {
+            max-width: 100%;
+            -webkit-user-drag: none !important;
+            user-drag: none !important;
+            -webkit-user-select: none !important;
+            user-select: none !important;
+            -webkit-touch-callout: none !important;
         }
 
         img,
         video {
             pointer-events: auto;
-        } */
+        }
+
+        video::-webkit-media-controls-download-button {
+            display: none !important;
+        }
+
+        video::-internal-media-controls-download-button {
+            display: none !important;
+        }
     </style>
 </head>
 
@@ -557,71 +570,175 @@
         });
     </script>
 
-    {{--
     <script>
         (function () {
-            document.addEventListener('contextmenu', function (event) {
-                event.preventDefault();
-            });
+            function protectMediaElements() {
+                document.querySelectorAll('img, video, picture, canvas, svg').forEach(function (media) {
+                    media.setAttribute('draggable', 'false');
+                    media.setAttribute('oncontextmenu', 'return false;');
+                    media.classList.add('fs-protected-media');
+                });
 
-            document.addEventListener('dragstart', function (event) {
-                if (
-                    event.target.tagName === 'IMG' ||
-                    event.target.tagName === 'VIDEO' ||
-                    event.target.tagName === 'A'
-                ) {
-                    event.preventDefault();
-                }
-            });
+                document.querySelectorAll('video').forEach(function (video) {
+                    video.setAttribute('controlsList', 'nodownload noplaybackrate noremoteplayback');
+                    video.setAttribute('disablePictureInPicture', '');
+                    video.setAttribute('disableRemotePlayback', '');
+                    video.setAttribute('playsinline', '');
 
-            document.addEventListener('selectstart', function (event) {
-                if (
-                    event.target.tagName === 'IMG' ||
-                    event.target.tagName === 'VIDEO'
-                ) {
-                    event.preventDefault();
-                }
-            });
+                    if (!video.hasAttribute('preload')) {
+                        video.setAttribute('preload', 'metadata');
+                    }
 
-            document.addEventListener('copy', function (event) {
-                event.preventDefault();
-            });
+                    video.oncontextmenu = function () {
+                        return false;
+                    };
+                });
+            }
 
-            document.addEventListener('keydown', function (event) {
-                const key = event.key.toLowerCase();
+            function autoMarkHeroBackgrounds() {
+                document.querySelectorAll('section, div, header, main').forEach(function (element) {
+                    const className = String(element.className || '');
+                    const hasHeroClass = className.toLowerCase().includes('hero');
 
-                if (
-                    event.key === 'F12' ||
-                    (event.ctrlKey && event.shiftKey && ['i', 'j', 'c'].includes(key)) ||
-                    (event.metaKey && event.altKey && ['i', 'j', 'c'].includes(key)) ||
-                    (event.ctrlKey && key === 'u') ||
-                    (event.metaKey && key === 'u') ||
-                    (event.ctrlKey && key === 's') ||
-                    (event.metaKey && key === 's') ||
-                    (event.ctrlKey && key === 'p') ||
-                    (event.metaKey && key === 'p')
-                ) {
-                    event.preventDefault();
+                    if (!hasHeroClass) {
+                        return;
+                    }
+
+                    const backgroundImage = window.getComputedStyle(element).backgroundImage;
+
+                    if (backgroundImage && backgroundImage !== 'none') {
+                        element.classList.add('fs-protected-bg');
+                    }
+                });
+            }
+
+            function isDirectMediaTarget(target) {
+                if (!target) {
                     return false;
                 }
-            });
 
-            document.querySelectorAll('img').forEach(function (img) {
-                img.setAttribute('draggable', 'false');
-                img.setAttribute('loading', img.getAttribute('loading') || 'lazy');
-            });
+                return Boolean(
+                    target.closest('img') ||
+                    target.closest('video') ||
+                    target.closest('picture') ||
+                    target.closest('canvas') ||
+                    target.closest('svg') ||
+                    target.closest('.fs-protected-media')
+                );
+            }
 
-            document.querySelectorAll('video').forEach(function (video) {
-                video.setAttribute('controlsList', 'nodownload noplaybackrate noremoteplayback');
-                video.setAttribute('disablePictureInPicture', '');
-                video.setAttribute('draggable', 'false');
-                video.oncontextmenu = function () {
+            function isTextOrInteractiveTarget(target) {
+                if (!target) {
                     return false;
-                };
+                }
+
+                return Boolean(
+                    target.closest('a') ||
+                    target.closest('button') ||
+                    target.closest('input') ||
+                    target.closest('textarea') ||
+                    target.closest('select') ||
+                    target.closest('label') ||
+                    target.closest('h1') ||
+                    target.closest('h2') ||
+                    target.closest('h3') ||
+                    target.closest('h4') ||
+                    target.closest('h5') ||
+                    target.closest('h6') ||
+                    target.closest('p') ||
+                    target.closest('span') ||
+                    target.closest('strong') ||
+                    target.closest('small') ||
+                    target.closest('li')
+                );
+            }
+
+            function isProtectedBackgroundTarget(target) {
+                if (!target) {
+                    return false;
+                }
+
+                const protectedBackground = target.closest('.fs-protected-bg');
+
+                if (!protectedBackground) {
+                    return false;
+                }
+
+                /*
+                 * Allow right click on text, links, and buttons inside the hero.
+                 * Block right click only on the actual background/empty hero area.
+                 */
+                if (isTextOrInteractiveTarget(target)) {
+                    return false;
+                }
+
+                return true;
+            }
+
+            function isProtectedTarget(target) {
+                return isDirectMediaTarget(target) || isProtectedBackgroundTarget(target);
+            }
+
+            document.addEventListener('DOMContentLoaded', function () {
+                protectMediaElements();
+                autoMarkHeroBackgrounds();
+
+                document.addEventListener('contextmenu', function (event) {
+                    if (isProtectedTarget(event.target)) {
+                        event.preventDefault();
+                        return false;
+                    }
+                }, true);
+
+                document.addEventListener('dragstart', function (event) {
+                    if (isProtectedTarget(event.target)) {
+                        event.preventDefault();
+                        return false;
+                    }
+                }, true);
+
+                document.addEventListener('selectstart', function (event) {
+                    if (isDirectMediaTarget(event.target) || isProtectedBackgroundTarget(event.target)) {
+                        event.preventDefault();
+                        return false;
+                    }
+                }, true);
+
+                document.addEventListener('copy', function (event) {
+                    if (isDirectMediaTarget(event.target)) {
+                        event.preventDefault();
+                        return false;
+                    }
+                }, true);
+
+                document.addEventListener('keydown', function (event) {
+                    const key = event.key.toLowerCase();
+
+                    const blocked =
+                        event.key === 'F12' ||
+                        (event.ctrlKey && event.shiftKey && ['i', 'j', 'c'].includes(key)) ||
+                        (event.metaKey && event.altKey && ['i', 'j', 'c'].includes(key)) ||
+                        (event.ctrlKey && ['u', 's'].includes(key)) ||
+                        (event.metaKey && ['u', 's'].includes(key));
+
+                    if (blocked) {
+                        event.preventDefault();
+                        return false;
+                    }
+                }, true);
+
+                const observer = new MutationObserver(function () {
+                    protectMediaElements();
+                    autoMarkHeroBackgrounds();
+                });
+
+                observer.observe(document.body, {
+                    childList: true,
+                    subtree: true
+                });
             });
         })();
-    </script> --}}
-
+    </script>
     @stack('script')
 </body>
 

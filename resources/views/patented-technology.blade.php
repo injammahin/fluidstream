@@ -949,7 +949,7 @@
 
     <main class="patent-page">
 
-        <section class="hero section">
+        <section class="hero section fs-protected-bg">
             <div class="inner">
                 <div class="hero-grid">
                     <div>

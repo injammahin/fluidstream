@@ -1975,7 +1975,7 @@
     }
   </style>
 
-  <section class="hero-tech fs-tech-hero-refined">
+  <section class="hero-tech fs-tech-hero-refined fs-protected-bg">
     <style>
       .fs-tech-hero-refined {
         position: relative;

@@ -604,7 +604,7 @@
     @endphp
 
     <div class="fip-insights-page">
-        <section class="fip-page-head">
+        <section class="fip-page-head fs-protected-bg">
             <div class="fip-container">
                 <span class="fip-eyebrow">Fluidstream Insights</span>
                 <h1 class="fip-title">

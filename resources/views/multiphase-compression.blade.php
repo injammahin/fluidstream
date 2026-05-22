@@ -1140,7 +1140,7 @@
     }
   </style>
 
-  <header class="fs-mpc-hero">
+  <header class="fs-mpc-hero fs-protected-bg">
     <style>
       .fs-mpc-hero {
         position: relative;

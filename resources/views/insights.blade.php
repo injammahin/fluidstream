@@ -947,7 +947,7 @@
     @endphp
 
     <div class="fip-insights-page">
-        <section class="fip-insights-hero">
+        <section class="fip-insights-hero fs-protected-bg">
             <div class="fip-insights-hero-wrap">
                 <div class="fip-insights-hero-copy">
                     <h1>Technical insights for real-world oilfield compression challenges.</h1>

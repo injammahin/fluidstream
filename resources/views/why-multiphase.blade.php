@@ -1700,7 +1700,7 @@
     </div>
   </section>
 
-  <section class="fs-production-path-section band">
+  <section class="fs-production-path-section band fs-protected-bg">
     <style>
       .fs-production-path-section {
         padding: 72px 0;
@@ -2103,11 +2103,11 @@
     }
 
     /* .fit-card p {
-                                                                                                                                                                                                                                                                                                                                                                                  margin: 0;
-                                                                                                                                                                                                                                                                                                                                                                                  font-size: 22px;
-                                                                                                                                                                                                                                                                                                                                                                                  line-height: 1.42;
-                                                                                                                                                                                                                                                                                                                                                                                  color: #53647c;
-                                                                                                                                                                                                                                                                                                                                                                                } */
+                                                                                                                                                                                                                                                                                                                                                                                    margin: 0;
+                                                                                                                                                                                                                                                                                                                                                                                    font-size: 22px;
+                                                                                                                                                                                                                                                                                                                                                                                    line-height: 1.42;
+                                                                                                                                                                                                                                                                                                                                                                                    color: #53647c;
+                                                                                                                                                                                                                                                                                                                                                                                  } */
 
     @media (max-width: 991px) {
       .fit-grid {
