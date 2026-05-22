@@ -250,8 +250,8 @@
         }
 
         /* section {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        padding: 78px 22px
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    } */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            padding: 78px 22px
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        } */
 
         .container {
             max-width: var(--max);
@@ -260,8 +260,8 @@
 
         .section-head {
             /* display: grid;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                grid-template-columns: .72fr 1.28fr;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                gap: 42px; */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    grid-template-columns: .72fr 1.28fr;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    gap: 42px; */
             align-items: start;
             margin-bottom: 34px
         }
@@ -371,24 +371,25 @@
             transform: scaleX(1);
         }
 
-        .mini:after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background-color: #0018dc;
-            transform: scaleX(0);
-            /* Start with a scaleX of 0 (hidden) */
-            transform-origin: left;
-            /* Make the scale start from the left */
-            transition: transform 0.3s ease;
-            /* Smooth transition */
-            z-index: 1;
+        /* 
+                .mini:after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 4px;
+                    background-color: #0018dc;
+                    transform: scaleX(0);
+                    /* Start with a scaleX of 0 (hidden) */
+        transform-origin: left;
+        /* Make the scale start from the left */
+        transition: transform 0.3s ease;
+        /* Smooth transition */
+        z-index: 1;
         }
 
-        .mini:hover {
+        */ .mini:hover {
             transform: translateY(-3px);
             border-color: #0018dc !important;
             /* box-shadow: 0 18px 36px rgba(16, 42, 67, .08); */
@@ -477,14 +478,14 @@
 
         .panel.dark {
             /* background: #0018dc;
-                                                                                                                                                                                                                                                                                                                                color: #fff; */
+                                                                                                                                                                                                                                                                                                                                                                                                                    color: #fff; */
             border: 0;
             /* box-shadow: 0 28px 80px rgba(0, 24, 220, .22); */
         }
 
         /* .panel.dark p {
-                                                                                                                                                                                                                                                                                                                            color: rgba(255, 255, 255, .80)
-                                                                                                                                                                                                                                                                                                                        } */
+                                                                                                                                                                                                                                                                                                                                                                                                                color: rgba(255, 255, 255, .80)
+                                                                                                                                                                                                                                                                                                                                                                                                            } */
 
         .panel h3 {
             font-size: 32px;
@@ -512,36 +513,36 @@
         }
 
         /* .card.swipe:after {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        content: "";
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        position: absolute;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        left: -110%;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        top: 0;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        width: 100%;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        height: 100%;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        background: linear-gradient(105deg, transparent, rgba(21, 209, 255, .16), transparent);
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        transition: .5s ease
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    } */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            content: "";
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            position: absolute;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            left: -110%;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            top: 0;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            width: 100%;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            height: 100%;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            background: linear-gradient(105deg, transparent, rgba(21, 209, 255, .16), transparent);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            transition: .5s ease
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        } */
 
         /* .card.swipe:hover:after {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        left: 110%
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    } */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            left: 110%
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        } */
 
         /* .card:hover {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        transform: translateY(-5px);
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        border-color: rgba(0, 24, 220, .3);
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        box-shadow: 0 26px 60px rgba(0, 24, 220, .12)
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            transform: translateY(-5px);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            border-color: rgba(0, 24, 220, .3);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            box-shadow: 0 26px 60px rgba(0, 24, 220, .12)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        }
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    .card.fill:hover {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        background: var(--blue);
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        color: #fff;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        border-color: var(--blue)
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    } */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        .card.fill:hover {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            background: var(--blue);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            color: #fff;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            border-color: var(--blue)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        } */
         /* 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                .card.fill:hover p,
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                .card.fill:hover .tag {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    color: rgba(255, 255, 255, .78)
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                } */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    .card.fill:hover p,
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    .card.fill:hover .tag {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        color: rgba(255, 255, 255, .78)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    } */
 
         .number {
             width: 42px;
@@ -556,9 +557,9 @@
         }
 
         /* .card.fill:hover .number {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                background: rgba(255, 255, 255, .14);
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                color: #fff
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                            } */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    background: rgba(255, 255, 255, .14);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    color: #fff
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                } */
 
         .blue-section {
             background: #f5f6f8;
@@ -568,13 +569,13 @@
         }
 
         /* .blue-section h2 {
-                                                                                                                                                                                                                                                                                                                                                                            color: #fff
-                                                                                                                                                                                                                                                                                                                                                                        } */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                color: #fff
+                                                                                                                                                                                                                                                                                                                                                                                                                                                            } */
 
 
         /* .blue-section p {
-                                                                                                                                                                                                                                                                                                                                                                        color: rgba(255, 255, 255, .80)
-                                                                                                                                                                                                                                                                                                                                                                    } */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                            color: rgba(255, 255, 255, .80)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        } */
 
         .blue-grid {
             display: grid;
@@ -671,8 +672,8 @@
         }
 
         /* .seo-copy p {
-                                                                                                                                                                                                                                                                                                                                                                                                                                    margin-bottom: 20px
-                                                                                                                                                                                                                                                                                                                                                                                                                                } */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        margin-bottom: 20px
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    } */
 
         .comparison {
             overflow: hidden;
@@ -803,8 +804,8 @@
             }
 
             /* section {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            padding: 58px 18px
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        } */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                padding: 58px 18px
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            } */
 
             .hero-inner {
                 padding-top: 62px
@@ -848,15 +849,280 @@
     </style>
 
     <main>
-        <section class="hero ">
+        <section class="fs-vermilion-image-hero">
+            <style>
+                .fs-vermilion-image-hero {
+                    position: relative;
+                    isolation: isolate;
+                    overflow: hidden;
+                    min-height: 620px;
+                    color: #ffffff;
+                    background:
+                        linear-gradient(100deg,
+                            rgba(2, 8, 35, .62) 0%,
+                            rgba(2, 8, 35, .46) 42%,
+                            rgba(6, 10, 42, .30) 72%,
+                            rgba(0, 24, 220, .06) 100%),
+                        url("{{ asset('/img/Vermilion-7.png') }}");
+                    background-size: cover;
+                    background-position: center 70%;
+                    background-repeat: no-repeat;
+                    border-bottom: 1px solid rgba(223, 233, 255, .35);
+                }
+
+                .fs-vermilion-image-hero::after {
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    z-index: -1;
+                    background: linear-gradient(180deg, rgba(2, 8, 35, .04) 0%, rgba(2, 8, 35, .54) 100%);
+                    pointer-events: none;
+                }
+
+                .fs-vermilion-image-hero .hero-inner {
+                    width: min(var(--max), calc(100% - 40px));
+                    max-width: var(--max);
+                    min-height: 620px;
+                    margin: 0 auto;
+                    display: grid;
+                    grid-template-columns: 1.08fr .92fr;
+                    gap: 58px;
+                    align-items: flex-start;
+                    padding: 96px 0 72px;
+                    position: relative;
+                    z-index: 2;
+                }
+
+                .fs-vermilion-image-hero h1 {
+                    max-width: 920px;
+                    margin: 0 0 24px;
+                    color: #ffffff;
+                    font-size: clamp(38px, 5vw, 66px);
+                    line-height: .94;
+                    letter-spacing: -.075em;
+                    font-weight: 500;
+                }
+
+                .fs-vermilion-image-hero h2 {
+                    max-width: 760px;
+                    margin: 0 0 18px;
+                    color: rgba(255, 255, 255, .88);
+                    font-size: clamp(19px, 2vw, 24px);
+                    line-height: 1.22;
+                    letter-spacing: -.035em;
+                    font-weight: 500;
+                }
+
+                .fs-vermilion-image-hero .lead {
+                    max-width: 760px;
+                    margin: 0;
+                    color: rgba(255, 255, 255, .82);
+                    font-size: clamp(16px, 1.35vw, 19px);
+                    line-height: 1.68;
+                    font-weight: 500;
+                }
+
+                .fs-vermilion-image-hero .cta-row {
+                    display: flex;
+                    gap: 1rem;
+                    flex-wrap: wrap;
+                    margin-top: 2rem;
+                }
+
+                .fs-vermilion-image-hero .btn {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 999px;
+                    padding: .95rem 1.28rem;
+                    font-weight: 900;
+                    border: 1px solid transparent;
+                    transition:
+                        transform .22s ease,
+                        box-shadow .22s ease,
+                        background .22s ease,
+                        color .22s ease,
+                        border-color .22s ease;
+                }
+
+                .fs-vermilion-image-hero .btn:hover {
+                    transform: translateY(-2px);
+                    text-decoration: none;
+                }
+
+                .fs-vermilion-image-hero .btn.primary {
+                    background: #0018dc;
+                    color: #ffffff;
+                    border-color: #0018dc;
+                    box-shadow: 0 16px 36px rgba(0, 0, 0, .22);
+                }
+
+                .fs-vermilion-image-hero .btn.secondary {
+                    color: #ffffff !important;
+                    border-color: rgba(255, 255, 255, .42) !important;
+                    background: rgba(255, 255, 255, .08) !important;
+                }
+
+                .fs-vermilion-image-hero .btn.secondary:hover {
+                    background: rgba(255, 255, 255, .14);
+                    border-color: rgba(255, 255, 255, .68);
+                }
+
+                .fs-vermilion-image-hero .hero-card.heroo {
+                    position: relative;
+                    overflow: hidden;
+                    border: 1px solid rgba(255, 255, 255, .22) !important;
+                    border-radius: 7px;
+                    padding: 28px;
+                    background: rgba(0, 0, 0, .08) !important;
+                    backdrop-filter: blur(6px);
+                    box-shadow: 0 26px 70px rgba(0, 0, 0, .18) !important;
+                    transition:
+                        transform .24s ease,
+                        border-color .24s ease,
+                        background .24s ease;
+                }
+
+                /* .fs-vermilion-image-hero .hero-card.heroo::after,
+                                .fs-vermilion-image-hero .mini::after {
+                                    content: "";
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 4px;
+                                    background: #0018dc;
+                                    transform: scaleX(0);
+                                    transform-origin: left;
+                                    transition: transform .3s ease;
+                                    z-index: 1;
+                                    pointer-events: none;
+                                } */
+
+                .fs-vermilion-image-hero .hero-card.heroo:hover,
+                .fs-vermilion-image-hero .mini:hover {
+                    transform: translateY(-3px);
+                    border-color: rgba(255, 255, 255, .48) !important;
+                    background: rgba(0, 0, 0, .14) !important;
+                }
+
+                /* .fs-vermilion-image-hero .hero-card.heroo:hover::after,
+                            .fs-vermilion-image-hero .mini:hover::after {
+                                transform: scaleX(1);
+                            } */
+
+                .fs-vermilion-image-hero .quote {
+                    font-size: 18px;
+                    line-height: 1.32;
+                    letter-spacing: -.035em;
+                    font-weight: 500;
+                    margin: 0 0 20px;
+                    color: #ffffff;
+                }
+
+                .fs-vermilion-image-hero .quote-source-row {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 18px;
+                    margin-bottom: 22px;
+                }
+
+                .fs-vermilion-image-hero .quote-source {
+                    color: rgba(255, 255, 255, .78);
+                    font-size: 14px;
+                    font-weight: 600;
+                }
+
+                .fs-vermilion-image-hero .mini-metrics {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    gap: 10px;
+                    margin-top: 22px;
+                }
+
+                .fs-vermilion-image-hero .mini {
+                    position: relative;
+                    overflow: hidden;
+                    border-radius: 7px;
+                    background: rgba(0, 0, 0, .08) !important;
+                    padding: 16px;
+                    border: 1px solid rgba(255, 255, 255, .22) !important;
+                    transition:
+                        transform .24s ease,
+                        border-color .24s ease,
+                        background .24s ease;
+                }
+
+                .fs-vermilion-image-hero .mini strong {
+                    display: block;
+                    font-size: 24px;
+                    letter-spacing: -.04em;
+                    color: #ffffff;
+                }
+
+                .fs-vermilion-image-hero .mini span {
+                    font-size: 12px;
+                    color: rgba(255, 255, 255, .78);
+                    font-weight: 800;
+                }
+
+                @media (max-width: 1020px) {
+
+                    .fs-vermilion-image-hero,
+                    .fs-vermilion-image-hero .hero-inner {
+                        min-height: auto;
+                    }
+
+                    .fs-vermilion-image-hero .hero-inner {
+                        grid-template-columns: 1fr;
+                        gap: 34px;
+                        padding: 76px 0 64px;
+                    }
+
+                    .fs-vermilion-image-hero .hero-card.heroo {
+                        max-width: 720px;
+                    }
+
+                    .fs-vermilion-image-hero .mini-metrics {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+                }
+
+                @media (max-width: 620px) {
+                    .fs-vermilion-image-hero {
+                        background-position: center 62%;
+                    }
+
+                    .fs-vermilion-image-hero .hero-inner {
+                        width: min(var(--max), calc(100% - 28px));
+                        padding: 62px 0 52px;
+                    }
+
+                    .fs-vermilion-image-hero h1 {
+                        font-size: 42px;
+                    }
+
+                    .fs-vermilion-image-hero .mini-metrics {
+                        grid-template-columns: 1fr;
+                    }
+
+                    .fs-vermilion-image-hero .hero-card.heroo {
+                        padding: 22px;
+                    }
+                }
+            </style>
+
             <div class="hero-inner py-12">
                 <div>
-                    <h1>From liquid-loaded wells to C$1.5M+ per year in recovered production.</h1>
-                    <h2>Fluidstream restored two mature Alberta, Canada wells without adding separation infrastructure.</h2>
-                    <p class="lead">An international oil and gas producer used a 200 HP gas-driven Fluidstream MC2270
-                        MultiphaseCommander™ to reduce backpressure, manage real multiphase flow, and return two nearly dead
-                        wells to
-                        stable gas and condensate production.</p>
+                    <h1>How Vermilion Energy restored production from mature liquid-loaded gas wells using Fluidstream
+                        multiphase compression.
+                    </h1>
+                    <h2>Vermilion Energy restored two mature Alberta, Canada wells without adding separation-first
+                        infrastructure.</h2>
+                    <p class="lead">Vermilion Energy used a 200 HP gas-driven Fluidstream MC2270 MultiphaseCommander™ to
+                        reduce backpressure, manage real multiphase flow, and return two nearly dead wells to stable gas and
+                        condensate production.</p>
                     <div class="cta-row">
                         <a class="btn primary" href="/technical-review">Discuss a Similar Application</a>
                         <a class="btn secondary" href="/technology">View Technology Advantage</a>
@@ -876,7 +1142,7 @@
                         the first solution we’ve seen that delivers both simplicity and reliable performance.”</p>
                     <div class="quote-source-row">
                         <div class="quote-source">
-                            Production Engineer,Vermilion Energy
+                            Production Engineer, Vermilion Energy
                         </div>
                         <style>
                             .quote-source-row {
@@ -924,10 +1190,10 @@
                         <div class="kicker mb-2">Performance snapshot</div>
                         <h2>Production recovery, reliability, and simpler field operation.</h2>
                     </div>
-                    <p>This was a real field deployment, not a controlled test environment. It was a field deployment at an
-                        unmanned
-                        Alberta, Canada location with no electrical power, severe liquid loading, rising pipeline pressure,
-                        plunger-lift cycling, winter operation, and highly variable gas-liquid flow. The average production
+                    <p>This was a real Vermilion Energy field deployment, not a controlled test environment. It was deployed
+                        at an unmanned Alberta, Canada location with no electrical power, severe liquid loading, rising
+                        pipeline pressure, plunger-lift cycling, winter operation, and highly variable gas-liquid flow. The
+                        average production
                         recovery
                         was important, but the more difficult engineering requirement was the transient operating envelope:
                         the system
@@ -985,10 +1251,9 @@
                         become uneconomic because hydrocarbons disappeared; they became uneconomic because the flow system
                         could no
                         longer unload liquids against the available pressure differential.</p>
-                    <p class="color">Pipeline pressure could rise to about 1200 kPa while the operator wanted the wells
-                        exposed to
-                        approximately
-                        250 kPa to produce effectively. Plunger lift remained useful, but the wells had moved beyond the
+                    <p class="color">Pipeline pressure could rise to about 1200 kPa while Vermilion Energy wanted the wells
+                        exposed to approximately 250 kPa to produce effectively. Plunger lift remained useful, but the wells
+                        had moved beyond the
                         operating
                         window where cyclic unloading could maintain sustained production. The operating profile created
                         repeated flow
@@ -1095,9 +1360,9 @@
                 <div class="panel">
                     <div class="kicker mb-2">Fluidstream deployment</div>
                     <h3>MC2270 • 200 HP gas drive • Alberta, Canada</h3>
-                    <p>The location had no electrical power, the wells were deeper than 2400 m, and the producer wanted to
-                        avoid new
-                        separation equipment. Fluidstream installed a gas-driven MultiphaseCommander™ package that used
+                    <p>The Vermilion Energy location had no electrical power, the wells were deeper than 2400 m, and the
+                        producer wanted to avoid new separation equipment. Fluidstream installed a gas-driven
+                        MultiphaseCommander™ package that used
                         produced gas
                         as fuel and operated directly on the mixed gas-liquid stream. The package was selected for practical
                         field
@@ -1122,8 +1387,8 @@
                     <p>Fluidstream’s multiphase approach addressed the actual field bottleneck: reducing wellhead pressure
                         while
                         allowing gas, condensate, water, and transient slugs to move through the system together.</p>
-                    <p>Instead of designing the site around the limitations of a conventional gas-only compressor, the
-                        producer used
+                    <p>Instead of designing the site around the limitations of a conventional gas-only compressor,
+                        Vermilion Energy used
                         a purpose-built multiphase compression system that supported a simpler pad configuration and lower
                         intervention exposure.</p>
                 </div>
@@ -1251,9 +1516,8 @@
                     </article>
                     <article class="card swipe">
                         <h3>No separation-heavy buildout.</h3>
-                        <p class="muted">The operator avoided adding the full suite of extra wellsite equipment normally
-                            required to
-                            protect conventional gas-only compression from wet, unstable flow.</p>
+                        <p class="muted">Vermilion Energy avoided adding the full suite of extra wellsite equipment normally
+                            required to protect conventional gas-only compression from wet, unstable flow.</p>
                     </article>
                     <article class="card fill">
                         <h3>Gas-drive deployment fit.</h3>
@@ -1392,21 +1656,21 @@
                 background 0.24s ease;
         }
 
-        .panel::after,
-        .hero-card.heroo::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: #0018dc;
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.3s ease;
-            z-index: 1;
-            pointer-events: none;
-        }
+        /* .panel::after,
+            .hero-card.heroo::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 4px;
+                background: #0018dc;
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: transform 0.3s ease;
+                z-index: 1;
+                pointer-events: none;
+            } */
 
         .panel:hover,
         .hero-card.heroo:hover {

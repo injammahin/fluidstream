@@ -818,7 +818,6 @@
                 ],
                 'hook' => 'A strong reliability story for operators concerned about wet gas, seal life, cold-weather performance, and maintenance-heavy conventional VRUs.',
                 'tagline' => 'Long-run reliability',
-                'logo' => asset('/img/Torxen logo.webp'),
                 'logo_alt' => 'Torxen logo',
             ],
             [
@@ -836,7 +835,6 @@
                 ],
                 'hook' => 'Built for readers comparing VCUs, conventional VRUs, carbon exposure, active pressure control, and recovered gas economics.',
                 'tagline' => 'VCU replacement',
-                'logo' => asset('/img/Torxen logo.webp'),
                 'logo_alt' => 'Torxen logo',
             ],
             [
@@ -854,7 +852,6 @@
                 ],
                 'hook' => 'A concise proof point for operators needing emissions compliance, wet-gas tolerance, low-touch operation, and winter reliability.',
                 'tagline' => 'Uptime and emissions',
-                'logo' => asset('img/Allied Energy.png'),
                 'logo_alt' => 'Allied Energy II logo',
             ],
             [
@@ -872,7 +869,6 @@
                 ],
                 'hook' => 'A strong fit for readers evaluating VRUs in cold climates, liquid-prone vapor streams, remote facilities, and applications where conventional dry-gas VRUs create winter maintenance risk.',
                 'tagline' => 'Winter VRU reliability',
-                'logo' => asset('img/Whitecap.png'),
                 'logo_alt' => 'Whitecap Resources logo',
             ],
         ];

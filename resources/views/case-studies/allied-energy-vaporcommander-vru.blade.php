@@ -213,22 +213,6 @@
             box-shadow: 0 26px 70px rgba(0, 0, 0, .22)
         }
 
-        .hero-card:after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background-color: #0018dc;
-            transform: scaleX(0);
-            /* Start with a scaleX of 0 (hidden) */
-            transform-origin: left;
-            /* Make the scale start from the left */
-            transition: transform 0.3s ease;
-            /* Smooth transition */
-            z-index: 1;
-        }
 
         .hero-card:hover {
             transform: translateY(-3px);
@@ -284,8 +268,8 @@
         }
 
         /* section {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                            padding: 78px 22px
-                                                                                                                                                                                                                                                                                                                                                                                                                                                        } */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            padding: 78px 22px
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        } */
 
         .container {
             /* max-width: var(--max); */
@@ -294,8 +278,8 @@
 
         .section-head {
             /* display: grid;
-                                                                                                                                                                                                                                                                                                                                                                                grid-template-columns: .72fr 1.28fr;
-                                                                                                                                                                                                                                                                                                                                                                                gap: 42px; */
+                                                                                                                                                                                                                                                                                                                                                                                                                grid-template-columns: .72fr 1.28fr;
+                                                                                                                                                                                                                                                                                                                                                                                                                gap: 42px; */
             max-width: 66ch;
             align-items: start;
             margin-bottom: 34px
@@ -449,22 +433,6 @@
             transform: scaleX(1);
         }
 
-        .mini:after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background-color: #0018dc;
-            transform: scaleX(0);
-            /* Start with a scaleX of 0 (hidden) */
-            transform-origin: left;
-            /* Make the scale start from the left */
-            transition: transform 0.3s ease;
-            /* Smooth transition */
-            z-index: 1;
-        }
 
         .mini:hover {
             transform: translateY(-3px);
@@ -515,8 +483,8 @@
         }
 
         /* .metric:hover .big {
-                                                                                                                                                                                                                                                                                                                        color: #fff
-                                                                                                                                                                                                                                                                                                                    } */
+                                                                                                                                                                                                                                                                                                                                                        color: #fff
+                                                                                                                                                                                                                                                                                                                                                    } */
 
         .metric h3,
         .card h3 {
@@ -594,36 +562,36 @@
         }
 
         /* .card.swipe:after {
-                                                                                                                                                                                                                                        content: "";
-                                                                                                                                                                                                                                        position: absolute;
-                                                                                                                                                                                                                                        left: -110%;
-                                                                                                                                                                                                                                        top: 0;
-                                                                                                                                                                                                                                        width: 100%;
-                                                                                                                                                                                                                                        height: 100%;
-                                                                                                                                                                                                                                        background: linear-gradient(105deg, transparent, rgba(21, 209, 255, .16), transparent);
-                                                                                                                                                                                                                                        transition: .5s ease
-                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                        content: "";
+                                                                                                                                                                                                                                                                        position: absolute;
+                                                                                                                                                                                                                                                                        left: -110%;
+                                                                                                                                                                                                                                                                        top: 0;
+                                                                                                                                                                                                                                                                        width: 100%;
+                                                                                                                                                                                                                                                                        height: 100%;
+                                                                                                                                                                                                                                                                        background: linear-gradient(105deg, transparent, rgba(21, 209, 255, .16), transparent);
+                                                                                                                                                                                                                                                                        transition: .5s ease
+                                                                                                                                                                                                                                                                    }
 
-                                                                                                                                                                                                                                    .card.swipe:hover:after {
-                                                                                                                                                                                                                                        left: 110%
-                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    .card.swipe:hover:after {
+                                                                                                                                                                                                                                                                        left: 110%
+                                                                                                                                                                                                                                                                    }
 
-                                                                                                                                                                                                                                    .card:hover {
-                                                                                                                                                                                                                                        transform: translateY(-5px);
-                                                                                                                                                                                                                                        border-color: rgba(0, 24, 220, .3);
-                                                                                                                                                                                                                                        box-shadow: 0 26px 60px rgba(0, 24, 220, .12)
-                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    .card:hover {
+                                                                                                                                                                                                                                                                        transform: translateY(-5px);
+                                                                                                                                                                                                                                                                        border-color: rgba(0, 24, 220, .3);
+                                                                                                                                                                                                                                                                        box-shadow: 0 26px 60px rgba(0, 24, 220, .12)
+                                                                                                                                                                                                                                                                    }
 
-                                                                                                                                                                                                                                    .card.fill:hover {
-                                                                                                                                                                                                                                        background: var(--blue);
-                                                                                                                                                                                                                                        color: #fff;
-                                                                                                                                                                                                                                        border-color: var(--blue)
-                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    .card.fill:hover {
+                                                                                                                                                                                                                                                                        background: var(--blue);
+                                                                                                                                                                                                                                                                        color: #fff;
+                                                                                                                                                                                                                                                                        border-color: var(--blue)
+                                                                                                                                                                                                                                                                    }
 
-                                                                                                                                                                                                                                    .card.fill:hover p,
-                                                                                                                                                                                                                                    .card.fill:hover .tag {
-                                                                                                                                                                                                                                        color: rgba(255, 255, 255, .78)
-                                                                                                                                                                                                                                    } */
+                                                                                                                                                                                                                                                                    .card.fill:hover p,
+                                                                                                                                                                                                                                                                    .card.fill:hover .tag {
+                                                                                                                                                                                                                                                                        color: rgba(255, 255, 255, .78)
+                                                                                                                                                                                                                                                                    } */
 
         .number {
             width: 42px;
@@ -638,9 +606,9 @@
         }
 
         /* .card.fill:hover .number {
-                                                                                                                                                                                                                                    background: rgba(255, 255, 255, .14);
-                                                                                                                                                                                                                                    color: #fff
-                                                                                                                                                                                                                                } */
+                                                                                                                                                                                                                                                                    background: rgba(255, 255, 255, .14);
+                                                                                                                                                                                                                                                                    color: #fff
+                                                                                                                                                                                                                                                                } */
 
         .blue-section {
             background: #f5f6f8;
@@ -650,9 +618,9 @@
         }
 
         /* 
-                                                                .blue-section h2 {
-                                                                    color: #fff
-                                                                } */
+                                                                                                .blue-section h2 {
+                                                                                                    color: #fff
+                                                                                                } */
 
         .blue-section .kicker mb-2 {
             color: var(--cyan)
@@ -686,9 +654,9 @@
         }
 
         /* .step strong {
-                                                                                                                                                                                                                                                                    font-size: 24px;
-                                                                                                                                                                                                                                                                    color: black
-                                                                                                                                                                                                                                                                } */
+                                                                                                                                                                                                                                                                                                    font-size: 24px;
+                                                                                                                                                                                                                                                                                                    color: black
+                                                                                                                                                                                                                                                                                                } */
 
         .step h3 {
             margin: 0 0 8px;
@@ -706,7 +674,7 @@
 
         .result-band {
             /* background: #0018dc;
-                                    color: #fff; */
+                                                                    color: #fff; */
             /* padding: 42px; */
             display: grid;
             grid-template-columns: 1.05fr .95fr;
@@ -921,14 +889,14 @@
         }
 
         /* .kicker {
-                                                                        display: inline-flex;
-                                                                        align-items: center;
-                                                                        font-size: 13px;
-                                                                        font-weight: 800;
-                                                                        letter-spacing: .18em;
-                                                                        text-transform: uppercase;
-                                                                        color: aliceblue;
-                                                                    } */
+                                                                                                        display: inline-flex;
+                                                                                                        align-items: center;
+                                                                                                        font-size: 13px;
+                                                                                                        font-weight: 800;
+                                                                                                        letter-spacing: .18em;
+                                                                                                        text-transform: uppercase;
+                                                                                                        color: aliceblue;
+                                                                                                    } */
 
         .quote-source-row {
             display: flex;
@@ -986,7 +954,274 @@
 
 
     <main>
-        <section class="hero">
+        <section class="fs-allied-image-hero">
+            <style>
+                .fs-allied-image-hero {
+                    position: relative;
+                    isolation: isolate;
+                    overflow: hidden;
+                    min-height: 620px;
+                    color: #ffffff;
+                    background:
+                        linear-gradient(100deg,
+                            rgba(2, 8, 35, .62) 0%,
+                            rgba(2, 8, 35, .46) 42%,
+                            rgba(6, 10, 42, .30) 72%,
+                            rgba(0, 24, 220, .06) 100%),
+                        url("{{ asset('/img/VRU-in-winter-with-sunrise.png') }}");
+                    background-size: cover;
+                    background-position: center 70%;
+                    background-repeat: no-repeat;
+                    border-bottom: 1px solid rgba(223, 233, 255, .35);
+                }
+
+                .fs-allied-image-hero::after {
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    z-index: -1;
+                    background: linear-gradient(180deg, rgba(2, 8, 35, .04) 0%, rgba(2, 8, 35, .54) 100%);
+                    pointer-events: none;
+                }
+
+                .fs-allied-image-hero .hero-inner {
+                    width: min(var(--max), calc(100% - 40px));
+                    max-width: var(--max);
+                    min-height: 620px;
+                    margin: 0 auto;
+                    display: grid;
+                    grid-template-columns: 1.08fr .92fr;
+                    gap: 58px;
+                    align-items: flex-start;
+                    padding: 96px 0 72px;
+                    position: relative;
+                    z-index: 2;
+                }
+
+                .fs-allied-image-hero h1 {
+                    max-width: 920px;
+                    margin: 0 0 24px;
+                    color: #ffffff;
+                    font-size: clamp(38px, 5vw, 66px);
+                    line-height: .94;
+                    letter-spacing: -.075em;
+                    font-weight: 500;
+                }
+
+                .fs-allied-image-hero h2 {
+                    max-width: 760px;
+                    margin: 0 0 18px;
+                    color: rgba(255, 255, 255, .88);
+                    font-size: clamp(19px, 2vw, 24px);
+                    line-height: 1.22;
+                    letter-spacing: -.035em;
+                    font-weight: 500;
+                }
+
+                .fs-allied-image-hero .lead {
+                    max-width: 760px;
+                    margin: 0;
+                    color: rgba(255, 255, 255, .82);
+                    font-size: clamp(16px, 1.35vw, 19px);
+                    line-height: 1.68;
+                    font-weight: 500;
+                }
+
+                .fs-allied-image-hero .cta-row {
+                    display: flex;
+                    gap: 1rem;
+                    flex-wrap: wrap;
+                    margin-top: 2rem;
+                }
+
+                .fs-allied-image-hero .btn {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 999px;
+                    padding: .95rem 1.28rem;
+                    font-weight: 900;
+                    border: 1px solid transparent;
+                    transition:
+                        transform .22s ease,
+                        box-shadow .22s ease,
+                        background .22s ease,
+                        color .22s ease,
+                        border-color .22s ease;
+                }
+
+                .fs-allied-image-hero .btn:hover {
+                    transform: translateY(-2px);
+                    text-decoration: none;
+                }
+
+                .fs-allied-image-hero .btn.primary {
+                    background: #0018dc;
+                    color: #ffffff;
+                    border-color: #0018dc;
+                    box-shadow: 0 16px 36px rgba(0, 0, 0, .22);
+                }
+
+                .fs-allied-image-hero .btn.secondary {
+                    color: #ffffff !important;
+                    border-color: rgba(255, 255, 255, .42) !important;
+                    background: rgba(255, 255, 255, .08) !important;
+                }
+
+                .fs-allied-image-hero .btn.secondary:hover {
+                    background: rgba(255, 255, 255, .14);
+                    border-color: rgba(255, 255, 255, .68);
+                }
+
+                .fs-allied-image-hero .hero-card.heroo {
+                    position: relative;
+                    overflow: hidden;
+                    border: 1px solid rgba(255, 255, 255, .22) !important;
+                    border-radius: 7px;
+                    padding: 28px;
+                    background: rgba(0, 0, 0, .08) !important;
+                    backdrop-filter: blur(6px);
+                    box-shadow: 0 26px 70px rgba(0, 0, 0, .18) !important;
+                    transition:
+                        transform .24s ease,
+                        border-color .24s ease,
+                        background .24s ease;
+                }
+
+                /* 
+                            .fs-allied-image-hero .hero-card.heroo::after,
+                            .fs-allied-image-hero .mini::after {
+                                content: "";
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 4px;
+                                background: #0018dc;
+                                transform: scaleX(0);
+                                transform-origin: left;
+                                transition: transform .3s ease;
+                                z-index: 1;
+                                pointer-events: none;
+                            } */
+
+                .fs-allied-image-hero .hero-card.heroo:hover,
+                .fs-allied-image-hero .mini:hover {
+                    transform: translateY(-3px);
+                    border-color: rgba(255, 255, 255, .48) !important;
+                    background: rgba(0, 0, 0, .14) !important;
+                }
+
+                .fs-allied-image-hero .hero-card.heroo:hover::after,
+                .fs-allied-image-hero .mini:hover::after {
+                    transform: scaleX(1);
+                }
+
+                .fs-allied-image-hero .quote {
+                    font-size: 18px;
+                    line-height: 1.32;
+                    letter-spacing: -.035em;
+                    font-weight: 500;
+                    margin: 0 0 20px;
+                    color: #ffffff;
+                }
+
+                .fs-allied-image-hero .quote-source-row {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 18px;
+                    margin-bottom: 22px;
+                }
+
+                .fs-allied-image-hero .quote-source-row .quote-source {
+                    flex: 1;
+                    margin: 0;
+                    color: rgba(255, 255, 255, .78);
+                    font-size: 14px;
+                    font-weight: 800;
+                    line-height: 1.45;
+                }
+
+                .fs-allied-image-hero .mini-metrics {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    gap: 10px;
+                    margin-top: 22px;
+                }
+
+                .fs-allied-image-hero .mini {
+                    position: relative;
+                    overflow: hidden;
+                    border-radius: 7px;
+                    background: rgba(0, 0, 0, .08) !important;
+                    padding: 16px;
+                    border: 1px solid rgba(255, 255, 255, .22) !important;
+                    transition:
+                        transform .24s ease,
+                        border-color .24s ease,
+                        background .24s ease;
+                }
+
+                .fs-allied-image-hero .mini strong {
+                    display: block;
+                    font-size: 22px;
+                    letter-spacing: -.04em;
+                    color: #ffffff;
+                }
+
+                .fs-allied-image-hero .mini span {
+                    font-size: 12px;
+                    color: rgba(255, 255, 255, .78);
+                    font-weight: 800;
+                }
+
+                @media (max-width: 1020px) {
+
+                    .fs-allied-image-hero,
+                    .fs-allied-image-hero .hero-inner {
+                        min-height: auto;
+                    }
+
+                    .fs-allied-image-hero .hero-inner {
+                        grid-template-columns: 1fr;
+                        gap: 34px;
+                        padding: 76px 0 64px;
+                    }
+
+                    .fs-allied-image-hero .hero-card.heroo {
+                        max-width: 720px;
+                    }
+
+                    .fs-allied-image-hero .mini-metrics {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+                }
+
+                @media (max-width: 620px) {
+                    .fs-allied-image-hero {
+                        background-position: center 62%;
+                    }
+
+                    .fs-allied-image-hero .hero-inner {
+                        width: min(var(--max), calc(100% - 28px));
+                        padding: 62px 0 52px;
+                    }
+
+                    .fs-allied-image-hero h1 {
+                        font-size: 42px;
+                    }
+
+                    .fs-allied-image-hero .mini-metrics {
+                        grid-template-columns: 1fr;
+                    }
+
+                    .fs-allied-image-hero .hero-card.heroo {
+                        padding: 22px;
+                    }
+                }
+            </style>
+
             <div class="hero-inner wrap py-12">
                 <div>
                     <h1>100% uptime vapor recovery through wet gas, winter conditions, and variable gas flow.</h1>
@@ -1013,9 +1248,7 @@
                             VP Production, Allied Energy II Corp.
                         </div>
 
-                        <div class="quote-logo-box">
-                            <img src="{{ asset('img/Allied Energy.png') }}" alt="Allied Energy II Corp. logo">
-                        </div>
+
                     </div>
                     <div class="mini-metrics">
                         <div class="mini"><strong>100%</strong><span>uptime since installation</span></div>
@@ -1402,21 +1635,21 @@
                 background 0.24s ease;
         }
 
-        .panel::after,
-        .hero-card.heroo::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: #0018dc;
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.3s ease;
-            z-index: 1;
-            pointer-events: none;
-        }
+        /* .panel::after,
+                    .hero-card.heroo::after {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 4px;
+                        background: #0018dc;
+                        transform: scaleX(0);
+                        transform-origin: left;
+                        transition: transform 0.3s ease;
+                        z-index: 1;
+                        pointer-events: none;
+                    } */
 
         .panel:hover,
         .hero-card.heroo:hover {

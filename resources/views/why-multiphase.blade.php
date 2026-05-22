@@ -1025,9 +1025,7 @@
           <div class="proof-card-top">
             <div class="tag">ALLIED ENERGY II</div>
 
-            <div class="proof-card-logo">
-              <img src="{{ asset('img/Allied Energy.png') }}" alt="Allied Energy II logo">
-            </div>
+
           </div>
 
           <div class="proof-card-body">
