@@ -856,7 +856,7 @@
                 'label' => 'Compression Selection',
                 'title' => 'How to Select the Right Compression Applications',
                 'description' => 'A technical selection guide for vapor recovery, casing gas compression, wet gas applications, multiphase streams, and unstable wells.',
-                'url' => url('/insights/how-to-select-right-compression-applications-final-fixed'),
+                'url' => url('/insights/how-to-select-right-compression-applications'),
                 'filters' => ['compression-selection', 'equipment-failures'],
                 'tags' => ['Compression Selection', 'Equipment Failures'],
             ],

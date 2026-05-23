@@ -109,7 +109,7 @@ Route::redirect(
 );
 
 Route::redirect(
-    '/insights/how-to-select-right-compression-applications-final-fixed',
+    '/insights/how-to-select-right-compression-applications',
     '/insights/how-to-select-vapor-recovery-unit-wet-gas',
     301
 );
@@ -198,8 +198,8 @@ Route::view(
 */
 Route::view(
     '/insights/how-to-select-vapor-recovery-unit-wet-gas',
-    'insights.how-to-select-right-compression-applications-final-fixed'
-)->name('insights.how-to-select-right-compression-applications-final-fixed');
+    'insights.how-to-select-right-compression-applications'
+)->name('insights.how-to-select-right-compression-applications');
 
 /*
 | Article 10
@@ -245,6 +245,7 @@ Route::view(
 
 Route::get('/sitemap.xml', function () {
     $baseUrl = rtrim(config('app.url'), '/');
+   $baseUrl = preg_replace('/^http:\/\//i', 'https://', $baseUrl);
     $lastmod = now()->toDateString();
 
     $urls = [
@@ -342,6 +343,7 @@ Route::get('/sitemap.xml', function () {
 
 Route::get('/robots.txt', function () {
     $baseUrl = rtrim(config('app.url'), '/');
+   $baseUrl = preg_replace('/^http:\/\//i', 'https://', $baseUrl);
 
     $robots = "User-agent: *\n";
     $robots .= "Allow: /\n\n";

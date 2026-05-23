@@ -2337,7 +2337,7 @@
                             </li>
 
                             <li>
-                                <a href="{{ url('/insights/how-to-select-right-compression-applications-final-fixed') }}">
+                                <a href="{{ url('/insights/how-to-select-right-compression-applications') }}">
                                     How to Select a Vapor Recovery Unit for Wet Gas
                                 </a>
                             </li>

@@ -1869,7 +1869,7 @@
         }
 
         .fs-home-hero-btn-secondary {
-            /* background: rgba(255, 255, 255, .06); */
+            background: rgb(255 255 255 / 33%);
             color: #ffffff;
             border: 1px solid rgba(255, 255, 255, .22);
         }
@@ -1893,7 +1893,7 @@
             padding: 14px;
             border-radius: 7px;
             border: 1px solid rgba(255, 255, 255, .20);
-            /* background: rgba(255, 255, 255, .08); */
+            background: rgb(255 255 255 / 27%);
             box-shadow: 0 18px 45px rgba(0, 0, 0, .16);
             /* backdrop-filter: blur(12px); */
             -webkit-backdrop-filter: blur(12px);
@@ -2065,6 +2065,13 @@
             /* important */
             will-change: transform;
         }
+        .fs-home-hero .fs-media-shield,
+        .fs-home-hero .fs-watermark,
+        .fs-home-hero .watermark {
+            display: none !important;
+            opacity: 0 !important;
+            visibility: hidden !important;
+        }
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -2084,7 +2091,7 @@
             <source src="{{ asset('/video/video1.mp4') }}" type="video/mp4">
         </video> --}}
         <div class="hero-video-wrap">
-            <video class="hero-video fs-protected-media" autoplay muted loop playsinline preload="metadata"
+           <video class="hero-video" autoplay muted loop playsinline preload="metadata"
                 controlsList="nodownload noplaybackrate noremoteplayback" disablePictureInPicture disableRemotePlayback
                 draggable="false" oncontextmenu="return false;">
                 <source src="{{ asset('/video/video1.mp4') }}" type="video/mp4">
@@ -2266,7 +2273,7 @@
                     min-height: 390px;
                     border-radius: 7px;
                     border: 1px solid rgba(255, 255, 255, .18);
-                    /* background: rgba(255, 255, 255, .09); */
+                   background: rgb(255 255 255 / 12%);
                     overflow: hidden;
                 }
 

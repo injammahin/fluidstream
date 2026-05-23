@@ -514,7 +514,7 @@
                 'label' => 'Article 9',
                 'title' => 'How to Select the Right Compression Application',
                 'description' => 'A selection guide for matching compression technology to vapor recovery, casing gas, liquid-loaded wells, and mixed-phase field conditions.',
-                'url' => url('/insights/how-to-select-right-compression-applications-final-fixed'),
+                'url' => url('/insights/how-to-select-right-compression-applications'),
                 'industry' => 'oil-gas',
                 'equipment' => 'technology',
                 'topic' => 'selection',

@@ -443,8 +443,8 @@
     @endif
 
     @yield('schema')
+    @stack('schema')
     @stack('style')
-
     <style>
         html {
             scroll-behavior: smooth;
