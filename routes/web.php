@@ -30,7 +30,7 @@ Route::view('/technology', 'technology')->name('technology');
 Route::view('/insights', 'insights')->name('insights');
 Route::view('/privacy-policy', 'privacy-policy')->name('privacy-policy');
 Route::view('/terms', 'terms')->name('terms');
-Route::view('/perspectives', 'perspectives')->name('perspectives');
+// Route::view('/perspectives', 'perspectives')->name('perspectives');
 Route::view('/why-multiphase', 'why-multiphase')->name('why-multiphase');
 Route::view('/contact', 'contact')->name('contact');
 Route::view('/patented-technology', 'patented-technology')->name('patented-technology');
@@ -242,6 +242,11 @@ Route::view(
 | APP_URL=https://fluidstream.com
 |--------------------------------------------------------------------------
 */
+Route::view('/contact/submitted', 'forms.contact-submitted')
+    ->name('contact.submitted');
+
+Route::view('/technical-review/submitted', 'forms.technical-review-submitted')
+    ->name('technical-review.submitted');
 
 Route::get('/sitemap.xml', function () {
     $baseUrl = rtrim(config('app.url'), '/');
@@ -264,7 +269,7 @@ Route::get('/sitemap.xml', function () {
         ['path' => '/patented-technology', 'changefreq' => 'monthly', 'priority' => '0.85'],
         ['path' => '/why-multiphase', 'changefreq' => 'monthly', 'priority' => '0.80'],
         ['path' => '/insights', 'changefreq' => 'weekly', 'priority' => '0.85'],
-        ['path' => '/perspectives', 'changefreq' => 'monthly', 'priority' => '0.70'],
+        // ['path' => '/perspectives', 'changefreq' => 'monthly', 'priority' => '0.70'],
         ['path' => '/about-us', 'changefreq' => 'monthly', 'priority' => '0.75'],
         ['path' => '/contact', 'changefreq' => 'monthly', 'priority' => '0.75'],
         ['path' => '/technical-review', 'changefreq' => 'monthly', 'priority' => '0.80'],

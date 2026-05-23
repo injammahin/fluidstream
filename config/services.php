@@ -13,6 +13,9 @@ return [
     | a conventional file to locate the various service credentials.
     |
     */
+    'gtm' => [
+        'id' => env('GTM_ID'),
+    ],
 
     'mailgun' => [
         'domain' => env('MAILGUN_DOMAIN'),

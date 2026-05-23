@@ -939,6 +939,7 @@
                             <button class="submit" id="technicalSubmit" type="submit">
                                 Submit Application for Review
                             </button>
+                            @include('partical.response-time-note')
                         </form>
                     </div>
                 </div>

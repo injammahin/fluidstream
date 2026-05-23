@@ -5,16 +5,23 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Route;
+use Throwable;
 
 class ContactController extends Controller
 {
     public function submit(Request $request)
     {
-        if ($request->filled('website')) {
-            return back()->with('success', 'Thank you. Your message has been submitted successfully.');
-        }
-
         $isTechnicalReview = $request->input('inquiry_type') === 'Technical Review Request';
+
+        /*
+         * Honeypot spam protection.
+         * If hidden "website" field is filled, silently redirect to thank-you page
+         * without sending email.
+         */
+        if ($request->filled('website')) {
+            return $this->redirectAfterSubmit($isTechnicalReview);
+        }
 
         $rules = [
             'first_name' => ['required', 'string', 'max:150'],
@@ -68,7 +75,8 @@ class ContactController extends Controller
 
         $payload = $this->buildPayload($request, $isTechnicalReview);
 
-        $recipientEmail = config('mail.contact_recipient') ?: env('CONTACT_FORM_RECIPIENT', config('mail.from.address'));
+        $recipientEmail = config('mail.contact_recipient')
+            ?: env('CONTACT_FORM_RECIPIENT', config('mail.from.address'));
 
         try {
             Mail::send('emails.contact-submission', [
@@ -86,8 +94,8 @@ class ContactController extends Controller
                     ->subject($subjectPrefix . ' - ' . $subjectName);
             });
 
-            return back()->with('success', 'Thank you. Your message has been submitted successfully.');
-        } catch (\Throwable $exception) {
+            return $this->redirectAfterSubmit($isTechnicalReview);
+        } catch (Throwable $exception) {
             Log::error('Contact form email failed', [
                 'error' => $exception->getMessage(),
                 'file' => $exception->getFile(),
@@ -100,6 +108,23 @@ class ContactController extends Controller
                     'email' => 'Message could not be sent right now. Please check mail configuration and try again.',
                 ]);
         }
+    }
+
+    private function redirectAfterSubmit(bool $isTechnicalReview)
+    {
+        if ($isTechnicalReview) {
+            if (Route::has('technical-review.submitted')) {
+                return redirect()->route('technical-review.submitted');
+            }
+
+            return redirect('/technical-review/submitted');
+        }
+
+        if (Route::has('contact.submitted')) {
+            return redirect()->route('contact.submitted');
+        }
+
+        return redirect('/contact/submitted');
     }
 
     private function buildPayload(Request $request, bool $isTechnicalReview): array

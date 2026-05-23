@@ -733,6 +733,7 @@
                         <button class="fs-contact-submit" type="submit">
                             Send Message
                         </button>
+                        @include('partical.response-time-note')
                     </form>
                 </div>
             </div>
