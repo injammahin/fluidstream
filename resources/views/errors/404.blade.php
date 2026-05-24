@@ -2,12 +2,7 @@
 
 @section('content')
 <section class="relative overflow-hidden bg-[#f7f9fc] py-24">
-    {{-- Background decoration --}}
-    <div class="pointer-events-none absolute inset-0">
-        <div class="absolute -top-32 -left-32 h-96 w-96 rounded-full bg-[#0018dc]/10 blur-3xl"></div>
-        <div class="absolute top-20 -right-24 h-96 w-96 rounded-full bg-[#15d1ff]/20 blur-3xl"></div>
-        <div class="absolute bottom-0 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-[#0018dc]/10 blur-3xl"></div>
-    </div>
+
 
     {{-- Grid pattern --}}
     <div class="pointer-events-none absolute inset-0 opacity-[0.35]"

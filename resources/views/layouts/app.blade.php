@@ -688,7 +688,7 @@
             width: min(760px, 100%);
             margin-left: auto;
             border: 1px solid rgba(217, 230, 255, 0.9);
-            border-radius: 18px;
+            border-radius: 3px;
             background: rgba(255, 255, 255, 0.96);
             box-shadow: 0 24px 70px rgba(15, 23, 42, 0.22);
             backdrop-filter: blur(14px);
