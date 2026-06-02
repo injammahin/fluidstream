@@ -257,8 +257,8 @@
         }
 
         /* section {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            padding: 78px 22px
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        } */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                padding: 78px 22px
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            } */
 
         .container {
             max-width: var(--max) !important;
@@ -267,21 +267,21 @@
 
         .section-head {
             /* display: grid;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                grid-template-columns: .72fr 1.28fr;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                gap: 42px; */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                    grid-template-columns: .72fr 1.28fr;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                    gap: 42px; */
             max-width: 66ch;
             align-items: start;
             margin-bottom: 34px
         }
 
         /* .kicker mb-2 {
-                                                                                                                                                    font-size: 12px;
-                                                                                                                                                    text-transform: uppercase;
-                                                                                                                                                    letter-spacing: .18em;
-                                                                                                                                                    color: var(--blue);
-                                                                                                                                                    font-weight: 950;
-                                                                                                                                                    margin-bottom: 12px
-                                                                                                                                                } */
+                                                                                                                                                        font-size: 12px;
+                                                                                                                                                        text-transform: uppercase;
+                                                                                                                                                        letter-spacing: .18em;
+                                                                                                                                                        color: var(--blue);
+                                                                                                                                                        font-weight: 950;
+                                                                                                                                                        margin-bottom: 12px
+                                                                                                                                                    } */
 
         h2 {
             margin: 0 0 16px;
@@ -439,8 +439,8 @@
         }
 
         /* .metric:hover .big {
-                                                                                                                                                                                                                                                                                                                                                                                                        color: #fff
-                                                                                                                                                                                                                                                                                                                                                                                                    } */
+                                                                                                                                                                                                                                                                                                                                                                                                            color: #fff
+                                                                                                                                                                                                                                                                                                                                                                                                        } */
 
         .metric h3,
         .card h3 {
@@ -483,14 +483,14 @@
 
         .panel.dark {
             /* background: #0018dc;
-                                                                                                                                                                                        color: #fff; */
+                                                                                                                                                                                            color: #fff; */
             border: 0;
             /* box-shadow: 0 28px 80px rgba(0, 24, 220, .22) */
         }
 
         /* .panel.dark p {
-                                                                                                                                                                                    color: rgba(255, 255, 255, .80)
-                                                                                                                                                                                } */
+                                                                                                                                                                                        color: rgba(255, 255, 255, .80)
+                                                                                                                                                                                    } */
 
         .panel h3 {
             font-size: 32px;
@@ -518,36 +518,36 @@
         }
 
         /* .card.swipe:after {
-                                                                                                                                                                                                                                                                                                                        content: "";
-                                                                                                                                                                                                                                                                                                                        position: absolute;
-                                                                                                                                                                                                                                                                                                                        left: -110%;
-                                                                                                                                                                                                                                                                                                                        top: 0;
-                                                                                                                                                                                                                                                                                                                        width: 100%;
-                                                                                                                                                                                                                                                                                                                        height: 100%;
-                                                                                                                                                                                                                                                                                                                        background: linear-gradient(105deg, transparent, rgba(21, 209, 255, .16), transparent);
-                                                                                                                                                                                                                                                                                                                        transition: .5s ease
-                                                                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                                                                            content: "";
+                                                                                                                                                                                                                                                                                                                            position: absolute;
+                                                                                                                                                                                                                                                                                                                            left: -110%;
+                                                                                                                                                                                                                                                                                                                            top: 0;
+                                                                                                                                                                                                                                                                                                                            width: 100%;
+                                                                                                                                                                                                                                                                                                                            height: 100%;
+                                                                                                                                                                                                                                                                                                                            background: linear-gradient(105deg, transparent, rgba(21, 209, 255, .16), transparent);
+                                                                                                                                                                                                                                                                                                                            transition: .5s ease
+                                                                                                                                                                                                                                                                                                                        }
 
-                                                                                                                                                                                                                                                                                                                    .card.swipe:hover:after {
-                                                                                                                                                                                                                                                                                                                        left: 110%
-                                                                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                                                                        .card.swipe:hover:after {
+                                                                                                                                                                                                                                                                                                                            left: 110%
+                                                                                                                                                                                                                                                                                                                        }
 
-                                                                                                                                                                                                                                                                                                                    .card:hover {
-                                                                                                                                                                                                                                                                                                                        transform: translateY(-5px);
-                                                                                                                                                                                                                                                                                                                        border-color: rgba(0, 24, 220, .3);
-                                                                                                                                                                                                                                                                                                                        box-shadow: 0 26px 60px rgba(0, 24, 220, .12)
-                                                                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                                                                        .card:hover {
+                                                                                                                                                                                                                                                                                                                            transform: translateY(-5px);
+                                                                                                                                                                                                                                                                                                                            border-color: rgba(0, 24, 220, .3);
+                                                                                                                                                                                                                                                                                                                            box-shadow: 0 26px 60px rgba(0, 24, 220, .12)
+                                                                                                                                                                                                                                                                                                                        }
 
-                                                                                                                                                                                                                                                                                                                    .card.fill:hover {
-                                                                                                                                                                                                                                                                                                                        background: var(--blue);
-                                                                                                                                                                                                                                                                                                                        color: #fff;
-                                                                                                                                                                                                                                                                                                                        border-color: var(--blue)
-                                                                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                                                                        .card.fill:hover {
+                                                                                                                                                                                                                                                                                                                            background: var(--blue);
+                                                                                                                                                                                                                                                                                                                            color: #fff;
+                                                                                                                                                                                                                                                                                                                            border-color: var(--blue)
+                                                                                                                                                                                                                                                                                                                        }
 
-                                                                                                                                                                                                                                                                                                                    .card.fill:hover p,
-                                                                                                                                                                                                                                                                                                                    .card.fill:hover .tag {
-                                                                                                                                                                                                                                                                                                                        color: rgba(255, 255, 255, .78)
-                                                                                                                                                                                                                                                                                                                    } */
+                                                                                                                                                                                                                                                                                                                        .card.fill:hover p,
+                                                                                                                                                                                                                                                                                                                        .card.fill:hover .tag {
+                                                                                                                                                                                                                                                                                                                            color: rgba(255, 255, 255, .78)
+                                                                                                                                                                                                                                                                                                                        } */
 
         .number {
             width: 42px;
@@ -612,9 +612,9 @@
         }
 
         /* .card.fill:hover .number {
-                                                                                                                                                                                                                                                                                                                    background: rgba(255, 255, 255, .14);
-                                                                                                                                                                                                                                                                                                                    color: #fff
-                                                                                                                                                                                                                                                                                                                } */
+                                                                                                                                                                                                                                                                                                                        background: rgba(255, 255, 255, .14);
+                                                                                                                                                                                                                                                                                                                        color: #fff
+                                                                                                                                                                                                                                                                                                                    } */
 
         .blue-section {
             background: #f4f6f8;
@@ -624,12 +624,12 @@
         }
 
         /* .blue-section h2 {
-                                                                                                                                                                                                                    color: #fff
-                                                                                                                                                                                                                } */
+                                                                                                                                                                                                                        color: #fff
+                                                                                                                                                                                                                    } */
 
         /* .blue-section .kicker mb-2 {
-                                                                                                                                                    color: var(--cyan)
-                                                                                                                                                } */
+                                                                                                                                                        color: var(--cyan)
+                                                                                                                                                    } */
 
         .blue-section p {
             color: #5c6677;
@@ -659,9 +659,9 @@
         }
 
         /* .step strong {
-                                                                                                                                                                                                                                                                                                                                                    font-size: 24px;
-                                                                                                                                                                                                                                                                                                                                                    color: black
-                                                                                                                                                                                                                                                                                                                                                } */
+                                                                                                                                                                                                                                                                                                                                                        font-size: 24px;
+                                                                                                                                                                                                                                                                                                                                                        color: black
+                                                                                                                                                                                                                                                                                                                                                    } */
 
         .step h3 {
             margin: 0 0 8px;
@@ -679,7 +679,7 @@
 
         .result-band {
             /* background: #0018dc;
-                                                                                                                                color: #fff; */
+                                                                                                                                    color: #fff; */
             /* padding: 42px; */
             display: grid;
             grid-template-columns: 1.05fr .95fr;
@@ -778,10 +778,11 @@
             color: rgba(0, 0, 0, 0.78)
         }
 
-        footer {
-            background: #071126;
-            color: #fff;
-            padding: 56px 22px 28px
+        @media (max-width: 620px) {
+
+            .container {
+                width: min(var(--max), calc(100% - 28px));
+            }
         }
 
         .footer-grid {
@@ -850,9 +851,9 @@
                 grid-template-columns: 1fr
             }
 
-            section {
-                padding: 58px 18px
-            }
+            /* section {
+                    padding: 58px 18px
+                } */
 
             .hero-inner {
                 padding-top: 62px
@@ -881,7 +882,7 @@
             .cta,
             .result-band {
                 border-radius: 22px;
-                padding: 26px
+                /* padding: 26px */
             }
 
             .big {
@@ -894,14 +895,14 @@
         }
 
         /* .kicker {
-                                                                                                                                                display: inline-flex;
-                                                                                                                                                align-items: center;
-                                                                                                                                                font-size: 13px;
-                                                                                                                                                font-weight: 800;
-                                                                                                                                                letter-spacing: .18em;
-                                                                                                                                                text-transform: uppercase;
-                                                                                                                                                color: aliceblue;
-                                                                                                                                            } */
+                                                                                                                                                    display: inline-flex;
+                                                                                                                                                    align-items: center;
+                                                                                                                                                    font-size: 13px;
+                                                                                                                                                    font-weight: 800;
+                                                                                                                                                    letter-spacing: .18em;
+                                                                                                                                                    text-transform: uppercase;
+                                                                                                                                                    color: aliceblue;
+                                                                                                                                                } */
     </style>
 
     <main>
@@ -1040,20 +1041,20 @@
                 }
 
                 /* .fs-vcu-replacement-image-hero .hero-card.heroo::after,
-                            .fs-vcu-replacement-image-hero .mini::after {
-                                content: "";
-                                position: absolute;
-                                top: 0;
-                                left: 0;
-                                width: 100%;
-                                height: 4px;
-                                background: #0018dc;
-                                transform: scaleX(0);
-                                transform-origin: left;
-                                transition: transform .3s ease;
-                                z-index: 1;
-                                pointer-events: none;
-                            } */
+                                .fs-vcu-replacement-image-hero .mini::after {
+                                    content: "";
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 4px;
+                                    background: #0018dc;
+                                    transform: scaleX(0);
+                                    transform-origin: left;
+                                    transition: transform .3s ease;
+                                    z-index: 1;
+                                    pointer-events: none;
+                                } */
 
                 .fs-vcu-replacement-image-hero .hero-card.heroo:hover,
                 .fs-vcu-replacement-image-hero .mini:hover {
@@ -1759,20 +1760,20 @@
         }
 
         /* .panel::after,
-            .hero-card.heroo::after {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 4px;
-                background: #0018dc;
-                transform: scaleX(0);
-                transform-origin: left;
-                transition: transform 0.3s ease;
-                z-index: 1;
-                pointer-events: none;
-            } */
+                .hero-card.heroo::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 4px;
+                    background: #0018dc;
+                    transform: scaleX(0);
+                    transform-origin: left;
+                    transition: transform 0.3s ease;
+                    z-index: 1;
+                    pointer-events: none;
+                } */
 
         .panel:hover,
         .hero-card.heroo:hover {

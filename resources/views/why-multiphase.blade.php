@@ -65,6 +65,7 @@
     @media (max-width: 760px) {
       header.hero .wrap {
         padding: 72px 0 54px;
+        width: min(100%, calc(100% - 28px));
       }
     }
 
@@ -859,7 +860,11 @@
 
     @media (max-width: 760px) {
       .wrap {
-        padding: 0 18px;
+        padding: 3rem 18px;
+      }
+
+      .app-card {
+        height: 449px;
       }
 
 
@@ -2103,11 +2108,11 @@
     }
 
     /* .fit-card p {
-                                                                                                                                                                                                                                                                                                                                                                                    margin: 0;
-                                                                                                                                                                                                                                                                                                                                                                                    font-size: 22px;
-                                                                                                                                                                                                                                                                                                                                                                                    line-height: 1.42;
-                                                                                                                                                                                                                                                                                                                                                                                    color: #53647c;
-                                                                                                                                                                                                                                                                                                                                                                                  } */
+                                                                                                                                                                                                                                                                                                                                                                                            margin: 0;
+                                                                                                                                                                                                                                                                                                                                                                                            font-size: 22px;
+                                                                                                                                                                                                                                                                                                                                                                                            line-height: 1.42;
+                                                                                                                                                                                                                                                                                                                                                                                            color: #53647c;
+                                                                                                                                                                                                                                                                                                                                                                                          } */
 
     @media (max-width: 991px) {
       .fit-grid {

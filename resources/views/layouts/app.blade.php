@@ -363,7 +363,7 @@
         if (!empty($companyPhone)) {
             $organizationSchema['contactPoint']['telephone'] = $companyPhone;
         }
-        
+
         $localBusinessSchema = [
             '@context' => 'https://schema.org',
             '@type' => 'LocalBusiness',
@@ -519,21 +519,21 @@
     @if(config('services.gtm.id'))
         <!-- Google Tag Manager -->
         <script>
-            (function(w,d,s,l,i){
-                w[l]=w[l]||[];
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
                 w[l].push({
                     'gtm.start': new Date().getTime(),
                     event: 'gtm.js'
                 });
 
-                var f=d.getElementsByTagName(s)[0],
-                    j=d.createElement(s),
-                    dl=l!='dataLayer' ? '&l='+l : '';
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != 'dataLayer' ? '&l=' + l : '';
 
-                j.async=true;
-                j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-                f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','{{ config('services.gtm.id') }}');
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', '{{ config('services.gtm.id') }}');
         </script>
         <!-- End Google Tag Manager -->
     @endif
@@ -566,7 +566,8 @@
 
     <link rel="preconnect" href="https://fonts.bunny.net" crossorigin>
     <link rel="dns-prefetch" href="//fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css2?family=Manrope:wght@400;500;600;700;800&display=swap&subset=latin" rel="stylesheet">
+    <link href="https://fonts.bunny.net/css2?family=Manrope:wght@400;500;600;700;800&display=swap&subset=latin"
+        rel="stylesheet">
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
@@ -591,8 +592,8 @@
 
     @if ($faqSchema)
         <script type="application/ld+json">
-         {!! json_encode($faqSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
-        </script>
+                         {!! json_encode($faqSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+                        </script>
     @endif
 
     @yield('schema')
@@ -644,6 +645,11 @@
             h1 {
                 font-weight: 700 !important;
                 font-size: 32px !important;
+
+            }
+
+            .article-shell {
+                gap: 0px !important;
             }
         }
 
@@ -776,9 +782,7 @@
     @if(config('services.gtm.id'))
         <!-- Google Tag Manager noscript -->
         <noscript>
-            <iframe src="https://www.googletagmanager.com/ns.html?id={{ config('services.gtm.id') }}"
-                height="0"
-                width="0"
+            <iframe src="https://www.googletagmanager.com/ns.html?id={{ config('services.gtm.id') }}" height="0" width="0"
                 style="display:none;visibility:hidden">
             </iframe>
         </noscript>
@@ -805,8 +809,10 @@
                 <h3>We use cookies to improve your experience.</h3>
 
                 <p>
-                    Fluidstream uses essential cookies for website functionality and may use analytics or marketing cookies
-                    to understand website performance and improve communication. You can accept or decline non-essential cookies.
+                    Fluidstream uses essential cookies for website functionality and may use analytics or marketing
+                    cookies
+                    to understand website performance and improve communication. You can accept or decline non-essential
+                    cookies.
                 </p>
             </div>
 

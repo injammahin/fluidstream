@@ -814,8 +814,8 @@
     }
 
     /* =========================================
-                                                                                                                                                           HERO SECTION FIXED STYLE
-                                                                                                                                                        ========================================= */
+                                                                                                                                                             HERO SECTION FIXED STYLE
+                                                                                                                                                          ========================================= */
 
     header.hero {
       position: relative !important;
@@ -1059,7 +1059,7 @@
       }
 
       .wrap {
-        padding: 0 18px;
+        padding: 3rem 18px;
       }
 
       h2 {
@@ -1854,8 +1854,8 @@
   </section>
   <style>
     /* ================================
-                                                                                                                                                                                     TECHNOLOGY BENEFITS 3x2 LAYOUT
-                                                                                                                                                                                  ================================ */
+                                                                                                                                                                                       TECHNOLOGY BENEFITS 3x2 LAYOUT
+                                                                                                                                                                                    ================================ */
 
     .technology-benefits-section {
       background: #ffffff;
@@ -2244,12 +2244,12 @@
       }
 
       /* .fs-mpc-section-head h2 {
-                                                                                                                                                                                                                font-size: clamp(30px, 3.2vw, 46px);
-                                                                                                                                                                                                                line-height: 1.02;
-                                                                                                                                                                                                                margin: 0 0 14px;
-                                                                                                                                                                                                                letter-spacing: -.035em;
-                                                                                                                                                                                                                color: var(--mpc-ink);
-                                                                                                                                                                                                              } */
+                                                                                                                                                                                                                  font-size: clamp(30px, 3.2vw, 46px);
+                                                                                                                                                                                                                  line-height: 1.02;
+                                                                                                                                                                                                                  margin: 0 0 14px;
+                                                                                                                                                                                                                  letter-spacing: -.035em;
+                                                                                                                                                                                                                  color: var(--mpc-ink);
+                                                                                                                                                                                                                } */
 
       .fs-mpc-lead {
         font-size: 17px;

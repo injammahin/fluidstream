@@ -209,9 +209,6 @@
     }
 
     @media (max-width: 991px) {
-        .fsf-footer-wrap {
-            margin-top: 120px;
-        }
 
         .fsf-footer-container {
             padding: 0 24px 28px;
@@ -240,9 +237,7 @@
     }
 
     @media (max-width: 575px) {
-        .fsf-footer-wrap {
-            margin-top: 94px;
-        }
+
 
         .fsf-footer-container {
             padding: 0 18px 24px;

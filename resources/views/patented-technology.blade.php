@@ -57,8 +57,8 @@
         }
 
         /* ================================
-                                                                                                                   HERO WITH BACKGROUND IMAGE
-                                                                                                                ================================ */
+                                                                                                                                                       HERO WITH BACKGROUND IMAGE
+                                                                                                                                                    ================================ */
 
         .patent-page .hero {
             position: relative;
@@ -101,7 +101,7 @@
             min-height: calc(100vh - 108px);
             display: flex;
             align-items: center;
-            padding: 96px 0 72px !important;
+            /* padding: 96px 0 72px; */
 
         }
 
@@ -237,17 +237,17 @@
         }
 
         /* .patent-page .metric::after {
-                                            content: "";
-                                            position: absolute;
-                                            left: 0;
-                                            right: 0;
-                                            top: 0;
-                                            height: 3px;
-                                            background: var(--fs-cyan);
-                                            transform: scaleX(0);
-                                            transform-origin: left;
-                                            transition: transform .25s cubic-bezier(.22, .61, .36, 1);
-                                        } */
+                                                                                content: "";
+                                                                                position: absolute;
+                                                                                left: 0;
+                                                                                right: 0;
+                                                                                top: 0;
+                                                                                height: 3px;
+                                                                                background: var(--fs-cyan);
+                                                                                transform: scaleX(0);
+                                                                                transform-origin: left;
+                                                                                transition: transform .25s cubic-bezier(.22, .61, .36, 1);
+                                                                            } */
 
         .patent-page .metric:hover {
             transform: translateY(-4px);
@@ -402,8 +402,8 @@
         }
 
         /* ================================
-                                                                                                                   COMMON SECTION STYLES
-                                                                                                                ================================ */
+                                                                                                                                                       COMMON SECTION STYLES
+                                                                                                                                                    ================================ */
 
         .patent-page .section-head {
             /* display: flex; */
@@ -813,18 +813,23 @@
         }
 
         /* ================================
-                                                                                                                   RESPONSIVE
-                                                                                                                ================================ */
+                                                                                                                                                       RESPONSIVE
+                                                                                                                                                    ================================ */
 
         @media (max-width: 1120px) {
             .patent-page .hero {
                 min-height: auto;
             }
 
+            .patent-page .section {
+                position: relative;
+                padding: 42px 0 !important;
+            }
+
             .patent-page .hero .inner {
                 min-height: auto;
-                padding-top: 72px;
-                padding-bottom: 64px;
+                padding-top: 62px;
+                /* padding-bottom: 64px; */
             }
 
             .patent-page .hero-grid,
@@ -896,14 +901,14 @@
                 width: min(var(--fs-max), calc(100% - 28px));
             }
 
-            .patent-page .section {
-                padding: 54px 0;
-            }
+            /* .patent-page .section {
+                                                    padding: 54px 0;
+                                                } */
 
-            .patent-page .hero .inner {
-                padding-top: 58px;
-                padding-bottom: 48px;
-            }
+            /* .patent-page .hero .inner {
+                                padding-top: 58px;
+                                padding-bottom: 48px;
+                            } */
 
             .patent-page h1 {
                 font-size: 38px;
