@@ -33,7 +33,11 @@ Route::view('/terms', 'terms')->name('terms');
 // Route::view('/perspectives', 'perspectives')->name('perspectives');
 Route::view('/why-multiphase', 'why-multiphase')->name('why-multiphase');
 Route::view('/contact', 'contact')->name('contact');
-Route::view('/patented-technology', 'patented-technology')->name('patented-technology');
+
+Route::view('/patents', 'patented-technology')->name('patents');
+
+// Optional: old URL redirect to new URL
+Route::redirect('/patented-technology', '/patents', 301);
 Route::view('/about-us', 'about-us')->name('about-us');
 Route::view('/technical-review', 'technical-review')->name('technical-review');
 
