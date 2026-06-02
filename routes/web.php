@@ -270,7 +270,7 @@ Route::get('/sitemap.xml', function () {
         ['path' => '/casing-gas-compression', 'changefreq' => 'monthly', 'priority' => '0.90'],
         ['path' => '/case-studies', 'changefreq' => 'monthly', 'priority' => '0.85'],
         ['path' => '/technology', 'changefreq' => 'monthly', 'priority' => '0.85'],
-        ['path' => '/patented-technology', 'changefreq' => 'monthly', 'priority' => '0.85'],
+        ['path' => '/patents', 'changefreq' => 'monthly', 'priority' => '0.85'],
         ['path' => '/why-multiphase', 'changefreq' => 'monthly', 'priority' => '0.80'],
         ['path' => '/insights', 'changefreq' => 'weekly', 'priority' => '0.85'],
         // ['path' => '/perspectives', 'changefreq' => 'monthly', 'priority' => '0.70'],
