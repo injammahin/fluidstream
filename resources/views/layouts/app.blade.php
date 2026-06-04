@@ -515,7 +515,18 @@
             });
         })();
     </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5V5VBEPKEW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
+        window.gtag = window.gtag || function () {
+            window.dataLayer.push(arguments);
+        };
+
+        window.gtag('js', new Date());
+        window.gtag('config', 'G-5V5VBEPKEW');
+    </script>
     @if(config('services.gtm.id'))
         <!-- Google Tag Manager -->
         <script>
@@ -592,8 +603,8 @@
 
     @if ($faqSchema)
         <script type="application/ld+json">
-                         {!! json_encode($faqSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
-                        </script>
+                             {!! json_encode($faqSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+                            </script>
     @endif
 
     @yield('schema')
