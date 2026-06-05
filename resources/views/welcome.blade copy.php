@@ -1715,7 +1715,7 @@
                                 <div class="hero-quote-slide active" data-index="0">
                                     <blockquote class="hero-quote-text">
                                         “Fluidstream’s unit has operated consistently and eliminated gas venting. Since
-                                        installation 17 months ago, the unit has provided 100% uptime since installation and
+                                        installation 1.5 years ago, the unit has provided 100% uptime since installation and
                                         has not
                                         required any maintenance.”
                                     </blockquote>
@@ -1792,13 +1792,13 @@
             <div class="proof-cards">
                 <article class="proof-card">
                     <div class="proof-tag">Allied Energy II</div>
-                    <h3>100% uptime over 17+ months with no maintenance.</h3>
+                    <h3>100% uptime over 1.5+ years with no maintenance.</h3>
                     <p>
                         Fluidstream’s unit operated consistently, eliminated gas venting, and delivered continuous, reliable
                         performance in extreme cold-weather field conditions.
                     </p>
                     <div class="proof-metric">100% uptime</div>
-                    <div class="proof-detail">17+ months • 0 maintenance • continuous operation below -40°C • gas venting
+                    <div class="proof-detail">1.5+ years • 0 maintenance • continuous operation below -40°C • gas venting
                         eliminated</div>
                 </article>
 

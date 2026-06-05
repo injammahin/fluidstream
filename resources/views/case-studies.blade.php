@@ -847,7 +847,7 @@
                 'filters' => ['vapor-recovery', 'equipment-reliability', 'emissions-reduction'],
                 'metrics' => [
                     ['value' => '100%', 'label' => 'uptime since install'],
-                    ['value' => '16+', 'label' => 'months at report date'],
+                    ['value' => '1.5', 'label' => 'years at report date'],
                     ['value' => '0', 'label' => 'maintenance or service'],
                 ],
                 'hook' => 'A concise proof point for operators needing emissions compliance, wet-gas tolerance, low-touch operation, and winter reliability.',

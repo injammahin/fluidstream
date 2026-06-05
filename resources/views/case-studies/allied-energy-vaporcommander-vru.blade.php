@@ -268,8 +268,8 @@
         }
 
         /* section {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    padding: 78px 22px
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                } */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    padding: 78px 22px
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                } */
 
         .container {
             /* max-width: var(--max); */
@@ -278,8 +278,8 @@
 
         .section-head {
             /* display: grid;
-                                                                                                                                                                                                                                                                                                                                                                                                                        grid-template-columns: .72fr 1.28fr;
-                                                                                                                                                                                                                                                                                                                                                                                                                        gap: 42px; */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        grid-template-columns: .72fr 1.28fr;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        gap: 42px; */
             max-width: 66ch;
             align-items: start;
             margin-bottom: 34px
@@ -483,8 +483,8 @@
         }
 
         /* .metric:hover .big {
-                                                                                                                                                                                                                                                                                                                                                                color: #fff
-                                                                                                                                                                                                                                                                                                                                                            } */
+                                                                                                                                                                                                                                                                                                                                                                                                color: #fff
+                                                                                                                                                                                                                                                                                                                                                                                            } */
 
         .metric h3,
         .card h3 {
@@ -562,36 +562,36 @@
         }
 
         /* .card.swipe:after {
-                                                                                                                                                                                                                                                                                content: "";
-                                                                                                                                                                                                                                                                                position: absolute;
-                                                                                                                                                                                                                                                                                left: -110%;
-                                                                                                                                                                                                                                                                                top: 0;
-                                                                                                                                                                                                                                                                                width: 100%;
-                                                                                                                                                                                                                                                                                height: 100%;
-                                                                                                                                                                                                                                                                                background: linear-gradient(105deg, transparent, rgba(21, 209, 255, .16), transparent);
-                                                                                                                                                                                                                                                                                transition: .5s ease
-                                                                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                                                                                                                content: "";
+                                                                                                                                                                                                                                                                                                                position: absolute;
+                                                                                                                                                                                                                                                                                                                left: -110%;
+                                                                                                                                                                                                                                                                                                                top: 0;
+                                                                                                                                                                                                                                                                                                                width: 100%;
+                                                                                                                                                                                                                                                                                                                height: 100%;
+                                                                                                                                                                                                                                                                                                                background: linear-gradient(105deg, transparent, rgba(21, 209, 255, .16), transparent);
+                                                                                                                                                                                                                                                                                                                transition: .5s ease
+                                                                                                                                                                                                                                                                                                            }
 
-                                                                                                                                                                                                                                                                            .card.swipe:hover:after {
-                                                                                                                                                                                                                                                                                left: 110%
-                                                                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                                                                                                            .card.swipe:hover:after {
+                                                                                                                                                                                                                                                                                                                left: 110%
+                                                                                                                                                                                                                                                                                                            }
 
-                                                                                                                                                                                                                                                                            .card:hover {
-                                                                                                                                                                                                                                                                                transform: translateY(-5px);
-                                                                                                                                                                                                                                                                                border-color: rgba(0, 24, 220, .3);
-                                                                                                                                                                                                                                                                                box-shadow: 0 26px 60px rgba(0, 24, 220, .12)
-                                                                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                                                                                                            .card:hover {
+                                                                                                                                                                                                                                                                                                                transform: translateY(-5px);
+                                                                                                                                                                                                                                                                                                                border-color: rgba(0, 24, 220, .3);
+                                                                                                                                                                                                                                                                                                                box-shadow: 0 26px 60px rgba(0, 24, 220, .12)
+                                                                                                                                                                                                                                                                                                            }
 
-                                                                                                                                                                                                                                                                            .card.fill:hover {
-                                                                                                                                                                                                                                                                                background: var(--blue);
-                                                                                                                                                                                                                                                                                color: #fff;
-                                                                                                                                                                                                                                                                                border-color: var(--blue)
-                                                                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                                                                                                            .card.fill:hover {
+                                                                                                                                                                                                                                                                                                                background: var(--blue);
+                                                                                                                                                                                                                                                                                                                color: #fff;
+                                                                                                                                                                                                                                                                                                                border-color: var(--blue)
+                                                                                                                                                                                                                                                                                                            }
 
-                                                                                                                                                                                                                                                                            .card.fill:hover p,
-                                                                                                                                                                                                                                                                            .card.fill:hover .tag {
-                                                                                                                                                                                                                                                                                color: rgba(255, 255, 255, .78)
-                                                                                                                                                                                                                                                                            } */
+                                                                                                                                                                                                                                                                                                            .card.fill:hover p,
+                                                                                                                                                                                                                                                                                                            .card.fill:hover .tag {
+                                                                                                                                                                                                                                                                                                                color: rgba(255, 255, 255, .78)
+                                                                                                                                                                                                                                                                                                            } */
 
         .number {
             width: 42px;
@@ -606,9 +606,9 @@
         }
 
         /* .card.fill:hover .number {
-                                                                                                                                                                                                                                                                            background: rgba(255, 255, 255, .14);
-                                                                                                                                                                                                                                                                            color: #fff
-                                                                                                                                                                                                                                                                        } */
+                                                                                                                                                                                                                                                                                                            background: rgba(255, 255, 255, .14);
+                                                                                                                                                                                                                                                                                                            color: #fff
+                                                                                                                                                                                                                                                                                                        } */
 
         .blue-section {
             background: #f5f6f8;
@@ -618,9 +618,9 @@
         }
 
         /* 
-                                                                                                        .blue-section h2 {
-                                                                                                            color: #fff
-                                                                                                        } */
+                                                                                                                                        .blue-section h2 {
+                                                                                                                                            color: #fff
+                                                                                                                                        } */
 
         .blue-section .kicker mb-2 {
             color: var(--cyan)
@@ -654,9 +654,9 @@
         }
 
         /* .step strong {
-                                                                                                                                                                                                                                                                                                            font-size: 24px;
-                                                                                                                                                                                                                                                                                                            color: black
-                                                                                                                                                                                                                                                                                                        } */
+                                                                                                                                                                                                                                                                                                                                            font-size: 24px;
+                                                                                                                                                                                                                                                                                                                                            color: black
+                                                                                                                                                                                                                                                                                                                                        } */
 
         .step h3 {
             margin: 0 0 8px;
@@ -674,7 +674,7 @@
 
         .result-band {
             /* background: #0018dc;
-                                                                            color: #fff; */
+                                                                                                            color: #fff; */
             /* padding: 42px; */
             display: grid;
             grid-template-columns: 1.05fr .95fr;
@@ -774,10 +774,10 @@
         }
 
         /* footer {
-            background: #071126;
-            color: #fff;
-            padding: 56px 22px 28px
-        } */
+                                            background: #071126;
+                                            color: #fff;
+                                            padding: 56px 22px 28px
+                                        } */
 
         .footer-grid {
             max-width: var(--max);
@@ -846,8 +846,8 @@
             }
 
             /* section {
-                    padding: 58px 18px
-                } */
+                                                    padding: 58px 18px
+                                                } */
 
             .hero-inner {
                 padding-top: 62px
@@ -897,14 +897,14 @@
         }
 
         /* .kicker {
-                                                                                                                display: inline-flex;
-                                                                                                                align-items: center;
-                                                                                                                font-size: 13px;
-                                                                                                                font-weight: 800;
-                                                                                                                letter-spacing: .18em;
-                                                                                                                text-transform: uppercase;
-                                                                                                                color: aliceblue;
-                                                                                                            } */
+                                                                                                                                                display: inline-flex;
+                                                                                                                                                align-items: center;
+                                                                                                                                                font-size: 13px;
+                                                                                                                                                font-weight: 800;
+                                                                                                                                                letter-spacing: .18em;
+                                                                                                                                                text-transform: uppercase;
+                                                                                                                                                color: aliceblue;
+                                                                                                                                            } */
 
         .quote-source-row {
             display: flex;
@@ -1097,21 +1097,21 @@
                 }
 
                 /* 
-                                    .fs-allied-image-hero .hero-card.heroo::after,
-                                    .fs-allied-image-hero .mini::after {
-                                        content: "";
-                                        position: absolute;
-                                        top: 0;
-                                        left: 0;
-                                        width: 100%;
-                                        height: 4px;
-                                        background: #0018dc;
-                                        transform: scaleX(0);
-                                        transform-origin: left;
-                                        transition: transform .3s ease;
-                                        z-index: 1;
-                                        pointer-events: none;
-                                    } */
+                                                                    .fs-allied-image-hero .hero-card.heroo::after,
+                                                                    .fs-allied-image-hero .mini::after {
+                                                                        content: "";
+                                                                        position: absolute;
+                                                                        top: 0;
+                                                                        left: 0;
+                                                                        width: 100%;
+                                                                        height: 4px;
+                                                                        background: #0018dc;
+                                                                        transform: scaleX(0);
+                                                                        transform-origin: left;
+                                                                        transition: transform .3s ease;
+                                                                        z-index: 1;
+                                                                        pointer-events: none;
+                                                                    } */
 
                 .fs-allied-image-hero .hero-card.heroo:hover,
                 .fs-allied-image-hero .mini:hover {
@@ -1248,7 +1248,7 @@
                 <aside class="hero-card heroo">
 
                     <p class="quote">“Since installation, Fluidstream’s VaporCommander™ has maintained 100% uptime for over
-                        17 months while eliminating gas venting from our tanks, without requiring maintenance or service
+                        1.5 years while eliminating gas venting from our tanks, without requiring maintenance or service
                         intervention. From an operations perspective, it has proven to be a highly reliable and low-touch
                         solution under real field conditions.”</p>
                     <div class="quote-source-row">
@@ -1260,7 +1260,7 @@
                     </div>
                     <div class="mini-metrics">
                         <div class="mini"><strong>100%</strong><span>uptime since installation</span></div>
-                        <div class="mini"><strong>17+</strong><span>months operating at case-study date</span></div>
+                        <div class="mini"><strong>1.5 +</strong><span>years operating at case-study date</span></div>
                         <div class="mini"><strong>0</strong><span>maintenance or service required</span></div>
                         <div class="mini"><strong>-40°C</strong><span>winter exposure survived</span></div>
                     </div>
@@ -1275,7 +1275,7 @@
                         <div class="kicker">Performance snapshot</div>
                         <h2>Reliable recovery where the previous VRU struggled.</h2>
                     </div>
-                    <p>As of the case-study date, VaporCommander™ had operated for over 17 months with 100% uptime, zero
+                    <p>As of the case-study date, VaporCommander™ had operated for over 1.5 years with 100% uptime, zero
                         maintenance, no service requirements, and no filter changes. The unit eliminated gas venting from
                         the oil storage tanks while operating through wet gas exposure, variable gas flow, hot summers, and
                         two winters where temperatures dropped below -40°C.</p>
@@ -1290,9 +1290,9 @@
                     </article>
                     <article class="metric">
                         <div class="tag">Operating period</div>
-                        <div class="big">17+</div>
-                        <h3>months in service</h3>
-                        <p class="muted">The unit had operated for more than 17 months at the time of this case study and
+                        <div class="big">1.5 +</div>
+                        <h3>years in service</h3>
+                        <p class="muted">The unit had operated for more than 1.5 years at the time of this case study and
                             continued operation depends on field conditions and operating requirements.</p>
                     </article>
                     <article class="metric">
@@ -1419,7 +1419,7 @@
                     <h3>Venting eliminated with no maintenance required to date.</h3>
                     <p>Since installation, the unit has captured tank vapors that would otherwise have been vented. As of
                         the case-study date, Allied had not required maintenance, service, or filter changes, and the system
-                        had maintained 100% uptime for more than 17 months.</p>
+                        had maintained 100% uptime for more than 1.5 years.</p>
                     <p>This outcome is especially relevant because the operating period included harsh Alberta, Canada
                         winter conditions below -40°C, where conventional scrubber-based VRU systems can experience
                         freezing-related instability.</p>
@@ -1476,8 +1476,8 @@
                 <div class="result-band">
                     <div>
                         <div class="kicker">Field results</div>
-                        <h2>Over 17 months of 100% uptime at the time of reporting.</h2>
-                        <p>As of the case-study date, VaporCommander™ had operated for over 17 months with 100% uptime, zero
+                        <h2>Over 1.5 years of 100% uptime at the time of reporting.</h2>
+                        <p>As of the case-study date, VaporCommander™ had operated for over 1.5 years with 100% uptime, zero
                             maintenance, no service events, and no filter changes. This observed performance reflects
                             continuous operation to date; future performance will depend on ongoing field conditions and
                             operation.</p>
@@ -1506,7 +1506,7 @@
                         <div class="kicker">Why no maintenance was required</div>
                         <h2>The reliability result is tied to system architecture.</h2>
                     </div>
-                    <p>The absence of maintenance over more than 17 months reflects a system architecture that avoids
+                    <p>The absence of maintenance over more than 1.5 years reflects a system architecture that avoids
                         several major failure mechanisms common to conventional VRU systems in wet and cold service.</p>
                 </div>
                 <div class="cards">
@@ -1644,20 +1644,20 @@
         }
 
         /* .panel::after,
-                            .hero-card.heroo::after {
-                                content: "";
-                                position: absolute;
-                                top: 0;
-                                left: 0;
-                                width: 100%;
-                                height: 4px;
-                                background: #0018dc;
-                                transform: scaleX(0);
-                                transform-origin: left;
-                                transition: transform 0.3s ease;
-                                z-index: 1;
-                                pointer-events: none;
-                            } */
+                                                            .hero-card.heroo::after {
+                                                                content: "";
+                                                                position: absolute;
+                                                                top: 0;
+                                                                left: 0;
+                                                                width: 100%;
+                                                                height: 4px;
+                                                                background: #0018dc;
+                                                                transform: scaleX(0);
+                                                                transform-origin: left;
+                                                                transition: transform 0.3s ease;
+                                                                z-index: 1;
+                                                                pointer-events: none;
+                                                            } */
 
         .panel:hover,
         .hero-card.heroo:hover {

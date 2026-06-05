@@ -1001,6 +1001,12 @@
                 if (isTextOrInteractiveTarget(target)) {
                     return false;
                 }
+                if (
+    media.classList.contains('fs-no-watermark') ||
+    media.closest('.fs-no-watermark')
+) {
+    return;
+}
 
                 return true;
             }

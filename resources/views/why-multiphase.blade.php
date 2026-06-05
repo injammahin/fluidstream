@@ -1034,7 +1034,7 @@
           </div>
 
           <div class="proof-card-body">
-            <h3>17+ months of continuous operation with no maintenance.</h3>
+            <h3>1.5+ years of continuous operation with no maintenance.</h3>
 
             <p>
               Fluidstream highlights sustained operation, eliminated venting, and winter-duty reliability as
@@ -1045,7 +1045,7 @@
 
           <div class="proof-card-bottom">
             <span class="metric">100% uptime</span>
-            <span class="submetric">17+ months • 0 maintenance • gas venting eliminated</span>
+            <span class="submetric">1.5+ years • 0 maintenance • gas venting eliminated</span>
           </div>
         </div>
 
@@ -2108,11 +2108,11 @@
     }
 
     /* .fit-card p {
-                                                                                                                                                                                                                                                                                                                                                                                            margin: 0;
-                                                                                                                                                                                                                                                                                                                                                                                            font-size: 22px;
-                                                                                                                                                                                                                                                                                                                                                                                            line-height: 1.42;
-                                                                                                                                                                                                                                                                                                                                                                                            color: #53647c;
-                                                                                                                                                                                                                                                                                                                                                                                          } */
+                                                                                                                                                                                                                                                                                                                                                                                              margin: 0;
+                                                                                                                                                                                                                                                                                                                                                                                              font-size: 22px;
+                                                                                                                                                                                                                                                                                                                                                                                              line-height: 1.42;
+                                                                                                                                                                                                                                                                                                                                                                                              color: #53647c;
+                                                                                                                                                                                                                                                                                                                                                                                            } */
 
     @media (max-width: 991px) {
       .fit-grid {
