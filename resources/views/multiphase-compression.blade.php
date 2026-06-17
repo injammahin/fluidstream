@@ -814,8 +814,8 @@
     }
 
     /* =========================================
-                                                                                                                                                             HERO SECTION FIXED STYLE
-                                                                                                                                                          ========================================= */
+                                                                                                                                                                 HERO SECTION FIXED STYLE
+                                                                                                                                                              ========================================= */
 
     header.hero {
       position: relative !important;
@@ -1854,8 +1854,8 @@
   </section>
   <style>
     /* ================================
-                                                                                                                                                                                       TECHNOLOGY BENEFITS 3x2 LAYOUT
-                                                                                                                                                                                    ================================ */
+                                                                                                                                                                                           TECHNOLOGY BENEFITS 3x2 LAYOUT
+                                                                                                                                                                                        ================================ */
 
     .technology-benefits-section {
       background: #ffffff;
@@ -2226,7 +2226,7 @@
       }
 
       .fs-mpc-section-head {
-        /* display: grid; */
+        display: grid;
         grid-template-columns: 260px 1fr;
         gap: 44px;
         align-items: start;
@@ -2234,7 +2234,6 @@
       }
 
       .fs-mpc-rail {
-        /* border-top: 3px solid var(--mpc-blue); */
         padding-top: 14px;
         color: var(--mpc-blue);
         font-size: 13px;
@@ -2242,14 +2241,6 @@
         letter-spacing: .1em;
         text-transform: uppercase;
       }
-
-      /* .fs-mpc-section-head h2 {
-                                                                                                                                                                                                                  font-size: clamp(30px, 3.2vw, 46px);
-                                                                                                                                                                                                                  line-height: 1.02;
-                                                                                                                                                                                                                  margin: 0 0 14px;
-                                                                                                                                                                                                                  letter-spacing: -.035em;
-                                                                                                                                                                                                                  color: var(--mpc-ink);
-                                                                                                                                                                                                                } */
 
       .fs-mpc-lead {
         font-size: 17px;
@@ -2267,6 +2258,26 @@
         line-height: 1.6;
       }
 
+      .fs-mpc-spec-tools {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 18px;
+        margin-bottom: 18px;
+      }
+
+      .fs-mpc-blue-note {
+        margin: 5px 3px 0 2px;
+        max-width: 75ch;
+        padding: 14px 18px;
+        border-radius: 7px;
+        background: #0018dc;
+        color: #ffffff;
+        font-size: 16px;
+        line-height: 1.6;
+        font-weight: 500;
+      }
+
       .fs-mpc-global-control {
         position: sticky;
         top: 102px;
@@ -2277,7 +2288,7 @@
         gap: 14px;
         width: fit-content;
         max-width: 100%;
-        margin: 0 0 18px auto;
+        margin: 0 0 0 auto;
         background: rgba(255, 255, 255, .94);
         border: 1px solid rgba(223, 230, 241, .95);
         border-radius: 999px;
@@ -2492,7 +2503,7 @@
         gap: 10px;
       }
 
-      .fs-mpc-card-specs>div {
+      .fs-mpc-card-specs > div {
         position: relative;
         background: #f7f9fd;
         border: 1px solid #e7edf6;
@@ -2501,7 +2512,7 @@
         box-shadow: none;
       }
 
-      .fs-mpc-card-specs>div::before {
+      .fs-mpc-card-specs > div::before {
         content: "";
         position: absolute;
         left: 13px;
@@ -2529,6 +2540,11 @@
         font-weight: 850;
       }
 
+      .fs-mpc-divider {
+        color: #9aa6ba !important;
+        font-weight: 900;
+      }
+
       .fs-mpc-sizing-notes {
         margin-top: 22px;
         background: #fbfcff;
@@ -2549,10 +2565,15 @@
       }
 
       .fs-mpc-sizing-notes ol {
+        list-style-type: decimal !important;
         margin: 0;
-        padding-left: 18px;
+        padding-left: 24px;
         display: grid;
         gap: 7px;
+      }
+
+      .fs-mpc-sizing-notes ol li::before {
+        content: none !important;
       }
 
       .fs-mpc-sizing-notes li {
@@ -2567,6 +2588,14 @@
         .fs-mpc-section-head {
           grid-template-columns: 1fr;
           gap: 12px;
+        }
+
+        .fs-mpc-spec-tools {
+          flex-direction: column;
+        }
+
+        .fs-mpc-global-control {
+          margin-left: 0;
         }
       }
 
@@ -2609,382 +2638,234 @@
       }
     </style>
 
+    @php
+      $mpcPressureOptions = [
+        ['value' => 0, 'label' => '5 psi | 34 kPa'],
+        ['value' => 1, 'label' => '50 psi | 345 kPa'],
+        ['value' => 2, 'label' => '100 psi | 690 kPa'],
+        ['value' => 3, 'label' => '150 psi | 1034 kPa'],
+        ['value' => 4, 'label' => '200 psi | 1379 kPa'],
+      ];
+
+      $mpcModels = [
+        [
+          'name' => 'MC1235 (050035)',
+          'hp' => '50 HP',
+          'liquidMetric' => '2,238',
+          'liquidImperial' => '14,077',
+          'dpMetric' => '1,034',
+          'dpImperial' => '150',
+        ],
+        [
+          'name' => 'MC1245 (050035)',
+          'hp' => '50 HP',
+          'liquidMetric' => '1,344',
+          'liquidImperial' => '8,454',
+          'dpMetric' => '1,896',
+          'dpImperial' => '275',
+        ],
+        [
+          'name' => 'MC1245 (100060)',
+          'hp' => '100 HP',
+          'liquidMetric' => '2,345',
+          'liquidImperial' => '14,750',
+          'dpMetric' => '1,896',
+          'dpImperial' => '275',
+        ],
+        [
+          'name' => 'MC1645 (100060)',
+          'hp' => '100 HP',
+          'liquidMetric' => '4,200',
+          'liquidImperial' => '26,417',
+          'dpMetric' => '1,034',
+          'dpImperial' => '150',
+        ],
+        [
+          'name' => 'MC1845 (050060)',
+          'hp' => '50 HP',
+          'liquidMetric' => '4,400',
+          'liquidImperial' => '27,675',
+          'dpMetric' => '690',
+          'dpImperial' => '100',
+        ],
+        [
+          'name' => 'MC2270 (100128)',
+          'hp' => '100 HP',
+          'liquidMetric' => '6,600',
+          'liquidImperial' => '41,513',
+          'dpMetric' => '1,551',
+          'dpImperial' => '225',
+        ],
+        [
+          'name' => 'MC2270 (150128)',
+          'hp' => '150 HP',
+          'liquidMetric' => '6,600',
+          'liquidImperial' => '41,513',
+          'dpMetric' => '1,551',
+          'dpImperial' => '225',
+        ],
+      ];
+
+      $mpcGasData = [
+        [
+          ['metric' => '3.0', 'imperial' => '106'],
+          ['metric' => '9.9', 'imperial' => '350'],
+          ['metric' => '17.5', 'imperial' => '618'],
+          ['metric' => '25.1', 'imperial' => '886'],
+          ['metric' => '32.7', 'imperial' => '1,155'],
+        ],
+        [
+          ['metric' => '1.8', 'imperial' => '64'],
+          ['metric' => '5.9', 'imperial' => '208'],
+          ['metric' => '10.4', 'imperial' => '367'],
+          ['metric' => '14.9', 'imperial' => '526'],
+          ['metric' => '19.4', 'imperial' => '685'],
+        ],
+        [
+          ['metric' => '3.1', 'imperial' => '109'],
+          ['metric' => '10.3', 'imperial' => '364'],
+          ['metric' => '18.3', 'imperial' => '646'],
+          ['metric' => '26.3', 'imperial' => '929'],
+          ['metric' => '34.3', 'imperial' => '1,211'],
+        ],
+        [
+          ['metric' => '5.7', 'imperial' => '201'],
+          ['metric' => '18.5', 'imperial' => '653'],
+          ['metric' => '32.9', 'imperial' => '1,162'],
+          ['metric' => '47.2', 'imperial' => '1,667'],
+          ['metric' => '61.5', 'imperial' => '2,172'],
+        ],
+        [
+          ['metric' => '7.2', 'imperial' => '254'],
+          ['metric' => '23.5', 'imperial' => '830'],
+          ['metric' => '41.7', 'imperial' => '1,473'],
+          ['metric' => '59.9', 'imperial' => '2,115'],
+          ['metric' => '78.1', 'imperial' => '2,758'],
+        ],
+        [
+          ['metric' => '8.9', 'imperial' => '314'],
+          ['metric' => '29.1', 'imperial' => '1,028'],
+          ['metric' => '51.5', 'imperial' => '1,819'],
+          ['metric' => '74', 'imperial' => '2,613'],
+          ['metric' => '96.4', 'imperial' => '3,404'],
+        ],
+        [
+          ['metric' => '8.9', 'imperial' => '314'],
+          ['metric' => '29.1', 'imperial' => '1,028'],
+          ['metric' => '51.5', 'imperial' => '1,819'],
+          ['metric' => '74', 'imperial' => '2,613'],
+          ['metric' => '96.4', 'imperial' => '3,404'],
+        ],
+      ];
+    @endphp
+
     <div class="fs-mpc-wrap">
       <div class="fs-mpc-section-head">
-        <div class="fs-mpc-rail">Technical specifications</div>
+        <div class="fs-mpc-rail">Specifications</div>
 
         <div>
-          <h2>Engineering validation for the MultiphaseCommander™ family.</h2>
+          <h2>Compare models by inlet pressure.</h2>
           <p class="lead">
             Select an inlet pressure to review gas capacity across the MultiphaseCommander™ model range.
+          </p>
+          <p class="fs-mpc-spec-note">
+            Additional model sizes and configurations are available for applications outside the standard range shown.
           </p>
         </div>
       </div>
 
-
-      <div class="flex ">
-        <p class="blue-bg">
-          Additional models and configurations are available.
-          <a href="{{ url('/contact') }}" class="blue-bg-link">Contact Us</a>
-          for application-specific sizing.
+      <div class="fs-mpc-spec-tools">
+        <p class="fs-mpc-blue-note">
+          Additional models and configurations are available. Contact Fluidstream for application-specific sizing.
         </p>
 
-        <style>
-          .blue-bg {
-            margin: 5px 3px 18px 2px;
-            max-width: 75ch !important;
-            /* margin: 18px 0; */
-            padding: 14px 18px;
-            border-radius: 7px;
-            background: #0018dc;
-            color: #ffffff;
-            font-size: 16px;
-            line-height: 1.6;
-            font-weight: 500;
-          }
-
-          .blue-bg-link {
-            color: #ffffff;
-            font-weight: 900;
-            text-decoration: underline;
-            text-underline-offset: 4px;
-            transition: opacity 0.2s ease;
-          }
-
-          .blue-bg-link:hover {
-            color: #ffffff;
-            opacity: 0.82;
-            text-decoration: underline;
-          }
-        </style>
         <div class="fs-mpc-global-control">
           <div>
             <strong>Compare all models at</strong>
           </div>
 
           <select id="fsMpcGlobalPressure">
-            <option value="0">5 psi | 34 kPa</option>
-            <option value="1">50 psi | 345 kPa</option>
-            <option value="2">100 psi | 690 kPa</option>
-            <option value="3">150 psi | 1034 kPa</option>
-            <option value="4" selected>200 psi | 1379 kPa</option>
+            @foreach ($mpcPressureOptions as $pressure)
+              <option value="{{ $pressure['value'] }}" {{ $pressure['value'] === 4 ? 'selected' : '' }}>
+                {{ $pressure['label'] }}
+              </option>
+            @endforeach
           </select>
         </div>
       </div>
 
       <div class="fs-mpc-cards">
-        <article class="fs-mpc-model-card">
-          <div class="fs-mpc-card-top">
-            <span class="fs-mpc-family">MultiphaseCommander™</span>
+        @foreach ($mpcModels as $model)
+          <article class="fs-mpc-model-card">
+            <div class="fs-mpc-card-top">
+              <span class="fs-mpc-family">MultiphaseCommander™</span>
 
-            <div class="fs-mpc-model-line">
-              <h3>MC1235 (050035)</h3>
-              <span class="fs-mpc-hp-badge">50 HP</span>
-            </div>
-          </div>
-
-          <div class="fs-mpc-pressure-control">
-            <div class="fs-mpc-pressure-row">
-              <label for="fsMpcPressure0">Inlet pressure</label>
+              <div class="fs-mpc-model-line">
+                <h3>{{ $model['name'] }}</h3>
+                <span class="fs-mpc-hp-badge">{{ $model['hp'] }}</span>
+              </div>
             </div>
 
-            <select id="fsMpcPressure0" class="fs-mpc-pressure-select" data-card="0">
-              <option value="0">5 psi | 34 kPa</option>
-              <option value="1">50 psi | 345 kPa</option>
-              <option value="2">100 psi | 690 kPa</option>
-              <option value="3">150 psi | 1034 kPa</option>
-              <option value="4" selected>200 psi | 1379 kPa</option>
-            </select>
-          </div>
+            <div class="fs-mpc-pressure-control">
+              <div class="fs-mpc-pressure-row">
+                <label for="fsMpcPressure{{ $loop->index }}">Inlet pressure</label>
+              </div>
 
-          <div class="fs-mpc-primary-reading">
-            <span class="fs-mpc-reading-label">Gas Capacity</span>
-            <div class="fs-mpc-reading-value" id="fsMpcGasReading0"></div>
-          </div>
-
-          <div class="fs-mpc-card-specs">
-            <div>
-              <b>Max liquid rate</b>
-              <span>
-                <span class="metric">2,238 <small>m³/d</small></span>
-                <span class="imperial">14,077 <small>bbl/d</small></span>
-              </span>
+              <select
+                id="fsMpcPressure{{ $loop->index }}"
+                class="fs-mpc-pressure-select"
+                data-card="{{ $loop->index }}"
+              >
+                @foreach ($mpcPressureOptions as $pressure)
+                  <option value="{{ $pressure['value'] }}" {{ $pressure['value'] === 4 ? 'selected' : '' }}>
+                    {{ $pressure['label'] }}
+                  </option>
+                @endforeach
+              </select>
             </div>
 
-            <div>
-              <b>Max ΔP</b>
-              <span>
-                <span class="metric">1034 <small>kPag</small></span>
-                <span class="imperial">150 <small>psig</small></span>
-              </span>
-            </div>
-          </div>
-        </article>
-
-        <article class="fs-mpc-model-card">
-          <div class="fs-mpc-card-top">
-            <span class="fs-mpc-family">MultiphaseCommander™</span>
-
-            <div class="fs-mpc-model-line">
-              <h3>MC1245 (050035)</h3>
-              <span class="fs-mpc-hp-badge">50 HP</span>
-            </div>
-          </div>
-
-          <div class="fs-mpc-pressure-control">
-            <div class="fs-mpc-pressure-row">
-              <label for="fsMpcPressure1">Inlet pressure</label>
+            <div class="fs-mpc-primary-reading">
+              <span class="fs-mpc-reading-label">Gas Capacity</span>
+              <div class="fs-mpc-reading-value" id="fsMpcGasReading{{ $loop->index }}"></div>
             </div>
 
-            <select id="fsMpcPressure1" class="fs-mpc-pressure-select" data-card="1">
-              <option value="0">5 psi | 34 kPa</option>
-              <option value="1">50 psi | 345 kPa</option>
-              <option value="2">100 psi | 690 kPa</option>
-              <option value="3">150 psi | 1034 kPa</option>
-              <option value="4" selected>200 psi | 1379 kPa</option>
-            </select>
-          </div>
+            <div class="fs-mpc-card-specs">
+              <div>
+                <b>Max liquid rate</b>
+                <span>
+                  <span class="metric">{{ $model['liquidMetric'] }} <small>m<sup>3</sup>/d</small></span>
+                  <span class="fs-mpc-divider">|</span>
+                  <span class="imperial">{{ $model['liquidImperial'] }} <small>bbl/d</small></span>
+                </span>
+              </div>
 
-          <div class="fs-mpc-primary-reading">
-            <span class="fs-mpc-reading-label">Gas Capacity</span>
-            <div class="fs-mpc-reading-value" id="fsMpcGasReading1"></div>
-          </div>
-
-          <div class="fs-mpc-card-specs">
-            <div>
-              <b>Max liquid rate</b>
-              <span>
-                <span class="metric">1,344 <small>m³/d</small></span>
-                <span class="imperial">8,454 <small>bbl/d</small></span>
-              </span>
+              <div>
+                <b>Max ΔP</b>
+                <span>
+                  <span class="metric">{{ $model['dpMetric'] }} <small>kPag</small></span>
+                  <span class="fs-mpc-divider">|</span>
+                  <span class="imperial">{{ $model['dpImperial'] }} <small>psig</small></span>
+                </span>
+              </div>
             </div>
-
-            <div>
-              <b>Max ΔP</b>
-              <span>
-                <span class="metric">1896 <small>kPag</small></span>
-                <span class="imperial">275 <small>psig</small></span>
-              </span>
-            </div>
-          </div>
-        </article>
-
-        <article class="fs-mpc-model-card">
-          <div class="fs-mpc-card-top">
-            <span class="fs-mpc-family">MultiphaseCommander™</span>
-
-            <div class="fs-mpc-model-line">
-              <h3>MC1245 (100060)</h3>
-              <span class="fs-mpc-hp-badge">100 HP</span>
-            </div>
-          </div>
-
-          <div class="fs-mpc-pressure-control">
-            <div class="fs-mpc-pressure-row">
-              <label for="fsMpcPressure2">Inlet pressure</label>
-            </div>
-
-            <select id="fsMpcPressure2" class="fs-mpc-pressure-select" data-card="2">
-              <option value="0">5 psi | 34 kPa</option>
-              <option value="1">50 psi | 345 kPa</option>
-              <option value="2">100 psi | 690 kPa</option>
-              <option value="3">150 psi | 1034 kPa</option>
-              <option value="4" selected>200 psi | 1379 kPa</option>
-            </select>
-          </div>
-
-          <div class="fs-mpc-primary-reading">
-            <span class="fs-mpc-reading-label">Gas Capacity</span>
-            <div class="fs-mpc-reading-value" id="fsMpcGasReading2"></div>
-          </div>
-
-          <div class="fs-mpc-card-specs">
-            <div>
-              <b>Max liquid rate</b>
-              <span>
-                <span class="metric">2,345 <small>m³/d</small></span>
-                <span class="imperial">14,750 <small>bbl/d</small></span>
-              </span>
-            </div>
-
-            <div>
-              <b>Max ΔP</b>
-              <span>
-                <span class="metric">1896 <small>kPag</small></span>
-                <span class="imperial">275 <small>psig</small></span>
-              </span>
-            </div>
-          </div>
-        </article>
-
-        <article class="fs-mpc-model-card">
-          <div class="fs-mpc-card-top">
-            <span class="fs-mpc-family">MultiphaseCommander™</span>
-
-            <div class="fs-mpc-model-line">
-              <h3>MC1645 (100060)</h3>
-              <span class="fs-mpc-hp-badge">100 HP</span>
-            </div>
-          </div>
-
-          <div class="fs-mpc-pressure-control">
-            <div class="fs-mpc-pressure-row">
-              <label for="fsMpcPressure3">Inlet pressure</label>
-            </div>
-
-            <select id="fsMpcPressure3" class="fs-mpc-pressure-select" data-card="3">
-              <option value="0">5 psi | 34 kPa</option>
-              <option value="1">50 psi | 345 kPa</option>
-              <option value="2">100 psi | 690 kPa</option>
-              <option value="3">150 psi | 1034 kPa</option>
-              <option value="4" selected>200 psi | 1379 kPa</option>
-            </select>
-          </div>
-
-          <div class="fs-mpc-primary-reading">
-            <span class="fs-mpc-reading-label">Gas Capacity</span>
-            <div class="fs-mpc-reading-value" id="fsMpcGasReading3"></div>
-          </div>
-
-          <div class="fs-mpc-card-specs">
-            <div>
-              <b>Max liquid rate</b>
-              <span>
-                <span class="metric">4,200 <small>m³/d</small></span>
-                <span class="imperial">26,417 <small>bbl/d</small></span>
-              </span>
-            </div>
-
-            <div>
-              <b>Max ΔP</b>
-              <span>
-                <span class="metric">1034 <small>kPag</small></span>
-                <span class="imperial">150 <small>psig</small></span>
-              </span>
-            </div>
-          </div>
-        </article>
-
-        <article class="fs-mpc-model-card">
-          <div class="fs-mpc-card-top">
-            <span class="fs-mpc-family">MultiphaseCommander™</span>
-
-            <div class="fs-mpc-model-line">
-              <h3>MC2270 (100128)</h3>
-              <span class="fs-mpc-hp-badge">100 HP</span>
-            </div>
-          </div>
-
-          <div class="fs-mpc-pressure-control">
-            <div class="fs-mpc-pressure-row">
-              <label for="fsMpcPressure4">Inlet pressure</label>
-            </div>
-
-            <select id="fsMpcPressure4" class="fs-mpc-pressure-select" data-card="4">
-              <option value="0">5 psi | 34 kPa</option>
-              <option value="1">50 psi | 345 kPa</option>
-              <option value="2">100 psi | 690 kPa</option>
-              <option value="3">150 psi | 1034 kPa</option>
-              <option value="4" selected>200 psi | 1379 kPa</option>
-            </select>
-          </div>
-
-          <div class="fs-mpc-primary-reading">
-            <span class="fs-mpc-reading-label">Gas Capacity</span>
-            <div class="fs-mpc-reading-value" id="fsMpcGasReading4"></div>
-          </div>
-
-          <div class="fs-mpc-card-specs">
-            <div>
-              <b>Max liquid rate</b>
-              <span>
-                <span class="metric">6,600 <small>m³/d</small></span>
-                <span class="imperial">41,513 <small>bbl/d</small></span>
-              </span>
-            </div>
-
-            <div>
-              <b>Max ΔP</b>
-              <span>
-                <span class="metric">1551 <small>kPag</small></span>
-                <span class="imperial">225 <small>psig</small></span>
-              </span>
-            </div>
-          </div>
-        </article>
-
-        <article class="fs-mpc-model-card">
-          <div class="fs-mpc-card-top">
-            <span class="fs-mpc-family">MultiphaseCommander™</span>
-
-            <div class="fs-mpc-model-line">
-              <h3>MC2270 (150128)</h3>
-              <span class="fs-mpc-hp-badge">150 HP</span>
-            </div>
-          </div>
-
-          <div class="fs-mpc-pressure-control">
-            <div class="fs-mpc-pressure-row">
-              <label for="fsMpcPressure5">Inlet pressure</label>
-            </div>
-
-            <select id="fsMpcPressure5" class="fs-mpc-pressure-select" data-card="5">
-              <option value="0">5 psi | 34 kPa</option>
-              <option value="1">50 psi | 345 kPa</option>
-              <option value="2">100 psi | 690 kPa</option>
-              <option value="3">150 psi | 1034 kPa</option>
-              <option value="4" selected>200 psi | 1379 kPa</option>
-            </select>
-          </div>
-
-          <div class="fs-mpc-primary-reading">
-            <span class="fs-mpc-reading-label">Gas Capacity</span>
-            <div class="fs-mpc-reading-value" id="fsMpcGasReading5"></div>
-          </div>
-
-          <div class="fs-mpc-card-specs">
-            <div>
-              <b>Max liquid rate</b>
-              <span>
-                <span class="metric">6,600 <small>m³/d</small></span>
-                <span class="imperial">41,513 <small>bbl/d</small></span>
-              </span>
-            </div>
-
-            <div>
-              <b>Max ΔP</b>
-              <span>
-                <span class="metric">1551 <small>kPag</small></span>
-                <span class="imperial">225 <small>psig</small></span>
-              </span>
-            </div>
-          </div>
-        </article>
+          </article>
+        @endforeach
       </div>
-
-      <style>
-        .fs-mpc-sizing-notes ol {
-          list-style-type: decimal !important;
-          padding-left: 24px;
-        }
-
-        .fs-mpc-sizing-notes ol li::before {
-          content: none !important;
-        }
-      </style>
 
       <div class="fs-mpc-sizing-notes">
         <strong>Engineering notes</strong>
 
         <ol>
           <li>
-            Flow conditions are calculated at 15℃ [59℉] inlet pressure and with various components operating at
+            Flow conditions calculated at 15℃ [59℉] inlet pressure and with various components operating at
             100% efficiency. Flow rates may vary based on inlet pressures, gas content, and other factors.
+            Max gas rates will be reduced by amount of liquids in total fluid. Contact Fluidstream for gas
+            capacity review based on specific liquid rates and operating conditions.
           </li>
 
           <li>
-            Max gas rates and max pressure differentials can be increased by configuring additional units in
-            parallel or in series.
+            Max gas rates and max pressure differentials can be increased by configuring additional unit(s)
+            in parallel or in series.
           </li>
 
           <li>
@@ -2997,50 +2878,18 @@
 
     <script>
       (function () {
-        const gasData = [
-          [
-            '<span class="metric">3.0 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">106 <small>MCF/day</small></span>',
-            '<span class="metric">9.9 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">350 <small>MCF/day</small></span>',
-            '<span class="metric">17.5 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">618 <small>MCF/day</small></span>',
-            '<span class="metric">25.1 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">886 <small>MCF/day</small></span>',
-            '<span class="metric">32.7 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">1,155 <small>MCF/day</small></span>'
-          ],
-          [
-            '<span class="metric">1.8 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">64 <small>MCF/day</small></span>',
-            '<span class="metric">5.9 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">208 <small>MCF/day</small></span>',
-            '<span class="metric">10.4 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">367 <small>MCF/day</small></span>',
-            '<span class="metric">14.9 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">526 <small>MCF/day</small></span>',
-            '<span class="metric">19.4 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">685 <small>MCF/day</small></span>'
-          ],
-          [
-            '<span class="metric">3.1 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">109 <small>MCF/day</small></span>',
-            '<span class="metric">10.3 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">364 <small>MCF/day</small></span>',
-            '<span class="metric">18.3 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">646 <small>MCF/day</small></span>',
-            '<span class="metric">26.3 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">929 <small>MCF/day</small></span>',
-            '<span class="metric">34.3 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">1,211 <small>MCF/day</small></span>'
-          ],
-          [
-            '<span class="metric">5.7 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">201 <small>MCF/day</small></span>',
-            '<span class="metric">18.5 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">653 <small>MCF/day</small></span>',
-            '<span class="metric">32.9 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">1,162 <small>MCF/day</small></span>',
-            '<span class="metric">47.2 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">1,667 <small>MCF/day</small></span>',
-            '<span class="metric">61.5 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">2,172 <small>MCF/day</small></span>'
-          ],
-          [
-            '<span class="metric">8.9 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">314 <small>MCF/day</small></span>',
-            '<span class="metric">29.1 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">1,028 <small>MCF/day</small></span>',
-            '<span class="metric">51.5 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">1,819 <small>MCF/day</small></span>',
-            '<span class="metric">74 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">2,613 <small>MCF/day</small></span>',
-            '<span class="metric">96.4 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">3,404 <small>MCF/day</small></span>'
-          ],
-          [
-            '<span class="metric">8.9 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">314 <small>MCF/day</small></span>',
-            '<span class="metric">29.1 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">1,028 <small>MCF/day</small></span>',
-            '<span class="metric">51.5 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">1,819 <small>MCF/day</small></span>',
-            '<span class="metric">74 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">2,613 <small>MCF/day</small></span>',
-            '<span class="metric">96.4 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">3,404 <small>MCF/day</small></span>'
-          ]
-        ];
+        const gasData = @json($mpcGasData);
+
+        function renderGasReading(reading) {
+          if (!reading) {
+            return '<span class="metric">N/A</span><span class="imperial">N/A</span>';
+          }
+
+          return `
+            <span class="metric">${reading.metric} <small>e<sup>3</sup> m<sup>3</sup>/day</small></span>
+            <span class="imperial">${reading.imperial} <small>MCF/day</small></span>
+          `;
+        }
 
         function updateMpcCard(index, pressureIndex) {
           const element = document.getElementById('fsMpcGasReading' + index);
@@ -3049,7 +2898,7 @@
             return;
           }
 
-          element.innerHTML = gasData[index][pressureIndex] || '<span class="metric">N/A</span><span class="imperial">N/A</span>';
+          element.innerHTML = renderGasReading(gasData[index][pressureIndex]);
         }
 
         document.querySelectorAll('.fs-mpc-pressure-select').forEach(function (select) {
@@ -3081,78 +2930,78 @@
     </script>
   </section>
 
-  <section class="cta">
-    <div class="wrap py-12">
+      <section class="cta">
+        <div class="wrap py-12">
 
-      <div class="cta-box flex items-start">
-        <div>
-          <h2>Submit your fluid conditions for a MultiphaseCommander™ application review.</h2>
-          <p>
-            If your system is constrained by liquid-loaded gas flow, unstable operating conditions, rising system
-            pressure, or too much surface equipment, Fluidstream can review your application against the actual gas,
-            liquid, pressure, and site constraints to identify a production-focused, lower-maintenance
-            MultiphaseCommander™ configuration.
-          </p>
-        </div>
+          <div class="cta-box flex items-start">
+            <div>
+              <h2>Submit your fluid conditions for a MultiphaseCommander™ application review.</h2>
+              <p>
+                If your system is constrained by liquid-loaded gas flow, unstable operating conditions, rising system
+                pressure, or too much surface equipment, Fluidstream can review your application against the actual gas,
+                liquid, pressure, and site constraints to identify a production-focused, lower-maintenance
+                MultiphaseCommander™ configuration.
+              </p>
+            </div>
 
-        <div class="cta-panel interactive-card swipe-left">
-          <h3>What to send for review</h3>
+            <div class="cta-panel interactive-card swipe-left">
+              <h3>What to send for review</h3>
 
-          <ul class="space-y-4">
-            <li class="flex items-start gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 text-[#0018dc] mt-[4px]" fill="none"
-                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h12" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
-              </svg>
-              <span>Gas rate, liquid rate, and fluid composition</span>
-            </li>
+              <ul class="space-y-4">
+                <li class="flex items-start gap-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 text-[#0018dc] mt-[4px]" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h12" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
+                  </svg>
+                  <span>Gas rate, liquid rate, and fluid composition</span>
+                </li>
 
-            <li class="flex items-start gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 text-[#0018dc] mt-[4px]" fill="none"
-                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h12" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
-              </svg>
-              <span>Inlet and discharge pressure targets</span>
-            </li>
+                <li class="flex items-start gap-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 text-[#0018dc] mt-[4px]" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h12" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
+                  </svg>
+                  <span>Inlet and discharge pressure targets</span>
+                </li>
 
-            <li class="flex items-start gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 text-[#0018dc] mt-[4px]" fill="none"
-                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h12" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
-              </svg>
-              <span>Backpressure or gathering-system constraints</span>
-            </li>
+                <li class="flex items-start gap-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 text-[#0018dc] mt-[4px]" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h12" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
+                  </svg>
+                  <span>Backpressure or gathering-system constraints</span>
+                </li>
 
-            <li class="flex items-start gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 text-[#0018dc] mt-[4px]" fill="none"
-                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h12" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
-              </svg>
-              <span>Artificial-lift or pad-level operating context</span>
-            </li>
+                <li class="flex items-start gap-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 text-[#0018dc] mt-[4px]" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h12" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
+                  </svg>
+                  <span>Artificial-lift or pad-level operating context</span>
+                </li>
 
-            <li class="flex items-start gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 text-[#0018dc] mt-[4px]" fill="none"
-                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h12" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
-              </svg>
-              <span>H₂S, cold-weather, sand, or remote-control requirements</span>
-            </li>
-          </ul>
+                <li class="flex items-start gap-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 text-[#0018dc] mt-[4px]" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h12" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
+                  </svg>
+                  <span>H₂S, cold-weather, sand, or remote-control requirements</span>
+                </li>
+              </ul>
 
-          <div class="btn-row" style="margin-bottom:0;">
-            <a class="btn btn-1 btn-primary" href="/technical-review">Request Technical Review</a>
-            <a class="btn btn-1 btn-secondary-1" href="#specifications">Review Specifications</a>
+              <div class="btn-row" style="margin-bottom:0;">
+                <a class="btn btn-1 btn-primary" href="/technical-review">Request Technical Review</a>
+                <a class="btn btn-1 btn-secondary-1" href="#specifications">Review Specifications</a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
 
 @endsection

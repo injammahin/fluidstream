@@ -290,13 +290,13 @@
     }
 
     /* .swipe-left:hover:before,
-                                                                                                                                                                                                                                                              .swipe-left:hover:before,
-                                                                                                                                                                                                                                                              .model-card:hover:before,
-                                                                                                                                                                                                                                                              .spec-mobile-card:hover:before,
-                                                                                                                                                                                                                                                              .comparison .box:hover:before,
-                                                                                                                                                                                                                                                              .reality-item:hover:before {
-                                                                                                                                                                                                                                                                opacity: 1;
-                                                                                                                                                                                                                                                              } */
+                                                                                                                                                                                                                                                                .swipe-left:hover:before,
+                                                                                                                                                                                                                                                                .model-card:hover:before,
+                                                                                                                                                                                                                                                                .spec-mobile-card:hover:before,
+                                                                                                                                                                                                                                                                .comparison .box:hover:before,
+                                                                                                                                                                                                                                                                .reality-item:hover:before {
+                                                                                                                                                                                                                                                                  opacity: 1;
+                                                                                                                                                                                                                                                                } */
 
     .swipe-left:hover:after,
     .model-card:hover:after,
@@ -307,8 +307,8 @@
     }
 
     /* .swipe-left:hover:after {
-                                                                                                                                                                                                                                                            right: 155%;
-                                                                                                                                                                                                                                                          } */
+                                                                                                                                                                                                                                                              right: 155%;
+                                                                                                                                                                                                                                                            } */
 
     .hero-card:hover {
       box-shadow: 0 26px 56px rgba(0, 24, 220, .18);
@@ -316,14 +316,14 @@
     }
 
     /* .swipe-left:hover,
-                                                                                                                                                                                                                                                        .swipe-left:hover,
-                                                                                                                                                                                                                                                        .model-card:hover,
-                                                                                                                                                                                                                                                        .spec-mobile-card:hover,
-                                                                                                                                                                                                                                                        .comparison .box:hover,
-                                                                                                                                                                                                                                                        .reality-item:hover {
-                                                                                                                                                                                                                                                          box-shadow: 0 24px 52px rgba(13, 32, 84, .12);
-                                                                                                                                                                                                                                                          border-color: #b9d0ff;
-                                                                                                                                                                                                                                                        } */
+                                                                                                                                                                                                                                                          .swipe-left:hover,
+                                                                                                                                                                                                                                                          .model-card:hover,
+                                                                                                                                                                                                                                                          .spec-mobile-card:hover,
+                                                                                                                                                                                                                                                          .comparison .box:hover,
+                                                                                                                                                                                                                                                          .reality-item:hover {
+                                                                                                                                                                                                                                                            box-shadow: 0 24px 52px rgba(13, 32, 84, .12);
+                                                                                                                                                                                                                                                            border-color: #b9d0ff;
+                                                                                                                                                                                                                                                          } */
 
     .blue-fill:before {
       content: "";
@@ -374,9 +374,9 @@
     }
 
     /* 
-                                                                                                                                                                                                                                        .highlight-box:hover a {
-                                                                                                                                                                                                                                          color: #fff !important
-                                                                                                                                                                                                                                        } */
+                                                                                                                                                                                                                                          .highlight-box:hover a {
+                                                                                                                                                                                                                                            color: #fff !important
+                                                                                                                                                                                                                                          } */
 
     .cta-panel:hover {
       /* box-shadow: 0 24px 52px rgba(0, 24, 220, .18); */
@@ -606,13 +606,13 @@
     }
 
     /* .kicker mb-2 {
-                                                                                                                                                                                          font-size: 12px;
-                                                                                                                                                                                          letter-spacing: .11em;
-                                                                                                                                                                                          text-transform: uppercase;
-                                                                                                                                                                                          color: var(--blue);
-                                                                                                                                                                                          font-weight: 700;
-                                                                                                                                                                                          margin-bottom: 10px
-                                                                                                                                                                                        } */
+                                                                                                                                                                                            font-size: 12px;
+                                                                                                                                                                                            letter-spacing: .11em;
+                                                                                                                                                                                            text-transform: uppercase;
+                                                                                                                                                                                            color: var(--blue);
+                                                                                                                                                                                            font-weight: 700;
+                                                                                                                                                                                            margin-bottom: 10px
+                                                                                                                                                                                          } */
 
     h2 {
       margin: 0 0 16px;
@@ -1054,8 +1054,8 @@
   <header class="hero fs-casing-hero fs-protected-bg">
     <style>
       /* ================================
-                                                                       UPDATED CASING GAS HERO
-                                                                    ================================ */
+                                                                         UPDATED CASING GAS HERO
+                                                                      ================================ */
 
       header.hero.fs-casing-hero {
         position: relative !important;
@@ -1191,7 +1191,7 @@
         border: 1px solid rgba(255, 255, 255, .28);
         background: rgba(255, 255, 255, 0);
         /* backdrop-filter: blur(8px);
-                                                        -webkit-backdrop-filter: blur(8px); */
+                                                          -webkit-backdrop-filter: blur(8px); */
       }
 
       .fs-casing-hero-btn-secondary:hover {
@@ -1216,7 +1216,7 @@
         border-radius: 7px;
         background: rgba(255, 255, 255, 0);
         /* backdrop-filter: blur(8px);
-                                                          -webkit-backdrop-filter: blur(8px); */
+                                                            -webkit-backdrop-filter: blur(8px); */
         transition:
           transform .25s ease,
           border-color .25s ease,
@@ -1224,23 +1224,23 @@
       }
 
       /* .fs-casing-hero-benefit::after {
-                                                              content: "";
-                                                              position: absolute;
-                                                              left: 0;
-                                                              right: 0;
-                                                              top: 0;
-                                                              height: 4px;
-                                                              background: #15d1ff;
-                                                              transform: scaleX(0);
-                                                              transform-origin: left;
-                                                              transition: transform .25s ease;
-                                                            }
+                                                                content: "";
+                                                                position: absolute;
+                                                                left: 0;
+                                                                right: 0;
+                                                                top: 0;
+                                                                height: 4px;
+                                                                background: #15d1ff;
+                                                                transform: scaleX(0);
+                                                                transform-origin: left;
+                                                                transition: transform .25s ease;
+                                                              }
 
-                                                            .fs-casing-hero-benefit:hover {
-                                                              transform: translateY(-4px);
-                                                              border-color: rgba(21, 209, 255, .45);
-                                                              background: rgba(255, 255, 255, .12);
-                                                            } */
+                                                              .fs-casing-hero-benefit:hover {
+                                                                transform: translateY(-4px);
+                                                                border-color: rgba(21, 209, 255, .45);
+                                                                background: rgba(255, 255, 255, .12);
+                                                              } */
 
       .fs-casing-hero-benefit:hover::after {
         transform: scaleX(1);
@@ -1272,8 +1272,8 @@
         background: rgba(255, 255, 255, 0);
         border: 1px solid rgba(255, 255, 255, .16);
         /* box-shadow: 0 24px 70px rgba(0, 0, 0, .22);
-                                                              backdrop-filter: blur(12px);
-                                                              -webkit-backdrop-filter: blur(12px); */
+                                                                backdrop-filter: blur(12px);
+                                                                -webkit-backdrop-filter: blur(12px); */
         transition:
           transform .28s ease,
           box-shadow .28s ease,
@@ -1282,25 +1282,25 @@
       }
 
       /* .fs-casing-proof-card::after {
-                                                                content: "";
-                                                                position: absolute;
-                                                                left: 0;
-                                                                right: 0;
-                                                                top: 0;
-                                                                height: 4px;
-                                                                background: #15d1ff;
-                                                                transform: scaleX(0);
-                                                                transform-origin: left;
-                                                                transition: transform .28s ease;
-                                                                z-index: 2;
-                                                              } */
+                                                                  content: "";
+                                                                  position: absolute;
+                                                                  left: 0;
+                                                                  right: 0;
+                                                                  top: 0;
+                                                                  height: 4px;
+                                                                  background: #15d1ff;
+                                                                  transform: scaleX(0);
+                                                                  transform-origin: left;
+                                                                  transition: transform .28s ease;
+                                                                  z-index: 2;
+                                                                } */
 
       /* .fs-casing-proof-card:hover {
-                                                                transform: translateY(-4px);
-                                                                border-color: rgba(21, 209, 255, .42);
-                                                                background: rgba(255, 255, 255, .12);
-                                                                box-shadow: 0 30px 78px rgba(0, 0, 0, .28);
-                                                              } */
+                                                                  transform: translateY(-4px);
+                                                                  border-color: rgba(21, 209, 255, .42);
+                                                                  background: rgba(255, 255, 255, .12);
+                                                                  box-shadow: 0 30px 78px rgba(0, 0, 0, .28);
+                                                                } */
 
       .fs-casing-proof-card:hover::after {
         transform: scaleX(1);
@@ -1811,24 +1811,24 @@
       }
 
       /* .fs-cg-diff-head h2 {
-                                                                                                                            margin: 0;
-                                                                                                                            max-width: 760px;
-                                                                                                                            font-size: clamp(1.9rem, 3vw, 3rem);
-                                                                                                                            line-height: 1.05;
-                                                                                                                            letter-spacing: -.04em;
-                                                                                                                            color: #1f1f21;
-                                                                                                                          } */
+                                                                                                                              margin: 0;
+                                                                                                                              max-width: 760px;
+                                                                                                                              font-size: clamp(1.9rem, 3vw, 3rem);
+                                                                                                                              line-height: 1.05;
+                                                                                                                              letter-spacing: -.04em;
+                                                                                                                              color: #1f1f21;
+                                                                                                                            } */
 
       /* .fs-cg-diff-head h2 span {
-                                                                                                                            color: var(--cg-blue);
-                                                                                                                          }
+                                                                                                                              color: var(--cg-blue);
+                                                                                                                            }
 
-                                                                                                                          .fs-cg-diff-head p {
-                                                                                                                            margin: 0;
-                                                                                                                            color: var(--cg-muted);
-                                                                                                                            font-size: 16px;
-                                                                                                                            line-height: 1.75;
-                                                                                                                          } */
+                                                                                                                            .fs-cg-diff-head p {
+                                                                                                                              margin: 0;
+                                                                                                                              color: var(--cg-muted);
+                                                                                                                              font-size: 16px;
+                                                                                                                              line-height: 1.75;
+                                                                                                                            } */
 
       .fs-cg-diff-summary {
         display: grid;
@@ -1993,17 +1993,17 @@
       }
 
       /* 
-                                                                    .fs-cg-diff-bottom::after {
-                                                                      content: "";
-                                                                      position: absolute;
-                                                                      width: 230px;
-                                                                      height: 230px;
-                                                                      right: -90px;
-                                                                      top: -120px;
-                                                                      border-radius: 999px;
-                                                                      background: rgba(21, 209, 255, .18);
-                                                                      pointer-events: none;
-                                                                    } */
+                                                                      .fs-cg-diff-bottom::after {
+                                                                        content: "";
+                                                                        position: absolute;
+                                                                        width: 230px;
+                                                                        height: 230px;
+                                                                        right: -90px;
+                                                                        top: -120px;
+                                                                        border-radius: 999px;
+                                                                        background: rgba(21, 209, 255, .18);
+                                                                        pointer-events: none;
+                                                                      } */
 
       .fs-cg-diff-bottom-content {
         position: relative;
@@ -2258,37 +2258,17 @@
       }
 
       .fs-ms-section-head {
-        /* display: grid; */
-        grid-template-columns: 260px 1fr;
-        gap: 44px;
-        align-items: start;
         margin-bottom: 28px;
       }
 
       .fs-ms-rail {
-        /* padding-top: 14px; */
         color: var(--blue);
         font-size: 13px;
         font-weight: 950;
         letter-spacing: .1em;
         text-transform: uppercase;
+        margin-bottom: 10px;
       }
-
-      /* .fs-ms-section-head h2 {
-                                                                                                                                                font-size: clamp(30px, 3.2vw, 46px);
-                                                                                                                                                line-height: 1.02;
-                                                                                                                                                margin: 0 0 14px;
-                                                                                                                                                letter-spacing: -.035em;
-                                                                                                                                                color: var(--ink);
-                                                                                                                                              } */
-      /* 
-                                                                                                                                            .fs-ms-lead {
-                                                                                                                                              font-size: 17px;
-                                                                                                                                              color: #56647a;
-                                                                                                                                              max-width: 860px;
-                                                                                                                                              margin: 0;
-                                                                                                                                              line-height: 1.65;
-                                                                                                                                            } */
 
       .fs-ms-spec-note {
         margin: 14px 0 0;
@@ -2296,6 +2276,40 @@
         color: var(--muted);
         font-weight: 700;
         line-height: 1.6;
+      }
+
+      .fs-ms-spec-tools {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 18px;
+        margin-bottom: 18px;
+      }
+
+      .fs-ms-blue-note {
+        margin: 7px 0 0;
+        max-width: 75ch !important;
+        padding: 14px 18px;
+        border-radius: 7px;
+        background: #0018dc;
+        color: #ffffff;
+        font-size: 16px;
+        line-height: 1.6;
+        font-weight: 500;
+      }
+
+      .fs-ms-blue-note a {
+        color: #ffffff;
+        font-weight: 900;
+        text-decoration: underline;
+        text-underline-offset: 4px;
+        transition: opacity 0.2s ease;
+      }
+
+      .fs-ms-blue-note a:hover {
+        color: #ffffff;
+        opacity: 0.82;
+        text-decoration: underline;
       }
 
       .fs-ms-global-control {
@@ -2308,7 +2322,7 @@
         gap: 14px;
         width: fit-content;
         max-width: 100%;
-        margin: 0 0 18px auto;
+        margin: 0 0 0 auto;
         background: rgba(255, 255, 255, .94);
         border: 1px solid rgba(223, 230, 241, .95);
         border-radius: 999px;
@@ -2330,38 +2344,21 @@
         appearance: none;
         -webkit-appearance: none;
         -moz-appearance: none;
-
         background-color: #ffffff;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%230018dc' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
         background-repeat: no-repeat;
         background-position: right 14px center;
-
         border: 1px solid #cfd8ea;
         border-radius: 999px;
         color: var(--ink);
-
         font-size: 15px !important;
         line-height: 1.25 !important;
         font-weight: 800 !important;
-
         padding: 10px 44px 10px 15px;
         min-width: 220px;
         outline: none;
         cursor: pointer;
-
         transition: border-color .24s ease, box-shadow .24s ease;
-      }
-
-      .fs-model-selector-section select {
-        font-size: 15px !important;
-        line-height: 1.25 !important;
-        font-weight: 800 !important;
-      }
-
-      .fs-model-selector-section select option {
-        font-size: 15px !important;
-        line-height: 1.35 !important;
-        font-weight: 500 !important;
       }
 
       .fs-model-selector-section select option {
@@ -2415,7 +2412,6 @@
       .fs-ms-model-card:hover {
         transform: translateY(-3px);
         border-color: var(--blue);
-        /* box-shadow: 0 22px 46px rgba(16, 42, 67, .10); */
         background: #ffffff;
       }
 
@@ -2491,6 +2487,11 @@
         text-transform: uppercase;
         letter-spacing: .075em;
         font-weight: 900;
+      }
+
+      .fs-ms-pressure-control select {
+        width: 100%;
+        min-width: 0;
       }
 
       .fs-ms-primary-reading {
@@ -2576,6 +2577,11 @@
         font-weight: 850;
       }
 
+      .fs-ms-divider {
+        color: #9aa6ba !important;
+        font-weight: 900;
+      }
+
       .fs-ms-sizing-notes {
         margin-top: 22px;
         background: #fbfcff;
@@ -2596,10 +2602,15 @@
       }
 
       .fs-ms-sizing-notes ol {
+        list-style-type: decimal !important;
         margin: 0;
-        padding-left: 18px;
+        padding-left: 24px;
         display: grid;
         gap: 7px;
+      }
+
+      .fs-ms-sizing-notes ol li::before {
+        content: none !important;
       }
 
       .fs-ms-sizing-notes li {
@@ -2611,9 +2622,13 @@
           grid-template-columns: repeat(2, 1fr);
         }
 
-        .fs-ms-section-head {
-          grid-template-columns: 1fr;
-          gap: 12px;
+        .fs-ms-spec-tools {
+          flex-direction: column;
+        }
+
+        .fs-ms-global-control {
+          position: static;
+          margin-left: 0;
         }
       }
 
@@ -2627,7 +2642,6 @@
         }
 
         .fs-ms-global-control {
-          position: static;
           width: 100%;
           margin-left: 0;
           margin-right: 0;
@@ -2656,423 +2670,189 @@
       }
     </style>
 
+    @php
+      $ccPressureOptions = [
+        ['value' => 0, 'label' => '5 psi | 34 kPa'],
+        ['value' => 1, 'label' => '10 psi | 69 kPa'],
+        ['value' => 2, 'label' => '20 psi | 138 kPa'],
+        ['value' => 3, 'label' => '30 psi | 207 kPa'],
+        ['value' => 4, 'label' => '50 psi | 345 kPa'],
+      ];
+
+      $ccModels = [
+        ['name' => 'CC825 (015013)', 'hp' => '15 HP', 'dpMetric' => '1207', 'dpImperial' => '175'],
+        ['name' => 'CC835 (015013)', 'hp' => '15 HP', 'dpMetric' => '2586', 'dpImperial' => '375'],
+        ['name' => 'CC1035 (050035)', 'hp' => '50 HP', 'dpMetric' => '1724', 'dpImperial' => '250'],
+        ['name' => 'CC1235 (050035)', 'hp' => '50 HP', 'dpMetric' => '1034', 'dpImperial' => '150'],
+        ['name' => 'CC1245 (050035)', 'hp' => '50 HP', 'dpMetric' => '1896', 'dpImperial' => '275'],
+        ['name' => 'CC1245 (100060)', 'hp' => '100 HP', 'dpMetric' => '1896', 'dpImperial' => '275'],
+        ['name' => 'CC1645 (100060)', 'hp' => '100 HP', 'dpMetric' => '1034', 'dpImperial' => '150'],
+        ['name' => 'CC1845 (050060)', 'hp' => '50 HP', 'dpMetric' => '690', 'dpImperial' => '100'],
+        ['name' => 'CC2270 (100128)', 'hp' => '100 HP', 'dpMetric' => '1551', 'dpImperial' => '225'],
+        ['name' => 'CC2270 (150128)', 'hp' => '150 HP', 'dpMetric' => '1551', 'dpImperial' => '225'],
+      ];
+
+      $ccGasData = [
+        [
+          ['metric' => '1.0', 'imperial' => '35'],
+          ['metric' => '1.3', 'imperial' => '46'],
+          ['metric' => '1.8', 'imperial' => '64'],
+          ['metric' => '2.3', 'imperial' => '81'],
+          ['metric' => '3.4', 'imperial' => '120'],
+        ],
+        [
+          ['metric' => '0.6', 'imperial' => '21'],
+          ['metric' => '0.7', 'imperial' => '25'],
+          ['metric' => '1.0', 'imperial' => '35'],
+          ['metric' => '1.3', 'imperial' => '46'],
+          ['metric' => '1.9', 'imperial' => '67'],
+        ],
+        [
+          ['metric' => '1.5', 'imperial' => '53'],
+          ['metric' => '2.6', 'imperial' => '92'],
+          ['metric' => '3.6', 'imperial' => '127'],
+          ['metric' => '4.6', 'imperial' => '162'],
+          ['metric' => '6.7', 'imperial' => '237'],
+        ],
+        [
+          ['metric' => '3.0', 'imperial' => '106'],
+          ['metric' => '3.8', 'imperial' => '134'],
+          ['metric' => '5.3', 'imperial' => '187'],
+          ['metric' => '6.8', 'imperial' => '240'],
+          ['metric' => '9.9', 'imperial' => '350'],
+        ],
+        [
+          ['metric' => '1.8', 'imperial' => '64'],
+          ['metric' => '2.2', 'imperial' => '78'],
+          ['metric' => '3.1', 'imperial' => '109'],
+          ['metric' => '4.0', 'imperial' => '141'],
+          ['metric' => '5.9', 'imperial' => '208'],
+        ],
+        [
+          ['metric' => '3.1', 'imperial' => '109'],
+          ['metric' => '3.9', 'imperial' => '138'],
+          ['metric' => '5.5', 'imperial' => '194'],
+          ['metric' => '7.1', 'imperial' => '251'],
+          ['metric' => '10.3', 'imperial' => '364'],
+        ],
+        [
+          ['metric' => '5.7', 'imperial' => '201'],
+          ['metric' => '7.1', 'imperial' => '251'],
+          ['metric' => '9.9', 'imperial' => '350'],
+          ['metric' => '12.8', 'imperial' => '452'],
+          ['metric' => '18.5', 'imperial' => '653'],
+        ],
+        [
+          ['metric' => '7.2', 'imperial' => '254'],
+          ['metric' => '9.0', 'imperial' => '318'],
+          ['metric' => '12.6', 'imperial' => '445'],
+          ['metric' => '16.3', 'imperial' => '576'],
+          ['metric' => '23.5', 'imperial' => '830'],
+        ],
+        [
+          ['metric' => '8.9', 'imperial' => '314'],
+          ['metric' => '11.1', 'imperial' => '392'],
+          ['metric' => '15.6', 'imperial' => '551'],
+          ['metric' => '20.1', 'imperial' => '710'],
+          ['metric' => '29.1', 'imperial' => '1,028'],
+        ],
+        [
+          ['metric' => '8.9', 'imperial' => '314'],
+          ['metric' => '11.1', 'imperial' => '392'],
+          ['metric' => '15.6', 'imperial' => '551'],
+          ['metric' => '20.1', 'imperial' => '710'],
+          ['metric' => '29.1', 'imperial' => '1,028'],
+        ],
+      ];
+    @endphp
+
     <div class="fs-ms-wrap">
       <div class="fs-ms-section-head">
         <div class="fs-ms-rail">Specifications</div>
+
         <div>
           <h2>Compare models by inlet pressure.</h2>
+
           <p class="lead">
             Select an inlet pressure to review gas capacity across the CompressionCommander™ model range.
           </p>
+
+          <p class="fs-ms-spec-note">
+            Additional model sizes and configurations are available for applications outside the standard range shown.
+          </p>
         </div>
       </div>
-      <div class="flex">
-        <p class="blue-bg">
+
+      <div class="fs-ms-spec-tools">
+        <p class="fs-ms-blue-note">
           Additional models and configurations are available.
-          <a href="{{ url('/contact') }}" class="blue-bg-link">Contact Us</a>
+          <a href="{{ url('/contact') }}">Contact Us</a>
           for application-specific sizing.
         </p>
 
-        <style>
-          .blue-bg {
-            margin: 7px 30px 18px 2px;
-            max-width: 75ch !important;
-            /* margin: 18px 0; */
-            padding: 14px 18px;
-            border-radius: 7px;
-            background: #0018dc;
-            color: #ffffff;
-            font-size: 16px;
-            line-height: 1.6;
-            font-weight: 500;
-          }
-
-          .blue-bg-link {
-            color: #ffffff;
-            font-weight: 900;
-            text-decoration: underline;
-            text-underline-offset: 4px;
-            transition: opacity 0.2s ease;
-          }
-
-          .blue-bg-link:hover {
-            color: #ffffff;
-            opacity: 0.82;
-            text-decoration: underline;
-          }
-        </style>
         <div class="fs-ms-global-control">
           <div>
             <strong>Compare all models at</strong>
           </div>
 
-          <select id="fsGlobalPressure">
-            <option value="0">5 psi | 34 kPa</option>
-            <option value="1">10 psi | 69 kPa</option>
-            <option value="2">20 psi | 138 kPa</option>
-            <option value="3">30 psi | 207 kPa</option>
-            <option value="4" selected>50 psi | 345 kPa</option>
+          <select id="fsCcGlobalPressure">
+            @foreach ($ccPressureOptions as $pressure)
+              <option value="{{ $pressure['value'] }}" {{ $pressure['value'] === 4 ? 'selected' : '' }}>
+                {{ $pressure['label'] }}
+              </option>
+            @endforeach
           </select>
         </div>
       </div>
 
       <div class="fs-ms-cards">
-        <article class="fs-ms-model-card" data-card-index="0">
-          <div class="fs-ms-card-top">
-            <span class="fs-ms-family">CompressionCommander™</span>
-            <div class="fs-ms-model-line">
-              <h3>CC825 (015013)</h3>
-              <span class="fs-ms-hp-badge">15 HP</span>
+        @foreach ($ccModels as $model)
+          <article class="fs-ms-model-card" data-card-index="{{ $loop->index }}">
+            <div class="fs-ms-card-top">
+              <span class="fs-ms-family">CompressionCommander™</span>
+
+              <div class="fs-ms-model-line">
+                <h3>{{ $model['name'] }}</h3>
+                <span class="fs-ms-hp-badge">{{ $model['hp'] }}</span>
+              </div>
             </div>
-          </div>
 
-          <div class="fs-ms-pressure-control">
-            <div class="fs-ms-pressure-row">
-              <label for="fsPressure0">Inlet pressure</label>
+            <div class="fs-ms-pressure-control">
+              <div class="fs-ms-pressure-row">
+                <label for="fsCcPressure{{ $loop->index }}">Inlet pressure</label>
+              </div>
+
+              <select id="fsCcPressure{{ $loop->index }}" class="fs-cc-pressure-select" data-card="{{ $loop->index }}">
+                @foreach ($ccPressureOptions as $pressure)
+                  <option value="{{ $pressure['value'] }}" {{ $pressure['value'] === 4 ? 'selected' : '' }}>
+                    {{ $pressure['label'] }}
+                  </option>
+                @endforeach
+              </select>
             </div>
-            <select id="fsPressure0" class="fs-pressure-select" data-card="0">
-              <option value="0">5 psi | 34 kPa</option>
-              <option value="1">10 psi | 69 kPa</option>
-              <option value="2">20 psi | 138 kPa</option>
-              <option value="3">30 psi | 207 kPa</option>
-              <option value="4" selected>50 psi | 345 kPa</option>
-            </select>
-          </div>
 
-          <div class="fs-ms-primary-reading">
-            <span class="fs-ms-reading-label">Gas Capacity</span>
-            <div class="fs-ms-reading-value" id="fsGasReading0"></div>
-          </div>
-
-          <div class="fs-ms-card-specs">
-            <div>
-              <b>Max ΔP</b>
-              <span>
-                <span class="metric">1207 <small>kPag</small></span>
-                <span class="imperial">175 <small>psig</small></span>
-              </span>
+            <div class="fs-ms-primary-reading">
+              <span class="fs-ms-reading-label">Gas Capacity</span>
+              <div class="fs-ms-reading-value" id="fsCcGasReading{{ $loop->index }}"></div>
             </div>
-          </div>
-        </article>
 
-        <article class="fs-ms-model-card" data-card-index="1">
-          <div class="fs-ms-card-top">
-            <span class="fs-ms-family">CompressionCommander™</span>
-            <div class="fs-ms-model-line">
-              <h3>CC835 (015013)</h3>
-              <span class="fs-ms-hp-badge">15 HP</span>
+            <div class="fs-ms-card-specs">
+              <div>
+                <b>Max ΔP</b>
+                <span>
+                  <span class="metric">{{ $model['dpMetric'] }} <small>kPag</small></span>
+                  <span class="fs-ms-divider">|</span>
+                  <span class="imperial">{{ $model['dpImperial'] }} <small>psig</small></span>
+                </span>
+              </div>
             </div>
-          </div>
-
-          <div class="fs-ms-pressure-control">
-            <div class="fs-ms-pressure-row">
-              <label for="fsPressure1">Inlet pressure</label>
-            </div>
-            <select id="fsPressure1" class="fs-pressure-select" data-card="1">
-              <option value="0">5 psi | 34 kPa</option>
-              <option value="1">10 psi | 69 kPa</option>
-              <option value="2">20 psi | 138 kPa</option>
-              <option value="3">30 psi | 207 kPa</option>
-              <option value="4" selected>50 psi | 345 kPa</option>
-            </select>
-          </div>
-
-          <div class="fs-ms-primary-reading">
-            <span class="fs-ms-reading-label">Gas Capacity</span>
-            <div class="fs-ms-reading-value" id="fsGasReading1"></div>
-          </div>
-
-          <div class="fs-ms-card-specs">
-            <div>
-              <b>Max ΔP</b>
-              <span>
-                <span class="metric">2586 <small>kPag</small></span>
-                <span class="imperial">375 <small>psig</small></span>
-              </span>
-            </div>
-          </div>
-        </article>
-
-        <article class="fs-ms-model-card" data-card-index="2">
-          <div class="fs-ms-card-top">
-            <span class="fs-ms-family">CompressionCommander™</span>
-            <div class="fs-ms-model-line">
-              <h3>CC1035 (050035)</h3>
-              <span class="fs-ms-hp-badge">50 HP</span>
-            </div>
-          </div>
-
-          <div class="fs-ms-pressure-control">
-            <div class="fs-ms-pressure-row">
-              <label for="fsPressure2">Inlet pressure</label>
-            </div>
-            <select id="fsPressure2" class="fs-pressure-select" data-card="2">
-              <option value="0">5 psi | 34 kPa</option>
-              <option value="1">10 psi | 69 kPa</option>
-              <option value="2">20 psi | 138 kPa</option>
-              <option value="3">30 psi | 207 kPa</option>
-              <option value="4" selected>50 psi | 345 kPa</option>
-            </select>
-          </div>
-
-          <div class="fs-ms-primary-reading">
-            <span class="fs-ms-reading-label">Gas Capacity</span>
-            <div class="fs-ms-reading-value" id="fsGasReading2"></div>
-          </div>
-
-          <div class="fs-ms-card-specs">
-            <div>
-              <b>Max ΔP</b>
-              <span>
-                <span class="metric">1724 <small>kPag</small></span>
-                <span class="imperial">250 <small>psig</small></span>
-              </span>
-            </div>
-          </div>
-        </article>
-
-        <article class="fs-ms-model-card" data-card-index="3">
-          <div class="fs-ms-card-top">
-            <span class="fs-ms-family">CompressionCommander™</span>
-            <div class="fs-ms-model-line">
-              <h3>CC1235 (050035)</h3>
-              <span class="fs-ms-hp-badge">50 HP</span>
-            </div>
-          </div>
-
-          <div class="fs-ms-pressure-control">
-            <div class="fs-ms-pressure-row">
-              <label for="fsPressure3">Inlet pressure</label>
-            </div>
-            <select id="fsPressure3" class="fs-pressure-select" data-card="3">
-              <option value="0">5 psi | 34 kPa</option>
-              <option value="1">10 psi | 69 kPa</option>
-              <option value="2">20 psi | 138 kPa</option>
-              <option value="3">30 psi | 207 kPa</option>
-              <option value="4" selected>50 psi | 345 kPa</option>
-            </select>
-          </div>
-
-          <div class="fs-ms-primary-reading">
-            <span class="fs-ms-reading-label">Gas Capacity</span>
-            <div class="fs-ms-reading-value" id="fsGasReading3"></div>
-          </div>
-
-          <div class="fs-ms-card-specs">
-            <div>
-              <b>Max ΔP</b>
-              <span>
-                <span class="metric">1034 <small>kPag</small></span>
-                <span class="imperial">150 <small>psig</small></span>
-              </span>
-            </div>
-          </div>
-        </article>
-
-        <article class="fs-ms-model-card" data-card-index="4">
-          <div class="fs-ms-card-top">
-            <span class="fs-ms-family">CompressionCommander™</span>
-            <div class="fs-ms-model-line">
-              <h3>CC1245 (050035)</h3>
-              <span class="fs-ms-hp-badge">50 HP</span>
-            </div>
-          </div>
-
-          <div class="fs-ms-pressure-control">
-            <div class="fs-ms-pressure-row">
-              <label for="fsPressure4">Inlet pressure</label>
-            </div>
-            <select id="fsPressure4" class="fs-pressure-select" data-card="4">
-              <option value="0">5 psi | 34 kPa</option>
-              <option value="1">10 psi | 69 kPa</option>
-              <option value="2">20 psi | 138 kPa</option>
-              <option value="3">30 psi | 207 kPa</option>
-              <option value="4" selected>50 psi | 345 kPa</option>
-            </select>
-          </div>
-
-          <div class="fs-ms-primary-reading">
-            <span class="fs-ms-reading-label">Gas Capacity</span>
-            <div class="fs-ms-reading-value" id="fsGasReading4"></div>
-          </div>
-
-          <div class="fs-ms-card-specs">
-            <div>
-              <b>Max ΔP</b>
-              <span>
-                <span class="metric">1896 <small>kPag</small></span>
-                <span class="imperial">275 <small>psig</small></span>
-              </span>
-            </div>
-          </div>
-        </article>
-
-        <article class="fs-ms-model-card" data-card-index="5">
-          <div class="fs-ms-card-top">
-            <span class="fs-ms-family">CompressionCommander™</span>
-            <div class="fs-ms-model-line">
-              <h3>CC1245 (100060)</h3>
-              <span class="fs-ms-hp-badge">100 HP</span>
-            </div>
-          </div>
-
-          <div class="fs-ms-pressure-control">
-            <div class="fs-ms-pressure-row">
-              <label for="fsPressure5">Inlet pressure</label>
-            </div>
-            <select id="fsPressure5" class="fs-pressure-select" data-card="5">
-              <option value="0">5 psi | 34 kPa</option>
-              <option value="1">10 psi | 69 kPa</option>
-              <option value="2">20 psi | 138 kPa</option>
-              <option value="3">30 psi | 207 kPa</option>
-              <option value="4" selected>50 psi | 345 kPa</option>
-            </select>
-          </div>
-
-          <div class="fs-ms-primary-reading">
-            <span class="fs-ms-reading-label">Gas Capacity</span>
-            <div class="fs-ms-reading-value" id="fsGasReading5"></div>
-          </div>
-
-          <div class="fs-ms-card-specs">
-            <div>
-              <b>Max ΔP</b>
-              <span>
-                <span class="metric">1896 <small>kPag</small></span>
-                <span class="imperial">275 <small>psig</small></span>
-              </span>
-            </div>
-          </div>
-        </article>
-
-        <article class="fs-ms-model-card" data-card-index="6">
-          <div class="fs-ms-card-top">
-            <span class="fs-ms-family">CompressionCommander™</span>
-            <div class="fs-ms-model-line">
-              <h3>CC1645 (100060)</h3>
-              <span class="fs-ms-hp-badge">100 HP</span>
-            </div>
-          </div>
-
-          <div class="fs-ms-pressure-control">
-            <div class="fs-ms-pressure-row">
-              <label for="fsPressure6">Inlet pressure</label>
-            </div>
-            <select id="fsPressure6" class="fs-pressure-select" data-card="6">
-              <option value="0">5 psi | 34 kPa</option>
-              <option value="1">10 psi | 69 kPa</option>
-              <option value="2">20 psi | 138 kPa</option>
-              <option value="3">30 psi | 207 kPa</option>
-              <option value="4" selected>50 psi | 345 kPa</option>
-            </select>
-          </div>
-
-          <div class="fs-ms-primary-reading">
-            <span class="fs-ms-reading-label">Gas Capacity</span>
-            <div class="fs-ms-reading-value" id="fsGasReading6"></div>
-          </div>
-
-          <div class="fs-ms-card-specs">
-            <div>
-              <b>Max ΔP</b>
-              <span>
-                <span class="metric">1034 <small>kPag</small></span>
-                <span class="imperial">150 <small>psig</small></span>
-              </span>
-            </div>
-          </div>
-        </article>
-
-        <article class="fs-ms-model-card" data-card-index="7">
-          <div class="fs-ms-card-top">
-            <span class="fs-ms-family">CompressionCommander™</span>
-            <div class="fs-ms-model-line">
-              <h3>CC2270 (100128)</h3>
-              <span class="fs-ms-hp-badge">100 HP</span>
-            </div>
-          </div>
-
-          <div class="fs-ms-pressure-control">
-            <div class="fs-ms-pressure-row">
-              <label for="fsPressure7">Inlet pressure</label>
-            </div>
-            <select id="fsPressure7" class="fs-pressure-select" data-card="7">
-              <option value="0">5 psi | 34 kPa</option>
-              <option value="1">10 psi | 69 kPa</option>
-              <option value="2">20 psi | 138 kPa</option>
-              <option value="3">30 psi | 207 kPa</option>
-              <option value="4" selected>50 psi | 345 kPa</option>
-            </select>
-          </div>
-
-          <div class="fs-ms-primary-reading">
-            <span class="fs-ms-reading-label">Gas Capacity</span>
-            <div class="fs-ms-reading-value" id="fsGasReading7"></div>
-          </div>
-
-          <div class="fs-ms-card-specs">
-            <div>
-              <b>Max ΔP</b>
-              <span>
-                <span class="metric">1551 <small>kPag</small></span>
-                <span class="imperial">225 <small>psig</small></span>
-              </span>
-            </div>
-          </div>
-        </article>
-
-        <article class="fs-ms-model-card" data-card-index="8">
-          <div class="fs-ms-card-top">
-            <span class="fs-ms-family">CompressionCommander™</span>
-            <div class="fs-ms-model-line">
-              <h3>CC2270 (150128)</h3>
-              <span class="fs-ms-hp-badge">150 HP</span>
-            </div>
-          </div>
-
-          <div class="fs-ms-pressure-control">
-            <div class="fs-ms-pressure-row">
-              <label for="fsPressure8">Inlet pressure</label>
-            </div>
-            <select id="fsPressure8" class="fs-pressure-select" data-card="8">
-              <option value="0">5 psi | 34 kPa</option>
-              <option value="1">10 psi | 69 kPa</option>
-              <option value="2">20 psi | 138 kPa</option>
-              <option value="3">30 psi | 207 kPa</option>
-              <option value="4" selected>50 psi | 345 kPa</option>
-            </select>
-          </div>
-
-          <div class="fs-ms-primary-reading">
-            <span class="fs-ms-reading-label">Gas Capacity</span>
-            <div class="fs-ms-reading-value" id="fsGasReading8"></div>
-          </div>
-
-          <div class="fs-ms-card-specs">
-            <div>
-              <b>Max ΔP</b>
-              <span>
-                <span class="metric">1551 <small>kPag</small></span>
-                <span class="imperial">225 <small>psig</small></span>
-              </span>
-            </div>
-          </div>
-        </article>
+          </article>
+        @endforeach
       </div>
-
-      <style>
-        .fs-ms-sizing-notes ol {
-          list-style-type: decimal !important;
-          padding-left: 24px;
-        }
-
-        .fs-ms-sizing-notes ol li::before {
-          content: none !important;
-        }
-      </style>
 
       <div class="fs-ms-sizing-notes">
         <strong>Engineering notes</strong>
+
         <ol>
           <li>
             Flow conditions calculated at 15℃ [59℉] inlet pressure and with various components operating at
@@ -3080,10 +2860,12 @@
             Max gas rates will be reduced by amount of liquids in total fluid. Contact Fluidstream for gas
             capacity review based on specific liquid rates and operating conditions.
           </li>
+
           <li>
             Max gas rates and max pressure differentials can be increased by configuring additional unit(s)
             in parallel or in series.
           </li>
+
           <li>
             Higher horsepower units will yield much higher fluid flow rates at various pressure differentials.
             Please request pump curves to see flow rates at various pressure differentials.
@@ -3094,105 +2876,62 @@
 
     <script>
       (function () {
-        const gasData = [
-          [
-            '<span class="metric">1.0 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">35 <small>MCF/day</small></span>',
-            '<span class="metric">1.3 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">46 <small>MCF/day</small></span>',
-            '<span class="metric">1.8 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">64 <small>MCF/day</small></span>',
-            '<span class="metric">2.3 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">81 <small>MCF/day</small></span>',
-            '<span class="metric">3.4 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">120 <small>MCF/day</small></span>'
-          ],
-          [
-            '<span class="metric">0.6 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">21 <small>MCF/day</small></span>',
-            '<span class="metric">0.7 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">25 <small>MCF/day</small></span>',
-            '<span class="metric">1.0 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">35 <small>MCF/day</small></span>',
-            '<span class="metric">1.3 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">46 <small>MCF/day</small></span>',
-            '<span class="metric">1.9 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">67 <small>MCF/day</small></span>'
-          ],
-          [
-            '<span class="metric">1.5 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">53 <small>MCF/day</small></span>',
-            '<span class="metric">2.6 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">92 <small>MCF/day</small></span>',
-            '<span class="metric">3.6 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">127 <small>MCF/day</small></span>',
-            '<span class="metric">4.6 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">162 <small>MCF/day</small></span>',
-            '<span class="metric">6.7 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">237 <small>MCF/day</small></span>'
-          ],
-          [
-            '<span class="metric">3.0 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">106 <small>MCF/day</small></span>',
-            '<span class="metric">3.8 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">134 <small>MCF/day</small></span>',
-            '<span class="metric">5.3 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">187 <small>MCF/day</small></span>',
-            '<span class="metric">6.8 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">240 <small>MCF/day</small></span>',
-            '<span class="metric">9.9 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">350 <small>MCF/day</small></span>'
-          ],
-          [
-            '<span class="metric">1.8 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">64 <small>MCF/day</small></span>',
-            '<span class="metric">2.2 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">78 <small>MCF/day</small></span>',
-            '<span class="metric">3.1 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">109 <small>MCF/day</small></span>',
-            '<span class="metric">4.0 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">141 <small>MCF/day</small></span>',
-            '<span class="metric">5.9 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">208 <small>MCF/day</small></span>'
-          ],
-          [
-            '<span class="metric">3.1 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">109 <small>MCF/day</small></span>',
-            '<span class="metric">3.9 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">138 <small>MCF/day</small></span>',
-            '<span class="metric">5.5 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">194 <small>MCF/day</small></span>',
-            '<span class="metric">7.1 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">251 <small>MCF/day</small></span>',
-            '<span class="metric">10.3 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">364 <small>MCF/day</small></span>'
-          ],
-          [
-            '<span class="metric">5.7 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">201 <small>MCF/day</small></span>',
-            '<span class="metric">7.1 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">251 <small>MCF/day</small></span>',
-            '<span class="metric">9.9 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">350 <small>MCF/day</small></span>',
-            '<span class="metric">12.8 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">452 <small>MCF/day</small></span>',
-            '<span class="metric">18.5 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">653 <small>MCF/day</small></span>'
-          ],
-          [
-            '<span class="metric">8.9 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">357 <small>MCF/day</small></span>',
-            '<span class="metric">11.1 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">449 <small>MCF/day</small></span>',
-            '<span class="metric">15.6 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">629 <small>MCF/day</small></span>',
-            '<span class="metric">20.1 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">209 <small>MCF/day</small></span>',
-            '<span class="metric">29.1 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">1,169 <small>MCF/day</small></span>'
-          ],
-          [
-            '<span class="metric">8.9 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">357 <small>MCF/day</small></span>',
-            '<span class="metric">11.1 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">449 <small>MCF/day</small></span>',
-            '<span class="metric">15.6 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">629 <small>MCF/day</small></span>',
-            '<span class="metric">20.1 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">209 <small>MCF/day</small></span>',
-            '<span class="metric">29.1 <small>e<sup>3</sup> m<sup>3</sup>/day</small></span><span class="imperial">1,169 <small>MCF/day</small></span>'
-          ]
-        ];
+        const gasData = @json($ccGasData);
+
+        function renderGasReading(reading) {
+          if (!reading) {
+            return '<span class="metric">N/A</span><span class="imperial">N/A</span>';
+          }
+
+          return `
+            <span class="metric">${reading.metric} <small>e<sup>3</sup> m<sup>3</sup>/day</small></span>
+            <span class="imperial">${reading.imperial} <small>MCF/day</small></span>
+          `;
+        }
 
         function updateCard(index, pressureIndex) {
-          const element = document.getElementById('fsGasReading' + index);
+          const element = document.getElementById('fsCcGasReading' + index);
 
           if (!element || !gasData[index]) {
             return;
           }
 
-          element.innerHTML = gasData[index][pressureIndex] || '<span class="empty">—</span>';
+          element.innerHTML = renderGasReading(gasData[index][pressureIndex]);
         }
 
-        document.querySelectorAll('.fs-pressure-select').forEach(function (select) {
-          const cardIndex = Number(select.dataset.card);
-          select.value = '4';
-          updateCard(cardIndex, Number(select.value));
+        function initCompressionCommanderSpecs() {
+          const globalPressure = document.getElementById('fsCcGlobalPressure');
+          const pressureSelects = document.querySelectorAll('.fs-cc-pressure-select');
 
-          select.addEventListener('change', function (event) {
-            updateCard(Number(event.target.dataset.card), Number(event.target.value));
-          });
-        });
+          pressureSelects.forEach(function (select) {
+            const cardIndex = Number(select.dataset.card);
 
-        const globalPressure = document.getElementById('fsGlobalPressure');
+            select.value = '4';
+            updateCard(cardIndex, 4);
 
-        if (globalPressure) {
-          globalPressure.value = '4';
-
-          globalPressure.addEventListener('change', function (event) {
-            const pressureIndex = Number(event.target.value);
-
-            document.querySelectorAll('.fs-pressure-select').forEach(function (select) {
-              select.value = String(pressureIndex);
-              updateCard(Number(select.dataset.card), pressureIndex);
+            select.addEventListener('change', function (event) {
+              updateCard(cardIndex, Number(event.target.value));
             });
           });
+
+          if (globalPressure) {
+            globalPressure.value = '4';
+
+            globalPressure.addEventListener('change', function (event) {
+              const pressureIndex = Number(event.target.value);
+
+              pressureSelects.forEach(function (select) {
+                select.value = String(pressureIndex);
+                updateCard(Number(select.dataset.card), pressureIndex);
+              });
+            });
+          }
+        }
+
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', initCompressionCommanderSpecs);
+        } else {
+          initCompressionCommanderSpecs();
         }
       })();
     </script>
