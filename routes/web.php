@@ -18,6 +18,15 @@ Route::get('/search', [SearchController::class, 'index'])->name('search');
 
 /*
 |--------------------------------------------------------------------------
+| Old Website 301 Redirects
+|--------------------------------------------------------------------------
+*/
+
+Route::permanentRedirect('/contact-us', '/contact');
+Route::permanentRedirect('/solutions', '/technology');
+Route::permanentRedirect('/company', '/about-us');
+/*
+|--------------------------------------------------------------------------
 | Main Pages
 |--------------------------------------------------------------------------
 */
