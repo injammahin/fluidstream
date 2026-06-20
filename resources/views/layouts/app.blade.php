@@ -68,6 +68,12 @@
                 'keywords' => 'Fluidstream technology, multiphase compression technology, liquid-aware compression, vapor recovery technology, casing gas compression technology',
                 'type' => 'webpage',
             ],
+            'patents' => [
+                'title' => 'Patented Multiphase Compression Technology',
+                'description' => 'Review Fluidstream patented technology supporting liquid-aware compression behavior, multiphase operation, vapor recovery, and casing gas applications.',
+                'keywords' => 'patented compression technology, Fluidstream patents, US11098709B2, multiphase compression patent',
+                'type' => 'webpage',
+            ],
             'patented-technology' => [
                 'title' => 'Patented Multiphase Compression Technology',
                 'description' => 'Review Fluidstream patented technology supporting liquid-aware compression behavior, multiphase operation, vapor recovery, and casing gas applications.',
@@ -603,8 +609,8 @@
 
     @if ($faqSchema)
         <script type="application/ld+json">
-                             {!! json_encode($faqSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
-                            </script>
+                                     {!! json_encode($faqSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+                                    </script>
     @endif
 
     @yield('schema')
@@ -882,7 +888,8 @@
                 return Boolean(
                     media.closest('.fs-home-hero') ||
                     media.closest('.fs-no-protect') ||
-                    media.closest('[data-no-protect="true"]')
+                    media.closest('[data-no-protect="true"]') ||
+                    media.closest('.fs-no-watermark')
                 );
             }
 
@@ -926,6 +933,7 @@
                         element.closest('.fs-home-hero') ||
                         element.classList.contains('fs-home-hero') ||
                         element.classList.contains('fs-no-protect') ||
+                        element.classList.contains('fs-no-watermark') ||
                         element.getAttribute('data-no-protect') === 'true'
                     ) {
                         element.classList.remove('fs-protected-bg');
@@ -992,6 +1000,13 @@
                     return false;
                 }
 
+                if (
+                    target.classList.contains('fs-no-watermark') ||
+                    target.closest('.fs-no-watermark')
+                ) {
+                    return false;
+                }
+
                 const protectedBackground = target.closest('.fs-protected-bg');
 
                 if (!protectedBackground) {
@@ -1001,12 +1016,6 @@
                 if (isTextOrInteractiveTarget(target)) {
                     return false;
                 }
-                if (
-    media.classList.contains('fs-no-watermark') ||
-    media.closest('.fs-no-watermark')
-) {
-    return;
-}
 
                 return true;
             }
