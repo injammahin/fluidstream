@@ -11,6 +11,8 @@
         $companyEmail = config('services.company.email', 'info@fluidstream.co');
         $companyPhone = config('services.company.phone');
         $companyAddress = config('services.company.address', '4416 5 St NE, Unit 1A, Calgary, AB T2E 7C3, Canada');
+        $gaMeasurementId = config('services.ga4.id', 'G-5V5VBEPKEW');
+        $gtmId = config('services.gtm.id');
 
         $seoPages = [
             '/' => [
@@ -521,19 +523,8 @@
             });
         })();
     </script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5V5VBEPKEW"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
 
-        window.gtag = window.gtag || function () {
-            window.dataLayer.push(arguments);
-        };
-
-        window.gtag('js', new Date());
-        window.gtag('config', 'G-5V5VBEPKEW');
-    </script>
-    @if(config('services.gtm.id'))
+    @if(!empty($gtmId))
         <!-- Google Tag Manager -->
         <script>
             (function (w, d, s, l, i) {
@@ -545,14 +536,27 @@
 
                 var f = d.getElementsByTagName(s)[0],
                     j = d.createElement(s),
-                    dl = l != 'dataLayer' ? '&l=' + l : '';
+                    dl = l !== 'dataLayer' ? '&l=' + l : '';
 
                 j.async = true;
                 j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
                 f.parentNode.insertBefore(j, f);
-            })(window, document, 'script', 'dataLayer', '{{ config('services.gtm.id') }}');
+            })(window, document, 'script', 'dataLayer', '{{ $gtmId }}');
         </script>
         <!-- End Google Tag Manager -->
+    @elseif(!empty($gaMeasurementId))
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id={{ $gaMeasurementId }}"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            window.gtag = window.gtag || function () {
+                window.dataLayer.push(arguments);
+            };
+
+            window.gtag('js', new Date());
+            window.gtag('config', '{{ $gaMeasurementId }}');
+        </script>
     @endif
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -574,8 +578,8 @@
     <meta name="twitter:description" content="{{ $metaDescription }}">
     <meta name="twitter:image" content="{{ $ogImage }}">
 
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('img/favicon.jpeg') }}?v=6">
-    <link rel="shortcut icon" type="image/png" href="{{ asset('img/favicon.jpeg') }}?v=6">
+    <link rel="icon" type="image/jpeg" sizes="32x32" href="{{ asset('img/favicon.jpeg') }}?v=6">
+    <link rel="shortcut icon" type="image/jpeg" href="{{ asset('img/favicon.jpeg') }}?v=6">
     <link rel="apple-touch-icon" href="{{ asset('img/apple-touch-icon.png') }}?v=6">
 
     @stack('preload')
@@ -589,27 +593,27 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <script type="application/ld+json">
-    {!! json_encode($organizationSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+    {!! json_encode($organizationSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
     </script>
     <script type="application/ld+json">
-    {!! json_encode($localBusinessSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
-    </script>
-
-    <script type="application/ld+json">
-    {!! json_encode($websiteSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+    {!! json_encode($localBusinessSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
     </script>
 
     <script type="application/ld+json">
-    {!! json_encode($breadcrumbSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+    {!! json_encode($websiteSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
     </script>
 
     <script type="application/ld+json">
-    {!! json_encode($pageSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+    {!! json_encode($breadcrumbSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
+    </script>
+
+    <script type="application/ld+json">
+    {!! json_encode($pageSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
     </script>
 
     @if ($faqSchema)
         <script type="application/ld+json">
-                                     {!! json_encode($faqSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+                                     {!! json_encode($faqSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
                                     </script>
     @endif
 
@@ -670,24 +674,14 @@
             }
         }
 
-        img,
-        video,
-        canvas,
-        svg,
-        picture,
-        .fs-protected-media,
-        .fs-protected-bg {
+        picture {
             max-width: 100%;
-            -webkit-user-drag: none !important;
-            user-drag: none !important;
-            -webkit-user-select: none !important;
-            user-select: none !important;
-            -webkit-touch-callout: none !important;
         }
 
         img,
         video {
-            pointer-events: auto;
+            -webkit-user-drag: none;
+            user-drag: none;
         }
 
         video::-webkit-media-controls-download-button {
@@ -796,10 +790,10 @@
 </head>
 
 <body class="bg-white text-slate-900 antialiased">
-    @if(config('services.gtm.id'))
+    @if(!empty($gtmId))
         <!-- Google Tag Manager noscript -->
         <noscript>
-            <iframe src="https://www.googletagmanager.com/ns.html?id={{ config('services.gtm.id') }}" height="0" width="0"
+            <iframe src="https://www.googletagmanager.com/ns.html?id={{ $gtmId }}" height="0" width="0"
                 style="display:none;visibility:hidden">
             </iframe>
         </noscript>
@@ -852,12 +846,26 @@
                     img.setAttribute('decoding', 'async');
                 }
 
-                if (!img.hasAttribute('loading')) {
-                    const rect = img.getBoundingClientRect();
-                    const isAboveFold = rect.top < window.innerHeight + 200;
+                if (!img.hasAttribute('draggable')) {
+                    img.setAttribute('draggable', 'false');
+                }
 
-                    if (!isAboveFold) {
-                        img.setAttribute('loading', 'lazy');
+                if (!img.hasAttribute('loading')) {
+                    const parentSection = img.closest('section, header, div');
+                    const parentClass = parentSection ? String(parentSection.className || '').toLowerCase() : '';
+                    const imageClass = String(img.className || '').toLowerCase();
+
+                    const isPriorityImage =
+                        img.closest('.fs-home-hero') ||
+                        img.closest('[data-priority-media="true"]') ||
+                        parentClass.includes('hero') ||
+                        imageClass.includes('hero') ||
+                        img.getAttribute('fetchpriority') === 'high';
+
+                    img.setAttribute('loading', isPriorityImage ? 'eager' : 'lazy');
+
+                    if (isPriorityImage && !img.hasAttribute('fetchpriority')) {
+                        img.setAttribute('fetchpriority', 'high');
                     }
                 }
             });
@@ -874,219 +882,12 @@
                 }
 
                 video.setAttribute('playsinline', '');
+
+                if (!video.hasAttribute('controlsList')) {
+                    video.setAttribute('controlsList', 'nodownload');
+                }
             });
-        });
-    </script>
 
-    <script>
-        (function () {
-            function shouldSkipMediaProtection(media) {
-                if (!media) {
-                    return false;
-                }
-
-                return Boolean(
-                    media.closest('.fs-home-hero') ||
-                    media.closest('.fs-no-protect') ||
-                    media.closest('[data-no-protect="true"]') ||
-                    media.closest('.fs-no-watermark')
-                );
-            }
-
-            function protectMediaElements() {
-                document.querySelectorAll('img, video, picture, canvas, svg').forEach(function (media) {
-                    if (shouldSkipMediaProtection(media)) {
-                        media.classList.remove('fs-protected-media');
-                        return;
-                    }
-
-                    media.setAttribute('draggable', 'false');
-                    media.setAttribute('oncontextmenu', 'return false;');
-                    media.classList.add('fs-protected-media');
-                });
-
-                document.querySelectorAll('video').forEach(function (video) {
-                    if (shouldSkipMediaProtection(video)) {
-                        return;
-                    }
-
-                    video.setAttribute('controlsList', 'nodownload noplaybackrate noremoteplayback');
-                    video.setAttribute('disablePictureInPicture', '');
-                    video.setAttribute('disableRemotePlayback', '');
-                    video.setAttribute('playsinline', '');
-
-                    if (!video.hasAttribute('preload')) {
-                        video.setAttribute('preload', 'metadata');
-                    }
-
-                    video.oncontextmenu = function () {
-                        return false;
-                    };
-                });
-            }
-
-            function autoMarkHeroBackgrounds() {
-                document.querySelectorAll('section, div, header, main').forEach(function (element) {
-                    const className = String(element.className || '');
-
-                    if (
-                        element.closest('.fs-home-hero') ||
-                        element.classList.contains('fs-home-hero') ||
-                        element.classList.contains('fs-no-protect') ||
-                        element.classList.contains('fs-no-watermark') ||
-                        element.getAttribute('data-no-protect') === 'true'
-                    ) {
-                        element.classList.remove('fs-protected-bg');
-                        return;
-                    }
-
-                    const hasHeroClass = className.toLowerCase().includes('hero');
-
-                    if (!hasHeroClass) {
-                        return;
-                    }
-
-                    const backgroundImage = window.getComputedStyle(element).backgroundImage;
-
-                    if (backgroundImage && backgroundImage !== 'none') {
-                        element.classList.add('fs-protected-bg');
-                    }
-                });
-            }
-
-            function isDirectMediaTarget(target) {
-                if (!target || shouldSkipMediaProtection(target)) {
-                    return false;
-                }
-
-                return Boolean(
-                    target.closest('img') ||
-                    target.closest('video') ||
-                    target.closest('picture') ||
-                    target.closest('canvas') ||
-                    target.closest('svg') ||
-                    target.closest('.fs-protected-media')
-                );
-            }
-
-            function isTextOrInteractiveTarget(target) {
-                if (!target) {
-                    return false;
-                }
-
-                return Boolean(
-                    target.closest('a') ||
-                    target.closest('button') ||
-                    target.closest('input') ||
-                    target.closest('textarea') ||
-                    target.closest('select') ||
-                    target.closest('label') ||
-                    target.closest('h1') ||
-                    target.closest('h2') ||
-                    target.closest('h3') ||
-                    target.closest('h4') ||
-                    target.closest('h5') ||
-                    target.closest('h6') ||
-                    target.closest('p') ||
-                    target.closest('span') ||
-                    target.closest('strong') ||
-                    target.closest('small') ||
-                    target.closest('li')
-                );
-            }
-
-            function isProtectedBackgroundTarget(target) {
-                if (!target || shouldSkipMediaProtection(target)) {
-                    return false;
-                }
-
-                if (
-                    target.classList.contains('fs-no-watermark') ||
-                    target.closest('.fs-no-watermark')
-                ) {
-                    return false;
-                }
-
-                const protectedBackground = target.closest('.fs-protected-bg');
-
-                if (!protectedBackground) {
-                    return false;
-                }
-
-                if (isTextOrInteractiveTarget(target)) {
-                    return false;
-                }
-
-                return true;
-            }
-
-            function isProtectedTarget(target) {
-                return isDirectMediaTarget(target) || isProtectedBackgroundTarget(target);
-            }
-
-            document.addEventListener('DOMContentLoaded', function () {
-                protectMediaElements();
-                autoMarkHeroBackgrounds();
-
-                document.addEventListener('contextmenu', function (event) {
-                    if (isProtectedTarget(event.target)) {
-                        event.preventDefault();
-                        return false;
-                    }
-                }, true);
-
-                document.addEventListener('dragstart', function (event) {
-                    if (isProtectedTarget(event.target)) {
-                        event.preventDefault();
-                        return false;
-                    }
-                }, true);
-
-                document.addEventListener('selectstart', function (event) {
-                    if (isDirectMediaTarget(event.target) || isProtectedBackgroundTarget(event.target)) {
-                        event.preventDefault();
-                        return false;
-                    }
-                }, true);
-
-                document.addEventListener('copy', function (event) {
-                    if (isDirectMediaTarget(event.target)) {
-                        event.preventDefault();
-                        return false;
-                    }
-                }, true);
-
-                document.addEventListener('keydown', function (event) {
-                    const key = event.key.toLowerCase();
-
-                    const blocked =
-                        event.key === 'F12' ||
-                        (event.ctrlKey && event.shiftKey && ['i', 'j', 'c'].includes(key)) ||
-                        (event.metaKey && event.altKey && ['i', 'j', 'c'].includes(key)) ||
-                        (event.ctrlKey && ['u', 's'].includes(key)) ||
-                        (event.metaKey && ['u', 's'].includes(key));
-
-                    if (blocked) {
-                        event.preventDefault();
-                        return false;
-                    }
-                }, true);
-
-                const observer = new MutationObserver(function () {
-                    protectMediaElements();
-                    autoMarkHeroBackgrounds();
-                });
-
-                observer.observe(document.body, {
-                    childList: true,
-                    subtree: true
-                });
-            });
-        })();
-    </script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
             document.querySelectorAll('[data-track-cta]').forEach(function (element) {
                 element.addEventListener('click', function () {
                     window.dataLayer = window.dataLayer || [];
@@ -1094,17 +895,13 @@
                     window.dataLayer.push({
                         event: 'cta_click',
                         cta_name: this.getAttribute('data-track-cta'),
-                        cta_text: this.innerText.trim(),
+                        cta_text: this.innerText ? this.innerText.trim() : '',
                         cta_url: this.href || null,
                         page_path: window.location.pathname
                     });
-                });
+                }, { passive: true });
             });
-        });
-    </script>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
             const banner = document.getElementById('fsCookieBanner');
             const acceptBtn = document.getElementById('fsAcceptCookies');
             const declineBtn = document.getElementById('fsDeclineCookies');
@@ -1140,6 +937,7 @@
                 }
 
                 window.dataLayer = window.dataLayer || [];
+
                 window.dataLayer.push({
                     event: 'cookie_consent_update',
                     consent_status: status
@@ -1150,7 +948,7 @@
                 try {
                     localStorage.setItem('fs_cookie_consent', status);
                 } catch (error) {
-                    // localStorage may be disabled. Consent update still runs for current page.
+                    // localStorage may be disabled. Consent update still runs for the current page.
                 }
 
                 updateGoogleConsent(status);

@@ -57,8 +57,8 @@
         }
 
         /* ================================
-                                                                                                                                                                   HERO WITH BACKGROUND IMAGE
-                                                                                                                                                                ================================ */
+                                                                                                                                                                       HERO WITH BACKGROUND IMAGE
+                                                                                                                                                                    ================================ */
 
         .patent-page .hero {
             position: relative;
@@ -81,7 +81,7 @@
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
-            transform: scaleX(-1) scale(1.04);
+            /* transform: scaleX(-1) scale(1.04); */
             transform-origin: center;
         }
 
@@ -237,17 +237,17 @@
         }
 
         /* .patent-page .metric::after {
-                                                                                            content: "";
-                                                                                            position: absolute;
-                                                                                            left: 0;
-                                                                                            right: 0;
-                                                                                            top: 0;
-                                                                                            height: 3px;
-                                                                                            background: var(--fs-cyan);
-                                                                                            transform: scaleX(0);
-                                                                                            transform-origin: left;
-                                                                                            transition: transform .25s cubic-bezier(.22, .61, .36, 1);
-                                                                                        } */
+                                                                                                content: "";
+                                                                                                position: absolute;
+                                                                                                left: 0;
+                                                                                                right: 0;
+                                                                                                top: 0;
+                                                                                                height: 3px;
+                                                                                                background: var(--fs-cyan);
+                                                                                                transform: scaleX(0);
+                                                                                                transform-origin: left;
+                                                                                                transition: transform .25s cubic-bezier(.22, .61, .36, 1);
+                                                                                            } */
 
         .patent-page .metric:hover {
             transform: translateY(-4px);
@@ -402,8 +402,8 @@
         }
 
         /* ================================
-                                                                                                                                                                   COMMON SECTION STYLES
-                                                                                                                                                                ================================ */
+                                                                                                                                                                       COMMON SECTION STYLES
+                                                                                                                                                                    ================================ */
 
         .patent-page .section-head {
             /* display: flex; */
@@ -813,8 +813,8 @@
         }
 
         /* ================================
-                                                                                                                                                                   RESPONSIVE
-                                                                                                                                                                ================================ */
+                                                                                                                                                                       RESPONSIVE
+                                                                                                                                                                    ================================ */
 
         @media (max-width: 1120px) {
             .patent-page .hero {
@@ -902,13 +902,13 @@
             }
 
             /* .patent-page .section {
-                                                                padding: 54px 0;
-                                                            } */
+                                                                    padding: 54px 0;
+                                                                } */
 
             /* .patent-page .hero .inner {
-                                            padding-top: 58px;
-                                            padding-bottom: 48px;
-                                        } */
+                                                padding-top: 58px;
+                                                padding-bottom: 48px;
+                                            } */
 
             .patent-page h1 {
                 font-size: 38px;
