@@ -35,7 +35,7 @@
                         <td style="padding:30px 32px;">
 
                             {{-- Submitted Time --}}
-                            <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:24px;">
+                            {{-- <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:24px;">
                                 <tr>
                                     <td style="background:#f7f9ff; border-left:4px solid #0018dc; border-radius:12px; padding:16px 18px;">
                                         <p style="margin:0; color:#64748b; font-size:13px; font-weight:700;">
@@ -46,7 +46,7 @@
                                         </p>
                                     </td>
                                 </tr>
-                            </table>
+                            </table> --}}
 
                             {{-- Contact Information --}}
                             <h2 style="margin:0 0 14px; color:#07111f; font-size:20px; line-height:1.3;">

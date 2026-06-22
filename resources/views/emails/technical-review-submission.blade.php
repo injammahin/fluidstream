@@ -32,7 +32,7 @@
 
                     <tr>
                         <td style="padding:28px 34px;">
-                            <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:24px;">
+                            {{-- <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:24px;">
                                 <tr>
                                     <td
                                         style="background:#f7f9ff; border:1px solid #cbd7ff; border-radius:16px; padding:18px 20px;">
@@ -45,7 +45,7 @@
                                         </p>
                                     </td>
                                 </tr>
-                            </table>
+                            </table> --}}
 
                             <h2 style="margin:0 0 14px; color:#07111f; font-size:22px;">Contact Information</h2>
 
@@ -56,14 +56,16 @@
                                         style="width:35%; padding:13px 14px; background:#f8fafc; border:1px solid #e5eaf2; font-weight:800;">
                                         Name</td>
                                     <td style="padding:13px 14px; border:1px solid #e5eaf2;">
-                                        {{ $payload['contact']['name'] }}</td>
+                                        {{ $payload['contact']['name'] }}
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td
                                         style="padding:13px 14px; background:#f8fafc; border:1px solid #e5eaf2; font-weight:800;">
                                         Company</td>
                                     <td style="padding:13px 14px; border:1px solid #e5eaf2;">
-                                        {{ $payload['contact']['company'] ?: 'Not provided' }}</td>
+                                        {{ $payload['contact']['company'] ?: 'Not provided' }}
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td
@@ -81,14 +83,16 @@
                                         style="padding:13px 14px; background:#f8fafc; border:1px solid #e5eaf2; font-weight:800;">
                                         Phone</td>
                                     <td style="padding:13px 14px; border:1px solid #e5eaf2;">
-                                        {{ $payload['contact']['phone'] ?: 'Not provided' }}</td>
+                                        {{ $payload['contact']['phone'] ?: 'Not provided' }}
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td
                                         style="padding:13px 14px; background:#f8fafc; border:1px solid #e5eaf2; font-weight:800;">
                                         Country / Region</td>
                                     <td style="padding:13px 14px; border:1px solid #e5eaf2;">
-                                        {{ $payload['contact']['country'] ?: 'Not provided' }}</td>
+                                        {{ $payload['contact']['country'] ?: 'Not provided' }}
+                                    </td>
                                 </tr>
                             </table>
 
@@ -101,63 +105,72 @@
                                         style="width:35%; padding:13px 14px; background:#f8fafc; border:1px solid #e5eaf2; font-weight:800;">
                                         Application Type</td>
                                     <td style="padding:13px 14px; border:1px solid #e5eaf2;">
-                                        {{ $payload['application']['type'] ?: 'Not provided' }}</td>
+                                        {{ $payload['application']['type'] ?: 'Not provided' }}
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td
                                         style="padding:13px 14px; background:#f8fafc; border:1px solid #e5eaf2; font-weight:800;">
                                         Suction Pressure</td>
                                     <td style="padding:13px 14px; border:1px solid #e5eaf2;">
-                                        {{ $payload['application']['suction_pressure'] }}</td>
+                                        {{ $payload['application']['suction_pressure'] }}
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td
                                         style="padding:13px 14px; background:#f8fafc; border:1px solid #e5eaf2; font-weight:800;">
                                         Discharge Pressure</td>
                                     <td style="padding:13px 14px; border:1px solid #e5eaf2;">
-                                        {{ $payload['application']['discharge_pressure'] }}</td>
+                                        {{ $payload['application']['discharge_pressure'] }}
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td
                                         style="padding:13px 14px; background:#f8fafc; border:1px solid #e5eaf2; font-weight:800;">
                                         Estimated Gas Rate</td>
                                     <td style="padding:13px 14px; border:1px solid #e5eaf2;">
-                                        {{ $payload['application']['gas_rate'] }}</td>
+                                        {{ $payload['application']['gas_rate'] }}
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td
                                         style="padding:13px 14px; background:#f8fafc; border:1px solid #e5eaf2; font-weight:800;">
                                         Estimated Total Liquid Rate</td>
                                     <td style="padding:13px 14px; border:1px solid #e5eaf2;">
-                                        {{ $payload['application']['liquid_rate'] }}</td>
+                                        {{ $payload['application']['liquid_rate'] }}
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td
                                         style="padding:13px 14px; background:#f8fafc; border:1px solid #e5eaf2; font-weight:800;">
                                         H₂S Content</td>
                                     <td style="padding:13px 14px; border:1px solid #e5eaf2;">
-                                        {{ $payload['application']['h2s_content'] }}</td>
+                                        {{ $payload['application']['h2s_content'] }}
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td
                                         style="padding:13px 14px; background:#f8fafc; border:1px solid #e5eaf2; font-weight:800;">
                                         Sand or Solids Present</td>
                                     <td style="padding:13px 14px; border:1px solid #e5eaf2;">
-                                        {{ $payload['application']['sand_or_solids'] }}</td>
+                                        {{ $payload['application']['sand_or_solids'] }}
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td
                                         style="padding:13px 14px; background:#f8fafc; border:1px solid #e5eaf2; font-weight:800;">
                                         Operating Temperature / Winter Conditions</td>
                                     <td style="padding:13px 14px; border:1px solid #e5eaf2;">
-                                        {{ $payload['application']['temperature'] ?: 'Not provided' }}</td>
+                                        {{ $payload['application']['temperature'] ?: 'Not provided' }}
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td
                                         style="padding:13px 14px; background:#f8fafc; border:1px solid #e5eaf2; font-weight:800;">
                                         Existing Equipment</td>
                                     <td style="padding:13px 14px; border:1px solid #e5eaf2;">
-                                        {{ $payload['application']['equipment'] ?: 'Not provided' }}</td>
+                                        {{ $payload['application']['equipment'] ?: 'Not provided' }}
+                                    </td>
                                 </tr>
                             </table>
 
@@ -168,7 +181,8 @@
                                 style="border:1px solid #dfe5ef; background:#f8fafc; border-radius:16px; padding:18px 20px; margin-bottom:26px;">
                                 <p
                                     style="margin:0; color:#344154; font-size:15px; line-height:1.75; white-space:pre-line;">
-                                    {{ $payload['application']['notes'] ?: 'Not provided' }}</p>
+                                    {{ $payload['application']['notes'] ?: 'Not provided' }}
+                                </p>
                             </div>
 
                             <h2 style="margin:0 0 14px; color:#07111f; font-size:22px;">Acknowledgement</h2>
@@ -191,14 +205,16 @@
                                         style="width:35%; padding:13px 14px; background:#f8fafc; border:1px solid #e5eaf2; font-weight:800;">
                                         IP Address</td>
                                     <td style="padding:13px 14px; border:1px solid #e5eaf2;">
-                                        {{ $payload['ip_address'] ?: 'Not available' }}</td>
+                                        {{ $payload['ip_address'] ?: 'Not available' }}
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td
                                         style="padding:13px 14px; background:#f8fafc; border:1px solid #e5eaf2; font-weight:800;">
                                         User Agent</td>
                                     <td style="padding:13px 14px; border:1px solid #e5eaf2; word-break:break-word;">
-                                        {{ $payload['user_agent'] ?: 'Not available' }}</td>
+                                        {{ $payload['user_agent'] ?: 'Not available' }}
+                                    </td>
                                 </tr>
                             </table>
                         </td>
