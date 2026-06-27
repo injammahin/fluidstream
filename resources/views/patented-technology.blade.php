@@ -1424,7 +1424,6 @@
                     <div class="protection-card-wrap">
                         <article class="protection-card">
                             <div class="protection-badges">
-                                <span class="step-number">01</span>
                                 <span class="step-label">Step 1</span>
                             </div>
 
@@ -1447,7 +1446,6 @@
                     <div class="protection-card-wrap">
                         <article class="protection-card">
                             <div class="protection-badges">
-                                <span class="step-number">02</span>
                                 <span class="step-label">Step 2</span>
                             </div>
 
@@ -1471,7 +1469,6 @@
                     <div class="protection-card-wrap">
                         <article class="protection-card">
                             <div class="protection-badges">
-                                <span class="step-number">03</span>
                                 <span class="step-label">Step 3</span>
                             </div>
 
@@ -1495,7 +1492,6 @@
                     <div class="protection-card-wrap">
                         <article class="protection-card">
                             <div class="protection-badges">
-                                <span class="step-number">04</span>
                                 <span class="step-label">Step 4</span>
                             </div>
 
@@ -1519,7 +1515,6 @@
                     <div class="protection-card-wrap">
                         <article class="protection-card">
                             <div class="protection-badges">
-                                <span class="step-number">05</span>
                                 <span class="step-label">Step 5</span>
                             </div>
 
