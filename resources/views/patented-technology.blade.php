@@ -57,8 +57,8 @@
         }
 
         /* ================================
-                                                                                                                                                                       HERO WITH BACKGROUND IMAGE
-                                                                                                                                                                    ================================ */
+                                                                                                                                                                                                                                                                           HERO WITH BACKGROUND IMAGE
+                                                                                                                                                                                                                                                                        ================================ */
 
         .patent-page .hero {
             position: relative;
@@ -237,17 +237,17 @@
         }
 
         /* .patent-page .metric::after {
-                                                                                                content: "";
-                                                                                                position: absolute;
-                                                                                                left: 0;
-                                                                                                right: 0;
-                                                                                                top: 0;
-                                                                                                height: 3px;
-                                                                                                background: var(--fs-cyan);
-                                                                                                transform: scaleX(0);
-                                                                                                transform-origin: left;
-                                                                                                transition: transform .25s cubic-bezier(.22, .61, .36, 1);
-                                                                                            } */
+                                                                                                                                                                                                    content: "";
+                                                                                                                                                                                                    position: absolute;
+                                                                                                                                                                                                    left: 0;
+                                                                                                                                                                                                    right: 0;
+                                                                                                                                                                                                    top: 0;
+                                                                                                                                                                                                    height: 3px;
+                                                                                                                                                                                                    background: var(--fs-cyan);
+                                                                                                                                                                                                    transform: scaleX(0);
+                                                                                                                                                                                                    transform-origin: left;
+                                                                                                                                                                                                    transition: transform .25s cubic-bezier(.22, .61, .36, 1);
+                                                                                                                                                                                                } */
 
         .patent-page .metric:hover {
             transform: translateY(-4px);
@@ -402,8 +402,8 @@
         }
 
         /* ================================
-                                                                                                                                                                       COMMON SECTION STYLES
-                                                                                                                                                                    ================================ */
+                                                                                                                                                                                                                                                                           COMMON SECTION STYLES
+                                                                                                                                                                                                                                                                        ================================ */
 
         .patent-page .section-head {
             /* display: flex; */
@@ -633,7 +633,7 @@
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
-            padding: 16px 10px 10px;
+            padding: 16px 16px 16px;
         }
 
         .patent-page .card h3 {
@@ -813,8 +813,8 @@
         }
 
         /* ================================
-                                                                                                                                                                       RESPONSIVE
-                                                                                                                                                                    ================================ */
+                                                                                                                                                                                                                                                                           RESPONSIVE
+                                                                                                                                                                                                                                                                        ================================ */
 
         @media (max-width: 1120px) {
             .patent-page .hero {
@@ -902,13 +902,13 @@
             }
 
             /* .patent-page .section {
-                                                                    padding: 54px 0;
-                                                                } */
+                                                                                                                                                                        padding: 54px 0;
+                                                                                                                                                                    } */
 
             /* .patent-page .hero .inner {
-                                                padding-top: 58px;
-                                                padding-bottom: 48px;
-                                            } */
+                                                                                                                                                    padding-top: 58px;
+                                                                                                                                                    padding-bottom: 48px;
+                                                                                                                                                } */
 
             .patent-page h1 {
                 font-size: 38px;
@@ -963,15 +963,15 @@
                         <h1>Patent-backed operating methods for real oil and gas compression duty.</h1>
 
                         <p class="subheadline">
-                            Practical patent coverage tied to liquid handling, compression response, and production
+                            Patent coverage spanning liquid-protection control, variable-speed compression, and production
                             optimization in real field conditions.
                         </p>
 
                         <p class="support">
-                            Fluidstream’s patent position is strongest where it connects directly to field problems:
-                            liquids inside compression, pressure behavior, and control under non-ideal operating
-                            conditions. The core U.S. patent, US11098709B2, describes changing compressor operation when
-                            liquid is detected in the chamber.
+                            Fluidstream’s patent portfolio addresses several real field problems, including incompressible
+                            liquid entering a compression chamber, efficient use of available power, and production
+                            optimization. The core U.S. patent, US11098709B2, protects a specific liquid-damage response:
+                            when liquid is detected, the piston slows for the remainder of the stroke.
                         </p>
 
                         <div class="cta-row">
@@ -1012,8 +1012,9 @@
                         <div class="visual-card response">
                             <h4>Patented Response</h4>
                             <p>
-                                Detect the liquid condition and change compressor operation during the stroke rather than
-                                treating liquid only as a shutdown event.
+                                Detect the liquid condition and slow the piston for the remainder of the stroke, giving
+                                incompressible liquid more time to leave the chamber before pressure and mechanical loading
+                                rise to damaging levels.
                             </p>
                         </div>
 
@@ -1032,9 +1033,10 @@
                             </div>
 
                             <p>
-                                The core U.S. patent ties the Fluidstream platform to mode changes between higher-volume and
-                                lower-volume operation during the compression stroke, giving the patent story clear
-                                technical relevance in mixed-phase service.
+                                The core U.S. patent protects Fluidstream’s response to incompressible liquid inside the
+                                chamber: detect the liquid condition, slow the piston for the remainder of the stroke, and
+                                allow the liquid to leave at a controlled rate. This helps prevent the rapid pressure rise
+                                and mechanical loading that can damage a compressor.
                             </p>
                         </div>
                     </div>
@@ -1047,8 +1049,9 @@
                 <div class="section-head">
                     <h2>Why the patents matter.</h2>
                     <p>
-                        Patents that address compression behavior under liquid-influenced conditions provide a stronger
-                        technical basis for real oil and gas applications.
+                        Fluidstream’s patents protect different parts of the technology. The U.S. liquid-protection patent
+                        is especially important because it addresses what the compressor does during the same stroke when
+                        incompressible liquid is detected.
                     </p>
                 </div>
 
@@ -1068,8 +1071,8 @@
                         <div class="proof-tag">Control Logic</div>
                         <h3>Protects an operating response, not only a hardware configuration.</h3>
                         <p>
-                            The core patent story is about detecting liquid-related conditions and changing compressor
-                            behavior during the cycle.
+                            The core U.S. patent is about detecting liquid in the chamber and immediately slowing the piston
+                            for the rest of that stroke to protect the machine.
                         </p>
                         <div class="proof-metric">Sensor-driven mode change</div>
                         <div class="proof-detail">More meaningful than a generic patent claim.</div>
@@ -1094,8 +1097,10 @@
                 <div class="section-head">
                     <h2>US11098709B2: the core patent anchor.</h2>
                     <p>
-                        US11098709B2 addresses liquid detection and compression-cycle response within the chamber, making it
-                        the clearest anchor for Fluidstream’s patent position.
+                        US11098709B2 protects a liquid-responsive control method within the compression stroke. In plain
+                        terms, the system uses one or more sensor readings to determine when liquid is present and whether
+                        continuing at the current operating speed could damage the compressor. When protective action is
+                        needed, the piston slows enough to protect the unit.
                     </p>
                 </div>
 
@@ -1109,17 +1114,17 @@
                         <div class="item">
                             <h4>Mode change during the stroke</h4>
                             <p>
-                                The patent describes high-volume operation for a first portion of the stroke and
-                                lower-volume
-                                behavior for the remainder as chamber conditions change.
+                                The patent describes detecting liquid using readings from one or more sensors and changing
+                                the compressor’s operating mode when needed so the liquid can leave the chamber at a
+                                reduced, controlled rate.
                             </p>
                         </div>
 
                         <div class="item">
                             <h4>Liquid detection tied to chamber behavior</h4>
                             <p>
-                                The operating logic is built around detecting liquid-related conditions and adjusting
-                                compressor behavior accordingly.
+                                The operating logic uses one or more sensor readings to identify the liquid condition and
+                                determine when a slower piston speed is required to protect the compressor.
                             </p>
                         </div>
 
@@ -1138,8 +1143,11 @@
                                 <div class="label">What it protects</div>
                                 <h3>Compression response under liquid influence.</h3>
                                 <p>
-                                    The patent is most valuable where it protects operating methods for responding to
-                                    mixed-phase chamber behavior rather than simply defining package layout.
+                                    The patent is most valuable because it protects an active damage-prevention response,
+                                    not merely a compressor layout. Gas can compress; liquid essentially cannot. When a
+                                    detected liquid condition, together with the current piston speed and operating
+                                    conditions, could damage the compressor, the patented control response slows the piston
+                                    enough to reduce that risk.
                                 </p>
                                 <ul>
                                     <li>Liquid-aware operation</li>
@@ -1180,6 +1188,370 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+        <style>
+            .patent-page .section.compressor-protection-section {
+                background: #f6f8fb;
+                padding: 72px 0;
+            }
+
+            .patent-page .compressor-protection-section .section-head {
+                margin-bottom: 30px;
+            }
+
+
+            .patent-page .protection-steps {
+                display: grid;
+                grid-template-columns: repeat(5, minmax(0, 1fr));
+                gap: 14px;
+                margin-top: 28px;
+            }
+
+            .patent-page .protection-card-wrap {
+                position: relative;
+                min-width: 0;
+            }
+
+            .patent-page .protection-card,
+            .patent-page .protection-note {
+                position: relative;
+                overflow: hidden;
+                border: 1px solid var(--fs-line);
+                border-radius: 0px;
+                background: #ffffff;
+                box-shadow: var(--fs-shadow);
+                transition:
+                    transform .25s ease,
+                    box-shadow .25s ease,
+                    border-color .25s ease,
+                    background .25s ease;
+            }
+
+            .patent-page .protection-card {
+                min-height: 330px;
+                height: 100%;
+                padding: 18px 14px;
+            }
+
+            .patent-page .protection-note {
+                padding: 18px;
+            }
+
+            .patent-page .protection-card::after,
+            .patent-page .protection-note::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                height: 3px;
+                background: var(--fs-blue);
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: transform .25s cubic-bezier(.22, .61, .36, 1);
+            }
+
+            .patent-page .protection-card:hover,
+            .patent-page .protection-note:hover {
+                transform: translateY(-4px);
+                border-color: var(--fs-blue);
+                background: #ffffff;
+                box-shadow: 0 22px 46px rgba(16, 42, 67, .10);
+            }
+
+            .patent-page .protection-card:hover::after,
+            .patent-page .protection-note:hover::after {
+                transform: scaleX(1);
+            }
+
+            .patent-page .protection-badges {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 16px;
+            }
+
+            .patent-page .step-number {
+                width: 34px;
+                height: 34px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 999px;
+                background: #eef1ff;
+                color: var(--fs-blue);
+                font-size: .84rem;
+                font-weight: 850;
+                line-height: 1;
+            }
+
+            .patent-page .step-label {
+                min-height: 30px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0 13px;
+                border-radius: 999px;
+                background: #eef1ff;
+                color: var(--fs-blue);
+                font-size: .76rem;
+                font-weight: 850;
+                letter-spacing: .04em;
+                text-transform: uppercase;
+                line-height: 1;
+            }
+
+            .patent-page .protection-card h3 {
+                margin: 0 0 12px;
+                color: var(--fs-ink);
+                font-size: 1.18rem;
+                line-height: 1.12;
+                letter-spacing: -.03em;
+            }
+
+            .patent-page .protection-card p {
+                display: block;
+                color: var(--fs-muted);
+                font-size: .91rem;
+            }
+
+            .patent-page .protection-arrow {
+                position: absolute;
+                top: 50%;
+                right: -13px;
+                z-index: 5;
+                width: 26px;
+                height: 26px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 999px;
+                background: var(--fs-blue);
+                color: #ffffff;
+                box-shadow: 0 10px 22px rgba(0, 24, 220, .22);
+                transform: translateY(-50%);
+            }
+
+            .patent-page .protection-arrow svg {
+                width: 14px;
+                height: 14px;
+                display: block;
+            }
+
+            .patent-page .protection-notes {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 16px;
+                margin-top: 22px;
+            }
+
+            .patent-page .note-label {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 30px;
+                margin-bottom: 12px;
+                padding: 0 13px;
+                border-radius: 999px;
+                background: #eef1ff;
+                color: var(--fs-blue);
+                font-size: .76rem;
+                font-weight: 850;
+                letter-spacing: .04em;
+                text-transform: uppercase;
+                line-height: 1;
+            }
+
+            .patent-page .protection-note h3 {
+                margin: 0 0 6px;
+                color: var(--fs-ink);
+                font-size: 1.06rem;
+                line-height: 1.35;
+                font-weight: 520;
+                letter-spacing: -.02em;
+            }
+
+            .patent-page .protection-note p {
+                margin: 0;
+                color: var(--fs-muted);
+                font-size: .98rem;
+                line-height: 1.55;
+                font-weight: 500;
+            }
+
+            @media (max-width: 1120px) {
+                .patent-page .protection-steps {
+                    grid-template-columns: repeat(2, minmax(0, 1fr));
+                }
+
+                .patent-page .protection-arrow {
+                    display: none;
+                }
+            }
+
+            @media (max-width: 720px) {
+                .patent-page .section.compressor-protection-section {
+                    padding: 46px 0;
+                }
+
+                .patent-page .protection-steps,
+                .patent-page .protection-notes {
+                    grid-template-columns: 1fr;
+                }
+
+                .patent-page .protection-card {
+                    min-height: auto;
+                }
+            }
+        </style>
+
+        <section class="section compressor-protection-section" id="compressor-protection">
+            <div class="inner">
+                <div class="section-head">
+                    <h2>How US11098709B2 protects the compressor.</h2>
+
+                    <p>
+                        US11098709B2 protects a control response that determines when liquid inside the
+                        compression chamber could damage the unit under the current operating conditions.
+                        The presence of liquid may be determined in various ways. When the detected condition
+                        warrants protective action, the piston slows enough to reduce the risk of damage.
+                    </p>
+                </div>
+
+                <div class="protection-steps">
+                    <div class="protection-card-wrap">
+                        <article class="protection-card">
+                            <div class="protection-badges">
+                                <span class="step-number">01</span>
+                                <span class="step-label">Step 1</span>
+                            </div>
+
+                            <h3>Liquid enters the chamber</h3>
+                            <p>
+                                Wet gas, condensate carryover, or a liquid slug may place incompressible
+                                liquid inside the compression chamber.
+                            </p>
+                        </article>
+
+                        <span class="protection-arrow" aria-hidden="true">
+                            <svg viewBox="0 0 16 16" fill="none">
+                                <path d="M3.5 8h8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                                <path d="M8.8 4.7 12.1 8l-3.3 3.3" stroke="currentColor" stroke-width="1.7"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                    </div>
+
+                    <div class="protection-card-wrap">
+                        <article class="protection-card">
+                            <div class="protection-badges">
+                                <span class="step-number">02</span>
+                                <span class="step-label">Step 2</span>
+                            </div>
+
+                            <h3>The system evaluates the operating condition</h3>
+                            <p>
+                                Using one or more detection methods, the control system determines whether
+                                liquid is present and evaluates how that liquid is affecting the compressor
+                                under the current conditions.
+                            </p>
+                        </article>
+
+                        <span class="protection-arrow" aria-hidden="true">
+                            <svg viewBox="0 0 16 16" fill="none">
+                                <path d="M3.5 8h8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                                <path d="M8.8 4.7 12.1 8l-3.3 3.3" stroke="currentColor" stroke-width="1.7"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                    </div>
+
+                    <div class="protection-card-wrap">
+                        <article class="protection-card">
+                            <div class="protection-badges">
+                                <span class="step-number">03</span>
+                                <span class="step-label">Step 3</span>
+                            </div>
+
+                            <h3>A potentially damaging liquid condition is identified</h3>
+                            <p>
+                                The system evaluates the detected liquid condition together with the current
+                                piston speed and other operating conditions to determine whether continuing
+                                normally could damage the unit.
+                            </p>
+                        </article>
+
+                        <span class="protection-arrow" aria-hidden="true">
+                            <svg viewBox="0 0 16 16" fill="none">
+                                <path d="M3.5 8h8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                                <path d="M8.8 4.7 12.1 8l-3.3 3.3" stroke="currentColor" stroke-width="1.7"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                    </div>
+
+                    <div class="protection-card-wrap">
+                        <article class="protection-card">
+                            <div class="protection-badges">
+                                <span class="step-number">04</span>
+                                <span class="step-label">Step 4</span>
+                            </div>
+
+                            <h3>The piston slows only when needed</h3>
+                            <p>
+                                If continuing at the current speed could cause damage, the piston slows enough
+                                to protect the compressor, then immediately returns to its normal operating
+                                speed when it is safe to do so.
+                            </p>
+                        </article>
+
+                        <span class="protection-arrow" aria-hidden="true">
+                            <svg viewBox="0 0 16 16" fill="none">
+                                <path d="M3.5 8h8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                                <path d="M8.8 4.7 12.1 8l-3.3 3.3" stroke="currentColor" stroke-width="1.7"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                    </div>
+
+                    <div class="protection-card-wrap">
+                        <article class="protection-card">
+                            <div class="protection-badges">
+                                <span class="step-number">05</span>
+                                <span class="step-label">Step 5</span>
+                            </div>
+
+                            <h3>The unit is protected from damage</h3>
+                            <p>
+                                The piston speed is reduced enough to protect the compressor while allowing
+                                the liquid to leave the chamber in a controlled manner. The piston immediately
+                                returns to its normal operating speed when it is safe to do so.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="protection-notes">
+                    <article class="protection-note">
+                        <span class="note-label">Key Point</span>
+                        <h3>The slowdown is based on risk, not simply the presence of any liquid.</h3>
+                        <p>
+                            The control response is used when the detected liquid condition could damage the
+                            unit under the current operating conditions.
+                        </p>
+                    </article>
+
+                    <article class="protection-note">
+                        <span class="note-label">Patent Scope</span>
+                        <h3>The patent is not limited to one liquid-detection method.</h3>
+                        <p>
+                            Liquid presence may be determined using various methods or combinations of operating
+                            information. The protected result is the control response that slows the piston
+                            enough to avoid damage.
+                        </p>
+                    </article>
                 </div>
             </div>
         </section>
@@ -1245,7 +1617,8 @@
                         <h4>Fluidstream patent narrative</h4>
                         <ul>
                             <li>Mixed-phase conditions addressed inside compression</li>
-                            <li>Core patent explains response to liquid-influenced chamber behavior</li>
+                            <li>Core U.S. patent protects a condition-based piston speed reduction used when needed to help
+                                prevent compressor damage</li>
                             <li>Stronger support for uptime and controllability claims</li>
                             <li>Better fit for vapor recovery, casing gas, and multiphase applications</li>
                         </ul>
@@ -1270,8 +1643,10 @@
                         <div class="label">Canada</div>
                         <h3>CA2843321C</h3>
                         <p>
-                            The Canadian counterpart to the multiphase compression family supports the same technical story
-                            as US11098709B2.
+                            This Canadian patent covers variable piston speed through the compression stroke, including
+                            faster movement during the lower-pressure portion and slower movement during the higher-pressure
+                            portion to improve use of available drive power. It does not provide the same liquid-detection
+                            claim coverage as US11098709B2.
                         </p>
                         <ul>
                             <li>Method and apparatus for pumping fluid</li>
@@ -1326,8 +1701,9 @@
                         <div class="proof-tag">MultiphaseCommander™</div>
                         <h3>Primary commercial expression of the core multiphase patent family.</h3>
                         <p>
-                            The multiphase platform is built around handling gas and liquids together and changing
-                            compression behavior when chamber conditions demand it.
+                            The multiphase platform handles gas and liquids together. In the United States, the patented
+                            control response uses one or more sensor readings to determine when liquid is present and
+                            changes piston speed when needed to protect the compressor from damage.
                         </p>
                         <div class="proof-metric">Best fit for US11098709B2</div>
                         <div class="proof-detail">Connects directly to mixed-phase transport and system simplification.

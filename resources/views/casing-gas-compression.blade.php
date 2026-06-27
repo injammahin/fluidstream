@@ -290,13 +290,13 @@
     }
 
     /* .swipe-left:hover:before,
-                                                                                                                                                                                                                                                                .swipe-left:hover:before,
-                                                                                                                                                                                                                                                                .model-card:hover:before,
-                                                                                                                                                                                                                                                                .spec-mobile-card:hover:before,
-                                                                                                                                                                                                                                                                .comparison .box:hover:before,
-                                                                                                                                                                                                                                                                .reality-item:hover:before {
-                                                                                                                                                                                                                                                                  opacity: 1;
-                                                                                                                                                                                                                                                                } */
+                                                                                                                                                                                                                                                                    .swipe-left:hover:before,
+                                                                                                                                                                                                                                                                    .model-card:hover:before,
+                                                                                                                                                                                                                                                                    .spec-mobile-card:hover:before,
+                                                                                                                                                                                                                                                                    .comparison .box:hover:before,
+                                                                                                                                                                                                                                                                    .reality-item:hover:before {
+                                                                                                                                                                                                                                                                      opacity: 1;
+                                                                                                                                                                                                                                                                    } */
 
     .swipe-left:hover:after,
     .model-card:hover:after,
@@ -307,8 +307,8 @@
     }
 
     /* .swipe-left:hover:after {
-                                                                                                                                                                                                                                                              right: 155%;
-                                                                                                                                                                                                                                                            } */
+                                                                                                                                                                                                                                                                  right: 155%;
+                                                                                                                                                                                                                                                                } */
 
     .hero-card:hover {
       box-shadow: 0 26px 56px rgba(0, 24, 220, .18);
@@ -316,14 +316,14 @@
     }
 
     /* .swipe-left:hover,
-                                                                                                                                                                                                                                                          .swipe-left:hover,
-                                                                                                                                                                                                                                                          .model-card:hover,
-                                                                                                                                                                                                                                                          .spec-mobile-card:hover,
-                                                                                                                                                                                                                                                          .comparison .box:hover,
-                                                                                                                                                                                                                                                          .reality-item:hover {
-                                                                                                                                                                                                                                                            box-shadow: 0 24px 52px rgba(13, 32, 84, .12);
-                                                                                                                                                                                                                                                            border-color: #b9d0ff;
-                                                                                                                                                                                                                                                          } */
+                                                                                                                                                                                                                                                              .swipe-left:hover,
+                                                                                                                                                                                                                                                              .model-card:hover,
+                                                                                                                                                                                                                                                              .spec-mobile-card:hover,
+                                                                                                                                                                                                                                                              .comparison .box:hover,
+                                                                                                                                                                                                                                                              .reality-item:hover {
+                                                                                                                                                                                                                                                                box-shadow: 0 24px 52px rgba(13, 32, 84, .12);
+                                                                                                                                                                                                                                                                border-color: #b9d0ff;
+                                                                                                                                                                                                                                                              } */
 
     .blue-fill:before {
       content: "";
@@ -374,9 +374,9 @@
     }
 
     /* 
-                                                                                                                                                                                                                                          .highlight-box:hover a {
-                                                                                                                                                                                                                                            color: #fff !important
-                                                                                                                                                                                                                                          } */
+                                                                                                                                                                                                                                              .highlight-box:hover a {
+                                                                                                                                                                                                                                                color: #fff !important
+                                                                                                                                                                                                                                              } */
 
     .cta-panel:hover {
       /* box-shadow: 0 24px 52px rgba(0, 24, 220, .18); */
@@ -606,13 +606,13 @@
     }
 
     /* .kicker mb-2 {
-                                                                                                                                                                                            font-size: 12px;
-                                                                                                                                                                                            letter-spacing: .11em;
-                                                                                                                                                                                            text-transform: uppercase;
-                                                                                                                                                                                            color: var(--blue);
-                                                                                                                                                                                            font-weight: 700;
-                                                                                                                                                                                            margin-bottom: 10px
-                                                                                                                                                                                          } */
+                                                                                                                                                                                                font-size: 12px;
+                                                                                                                                                                                                letter-spacing: .11em;
+                                                                                                                                                                                                text-transform: uppercase;
+                                                                                                                                                                                                color: var(--blue);
+                                                                                                                                                                                                font-weight: 700;
+                                                                                                                                                                                                margin-bottom: 10px
+                                                                                                                                                                                              } */
 
     h2 {
       margin: 0 0 16px;
@@ -1054,8 +1054,8 @@
   <header class="hero fs-casing-hero fs-protected-bg">
     <style>
       /* ================================
-                                                                         UPDATED CASING GAS HERO
-                                                                      ================================ */
+                                                                             UPDATED CASING GAS HERO
+                                                                          ================================ */
 
       header.hero.fs-casing-hero {
         position: relative !important;
@@ -1191,7 +1191,7 @@
         border: 1px solid rgba(255, 255, 255, .28);
         background: rgba(255, 255, 255, 0);
         /* backdrop-filter: blur(8px);
-                                                          -webkit-backdrop-filter: blur(8px); */
+                                                              -webkit-backdrop-filter: blur(8px); */
       }
 
       .fs-casing-hero-btn-secondary:hover {
@@ -1216,7 +1216,7 @@
         border-radius: 7px;
         background: rgba(255, 255, 255, 0);
         /* backdrop-filter: blur(8px);
-                                                            -webkit-backdrop-filter: blur(8px); */
+                                                                -webkit-backdrop-filter: blur(8px); */
         transition:
           transform .25s ease,
           border-color .25s ease,
@@ -1224,23 +1224,23 @@
       }
 
       /* .fs-casing-hero-benefit::after {
-                                                                content: "";
-                                                                position: absolute;
-                                                                left: 0;
-                                                                right: 0;
-                                                                top: 0;
-                                                                height: 4px;
-                                                                background: #15d1ff;
-                                                                transform: scaleX(0);
-                                                                transform-origin: left;
-                                                                transition: transform .25s ease;
-                                                              }
+                                                                    content: "";
+                                                                    position: absolute;
+                                                                    left: 0;
+                                                                    right: 0;
+                                                                    top: 0;
+                                                                    height: 4px;
+                                                                    background: #15d1ff;
+                                                                    transform: scaleX(0);
+                                                                    transform-origin: left;
+                                                                    transition: transform .25s ease;
+                                                                  }
 
-                                                              .fs-casing-hero-benefit:hover {
-                                                                transform: translateY(-4px);
-                                                                border-color: rgba(21, 209, 255, .45);
-                                                                background: rgba(255, 255, 255, .12);
-                                                              } */
+                                                                  .fs-casing-hero-benefit:hover {
+                                                                    transform: translateY(-4px);
+                                                                    border-color: rgba(21, 209, 255, .45);
+                                                                    background: rgba(255, 255, 255, .12);
+                                                                  } */
 
       .fs-casing-hero-benefit:hover::after {
         transform: scaleX(1);
@@ -1272,8 +1272,8 @@
         background: rgba(255, 255, 255, 0);
         border: 1px solid rgba(255, 255, 255, .16);
         /* box-shadow: 0 24px 70px rgba(0, 0, 0, .22);
-                                                                backdrop-filter: blur(12px);
-                                                                -webkit-backdrop-filter: blur(12px); */
+                                                                    backdrop-filter: blur(12px);
+                                                                    -webkit-backdrop-filter: blur(12px); */
         transition:
           transform .28s ease,
           box-shadow .28s ease,
@@ -1282,25 +1282,25 @@
       }
 
       /* .fs-casing-proof-card::after {
-                                                                  content: "";
-                                                                  position: absolute;
-                                                                  left: 0;
-                                                                  right: 0;
-                                                                  top: 0;
-                                                                  height: 4px;
-                                                                  background: #15d1ff;
-                                                                  transform: scaleX(0);
-                                                                  transform-origin: left;
-                                                                  transition: transform .28s ease;
-                                                                  z-index: 2;
-                                                                } */
+                                                                      content: "";
+                                                                      position: absolute;
+                                                                      left: 0;
+                                                                      right: 0;
+                                                                      top: 0;
+                                                                      height: 4px;
+                                                                      background: #15d1ff;
+                                                                      transform: scaleX(0);
+                                                                      transform-origin: left;
+                                                                      transition: transform .28s ease;
+                                                                      z-index: 2;
+                                                                    } */
 
       /* .fs-casing-proof-card:hover {
-                                                                  transform: translateY(-4px);
-                                                                  border-color: rgba(21, 209, 255, .42);
-                                                                  background: rgba(255, 255, 255, .12);
-                                                                  box-shadow: 0 30px 78px rgba(0, 0, 0, .28);
-                                                                } */
+                                                                      transform: translateY(-4px);
+                                                                      border-color: rgba(21, 209, 255, .42);
+                                                                      background: rgba(255, 255, 255, .12);
+                                                                      box-shadow: 0 30px 78px rgba(0, 0, 0, .28);
+                                                                    } */
 
       .fs-casing-proof-card:hover::after {
         transform: scaleX(1);
@@ -1811,24 +1811,24 @@
       }
 
       /* .fs-cg-diff-head h2 {
-                                                                                                                              margin: 0;
-                                                                                                                              max-width: 760px;
-                                                                                                                              font-size: clamp(1.9rem, 3vw, 3rem);
-                                                                                                                              line-height: 1.05;
-                                                                                                                              letter-spacing: -.04em;
-                                                                                                                              color: #1f1f21;
-                                                                                                                            } */
+                                                                                                                                  margin: 0;
+                                                                                                                                  max-width: 760px;
+                                                                                                                                  font-size: clamp(1.9rem, 3vw, 3rem);
+                                                                                                                                  line-height: 1.05;
+                                                                                                                                  letter-spacing: -.04em;
+                                                                                                                                  color: #1f1f21;
+                                                                                                                                } */
 
       /* .fs-cg-diff-head h2 span {
-                                                                                                                              color: var(--cg-blue);
-                                                                                                                            }
+                                                                                                                                  color: var(--cg-blue);
+                                                                                                                                }
 
-                                                                                                                            .fs-cg-diff-head p {
-                                                                                                                              margin: 0;
-                                                                                                                              color: var(--cg-muted);
-                                                                                                                              font-size: 16px;
-                                                                                                                              line-height: 1.75;
-                                                                                                                            } */
+                                                                                                                                .fs-cg-diff-head p {
+                                                                                                                                  margin: 0;
+                                                                                                                                  color: var(--cg-muted);
+                                                                                                                                  font-size: 16px;
+                                                                                                                                  line-height: 1.75;
+                                                                                                                                } */
 
       .fs-cg-diff-summary {
         display: grid;
@@ -1993,17 +1993,17 @@
       }
 
       /* 
-                                                                      .fs-cg-diff-bottom::after {
-                                                                        content: "";
-                                                                        position: absolute;
-                                                                        width: 230px;
-                                                                        height: 230px;
-                                                                        right: -90px;
-                                                                        top: -120px;
-                                                                        border-radius: 999px;
-                                                                        background: rgba(21, 209, 255, .18);
-                                                                        pointer-events: none;
-                                                                      } */
+                                                                          .fs-cg-diff-bottom::after {
+                                                                            content: "";
+                                                                            position: absolute;
+                                                                            width: 230px;
+                                                                            height: 230px;
+                                                                            right: -90px;
+                                                                            top: -120px;
+                                                                            border-radius: 999px;
+                                                                            background: rgba(21, 209, 255, .18);
+                                                                            pointer-events: none;
+                                                                          } */
 
       .fs-cg-diff-bottom-content {
         position: relative;
@@ -2680,6 +2680,7 @@
       ];
 
       $ccModels = [
+        ['name' => 'CC823 (015013)', 'hp' => '15 HP', 'dpMetric' => '862', 'dpImperial' => '125'],
         ['name' => 'CC825 (015013)', 'hp' => '15 HP', 'dpMetric' => '1207', 'dpImperial' => '175'],
         ['name' => 'CC835 (015013)', 'hp' => '15 HP', 'dpMetric' => '2586', 'dpImperial' => '375'],
         ['name' => 'CC1035 (050035)', 'hp' => '50 HP', 'dpMetric' => '1724', 'dpImperial' => '250'],
@@ -2693,6 +2694,13 @@
       ];
 
       $ccGasData = [
+        [
+          ['metric' => '1.4', 'imperial' => '50'],
+          ['metric' => '1.8', 'imperial' => '64'],
+          ['metric' => '2.5', 'imperial' => '88'],
+          ['metric' => '3.2', 'imperial' => '113'],
+          ['metric' => '4.6', 'imperial' => '162'],
+        ],
         [
           ['metric' => '1.0', 'imperial' => '35'],
           ['metric' => '1.3', 'imperial' => '46'],
